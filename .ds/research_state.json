@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "active_idea_id": null,
+  "research_head_branch": null,
+  "research_head_worktree_root": null,
+  "current_workspace_branch": null,
+  "current_workspace_root": null,
+  "active_idea_md_path": null,
+  "active_idea_draft_path": null,
+  "active_analysis_campaign_id": null,
+  "analysis_parent_branch": null,
+  "analysis_parent_worktree_root": null,
+  "paper_parent_branch": null,
+  "paper_parent_worktree_root": null,
+  "paper_parent_run_id": null,
+  "next_pending_slice_id": null,
+  "workspace_mode": "quest",
+  "last_flow_type": null,
+  "updated_at": "2026-08-24T22:48:24+00:00"
+}

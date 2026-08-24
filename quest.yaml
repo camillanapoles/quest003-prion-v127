@@ -1,0 +1,13 @@
+quest_id: '003'
+title: 'CJD prion containment therapy: PrP-G127V edited NSC transplant + CED peripheral
+  containment — pre-clinical review, risk audit and research plan optimization'
+quest_root: /root/DeepScientist/quests/003
+status: active
+active_anchor: baseline
+baseline_gate: pending
+confirmed_baseline_ref: null
+requested_baseline_ref: null
+startup_contract: null
+default_runner: omp
+created_at: '2026-08-24T22:48:24+00:00'
+updated_at: '2026-08-24T22:48:24+00:00'

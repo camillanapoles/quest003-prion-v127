@@ -1,0 +1,21 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-08-24T22:48:24+00:00",
+  "state_kind": "raw",
+  "state": [
+    [
+      ".",
+      [
+        [
+          "graphs/git-graph.json",
+          [
+            2807064,
+            1787611704372864225,
+            56
+          ]
+        ]
+      ]
+    ]
+  ],
+  "artifacts": []
+}
