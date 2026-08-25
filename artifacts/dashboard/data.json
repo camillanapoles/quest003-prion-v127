@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 16:00",
-    "version": "v2.0",
+    "updated": "2026-08-25 18:30",
+    "version": "v1.5",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
     "views": [
@@ -103,16 +103,17 @@
     },
     {
       "id": "struct",
-      "label": "Base estrutural: impedimento estérico na interface de conversão",
+      "label": "Base estrutural V127: restrição conformacional + dímeros estáveis",
       "group": "molecular",
       "status": "confirmed",
-      "evidence": "Zheng 2018 · Sci Rep",
-      "detail": "A substituição G→V em 127 bloqueia a transferência conformacional na interface PrPSc–PrPC. O 'escudo estérico' do protocolo é estruturalmente plausível.",
+      "evidence": "Zheng 2018 Sci Rep; Hosszu 2020 Commun Biol",
+      "detail": "X-ray+NMR (Hosszu 2020): V127 restringe a espinha dorsal pré-β-sheet, estabiliza dímeros por pontes H e altera o loop β2-α2 (região de transmissão). Somado a Zheng 2018: o escudo estérico tem base estrutural dupla.",
       "refs": [
-        "doi:10.1038/s41598-018-31394-6"
+        "doi:10.1038/s41598-018-31394-6",
+        "doi:10.1038/s42003-020-01126-6"
       ],
       "prob": null,
-      "updated": "2026-08-24",
+      "updated": "2026-08-25",
       "delta": null
     },
     {
@@ -251,7 +252,7 @@
       "group": "celular",
       "status": "refuted",
       "evidence": "Ginhoux 2010 · Science",
-      "detail": "REFUTADO: micróglia origina-se de macrófagos do saco vitelínico (mesoderma), não de NSC neuroectodérmica. Claim removido; alternativa = co-enxerto separado se imunovigilância for desejada.",
+      "detail": "REFUTADO: micróglia origina-se de macrófagos do saco vitelínico (mesoderma), não de NSC neuroectodérmica. Claim removido; alternativa = co-enxerto separado se imunovigilância for desejada. NOTA adendo 25/08: De Lucia 2016 reabilita a FUNÇÃO pró-neurogênica da micróglia no príon — o co-enxerto de iPSC-micróglia como produto separado ganhou justificativa; a geração a partir de NSC permanece impossível.",
       "refs": [
         "doi:10.1126/science.1194637"
       ],
@@ -307,11 +308,12 @@
       "label": "CED: cânula step-design anti-refluxo validada",
       "group": "entrega",
       "status": "confirmed",
-      "evidence": "Krauze 2005; Parvar 2025",
-      "detail": "Tecnologia madura, em ensaios clínicos ativos. Resolve a pendência de pressão/refluxo levantada pelo próprio protocolo.",
+      "evidence": "Krauze 2005; Parvar 2025; Elder/Lonser 2025",
+      "detail": "Tecnologia madura, em ensaios ativos. Review J Neurosurg 2025 (Elder/Lonser) cobre CED de terapias gênicas E CELULARES — ref direta para o nosso vetor celular.",
       "refs": [
         "PMID 16304999",
-        "Adv Drug Deliv Rev 2025"
+        "Adv Drug Deliv Rev 2025",
+        "PMID 40479823"
       ],
       "prob": null,
       "updated": "2026-08-24",
@@ -442,6 +444,21 @@
       "prob": "~6% cura funcional / 20-30% desaceleração",
       "updated": "2026-08-25",
       "delta": null
+    },
+    {
+      "id": "endog",
+      "label": "Reparo neurogênico endógeno ativa-se e protege (camundongo)",
+      "group": "celular",
+      "status": "confirmed",
+      "evidence": "Gomez-Nicola 2014 Brain; Jalland 2016; De Lucia 2016",
+      "detail": "Neurogênese hipocampal aumenta durante o príon e contrabalça parcialmente a doença (Gomez-Nicola 2014); Neil3-neurogênese PROTEGE (Jalland 2016); micróglia expandida SUSTENTA essa neurogênese (De Lucia 2016) — função pró-reparo. Base para desfecho regenerativo e para co-enxerto funcional de micróglia (produto separado; a linhagem NSC→micróglia segue refutada).",
+      "refs": [
+        "PMID 24941947",
+        "doi:10.1038/srep37844"
+      ],
+      "prob": null,
+      "updated": "2026-08-25",
+      "delta": "up"
     }
   ],
   "edges": [
@@ -559,6 +576,21 @@
       "from": "secretor",
       "to": "gates",
       "type": "supports"
+    },
+    {
+      "from": "endog",
+      "to": "electro",
+      "type": "supports"
+    },
+    {
+      "from": "endog",
+      "to": "gates",
+      "type": "supports"
+    },
+    {
+      "from": "endog",
+      "to": "svz",
+      "type": "constrains"
     }
   ],
   "probability_history": [
@@ -657,6 +689,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v1.5 (adendo externo)",
+      "text": "Adendo externo integrado com verificação própria: 3 refs novas ACEITAS (Hosszu 2020 Comm Biol — 2ª base estrutural, dímeros estáveis; Gomez-Nicola 2014 Brain — neurogênese endógena contrabalça o príon; Elder/Lonser 2025 J Neurosurg — CED p/ terapias gênicas E celulares) + 2 bônus da verificação (Jalland 2016 Neil3-neurogênese protege; De Lucia 2016 micróglia pró-neurogênica — função reabilitada, linhagem NÃO). Rejeitadas/adjudicadas: micróglia-de-NSC (repete claim refutado), uso enviesado de Relaño-Ginés ('blindar reverte' é inferência não testada), 'inundar com G127V' sem a forma anchorless explícita, hidrogel-scaffold (sem ref, vai p/ WS-7). Nó novo 'endog' confirmado; struct e ced reforçados."
+    },
     {
       "date": "2026-08-25",
       "version": "v2.0 (grafo em camadas)",

@@ -61,3 +61,22 @@
 - 🌕#2 ("PrP-V127 solúvel como DN trans — hipótese NOSSA") → **RETIFICAR: já publicada pelo campo em fev/2026 (F1, F2)**. Nosso papel muda de proponente para integrador (aplicação em TERAPIA CELULAR: NSCs como biofábrica secretora de ΔGPI-V127 no parênquima — combinação ainda não testada por ninguém).
 - UPGRADE de desenho: as células do anel devem ser **secretoras de V127ΔGPI**, não apenas portadoras de V127/V127 de membrana — a evidência F1/F2 aponta que o agente ativo trans é a forma livre.
 - Gatdula (iii) sustenta que enxerto transitório/de depósito pode ser suficiente — reduz a dependência da "fábrica permanente" (que já era superestimada).
+
+## G. Adendo externo 2026-08-25 (tarde) — refs novas verificadas + adjudicação
+
+Fonte: documento colaborador externo ("mecanismo de defesa + regeneração + CED com refs"). Verificação própria feita antes de integrar.
+
+### ✅ Aceitas (verificadas, novas para a quest)
+| # | Fonte | Achado | Impacto |
+|---|---|---|---|
+| G1 | **Hosszu et al., Commun Biol 2020;3:580** (doi:10.1038/s42003-020-01126-6, abstract extraído) | X-ray+NMR: V127 restringe a espinha dorsal pré-β-sheet, **estabiliza dímeros por pontes de hidrogênio** e altera a dinâmica do loop β2-α2 (região de transmissão/susceptibilidade) | 2ª ref estrutural (soma a Zheng 2018); mecanismo do 'escudo' ganha detalhe molecular: restrição conformacional + interface de dímero |
+| G2 | **Gomez-Nicola et al., Brain 2014;137:2312-28** (PMID 24941947) | Neurogênese hipocampal AUMENTA durante doença priônica e "contrabalça parcialmente" a neurodegeneração (camundongo) | Confirma tentativa de reparo endógeno — contexto pró-regeneração é real; NÃO restaura o claim "fábrica SVZ" (é hipocampo, camundongo) |
+| G3 | **Elder, Lonser et al., J Neurosurg 2025;143(5):1431-41** (PMID 40479823, doi:10.3171/2025.1.JNS241967) | Review 2025: entrega convectiva (CED) de terapias gênicas E CELULARES no SNC | Refra o node CED para terapias celulares especificamente (além de Krauze 2005/Parvar 2025) |
+| G4 | Jalland et al., Sci Rep 2016;6:37844 (bônus da verificação) | Neurogênese induzida por Neil3 PROTEGE contra doença priônica (camundongo) | Eixo regenerativo como modificador real da doença, não só epifenômeno |
+| G5 | De Lucia et al., Brain Behav Immun 2016 (bônus) | Expansão de micróglia CORRELACIONA com aumento da neurogênese no príon; inibir micróglia piora | Nuance: a FUNÇÃO micróglica no príon é pró-reparo — reabilita o papel funcional (não a linhagem) |
+
+### ⚠️ Adjudicadas (corrigidas/rejeitadas)
+1. **"NSCs geram micróglias imunes" — REPETE CLAIM JÁ REFUTADO.** Linhagem impossível (Ginhoux 2010). Nota: G5 reabilita a FUNÇÃO imunovigilante/pro-reparo da micróglia → se desejada, co-enxerto de iPSC-micróglia como produto separado ganha justificativa funcional; a linhagem a partir de NSC continua refutada.
+2. **Uso enviesado de Relaño-Ginés 2013.** O paper demonstra que o príon INVADE o nicho e altera o destino neuronal; o adendo cita como se "blindar o miolo reverts o quadro" — inferência NÃO testada no paper. Citação vale para "o nicho é alvo do príon", não para "blindagem reverte".
+3. **"Inundar o espaço intercelular com PrP-G127V"** — só é válido se lido como a isoforma SEM ÂNCORA (achado do próprio Gatdula que o adendo cita): PrP de membrana (GPI) não inunda nada. O paper final DEVE explicitar V127ΔGPI secretada; sem isso o mecanismo trans não existe.
+4. **Hidrogel-scaffold para "esticar conexões"** — sem ref; permanece proposto/não documentado; e gera tensão de projeto: gel que prende células pode reter também a proteína secretada (porosidade deve ser dimensionada — levar para WS-7 transporte).

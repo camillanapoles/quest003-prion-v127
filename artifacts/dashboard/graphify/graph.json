@@ -191,6 +191,23 @@
       "status": "confirmed"
     },
     {
+      "id": "svz",
+      "label": "Nicho SVZ como f\u00e1brica autossustent\u00e1vel humana",
+      "community": 2,
+      "community_name": "NSC SECRETORA de V127\u0394GPI \u2014 biof\u00e1brica local via CED",
+      "delta": "down",
+      "detail": "REFUTADO no formato original: neurog\u00eanese SVZ humana adulta \u00e9 m\u00ednima E o nicho replica pr\u00edons. Reformulado: dep\u00f3sito de libera\u00e7\u00e3o lenta; 'persist' (Gatdula) reduz a necessidade de perman\u00eancia alta.",
+      "evidence": "Sorrells 2018; Rela\u00f1o-Gin\u00e9s 2013",
+      "file_type": "concept",
+      "focal": false,
+      "group": "celular",
+      "norm_label": "nicho svz como fabrica autossustentavel humana",
+      "prob": "",
+      "source_file": "quests/003",
+      "source_location": "2026-08-24",
+      "status": "refuted"
+    },
+    {
       "id": "aav",
       "label": "PoC in vivo: AAV-sc V127\u0394GPI sist\u00eamico \u2192 +~50 dias (roedor)",
       "community": 2,
@@ -208,20 +225,20 @@
       "status": "confirmed"
     },
     {
-      "id": "struct",
-      "label": "Base estrutural: impedimento est\u00e9rico na interface de convers\u00e3o",
-      "community": 3,
-      "community_name": "DN 'em trans' por PrP-V127 SEM \u00e2ncora GPI (anchorless)",
-      "delta": "",
-      "detail": "A substitui\u00e7\u00e3o G\u2192V em 127 bloqueia a transfer\u00eancia conformacional na interface PrPSc\u2013PrPC. O 'escudo est\u00e9rico' do protocolo \u00e9 estruturalmente plaus\u00edvel.",
-      "evidence": "Zheng 2018 \u00b7 Sci Rep",
+      "id": "endog",
+      "label": "Reparo neurog\u00eanico end\u00f3geno ativa-se e protege (camundongo)",
+      "community": 2,
+      "community_name": "NSC SECRETORA de V127\u0394GPI \u2014 biof\u00e1brica local via CED",
+      "delta": "up",
+      "detail": "Neurog\u00eanese hipocampal aumenta durante o pr\u00edon e contrabal\u00e7a parcialmente a doen\u00e7a (Gomez-Nicola 2014); Neil3-neurog\u00eanese PROTEGE (Jalland 2016); micr\u00f3glia expandida SUSTENTA essa neurog\u00eanese (De Lucia 2016) \u2014 fun\u00e7\u00e3o pr\u00f3",
+      "evidence": "Gomez-Nicola 2014 Brain; Jalland 2016; De Lucia 2016",
       "file_type": "concept",
       "focal": false,
-      "group": "molecular",
-      "norm_label": "base estrutural: impedimento esterico na interface de conversao",
+      "group": "celular",
+      "norm_label": "reparo neurogenico endogeno ativa-se e protege (camundongo)",
       "prob": "",
       "source_file": "quests/003",
-      "source_location": "2026-08-24",
+      "source_location": "2026-08-25",
       "status": "confirmed"
     },
     {
@@ -298,8 +315,8 @@
       "community": 3,
       "community_name": "DN 'em trans' por PrP-V127 SEM \u00e2ncora GPI (anchorless)",
       "delta": "",
-      "detail": "Tecnologia madura, em ensaios cl\u00ednicos ativos. Resolve a pend\u00eancia de press\u00e3o/refluxo levantada pelo pr\u00f3prio protocolo.",
-      "evidence": "Krauze 2005; Parvar 2025",
+      "detail": "Tecnologia madura, em ensaios ativos. Review J Neurosurg 2025 (Elder/Lonser) cobre CED de terapias g\u00eanicas E CELULARES \u2014 ref direta para o nosso vetor celular.",
+      "evidence": "Krauze 2005; Parvar 2025; Elder/Lonser 2025",
       "file_type": "concept",
       "focal": false,
       "group": "entrega",
@@ -307,6 +324,23 @@
       "prob": "",
       "source_file": "quests/003",
       "source_location": "2026-08-24",
+      "status": "confirmed"
+    },
+    {
+      "id": "struct",
+      "label": "Base estrutural V127: restri\u00e7\u00e3o conformacional + d\u00edmeros est\u00e1veis",
+      "community": 3,
+      "community_name": "DN 'em trans' por PrP-V127 SEM \u00e2ncora GPI (anchorless)",
+      "delta": "",
+      "detail": "X-ray+NMR (Hosszu 2020): V127 restringe a espinha dorsal pr\u00e9-\u03b2-sheet, estabiliza d\u00edmeros por pontes H e altera o loop \u03b22-\u03b12 (regi\u00e3o de transmiss\u00e3o). Somado a Zheng 2018: o escudo est\u00e9rico tem base estrutural dupla.",
+      "evidence": "Zheng 2018 Sci Rep; Hosszu 2020 Commun Biol",
+      "file_type": "concept",
+      "focal": false,
+      "group": "molecular",
+      "norm_label": "base estrutural v127: restricao conformacional + dimeros estaveis",
+      "prob": "",
+      "source_file": "quests/003",
+      "source_location": "2026-08-25",
       "status": "confirmed"
     },
     {
@@ -434,7 +468,7 @@
       "community": 6,
       "community_name": "NSC gera micr\u00f3glia de vigil\u00e2ncia",
       "delta": "down",
-      "detail": "REFUTADO: micr\u00f3glia origina-se de macr\u00f3fagos do saco vitel\u00ednico (mesoderma), n\u00e3o de NSC neuroectod\u00e9rmica. Claim removido; alternativa = co-enxerto separado se imunovigil\u00e2ncia for desejada.",
+      "detail": "REFUTADO: micr\u00f3glia origina-se de macr\u00f3fagos do saco vitel\u00ednico (mesoderma), n\u00e3o de NSC neuroectod\u00e9rmica. Claim removido; alternativa = co-enxerto separado se imunovigil\u00e2ncia for desejada. NOTA adendo 25/08: De Lucia 201",
       "evidence": "Ginhoux 2010 \u00b7 Science",
       "file_type": "concept",
       "focal": false,
@@ -461,23 +495,6 @@
       "source_file": "quests/003",
       "source_location": "2026-08-25",
       "status": "active"
-    },
-    {
-      "id": "svz",
-      "label": "Nicho SVZ como f\u00e1brica autossustent\u00e1vel humana",
-      "community": 8,
-      "community_name": "Nicho SVZ como f\u00e1brica autossustent\u00e1vel humana",
-      "delta": "down",
-      "detail": "REFUTADO no formato original: neurog\u00eanese SVZ humana adulta \u00e9 m\u00ednima E o nicho replica pr\u00edons. Reformulado: dep\u00f3sito de libera\u00e7\u00e3o lenta; 'persist' (Gatdula) reduz a necessidade de perman\u00eancia alta.",
-      "evidence": "Sorrells 2018; Rela\u00f1o-Gin\u00e9s 2013",
-      "file_type": "concept",
-      "focal": false,
-      "group": "celular",
-      "norm_label": "nicho svz como fabrica autossustentavel humana",
-      "prob": "",
-      "source_file": "quests/003",
-      "source_location": "2026-08-24",
-      "status": "refuted"
     }
   ],
   "links": [
@@ -570,6 +587,17 @@
       "weight": 1.5
     },
     {
+      "source": "endog",
+      "target": "svz",
+      "relation": "constrains",
+      "_origin": "curated",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "limita/exige",
+      "source_file": "quests/003",
+      "weight": 1.5
+    },
+    {
       "source": "het",
       "target": "edit",
       "relation": "constrains",
@@ -649,6 +677,28 @@
     {
       "source": "electro",
       "target": "secretor",
+      "relation": "supports",
+      "_origin": "curated",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "sustenta",
+      "source_file": "quests/003",
+      "weight": 2.0
+    },
+    {
+      "source": "endog",
+      "target": "electro",
+      "relation": "supports",
+      "_origin": "curated",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "sustenta",
+      "source_file": "quests/003",
+      "weight": 2.0
+    },
+    {
+      "source": "endog",
+      "target": "gates",
       "relation": "supports",
       "_origin": "curated",
       "confidence": "EXTRACTED",

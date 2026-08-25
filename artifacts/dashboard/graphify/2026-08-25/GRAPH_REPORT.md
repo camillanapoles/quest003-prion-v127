@@ -4,7 +4,7 @@
 - cluster-only mode — file stats not available
 
 ## Summary
-- 29 nodes · 26 edges · 8 communities (5 shown, 3 thin omitted)
+- 28 nodes · 23 edges · 9 communities (5 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -17,6 +17,7 @@
 - Seleção positiva G127V na epidemia de kuru (PNG)
 - NSC gera micróglia de vigilância
 - Rota regulatória: CEP → CONEP → Anvisa (ATMP)
+- Nicho SVZ como fábrica autossustentável humana
 
 ## God Nodes (most connected - your core abstractions)
 
@@ -30,7 +31,7 @@
 - `Janela da DCJ esporádica incompatível com produção celular` --enables--> `E200K no Brasil (Smid 2007) — população-alvo pré-sintomática`  [EXTRACTED]
   quests/003 → quests/003  _Bridges community 0 → community 4_
 
-## Communities (8 total, 3 thin omitted)
+## Communities (9 total, 4 thin omitted)
 
 ### Community 0 - "CRISPR: knock-in V127 bialélico + silêncio do alelo selvagem"
 Cohesion: 0.50
@@ -41,19 +42,19 @@ Cohesion: 0.67
 Nodes (3): ASO anti-PRNP: +61-98% de sobrevida (camundongo), Depleção de PrP reverte espongiose e cognição precoces, ION717 (ASO) em first-in-human desde 2023
 
 ### Community 2 - "NSC SECRETORA de V127ΔGPI — biofábrica local via CED"
-Cohesion: 0.29
-Nodes (7): PoC in vivo: AAV-sc V127ΔGPI sistêmico → +~50 dias (roedor), NPCs restauram eletrofisiologia mesmo com príon ativo, Reparo neurogênico endógeno ativa-se e protege (camundongo), Organoide sCJD humano = plataforma de teste (90 d), Resistência persiste após cessar a expressão do transgene, NSC SECRETORA de V127ΔGPI — biofábrica local via CED, Nicho SVZ como fábrica autossustentável humana
+Cohesion: 0.40
+Nodes (5): PoC in vivo: AAV-sc V127ΔGPI sistêmico → +~50 dias (roedor), NPCs restauram eletrofisiologia mesmo com príon ativo, Organoide sCJD humano = plataforma de teste (90 d), Resistência persiste após cessar a expressão do transgene, NSC SECRETORA de V127ΔGPI — biofábrica local via CED
 
 ### Community 3 - "DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)"
 Cohesion: 0.29
-Nodes (7): CED: cânula step-design anti-refluxo validada, Cânula coaxial de uso único (anti-semeadura priônica), Dominante-negativo dose-dependente (cis, mesma célula), Rota pelo 'caminho danificado' (DTI + neuronavegação), Anel de contenção ('bombeiros') nas bordas sadias, Base estrutural V127: restrição conformacional + dímeros estáveis, DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)
+Nodes (7): CED: cânula step-design anti-refluxo validada, Cânula coaxial de uso único (anti-semeadura priônica), Dominante-negativo dose-dependente (cis, mesma célula), Rota pelo 'caminho danificado' (DTI + neuronavegação), Anel de contenção ('bombeiros') nas bordas sadias, Base estrutural: impedimento estérico na interface de conversão, DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)
 
 ### Community 4 - "Programa em gates G0→G4 com kill-switches pré-registrados"
 Cohesion: 0.40
 Nodes (5): E200K no Brasil (Smid 2007) — população-alvo pré-sintomática, Programa em gates G0→G4 com kill-switches pré-registrados, PRN100 anti-PrP: seguro, sem eficácia clínica clara, RT-QuIC: diagnóstico antemortem precoce validado, RT-QuIC intraoperatório para calibrar margens
 
 ## Knowledge Gaps
-- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Not enough signal to generate questions. This usually means the corpus has no AMBIGUOUS edges, no bridge nodes, no INFERRED relationships, and all communities are tightly cohesive. Add more files or run with --mode deep to extract richer edges._

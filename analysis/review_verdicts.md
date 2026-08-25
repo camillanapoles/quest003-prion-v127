@@ -48,6 +48,7 @@ Legenda: ✅ positivo real · ❌ negativo (com ajuste incremental) · 🌑 cinz
 2. **PrP-V127 secretado/vesicular como DN trans.** *(Atualização 2026-08-25: a forma anchorless foi documentada pelo campo — Gatdula 2026 in vitro, Zerbes 2026 in vivo via AAV.)* A lacuna restante — e a contribuição ORIGINAL deste plano — é a entrega por **terapia celular**: NSCs editadas como biofábrica local de V127ΔGPI no parênquima (distribuição por CED + permanência celular), combinação nunca testada.
 3. **Combinação ASO-ponte + célula-contenção:** ASO derruba substrato global enquanto o enxerto estabelece — sinergia nunca testada, mas cada parte validada.
 4. **Enxerto no nicho SVZ de portador E200K pré-sintomático:** ambiente ainda não-inflamado; a lacuna lit. é ausência de estudo, não contradição.
+5. **Eixo regenerativo endógeno como aliado** *(adendo 25/08, refs verificadas)*: Gomez-Nicola 2014 (neurogênese hipocampal aumenta e contrabalça parcialmente a doença, camundongo), Jalland 2016 (Neil3-neurogênese PROTEGE contra príon), De Lucia 2016 (micróglia expandida sustenta essa neurogênese — função pró-reparo reabilitada; a linhagem NSC→micróglia continua refutada).
 5. **Benefício funcional de NPCs mesmo sem conter príons** (Williams 2023: restauração eletrofisiológica) → desfecho secundário plausível (qualidade de vida) mesmo no fracasso da contenção.
 
 ## Impactos emergentes do estado da pesquisa

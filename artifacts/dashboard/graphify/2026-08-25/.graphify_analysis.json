@@ -1,0 +1,115 @@
+{
+  "communities": {
+    "0": [
+      "edit",
+      "het",
+      "v127total",
+      "window"
+    ],
+    "1": [
+      "aso",
+      "depletion",
+      "ion717"
+    ],
+    "2": [
+      "aav",
+      "electro",
+      "organoid",
+      "persist",
+      "secretor"
+    ],
+    "3": [
+      "ced",
+      "coax",
+      "dn",
+      "dti",
+      "ring",
+      "struct",
+      "trans"
+    ],
+    "4": [
+      "e200k",
+      "gates",
+      "prn100",
+      "rtquic",
+      "rtquicop"
+    ],
+    "5": [
+      "kuru"
+    ],
+    "6": [
+      "microglia"
+    ],
+    "7": [
+      "reg"
+    ],
+    "8": [
+      "svz"
+    ]
+  },
+  "cohesion": {
+    "0": 0.5,
+    "1": 0.6666666666666666,
+    "2": 0.4,
+    "3": 0.2857142857142857,
+    "4": 0.4,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0
+  },
+  "gods": [],
+  "surprises": [
+    {
+      "source": "DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)",
+      "target": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "source_files": [
+        "quests/003",
+        "quests/003"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "supports",
+      "note": "Bridges community 3 → community 2"
+    },
+    {
+      "source": "ION717 (ASO) em first-in-human desde 2023",
+      "target": "Programa em gates G0→G4 com kill-switches pré-registrados",
+      "source_files": [
+        "quests/003",
+        "quests/003"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "constrains",
+      "note": "Bridges community 1 → community 4"
+    },
+    {
+      "source": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "target": "Programa em gates G0→G4 com kill-switches pré-registrados",
+      "source_files": [
+        "quests/003",
+        "quests/003"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "supports",
+      "note": "Bridges community 2 → community 4"
+    },
+    {
+      "source": "Janela da DCJ esporádica incompatível com produção celular",
+      "target": "E200K no Brasil (Smid 2007) — população-alvo pré-sintomática",
+      "source_files": [
+        "quests/003",
+        "quests/003"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "enables",
+      "note": "Bridges community 0 → community 4"
+    }
+  ],
+  "questions": [
+    {
+      "type": "no_signal",
+      "question": null,
+      "why": "Not enough signal to generate questions. This usually means the corpus has no AMBIGUOUS edges, no bridge nodes, no INFERRED relationships, and all communities are tightly cohesive. Add more files or run with --mode deep to extract richer edges."
+    }
+  ]
+}
