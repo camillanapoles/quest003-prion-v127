@@ -211,29 +211,60 @@ function build(){
   const vd=document.createElement('span');vd.className='vdesc';vd.textContent=view.desc||'';
   vb.appendChild(vd);
 
-  /* camadas por nível semântico (apenas as não-vazias) */
-  const layers=GROUPS.map(g=>nodes.filter(n=>n.group===g.id)).filter(L=>L.length);
-  const vnum0=(D.meta.views||[]).find(x=>x.id===VIEW);
-  if(vnum0&&vnum0.numbered&&vnum0.nodes){
-    let st=1;
-    vnum0.nodes.forEach(id=>{const n=nodes.find(x=>x.id===id);if(n)n.step=st++;});
-  }
-  const layerOf={};layers.forEach((L,li)=>L.forEach(n=>layerOf[n.id]=li));
   const vnum=(D.meta.views||[]).find(x=>x.id===VIEW);
-  if(!(vnum&&vnum.numbered))orderLayers(layers,edges);
-
-  /* dimensões: camada mais larga define a largura; x centrado em cada camada */
-  const rowW=L=>L.length*NW+(L.length-1)*GAPX;
-  const W=MARG*2+Math.max(...layers.map(rowW),760);
-  layers.forEach((L,li)=>{
-    const y=20+li*(NH+GAPY)+LABELY;
-    const x0=(W-rowW(L))/2;
-    L.forEach((n,i)=>{
-      n.x=x0+i*(NW+GAPX);n.y=y;
-      n.cx=n.x+NW/2;n.cy=n.y+NH/2;
+  const TIX={molecular:0,classe:1,celular:2,entrega:3,traducao:4};
+  let clusters=null,clusterOf=null,W=0,H=0;
+  const layerOf={};
+  if(vnum&&vnum.numbered){
+    /* MODO HISTÓRIA: camadas semânticas full-width, ordem fixa 1→8 */
+    const layers=GROUPS.map(g=>nodes.filter(n=>n.group===g.id)).filter(L=>L.length);
+    if(vnum.nodes){let st=1;vnum.nodes.forEach(id=>{const n=nodes.find(x=>x.id===id);if(n)n.step=st++;});}
+    layers.forEach((L,li)=>L.forEach(n=>layerOf[n.id]=li));
+    const rowW=L=>L.length*NW+(L.length-1)*GAPX;
+    W=MARG*2+Math.max(...layers.map(rowW),760);
+    layers.forEach((L,li)=>{
+      const y=20+li*(NH+GAPY)+LABELY;
+      const x0=(W-rowW(L))/2;
+      L.forEach((n,i2)=>{n.x=x0+i2*(NW+GAPX);n.y=y;n.cx=n.x+NW/2;n.cy=n.y+NH/2;});
     });
-  });
-  const H=20+layers.length*(NH+GAPY)+LABELY+10;
+    H=20+layers.length*(NH+GAPY)+LABELY+10;
+  }else{
+    /* MODO CLUSTER: comunidades (cluster_id do graphify) — conectados juntos */
+    const cmap={};
+    nodes.forEach(n=>{const k=(n.cluster_id!=null)?('c'+n.cluster_id):('s'+n.id);(cmap[k]=cmap[k]||[]).push(n);});
+    clusters=Object.values(cmap).sort((A,B)=>B.length-A.length);
+    clusterOf={};clusters.forEach((C,ci)=>C.forEach(n=>clusterOf[n.id]=ci));
+    const GXc=22,GYc=62,CBAND=26,CIN=12;
+    const rowWc=L=>L.length*NW+(L.length-1)*GXc;
+    clusters.forEach(C=>{
+      const tiers=[...new Set(C.map(n=>TIX[n.group]))].sort((a,b)=>a-b);
+      const LL=tiers.map(t=>C.filter(n=>TIX[n.group]===t));
+      const E=edges.filter(e=>C.some(n=>n.id===e.from)&&C.some(n=>n.id===e.to));
+      orderLayers(LL,E);
+      C.forEach(n=>layerOf[n.id]=tiers.indexOf(TIX[n.group]));
+      C._LL=LL;
+      C._w=Math.max(60,...LL.map(rowWc));
+      C._h=CBAND+LL.length*(NH+GYc)-GYc+CIN;
+    });
+    const CGAP=56;
+    const maxCols=clusters.length<=2?Math.max(clusters.length,1):3;
+    let x=MARG,y=MARG,colH=0;
+    clusters.forEach((C,ci)=>{
+      if(ci>0&&ci%maxCols===0){x=MARG;y+=colH+CGAP;colH=0;}
+      C._x=x;C._y=y;
+      x+=C._w+CGAP;colH=Math.max(colH,C._h);
+      W=Math.max(W,x-CGAP+MARG);
+    });
+    clusters.forEach(C=>{
+      C._LL.forEach((L,li)=>{
+        const x0=C._x+(C._w-rowWc(L))/2;
+        const yy=C._y+CBAND+li*(NH+GYc);
+        L.forEach((n,i2)=>{n.x=x0+i2*(NW+GXc);n.y=yy;n.cx=n.x+NW/2;n.cy=n.y+NH/2;});
+      });
+    });
+    H=y+colH+MARG+12;
+  }
+
 
   const NS='http://www.w3.org/2000/svg';
   const svg=document.createElementNS(NS,'svg');
