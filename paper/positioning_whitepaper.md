@@ -11,7 +11,7 @@ Todos os três vetores entregam a mesma lógica — PrP-V127 dominante-negativo 
 | Distribuição | Global (intratecal) | Global-lobular (retrógrada sistêmica; limite rAAV de volume) | **Focal-programável** (volumas CED mapeados por DTI) |
 | Duração | Semanas-meses (redose ok) | Anos (uma dose; redose bloqueada por imunidade anti-AAV) | **Permanente + autorrenovável** |
 | Titulação | ✅ redose interrompe efeito | ❌ irreversível | ⚠️ parcial (redução de volume; não retirada) |
-| Concentração intersticial alcançável | Baixa/omoogênea | Média | **Alta local** (secreção contínua no ponto) |
+| Concentração intersticial alcançável | Baixa (homogênea) | Média | **Alta local** (secreção contínua no ponto) |
 | Complexidade logística | Baixa (oligonucleotídeo) | Média (vetor) | **Alta** (GMP celular + neurocirurgia + QA por lote) |
 | Risco característico | Segurança crônica de PrP baixo prolongado | Imunidade; integração; superexpressão | Tumorigenicidade; enxerto; iatrogenia cirúrgica |
 | Maturidade clínica | **First-in-human em curso (2023+)** | Preprint roedor | Zero — G0 é o primeiro passo |

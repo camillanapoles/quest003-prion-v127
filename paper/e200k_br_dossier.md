@@ -23,7 +23,7 @@
 
 1. Portador confirmado de variante patogênica em PRNP (E200K prioritário; D178N, P102L aceitáveis) — teste genético com aconselhamento pré/post (Goldman 2022)
 2. Idade ≥18; assinatura de consentimento específico para terapia avançada experimental
-3. **Fase pré-sintomática ou sintomática muito precoce**, definida por: CDR- 全球=0/0.5 + RT-QuIC LCR negativo OU recentemente positivo + NfL/PrP-LCR dentro da banda de conversão documentada (a janela exata será calibrada com os dados do follow-up natural dos kindreds)
+3. **Fase pré-sintomática ou sintomática muito precoce**, definida por: CDR global =0/0.5 + RT-QuIC LCR negativo OU recentemente positivo + NfL/PrP-LCR dentro da banda de conversão documentada (a janela exata será calibrada com os dados do follow-up natural dos kindreds)
 4. Ressonância sem atrofia avançada; sem comorbidade que contraindique neurocirurgia eletiva
 5. Excluir: gestantes, imunodeficiência grave, anticoagulação não suspensível
 
