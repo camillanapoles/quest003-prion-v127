@@ -3,21 +3,15 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 20:10",
-    "version": "v1.7",
+    "updated": "2026-08-25 20:55",
+    "version": "v1.8",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
     "views": [
       {
-        "id": "pesquisador",
-        "label": "🔬 Pesquisador",
-        "desc": "grafo completo · 28 achados · 23 conexões (auditoria total)",
-        "cols": 6
-      },
-      {
         "id": "executivo",
-        "label": "🎯 Executivo",
-        "desc": "≤9 nós · tese no foco — mensagem para decisão",
+        "label": "▶ COMEÇAR AQUI",
+        "desc": "a história em 8 passos — do kuru ao ensaio clínico",
         "cols": 4,
         "nodes": [
           "trans",
@@ -31,9 +25,15 @@
         ]
       },
       {
+        "id": "pesquisador",
+        "label": "🔬 Mapa completo",
+        "desc": "todos os 33 achados e conexões (auditores)",
+        "cols": 6
+      },
+      {
         "id": "auditoria",
-        "label": "⚖ Auditoria",
-        "desc": "só VÁLIDO + INVÁLIDO — o que sobreviveu ao escrutínio",
+        "label": "⚖ Só o veredito",
+        "desc": "válidos + inválidos — o que sobreviveu",
         "cols": 6,
         "outlook": [
           "valid",
@@ -817,6 +817,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v1.8 (simplificação)",
+      "text": "Legibilidade: vista padrão agora é a HISTÓRIA em 8 nós (começar aqui) — mapa completo e auditoria viram 2º clique; legenda reduzida a 4 classes de nó + 1 linha de leitura; chips de aresta removidos (cor já codifica a classe). Princípio diagram-design: densidade-alvo 4/10, acima de 9 nós = outro diagrama."
+    },
     {
       "date": "2026-08-25",
       "version": "v1.7 (taxonomia 4 classes)",

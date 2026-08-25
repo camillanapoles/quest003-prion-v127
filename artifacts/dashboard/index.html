@@ -98,6 +98,7 @@
 <div class="msg" id="msg"><span class="tag">📌 mensagem-chefe</span><span class="txt" id="msgtxt"></span></div>
 <div id="viewbar" role="tablist" aria-label="Contexto de visualização"></div>
 <div id="err"></div>
+<div class="hint" style="display:block">Como ler: 🟢 <b>válido</b> · 🌕 <b>promissor</b> (aguarda teste) · 🌑 <b>improvável</b> · 🔴 <b>refutado</b> &nbsp;—&nbsp; seta <span style="color:#22c55e">verde</span> = cadeia comprovada · <span style="color:#3b82f6">azul</span> = leva ao que falta provar · <span style="color:#8b9bb8">cinza</span> = especulação. Toque num card p/ ver a evidência.</div>
 <div class="legend" id="legend"></div>
 <div id="scroller"></div>
 
@@ -147,7 +148,7 @@ const OUT=n=>OUTLOOK[n.outlook]||(({confirmed:'valid',constraint:'valid',refuted
 const EDGES={supports:{c:'#2e9e5b',d:'sustenta'},constrains:{c:'#d97706',d:'limita/exige'},refutes:{c:'#dc2626',d:'refuta'},enables:{c:'#3b82f6',d:'habilita'},tests:{c:'#8b5cf6',d:'testado por'}};
 
 const NW=250,NH=96,GAPX=56,GAPY=120,MARG=70,LABELY=44;
-let D=null,VIEW='pesquisador';
+let D=null,VIEW='executivo';
 
 function wrap(t,n){const w=t.split(' ');const L=[];let cur='';
   for(const x of w){if((cur+' '+x).trim().length<=n){cur=(cur+' '+x).trim()}else{L.push(cur);cur=x;if(L.length>=3)break}}
@@ -386,16 +387,6 @@ function build(){
     c.setAttribute('aria-pressed','true');
     c.innerHTML=`<span class="dot" style="background:${v.c}" aria-hidden="true"></span>${v.t.toLowerCase()}`;
     c.title=v.n;c.onclick=()=>toggleFilter(c);
-    lg.appendChild(c);
-  });
-  Object.entries(EDGES).forEach(([k,v])=>{
-    const c=document.createElement('span');c.className='chip';c.title='aresta: '+v.d;c.setAttribute('aria-hidden','true');
-    c.innerHTML=`<span style="width:16px;height:0;border-top:2px ${k==='constrains'?'dashed':'solid'} ${v.c};display:inline-block"></span>${v.d}`;
-    lg.appendChild(c);
-  });
-  [['V→V','cadeia validada','#22c55e',false],['V↔P','validação→aberto','#3b82f6',false],['P↔P','especulativa','#8b9bb8',true],['✕','quebrada','#ef4444',true]].forEach(([t,ti,col,ds])=>{
-    const c=document.createElement('span');c.className='chip';c.title='aresta: '+ti;c.setAttribute('aria-hidden','true');
-    c.innerHTML=`<span style="width:16px;height:0;border-top:2px ${ds?'dashed':'solid'} ${col};display:inline-block"></span>${t}`;
     lg.appendChild(c);
   });
   const st=document.createElement('div');st.className='stats';
