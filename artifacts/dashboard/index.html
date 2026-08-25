@@ -8,7 +8,7 @@
   :root{
     --bg:#0b1020; --panel:#111832; --panel2:#0e142a; --ink:#e5eaf5; --mut:#8b96b3;
     --confirmed:#22c55e; --constraint:#f59e0b; --refuted:#ef4444; --proposed:#3b82f6; --active:#a78bfa;
-    --line:#26304f; --focus:#7cc4ff;
+    --line:#26304f; --focus:#7cc4ff; --focal:#ff8a5c;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
@@ -17,13 +17,22 @@
   header .sub{color:var(--mut);font-size:12px}
   header .right{margin-left:auto;display:flex;gap:10px;align-items:center;font-size:12px;color:var(--mut)}
   .pill{padding:3px 10px;border-radius:999px;border:1px solid var(--line);font-size:11px}
-  #scroller{overflow:auto;max-height:calc(100vh - 132px)}
+  /* callout editorial (máx 1) — voz editorial em itálico serif, fora da área ativa do diagrama */
+  .msg{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;padding:10px 20px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(255,138,92,.07),transparent 70%)}
+  .msg .tag{font-size:10px;letter-spacing:1.4px;color:var(--focal);text-transform:uppercase;white-space:nowrap}
+  .msg .txt{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:14.5px;color:#ffd9c7}
+  /* vistas por contexto */
+  #viewbar{display:flex;flex-wrap:wrap;gap:8px;padding:10px 20px;border-bottom:1px solid var(--line);align-items:center}
+  .vbtn{display:inline-flex;gap:6px;align-items:center;padding:9px 14px;min-height:40px;border-radius:10px;border:1px solid var(--line);cursor:pointer;font-size:12.5px;user-select:none;background:transparent;color:var(--ink)}
+  .vbtn.on{background:#1a2342;border-color:var(--focus)}
+  .vbtn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  .vdesc{color:var(--mut);font-size:12px;margin-left:auto}
+  #scroller{overflow:auto;max-height:calc(100vh - 216px)}
   .legend{display:flex;flex-wrap:wrap;gap:8px;padding:10px 20px;border-bottom:1px solid var(--line);align-items:center}
   .chip{display:inline-flex;gap:6px;align-items:center;padding:8px 14px;min-height:40px;border-radius:10px;border:1px solid var(--line);cursor:pointer;font-size:12.5px;user-select:none;background:transparent;color:var(--ink)}
   .chip .dot{width:10px;height:10px;border-radius:50%}
   .chip.on{background:#1a2342}
   .chip:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
-  .hint{color:var(--mut);font-size:12px;padding:6px 20px;border-bottom:1px solid var(--line)}
   .stats{margin-left:auto;display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--mut)}
   .stats b{color:var(--ink)}
   svg text{font-family:inherit}
@@ -33,9 +42,11 @@
   .node text.ico{font-size:12px;pointer-events:none}
   .node:focus-visible{outline:none}
   .node:focus-visible .box{stroke:#fff;stroke-width:2.4}
+  /* nó focal — coral editorial, 1-2 por vista */
+  .node.focal .box{stroke:var(--focal);stroke-width:2.4;filter:drop-shadow(0 0 7px rgba(255,138,92,.45))}
+  .node text.focaltag{font-size:9.5px;fill:var(--focal);letter-spacing:1.2px;pointer-events:none}
   .band-label{font-size:11px;letter-spacing:1.6px;fill:var(--mut);text-transform:uppercase}
   .dimmed{opacity:.13}
-  /* drawer de detalhe — escondido por padrão, abre como overlay (sem bloco vazio, sem reflow) */
   #veil{position:fixed;inset:0;background:rgba(4,8,18,.55);opacity:0;pointer-events:none;transition:opacity .2s ease;z-index:40}
   #veil.on{opacity:1;pointer-events:auto}
   #panel{position:fixed;top:0;right:0;height:100dvh;width:min(380px,94vw);background:var(--panel2);border-left:1px solid var(--line);box-shadow:-12px 0 32px rgba(0,0,0,.45);transform:translateX(105%);transition:transform .25s ease;z-index:50;display:flex;flex-direction:column;padding:0}
@@ -86,9 +97,10 @@
     <span class="pill" id="upd"></span>
   </div>
 </header>
+<div class="msg" id="msg"><span class="tag">📌 mensagem-chefe</span><span class="txt" id="msgtxt"></span></div>
+<div id="viewbar" role="tablist" aria-label="Contexto de visualização"></div>
 <div id="err"></div>
 <div class="legend" id="legend"></div>
-<div class="hint" id="hint">💡 Toque ou clique em um achado do mapa (ou linha da tabela) para abrir o painel de evidências — feche com ×, Esc ou tocando fora.</div>
 <div id="scroller"></div>
 
 <div id="veil" aria-hidden="true"></div>
@@ -122,7 +134,10 @@ const STATUS={
  active:{c:'var(--active)',i:'▶',t:'ATIVO',n:'em curso / desenho ativo'}
 };
 const EDGES={supports:{c:'#15803d',d:'sustenta'},constrains:{c:'#b45309',d:'limita/exige'},refutes:{c:'#b91c1c',d:'refuta'},enables:{c:'#1d4ed8',d:'habilita'},tests:{c:'#7c3aed',d:'testado por'}};
-const NW=238,NH=78,COLS=6,GX=26,GY=24,ML=30,MT=16,BANDH=64;
+const NW=238,NH=78,GX=26,GY=24,ML=30,MT=16,BANDH=64;
+
+let D=null,VIEW='pesquisador';
+const allNodes=()=>D?D.nodes:[];
 
 function wrap(t,n){const w=t.split(' ');const L=[];let cur='';
   for(const x of w){if((cur+' '+x).trim().length<=n){cur=(cur+' '+x).trim()}else{L.push(cur);cur=x;if(L.length>=3)break}}
@@ -130,28 +145,55 @@ function wrap(t,n){const w=t.split(' ');const L=[];let cur='';
   if(t.length>110&&L[2])L[2]=L[2]+'…';
   return L.slice(0,3)}
 
-function build(d){
-  document.getElementById('title').textContent=d.meta.title;
-  document.getElementById('subtitle').textContent=d.meta.subtitle+' · '+d.meta.audit;
-  document.getElementById('ver').textContent=d.meta.version;
-  document.getElementById('upd').textContent='atualizado '+d.meta.updated;
+/* vista por contexto: filtra nós/arestas e largura de grade */
+function visible(){
+  const v=(D.meta.views||[]).find(x=>x.id===VIEW)||{cols:6};
+  let nodes=D.nodes;
+  if(v.nodes)nodes=nodes.filter(n=>v.nodes.includes(n.id));
+  if(v.status)nodes=nodes.filter(n=>v.status.includes(n.status));
+  const ids=new Set(nodes.map(n=>n.id));
+  const edges=D.edges.filter(e=>ids.has(e.from)&&ids.has(e.to));
+  return {nodes,edges,cols:v.cols||6,view:v};
+}
 
+function build(){
+  const d={meta:D.meta,probability_history:D.probability_history,gates:D.gates,changelog:D.changelog};
+  const {nodes,edges,cols,view}=visible();
+  document.getElementById('title').textContent=D.meta.title;
+  document.getElementById('subtitle').textContent=D.meta.subtitle+' · '+D.meta.audit;
+  document.getElementById('ver').textContent=D.meta.version;
+  document.getElementById('upd').textContent='atualizado '+D.meta.updated;
+  document.getElementById('msgtxt').textContent=D.meta.message||'';
+
+  // viewbar
+  const vb=document.getElementById('viewbar');vb.innerHTML='';
+  (D.meta.views||[{id:'pesquisador',label:' Completo',desc:''}]).forEach(v=>{
+    const b=document.createElement('button');b.type='button';b.className='vbtn'+(v.id===VIEW?' on':'');
+    b.setAttribute('role','tab');b.setAttribute('aria-selected',v.id===VIEW?'true':'false');
+    b.textContent=v.label;b.title=v.desc;
+    b.onclick=()=>{VIEW=v.id;build()};
+    vb.appendChild(b);
+  });
+  const vd=document.createElement('span');vd.className='vdesc';vd.textContent=view.desc||'';
+  vb.appendChild(vd);
+
+  // positions
   const byId={};let y=MT;
   GROUPS.forEach(g=>{
-    const ns=d.nodes.filter(n=>n.group===g.id);
-    const rows=Math.max(1,Math.ceil(ns.length/COLS));
+    const ns=nodes.filter(n=>n.group===g.id);
+    const rows=Math.max(1,Math.ceil(ns.length/cols));
     g.y=y;g.h=rows*(NH+GY)+BANDH;y+=g.h+18;
-    ns.forEach((n,i)=>{const r=Math.floor(i/COLS),c=i%COLS;
+    ns.forEach((n,i)=>{const r=Math.floor(i/cols),c=i%cols;
       n.x=ML+c*(NW+GX);n.y=g.y+BANDH-14+r*(NH+GY);byId[n.id]=n;});
   });
-  const W=ML*2+COLS*(NW+GX)-GX+40,H=y;
+  const W=Math.max(ML*2+cols*(NW+GX)-GX+20,760),H=y;
 
   const NS='http://www.w3.org/2000/svg';
   const svg=document.createElementNS(NS,'svg');
   svg.setAttribute('width',W);svg.setAttribute('height',H);
   svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
   svg.style.display='block';svg.style.margin='0 auto';
-  svg.setAttribute('role','group');svg.setAttribute('aria-label','Mapa lógico dos achados da quest 003');
+  svg.setAttribute('role','group');svg.setAttribute('aria-label','Mapa lógico dos achados — vista '+(view.label||''));
 
   const defs=document.createElementNS(NS,'defs');
   Object.entries(EDGES).forEach(([k,v])=>{
@@ -165,7 +207,7 @@ function build(d){
   svg.appendChild(defs);
 
   GROUPS.forEach(g=>{
-    if(!d.nodes.some(n=>n.group===g.id))return;
+    if(!nodes.some(n=>n.group===g.id))return;
     const bg=document.createElementNS(NS,'rect');
     bg.setAttribute('x',0);bg.setAttribute('y',g.y);
     bg.setAttribute('width',W);bg.setAttribute('height',g.h);
@@ -177,7 +219,7 @@ function build(d){
   });
 
   const edgesG=document.createElementNS(NS,'g');
-  d.edges.forEach(e=>{
+  edges.forEach(e=>{
     const a=byId[e.from],b=byId[e.to];if(!a||!b)return;
     const spec=EDGES[e.type]||EDGES.supports;
     const sameRow=Math.abs(a.y-b.y)<NH/2;
@@ -199,21 +241,29 @@ function build(d){
   svg.appendChild(edgesG);
 
   const nodesG=document.createElementNS(NS,'g');
-  d.nodes.forEach(n=>{
+  nodes.forEach(n=>{
     const s=STATUS[n.status]||STATUS.proposed;
     const g=document.createElementNS(NS,'g');
-    g.setAttribute('class','node');g.setAttribute('transform',`translate(${n.x},${n.y})`);
+    g.setAttribute('class','node'+(n.focal?' focal':''));
+    g.setAttribute('transform',`translate(${n.x},${n.y})`);
     g.setAttribute('data-id',n.id);g.setAttribute('data-status',n.status);
     g.setAttribute('tabindex','0');g.setAttribute('role','button');
-    g.setAttribute('aria-label',`${n.label} — ${s.t}`);
+    g.setAttribute('aria-label',`${n.label} — ${s.t}${n.focal?' — nó focal':''}`);
     const r=document.createElementNS(NS,'rect');
     r.setAttribute('class','box');r.setAttribute('width',NW);r.setAttribute('height',NH);
-    r.setAttribute('rx',10);r.setAttribute('fill','#16203f');
+    r.setAttribute('rx',10);r.setAttribute('fill',n.focal?'#241a12':'#16203f');
     r.setAttribute('stroke',s.c);
     g.appendChild(r);
     const strip=document.createElementNS(NS,'rect');
     strip.setAttribute('width',5);strip.setAttribute('height',NH);strip.setAttribute('rx',2.5);
     strip.setAttribute('fill',s.c);g.appendChild(strip);
+    if(n.focal){
+      const ft=document.createElementNS(NS,'text');
+      ft.setAttribute('class','focaltag');ft.setAttribute('x',NW-8);ft.setAttribute('y',-6);
+      ft.setAttribute('text-anchor','end');
+      ft.textContent=n.id==='secretor'?'◆ TESE':'◆ EVIDÊNCIA-CHAVE';
+      g.appendChild(ft);
+    }
     wrap(n.label,32).forEach((ln,i)=>{
       const t=document.createElementNS(NS,'text');
       t.setAttribute('class','lbl');t.setAttribute('x',14);t.setAttribute('y',22+i*15);
@@ -231,8 +281,8 @@ function build(d){
       dd.setAttribute('fill',n.delta==='up'?'var(--confirmed)':'var(--refuted)');
       dd.textContent=n.delta==='up'?'▲':'▼';g.appendChild(dd);
     }
-    g.addEventListener('click',()=>select(n,d,g));
-    g.addEventListener('keydown',ev2=>{if(ev2.key==='Enter'||ev2.key===' '){ev2.preventDefault();select(n,d,g)}});
+    g.addEventListener('click',()=>select(n,g));
+    g.addEventListener('keydown',ev2=>{if(ev2.key==='Enter'||ev2.key===' '){ev2.preventDefault();select(n,g)}});
     g.addEventListener('mouseenter',()=>hi(n.id,true));
     g.addEventListener('mouseleave',()=>hi(null));
     nodesG.appendChild(g);
@@ -240,6 +290,7 @@ function build(d){
   svg.appendChild(nodesG);
   const sc=document.getElementById('scroller');sc.innerHTML='';sc.appendChild(svg);
 
+  // legend+stats (recalculadas por vista)
   const lg=document.getElementById('legend');lg.innerHTML='';
   Object.entries(STATUS).forEach(([k,v])=>{
     const c=document.createElement('button');c.type='button';c.className='chip on';c.dataset.f=k;
@@ -254,20 +305,20 @@ function build(d){
     lg.appendChild(c);
   });
   const st=document.createElement('div');st.className='stats';
-  const cnt=k=>d.nodes.filter(n=>n.status===k).length;
-  st.innerHTML=`<span><b>${cnt('confirmed')}</b> confirmados</span><span><b>${cnt('constraint')}</b> restrições</span><span><b>${cnt('refuted')}</b> refutados</span><span><b>${cnt('proposed')+cnt('active')}</b> em curso</span><span><b>${d.nodes.length}</b> achados · <b>${d.edges.length}</b> conexões</span>`;
+  const cnt=k=>nodes.filter(n=>n.status===k).length;
+  st.innerHTML=`<span><b>${cnt('confirmed')}</b> ✓</span><span><b>${cnt('constraint')}</b> ⚠</span><span><b>${cnt('refuted')}</b> ✕</span><span><b>${cnt('proposed')+cnt('active')}</b> ⏳/▶</span><span>vista <b>${nodes.length}</b> nós · <b>${edges.length}</b> conexões</span>`;
   lg.appendChild(st);
 
   const gt=document.getElementById('gates');gt.innerHTML='';
   const tones={ready:'var(--confirmed)',wait:'var(--constraint)'};
-  d.gates.forEach(g=>{
+  D.gates.forEach(g=>{
     const el=document.createElement('div');el.className='gate';
     el.innerHTML=`<b>${g.id} · ${g.name}</b><span class="st" style="color:${tones[g.tone]||'var(--mut)'}">${g.status}</span><div class="dt">${g.detail}</div>`;
     gt.appendChild(el);
   });
 
   const pb=document.getElementById('probs');pb.innerHTML='';
-  d.probability_history.forEach(p=>{
+  D.probability_history.forEach(p=>{
     const row=document.createElement('div');row.className='probrow';
     const pts=p.points;const last=pts[pts.length-1];
     const prev=pts[pts.length-2];
@@ -289,31 +340,32 @@ function build(d){
 
   const vt=document.getElementById('valtbl');
   vt.innerHTML='<tr><th>Achado</th><th>Bloco</th><th>Evidência</th><th>Status</th><th>Atualizado</th></tr>';
-  d.nodes.filter(n=>n.status==='confirmed'||n.status==='constraint').forEach(n=>{
+  nodes.filter(n=>n.status==='confirmed'||n.status==='constraint').forEach(n=>{
     const s=STATUS[n.status];
     const tr=document.createElement('tr');tr.className='rowbtn';tr.tabIndex=0;
     tr.innerHTML=`<td>${n.label}</td><td style="color:var(--mut)">${GROUPS.find(g=>g.id===n.group)?.label.split('—')[0]||''}</td><td>${n.evidence||''}</td><td><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span></td><td style="color:var(--mut)">${n.updated}</td>`;
-    const op=()=>select(n,d,tr);
+    const op=()=>select(n,tr);
     tr.onclick=op;
     tr.addEventListener('keydown',e=>{if(e.key==='Enter'){op()}});
     vt.appendChild(tr);
   });
 
   const cg=document.getElementById('changelog');cg.innerHTML='';
-  [...d.changelog].reverse().forEach(c=>{
+  [...D.changelog].reverse().forEach(c=>{
     const el=document.createElement('div');el.className='chg';
     el.innerHTML=`<span class="d">${c.date}</span><span class="v">${c.version}</span><p>${c.text}</p>`;
     cg.appendChild(el);
   });
+  curFilter=new Set(Object.keys(STATUS));
 }
 
-/* ---- drawer hide/unhide ---- */
+/* ---- drawer ---- */
 const panel=document.getElementById('panel');
 const veil=document.getElementById('veil');
 const closeBtn=document.getElementById('closeBtn');
 let lastFocus=null;
 
-function select(n,d,srcEl){
+function select(n,srcEl){
   const s=STATUS[n.status];
   const g=GROUPS.find(x=>x.id===n.group);
   lastFocus=srcEl||document.activeElement;
@@ -321,6 +373,7 @@ function select(n,d,srcEl){
   document.getElementById('pbody').innerHTML=`
    <div><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span>
    <span class="badge" style="border:1px solid var(--line);color:var(--mut)">${g?g.label.split('—')[0]:n.group}</span>
+   ${n.focal?`<span class="badge" style="border:1px solid var(--focal);color:var(--focal)">◆ nó focal</span>`:''}
    ${n.delta?`<span class="badge" style="border:1px solid ${n.delta==='up'?'var(--confirmed)':'var(--refuted)'};color:${n.delta==='up'?'var(--confirmed)':'var(--refuted)'}">${n.delta==='up'?'▲ subiu nesta versão':'▼ caiu/foi corrigido'}</span>`:''}</div>
    <div class="kv"><b>Evidência:</b> ${n.evidence||'—'}</div>
    ${n.prob?`<div class="kv"><b>Probabilidade:</b> ${n.prob}</div>`:''}
@@ -329,7 +382,6 @@ function select(n,d,srcEl){
    ${(n.refs&&n.refs.length)?`<div class="refs"><b>Refs:</b> ${n.refs.join(' · ')}</div>`:''}`;
   panel.classList.add('open');veil.classList.add('on');
   panel.setAttribute('aria-hidden','false');veil.setAttribute('aria-hidden','false');
-  document.getElementById('hint').style.display='none';
   hi(n.id,true);
   closeBtn.focus();
 }
@@ -382,7 +434,7 @@ function hi(id,hover){
   if(!hover)selId=active;else selId=null;
 }
 
-fetch('data.json').then(r=>r.json()).then(build).catch(e=>{
+fetch('data.json').then(r=>r.json()).then(d=>{D=d;build()}).catch(e=>{
   const el=document.getElementById('err');
   el.style.display='block';
   el.textContent='Não consegui carregar data.json ('+e+'). Sirva esta pasta via HTTP (ex.: python3 -m http.server 8137) — fetch não funciona sobre file://.';

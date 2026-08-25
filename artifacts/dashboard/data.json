@@ -3,9 +3,45 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 13:45",
-    "version": "v1.2",
-    "audit": "histórico completo em `git log` de quests/003"
+    "updated": "2026-08-25 14:40",
+    "version": "v1.3",
+    "audit": "histórico completo em `git log` de quests/003",
+    "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
+    "views": [
+      {
+        "id": "pesquisador",
+        "label": "🔬 Pesquisador",
+        "desc": "grafo completo · 28 achados · 23 conexões (auditoria total)",
+        "cols": 6
+      },
+      {
+        "id": "executivo",
+        "label": "🎯 Executivo",
+        "desc": "≤9 nós · tese no foco — mensagem para decisão",
+        "cols": 4,
+        "nodes": [
+          "trans",
+          "aav",
+          "secretor",
+          "ring",
+          "e200k",
+          "window",
+          "ion717",
+          "gates"
+        ]
+      },
+      {
+        "id": "auditoria",
+        "label": "⚖ Auditoria",
+        "desc": "só confirmado + refutado + restrição — o que sobreviveu ao escrutínio",
+        "cols": 6,
+        "status": [
+          "confirmed",
+          "refuted",
+          "constraint"
+        ]
+      }
+    ]
   },
   "nodes": [
     {
@@ -92,7 +128,8 @@
       ],
       "prob": "50-65% (na margem)",
       "updated": "2026-08-25",
-      "delta": "up"
+      "delta": "up",
+      "focal": true
     },
     {
       "id": "persist",
@@ -205,7 +242,8 @@
       ],
       "prob": "testável em G0 (90d pós-seeding)",
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "focal": true
     },
     {
       "id": "microglia",
@@ -407,16 +445,6 @@
     }
   ],
   "edges": [
-    {
-      "from": "kuru",
-      "to": "v127total",
-      "type": "supports"
-    },
-    {
-      "from": "kuru",
-      "to": "dn",
-      "type": "supports"
-    },
     {
       "from": "struct",
       "to": "trans",
@@ -629,6 +657,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v1.3 (diagram-design)",
+      "text": "Skill diagram-design (cathrynlavery/v2.4 MIT) aplicada: (1) vistas por contexto de entrega — Pesquisador (completo) / Executivo (≤9 nós, 'splitting beats shrinking') / Auditoria (só validado+refutado); (2) nós focais editoriais (máx 2): NSC secretora (TESE) + DN trans (EVIDÊNCIA-CHAVE); (3) callout editorial de mensagem assertiva (máx 1) no topo; (4) poda de 2 arestas redundantes óbvias pelo layout (kuru→v127total, kuru→dn) — 25→23 conexões."
+    },
     {
       "date": "2026-08-25",
       "version": "v1.2 (UX)",
