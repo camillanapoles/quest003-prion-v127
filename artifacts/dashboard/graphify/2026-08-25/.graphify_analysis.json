@@ -1,10 +1,12 @@
 {
   "communities": {
     "0": [
-      "aav",
-      "organoid",
-      "persist",
-      "secretor"
+      "ced",
+      "containfull",
+      "dn",
+      "ring",
+      "struct",
+      "trans"
     ],
     "1": [
       "aso",
@@ -12,64 +14,68 @@
       "ion717"
     ],
     "2": [
+      "e200k",
       "electro",
       "endog",
       "gates",
       "img",
       "microglia",
       "prn100",
+      "rtquic",
+      "rtquicop",
       "svz"
     ],
     "3": [
-      "ced",
       "coax",
-      "dn",
       "dti",
-      "ring",
-      "struct",
-      "trans"
+      "regen"
     ],
     "4": [
-      "e200k",
       "edit",
+      "graftsurv",
       "het",
-      "rtquic",
-      "rtquicop",
       "v127total",
       "window"
     ],
     "5": [
-      "kuru"
+      "aav",
+      "organoid",
+      "persist",
+      "secretor"
     ],
     "6": [
+      "kuru"
+    ],
+    "7": [
       "reg"
     ]
   },
   "cohesion": {
-    "0": 0.5,
+    "0": 0.3333333333333333,
     "1": 0.6666666666666666,
-    "2": 0.3333333333333333,
-    "3": 0.2857142857142857,
-    "4": 0.2857142857142857,
-    "5": 1.0,
-    "6": 1.0
+    "2": 0.2222222222222222,
+    "3": 0.6666666666666666,
+    "4": 0.4,
+    "5": 0.5,
+    "6": 1.0,
+    "7": 1.0
   },
   "gods": [],
   "surprises": [
     {
-      "source": "DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)",
-      "target": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "source": "[VÁLIDO] DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)",
+      "target": "[🌕 POSSÍVEL] NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
       "relation": "supports",
-      "note": "Bridges community 3 → community 0"
+      "note": "Bridges community 0 → community 5"
     },
     {
-      "source": "ION717 (ASO) em first-in-human desde 2023",
-      "target": "Programa em gates G0→G4 com kill-switches pré-registrados",
+      "source": "[🌕 POSSÍVEL] ION717 (ASO) em first-in-human desde 2023",
+      "target": "[🌕 POSSÍVEL] Programa em gates G0→G4 com kill-switches pré-registrados",
       "source_files": [
         "quests/003",
         "quests/003"
@@ -79,26 +85,37 @@
       "note": "Bridges community 1 → community 2"
     },
     {
-      "source": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
-      "target": "Programa em gates G0→G4 com kill-switches pré-registrados",
+      "source": "[🌕 POSSÍVEL] NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "target": "[🌕 POSSÍVEL] Programa em gates G0→G4 com kill-switches pré-registrados",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
       "relation": "supports",
-      "note": "Bridges community 0 → community 2"
+      "note": "Bridges community 5 → community 2"
     },
     {
-      "source": "E200K no Brasil (Smid 2007) — população-alvo pré-sintomática",
-      "target": "Programa em gates G0→G4 com kill-switches pré-registrados",
+      "source": "[🌕 POSSÍVEL] NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "target": "[🌑 BAIXA] Sobrevida do enxerto ≥ necessário em cérebro DCJ ativo",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
-      "relation": "supports",
-      "note": "Bridges community 4 → community 2"
+      "relation": "constrains",
+      "note": "Bridges community 5 → community 4"
+    },
+    {
+      "source": "[🌕 POSSÍVEL] Rota pelo 'caminho danificado' (DTI + neuronavegação)",
+      "target": "[🌕 POSSÍVEL] Anel de contenção ('bombeiros') nas bordas sadias",
+      "source_files": [
+        "quests/003",
+        "quests/003"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "enables",
+      "note": "Bridges community 3 → community 0"
     }
   ],
   "questions": [

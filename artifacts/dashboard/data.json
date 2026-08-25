@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 22:05",
-    "version": "v2.0",
+    "updated": "2026-08-25 19:50",
+    "version": "v1.7",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
     "views": [
@@ -559,6 +559,51 @@
       "prob": "não documentado",
       "updated": "2026-08-25",
       "delta": null
+    },
+    {
+      "id": "mrna",
+      "label": "Ramo ⭐: mRNA-LNP intratecal codando V127ΔGPI secretada",
+      "group": "celular",
+      "status": "proposed",
+      "evidence": "Xue 2025; Dong 2025; Mount Sinai 2025",
+      "detail": "LNP cerebro-dirigida por via intratecal expressa mRNA em neurônios e astrócitos (TD5/P3B, 2025). Ramo transversal: resolve fábrica-permanente (Gatdula: proteção persiste pós-cessação), janela da esporádica (ciclo de dias, sem GMP celular) e cobertura espacial (camada global + pico focal). Novo braço G0-A7 no organoide.",
+      "refs": [
+        "Xue 2025 TD5 BLNP",
+        "Dong 2025 P3B"
+      ],
+      "prob": "P=0.35-0.50 por componente; alavancagem máxima",
+      "updated": "2026-08-25",
+      "delta": "up"
+    },
+    {
+      "id": "hypo",
+      "label": "Ramo ⭐: iPSC hipoimune off-the-shelf (HLA-KO + CD47)",
+      "group": "traducao",
+      "status": "proposed",
+      "evidence": "Han 2019 PNAS; Hu 2024 Nat Biotech",
+      "detail": "CD47 necessário e suficiente contra NK (Hu 2024, sobrevivência alotransplante longa); HLA-KO elimina resposta T. Banco universal dispensa imunossupressão (não testado em cérebro com BBB rompida → gate G1.5). Quebra a dependência do autólogo.",
+      "refs": [
+        "doi:10.1073/pnas.1902566116",
+        "Nat Biotech 2024;42"
+      ],
+      "prob": "P=0.50-0.60",
+      "updated": "2026-08-25",
+      "delta": "up"
+    },
+    {
+      "id": "gel",
+      "label": "Ramo ⭐: hidrogel HA macio como carreador pró-sobrevivência",
+      "group": "entrega",
+      "status": "confirmed",
+      "evidence": "Liang 2013 (PMID 23623429); Chen 2023",
+      "detail": "Formulação CORRETA do hidrogel do colaborador: gelificação LENTA, matriz macia — aumenta sobrevida e retenção de NSC enxertada (169 cites). Porosidade ajustável deixa a V127ΔGPI difundir (resolve a tensão WS-7). A versão 'ms' segue rejeitada; minociclina-antiinflamatória: Shah 2017 é RETRACTED, proibido citar.",
+      "refs": [
+        "PMID 23623429",
+        "Chen 2023 TBI"
+      ],
+      "prob": "P(sobrevida↑ 30-50% espor.)=0.45",
+      "updated": "2026-08-25",
+      "delta": "up"
     }
   ],
   "edges": [
@@ -741,6 +786,46 @@
       "from": "endog",
       "to": "regen",
       "type": "constrains"
+    },
+    {
+      "from": "persist",
+      "to": "mrna",
+      "type": "supports"
+    },
+    {
+      "from": "trans",
+      "to": "mrna",
+      "type": "supports"
+    },
+    {
+      "from": "mrna",
+      "to": "gates",
+      "type": "supports"
+    },
+    {
+      "from": "window",
+      "to": "mrna",
+      "type": "enables"
+    },
+    {
+      "from": "hypo",
+      "to": "gates",
+      "type": "supports"
+    },
+    {
+      "from": "window",
+      "to": "hypo",
+      "type": "constrains"
+    },
+    {
+      "from": "gel",
+      "to": "secretor",
+      "type": "supports"
+    },
+    {
+      "from": "gel",
+      "to": "coax",
+      "type": "enables"
     }
   ],
   "probability_history": [
@@ -806,7 +891,7 @@
       "id": "G0",
       "name": "Organoide sCJD — 6 braços",
       "status": "PROTOCOLO PRONTO",
-      "detail": "A5 secretora vs A6 proteína recombinante; kill-switch de pivot; aguarda parceiro de lab (BSL-3)",
+      "detail": "7 braços (A1-A7): inclui A7=LNP-mRNA V127ΔGPI (ramo novo). Kill-switch original mantido: se acelular (A6/A7) igualar celular, pivot.",
       "tone": "ready"
     },
     {
@@ -839,6 +924,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v1.7 (ramos de solução)",
+      "text": "Árvore de ramos probabilistas para as refutações (analysis/solution_branches.md): R1 resolvida (iMG v1.6); R2 fábrica→3 ramos, destaque ⭐ mRNA-LNP intratecal (Xue/Dong 2025) que resolve R2+R3+R4 juntos (novo braço G0-A7); R4→banco hipoimune ⭐ (Han 2019/Hu 2024 CD47 N&S contra NK); R5 sobrevivência→hidrogel HA macio ⭐ (Liang 2013/Chen 2023 — forma correta do hidrogel do colaborador; porosidade resolve WS-7) + ALERTA: Shah 2017 minociclina RETRACTED; R7 reframe penumbra; R8 gap: não existe PET-tracer de PrPSc. Composta com ramos: desaceleração 30-45%, compassivo esporádico viável via mRNA P=0.5-0.7."
+    },
     {
       "date": "2026-08-25",
       "version": "v2.0 (clusters)",
