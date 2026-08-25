@@ -30,3 +30,16 @@ Cada gate do programa recebe como prior os **sucessos/insucessos históricos rea
 - Correlação entre gates assumida zero (conservador: na prática mecanismo→vetor são positivamente correlacionados via G0, o que SUBESTIMA o cenário A pós-GO)
 
 **Nota de governança:** este modelo substitui a coluna "probabilidade" das versões anteriores onde as duas perguntas coincidem; as estruturadas permanecem como P(condicional). A tabela-mãe agora tem as duas leituras, rotuladas.
+
+---
+
+## Apêndice v2 — Sensibilidade e correlação (`sensitivity_sweep.py` → `bayes_results/sensitivity_sweep.json`)
+
+| Cenário rubrica | A (indep) | A (corr ρ=0,4) | B (G0-GO) |
+|---|---|---|---|
+| Pessimista (sim−0,15) | 5,4% [0,4-15,4] | 5,4% [0,4-15,2] | 36,3% [12,6-62,4] |
+| **Central** | **5,1% [0,4-13,7]** | 5,1% | **36,5% [14,5-60,3]** |
+| Otimista (sim+0,15) | 4,9% [0,5-12,7] | 4,9% | 37,6% [16,6-59,6] |
+
+**Conclusão de robustez:** as estimativas do modelo v1 NÃO dependem criticamente da rubrica de similaridade (Δ<0,5pp em A; <1,3pp em B através do sweep inteiro) nem da suposição de independência (ρ=0,4 muda <0,2pp). O número que importa — **G0-GO ≈ 36% e desaceleração-marginal ≈ 5% — é estável**. A principal fonte de variância verdadeira permanece a largura dos ICs (incerteza epistêmica dos análogos escassos), que só o próprio G0 reduz.
+*(Nota técnica: contra-intuitivamente, sim+0,15 BAIXA levemente A — porque peso maior no análogo negativo 0/6 e no 3/20 do AAV puxa os gates para baixo; coerente com o desenho honesto.)*
