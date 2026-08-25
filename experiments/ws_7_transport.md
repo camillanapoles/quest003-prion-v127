@@ -80,3 +80,15 @@ Equação resolvida (ADR em meio poroso):
 - `hagel` (R5a) ganha critério de aprovação/rejeição por wt% — valida Liang/Nih com margem
 - `mrna` (R2c): mesmo ℓ se aplica ao pulso transiente — a dose de reforço deve espaçar < t_clearance+k para não deixar vale entre pulsos (próxima iteração numérica)
 - G0-A5/A7: endpoints de gradiente proximal/distal agora têm escala esperada (~4-6mm) para calibrar microdissecção
+
+## WS-9 — Hierarquia de dados/simulação para calibrar θ ANTES do G0 (definida 2026-08-26)
+**Pergunta-guia:** existe simulação computacional suficiente da PRÓPRIA organela? (obs do usuário)
+
+**Varredura executada — veredito:**
+- ❌ Simulação de organoide-príon NÃO existe (lacuna confirmada → é NOSSA — methods paper)
+- ✅ METADE 1 existe COM CÓDIGO: **Igel et al. bioRxiv 2024.05.01.592001 (INRAE/Lyon — grupo Béringue/Rezaei): modelo estocástico reação-difusão da propagação priônica (algoritmo de Gillespie), com diversidade estrutural de PrPSc + resposta tecidual; aba "Data/Code" no bioRxiv**
+- ✅ METADE 2 existe: frameworks computacionais de organoide (Montes-Olivas 2019; Neagu 2026 — modelos cell-based com solvers reação-difusão)
+- ✅ VALIDAÇÃO: time-courses publicados de Groveman 2019/2021 (crescimento PrP-res por subtipo; decaimento com PPS)
+
+**Plano WS-9 (mesclagem):** kernel cinético do Igel (Gillespie) + geometria esferoide organoide + TERMO DE CAPPING V127ΔGPI (nosso, inédito — ninguém simulou tratamento nesta família) → **"ensaio in silico do G0"**: varrer θ antes do laboratório, com IC via WS-8.
+**Escada de dados (se um degrau faltar, sobe o próximo):** [1] código+parâmetros Igel → [2] frameworks organoide → [3] digitalização Groveman (curvas publicadas) → [4] priors WS-7/8.
