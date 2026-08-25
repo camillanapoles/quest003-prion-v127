@@ -3,10 +3,10 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 22:30",
-    "version": "v2.1",
+    "updated": "2026-08-25 23:10",
+    "version": "v2.2",
     "audit": "histórico completo em `git log` de quests/003",
-    "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
+    "message": "Mecanismo validado; agora há PLANOS B com âncoras reais: mRNA no líquor (dias, sem cirurgia), gel protetor, célula invisível. G0 testa os três contra o padrão.",
     "views": [
       {
         "id": "executivo",
@@ -640,6 +640,58 @@
       "updated": "2026-08-25",
       "delta": "up",
       "cluster_id": 5
+    },
+    {
+      "id": "mrna",
+      "title": "Plano B sem célula: mRNA no líquor",
+      "label": "mRNA-LNP intratecal codando V127ΔGPI secretada (Xue 2025)",
+      "group": "classe",
+      "outlook": "gray_light",
+      "status": "proposed",
+      "evidence": "Xue 2025 Adv Mater; Dong 2025",
+      "detail": "Ramo ⭐ R2c/R4c: LNP-mRNA intratecal expressa em ~30% neurônios/38% astrócitos (dose única, camundongo). Resolve fábrica+janela: fabricação em DIAS, sem GMP celular, sem cirurgia grau 0. Testado no novo braço G0-A7. Kill: expressão < nível DN por >7d pós-pulso.",
+      "refs": [
+        "PMID 40317512"
+      ],
+      "prob": "0.35-0.50 (componente)",
+      "updated": "2026-08-25",
+      "delta": "up",
+      "cluster_id": 5
+    },
+    {
+      "id": "hagel",
+      "title": "Gel macio que protege a célula",
+      "label": "Hidrogel HA pró-sobrevivência como carreador do enxerto (Liang 2013)",
+      "group": "entrega",
+      "outlook": "valid",
+      "status": "confirmed",
+      "evidence": "Liang 2013; Nih 2017",
+      "detail": "Ramo ⭐ R5a: hidrogel de ácido hialurônico AUMENTA sobrevida de NSC enxertada (Liang 2013, 169 cites; Nih 2017 com iPSC-NPC). Recupera o hidrogel do colaborador na forma CORRETA (gelificação lenta/macía) — porosidade dimensionada no WS-7 p/ deixar a V127ΔGPI difundir. Versão 'ms-termoendurecedora' segue rejeitada.",
+      "refs": [
+        "PMID 23623429"
+      ],
+      "prob": "sobrevida esporádica 15-30% → 30-50%",
+      "updated": "2026-08-25",
+      "delta": "up",
+      "cluster_id": 0
+    },
+    {
+      "id": "hypo",
+      "title": "Célula 'invisível' de prateleira",
+      "label": "iPSC hipoimune HLA-KO + CD47↑ p/ banco off-the-shelf",
+      "group": "celular",
+      "outlook": "gray_light",
+      "status": "proposed",
+      "evidence": "Han 2019 PNAS; Hu 2024 NBT; Pavan 2025",
+      "detail": "Ramo R4b/R6b: HLA-KO+CD47 protege de NK (Hu 2024: necessário E suficiente; macaco imunocompetente, sobrevida longa; Pavan 2025: enxerto NEURAL cloaked). Risco residual: não testado em cérebro inflamado c/ BBB rompida → gate G1.5. No Brasil: HLA-homozigoto é 2ª linha (0.35).",
+      "refs": [
+        "doi:10.1073/pnas.1902566116",
+        "doi:10.1038/s41587-023-01784-x"
+      ],
+      "prob": "0.50-0.60 (dispensar imunossupressão)",
+      "updated": "2026-08-25",
+      "delta": null,
+      "cluster_id": 4
     }
   ],
   "edges": [
@@ -862,6 +914,41 @@
       "from": "gel",
       "to": "coax",
       "type": "enables"
+    },
+    {
+      "from": "persist",
+      "to": "mrna",
+      "type": "supports"
+    },
+    {
+      "from": "mrna",
+      "to": "gates",
+      "type": "supports"
+    },
+    {
+      "from": "mrna",
+      "to": "window",
+      "type": "constrains"
+    },
+    {
+      "from": "hagel",
+      "to": "graftsurv",
+      "type": "constrains"
+    },
+    {
+      "from": "hagel",
+      "to": "secretor",
+      "type": "enables"
+    },
+    {
+      "from": "hypo",
+      "to": "edit",
+      "type": "enables"
+    },
+    {
+      "from": "hypo",
+      "to": "window",
+      "type": "constrains"
     }
   ],
   "probability_history": [
@@ -907,6 +994,12 @@
           "low": 20,
           "high": 30,
           "note": "desfecho primário recomendado"
+        },
+        {
+          "date": "2026-08-25 (v2.2)",
+          "low": 30,
+          "high": 45,
+          "note": "ramos ⭐ mRNA-LNP + hidrogel HA + hipoimune"
         }
       ]
     },
@@ -918,6 +1011,17 @@
           "low": 40,
           "high": 60,
           "note": "vs 15-30% em esporádica ativa"
+        }
+      ]
+    },
+    {
+      "component": "Uso compassivo esporádica viável (mRNA, sem célula)",
+      "points": [
+        {
+          "date": "2026-08-25 (v2.2)",
+          "low": 50,
+          "high": 70,
+          "note": "ramo R4c — fabricação em dias"
         }
       ]
     }
@@ -960,6 +1064,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v2.2 (ramos de solução)",
+      "text": "ADOÇÃO INTEGRAL do modelo de ramos probabilistas (primeiro doc colaborador com 6/6 âncoras verificadas): R2c/R4c mRNA-LNP intratecal V127ΔGPI ⭐ (Xue 2025 verificado; braço G0-A7 criado); R5a hidrogel HA pró-sobrevivência ⭐ (Liang 2013; recupera hidrogel na forma correta); R4b/R6b iPSC hipoimune (Han 2019/Hu 2024/Pavan 2025). Regras de integridade: Shah 2017 RETRACTED proibido (retratação 2020 confirmada), minociclina confunde NfL (Gentile 2024). Matriz: desaceleração 20-30%→30-45%, compassivo esporádica 50-70%. Motor cluster do dashboard corrigido (bug de ontem)."
+    },
     {
       "date": "2026-08-25",
       "version": "v2.1 (comunidades graphify)",

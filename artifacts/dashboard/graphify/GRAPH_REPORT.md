@@ -20,14 +20,14 @@
 ## God Nodes (most connected - your core abstractions)
 
 ## Surprising Connections (you probably didn't know these)
-- `DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)` --supports--> `Ramo ⭐: mRNA-LNP intratecal codando V127ΔGPI secretada`  [EXTRACTED]
-  quests/003 → quests/003  _Bridges community 3 → community 5_
+- `Janela da DCJ esporádica incompatível com produção celular` --enables--> `E200K no Brasil (Smid 2007) — população-alvo pré-sintomática`  [EXTRACTED]
+  quests/003 → quests/003  _Bridges community 0 → community 4_
+- `Janela da DCJ esporádica incompatível com produção celular` --enables--> `Ramo ⭐: mRNA-LNP intratecal codando V127ΔGPI secretada`  [EXTRACTED]
+  quests/003 → quests/003  _Bridges community 0 → community 5_
 - `ION717 (ASO) em first-in-human desde 2023` --constrains--> `Programa em gates G0→G4 com kill-switches pré-registrados`  [EXTRACTED]
   quests/003 → quests/003  _Bridges community 1 → community 4_
-- `NSC SECRETORA de V127ΔGPI — biofábrica local via CED` --supports--> `Programa em gates G0→G4 com kill-switches pré-registrados`  [EXTRACTED]
-  quests/003 → quests/003  _Bridges community 5 → community 4_
-- `NSC SECRETORA de V127ΔGPI — biofábrica local via CED` --constrains--> `Sobrevida do enxerto ≥ necessário em cérebro DCJ ativo`  [EXTRACTED]
-  quests/003 → quests/003  _Bridges community 5 → community 0_
+- `Rota pelo 'caminho danificado' (DTI + neuronavegação)` --enables--> `Anel de contenção ('bombeiros') nas bordas sadias`  [EXTRACTED]
+  quests/003 → quests/003  _Bridges community 2 → community 3_
 - `NPCs restauram eletrofisiologia mesmo com príon ativo` --supports--> `NSC SECRETORA de V127ΔGPI — biofábrica local via CED`  [EXTRACTED]
   quests/003 → quests/003  _Bridges community 2 → community 5_
 

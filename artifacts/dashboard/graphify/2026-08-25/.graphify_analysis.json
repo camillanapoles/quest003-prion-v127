@@ -1,12 +1,13 @@
 {
   "communities": {
     "0": [
-      "ced",
       "containfull",
-      "dn",
-      "ring",
-      "struct",
-      "trans"
+      "edit",
+      "graftsurv",
+      "het",
+      "kuru",
+      "v127total",
+      "window"
     ],
     "1": [
       "aso",
@@ -14,108 +15,107 @@
       "ion717"
     ],
     "2": [
-      "e200k",
+      "coax",
+      "dti",
       "electro",
       "endog",
-      "gates",
       "img",
       "microglia",
-      "prn100",
-      "rtquic",
-      "rtquicop",
+      "regen",
       "svz"
     ],
     "3": [
-      "coax",
-      "dti",
-      "regen"
+      "ced",
+      "dn",
+      "ring",
+      "struct",
+      "trans"
     ],
     "4": [
-      "edit",
-      "graftsurv",
-      "het",
-      "v127total",
-      "window"
+      "e200k",
+      "gates",
+      "hypo",
+      "prn100",
+      "rtquic",
+      "rtquicop"
     ],
     "5": [
       "aav",
+      "gel",
+      "mrna",
       "organoid",
       "persist",
       "secretor"
     ],
     "6": [
-      "kuru"
-    ],
-    "7": [
       "reg"
     ]
   },
   "cohesion": {
-    "0": 0.3333333333333333,
+    "0": 0.2857142857142857,
     "1": 0.6666666666666666,
-    "2": 0.2222222222222222,
-    "3": 0.6666666666666666,
-    "4": 0.4,
-    "5": 0.5,
-    "6": 1.0,
-    "7": 1.0
+    "2": 0.25,
+    "3": 0.4,
+    "4": 0.3333333333333333,
+    "5": 0.3333333333333333,
+    "6": 1.0
   },
   "gods": [],
   "surprises": [
     {
-      "source": "[VÁLIDO] DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)",
-      "target": "[🌕 POSSÍVEL] NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "source": "DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)",
+      "target": "Ramo ⭐: mRNA-LNP intratecal codando V127ΔGPI secretada",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
       "relation": "supports",
-      "note": "Bridges community 0 → community 5"
+      "note": "Bridges community 3 → community 5"
     },
     {
-      "source": "[🌕 POSSÍVEL] ION717 (ASO) em first-in-human desde 2023",
-      "target": "[🌕 POSSÍVEL] Programa em gates G0→G4 com kill-switches pré-registrados",
+      "source": "ION717 (ASO) em first-in-human desde 2023",
+      "target": "Programa em gates G0→G4 com kill-switches pré-registrados",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
       "relation": "constrains",
-      "note": "Bridges community 1 → community 2"
+      "note": "Bridges community 1 → community 4"
     },
     {
-      "source": "[🌕 POSSÍVEL] NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
-      "target": "[🌕 POSSÍVEL] Programa em gates G0→G4 com kill-switches pré-registrados",
+      "source": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "target": "Programa em gates G0→G4 com kill-switches pré-registrados",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
       "relation": "supports",
-      "note": "Bridges community 5 → community 2"
-    },
-    {
-      "source": "[🌕 POSSÍVEL] NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
-      "target": "[🌑 BAIXA] Sobrevida do enxerto ≥ necessário em cérebro DCJ ativo",
-      "source_files": [
-        "quests/003",
-        "quests/003"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "constrains",
       "note": "Bridges community 5 → community 4"
     },
     {
-      "source": "[🌕 POSSÍVEL] Rota pelo 'caminho danificado' (DTI + neuronavegação)",
-      "target": "[🌕 POSSÍVEL] Anel de contenção ('bombeiros') nas bordas sadias",
+      "source": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "target": "Sobrevida do enxerto ≥ necessário em cérebro DCJ ativo",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
-      "relation": "enables",
-      "note": "Bridges community 3 → community 0"
+      "relation": "constrains",
+      "note": "Bridges community 5 → community 0"
+    },
+    {
+      "source": "NPCs restauram eletrofisiologia mesmo com príon ativo",
+      "target": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "source_files": [
+        "quests/003",
+        "quests/003"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "supports",
+      "note": "Bridges community 2 → community 5"
     }
   ],
   "questions": [
