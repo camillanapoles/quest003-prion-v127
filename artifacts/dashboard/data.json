@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 19:20",
-    "version": "v1.6",
+    "updated": "2026-08-25 20:10",
+    "version": "v1.7",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
     "views": [
@@ -33,12 +33,11 @@
       {
         "id": "auditoria",
         "label": "⚖ Auditoria",
-        "desc": "só confirmado + refutado + restrição — o que sobreviveu ao escrutínio",
+        "desc": "só VÁLIDO + INVÁLIDO — o que sobreviveu ao escrutínio",
         "cols": 6,
-        "status": [
-          "confirmed",
-          "refuted",
-          "constraint"
+        "outlook": [
+          "valid",
+          "invalid"
         ]
       }
     ]
@@ -56,7 +55,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "v127total",
@@ -70,7 +70,8 @@
       ],
       "prob": "90-95% (autonomia celular)",
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "het",
@@ -84,7 +85,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "dn",
@@ -99,7 +101,8 @@
       ],
       "prob": null,
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "struct",
@@ -114,7 +117,8 @@
       ],
       "prob": null,
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "trans",
@@ -130,7 +134,8 @@
       "prob": "50-65% (na margem)",
       "updated": "2026-08-25",
       "delta": "up",
-      "focal": true
+      "focal": true,
+      "outlook": "valid"
     },
     {
       "id": "persist",
@@ -144,7 +149,8 @@
       ],
       "prob": null,
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "aav",
@@ -158,7 +164,8 @@
       ],
       "prob": null,
       "updated": "2026-08-25",
-      "delta": "up"
+      "delta": "up",
+      "outlook": "valid"
     },
     {
       "id": "depletion",
@@ -172,7 +179,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "aso",
@@ -187,7 +195,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "ion717",
@@ -201,7 +210,8 @@
       ],
       "prob": null,
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "outlook": "gray_light"
     },
     {
       "id": "prn100",
@@ -215,7 +225,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "edit",
@@ -229,7 +240,8 @@
       ],
       "prob": "80-90% (GMP)",
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "outlook": "gray_light"
     },
     {
       "id": "secretor",
@@ -244,7 +256,8 @@
       "prob": "testável em G0 (90d pós-seeding)",
       "updated": "2026-08-25",
       "delta": null,
-      "focal": true
+      "focal": true,
+      "outlook": "gray_light"
     },
     {
       "id": "microglia",
@@ -258,7 +271,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": "down"
+      "delta": "down",
+      "outlook": "invalid"
     },
     {
       "id": "svz",
@@ -273,7 +287,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": "down"
+      "delta": "down",
+      "outlook": "invalid"
     },
     {
       "id": "organoid",
@@ -287,7 +302,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "electro",
@@ -301,7 +317,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "ced",
@@ -317,7 +334,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "dti",
@@ -329,7 +347,8 @@
       "refs": [],
       "prob": "plausível, não documentado",
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "gray_light"
     },
     {
       "id": "ring",
@@ -343,7 +362,8 @@
       ],
       "prob": "10-20% contenção total / 35-50% desaceleração",
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "outlook": "gray_light"
     },
     {
       "id": "coax",
@@ -357,7 +377,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "gray_light"
     },
     {
       "id": "rtquicop",
@@ -371,7 +392,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "gray_light"
     },
     {
       "id": "e200k",
@@ -386,7 +408,8 @@
       ],
       "prob": "40-60% enxerto sobrevive (pré-sintom.)",
       "updated": "2026-08-25",
-      "delta": "up"
+      "delta": "up",
+      "outlook": "valid"
     },
     {
       "id": "rtquic",
@@ -401,7 +424,8 @@
       ],
       "prob": null,
       "updated": "2026-08-24",
-      "delta": null
+      "delta": null,
+      "outlook": "valid"
     },
     {
       "id": "window",
@@ -415,7 +439,8 @@
       ],
       "prob": "3-8% resgate (esporádica)",
       "updated": "2026-08-24",
-      "delta": "down"
+      "delta": "down",
+      "outlook": "valid"
     },
     {
       "id": "reg",
@@ -429,7 +454,8 @@
       ],
       "prob": null,
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "outlook": "gray_light"
     },
     {
       "id": "gates",
@@ -443,7 +469,8 @@
       ],
       "prob": "~6% cura funcional / 20-30% desaceleração",
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "outlook": "gray_light"
     },
     {
       "id": "endog",
@@ -458,7 +485,8 @@
       ],
       "prob": null,
       "updated": "2026-08-25",
-      "delta": "up"
+      "delta": "up",
+      "outlook": "valid"
     },
     {
       "id": "img",
@@ -473,7 +501,47 @@
       ],
       "prob": "segurança plausível; eficácia a testar em G1",
       "updated": "2026-08-25",
-      "delta": "up"
+      "delta": "up",
+      "outlook": "gray_light"
+    },
+    {
+      "id": "containfull",
+      "label": "Contenção COMPLETA em doença já estabelecida",
+      "group": "entrega",
+      "outlook": "gray_dark",
+      "status": "proposed",
+      "evidence": "recalibração v1 (10-20%)",
+      "detail": "Aposta total do anel em doença estabelecida: multifocal/sináptica além da margem torna contenção perfeita improvável — o desfecho declarado é desaceleração. 🌑 pela lógica (o próprio proponente admitia o risco).",
+      "refs": [],
+      "prob": "10-20%",
+      "updated": "2026-08-25",
+      "delta": null
+    },
+    {
+      "id": "graftsurv",
+      "label": "Sobrevida do enxerto ≥ necessário em cérebro DCJ ativo",
+      "group": "celular",
+      "outlook": "gray_dark",
+      "status": "proposed",
+      "evidence": "análise v1 (15-30% esporádica)",
+      "detail": "Tempestade de citocinas + microambiente hostil: apoptose precoce do enxerto antes de estabelecer. Mitigável redirecionando para pré-sintomáticos (40-60%). 🌑 na forma esporádica ativa.",
+      "refs": [],
+      "prob": "15-30% (esporádica ativa)",
+      "updated": "2026-08-25",
+      "delta": null
+    },
+    {
+      "id": "regen",
+      "label": "Regeneração funcional de território espongiforme morto",
+      "group": "celular",
+      "outlook": "gray_dark",
+      "status": "proposed",
+      "evidence": "sem precedente documentado",
+      "detail": "Nenhuma evidência de reconexão funcional de parênquima espongiforme em humanos; reparo endógeno (Gomez-Nicola) contrabalça apenas PARCIALMENTE. 🌑: jamais documentado.",
+      "refs": [],
+      "prob": "não documentado",
+      "updated": "2026-08-25",
+      "delta": null
     }
   ],
   "edges": [
@@ -621,6 +689,36 @@
       "from": "microglia",
       "to": "img",
       "type": "constrains"
+    },
+    {
+      "from": "ring",
+      "to": "containfull",
+      "type": "tests"
+    },
+    {
+      "from": "window",
+      "to": "containfull",
+      "type": "constrains"
+    },
+    {
+      "from": "secretor",
+      "to": "graftsurv",
+      "type": "constrains"
+    },
+    {
+      "from": "window",
+      "to": "graftsurv",
+      "type": "constrains"
+    },
+    {
+      "from": "dti",
+      "to": "regen",
+      "type": "enables"
+    },
+    {
+      "from": "endog",
+      "to": "regen",
+      "type": "constrains"
     }
   ],
   "probability_history": [
@@ -719,6 +817,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v1.7 (taxonomia 4 classes)",
+      "text": "Grafo reclassificado na taxonomia original do usuário: VÁLIDO (verde: confirmado+restrição) · INVÁLIDO (vermelho) · PENDENTE-POSSÍVEL 🌕 (cinza claro) · PENDENTE-BAIXA 🌑 (cinza escuro). 3 proposições 🌑 adicionadas como nós explícitos: contenção-completa (10-20%), sobrevida do enxerto em cérebro ativo (15-30%), regeneração do território morto (não documentado). Arestas coloridas por classe dos extremos: V→V verde (cadeia validada) · V↔P azul (validação fluindo p/ aberto) · P↔P cinza tracejado (especulativa) · envolvendo inválido vermelho tracejado (quebrada)."
+    },
     {
       "date": "2026-08-25",
       "version": "v1.6 (correção micróglia adotada)",

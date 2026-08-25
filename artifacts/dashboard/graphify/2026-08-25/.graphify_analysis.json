@@ -1,10 +1,10 @@
 {
   "communities": {
     "0": [
-      "edit",
-      "het",
-      "v127total",
-      "window"
+      "aav",
+      "organoid",
+      "persist",
+      "secretor"
     ],
     "1": [
       "aso",
@@ -12,12 +12,12 @@
       "ion717"
     ],
     "2": [
-      "aav",
       "electro",
       "endog",
-      "organoid",
-      "persist",
-      "secretor",
+      "gates",
+      "img",
+      "microglia",
+      "prn100",
       "svz"
     ],
     "3": [
@@ -31,30 +31,28 @@
     ],
     "4": [
       "e200k",
-      "gates",
-      "prn100",
+      "edit",
+      "het",
       "rtquic",
-      "rtquicop"
+      "rtquicop",
+      "v127total",
+      "window"
     ],
     "5": [
       "kuru"
     ],
     "6": [
-      "microglia"
-    ],
-    "7": [
       "reg"
     ]
   },
   "cohesion": {
     "0": 0.5,
     "1": 0.6666666666666666,
-    "2": 0.2857142857142857,
+    "2": 0.3333333333333333,
     "3": 0.2857142857142857,
-    "4": 0.4,
+    "4": 0.2857142857142857,
     "5": 1.0,
-    "6": 1.0,
-    "7": 1.0
+    "6": 1.0
   },
   "gods": [],
   "surprises": [
@@ -67,7 +65,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "supports",
-      "note": "Bridges community 3 → community 2"
+      "note": "Bridges community 3 → community 0"
     },
     {
       "source": "ION717 (ASO) em first-in-human desde 2023",
@@ -78,7 +76,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "constrains",
-      "note": "Bridges community 1 → community 4"
+      "note": "Bridges community 1 → community 2"
     },
     {
       "source": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
@@ -89,18 +87,18 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "supports",
-      "note": "Bridges community 2 → community 4"
+      "note": "Bridges community 0 → community 2"
     },
     {
-      "source": "Janela da DCJ esporádica incompatível com produção celular",
-      "target": "E200K no Brasil (Smid 2007) — população-alvo pré-sintomática",
+      "source": "E200K no Brasil (Smid 2007) — população-alvo pré-sintomática",
+      "target": "Programa em gates G0→G4 com kill-switches pré-registrados",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
-      "relation": "enables",
-      "note": "Bridges community 0 → community 4"
+      "relation": "supports",
+      "note": "Bridges community 4 → community 2"
     }
   ],
   "questions": [

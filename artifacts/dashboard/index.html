@@ -137,13 +137,13 @@ const GROUPS=[
  {id:'traducao',label:'⑤ Tradução · população, regulatório, programa'}
 ];
 const TIER_SHORT={molecular:'MOLECULAR',classe:'CLASSE',celular:'CELULAR',entrega:'ENTREGA',traducao:'TRADUÇÃO'};
-const STATUS={
- confirmed:{c:'var(--confirmed)',i:'✓',t:'CONFIRMADO',n:'confirmado por literatura'},
- constraint:{c:'var(--constraint)',i:'⚠',t:'RESTRIÇÃO',n:'válido com condição/constraint'},
- refuted:{c:'var(--refuted)',i:'✕',t:'REFUTADO',n:'refutado — corrigido/ajustado'},
- proposed:{c:'var(--proposed)',i:'⏳',t:'PROPOSTO',n:'proposto — aguarda teste'},
- active:{c:'var(--active)',i:'▶',t:'ATIVO',n:'em curso / desenho ativo'}
+const OUTLOOK={
+ valid:{c:'#22c55e',i:'✓',t:'VÁLIDO',n:'validado (confirmado ou válido-com-condição)'},
+ invalid:{c:'#ef4444',i:'✕',t:'INVÁLIDO',n:'refutado — derrubado pela auditoria'},
+ gray_light:{c:'#c9d4e5',i:'🌕',t:'PENDENTE-POSSÍVEL',n:'cinza claro: lógica/estratégia aponta positivo; aguarda gate'},
+ gray_dark:{c:'#74809a',i:'🌑',t:'PENDENTE-BAIXA',n:'cinza escuro: lógica/realidade aponta negativo; improvável'}
 };
+const OUT=n=>OUTLOOK[n.outlook]||(({confirmed:'valid',constraint:'valid',refuted:'invalid'})[n.status]?OUTLOOK[({confirmed:'valid',constraint:'valid',refuted:'invalid'})[n.status]]:OUTLOOK.gray_light);
 const EDGES={supports:{c:'#2e9e5b',d:'sustenta'},constrains:{c:'#d97706',d:'limita/exige'},refutes:{c:'#dc2626',d:'refuta'},enables:{c:'#3b82f6',d:'habilita'},tests:{c:'#8b5cf6',d:'testado por'}};
 
 const NW=250,NH=96,GAPX=56,GAPY=120,MARG=70,LABELY=44;
@@ -159,6 +159,7 @@ function visible(){
   const v=(D.meta.views||[]).find(x=>x.id===VIEW)||{};
   let nodes=D.nodes;
   if(v.nodes)nodes=nodes.filter(n=>v.nodes.includes(n.id));
+  if(v.outlook)nodes=nodes.filter(n=>v.outlook.includes(n.outlook||(({confirmed:'valid',constraint:'valid',refuted:'invalid'})[n.status])||'gray_light'));
   if(v.status)nodes=nodes.filter(n=>v.status.includes(n.status));
   const ids=new Set(nodes.map(n=>n.id));
   const edges=D.edges.filter(e=>ids.has(e.from)&&ids.has(e.to));
@@ -277,6 +278,12 @@ function build(){
     const a=D.nodes.find(n=>n.id===e.from)&&null; // noop clarity
     const src=D.nodes.find(n=>n.id===e.from),dst=D.nodes.find(n=>n.id===e.to);
     const spec=EDGES[e.type]||EDGES.supports;
+    const oa=OUT(src),ob=OUT(dst);
+    let ec=spec.c,dash=e.type==='constrains';
+    if(oa===OUTLOOK.invalid||ob===OUTLOOK.invalid){ec='#ef4444';dash=true}
+    else if(oa===OUTLOOK.valid&&ob===OUTLOOK.valid){ec='#22c55e'}
+    else if(oa===OUTLOOK.valid||ob===OUTLOOK.valid){ec='#3b82f6'}
+    else{ec='#8b9bb8';dash=true}
     const la=layerOf[e.from],lb=layerOf[e.to];
     let d='';
     if(lb>la){ /* fluxo pra frente: bottom → top, bézier vertical */
@@ -303,9 +310,9 @@ function build(){
     }
     const p=document.createElementNS(NS,'path');
     p.setAttribute('d',d);
-    p.setAttribute('stroke',spec.c);p.setAttribute('fill','none');
+    p.setAttribute('stroke',ec);p.setAttribute('fill','none');
     p.setAttribute('stroke-width',2);
-    if(e.type==='constrains')p.setAttribute('stroke-dasharray','7 5');
+    if(dash)p.setAttribute('stroke-dasharray','7 5');
     p.setAttribute('marker-end',`url(#ar_${e.type})`);
     p.setAttribute('data-from',e.from);p.setAttribute('data-to',e.to);
     p.setAttribute('data-type',e.type);
@@ -320,11 +327,11 @@ function build(){
   /* ---- cards ---- */
   const nodesG=document.createElementNS(NS,'g');
   nodes.forEach(n=>{
-    const s=STATUS[n.status]||STATUS.proposed;
+    const s=OUT(n);
     const g=document.createElementNS(NS,'g');
     g.setAttribute('class','node'+(n.focal?' focal':''));
     g.setAttribute('transform',`translate(${n.x},${n.y})`);
-    g.setAttribute('data-id',n.id);g.setAttribute('data-status',n.status);
+    g.setAttribute('data-id',n.id);g.setAttribute('data-outlook',s===OUTLOOK.valid?'valid':s===OUTLOOK.invalid?'invalid':s===OUTLOOK.gray_dark?'gray_dark':'gray_light');
     g.setAttribute('tabindex','0');g.setAttribute('role','button');
     g.setAttribute('aria-label',`${n.label} — ${s.t}${n.focal?' — nó focal':''}`);
     const r=document.createElementNS(NS,'rect');
@@ -374,7 +381,7 @@ function build(){
 
   /* legenda + stats */
   const lg=document.getElementById('legend');lg.innerHTML='';
-  Object.entries(STATUS).forEach(([k,v])=>{
+  Object.entries(OUTLOOK).forEach(([k,v])=>{
     const c=document.createElement('button');c.type='button';c.className='chip on';c.dataset.f=k;
     c.setAttribute('aria-pressed','true');
     c.innerHTML=`<span class="dot" style="background:${v.c}" aria-hidden="true"></span>${v.t.toLowerCase()}`;
@@ -386,9 +393,15 @@ function build(){
     c.innerHTML=`<span style="width:16px;height:0;border-top:2px ${k==='constrains'?'dashed':'solid'} ${v.c};display:inline-block"></span>${v.d}`;
     lg.appendChild(c);
   });
+  [['V→V','cadeia validada','#22c55e',false],['V↔P','validação→aberto','#3b82f6',false],['P↔P','especulativa','#8b9bb8',true],['✕','quebrada','#ef4444',true]].forEach(([t,ti,col,ds])=>{
+    const c=document.createElement('span');c.className='chip';c.title='aresta: '+ti;c.setAttribute('aria-hidden','true');
+    c.innerHTML=`<span style="width:16px;height:0;border-top:2px ${ds?'dashed':'solid'} ${col};display:inline-block"></span>${t}`;
+    lg.appendChild(c);
+  });
   const st=document.createElement('div');st.className='stats';
-  const cnt=k=>nodes.filter(n=>n.status===k).length;
-  st.innerHTML=`<span><b>${cnt('confirmed')}</b> ✓</span><span><b>${cnt('constraint')}</b> ⚠</span><span><b>${cnt('refuted')}</b> ✕</span><span><b>${cnt('proposed')+cnt('active')}</b> ⏳/▶</span><span>vista <b>${nodes.length}</b> nós · <b>${edges.length}</b> conexões</span>`;
+  const ok=n=>OUT(n)===OUTLOOK.valid?'valid':OUT(n)===OUTLOOK.invalid?'invalid':OUT(n)===OUTLOOK.gray_dark?'gray_dark':'gray_light';
+  const cnt=k=>nodes.filter(n=>ok(n)===k).length;
+  st.innerHTML=`<span><b>${cnt('valid')}</b> válidos</span><span><b>${cnt('invalid')}</b> inválidos</span><span><b>${cnt('gray_light')}</b> 🌕</span><span><b>${cnt('gray_dark')}</b> 🌑</span><span>vista <b>${nodes.length}</b> nós · <b>${edges.length}</b> conexões</span>`;
   lg.appendChild(st);
 
   /* painéis (inalterados no modelo, recalculados por vista) */
@@ -420,8 +433,8 @@ function build(){
   });
   const vt=document.getElementById('valtbl');
   vt.innerHTML='<tr><th>Achado</th><th>Bloco</th><th>Evidência</th><th>Status</th><th>Atualizado</th></tr>';
-  nodes.filter(n=>n.status==='confirmed'||n.status==='constraint').forEach(n=>{
-    const s=STATUS[n.status];
+  nodes.filter(n=>OUT(n)===OUTLOOK.valid||OUT(n)===OUTLOOK.invalid).forEach(n=>{
+    const s=OUT(n);
     const tr=document.createElement('tr');tr.className='rowbtn';tr.tabIndex=0;
     tr.innerHTML=`<td>${n.label}</td><td style="color:var(--mut)">${GROUPS.find(g=>g.id===n.group)?.label.split('·')[0]||''}</td><td>${n.evidence||''}</td><td><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span></td><td style="color:var(--mut)">${n.updated}</td>`;
     const op=()=>select(n,tr);
@@ -435,7 +448,7 @@ function build(){
     el.innerHTML=`<span class="d">${c.date}</span><span class="v">${c.version}</span><p>${c.text}</p>`;
     cg.appendChild(el);
   });
-  curFilter=new Set(Object.keys(STATUS));
+  curFilter=new Set(Object.keys(OUTLOOK));
 }
 
 /* ---- drawer ---- */
@@ -445,7 +458,7 @@ const closeBtn=document.getElementById('closeBtn');
 let lastFocus=null;
 
 function select(n,srcEl){
-  const s=STATUS[n.status];
+  const s=OUT(n);
   const g=GROUPS.find(x=>x.id===n.group);
   lastFocus=srcEl||document.activeElement;
   document.getElementById('ptitle').textContent=n.label;
@@ -483,14 +496,14 @@ document.addEventListener('keydown',e=>{
   }
 });
 
-let curFilter=new Set(Object.keys(STATUS));
+let curFilter=new Set(Object.keys(OUTLOOK));
 function toggleFilter(chip){
   const k=chip.dataset.f;
   if(curFilter.has(k)&&curFilter.size===1)return;
   if(curFilter.has(k)){curFilter.delete(k);chip.classList.remove('on');chip.setAttribute('aria-pressed','false')}
   else{curFilter.add(k);chip.classList.add('on');chip.setAttribute('aria-pressed','true')}
   document.querySelectorAll('.node').forEach(el=>{
-    el.classList.toggle('dimmed',!curFilter.has(el.dataset.status));
+    el.classList.toggle('dimmed',!curFilter.has(el.dataset.outlook));
   });
 }
 let selId=null;
@@ -498,9 +511,9 @@ function hi(id,hover){
   const active=hover?id:selId;
   document.querySelectorAll('svg path[data-type]').forEach(p=>p.style.opacity='');
   document.querySelectorAll('.node').forEach(el=>el.classList.remove('dimmed'));
-  if(curFilter.size<Object.keys(STATUS).length){
+  if(curFilter.size<Object.keys(OUTLOOK).length){
     document.querySelectorAll('.node').forEach(el=>{
-      if(!curFilter.has(el.dataset.status))el.classList.add('dimmed');
+      if(!curFilter.has(el.dataset.outlook))el.classList.add('dimmed');
     });
   }
   if(!active)return;
