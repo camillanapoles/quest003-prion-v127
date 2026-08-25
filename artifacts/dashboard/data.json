@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-26 01:40",
-    "version": "v2.5",
+    "updated": "2026-08-26 02:10",
+    "version": "v2.6",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "Mecanismo validado + planos B ancorados + AGORA ESCALA FÍSICA: o halo do escudo mede 4-6mm, o anel se dimensiona em 8-12mm entre nós, e o hidrogel certo (HA 1-2%) deixa a proteína sair. O desenho deixou de ser conceitual.",
     "views": [
@@ -618,7 +618,7 @@
       "group": "traducao",
       "status": "active",
       "evidence": "dossiê v1 (2026-08-25)",
-      "detail": "Esqueleto pronto: RDC 522/489/555, fase 1 dose-escalation 3+3, DSMB com parada por teratoma. Estimativa honesta 18-30 m — corre em paralelo com G0-G3.",
+      "detail": "CEP→CONEP→Anvisa (ATMP). ÂNCORA REGULATÓRIA NOVA (v2.6): tofersen (FDA acelerado 2023) = ASO intratecal para genético neurodegenerativo letal aprovado por BIOMARCADOR (NfL), mesmo sponsor do ION717 — endpoint biomarcador (RT-QuIC/NfL) é precedente vivo para o G4 E200K.",
       "refs": [
         "paper/e200k_br_dossier.md"
       ],
@@ -878,6 +878,25 @@
       "refs": [
         "PNAS 2006 (Thorne&Nicholson)",
         "Biophys Chem 1999 (Masel)"
+      ],
+      "prob": null,
+      "updated": "2026-08-26",
+      "delta": "up",
+      "cluster_id": 4
+    },
+    {
+      "id": "analogy",
+      "title": "Doenças irmãs já abriram os caminhos",
+      "label": "Mapa de analogias: SMA (redose intratecal), ALS-SOD1 (aprovação por biomarcador NfL — tofersen), Parkinson 2026 (célula em cérebro humano viável), TTR (tafamidis = estabilizador dominante aprovado)",
+      "group": "traducao",
+      "outlook": "valid",
+      "status": "confirmed",
+      "evidence": "nusinersen 2016; tofersen 2023; Lund 2026; tafamidis",
+      "detail": "Risco removido por analogia: redose crônica intratecal (nusinersen), aprovação acelerada por BIOMARCADOR em genético neurodegenerativo letal (tofersen/NfL — âncora regulatória do G4 E200K), transplante celular em cérebro humano viável (Lund 2026), célula-fábrica de proteína (GDNF-PD), mecanismo estabilizador-dominante aprovado (tafamidis/TTR). O programa príon não pede categoria inédita — pede a CONJUNÇÃO de categorias aprovadas.",
+      "refs": [
+        "tofersen FDA 2023",
+        "nusinersen 2016",
+        "tafamidis"
       ],
       "prob": null,
       "updated": "2026-08-26",
@@ -1145,6 +1164,21 @@
       "from": "ws7",
       "to": "mrna",
       "type": "constrains"
+    },
+    {
+      "from": "analogy",
+      "to": "reg",
+      "type": "supports"
+    },
+    {
+      "from": "analogy",
+      "to": "e200k",
+      "type": "supports"
+    },
+    {
+      "from": "analogy",
+      "to": "secretor",
+      "type": "supports"
     }
   ],
   "probability_history": [
@@ -1260,6 +1294,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-26",
+      "version": "v2.6 (mapa de analogias)",
+      "text": "Busca por analogia em doenças neurodegenerativas irmãs: SMA (nusinersen: redose intratecal crônica segura), ALS-SOD1 (tofersen: aprovação ACELERADA por biomarcador NfL — âncora regulatória do G4), Parkinson (Lund 2026: transplante celular em cérebro humano VIÁVEL; GDNF por célula = conceito secretor financiado), TTR (tafamidis: estabilizador dominante APROVADO — análogo farmacológico do V127; portfólio multi-modal venceu). Conclusão: nenhum pilar pede categoria inédita à agência — só a conjunção de categorias aprovadas."
+    },
     {
       "date": "2026-08-26",
       "version": "v2.5 (busca de precedência)",
