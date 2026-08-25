@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 20:55",
-    "version": "v1.8",
+    "updated": "2026-08-25 21:30",
+    "version": "v1.9",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "Mecanismo validado; agora há PLANOS B com âncoras reais: mRNA no líquor (dias, sem cirurgia), gel protetor, célula invisível. G0 testa os três contra o padrão.",
     "views": [
@@ -62,7 +62,7 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "A tese tem raiz evolutiva real: a seleção natural já 'aprovou' o G127V como escudo — não é hipótese de bancada."
+        "text": "Abrir o paper com a prova evolutiva: a seleção natural já validou o escudo (Mead 2009) — o artigo é engenharia sobre um teorema existente, não especulação."
       }
     },
     {
@@ -83,7 +83,7 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "A célula editada bialélica é convert-proof contra todas as cepas testadas — fundamento do produto cellular está fechado (P 90-95%)."
+        "text": "Especificar o produto celular como V127/V127 homozigoto exclusivo — resistência autônoma 90-95% é o piso do desenho, cite Asante como teorema de espectro completo."
       }
     },
     {
@@ -103,7 +103,7 @@
       "cluster_id": 0,
       "implies": {
         "val": "-",
-        "text": "PERIGO de desenho: se o produto ficar heterozigoto, cepas zoonóticas furam o escudo. Implica custo maior: edição bialélica + silenciamento como exigência de release, não opcional."
+        "text": "EXIGIR edição bialélica + silenciamento do selvagem como critério de LIBERAÇÃO GMP (confirmação NGS em ambos os alelos). Sem blindagem dupla, o anel vaza pela metade vulnerável."
       }
     },
     {
@@ -124,7 +124,7 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "Dose alta de V127 inibe conversão na mesma célula → o anel precisa de células DENSAS e secretoras ativas; valida a estratégia de concentração na penumbra."
+        "text": "Dimensionar o anel por DENSIDADE: a dosagem na penumbra precisa alcançar nível dominante-negativo — a dose-dependência é a regra de sizing do protocolo."
       }
     },
     {
@@ -145,7 +145,7 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "Mecanismo físico sem 'mágica': restrição conformacional + dímeros estáveis = o paper passa no peer-review sem apelo especulativo."
+        "text": "Redigir o mecanismo como restrição conformacional + estabilização de dímeros (Zheng+Hosszu): enquadramento físico verificável, sem linguagem especulativa."
       }
     },
     {
@@ -168,7 +168,7 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "O coração do anel de bombeiros é REAL: proteína solúvel bloqueia príon fora da célula. Toda a estratégia de contenção interesticial fica de pé."
+        "text": "Nomear o agente ativo explicitamente como V127ΔGPI (sem âncora) em TODO claim intersticial — o anel só existe porque a forma solúvel bloqueia fora da célula (Gatdula)."
       }
     },
     {
@@ -188,7 +188,7 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "Não precisamos de fábrica perpétua: proteção remanesce após cessar expressão → depósito transitório/mRNA em pulsos é arquitetura suficiente (abre R2c)."
+        "text": "Arquitetar para o TRANSITÓRIO: depósito/pulso basta, a proteção remanesce pós-cessação — a palavra 'fábrica permanente' sai do manuscrito."
       }
     },
     {
@@ -209,7 +209,7 @@
       "cluster_id": 0,
       "implies": {
         "val": "±",
-        "text": "Valida o agente in vivo (+50d) MAS cria concorrente direto: se AAV resolver sozinho, a terapia celular perde a razão de ser — relógio competitivo ligado."
+        "text": "Posicionar a célula como complemento focal-permanente do AAV sistêmico; citar Zerbes +50d como prova in-class E como relógio competitivo do programa."
       }
     },
     {
@@ -229,7 +229,7 @@
       "cluster_id": 1,
       "implies": {
         "val": "+",
-        "text": "Dano precoce é reversível → intervir cedo compensa: justifica o alvo pré-sintomático E200K (quanto mais cedo, mais cérebro para salvar)."
+        "text": "Justificar o alvo pré-sintomático com a reversibilidade da lesão precoce (Mallucci): quanto mais cedo, mais cérebro resgatável — isso AMARRA o redirect E200K à biologia."
       }
     },
     {
@@ -250,7 +250,7 @@
       "cluster_id": 1,
       "implies": {
         "val": "±",
-        "text": "A classe 'reduzir substrato' é a melhor do campo (valida a lógica) mas a distância para a liderança (Ionis) é grande — só nos resta nicho: permanência + focalidade."
+        "text": "Reivindicar apenas o nicho permanência+focalidade; reconhecer a classe ASO (61-98%) como o benchmark de eficácia a superar em durabilidade."
       }
     },
     {
@@ -270,7 +270,7 @@
       "cluster_id": 1,
       "implies": {
         "val": "-",
-        "text": "Competidor em fase clínica desde 2023: dados de eficácia ~2027. Se desacelerar sozinho, nosso programa morre de irrelevância — kill honesto declarado."
+        "text": "Declarar o kill honesto no paper: se ION717 desacelerar sozinho (dados ~2027), o programa pivota para combinação/coadjuvante — ciência com data de validade assumida."
       }
     },
     {
@@ -290,7 +290,7 @@
       "cluster_id": 1,
       "implies": {
         "val": "-",
-        "text": "Calibração fria: em príon, seguro não basta (sem eficácia clínica) → desfecho primário do programa = desaceleração mensurável, nunca 'cura'."
+        "text": "Calibrar toda promessa como 'desaceleração de progressão', nunca 'cura'; usar PRN100 como precedente seguro-mas-ineficaz na discussão — é o anti-exemplo que motiva a engenharia espacial."
       }
     },
     {
@@ -311,7 +311,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "o",
-        "text": "Rotina técnica em centros BR, P 80-90% — sem risco científico, só custo/GMP; é um requisito, não uma aposta."
+        "text": "Tratar a edição como checklist de QC, não claim científico: knock-in bialélico + NGS off-target + cariótipo + pureza <0,1% como gates de release do lote."
       }
     },
     {
@@ -333,7 +333,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "A TESE em si — única contribuição não-publicada do campo: biofábrica local de V127ΔGPI via CED. Tudo o mais a cerca; isto é o jogo (G0-A5 decide)."
+        "text": "ESTE é o claim original do paper — biofábrica local de V127ΔGPI secretada via CED. Todo o resto é andaime; G0-A5 é o veredito."
       }
     },
     {
@@ -354,7 +354,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "-",
-        "text": "Claim original morto por linhagem — mas virou R1 RESOLVIDA via co-enxerto iMG; custo: um segundo produto celular no consórcio."
+        "text": "PROIBIDO claim NSC→micróglia no manuscrito; a função imune entra SÓ como co-enxerto iMG (Abud 2017) a partir de G1+ — fronteira de linhagem é regra dura."
       }
     },
     {
@@ -376,7 +376,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "-",
-        "text": "Permanência no nicho refutada (neurogênese mínima + nicho infectado) → arquitetura migra para depósito lento/mRNA (R2); 'fábrica' sai do vocabulário do paper."
+        "text": "Renomear o depósito central como 'depósito de liberação lenta na parede ventricular' — a palavra 'fábrica' está banida do vocabulário do paper."
       }
     },
     {
@@ -397,7 +397,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "G0 executável em modelo HUMANO, 90 dias, sem animais: o gate decisório mais barato e rápido que a área permite hoje."
+        "text": "Fazer do G0 o primeiro experimento do paper: organoide humano, decisão em ~90 dias — o gate falsificável mais barato que a área permite hoje."
       }
     },
     {
@@ -417,7 +417,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Seguro de Quality-of-life: mesmo se a contenção falhar, o enxerto restaura função elétrica — desfecho secundário garantido (Williams 2023)."
+        "text": "Pré-registrar resgate eletrofisiológico como desfecho co-primário de qualidade de vida: benefício garantido mesmo se a contenção underperformar (Williams 2023)."
       }
     },
     {
@@ -439,7 +439,7 @@
       "cluster_id": 3,
       "implies": {
         "val": "+",
-        "text": "A entrega é engenharia RESOLVIDA (2005-2025, 3 revisões): cânula step-design, fluxo contínuo — risco cirúrgico do plano é baixo e conhecido."
+        "text": "Citar a linhagem CED 2005→2025 (Krauze→Elder/Lonser) como engenharia-resolvida; cânula step-design é o padrão de referência do apêndice cirúrgico."
       }
     },
     {
@@ -458,7 +458,7 @@
       "cluster_id": 3,
       "implies": {
         "val": "o",
-        "text": "Acesso preservador plausível, mas margem microscópica fica sem solução por imagem — mitiga iatrogenia, não resolve focos ocultos (complemento RT-QuIC)."
+        "text": "Usar a rota DTI como mitigação de iatrogenia, pareada com margem molecular RT-QuIC — a imagem sozinha não resolve frentes microscópicas."
       }
     },
     {
@@ -479,7 +479,7 @@
       "cluster_id": 3,
       "implies": {
         "val": "-",
-        "text": "Topologia geométrica é o elo fraco: multifocal/sináptico escapa do anel (10-20% contenção total). Salva-se com nós-de-rede + camada global mRNA (R3c)."
+        "text": "Redesenhar o anel como injeção em NÓS de rede (tratografia) + camada global mRNA: geometria sozinha não segura a linha — a contenção vira gradiente dose/frequência."
       }
     },
     {
@@ -499,7 +499,7 @@
       "cluster_id": 3,
       "implies": {
         "val": "o",
-        "text": "Exigência de biossegurança (arrasto de PrPSc no trajeto): engenharia conhecida, custo de uso-único — sem isso o protocolo é inaceitável em comitê."
+        "text": "MANDATAR cânula coaxial de uso único + protocolo WHO 134°C/NaOH no anexo cirúrgico: anti-semeadura priônica é inegociável em comitê."
       }
     },
     {
@@ -519,7 +519,7 @@
       "cluster_id": 3,
       "implies": {
         "val": "o",
-        "text": "Margem molecular em tempo real: converte a margem 'anatômica' DTI em margem mensurada — item diferenciador do dossiê cirúrgico."
+        "text": "Converter margem anatômica em margem MOLECULAR: biópsias de borda com RT-QuIC intraoperatório calibram a linha de injeção em tempo real."
       }
     },
     {
@@ -541,7 +541,7 @@
       "cluster_id": 4,
       "implies": {
         "val": "+",
-        "text": "A população-alvo existe no Brasil e tem JANELA DE ANOS → desenho autólogo viável; o programa ganha endereço: kindreds E200K + RT-QuIC pré-sintomático."
+        "text": "Endereçar o programa aos kindreds E200K brasileiros (Smid 2007): autólogo + janela de anos — a ÚNICA população onde o desenho fecha por inteiro."
       }
     },
     {
@@ -562,7 +562,7 @@
       "cluster_id": 4,
       "implies": {
         "val": "+",
-        "text": "Triagem antemortem precoce validada → consegue-se recrutar pré-sintomáticos e monitorar conversão: espinha dorsal do ensaio G4."
+        "text": "Construir a espinha dorsal de recrutamento na banda de conversão RT-QuIC + NfL: triagem pré-sintomática E monitoramento de endpoint dependem dela."
       }
     },
     {
@@ -583,7 +583,7 @@
       "cluster_id": 4,
       "implies": {
         "val": "-",
-        "text": "A forma esporádica NÃO é o paciente deste produto (tempo × produção celular): esporádica vira compassivo tardio via mRNA; ensaio estruturado é pré-sintomático."
+        "text": "DIVIDIR a indicação no paper: ensaio estruturado = genética pré-sintomática; esporádica = compassivo via ciclo-rápido (mRNA/banco R4b) — nunca autólogo-em-tempo."
       }
     },
     {
@@ -603,7 +603,7 @@
       "cluster_id": 4,
       "implies": {
         "val": "o",
-        "text": "Rota CEP→CONEP→Anvisa mapeada (18-30m): corre em paralelo aos gates — não é gargalo se começarmos agora."
+        "text": "Iniciar CEP→CONEP→Anvisa AGORA (RDC 522/489/555) em paralelo aos gates: 18-30 meses é tempo de pipeline, não tempo morto."
       }
     },
     {
@@ -624,7 +624,7 @@
       "cluster_id": 4,
       "implies": {
         "val": "+",
-        "text": "Falsificabilidade pré-registrada com kill-switches: protege o programa de si mesmo e o torna publicável independentemente do veredito G0."
+        "text": "Publicar a estrutura de gates/kill-switches como espinha dorsal metodológica do paper: falsificabilidade é contribuição ANTES de qualquer resultado."
       }
     },
     {
@@ -646,7 +646,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "O cérebro já tenta se reparar (e isso PROTEGE): o enxerto multiplica um esforço endógeno, não luta contra o tecido — sinergia de enquadramento."
+        "text": "Enquadrar o enxerto como AMPLIFICADOR de um programa de reparo endógeno que já é protetor (Gomez-Nicola/Jalland) — narrativa de sinergia, não de substituição."
       }
     },
     {
@@ -668,7 +668,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Função imunovigilante reabilitada SEM violar linhagem: iMG é produto validado (Abud) — mas só entra em G1+, para não contaminar o gate do secretor."
+        "text": "Sequenciar: primeiro o secretor decide (G0 limpo), iMG só em G1+ com braço-controle próprio — nunca misturar as duas perguntas num só gate."
       }
     },
     {
@@ -686,7 +686,7 @@
       "cluster_id": 3,
       "implies": {
         "val": "-",
-        "text": "Contenção TOTAL em doença estabelecida permanece improvável (10-20%): focos multifocais escapam de qualquer anel → o paper promete DESACELERAÇÃO, não cercado perfeito."
+        "text": "Prometer DESACELERAÇÃO, nunca contenção perfeita (10-20%): a multifocalidade torna o anel furável por construção — dizer isso upfront no paper."
       }
     },
     {
@@ -704,7 +704,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "±",
-        "text": "Sobrevida do enxerto é a variável rainha do desenho esporádico (15-30% ativo): HA-gel sobe p/ 30-50%; no pré-sintomático parte de 40-60% — mais um motivo do redirect E200K."
+        "text": "Tratar sobrevida do enxerto como variável-rainha do desenho esporádico: hidrogel-HA (alavanca 1) + população pré-sintomática (alavanca 2) — ambas no protocolo."
       }
     },
     {
@@ -722,7 +722,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "-",
-        "text": "Regenerar núcleo espongiforme morto segue FORA do escopo honesto: alvo = penumbra resgatável + contenção. Prometer reconexão funcional derrubaria o paper na revisão."
+        "text": "Escopo fechado no desenho: resgate de penumbra + controle de progressão; exclusão explícita de 'reconstrução funcional do núcleo espongiforme'."
       }
     },
     {
@@ -742,7 +742,7 @@
       "cluster_id": 1,
       "implies": {
         "val": "+",
-        "text": "Alavanca transversal (ataca R2+R3+R4 juntas): ciclo de dias, sem cirurgia grau-0, redosável — o compassivo esporádico volta a ser possível (G0-A7)."
+        "text": "Adicionar o braço G0-A7 (LNP-mRNA): o 'pronto-socorro molecular' para compassivo esporádico — expressão transiente da secretada, ciclo de dias, sem cirurgia grau-0."
       }
     },
     {
@@ -762,7 +762,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Quebra a dependência do autólogo: banco universal CD47 (P 0.5-0.6) → escala e custo melhoram ordens de magnitude, se G1.5 passar."
+        "text": "Abrir o gate G1.5 (aloenxerto em cérebro inflamado) para qualificar o banco hipoimune CD47 — a rota off-the-shelf que quebra a dependência do autólogo."
       }
     },
     {
@@ -782,7 +782,7 @@
       "cluster_id": 3,
       "implies": {
         "val": "+",
-        "text": "Sobrevivência do enxerto tem solução pronta-de-prateleira (HA-gel): recupera o hidrogel do colaborador na forma correta e alimenta o WS-7."
+        "text": "Adotar hidrogel HA macio de gelificação LENTA como carreador celular; especificar porosidade da malha p/ manter V127ΔGPI difusível (input direto do WS-7)."
       }
     },
     {
@@ -803,7 +803,7 @@
       "cluster_id": 1,
       "implies": {
         "val": "+",
-        "text": "Alavanca transversal (ataca R2+R3+R4 juntas): ciclo de dias, sem cirurgia grau-0, redosável — o compassivo esporádico volta a ser possível (G0-A7)."
+        "text": "Adicionar o braço G0-A7 (LNP-mRNA): o 'pronto-socorro molecular' para compassivo esporádico — expressão transiente da secretada, ciclo de dias, sem cirurgia grau-0."
       }
     },
     {
@@ -825,7 +825,7 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Quebra a dependência do autólogo: banco universal CD47 (P 0.5-0.6) → escala e custo melhoram ordens de magnitude, se G1.5 passar."
+        "text": "Abrir o gate G1.5 (aloenxerto em cérebro inflamado) para qualificar o banco hipoimune CD47 — a rota off-the-shelf que quebra a dependência do autólogo."
       }
     }
   ],
@@ -1189,6 +1189,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v1.9 (formato diretriz)",
+      "text": "Cards reformulados no padrão do usuário: '📄 O QUE DIZ (restrição biológica/achado + fonte)' ➞ 'DIRETRIZ NO PAPER (comando de desenho, voz imperativa)'. 38/38 diretrizes em voz diretiva (EXIGIR/MANDATAR/DIVIDIR/PROMETER...). Mesmas setas ▲▼◆· agora qualificam a diretriz."
+    },
     {
       "date": "2026-08-25",
       "version": "v1.8 (implicações)",

@@ -14,7 +14,7 @@ def card(n):
     iv=n.get('implies',{})
     col,sym=IV.get(iv.get('val','-'),('#8b96b3','·'))
     imp=html.escape(iv.get('text','')) if iv else ''
-    return f'''<div class="card" style="border-color:{c}"><span class="ico" style="color:{c}">{ico}</span><b>{html.escape(n['label'])}</b><span class="ev">📄 {html.escape(n.get('evidence',''))}</span><div class="imp" style="border-left-color:{col}"><span style="color:{col}">{sym} implica:</span> {imp}</div></div>'''
+    return f'''<div class="card" style="border-color:{c}"><span class="ico" style="color:{c}">{ico}</span><b>{html.escape(n['label'])}</b><span class="ev">📄 o que diz: {html.escape(n.get('evidence',''))}</span><div class="imp" style="border-left-color:{col}"><span style="color:{col}">➞ diretriz {sym}</span><br>{imp}</div></div>'''
 ramos=[
  ("R1 · NSC não gera micróglia","#ef4444",[("✔ RESOLVIDO — co-enxerto iMG (Abud 2017 Neuron, ~5 sem); iMG entra em G1+, G0 segue limpo","#22c55e","")]),
  ("R2 · Fábrica SVZ impossível como prometida","#ef4444",[
