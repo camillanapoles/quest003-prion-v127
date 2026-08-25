@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quest 003 — Diagrama Lógico dos Achados</title>
+<title>Quest 003 — Grafo dos Achados</title>
 <style>
   :root{
     --bg:#0b1020; --panel:#111832; --panel2:#0e142a; --ink:#e5eaf5; --mut:#8b96b3;
@@ -25,7 +25,7 @@
   .vbtn.on{background:#1a2342;border-color:var(--focus)}
   .vbtn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
   .vdesc{color:var(--mut);font-size:12px;margin-left:auto}
-  #scroller{overflow:auto;max-height:calc(100vh - 220px)}
+  #scroller{overflow:auto;max-height:calc(100vh - 216px)}
   .legend{display:flex;flex-wrap:wrap;gap:8px;padding:10px 20px;border-bottom:1px solid var(--line);align-items:center}
   .chip{display:inline-flex;gap:6px;align-items:center;padding:8px 14px;min-height:40px;border-radius:10px;border:1px solid var(--line);cursor:pointer;font-size:12.5px;user-select:none;background:transparent;color:var(--ink)}
   .chip .dot{width:10px;height:10px;border-radius:50%}
@@ -35,15 +35,16 @@
   .stats b{color:var(--ink)}
   svg{display:block;margin:0 auto}
   svg text{font-family:inherit}
-  .node rect.box{cursor:pointer;stroke-width:1.4}
-  .node text.lbl{font-size:11.5px;fill:var(--ink);pointer-events:none}
-  .node text.ico{font-size:12px;pointer-events:none}
+  .node rect.box{cursor:pointer;stroke-width:1.6}
+  .node text.lbl{font-size:12.5px;fill:var(--ink);pointer-events:none}
+  .node text.tier{font-size:8.5px;letter-spacing:1.4px;fill:var(--mut);pointer-events:none}
+  .node text.ico{font-size:13px;pointer-events:none}
   .node:focus-visible{outline:none}
-  .node:focus-visible .box{stroke:#fff;stroke-width:2.4}
-  .node.focal .box{stroke:var(--focal);stroke-width:2.4;filter:drop-shadow(0 0 7px rgba(255,138,92,.45))}
+  .node:focus-visible .box{stroke:#fff;stroke-width:2.6}
+  .node.focal .box{stroke:var(--focal);stroke-width:2.6;filter:drop-shadow(0 0 8px rgba(255,138,92,.5))}
   .node text.focaltag{font-size:9.5px;fill:var(--focal);letter-spacing:1.2px;pointer-events:none}
-  .cluster-label{font-size:11px;letter-spacing:1.6px;fill:var(--mut);text-transform:uppercase;pointer-events:none}
-  .dimmed{opacity:.13}
+  .layer-label{font-size:11px;letter-spacing:2px;fill:#5f6c8f;text-transform:uppercase;pointer-events:none}
+  .dimmed{opacity:.12}
   #veil{position:fixed;inset:0;background:rgba(4,8,18,.55);opacity:0;pointer-events:none;transition:opacity .2s ease;z-index:40}
   #veil.on{opacity:1;pointer-events:auto}
   #panel{position:fixed;top:0;right:0;height:100dvh;width:min(380px,94vw);background:var(--panel2);border-left:1px solid var(--line);box-shadow:-12px 0 32px rgba(0,0,0,.45);transform:translateX(105%);transition:transform .25s ease;z-index:50;display:flex;flex-direction:column;padding:0}
@@ -116,21 +117,26 @@
 
 <script>
 'use strict';
-/* ============================================================
-   LAYOUT ENGINE v1.4 — regras §6 diagram-design:
-   · cluster = container com FILEIRA ÚNICA de nós (nunca paralelos)
-   · conectores ortogonais, cantos quarter-arc r=8, sem diagonais
-   · attach points em leque (≥14px entre pontos na mesma borda)
-   · transit nunca atrás de nó: skip/backward → corredores laterais
-   · barycenter p/ reduzir cruzamentos; densidade por vista
-   ============================================================ */
+/* =====================================================================
+   GRAFO DOS ACHADOS v2.0 — rebuild do zero
+   Modelo: grafo em camadas (Sugiyama simplificado / dagre-like)
+   · camadas = 5 níveis semânticos, SEM containers (faixas sutis + rótulo)
+   · cards grandes e bem espaçados (250px, vão 56px H / 120px V)
+   · arestas = curvas Bézier de fluxo (não Manhattan):
+       frente  → bottom→top, bézier vertical suave
+       mesma   → arco por baixo dos cards
+       ré      → contorno pela margem lateral (corredor próprio)
+   · ordem intra-camada por barycenter (varreduras descendo/subindo)
+   · backend intacto: data.json é a fonte única
+   ===================================================================== */
 const GROUPS=[
- {id:'molecular',label:'① Fundamento molecular — o escudo V127'},
- {id:'classe',label:'② Classe terapêutica — negação de substrato'},
- {id:'celular',label:'③ Modelo celular — o que a célula pode e não pode'},
- {id:'entrega',label:'④ Entrega cirúrgica — CED e contenção'},
- {id:'traducao',label:'⑤ Tradução — população, regulatório, programa'}
+ {id:'molecular',label:'① Fundamento molecular · o escudo V127'},
+ {id:'classe',label:'② Classe terapêutica · negação de substrato'},
+ {id:'celular',label:'③ Modelo celular · o que a célula pode'},
+ {id:'entrega',label:'④ Entrega cirúrgica · CED e contenção'},
+ {id:'traducao',label:'⑤ Tradução · população, regulatório, programa'}
 ];
+const TIER_SHORT={molecular:'MOLECULAR',classe:'CLASSE',celular:'CELULAR',entrega:'ENTREGA',traducao:'TRADUÇÃO'};
 const STATUS={
  confirmed:{c:'var(--confirmed)',i:'✓',t:'CONFIRMADO',n:'confirmado por literatura'},
  constraint:{c:'var(--constraint)',i:'⚠',t:'RESTRIÇÃO',n:'válido com condição/constraint'},
@@ -138,24 +144,19 @@ const STATUS={
  proposed:{c:'var(--proposed)',i:'⏳',t:'PROPOSTO',n:'proposto — aguarda teste'},
  active:{c:'var(--active)',i:'▶',t:'ATIVO',n:'em curso / desenho ativo'}
 };
-const EDGES={supports:{c:'#15803d',d:'sustenta'},constrains:{c:'#b45309',d:'limita/exige'},refutes:{c:'#b91c1c',d:'refuta'},enables:{c:'#1d4ed8',d:'habilita'},tests:{c:'#7c3aed',d:'testado por'}};
+const EDGES={supports:{c:'#2e9e5b',d:'sustenta'},constrains:{c:'#d97706',d:'limita/exige'},refutes:{c:'#dc2626',d:'refuta'},enables:{c:'#3b82f6',d:'habilita'},tests:{c:'#8b5cf6',d:'testado por'}};
 
-const NW=212,NH=86,NGAP=16;      // cartão e vão horizontal
-const PADX=18,LABELH=34,PADY=12; // container do cluster
-const BAND_GAP=78;               // corredor vertical entre clusters
-const LANE=92;                   // corredores laterais p/ arestas skip/backward
-const R=8;                       // raio dos cantos ortogonais (regra §6.1)
-
+const NW=250,NH=96,GAPX=56,GAPY=120,MARG=70,LABELY=44;
 let D=null,VIEW='pesquisador';
 
 function wrap(t,n){const w=t.split(' ');const L=[];let cur='';
   for(const x of w){if((cur+' '+x).trim().length<=n){cur=(cur+' '+x).trim()}else{L.push(cur);cur=x;if(L.length>=3)break}}
   if(cur&&L.length<3)L.push(cur);
-  if(t.length>110&&L[2])L[2]=L[2]+'…';
+  if(t.length>100&&L[2])L[2]=L[2]+'…';
   return L.slice(0,3)}
 
 function visible(){
-  const v=(D.meta.views||[]).find(x=>x.id===VIEW)||{cols:6};
+  const v=(D.meta.views||[]).find(x=>x.id===VIEW)||{};
   let nodes=D.nodes;
   if(v.nodes)nodes=nodes.filter(n=>v.nodes.includes(n.id));
   if(v.status)nodes=nodes.filter(n=>v.status.includes(n.status));
@@ -164,42 +165,27 @@ function visible(){
   return {nodes,edges,view:v};
 }
 
-/* barycenter: ordena nós dentro do cluster pela média dos vizinhos
-   (varredura frontal + traseira) para reduzir cruzamentos */
-function orderBands(bands,edges){
-  const idx={}; bands.forEach((b,bi)=>b.ns.forEach((n,i)=>idx[n.id]={b:bi,i}));
+/* barycenter: ordena cada camada pela média dos vizinhos das camadas vizinhas */
+function orderLayers(layers,edges){
+  const idx={};layers.forEach((L,li)=>L.forEach((n,i)=>idx[n.id]={l:li,i}));
   const sweep=(from,to,step)=>{
-    for(let bi=from;step>0?bi<=to:bi>=to;bi+=step){
-      const scored=bands[bi].ns.map((n,i)=>{
+    for(let li=from;step>0?li<=to:li>=0;li+=step){
+      const scored=layers[li].map((n,i)=>{
         let s=0,c=0;
         edges.forEach(e=>{
-          let o=e.from===n.id?e.to:(e.to===n.id?e.from:null);
-          if(!o)return; const p=idx[o]; if(!p)return;
-          if(step>0&&p.b>=bi)return; if(step<0&&p.b<=bi)return;
+          const o=e.from===n.id?e.to:(e.to===n.id?e.from:null);
+          if(!o)return;const p=idx[o];if(!p)return;
+          if(step>0&&p.l>=li)return;if(step<0&&p.l<=li)return;
           s+=p.i;c++;
         });
-        return {n,k:c?s/c+.001*i:i};
+        return {n,k:c?s/c+0.001*i:i+99};
       });
       scored.sort((a,b)=>a.k-b.k);
-      bands[bi].ns=scored.map(x=>x.n);
-      bands[bi].ns.forEach((n,i)=>idx[n.id]={b:bi,i});
+      layers[li]=scored.map(x=>x.n);
+      layers[li].forEach((n,i)=>idx[n.id]={l:li,i});
     }
   };
-  for(let p=0;p<2;p++){ sweep(1,bands.length-1,1); sweep(bands.length-2,0,-1); }
-}
-
-/* path ortogonal com cantos quarter-arc r — sem diagonais (§6.1) */
-function ortho(pts,r){
-  let d=`M${pts[0][0]},${pts[0][1]}`;
-  for(let i=1;i<pts.length-1;i++){
-    const [x,y]=pts[i],[px,py]=pts[i-1],[nx,ny]=pts[i+1];
-    const v1=[Math.sign(x-px),Math.sign(y-py)],v2=[Math.sign(nx-x),Math.sign(ny-y)];
-    if(v1[0]===v2[0]&&v1[1]===v2[1]){continue}
-    d+=` L${x-v1[0]*r},${y-v1[1]*r} Q${x},${y} ${x+v2[0]*r},${y+v2[1]*r}`;
-  }
-  const e=pts[pts.length-1];
-  d+=` L${e[0]},${e[1]}`;
-  return d;
+  for(let p=0;p<3;p++){sweep(1,layers.length-1,1);sweep(layers.length-2,0,-1);}
 }
 
 function build(){
@@ -221,115 +207,117 @@ function build(){
   const vd=document.createElement('span');vd.className='vdesc';vd.textContent=view.desc||'';
   vb.appendChild(vd);
 
-  /* --- clusters: fileira única --- */
-  const bands=GROUPS.map(g=>({g,ns:nodes.filter(n=>n.group===g.id)})).filter(b=>b.ns.length);
-  orderBands(bands,edges);
-  const bandOf={};bands.forEach((b,bi)=>b.ns.forEach(n=>bandOf[n.id]=bi));
+  /* camadas por nível semântico (apenas as não-vazias) */
+  const layers=GROUPS.map(g=>nodes.filter(n=>n.group===g.id)).filter(L=>L.length);
+  const layerOf={};layers.forEach((L,li)=>L.forEach(n=>layerOf[n.id]=li));
+  orderLayers(layers,edges);
 
-  let maxR=0;
-  bands.forEach(b=>{
-    b.w=PADX*2+b.ns.length*NW+(b.ns.length-1)*NGAP;
-    b.h=LABELH+NH+PADY*2;
-    maxR=Math.max(maxR,LANE+6+b.w);
-  });
-  const W=maxR+LANE+8;
-  let y=14;
-  bands.forEach(b=>{b.y=y;y+=b.h+BAND_GAP;});
-  const H=y-BAND_GAP+16;
-
-  const byId={};
-  bands.forEach(b=>{
-    b.ns.forEach((n,i)=>{
-      n.x=LANE+6+PADX+i*(NW+NGAP);
-      n.y=b.y+LABELH+PADY;
+  /* dimensões: camada mais larga define a largura; x centrado em cada camada */
+  const rowW=L=>L.length*NW+(L.length-1)*GAPX;
+  const W=MARG*2+Math.max(...layers.map(rowW),760);
+  layers.forEach((L,li)=>{
+    const y=20+li*(NH+GAPY)+LABELY;
+    const x0=(W-rowW(L))/2;
+    L.forEach((n,i)=>{
+      n.x=x0+i*(NW+GAPX);n.y=y;
       n.cx=n.x+NW/2;n.cy=n.y+NH/2;
-      byId[n.id]=n;
     });
   });
+  const H=20+layers.length*(NH+GAPY)+LABELY+10;
 
   const NS='http://www.w3.org/2000/svg';
   const svg=document.createElementNS(NS,'svg');
   svg.setAttribute('width',W);svg.setAttribute('height',H);
   svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
-  svg.setAttribute('role','group');svg.setAttribute('aria-label','Mapa lógico dos achados — vista '+(view.label||''));
+  svg.setAttribute('role','group');svg.setAttribute('aria-label','Grafo dos achados — vista '+(view.label||''));
 
   const defs=document.createElementNS(NS,'defs');
   Object.entries(EDGES).forEach(([k,v])=>{
     const m=document.createElementNS(NS,'marker');
     m.setAttribute('id','ar_'+k);m.setAttribute('viewBox','0 0 10 10');
     m.setAttribute('refX',8.5);m.setAttribute('refY',5);
-    m.setAttribute('markerWidth',7);m.setAttribute('markerHeight',7);m.setAttribute('orient','auto-start-reverse');
+    m.setAttribute('markerWidth',7.5);m.setAttribute('markerHeight',7.5);m.setAttribute('orient','auto-start-reverse');
     const p=document.createElementNS(NS,'path');p.setAttribute('d','M0,0 L10,5 L0,10 z');p.setAttribute('fill',v.c);
     m.appendChild(p);defs.appendChild(m);
   });
+  const bgGrad=document.createElementNS(NS,'linearGradient');
+  bgGrad.setAttribute('id','flow');bgGrad.setAttribute('x1','0');bgGrad.setAttribute('y1','0');
+  bgGrad.setAttribute('x2','0');bgGrad.setAttribute('y2','1');
+  [['0%','rgba(34,197,94,.030)'],['50%','rgba(59,130,246,.022)'],['100%','rgba(167,139,250,.030)']].forEach(([o,c])=>{
+    const st=document.createElementNS(NS,'stop');
+    st.setAttribute('offset',o);st.setAttribute('stop-color',c);
+    bgGrad.appendChild(st);
+  });
+  defs.appendChild(bgGrad);
   svg.appendChild(defs);
 
-  /* containers dos clusters */
-  bands.forEach(b=>{
+  /* faixas sutis das camadas + rótulos (sem containers que prendam o layout) */
+  layers.forEach((L,li)=>{
+    const y=20+li*(NH+GAPY)+LABELY-26;
     const bg=document.createElementNS(NS,'rect');
-    bg.setAttribute('x',LANE+6);bg.setAttribute('y',b.y);
-    bg.setAttribute('width',b.w);bg.setAttribute('height',b.h);
-    bg.setAttribute('fill','#0f1730');bg.setAttribute('stroke','#1c2748');bg.setAttribute('rx',12);
+    bg.setAttribute('x',0);bg.setAttribute('y',y);
+    bg.setAttribute('width',W);bg.setAttribute('height',NH+52);
+    if(li%2===0)bg.setAttribute('fill','rgba(255,255,255,.015)');
     svg.appendChild(bg);
     const t=document.createElementNS(NS,'text');
-    t.setAttribute('class','cluster-label');t.setAttribute('x',LANE+6+PADX+4);t.setAttribute('y',b.y+20);
-    const short=b.g.label.split('—')[0].trim();
-    t.textContent=short;t.setAttribute('textLength',b.w-2*PADX-8);
-    const tt=document.createElementNS(NS,'title');tt.textContent=b.g.label;t.appendChild(tt);
+    t.setAttribute('class','layer-label');t.setAttribute('x',MARG-30);t.setAttribute('y',y+30);
+    const g=GROUPS.find(g=>g.id===L[0].group);
+    t.textContent=g.label;
     svg.appendChild(t);
   });
 
-  /* --- roteamento (§6): leque, ortogonal, corredores --- */
-  const exits={}; // fan: node+side → contador
-  const fan=(id,side)=>{const k=id+side;exits[k]=(exits[k]||0)+1;return exits[k]-1;};
-  const laneCount={L:0,R:0};
+  /* ---- arestas: bézier de fluxo ---- */
+  const fanOut={},fanIn={},backLane={};
+  const fo=(id,side)=>{const k=id+'|'+side;fanOut[k]=(fanOut[k]||0)+1;return fanOut[k]-1};
+  const fi=(id,side)=>{const k=id+'|'+side;fanIn[k]=(fanIn[k]||0)+1;return fanIn[k]-1};
+  const spread=(i,n,span)=>n<=1?0:(i-(n-1)/2)*(span/(n-1))*2;
 
   const edgesG=document.createElementNS(NS,'g');
   edges.forEach(e=>{
-    const a=byId[e.from],b=byId[e.to];if(!a||!b)return;
+    const a=D.nodes.find(n=>n.id===e.from)&&null; // noop clarity
+    const src=D.nodes.find(n=>n.id===e.from),dst=D.nodes.find(n=>n.id===e.to);
     const spec=EDGES[e.type]||EDGES.supports;
-    const bi=bandOf[e.from],bj=bandOf[e.to];
-    let pts;
-    if(bi===bj){ // intra-cluster: por cima da fileira (não atravessa nós)
-      const band=bands[bi];
-      if(!band.arcN)band.arcN=0;
-      const lift=26+13*(band.arcN++);
-      const off=fan(e.from,'T')-0, off2=fan(e.to,'T');
-      const yArc=band.y+LABELH-lift;
-      const sx=a.cx+((off%3)-1)*14, dx=b.cx+((off2%3)-1)*14;
-      pts=[[sx,a.y],[sx,yArc],[dx,yArc],[dx,b.y]];
-    }else if(bj===bi+1){ // banda adjacente: corredor central
-      const off=fan(e.from,'B'), off2=fan(e.to,'T');
-      const midY=(a.y+NH+b.y)/2+(off%2?10:-6);
-      const sx=a.cx+((off%5)-2)*14, dx=b.cx+((off2%5)-2)*14;
-      if(Math.abs(sx-dx)<2){pts=[[sx,a.y+NH],[sx,b.y]]}
-      else pts=[[sx,a.y+NH],[sx,midY],[dx,midY],[dx,b.y]];
-    }else{ // skip/backward: corredor lateral (transit nunca atrás de nó)
-      const goLeft=(a.cx+b.cx)<W;
-      const side=goLeft?'L':'R';
-      const li=laneCount[side]++;
-      const laneX=goLeft?46+li*15:W-46-li*15;
-      const offS=fan(e.from,side), offT=fan(e.to,side);
-      const sy=a.cy+((offS%3)-1)*14, ty=b.cy+((offT%3)-1)*14;
-      if(goLeft) pts=[[a.x,sy],[laneX,sy],[laneX,ty],[b.x,ty]];
-      else pts=[[a.x+NW,sy],[laneX,sy],[laneX,ty],[b.x+NW,ty]];
+    const la=layerOf[e.from],lb=layerOf[e.to];
+    let d='';
+    if(lb>la){ /* fluxo pra frente: bottom → top, bézier vertical */
+      const i=fo(e.from,'B'),j=fi(e.to,'T');
+      const x1=src.cx+spread(i,3,36),x2=dst.cx+spread(j,3,36);
+      const y1=src.y+NH,y2=dst.y;
+      const my=(y1+y2)/2;
+      d=`M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}`;
+    }else if(lb===la){ /* mesma camada: arco por baixo */
+      const i=fo(e.from,'B'),j=fi(e.to,'B');
+      const right=dst.cx>src.cx;
+      const x1=src.cx+(right?spread(i,3,40):spread(i,3,40)), x2=dst.cx+spread(j,3,40);
+      const y1=src.y+NH, y2=dst.y+NH;
+      const dip=Math.max(y1,y2)+46+spread(i,2,22);
+      d=`M${x1},${y1} C${x1},${dip} ${x2},${dip} ${x2},${y2}`;
+    }else{ /* retrógrada: contorna pela margem direita */
+      const lane=backLane['R']=(backLane['R']||0)+1;
+      const lx=W-MARG*0.55+lane*16;
+      const x1=src.x+NW, y1=src.cy+spread(fo(e.from,'R'),2,30);
+      const x2=dst.x+NW, y2=dst.cy+spread(fi(e.to,'R'),2,30);
+      const c1x=lx+(x1-lx)*0.25, c2x=lx+(x2-lx)*0.25;
+      d=`M${x1},${y1} C${x1+30},${y1} ${lx- (lx-x1)*0.1},${y1+(y2-y1)*0.15} ${lx},${(y1+y2)/2} `+
+        `C${lx},${y2-(y2-y1)*0.05} ${x2+30},${y2} ${x2},${y2}`;
     }
     const p=document.createElementNS(NS,'path');
-    p.setAttribute('d',ortho(pts,R));
+    p.setAttribute('d',d);
     p.setAttribute('stroke',spec.c);p.setAttribute('fill','none');
-    p.setAttribute('stroke-width',1.8);
-    if(e.type==='constrains')p.setAttribute('stroke-dasharray','6 4');
+    p.setAttribute('stroke-width',2);
+    if(e.type==='constrains')p.setAttribute('stroke-dasharray','7 5');
     p.setAttribute('marker-end',`url(#ar_${e.type})`);
     p.setAttribute('data-from',e.from);p.setAttribute('data-to',e.to);
     p.setAttribute('data-type',e.type);
     const tt=document.createElementNS(NS,'title');
-    tt.textContent=`${byId[e.from].label}  ${spec.d}  ${byId[e.to].label}`;
+    const sName=(D.nodes.find(n=>n.id===e.from)||{}).label, tName=(D.nodes.find(n=>n.id===e.to)||{}).label;
+    tt.textContent=`${sName}  ${spec.d}  ${tName}`;
     p.appendChild(tt);
     edgesG.appendChild(p);
   });
   svg.appendChild(edgesG);
 
-  /* nós */
+  /* ---- cards ---- */
   const nodesG=document.createElementNS(NS,'g');
   nodes.forEach(n=>{
     const s=STATUS[n.status]||STATUS.proposed;
@@ -341,30 +329,34 @@ function build(){
     g.setAttribute('aria-label',`${n.label} — ${s.t}${n.focal?' — nó focal':''}`);
     const r=document.createElementNS(NS,'rect');
     r.setAttribute('class','box');r.setAttribute('width',NW);r.setAttribute('height',NH);
-    r.setAttribute('rx',10);r.setAttribute('fill',n.focal?'#241a12':'#16203f');
+    r.setAttribute('rx',12);r.setAttribute('fill',n.focal?'#231a12':'#141d3a');
     r.setAttribute('stroke',s.c);
     g.appendChild(r);
-    const strip=document.createElementNS(NS,'rect');
-    strip.setAttribute('width',5);strip.setAttribute('height',NH);strip.setAttribute('rx',2.5);
-    strip.setAttribute('fill',s.c);g.appendChild(strip);
+    const spine=document.createElementNS(NS,'rect');
+    spine.setAttribute('width',5);spine.setAttribute('height',NH);spine.setAttribute('rx',2.5);
+    spine.setAttribute('fill',s.c);g.appendChild(spine);
     if(n.focal){
       const ft=document.createElementNS(NS,'text');
-      ft.setAttribute('class','focaltag');ft.setAttribute('x',NW-8);ft.setAttribute('y',-8);
+      ft.setAttribute('class','focaltag');ft.setAttribute('x',NW-10);ft.setAttribute('y',-9);
       ft.setAttribute('text-anchor','end');
       ft.textContent=n.id==='secretor'?'◆ TESE':'◆ EVIDÊNCIA-CHAVE';
       g.appendChild(ft);
     }
     wrap(n.label,30).forEach((ln,i)=>{
       const t=document.createElementNS(NS,'text');
-      t.setAttribute('class','lbl');t.setAttribute('x',14);t.setAttribute('y',24+i*15);
+      t.setAttribute('class','lbl');t.setAttribute('x',16);t.setAttribute('y',26+i*16);
       t.textContent=ln;g.appendChild(t);
     });
+    const tier=document.createElementNS(NS,'text');
+    tier.setAttribute('class','tier');tier.setAttribute('x',16);tier.setAttribute('y',NH-12);
+    tier.textContent=TIER_SHORT[n.group]||'';
+    g.appendChild(tier);
     const ic=document.createElementNS(NS,'text');
-    ic.setAttribute('class','ico');ic.setAttribute('x',NW-22);ic.setAttribute('y',22);
+    ic.setAttribute('class','ico');ic.setAttribute('x',NW-24);ic.setAttribute('y',24);
     ic.setAttribute('fill',s.c);ic.textContent=s.i;g.appendChild(ic);
     if(n.delta==='up'||n.delta==='down'){
       const dd=document.createElementNS(NS,'text');
-      dd.setAttribute('x',NW-22);dd.setAttribute('y',38);dd.setAttribute('font-size','11');
+      dd.setAttribute('x',NW-24);dd.setAttribute('y',42);dd.setAttribute('font-size','11');
       dd.setAttribute('fill',n.delta==='up'?'var(--confirmed)':'var(--refuted)');
       dd.textContent=n.delta==='up'?'▲':'▼';g.appendChild(dd);
     }
@@ -380,7 +372,7 @@ function build(){
   svg.appendChild(nodesG);
   const sc=document.getElementById('scroller');sc.innerHTML='';sc.appendChild(svg);
 
-  /* legenda + stats por vista */
+  /* legenda + stats */
   const lg=document.getElementById('legend');lg.innerHTML='';
   Object.entries(STATUS).forEach(([k,v])=>{
     const c=document.createElement('button');c.type='button';c.className='chip on';c.dataset.f=k;
@@ -399,6 +391,7 @@ function build(){
   st.innerHTML=`<span><b>${cnt('confirmed')}</b> ✓</span><span><b>${cnt('constraint')}</b> ⚠</span><span><b>${cnt('refuted')}</b> ✕</span><span><b>${cnt('proposed')+cnt('active')}</b> ⏳/▶</span><span>vista <b>${nodes.length}</b> nós · <b>${edges.length}</b> conexões</span>`;
   lg.appendChild(st);
 
+  /* painéis (inalterados no modelo, recalculados por vista) */
   const gt=document.getElementById('gates');gt.innerHTML='';
   const tones={ready:'var(--confirmed)',wait:'var(--constraint)'};
   D.gates.forEach(g=>{
@@ -406,7 +399,6 @@ function build(){
     el.innerHTML=`<b>${g.id} · ${g.name}</b><span class="st" style="color:${tones[g.tone]||'var(--mut)'}">${g.status}</span><div class="dt">${g.detail}</div>`;
     gt.appendChild(el);
   });
-
   const pb=document.getElementById('probs');pb.innerHTML='';
   D.probability_history.forEach(p=>{
     const row=document.createElement('div');row.className='probrow';
@@ -426,19 +418,17 @@ function build(){
     cap.title=last.date+': '+last.low+'–'+last.high+'% — '+last.note;bar.appendChild(cap);
     pb.appendChild(row);
   });
-
   const vt=document.getElementById('valtbl');
   vt.innerHTML='<tr><th>Achado</th><th>Bloco</th><th>Evidência</th><th>Status</th><th>Atualizado</th></tr>';
   nodes.filter(n=>n.status==='confirmed'||n.status==='constraint').forEach(n=>{
     const s=STATUS[n.status];
     const tr=document.createElement('tr');tr.className='rowbtn';tr.tabIndex=0;
-    tr.innerHTML=`<td>${n.label}</td><td style="color:var(--mut)">${GROUPS.find(g=>g.id===n.group)?.label.split('—')[0]||''}</td><td>${n.evidence||''}</td><td><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span></td><td style="color:var(--mut)">${n.updated}</td>`;
+    tr.innerHTML=`<td>${n.label}</td><td style="color:var(--mut)">${GROUPS.find(g=>g.id===n.group)?.label.split('·')[0]||''}</td><td>${n.evidence||''}</td><td><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span></td><td style="color:var(--mut)">${n.updated}</td>`;
     const op=()=>select(n,tr);
     tr.onclick=op;
-    tr.addEventListener('keydown',e=>{if(e.key==='Enter')op()});
+    tr.addEventListener('keydown',e2=>{if(e2.key==='Enter')op()});
     vt.appendChild(tr);
   });
-
   const cg=document.getElementById('changelog');cg.innerHTML='';
   [...D.changelog].reverse().forEach(c=>{
     const el=document.createElement('div');el.className='chg';
@@ -461,7 +451,7 @@ function select(n,srcEl){
   document.getElementById('ptitle').textContent=n.label;
   document.getElementById('pbody').innerHTML=`
    <div><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span>
-   <span class="badge" style="border:1px solid var(--line);color:var(--mut)">${g?g.label.split('—')[0]:n.group}</span>
+   <span class="badge" style="border:1px solid var(--line);color:var(--mut)">${g?g.label.split('·')[0]:n.group}</span>
    ${n.focal?`<span class="badge" style="border:1px solid var(--focal);color:var(--focal)">◆ nó focal</span>`:''}
    ${n.delta?`<span class="badge" style="border:1px solid ${n.delta==='up'?'var(--confirmed)':'var(--refuted)'};color:${n.delta==='up'?'var(--confirmed)':'var(--refuted)'}">${n.delta==='up'?'▲ subiu nesta versão':'▼ caiu/foi corrigido'}</span>`:''}</div>
    <div class="kv"><b>Evidência:</b> ${n.evidence||'—'}</div>
@@ -518,7 +508,7 @@ function hi(id,hover){
     if(el.dataset.id!==active)el.classList.add('dimmed');
   });
   document.querySelectorAll('svg path[data-type]').forEach(p=>{
-    if(p.dataset.from!==active&&p.dataset.to!==active)p.style.opacity=.08;
+    if(p.dataset.from!==active&&p.dataset.to!==active)p.style.opacity=.07;
   });
   if(!hover)selId=active;else selId=null;
 }
