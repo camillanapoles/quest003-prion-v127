@@ -537,6 +537,7 @@ function select(n,srcEl){
    <div class="kv"><b>Evidência:</b> ${n.evidence||'—'}</div>
    ${n.prob?`<div class="kv"><b>Probabilidade:</b> ${n.prob}</div>`:''}
    <div class="kv"><b>Última atualização:</b> ${n.updated}</div>
+   ${n.implies?`<div class="detail" style="border-left:3px solid ${n.implies.val==='+'?'var(--confirmed)':n.implies.val==='-'?'var(--refuted)':'var(--constraint)'};padding:8px 10px;border-radius:0 8px 8px 0;background:#101830"><b style="color:${n.implies.val==='+'?'var(--confirmed)':n.implies.val==='-'?'var(--refuted)':'var(--constraint)'}">${n.implies.val==='+'?'▲ implica (favorece a tese)':n.implies.val==='-'?'▼ implica (contra/risco)':'◆ implica (misto)'}:</b> ${n.implies.text}</div>`:''}
    <div class="detail">${n.detail||''}</div>
    ${(n.refs&&n.refs.length)?`<div class="refs"><b>Refs:</b> ${n.refs.join(' · ')}</div>`:''}`;
   panel.classList.add('open');veil.classList.add('on');
