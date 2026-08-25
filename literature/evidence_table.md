@@ -45,3 +45,19 @@
 | E1 | Bartz et al., 2016 (PMC5131755) | Diversidade de cepas: barreiras de hospedeiro dependem de cepa |
 | E2 | Ginhoux et al., Science 2010;330:841-5 | Micróglia origina-se de macrófagos do saco vitelínico — NÃO de NSC neuroectodérmica |
 | E3 | Sorrells 2018 Nature + consenso Kempermann 2018 | Neurogênese SVZ adulta humana drasticamente reduzida vs roedores |
+
+## F. Atualização 2026-08-25 — pendências fechadas + upgrades de evidência
+
+| # | Fonte | Achado | Implicação |
+|---|---|---|---|
+| F1 | **Gatdula JRP et al., bioRxiv 2026.02.17.703887 / PMID 41757113** (abstract extraído) | (i) G126V (equivalente murino) co-expresso com WT: previne e SUPRIME infecção dose-dependente em CAD5; (ii) efeito protetor ATRAVESSA ampla gama de cepas naturais e artificiais (generaliza o caveat de cepa do Asante 2015); (iii) **resistência persiste APÓS cessar a expressão** do transgene; (iv) **PrP G127V recombinante ÂNCORA-FREE retém potente atividade dominante-negativa → uso como terapêutico biológico** | O mecanismo TRANS do anel de contenção passa de hipótese não-testada a DOCUMENTADO in vitro; pulso/transiente pode bastar (suporta terapia de depósito) |
+| F2 | **Zerbes T et al., 2026 (PMC13041815, preprint NIH)** (abstract extraído) | rAAV self-complementary codando **BvPrP-V127ΔGPI (sem âncora GPI)**, entrega retrógrada sistêmica, camundongos knock-in BvPrnp + RML: **+~50 dias de sobrevida**; proteoma parcialmente preservado | PROVA DE CONCEITO IN VIVO da V127 anchorless sistêmica. O vetor da hipótese "solúvel" já existe como gene therapy — e valida a lógica de liberar V127 sem âncora no interstício |
+| F3 | Smid J et al., Dement Neuropsychol 2007 (Demneuropsy) | **Primeiro relato de E200K no Brasil**; autores sugerem que busca sistemática pode revelar frequência relevante | População-alvo G4 (portadores genéticos brasileiros) tem âncora local real |
+| F4 | Lee HS et al., 1999; Appleby 2026 (PMC12799623) | E200K = >70% das famílias com DCJ hereditária no mundo; 10-15% de todas as doenças priônicas são genéticas | Dimensionamento da população G4 |
+| F5 | Relaño-Ginés 2019: Brain Pathol (PMID 30472550, S1471489218300420) | Review de terapia celular em príons — revista completa disponível | Ref fechada |
+
+### Consequências para os vereditos (delta 2026-08-25)
+- 🌑#1 (DN trans na margem) → **🌕 DOCUMENTADO in vitro (F1-iv) + PoC in vivo (F2)**: muda a base do anel.
+- 🌕#2 ("PrP-V127 solúvel como DN trans — hipótese NOSSA") → **RETIFICAR: já publicada pelo campo em fev/2026 (F1, F2)**. Nosso papel muda de proponente para integrador (aplicação em TERAPIA CELULAR: NSCs como biofábrica secretora de ΔGPI-V127 no parênquima — combinação ainda não testada por ninguém).
+- UPGRADE de desenho: as células do anel devem ser **secretoras de V127ΔGPI**, não apenas portadoras de V127/V127 de membrana — a evidência F1/F2 aponta que o agente ativo trans é a forma livre.
+- Gatdula (iii) sustenta que enxerto transitório/de depósito pode ser suficiente — reduz a dependência da "fábrica permanente" (que já era superestimada).

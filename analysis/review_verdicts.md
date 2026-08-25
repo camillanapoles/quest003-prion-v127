@@ -36,7 +36,7 @@ Legenda: ✅ positivo real · ❌ negativo (com ajuste incremental) · 🌑 cinz
 
 ## 🌑 CINZA ESCURO (não documentado; lógica/realidade apontam negativo)
 
-1. **Inibição dominante-negativa "em trans" na margem.** Toda evidência forte de DN é cis (V127 co-expresso NA MESMA célula). PrP é proteína GPI-ancorada de membrana — não satura espaço intercelular como "escudo difusível". A premissa do anel bombeiro ainda não foi demonstrada.
+1. ~~**Inibição dominante-negativa "em trans" na margem.**~~ **ATUALIZADO 2026-08-25: movido para claro** — Gatdula 2026 documentou PrP G127V recombinante anchorless com potente atividade dominante-negativa (in vitro) e Zerbes 2026 demonstrou +50 dias de sobrevida com AAV-ΔGPI-V127 sistêmico (in vivo roedor). O mecanismo trans é REAL; permanece não documentado apenas na forma "célula-secretora no parênquima humano".
 2. **Taxa de sobrevida funcional do enxerto ≥ necessário.** Tempestade de citocinas + microambiente citotóxico → apoptose precoce documentada em enxertos; lit. NSC: sobrevida típica 1-20%.
 3. **Contenção COMPLETA em DCJ esporádica avançada** (focos invisíveis além da linha).
 4. **Aprovação regulatória de célula基因组-editada em janela compassiva no Brasil** dentro do tempo de sobrevida do paciente (CTGT/ATMP via Anvisa + CONEP: 12-24 meses típico).
@@ -45,7 +45,7 @@ Legenda: ✅ positivo real · ❌ negativo (com ajuste incremental) · 🌑 cinz
 ## 🌕 CINZA CLARO (não documentado; estratégia lógica aponta positivo)
 
 1. **Resistência célula-autônoma das células editadas V127/V127** — extensão direta de Asante 2015; testável em organoide em ~90 dias (Williams 2023).
-2. **PrP-V127 secretado/vesicular como DN trans.** Existem constructs de PrP solúvel dominante-negativo na lit. de desiagem molecular; nunca combinados com G127V. Se funcionar, CONVERTE o cinza escuro nº1 em claro. (Hipótese NOSSA — testável.)
+2. **PrP-V127 secretado/vesicular como DN trans.** *(Atualização 2026-08-25: a forma anchorless foi documentada pelo campo — Gatdula 2026 in vitro, Zerbes 2026 in vivo via AAV.)* A lacuna restante — e a contribuição ORIGINAL deste plano — é a entrega por **terapia celular**: NSCs editadas como biofábrica local de V127ΔGPI no parênquima (distribuição por CED + permanência celular), combinação nunca testada.
 3. **Combinação ASO-ponte + célula-contenção:** ASO derruba substrato global enquanto o enxerto estabelece — sinergia nunca testada, mas cada parte validada.
 4. **Enxerto no nicho SVZ de portador E200K pré-sintomático:** ambiente ainda não-inflamado; a lacuna lit. é ausência de estudo, não contradição.
 5. **Benefício funcional de NPCs mesmo sem conter príons** (Williams 2023: restauração eletrofisiológica) → desfecho secundário plausível (qualidade de vida) mesmo no fracasso da contenção.
