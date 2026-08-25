@@ -3,10 +3,10 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 22:10",
-    "version": "v2.0",
+    "updated": "2026-08-26 00:05",
+    "version": "v2.3",
     "audit": "histórico completo em `git log` de quests/003",
-    "message": "Mecanismo validado; agora há PLANOS B com âncoras reais: mRNA no líquor (dias, sem cirurgia), gel protetor, célula invisível. G0 testa os três contra o padrão.",
+    "message": "Mecanismo validado + planos B ancorados + AGORA ESCALA FÍSICA: o halo do escudo mede 4-6mm, o anel se dimensiona em 8-12mm entre nós, e o hidrogel certo (HA 1-2%) deixa a proteína sair. O desenho deixou de ser conceitual.",
     "views": [
       {
         "id": "executivo",
@@ -865,6 +865,24 @@
         "text": "Testar o banco universal em cérebro inflamado (G1.5). Se passar, não precisa de célula própria."
       },
       "plain": "Célula invisível ao sistema imune já existe (provado em rato)."
+    },
+    {
+      "id": "ws7",
+      "title": "O escudo alcança 4-6 mm — e isso dimensiona a cirurgia",
+      "label": "WS-7 solver: halo protetor ℓ=√(D/k)≈3,6mm; espaçamento do anel 8-12mm; hidrogel ξ≥5×r_p aprovado",
+      "group": "entrega",
+      "outlook": "valid",
+      "status": "confirmed",
+      "evidence": "computacional auto-testado (Thorne&Nicholson 2006; Masel 1999)",
+      "detail": "ADR FV em meio poroso heterogêneo: halo r10% = 4,2-5,8mm por nó → anel precisa de múltiplos nós espaçados 8-12mm; t_regime ~4 dias (readouts 90d OK); regra do hidrogel: ξ≥5×r_p (HA 1-2% APROVADO, >5% retém a secretora). Self-tests: massa 100%, ℓ err 0,5%. Reenquadramento: raio de proteção = módulo de Thiele clássico da eng. química.",
+      "refs": [
+        "PNAS 2006 (Thorne&Nicholson)",
+        "Biophys Chem 1999 (Masel)"
+      ],
+      "prob": null,
+      "updated": "2026-08-26",
+      "delta": "up",
+      "cluster_id": 4
     }
   ],
   "edges": [
@@ -1112,6 +1130,21 @@
       "from": "hypo",
       "to": "window",
       "type": "constrains"
+    },
+    {
+      "from": "ws7",
+      "to": "ring",
+      "type": "enables"
+    },
+    {
+      "from": "ws7",
+      "to": "hagel",
+      "type": "supports"
+    },
+    {
+      "from": "ws7",
+      "to": "mrna",
+      "type": "constrains"
     }
   ],
   "probability_history": [
@@ -1227,6 +1260,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-26",
+      "version": "v2.3 (WS-7 solver)",
+      "text": "WS-7 resolvido: solver ADR em meio poroso heterogêneo auto-testado (massa 100%, ℓ 0,5% vs analítico; reenquadramento Thiele). RESULTADOS: halo protetor r10%≈4-6mm/nó → espaçamento do anel 8-12mm (REGRA 1); t_regime ~4d (90d readouts OK); hidrogel ξ≥5×r_p → HA 1-2% aprovado, >5% rejeitado (REGRA 2, fecha tensão com R5a); canalização por cistos = limitação honesta (difusão-limitado na escala testada). 10 soluções paralelas mapeadas de outros campos (S1-S10, Thiele ★★★★)."
+    },
     {
       "date": "2026-08-25",
       "version": "v2.0 (linguagem simples)",

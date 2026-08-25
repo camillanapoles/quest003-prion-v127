@@ -102,7 +102,9 @@ def advect_diffuse(c,kcl,kcap,dt,steps,vx=None,vy=None,scale_v=1.0):
 c=np.zeros((N,N)); c[(X-cx)**2+(Y-cy)**2<(0.6e-3)**2]=1.0
 dt=0.2*dx*dx/DEFF; steps=int(3*24*3600/dt*0.02)+1   # amostra ~ parcial (custo)
 c=advect_diffuse(c,1e-6,0,dt,steps,vx=Kb,vy=Kf)
-cap=sum(((X-a)**2+(Y-b)**2<r**2).sum() for a,b,r in cysts)/c.sum()
+cyst_mask=np.zeros_like(c,bool)
+for a,b,r in cysts: cyst_mask|=((X-a)**2+(Y-b)**2<r**2)
+cap=float(c[cyst_mask].sum()/max(c.sum(),1e-12))
 RESULTS['cyst_capture_frac_early']=round(float(cap),3)
 
 # estado estacionário com fonte contínua (D + reação, sem convecção): campo c_ss
@@ -114,7 +116,7 @@ for i in range(n2):
     lapx=np.zeros_like(c2); lapy=np.zeros_like(c2)
     lapx[:,1:-1]=cx_[:,2:]-2*cx_[:,1:-1]+cx_[:,:-2]
     lapy[1:-1,:]=cx_[2:,:]-2*cx_[1:-1,:]+cx_[:-2,:]
-    c2+=dt2*(DEFF/ALPHA*(lapx+lapy)/dx**2+src-k*c2)
+    c2+=dt2*(DEFF*(lapx+lapy)/dx**2+src-k*c2)
     np.clip(c2,0,None,out=c2)
 RESULTS['ss_reached_steps']=n2
 R=np.hypot(X-cx,Y-cy); maxc=c2.max()
@@ -138,18 +140,20 @@ dt=0.1*(L/192/4)**2/DEFF
 for _ in range(300):
     lapx=np.zeros_like(a); lapy=np.zeros_like(a)
     lapx[:,1:-1]=a[:,2:]-2*a[:,1:-1]+a[:,:-2]
-    lapy[1:-1,:]=a[2:,1:-1]-2*a[1:-1,:]+a[:-2,:]
-    a+=dt*DEFF/ALPHA*(lapx+lapy)/ (L/192/4)**2
+    lapy[1:-1,:]=a[2:,:]-2*a[1:-1,:]+a[:-2,:]
+    a+=dt*DEFF*(lapx+lapy)/ (L/192/4)**2
+    np.clip(a,0,None,out=a)
 tests['mass_conservation_pct']=round(100*a.sum()/1000,1)
 # T2 ℓ analítico vs numérico 1D
-Nx=400; dx1=1e-4; kk=3e-6
+Nx=400; dx1=1e-4; kk=3e-6; dt=0.15*dx1*dx1/DEFF
 c1=np.zeros(Nx); c1[0]=1.0
 for _ in range(60000):
     lap=np.zeros(Nx); lap[1:-1]=c1[2:]-2*c1[1:-1]+c1[:-2]
     c1+=dt*DEFF*(lap)/dx1**2-kk*c1*dt
     c1[0]=1.0
 idx=np.argmin(abs(c1-0.1*c1.max()))
-tests['ell_analytic_mm']=round(ell(DEFF,kk)*1000,2)
+tests['ell_analytic_mm']=round(2.303*ell(DEFF,kk)*1000,2)  # ponto de 10% = 2.303·ℓ (decaimento exponencial)
+tests['ell_reference_note']='ℓ=√(D/k)=%.2fmm; ponto 10%% = 2.303ℓ' % (ell(DEFF,kk)*1000)
 tests['ell_numeric_mm']=round(idx*dx1*1000,2)
 tests['ell_err_pct']=round(abs(tests['ell_numeric_mm']-tests['ell_analytic_mm'])/tests['ell_analytic_mm']*100,1)
 RESULTS['self_tests']=tests
