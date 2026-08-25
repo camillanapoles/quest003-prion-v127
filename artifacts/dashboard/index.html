@@ -17,17 +17,15 @@
   header .sub{color:var(--mut);font-size:12px}
   header .right{margin-left:auto;display:flex;gap:10px;align-items:center;font-size:12px;color:var(--mut)}
   .pill{padding:3px 10px;border-radius:999px;border:1px solid var(--line);font-size:11px}
-  /* callout editorial (máx 1) — voz editorial em itálico serif, fora da área ativa do diagrama */
   .msg{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;padding:10px 20px;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(255,138,92,.07),transparent 70%)}
   .msg .tag{font-size:10px;letter-spacing:1.4px;color:var(--focal);text-transform:uppercase;white-space:nowrap}
   .msg .txt{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:14.5px;color:#ffd9c7}
-  /* vistas por contexto */
   #viewbar{display:flex;flex-wrap:wrap;gap:8px;padding:10px 20px;border-bottom:1px solid var(--line);align-items:center}
   .vbtn{display:inline-flex;gap:6px;align-items:center;padding:9px 14px;min-height:40px;border-radius:10px;border:1px solid var(--line);cursor:pointer;font-size:12.5px;user-select:none;background:transparent;color:var(--ink)}
   .vbtn.on{background:#1a2342;border-color:var(--focus)}
   .vbtn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
   .vdesc{color:var(--mut);font-size:12px;margin-left:auto}
-  #scroller{overflow:auto;max-height:calc(100vh - 216px)}
+  #scroller{overflow:auto;max-height:calc(100vh - 220px)}
   .legend{display:flex;flex-wrap:wrap;gap:8px;padding:10px 20px;border-bottom:1px solid var(--line);align-items:center}
   .chip{display:inline-flex;gap:6px;align-items:center;padding:8px 14px;min-height:40px;border-radius:10px;border:1px solid var(--line);cursor:pointer;font-size:12.5px;user-select:none;background:transparent;color:var(--ink)}
   .chip .dot{width:10px;height:10px;border-radius:50%}
@@ -35,17 +33,16 @@
   .chip:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
   .stats{margin-left:auto;display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--mut)}
   .stats b{color:var(--ink)}
+  svg{display:block;margin:0 auto}
   svg text{font-family:inherit}
   .node rect.box{cursor:pointer;stroke-width:1.4}
   .node text.lbl{font-size:11.5px;fill:var(--ink);pointer-events:none}
-  .node text.ev{font-size:9.5px;fill:var(--mut);pointer-events:none}
   .node text.ico{font-size:12px;pointer-events:none}
   .node:focus-visible{outline:none}
   .node:focus-visible .box{stroke:#fff;stroke-width:2.4}
-  /* nó focal — coral editorial, 1-2 por vista */
   .node.focal .box{stroke:var(--focal);stroke-width:2.4;filter:drop-shadow(0 0 7px rgba(255,138,92,.45))}
   .node text.focaltag{font-size:9.5px;fill:var(--focal);letter-spacing:1.2px;pointer-events:none}
-  .band-label{font-size:11px;letter-spacing:1.6px;fill:var(--mut);text-transform:uppercase}
+  .cluster-label{font-size:11px;letter-spacing:1.6px;fill:var(--mut);text-transform:uppercase;pointer-events:none}
   .dimmed{opacity:.13}
   #veil{position:fixed;inset:0;background:rgba(4,8,18,.55);opacity:0;pointer-events:none;transition:opacity .2s ease;z-index:40}
   #veil.on{opacity:1;pointer-events:auto}
@@ -119,6 +116,14 @@
 
 <script>
 'use strict';
+/* ============================================================
+   LAYOUT ENGINE v1.4 — regras §6 diagram-design:
+   · cluster = container com FILEIRA ÚNICA de nós (nunca paralelos)
+   · conectores ortogonais, cantos quarter-arc r=8, sem diagonais
+   · attach points em leque (≥14px entre pontos na mesma borda)
+   · transit nunca atrás de nó: skip/backward → corredores laterais
+   · barycenter p/ reduzir cruzamentos; densidade por vista
+   ============================================================ */
 const GROUPS=[
  {id:'molecular',label:'① Fundamento molecular — o escudo V127'},
  {id:'classe',label:'② Classe terapêutica — negação de substrato'},
@@ -134,10 +139,14 @@ const STATUS={
  active:{c:'var(--active)',i:'▶',t:'ATIVO',n:'em curso / desenho ativo'}
 };
 const EDGES={supports:{c:'#15803d',d:'sustenta'},constrains:{c:'#b45309',d:'limita/exige'},refutes:{c:'#b91c1c',d:'refuta'},enables:{c:'#1d4ed8',d:'habilita'},tests:{c:'#7c3aed',d:'testado por'}};
-const NW=238,NH=78,GX=26,GY=24,ML=30,MT=16,BANDH=64;
+
+const NW=212,NH=86,NGAP=16;      // cartão e vão horizontal
+const PADX=18,LABELH=34,PADY=12; // container do cluster
+const BAND_GAP=78;               // corredor vertical entre clusters
+const LANE=92;                   // corredores laterais p/ arestas skip/backward
+const R=8;                       // raio dos cantos ortogonais (regra §6.1)
 
 let D=null,VIEW='pesquisador';
-const allNodes=()=>D?D.nodes:[];
 
 function wrap(t,n){const w=t.split(' ');const L=[];let cur='';
   for(const x of w){if((cur+' '+x).trim().length<=n){cur=(cur+' '+x).trim()}else{L.push(cur);cur=x;if(L.length>=3)break}}
@@ -145,7 +154,6 @@ function wrap(t,n){const w=t.split(' ');const L=[];let cur='';
   if(t.length>110&&L[2])L[2]=L[2]+'…';
   return L.slice(0,3)}
 
-/* vista por contexto: filtra nós/arestas e largura de grade */
 function visible(){
   const v=(D.meta.views||[]).find(x=>x.id===VIEW)||{cols:6};
   let nodes=D.nodes;
@@ -153,21 +161,57 @@ function visible(){
   if(v.status)nodes=nodes.filter(n=>v.status.includes(n.status));
   const ids=new Set(nodes.map(n=>n.id));
   const edges=D.edges.filter(e=>ids.has(e.from)&&ids.has(e.to));
-  return {nodes,edges,cols:v.cols||6,view:v};
+  return {nodes,edges,view:v};
+}
+
+/* barycenter: ordena nós dentro do cluster pela média dos vizinhos
+   (varredura frontal + traseira) para reduzir cruzamentos */
+function orderBands(bands,edges){
+  const idx={}; bands.forEach((b,bi)=>b.ns.forEach((n,i)=>idx[n.id]={b:bi,i}));
+  const sweep=(from,to,step)=>{
+    for(let bi=from;step>0?bi<=to:bi>=to;bi+=step){
+      const scored=bands[bi].ns.map((n,i)=>{
+        let s=0,c=0;
+        edges.forEach(e=>{
+          let o=e.from===n.id?e.to:(e.to===n.id?e.from:null);
+          if(!o)return; const p=idx[o]; if(!p)return;
+          if(step>0&&p.b>=bi)return; if(step<0&&p.b<=bi)return;
+          s+=p.i;c++;
+        });
+        return {n,k:c?s/c+.001*i:i};
+      });
+      scored.sort((a,b)=>a.k-b.k);
+      bands[bi].ns=scored.map(x=>x.n);
+      bands[bi].ns.forEach((n,i)=>idx[n.id]={b:bi,i});
+    }
+  };
+  for(let p=0;p<2;p++){ sweep(1,bands.length-1,1); sweep(bands.length-2,0,-1); }
+}
+
+/* path ortogonal com cantos quarter-arc r — sem diagonais (§6.1) */
+function ortho(pts,r){
+  let d=`M${pts[0][0]},${pts[0][1]}`;
+  for(let i=1;i<pts.length-1;i++){
+    const [x,y]=pts[i],[px,py]=pts[i-1],[nx,ny]=pts[i+1];
+    const v1=[Math.sign(x-px),Math.sign(y-py)],v2=[Math.sign(nx-x),Math.sign(ny-y)];
+    if(v1[0]===v2[0]&&v1[1]===v2[1]){continue}
+    d+=` L${x-v1[0]*r},${y-v1[1]*r} Q${x},${y} ${x+v2[0]*r},${y+v2[1]*r}`;
+  }
+  const e=pts[pts.length-1];
+  d+=` L${e[0]},${e[1]}`;
+  return d;
 }
 
 function build(){
-  const d={meta:D.meta,probability_history:D.probability_history,gates:D.gates,changelog:D.changelog};
-  const {nodes,edges,cols,view}=visible();
+  const {nodes,edges,view}=visible();
   document.getElementById('title').textContent=D.meta.title;
   document.getElementById('subtitle').textContent=D.meta.subtitle+' · '+D.meta.audit;
   document.getElementById('ver').textContent=D.meta.version;
   document.getElementById('upd').textContent='atualizado '+D.meta.updated;
   document.getElementById('msgtxt').textContent=D.meta.message||'';
 
-  // viewbar
   const vb=document.getElementById('viewbar');vb.innerHTML='';
-  (D.meta.views||[{id:'pesquisador',label:' Completo',desc:''}]).forEach(v=>{
+  (D.meta.views||[]).forEach(v=>{
     const b=document.createElement('button');b.type='button';b.className='vbtn'+(v.id===VIEW?' on':'');
     b.setAttribute('role','tab');b.setAttribute('aria-selected',v.id===VIEW?'true':'false');
     b.textContent=v.label;b.title=v.desc;
@@ -177,69 +221,115 @@ function build(){
   const vd=document.createElement('span');vd.className='vdesc';vd.textContent=view.desc||'';
   vb.appendChild(vd);
 
-  // positions
-  const byId={};let y=MT;
-  GROUPS.forEach(g=>{
-    const ns=nodes.filter(n=>n.group===g.id);
-    const rows=Math.max(1,Math.ceil(ns.length/cols));
-    g.y=y;g.h=rows*(NH+GY)+BANDH;y+=g.h+18;
-    ns.forEach((n,i)=>{const r=Math.floor(i/cols),c=i%cols;
-      n.x=ML+c*(NW+GX);n.y=g.y+BANDH-14+r*(NH+GY);byId[n.id]=n;});
+  /* --- clusters: fileira única --- */
+  const bands=GROUPS.map(g=>({g,ns:nodes.filter(n=>n.group===g.id)})).filter(b=>b.ns.length);
+  orderBands(bands,edges);
+  const bandOf={};bands.forEach((b,bi)=>b.ns.forEach(n=>bandOf[n.id]=bi));
+
+  let maxR=0;
+  bands.forEach(b=>{
+    b.w=PADX*2+b.ns.length*NW+(b.ns.length-1)*NGAP;
+    b.h=LABELH+NH+PADY*2;
+    maxR=Math.max(maxR,LANE+6+b.w);
   });
-  const W=Math.max(ML*2+cols*(NW+GX)-GX+20,760),H=y;
+  const W=maxR+LANE+8;
+  let y=14;
+  bands.forEach(b=>{b.y=y;y+=b.h+BAND_GAP;});
+  const H=y-BAND_GAP+16;
+
+  const byId={};
+  bands.forEach(b=>{
+    b.ns.forEach((n,i)=>{
+      n.x=LANE+6+PADX+i*(NW+NGAP);
+      n.y=b.y+LABELH+PADY;
+      n.cx=n.x+NW/2;n.cy=n.y+NH/2;
+      byId[n.id]=n;
+    });
+  });
 
   const NS='http://www.w3.org/2000/svg';
   const svg=document.createElementNS(NS,'svg');
   svg.setAttribute('width',W);svg.setAttribute('height',H);
   svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
-  svg.style.display='block';svg.style.margin='0 auto';
   svg.setAttribute('role','group');svg.setAttribute('aria-label','Mapa lógico dos achados — vista '+(view.label||''));
 
   const defs=document.createElementNS(NS,'defs');
   Object.entries(EDGES).forEach(([k,v])=>{
     const m=document.createElementNS(NS,'marker');
     m.setAttribute('id','ar_'+k);m.setAttribute('viewBox','0 0 10 10');
-    m.setAttribute('refX',9);m.setAttribute('refY',5);
+    m.setAttribute('refX',8.5);m.setAttribute('refY',5);
     m.setAttribute('markerWidth',7);m.setAttribute('markerHeight',7);m.setAttribute('orient','auto-start-reverse');
     const p=document.createElementNS(NS,'path');p.setAttribute('d','M0,0 L10,5 L0,10 z');p.setAttribute('fill',v.c);
     m.appendChild(p);defs.appendChild(m);
   });
   svg.appendChild(defs);
 
-  GROUPS.forEach(g=>{
-    if(!nodes.some(n=>n.group===g.id))return;
+  /* containers dos clusters */
+  bands.forEach(b=>{
     const bg=document.createElementNS(NS,'rect');
-    bg.setAttribute('x',0);bg.setAttribute('y',g.y);
-    bg.setAttribute('width',W);bg.setAttribute('height',g.h);
-    bg.setAttribute('fill','#101830');bg.setAttribute('rx',12);
+    bg.setAttribute('x',LANE+6);bg.setAttribute('y',b.y);
+    bg.setAttribute('width',b.w);bg.setAttribute('height',b.h);
+    bg.setAttribute('fill','#0f1730');bg.setAttribute('stroke','#1c2748');bg.setAttribute('rx',12);
     svg.appendChild(bg);
     const t=document.createElementNS(NS,'text');
-    t.setAttribute('x',ML);t.setAttribute('y',g.y+22);t.setAttribute('class','band-label');
-    t.textContent=g.label;svg.appendChild(t);
+    t.setAttribute('class','cluster-label');t.setAttribute('x',LANE+6+PADX+4);t.setAttribute('y',b.y+20);
+    const short=b.g.label.split('—')[0].trim();
+    t.textContent=short;t.setAttribute('textLength',b.w-2*PADX-8);
+    const tt=document.createElementNS(NS,'title');tt.textContent=b.g.label;t.appendChild(tt);
+    svg.appendChild(t);
   });
+
+  /* --- roteamento (§6): leque, ortogonal, corredores --- */
+  const exits={}; // fan: node+side → contador
+  const fan=(id,side)=>{const k=id+side;exits[k]=(exits[k]||0)+1;return exits[k]-1;};
+  const laneCount={L:0,R:0};
 
   const edgesG=document.createElementNS(NS,'g');
   edges.forEach(e=>{
     const a=byId[e.from],b=byId[e.to];if(!a||!b)return;
     const spec=EDGES[e.type]||EDGES.supports;
-    const sameRow=Math.abs(a.y-b.y)<NH/2;
-    let x1,y1,x2,y2;
-    if(sameRow&&a.x<b.x){x1=a.x+NW;y1=a.y+NH/2;x2=b.x;y2=b.y+NH/2}
-    else if(sameRow){x1=a.x;y1=a.y+NH/2;x2=b.x+NW;y2=b.y+NH/2}
-    else{const down=b.y>a.y;x1=a.x+NW/2;y1=down?a.y+NH:a.y;x2=b.x+NW/2;y2=down?b.y:b.y+NH}
+    const bi=bandOf[e.from],bj=bandOf[e.to];
+    let pts;
+    if(bi===bj){ // intra-cluster: por cima da fileira (não atravessa nós)
+      const band=bands[bi];
+      if(!band.arcN)band.arcN=0;
+      const lift=26+13*(band.arcN++);
+      const off=fan(e.from,'T')-0, off2=fan(e.to,'T');
+      const yArc=band.y+LABELH-lift;
+      const sx=a.cx+((off%3)-1)*14, dx=b.cx+((off2%3)-1)*14;
+      pts=[[sx,a.y],[sx,yArc],[dx,yArc],[dx,b.y]];
+    }else if(bj===bi+1){ // banda adjacente: corredor central
+      const off=fan(e.from,'B'), off2=fan(e.to,'T');
+      const midY=(a.y+NH+b.y)/2+(off%2?10:-6);
+      const sx=a.cx+((off%5)-2)*14, dx=b.cx+((off2%5)-2)*14;
+      if(Math.abs(sx-dx)<2){pts=[[sx,a.y+NH],[sx,b.y]]}
+      else pts=[[sx,a.y+NH],[sx,midY],[dx,midY],[dx,b.y]];
+    }else{ // skip/backward: corredor lateral (transit nunca atrás de nó)
+      const goLeft=(a.cx+b.cx)<W;
+      const side=goLeft?'L':'R';
+      const li=laneCount[side]++;
+      const laneX=goLeft?46+li*15:W-46-li*15;
+      const offS=fan(e.from,side), offT=fan(e.to,side);
+      const sy=a.cy+((offS%3)-1)*14, ty=b.cy+((offT%3)-1)*14;
+      if(goLeft) pts=[[a.x,sy],[laneX,sy],[laneX,ty],[b.x,ty]];
+      else pts=[[a.x+NW,sy],[laneX,sy],[laneX,ty],[b.x+NW,ty]];
+    }
     const p=document.createElementNS(NS,'path');
-    const mx=(x1+x2)/2,my=(y1+y2)/2;
-    p.setAttribute('d',sameRow?`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`:`M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}`);
+    p.setAttribute('d',ortho(pts,R));
     p.setAttribute('stroke',spec.c);p.setAttribute('fill','none');
     p.setAttribute('stroke-width',1.8);
     if(e.type==='constrains')p.setAttribute('stroke-dasharray','6 4');
     p.setAttribute('marker-end',`url(#ar_${e.type})`);
     p.setAttribute('data-from',e.from);p.setAttribute('data-to',e.to);
     p.setAttribute('data-type',e.type);
+    const tt=document.createElementNS(NS,'title');
+    tt.textContent=`${byId[e.from].label}  ${spec.d}  ${byId[e.to].label}`;
+    p.appendChild(tt);
     edgesG.appendChild(p);
   });
   svg.appendChild(edgesG);
 
+  /* nós */
   const nodesG=document.createElementNS(NS,'g');
   nodes.forEach(n=>{
     const s=STATUS[n.status]||STATUS.proposed;
@@ -259,28 +349,28 @@ function build(){
     strip.setAttribute('fill',s.c);g.appendChild(strip);
     if(n.focal){
       const ft=document.createElementNS(NS,'text');
-      ft.setAttribute('class','focaltag');ft.setAttribute('x',NW-8);ft.setAttribute('y',-6);
+      ft.setAttribute('class','focaltag');ft.setAttribute('x',NW-8);ft.setAttribute('y',-8);
       ft.setAttribute('text-anchor','end');
       ft.textContent=n.id==='secretor'?'◆ TESE':'◆ EVIDÊNCIA-CHAVE';
       g.appendChild(ft);
     }
-    wrap(n.label,32).forEach((ln,i)=>{
+    wrap(n.label,30).forEach((ln,i)=>{
       const t=document.createElementNS(NS,'text');
-      t.setAttribute('class','lbl');t.setAttribute('x',14);t.setAttribute('y',22+i*15);
+      t.setAttribute('class','lbl');t.setAttribute('x',14);t.setAttribute('y',24+i*15);
       t.textContent=ln;g.appendChild(t);
     });
-    const ev=document.createElementNS(NS,'text');
-    ev.setAttribute('class','ev');ev.setAttribute('x',14);ev.setAttribute('y',NH-10);
-    ev.textContent=n.evidence||'';g.appendChild(ev);
     const ic=document.createElementNS(NS,'text');
-    ic.setAttribute('class','ico');ic.setAttribute('x',NW-20);ic.setAttribute('y',20);
+    ic.setAttribute('class','ico');ic.setAttribute('x',NW-22);ic.setAttribute('y',22);
     ic.setAttribute('fill',s.c);ic.textContent=s.i;g.appendChild(ic);
     if(n.delta==='up'||n.delta==='down'){
       const dd=document.createElementNS(NS,'text');
-      dd.setAttribute('x',NW-20);dd.setAttribute('y',36);dd.setAttribute('font-size','11');
+      dd.setAttribute('x',NW-22);dd.setAttribute('y',38);dd.setAttribute('font-size','11');
       dd.setAttribute('fill',n.delta==='up'?'var(--confirmed)':'var(--refuted)');
       dd.textContent=n.delta==='up'?'▲':'▼';g.appendChild(dd);
     }
+    const nt=document.createElementNS(NS,'title');
+    nt.textContent=`${n.label}\n${s.t} · ${n.evidence||''}`;
+    g.appendChild(nt);
     g.addEventListener('click',()=>select(n,g));
     g.addEventListener('keydown',ev2=>{if(ev2.key==='Enter'||ev2.key===' '){ev2.preventDefault();select(n,g)}});
     g.addEventListener('mouseenter',()=>hi(n.id,true));
@@ -290,7 +380,7 @@ function build(){
   svg.appendChild(nodesG);
   const sc=document.getElementById('scroller');sc.innerHTML='';sc.appendChild(svg);
 
-  // legend+stats (recalculadas por vista)
+  /* legenda + stats por vista */
   const lg=document.getElementById('legend');lg.innerHTML='';
   Object.entries(STATUS).forEach(([k,v])=>{
     const c=document.createElement('button');c.type='button';c.className='chip on';c.dataset.f=k;
@@ -320,10 +410,9 @@ function build(){
   const pb=document.getElementById('probs');pb.innerHTML='';
   D.probability_history.forEach(p=>{
     const row=document.createElement('div');row.className='probrow';
-    const pts=p.points;const last=pts[pts.length-1];
-    const prev=pts[pts.length-2];
+    const pts=p.points,last=pts[pts.length-1],prev=pts[pts.length-2];
     let dir='—',dc='var(--mut)';
-    if(prev){if(last.low+last.high>prev.low+prev.high){dir='↗';dc='var(--confirmed)'}else if(last.low+last.high<prev.low+prev.high){dir='↘';dc='var(--refuted)'}else{dir='≈'}}
+    if(prev){if(last.low+last.high>prev.low+prev.high){dir='↗';dc='var(--confirmed)'}else if(last.low+last.high<prev.low+prev.high){dir='↘';dc='var(--refuted)'}else dir='≈'}
     row.innerHTML=`<div class="name">${p.component}</div><div class="probbar" role="img" aria-label="${p.component}: ${last.low} a ${last.high} por cento (${last.note})"></div><div class="dir" style="color:${dc}" aria-hidden="true">${dir}</div>`;
     const bar=row.querySelector('.probbar');
     pts.forEach((pt,i)=>{
@@ -346,7 +435,7 @@ function build(){
     tr.innerHTML=`<td>${n.label}</td><td style="color:var(--mut)">${GROUPS.find(g=>g.id===n.group)?.label.split('—')[0]||''}</td><td>${n.evidence||''}</td><td><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span></td><td style="color:var(--mut)">${n.updated}</td>`;
     const op=()=>select(n,tr);
     tr.onclick=op;
-    tr.addEventListener('keydown',e=>{if(e.key==='Enter'){op()}});
+    tr.addEventListener('keydown',e=>{if(e.key==='Enter')op()});
     vt.appendChild(tr);
   });
 
@@ -394,7 +483,7 @@ function closePanel(){
 closeBtn.addEventListener('click',closePanel);
 veil.addEventListener('click',closePanel);
 document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'&&(panel.classList.contains('open')))closePanel();
+  if(e.key==='Escape'&&panel.classList.contains('open'))closePanel();
   if(e.key==='Tab'&&panel.classList.contains('open')){
     const f=panel.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
     if(!f.length)return;

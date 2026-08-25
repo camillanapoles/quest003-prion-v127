@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 14:40",
-    "version": "v1.3",
+    "updated": "2026-08-25 15:35",
+    "version": "v1.4",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
     "views": [
@@ -657,6 +657,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v1.4 (rebuild visual)",
+      "text": "Motor de layout reescrito sob as regras §6 da skill diagram-design após feedback do usuário: (1) clusters = containers com FILEIRA ÚNICA de nós — fim das fileiras paralelas que escondiam as setas; (2) conectores ortogonais com cantos quarter-arc r=8, zero diagonais; (3) attach points em leque (≥14px) por borda; (4) arestas inter-banda pelo corredor central; skip/backward por corredores LATERAIS — transit nunca passa atrás de nó; (5) barycenter frontal+traseiro ordena nós p/ minimizar cruzamentos; (6) evidência sai do cartão (tooltip+drawer) — princípio da deleção."
+    },
     {
       "date": "2026-08-25",
       "version": "v1.3 (diagram-design)",
