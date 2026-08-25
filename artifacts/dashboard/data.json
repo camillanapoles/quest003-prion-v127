@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 19:50",
-    "version": "v1.7",
+    "updated": "2026-08-25 22:30",
+    "version": "v2.1",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
     "views": [
@@ -58,7 +58,8 @@
       "updated": "2026-08-24",
       "delta": null,
       "outlook": "valid",
-      "title": "Gene raro venceu o kuru"
+      "title": "Gene raro venceu o kuru",
+      "cluster_id": 0
     },
     {
       "id": "v127total",
@@ -74,7 +75,8 @@
       "updated": "2026-08-24",
       "delta": null,
       "outlook": "valid",
-      "title": "Escudo total contra príons"
+      "title": "Escudo total contra príons",
+      "cluster_id": 0
     },
     {
       "id": "het",
@@ -89,7 +91,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 0
     },
     {
       "id": "dn",
@@ -105,7 +108,8 @@
       "prob": null,
       "updated": "2026-08-25",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 3
     },
     {
       "id": "struct",
@@ -121,7 +125,8 @@
       "prob": null,
       "updated": "2026-08-25",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 3
     },
     {
       "id": "trans",
@@ -139,7 +144,8 @@
       "delta": "up",
       "focal": true,
       "outlook": "valid",
-      "title": "A versão 'solta' bloqueia o príon"
+      "title": "A versão 'solta' bloqueia o príon",
+      "cluster_id": 3
     },
     {
       "id": "persist",
@@ -154,7 +160,8 @@
       "prob": null,
       "updated": "2026-08-25",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 5
     },
     {
       "id": "aav",
@@ -170,7 +177,8 @@
       "updated": "2026-08-25",
       "delta": "up",
       "outlook": "valid",
-      "title": "Funcionou em camundongos"
+      "title": "Funcionou em camundongos",
+      "cluster_id": 5
     },
     {
       "id": "depletion",
@@ -185,7 +193,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 1
     },
     {
       "id": "aso",
@@ -201,7 +210,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 1
     },
     {
       "id": "ion717",
@@ -216,7 +226,8 @@
       "prob": null,
       "updated": "2026-08-25",
       "delta": null,
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "cluster_id": 1
     },
     {
       "id": "prn100",
@@ -231,7 +242,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 4
     },
     {
       "id": "edit",
@@ -247,7 +259,8 @@
       "updated": "2026-08-25",
       "delta": null,
       "outlook": "gray_light",
-      "title": "Edição genética cria a célula blindada"
+      "title": "Edição genética cria a célula blindada",
+      "cluster_id": 0
     },
     {
       "id": "secretor",
@@ -264,7 +277,8 @@
       "delta": null,
       "focal": true,
       "outlook": "gray_light",
-      "title": "Nossa aposta: a célula-fábrica"
+      "title": "Nossa aposta: a célula-fábrica",
+      "cluster_id": 5
     },
     {
       "id": "microglia",
@@ -280,7 +294,8 @@
       "updated": "2026-08-24",
       "delta": "down",
       "outlook": "invalid",
-      "title": "Célula-tronco NÃO faz microglia"
+      "title": "Célula-tronco NÃO faz microglia",
+      "cluster_id": 2
     },
     {
       "id": "svz",
@@ -297,7 +312,8 @@
       "updated": "2026-08-24",
       "delta": "down",
       "outlook": "invalid",
-      "title": "A 'fábrica' do cérebro é fraca"
+      "title": "A 'fábrica' do cérebro é fraca",
+      "cluster_id": 2
     },
     {
       "id": "organoid",
@@ -313,7 +329,8 @@
       "updated": "2026-08-24",
       "delta": null,
       "outlook": "valid",
-      "title": "Mini-cérebros para testar"
+      "title": "Mini-cérebros para testar",
+      "cluster_id": 5
     },
     {
       "id": "electro",
@@ -328,7 +345,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 2
     },
     {
       "id": "ced",
@@ -345,7 +363,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 3
     },
     {
       "id": "dti",
@@ -359,7 +378,8 @@
       "updated": "2026-08-24",
       "delta": null,
       "outlook": "gray_light",
-      "title": "Cirurgia pelo caminho já morto"
+      "title": "Cirurgia pelo caminho já morto",
+      "cluster_id": 2
     },
     {
       "id": "ring",
@@ -375,7 +395,8 @@
       "updated": "2026-08-25",
       "delta": null,
       "outlook": "gray_light",
-      "title": "Anel de defesa na fronteira"
+      "title": "Anel de defesa na fronteira",
+      "cluster_id": 3
     },
     {
       "id": "coax",
@@ -390,7 +411,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "cluster_id": 2
     },
     {
       "id": "rtquicop",
@@ -405,7 +427,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "cluster_id": 4
     },
     {
       "id": "e200k",
@@ -422,7 +445,8 @@
       "updated": "2026-08-25",
       "delta": "up",
       "outlook": "valid",
-      "title": "Pacientes certos: Brasil, antes dos sintomas"
+      "title": "Pacientes certos: Brasil, antes dos sintomas",
+      "cluster_id": 4
     },
     {
       "id": "rtquic",
@@ -438,7 +462,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "cluster_id": 4
     },
     {
       "id": "window",
@@ -454,7 +479,8 @@
       "updated": "2026-08-24",
       "delta": "down",
       "outlook": "valid",
-      "title": "Por que não a forma comum"
+      "title": "Por que não a forma comum",
+      "cluster_id": 0
     },
     {
       "id": "reg",
@@ -469,7 +495,8 @@
       "prob": null,
       "updated": "2026-08-25",
       "delta": null,
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "cluster_id": 6
     },
     {
       "id": "gates",
@@ -485,7 +512,8 @@
       "updated": "2026-08-25",
       "delta": null,
       "outlook": "gray_light",
-      "title": "Rota: do teste ao ensaio clínico"
+      "title": "Rota: do teste ao ensaio clínico",
+      "cluster_id": 4
     },
     {
       "id": "endog",
@@ -502,7 +530,8 @@
       "updated": "2026-08-25",
       "delta": "up",
       "outlook": "valid",
-      "title": "O cérebro já tenta se reparar"
+      "title": "O cérebro já tenta se reparar",
+      "cluster_id": 2
     },
     {
       "id": "img",
@@ -519,7 +548,8 @@
       "updated": "2026-08-25",
       "delta": "up",
       "outlook": "gray_light",
-      "title": "Microglia de laboratório entra como aliada"
+      "title": "Microglia de laboratório entra como aliada",
+      "cluster_id": 2
     },
     {
       "id": "containfull",
@@ -532,7 +562,8 @@
       "refs": [],
       "prob": "10-20%",
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "cluster_id": 0
     },
     {
       "id": "graftsurv",
@@ -545,7 +576,8 @@
       "refs": [],
       "prob": "15-30% (esporádica ativa)",
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "cluster_id": 0
     },
     {
       "id": "regen",
@@ -558,7 +590,8 @@
       "refs": [],
       "prob": "não documentado",
       "updated": "2026-08-25",
-      "delta": null
+      "delta": null,
+      "cluster_id": 2
     },
     {
       "id": "mrna",
@@ -573,7 +606,8 @@
       ],
       "prob": "P=0.35-0.50 por componente; alavancagem máxima",
       "updated": "2026-08-25",
-      "delta": "up"
+      "delta": "up",
+      "cluster_id": 5
     },
     {
       "id": "hypo",
@@ -588,7 +622,8 @@
       ],
       "prob": "P=0.50-0.60",
       "updated": "2026-08-25",
-      "delta": "up"
+      "delta": "up",
+      "cluster_id": 4
     },
     {
       "id": "gel",
@@ -603,7 +638,8 @@
       ],
       "prob": "P(sobrevida↑ 30-50% espor.)=0.45",
       "updated": "2026-08-25",
-      "delta": "up"
+      "delta": "up",
+      "cluster_id": 5
     }
   ],
   "edges": [
@@ -924,6 +960,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v2.1 (comunidades graphify)",
+      "text": "Clusters do mapa = COMUNIDADES detectadas pelo graphify (8), não componentes conectados (o grafo é 1 único componente — union-find não dividia nada e o problema de distância persistia). Nós conectados dentro da mesma comunidade ficam adjacentes; pontes entre comunidades roteiam lateral. Metodologia graphify integrada ao layout em cards."
+    },
     {
       "date": "2026-08-25",
       "version": "v1.7 (ramos de solução)",
