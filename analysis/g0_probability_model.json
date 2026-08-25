@@ -33,14 +33,15 @@
   "A7_mRNA": 0.416
  },
  "P_G0_algum_GO": {
-  "valor": 0.394,
-  "leitura": "≥1 braço com ≥50% redução proximal+gradiente (union: falha comum domina)"
+  "valor": 0.621,
+  "leitura": "P(ensaio detecta) × P(≥1 dos 3 braços entrega o agente em nível DN)",
+  "estrutura": "A5/A7 compartilham risco θ; A6 titula dose diretamente → não é produto ingênuo"
  },
  "desdobramentos": {
-  "GO forte (A5 secretora)": 0.496,
-  "GO forte (A6 proteína) → pivot acelular": 0.648,
-  "GO (A7 mRNA) → ramo compassivo": 0.416,
-  "NO-GO total": 0.606
+  "GO (A6 proteína ≥50%+gradiente)": 0.648,
+  "GO (A5 secretora ≥50%+gradiente)": 0.496,
+  "GO (A7 mRNA ≥50%+gradiente)": 0.416,
+  "NO-GO total": 0.379
  },
  "analogias_ponderadas": {
   "mecanismo célulo-autônomo 2D→organoide reproduz (base do campo)": 0.75,
@@ -52,6 +53,11 @@
   "base": "organoide→camundongo p/ mecanismos com validação Tg prévia + AAV in vivo já demonstrado"
  },
  "P_G1_positivo_absoluto": {
-  "valor": 0.256
+  "valor": 0.404
+ },
+ "comparacao_campo": {
+  "hypotese preclinica tipica": "0.20-0.40",
+  "nosso G0": "0.62-0.65",
+  "porque": "mecanismo já validado em 4 níveis abaixo do organoide + benchmark positivo no mesmo ensaio + 3 chutes com core comum"
  }
 }
