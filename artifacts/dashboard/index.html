@@ -8,37 +8,47 @@
   :root{
     --bg:#0b1020; --panel:#111832; --panel2:#0e142a; --ink:#e5eaf5; --mut:#8b96b3;
     --confirmed:#22c55e; --constraint:#f59e0b; --refuted:#ef4444; --proposed:#3b82f6; --active:#a78bfa;
-    --line:#26304f;
+    --line:#26304f; --focus:#7cc4ff;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  body{background:var(--bg);color:var(--ink);font:15px/1.5 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
   header{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;padding:14px 20px 10px;border-bottom:1px solid var(--line)}
   header h1{font-size:17px;font-weight:650;letter-spacing:.2px}
   header .sub{color:var(--mut);font-size:12px}
   header .right{margin-left:auto;display:flex;gap:10px;align-items:center;font-size:12px;color:var(--mut)}
-  .pill{padding:2px 10px;border-radius:999px;border:1px solid var(--line);font-size:11px}
-  .layout{display:flex;gap:0;align-items:stretch}
-  #scroller{flex:1;overflow:auto;max-height:calc(100vh - 150px)}
-  aside{width:340px;min-width:300px;border-left:1px solid var(--line);background:var(--panel2);padding:14px 16px;overflow-y:auto;max-height:calc(100vh - 150px)}
+  .pill{padding:3px 10px;border-radius:999px;border:1px solid var(--line);font-size:11px}
+  #scroller{overflow:auto;max-height:calc(100vh - 132px)}
   .legend{display:flex;flex-wrap:wrap;gap:8px;padding:10px 20px;border-bottom:1px solid var(--line);align-items:center}
-  .chip{display:inline-flex;gap:6px;align-items:center;padding:3px 10px;border-radius:8px;border:1px solid var(--line);cursor:pointer;font-size:12px;user-select:none}
-  .chip .dot{width:9px;height:9px;border-radius:50%}
+  .chip{display:inline-flex;gap:6px;align-items:center;padding:8px 14px;min-height:40px;border-radius:10px;border:1px solid var(--line);cursor:pointer;font-size:12.5px;user-select:none;background:transparent;color:var(--ink)}
+  .chip .dot{width:10px;height:10px;border-radius:50%}
   .chip.on{background:#1a2342}
-  .stats{margin-left:auto;display:flex;gap:8px;font-size:12px;color:var(--mut)}
+  .chip:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  .hint{color:var(--mut);font-size:12px;padding:6px 20px;border-bottom:1px solid var(--line)}
+  .stats{margin-left:auto;display:flex;flex-wrap:wrap;gap:8px;font-size:12px;color:var(--mut)}
   .stats b{color:var(--ink)}
   svg text{font-family:inherit}
   .node rect.box{cursor:pointer;stroke-width:1.4}
   .node text.lbl{font-size:11.5px;fill:var(--ink);pointer-events:none}
   .node text.ev{font-size:9.5px;fill:var(--mut);pointer-events:none}
   .node text.ico{font-size:12px;pointer-events:none}
+  .node:focus-visible{outline:none}
+  .node:focus-visible .box{stroke:#fff;stroke-width:2.4}
   .band-label{font-size:11px;letter-spacing:1.6px;fill:var(--mut);text-transform:uppercase}
   .dimmed{opacity:.13}
-  .panel h2{font-size:14px;margin-bottom:6px}
-  .panel .kv{font-size:12px;color:var(--mut);margin:2px 0}
-  .panel .detail{font-size:12.5px;margin:10px 0;color:#c9d2e8}
+  /* drawer de detalhe — escondido por padrão, abre como overlay (sem bloco vazio, sem reflow) */
+  #veil{position:fixed;inset:0;background:rgba(4,8,18,.55);opacity:0;pointer-events:none;transition:opacity .2s ease;z-index:40}
+  #veil.on{opacity:1;pointer-events:auto}
+  #panel{position:fixed;top:0;right:0;height:100dvh;width:min(380px,94vw);background:var(--panel2);border-left:1px solid var(--line);box-shadow:-12px 0 32px rgba(0,0,0,.45);transform:translateX(105%);transition:transform .25s ease;z-index:50;display:flex;flex-direction:column;padding:0}
+  #panel.open{transform:none}
+  #panel .head{display:flex;align-items:flex-start;gap:10px;padding:14px 16px 10px;border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0}
+  #panel .head h2{font-size:14.5px;flex:1;padding-top:10px}
+  #closeBtn{flex:none;width:48px;height:48px;border-radius:12px;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:20px;cursor:pointer}
+  #closeBtn:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+  #panel .body{padding:14px 16px 24px;overflow-y:auto}
+  .panel .kv{font-size:12.5px;color:var(--mut);margin:4px 0}
+  .panel .detail{font-size:13px;margin:12px 0;color:#c9d2e8}
   .panel .refs{font-size:11px;color:var(--mut);word-break:break-all}
-  .badge{display:inline-block;padding:1px 8px;border-radius:6px;font-size:11px;margin:2px 4px 2px 0}
-  .placeholder{color:var(--mut);font-size:12.5px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:6px;font-size:11px;margin:2px 4px 2px 0}
   section.block{padding:14px 20px;border-bottom:1px solid var(--line)}
   section.block h3{font-size:13px;letter-spacing:.8px;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
   .gates{display:flex;flex-wrap:wrap;gap:10px}
@@ -46,12 +56,14 @@
   .gate b{font-size:13px}
   .gate .st{font-size:11px;margin:4px 0;display:block}
   .gate .dt{font-size:11px;color:var(--mut)}
-  table{border-collapse:collapse;width:100%;font-size:12px}
-  th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+  table{border-collapse:collapse;width:100%;font-size:12.5px}
+  th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line)}
   th{color:var(--mut);font-weight:600;font-size:11px}
+  tr.rowbtn{cursor:pointer}
+  tr.rowbtn:focus-visible{outline:2px solid var(--focus);outline-offset:-2px}
   .probrow{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line)}
   .probrow .name{width:280px;font-size:12.5px}
-  .probbar{position:relative;height:16px;background:#1a2240;border-radius:6px;flex:1;overflow:hidden}
+  .probbar{position:relative;height:18px;background:#1a2240;border-radius:6px;flex:1;overflow:hidden}
   .probbar .seg{position:absolute;top:0;bottom:0;border-radius:6px}
   .probbar .cap{position:absolute;top:0;height:100%;border-left:2px solid #fff6}
   .probrow .dir{font-size:15px;width:22px;text-align:center}
@@ -60,6 +72,7 @@
   .chg .v{color:#7cc4ff;font-size:11px;margin-left:6px}
   .chg p{font-size:12.5px;color:#c9d2e8;margin-top:2px}
   #err{display:none;padding:12px 20px;background:#3a1620;color:#fca5a5;font-size:13px}
+  @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
@@ -75,12 +88,18 @@
 </header>
 <div id="err"></div>
 <div class="legend" id="legend"></div>
-<div class="layout">
-  <div id="scroller"></div>
-  <aside id="panel" class="panel">
-    <span class="placeholder">Clique em um nó do diagrama para ver evidência, status, probabilidade e histórico.</span>
-  </aside>
-</div>
+<div class="hint" id="hint">💡 Toque ou clique em um achado do mapa (ou linha da tabela) para abrir o painel de evidências — feche com ×, Esc ou tocando fora.</div>
+<div id="scroller"></div>
+
+<div id="veil" aria-hidden="true"></div>
+<aside id="panel" class="panel" role="dialog" aria-modal="true" aria-label="Detalhe do achado" aria-hidden="true">
+  <div class="head">
+    <h2 id="ptitle"></h2>
+    <button id="closeBtn" type="button" aria-label="Fechar painel de detalhe">✕</button>
+  </div>
+  <div class="body" id="pbody"></div>
+</aside>
+
 <section class="block"><h3>Portões do programa (gates de falsificabilidade)</h3><div class="gates" id="gates"></div></section>
 <section class="block"><h3>Evolução das probabilidades (por sessão)</h3><div id="probs"></div></section>
 <section class="block"><h3>Validações e confirmações (tabela viva)</h3><table id="valtbl"></table></section>
@@ -105,8 +124,11 @@ const STATUS={
 const EDGES={supports:{c:'#15803d',d:'sustenta'},constrains:{c:'#b45309',d:'limita/exige'},refutes:{c:'#b91c1c',d:'refuta'},enables:{c:'#1d4ed8',d:'habilita'},tests:{c:'#7c3aed',d:'testado por'}};
 const NW=238,NH=78,COLS=6,GX=26,GY=24,ML=30,MT=16,BANDH=64;
 
-function wrap(t,n){const w=t.split(' ');const L=[];let cur='';for(const x of w){if((cur+' '+x).trim().length<=n){cur=(cur+' '+x).trim()}else{L.push(cur);cur=x;if(L.length>=3)break}}if(cur&&L.length<3)L.push(cur);if(L.length===3&&cur!==L[2]&&w.join(' ').length>t.slice(0,0).length){}
- if(t.length>110)L[2]=(L[2]||'')+'…';return L.slice(0,3)}
+function wrap(t,n){const w=t.split(' ');const L=[];let cur='';
+  for(const x of w){if((cur+' '+x).trim().length<=n){cur=(cur+' '+x).trim()}else{L.push(cur);cur=x;if(L.length>=3)break}}
+  if(cur&&L.length<3)L.push(cur);
+  if(t.length>110&&L[2])L[2]=L[2]+'…';
+  return L.slice(0,3)}
 
 function build(d){
   document.getElementById('title').textContent=d.meta.title;
@@ -114,7 +136,6 @@ function build(d){
   document.getElementById('ver').textContent=d.meta.version;
   document.getElementById('upd').textContent='atualizado '+d.meta.updated;
 
-  // positions
   const byId={};let y=MT;
   GROUPS.forEach(g=>{
     const ns=d.nodes.filter(n=>n.group===g.id);
@@ -122,18 +143,16 @@ function build(d){
     g.y=y;g.h=rows*(NH+GY)+BANDH;y+=g.h+18;
     ns.forEach((n,i)=>{const r=Math.floor(i/COLS),c=i%COLS;
       n.x=ML+c*(NW+GX);n.y=g.y+BANDH-14+r*(NH+GY);byId[n.id]=n;});
-    g.w=Math.min(ns.length||1,COLS)*(NW+GX);
   });
   const W=ML*2+COLS*(NW+GX)-GX+40,H=y;
 
-  // svg
   const NS='http://www.w3.org/2000/svg';
   const svg=document.createElementNS(NS,'svg');
   svg.setAttribute('width',W);svg.setAttribute('height',H);
   svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
   svg.style.display='block';svg.style.margin='0 auto';
+  svg.setAttribute('role','group');svg.setAttribute('aria-label','Mapa lógico dos achados da quest 003');
 
-  // defs markers
   const defs=document.createElementNS(NS,'defs');
   Object.entries(EDGES).forEach(([k,v])=>{
     const m=document.createElementNS(NS,'marker');
@@ -145,7 +164,6 @@ function build(d){
   });
   svg.appendChild(defs);
 
-  // bands
   GROUPS.forEach(g=>{
     if(!d.nodes.some(n=>n.group===g.id))return;
     const bg=document.createElementNS(NS,'rect');
@@ -158,7 +176,6 @@ function build(d){
     t.textContent=g.label;svg.appendChild(t);
   });
 
-  // edges
   const edgesG=document.createElementNS(NS,'g');
   d.edges.forEach(e=>{
     const a=byId[e.from],b=byId[e.to];if(!a||!b)return;
@@ -181,13 +198,14 @@ function build(d){
   });
   svg.appendChild(edgesG);
 
-  // nodes
   const nodesG=document.createElementNS(NS,'g');
   d.nodes.forEach(n=>{
     const s=STATUS[n.status]||STATUS.proposed;
     const g=document.createElementNS(NS,'g');
     g.setAttribute('class','node');g.setAttribute('transform',`translate(${n.x},${n.y})`);
     g.setAttribute('data-id',n.id);g.setAttribute('data-status',n.status);
+    g.setAttribute('tabindex','0');g.setAttribute('role','button');
+    g.setAttribute('aria-label',`${n.label} — ${s.t}`);
     const r=document.createElementNS(NS,'rect');
     r.setAttribute('class','box');r.setAttribute('width',NW);r.setAttribute('height',NH);
     r.setAttribute('rx',10);r.setAttribute('fill','#16203f');
@@ -196,8 +214,7 @@ function build(d){
     const strip=document.createElementNS(NS,'rect');
     strip.setAttribute('width',5);strip.setAttribute('height',NH);strip.setAttribute('rx',2.5);
     strip.setAttribute('fill',s.c);g.appendChild(strip);
-    const lines=wrap(n.label,32);
-    lines.forEach((ln,i)=>{
+    wrap(n.label,32).forEach((ln,i)=>{
       const t=document.createElementNS(NS,'text');
       t.setAttribute('class','lbl');t.setAttribute('x',14);t.setAttribute('y',22+i*15);
       t.textContent=ln;g.appendChild(t);
@@ -214,7 +231,8 @@ function build(d){
       dd.setAttribute('fill',n.delta==='up'?'var(--confirmed)':'var(--refuted)');
       dd.textContent=n.delta==='up'?'▲':'▼';g.appendChild(dd);
     }
-    g.addEventListener('click',()=>select(n,d));
+    g.addEventListener('click',()=>select(n,d,g));
+    g.addEventListener('keydown',ev2=>{if(ev2.key==='Enter'||ev2.key===' '){ev2.preventDefault();select(n,d,g)}});
     g.addEventListener('mouseenter',()=>hi(n.id,true));
     g.addEventListener('mouseleave',()=>hi(null));
     nodesG.appendChild(g);
@@ -222,16 +240,16 @@ function build(d){
   svg.appendChild(nodesG);
   const sc=document.getElementById('scroller');sc.innerHTML='';sc.appendChild(svg);
 
-  // legend+stats+filter
   const lg=document.getElementById('legend');lg.innerHTML='';
   Object.entries(STATUS).forEach(([k,v])=>{
-    const c=document.createElement('span');c.className='chip on';c.dataset.f=k;
-    c.innerHTML=`<span class="dot" style="background:${v.c}"></span>${v.t.toLowerCase()}`;
+    const c=document.createElement('button');c.type='button';c.className='chip on';c.dataset.f=k;
+    c.setAttribute('aria-pressed','true');
+    c.innerHTML=`<span class="dot" style="background:${v.c}" aria-hidden="true"></span>${v.t.toLowerCase()}`;
     c.title=v.n;c.onclick=()=>toggleFilter(c);
     lg.appendChild(c);
   });
   Object.entries(EDGES).forEach(([k,v])=>{
-    const c=document.createElement('span');c.className='chip';c.title='aresta: '+v.d;
+    const c=document.createElement('span');c.className='chip';c.title='aresta: '+v.d;c.setAttribute('aria-hidden','true');
     c.innerHTML=`<span style="width:16px;height:0;border-top:2px ${k==='constrains'?'dashed':'solid'} ${v.c};display:inline-block"></span>${v.d}`;
     lg.appendChild(c);
   });
@@ -240,7 +258,6 @@ function build(d){
   st.innerHTML=`<span><b>${cnt('confirmed')}</b> confirmados</span><span><b>${cnt('constraint')}</b> restrições</span><span><b>${cnt('refuted')}</b> refutados</span><span><b>${cnt('proposed')+cnt('active')}</b> em curso</span><span><b>${d.nodes.length}</b> achados · <b>${d.edges.length}</b> conexões</span>`;
   lg.appendChild(st);
 
-  // gates
   const gt=document.getElementById('gates');gt.innerHTML='';
   const tones={ready:'var(--confirmed)',wait:'var(--constraint)'};
   d.gates.forEach(g=>{
@@ -249,7 +266,6 @@ function build(d){
     gt.appendChild(el);
   });
 
-  // probs
   const pb=document.getElementById('probs');pb.innerHTML='';
   d.probability_history.forEach(p=>{
     const row=document.createElement('div');row.className='probrow';
@@ -257,7 +273,7 @@ function build(d){
     const prev=pts[pts.length-2];
     let dir='—',dc='var(--mut)';
     if(prev){if(last.low+last.high>prev.low+prev.high){dir='↗';dc='var(--confirmed)'}else if(last.low+last.high<prev.low+prev.high){dir='↘';dc='var(--refuted)'}else{dir='≈'}}
-    row.innerHTML=`<div class="name">${p.component}</div><div class="probbar"></div><div class="dir" style="color:${dc}">${dir}</div>`;
+    row.innerHTML=`<div class="name">${p.component}</div><div class="probbar" role="img" aria-label="${p.component}: ${last.low} a ${last.high} por cento (${last.note})"></div><div class="dir" style="color:${dc}" aria-hidden="true">${dir}</div>`;
     const bar=row.querySelector('.probbar');
     pts.forEach((pt,i)=>{
       const seg=document.createElement('div');seg.className='seg';
@@ -271,18 +287,18 @@ function build(d){
     pb.appendChild(row);
   });
 
-  // validations table
   const vt=document.getElementById('valtbl');
   vt.innerHTML='<tr><th>Achado</th><th>Bloco</th><th>Evidência</th><th>Status</th><th>Atualizado</th></tr>';
   d.nodes.filter(n=>n.status==='confirmed'||n.status==='constraint').forEach(n=>{
     const s=STATUS[n.status];
-    const tr=document.createElement('tr');
+    const tr=document.createElement('tr');tr.className='rowbtn';tr.tabIndex=0;
     tr.innerHTML=`<td>${n.label}</td><td style="color:var(--mut)">${GROUPS.find(g=>g.id===n.group)?.label.split('—')[0]||''}</td><td>${n.evidence||''}</td><td><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span></td><td style="color:var(--mut)">${n.updated}</td>`;
-    tr.style.cursor='pointer';tr.onclick=()=>select(n,d);
+    const op=()=>select(n,d,tr);
+    tr.onclick=op;
+    tr.addEventListener('keydown',e=>{if(e.key==='Enter'){op()}});
     vt.appendChild(tr);
   });
 
-  // changelog
   const cg=document.getElementById('changelog');cg.innerHTML='';
   [...d.changelog].reverse().forEach(c=>{
     const el=document.createElement('div');el.className='chg';
@@ -291,11 +307,18 @@ function build(d){
   });
 }
 
-function select(n,d){
+/* ---- drawer hide/unhide ---- */
+const panel=document.getElementById('panel');
+const veil=document.getElementById('veil');
+const closeBtn=document.getElementById('closeBtn');
+let lastFocus=null;
+
+function select(n,d,srcEl){
   const s=STATUS[n.status];
-  const p=document.getElementById('panel');
   const g=GROUPS.find(x=>x.id===n.group);
-  p.innerHTML=`<h2>${n.label}</h2>
+  lastFocus=srcEl||document.activeElement;
+  document.getElementById('ptitle').textContent=n.label;
+  document.getElementById('pbody').innerHTML=`
    <div><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span>
    <span class="badge" style="border:1px solid var(--line);color:var(--mut)">${g?g.label.split('—')[0]:n.group}</span>
    ${n.delta?`<span class="badge" style="border:1px solid ${n.delta==='up'?'var(--confirmed)':'var(--refuted)'};color:${n.delta==='up'?'var(--confirmed)':'var(--refuted)'}">${n.delta==='up'?'▲ subiu nesta versão':'▼ caiu/foi corrigido'}</span>`:''}</div>
@@ -304,13 +327,37 @@ function select(n,d){
    <div class="kv"><b>Última atualização:</b> ${n.updated}</div>
    <div class="detail">${n.detail||''}</div>
    ${(n.refs&&n.refs.length)?`<div class="refs"><b>Refs:</b> ${n.refs.join(' · ')}</div>`:''}`;
-  hi(n.id);
+  panel.classList.add('open');veil.classList.add('on');
+  panel.setAttribute('aria-hidden','false');veil.setAttribute('aria-hidden','false');
+  document.getElementById('hint').style.display='none';
+  hi(n.id,true);
+  closeBtn.focus();
 }
+function closePanel(){
+  panel.classList.remove('open');veil.classList.remove('on');
+  panel.setAttribute('aria-hidden','true');veil.setAttribute('aria-hidden','true');
+  if(lastFocus&&lastFocus.focus)lastFocus.focus();
+  hi(null);
+}
+closeBtn.addEventListener('click',closePanel);
+veil.addEventListener('click',closePanel);
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'&&(panel.classList.contains('open')))closePanel();
+  if(e.key==='Tab'&&panel.classList.contains('open')){
+    const f=panel.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
+    if(!f.length)return;
+    const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+  }
+});
+
 let curFilter=new Set(Object.keys(STATUS));
 function toggleFilter(chip){
   const k=chip.dataset.f;
   if(curFilter.has(k)&&curFilter.size===1)return;
-  if(curFilter.has(k)){curFilter.delete(k);chip.classList.remove('on')}else{curFilter.add(k);chip.classList.add('on')}
+  if(curFilter.has(k)){curFilter.delete(k);chip.classList.remove('on');chip.setAttribute('aria-pressed','false')}
+  else{curFilter.add(k);chip.classList.add('on');chip.setAttribute('aria-pressed','true')}
   document.querySelectorAll('.node').forEach(el=>{
     el.classList.toggle('dimmed',!curFilter.has(el.dataset.status));
   });
@@ -318,8 +365,13 @@ function toggleFilter(chip){
 let selId=null;
 function hi(id,hover){
   const active=hover?id:selId;
-  document.querySelectorAll('.node').forEach(el=>el.classList.toggle('dimmed',false));
   document.querySelectorAll('svg path[data-type]').forEach(p=>p.style.opacity='');
+  document.querySelectorAll('.node').forEach(el=>el.classList.remove('dimmed'));
+  if(curFilter.size<Object.keys(STATUS).length){
+    document.querySelectorAll('.node').forEach(el=>{
+      if(!curFilter.has(el.dataset.status))el.classList.add('dimmed');
+    });
+  }
   if(!active)return;
   document.querySelectorAll('.node').forEach(el=>{
     if(el.dataset.id!==active)el.classList.add('dimmed');

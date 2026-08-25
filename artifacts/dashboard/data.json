@@ -3,86 +3,646 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 13:10",
-    "version": "v1.1",
+    "updated": "2026-08-25 13:45",
+    "version": "v1.2",
     "audit": "histórico completo em `git log` de quests/003"
   },
   "nodes": [
-    {"id":"kuru","label":"Seleção positiva G127V na epidemia de kuru (PNG)","group":"molecular","status":"confirmed","evidence":"Mead 2009 · NEJM","detail":"G127V sob seleção positiva entre sobreviventes do kuru; heterozigotos sobrerrepresentados. Base populacional original da variante.","refs":["doi:10.1056/NEJMoa0809716"],"prob":null,"updated":"2026-08-24","delta":null},
-    {"id":"v127total","label":"V127/V127 bialélico: resistência completa a todas as cepas","group":"molecular","status":"confirmed","evidence":"Asante 2015 · Nature","detail":"Camundongos expressando apenas PrP-V127: resistentes a kuru, CJD clássica e vCJD. 'Tão protetor quanto a deleção do gene'.","refs":["doi:10.1038/nature14510"],"prob":"90-95% (autonomia celular)","updated":"2026-08-24","delta":null},
-    {"id":"het","label":"Heterozigoto G/V127: infectável por vCJD","group":"molecular","status":"constraint","evidence":"Asante 2015 · Nature","detail":"Heterozigotos resistem a kuru/CJD clássica MAS foram infectados por vCJD. Consequência: o silenciamento do alelo selvagem na edição é OBRIGATÓRIO, não opcional.","refs":["doi:10.1038/nature14510"],"prob":null,"updated":"2026-08-24","delta":null},
-    {"id":"dn","label":"Dominante-negativo dose-dependente (cis, mesma célula)","group":"molecular","status":"confirmed","evidence":"Asante 2015; Gatdula 2026","detail":"PrP-V127 inibe a propagação de PrP selvagem co-expresso, em função da dose. Verificado em camundongo e em células CAD5 (G126V murino): previne e SUPRIME infecção estabelecida.","refs":["doi:10.1038/nature14510","bioRxiv 2026.02.17.703887"],"prob":null,"updated":"2026-08-25","delta":null},
-    {"id":"struct","label":"Base estrutural: impedimento estérico na interface de conversão","group":"molecular","status":"confirmed","evidence":"Zheng 2018 · Sci Rep","detail":"A substituição G→V em 127 bloqueia a transferência conformacional na interface PrPSc–PrPC. O 'escudo estérico' do protocolo é estruturalmente plausível.","refs":["doi:10.1038/s41598-018-31394-6"],"prob":null,"updated":"2026-08-24","delta":null},
-    {"id":"trans","label":"DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)","group":"molecular","status":"confirmed","evidence":"Gatdula 2026 · bioRxiv/PMID 41757113","detail":"PrP-V127 recombinante anchorless retém potente atividade dominante-negativa → o agente difusível do anel de contenção é REAL. Promovido de hipótese não-testada a documentado (in vitro) nesta sessão. Efeito atravessa cepas naturais e artificiais.","refs":["bioRxiv 2026.02.17.703887","PMID 41757113"],"prob":"50-65% (na margem)","updated":"2026-08-25","delta":"up"},
-    {"id":"persist","label":"Resistência persiste após cessar a expressão do transgene","group":"molecular","status":"confirmed","evidence":"Gatdula 2026","detail":"A proteção permanece depois que a expressão de G126V cessa → terapia de depósito transitório pode ser suficiente; reduz a dependência de uma 'fábrica permanente'.","refs":["bioRxiv 2026.02.17.703887"],"prob":null,"updated":"2026-08-25","delta":null},
-    {"id":"aav","label":"PoC in vivo: AAV-sc V127ΔGPI sistêmico → +~50 dias (roedor)","group":"molecular","status":"confirmed","evidence":"Zerbes 2026 · preprint NIH (PMC13041815)","detail":"Entrega retrógrada sistêmica de V127 sem âncora GPI estende sobrevida ~7 semanas e preserva o proteoma. Prova de conceito do agente anchorless in vivo; valida a lógica de liberar V127 livre no interstício.","refs":["PMC13041815"],"prob":null,"updated":"2026-08-25","delta":"up"},
-
-    {"id":"depletion","label":"Depleção de PrP reverte espongiose e cognição precoces","group":"classe","status":"confirmed","evidence":"Mallucci 2003 Science; 2007 Neuron","detail":"Remover PrPC neuronal em infecção estabelecida reverte dano precoce — a doença precoce é reversível e PrP é o gargalo. Fundamento da estratégia de negação de substrato.","refs":["doi:10.1126/science.1090187"],"prob":null,"updated":"2026-08-24","delta":null},
-    {"id":"aso","label":"ASO anti-PRNP: +61-98% de sobrevida (camundongo)","group":"classe","status":"confirmed","evidence":"Raymond 2019; Minikel 2020","detail":"PrP-lowering funciona entre cepas e estágios; dose única tardia +55%. Melhor evidência de eficácia da área.","refs":["JCI Insight 2019;4:e131175","NAR 2020;48:10615"],"prob":null,"updated":"2026-08-24","delta":null},
-    {"id":"ion717","label":"ION717 (ASO) em first-in-human desde 2023","group":"classe","status":"active","evidence":"Ionis / Ultragenyx","detail":"A classe já está em clínica. Competidor e parceiro potencial: kill honesto do programa celular se ASO resolver sozinho.","refs":["bioxconomy 2025"],"prob":null,"updated":"2026-08-25","delta":null},
-    {"id":"prn100","label":"PRN100 anti-PrP: seguro, sem eficácia clínica clara","group":"classe","status":"constraint","evidence":"Mead 2022 · Lancet Neurol","detail":"Primeiro anti-PrP em humanos: segurança ok, eficácia incerta. Calibra expectativa: segurança ≠ desaceleração. Desfecho realista do programa = desaceleração, não cura.","refs":["Lancet Neurol 2022"],"prob":null,"updated":"2026-08-24","delta":null},
-
-    {"id":"edit","label":"CRISPR: knock-in V127 bialélico + silêncio do alelo selvagem","group":"celular","status":"proposed","evidence":"desenho do plano (G0)","detail":"Rotina técnica em centros BR (HUG-CELL, LaNCE). O bialélico é exigência direta do constraint do heterozigoto (vCJD). QC: NGS off-target, cariótipo, pureza <0,1% pluripotente.","refs":["dossiê G0"],"prob":"80-90% (GMP)","updated":"2026-08-25","delta":null},
-    {"id":"secretor","label":"NSC SECRETORA de V127ΔGPI — biofábrica local via CED","group":"celular","status":"proposed","evidence":"NOSSA contribuição original (G0-A5)","detail":"A lacuna que resta ao campo: entrega celular local do agente anchorless (gradiente proximal>distal no parênquima). Ninguém testou célula secretora; formas recombinante e AAV já publicadas.","refs":["experiments/g0_protocol.md"],"prob":"testável em G0 (90d pós-seeding)","updated":"2026-08-25","delta":null},
-    {"id":"microglia","label":"NSC gera micróglia de vigilância","group":"celular","status":"refuted","evidence":"Ginhoux 2010 · Science","detail":"REFUTADO: micróglia origina-se de macrófagos do saco vitelínico (mesoderma), não de NSC neuroectodérmica. Claim removido; alternativa = co-enxerto separado se imunovigilância for desejada.","refs":["doi:10.1126/science.1194637"],"prob":null,"updated":"2026-08-24","delta":"down"},
-    {"id":"svz","label":"Nicho SVZ como fábrica autossustentável humana","group":"celular","status":"refuted","evidence":"Sorrells 2018; Relaño-Ginés 2013","detail":"REFUTADO no formato original: neurogênese SVZ humana adulta é mínima E o nicho replica príons. Reformulado: depósito de liberação lenta; 'persist' (Gatdula) reduz a necessidade de permanência alta.","refs":["Nature 2018;558:253","PLoS Pathog 2013;9:e1003485"],"prob":null,"updated":"2026-08-24","delta":"down"},
-    {"id":"organoid","label":"Organoide sCJD humano = plataforma de teste (90 d)","group":"celular","status":"confirmed","evidence":"Williams 2023 · Stem Cell Res Ther","detail":"NPCs integram em organoides infectados; modelo humano direto já publicado — é o palco do gate G0.","refs":["doi:10.1186/s13287-023-03591-2"],"prob":null,"updated":"2026-08-24","delta":null},
-    {"id":"electro","label":"NPCs restauram eletrofisiologia mesmo com príon ativo","group":"celular","status":"confirmed","evidence":"Williams 2023","detail":"Spike/burst rates voltam ao nível controle após seeding de NPCs. Benefício funcional independente da contenção — desfecho secundário legítimo do programa.","refs":["doi:10.1186/s13287-023-03591-2"],"prob":null,"updated":"2026-08-24","delta":null},
-
-    {"id":"ced","label":"CED: cânula step-design anti-refluxo validada","group":"entrega","status":"confirmed","evidence":"Krauze 2005; Parvar 2025","detail":"Tecnologia madura, em ensaios clínicos ativos. Resolve a pendência de pressão/refluxo levantada pelo próprio protocolo.","refs":["PMID 16304999","Adv Drug Deliv Rev 2025"],"prob":null,"updated":"2026-08-24","delta":null},
-    {"id":"dti","label":"Rota pelo 'caminho danificado' (DTI + neuronavegação)","group":"entrega","status":"proposed","evidence":"conceito do protocolo","detail":"Plausível e preservador de parênquima sadio, mas nunca testado em doença priônica; margem microscópica além da resolução do DTI é o limite.","refs":[],"prob":"plausível, não documentado","updated":"2026-08-24","delta":null},
-    {"id":"ring","label":"Anel de contenção ('bombeiros') nas bordas sadias","group":"entrega","status":"proposed","evidence":"redesenho v1.1","detail":"Mecanismo agora documentado (trans anchorless); topologia ainda é o gargalo: disseminação multifocal/sináptica → redesenhar para injeção em NÓS de rede + células secretoras (não portadoras de membrana).","refs":["analysis/review_verdicts.md"],"prob":"10-20% contenção total / 35-50% desaceleração","updated":"2026-08-25","delta":null},
-    {"id":"coax","label":"Cânula coaxial de uso único (anti-semeadura priônica)","group":"entrega","status":"proposed","evidence":"ajuste de biossegurança","detail":"O trajeto atravessa tecido infectado até o SVZ → risco de arrasto mecânico de PrPSc. Uso único + camisa externa + protocolo WHO 134°C/NaOH obrigatórios no desenho.","refs":["Thomas 2013 (iatrogenia)"],"prob":null,"updated":"2026-08-24","delta":null},
-    {"id":"rtquicop","label":"RT-QuIC intraoperatório para calibrar margens","group":"entrega","status":"proposed","evidence":"ajuste incremental","detail":"Substitui a margem 'anatômica' do DTI por margem molecular (amostras de LCR regional/biópsia de borda).","refs":["Green 2018"],"prob":null,"updated":"2026-08-24","delta":null},
-
-    {"id":"e200k","label":"E200K no Brasil (Smid 2007) — população-alvo pré-sintomática","group":"traducao","status":"confirmed","evidence":"Smid 2007 · Dement Neuropsychol","detail":"Primeiro relato brasileiro; E200K = >70% das DCJ hereditárias mundiais. Redirecionamento estrutural do plano: portadores pré-sintomáticos = janela de anos, autóloga viável.","refs":["Demneuropsy 2007","Lee 1999"],"prob":"40-60% enxerto sobrevive (pré-sintom.)","updated":"2026-08-25","delta":"up"},
-    {"id":"rtquic","label":"RT-QuIC: diagnóstico antemortem precoce validado","group":"traducao","status":"confirmed","evidence":"Green 2018; Hermann 2021","detail":"LCR + mucosa olfatória; base da triagem pré-sintomática (banda de conversão com NfL/PrP-LCR).","refs":["Pract Neurol 2018","Lancet Neurol 2021"],"prob":null,"updated":"2026-08-24","delta":null},
-    {"id":"window","label":"Janela da DCJ esporádica incompatível com produção celular","group":"traducao","status":"constraint","evidence":"análise v1","detail":"Sobrevida 6-8 m, diagnóstico tardio ~2-3 m → autóloga impossível, off-the-shelf imunogênica. Esporádica vira uso compassivo; ensaio estruturado é em genética pré-sintomática.","refs":["probability_reassessment.md"],"prob":"3-8% resgate (esporádica)","updated":"2026-08-24","delta":"down"},
-    {"id":"reg","label":"Rota regulatória: CEP → CONEP → Anvisa (ATMP)","group":"traducao","status":"active","evidence":"dossiê v1 (2026-08-25)","detail":"Esqueleto pronto: RDC 522/489/555, fase 1 dose-escalation 3+3, DSMB com parada por teratoma. Estimativa honesta 18-30 m — corre em paralelo com G0-G3.","refs":["paper/e200k_br_dossier.md"],"prob":null,"updated":"2026-08-25","delta":null},
-    {"id":"gates","label":"Programa em gates G0→G4 com kill-switches pré-registrados","group":"traducao","status":"active","evidence":"plan.md + G0 protocol","detail":"G0 (organoide, 6 braços, GO/NO-GO pré-registrado) pronto para parceiro; se proteína recombinante (A6) igualar célula → pivot AAV/proteína, convergindo com o campo.","refs":["experiments/g0_protocol.md"],"prob":"~6% cura funcional / 20-30% desaceleração","updated":"2026-08-25","delta":null}
+    {
+      "id": "kuru",
+      "label": "Seleção positiva G127V na epidemia de kuru (PNG)",
+      "group": "molecular",
+      "status": "confirmed",
+      "evidence": "Mead 2009 · NEJM",
+      "detail": "G127V sob seleção positiva entre sobreviventes do kuru; heterozigotos sobrerrepresentados. Base populacional original da variante.",
+      "refs": [
+        "doi:10.1056/NEJMoa0809716"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "v127total",
+      "label": "V127/V127 bialélico: resistência completa a todas as cepas",
+      "group": "molecular",
+      "status": "confirmed",
+      "evidence": "Asante 2015 · Nature",
+      "detail": "Camundongos expressando apenas PrP-V127: resistentes a kuru, CJD clássica e vCJD. 'Tão protetor quanto a deleção do gene'.",
+      "refs": [
+        "doi:10.1038/nature14510"
+      ],
+      "prob": "90-95% (autonomia celular)",
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "het",
+      "label": "Heterozigoto G/V127: infectável por vCJD",
+      "group": "molecular",
+      "status": "constraint",
+      "evidence": "Asante 2015 · Nature",
+      "detail": "Heterozigotos resistem a kuru/CJD clássica MAS foram infectados por vCJD. Consequência: o silenciamento do alelo selvagem na edição é OBRIGATÓRIO, não opcional.",
+      "refs": [
+        "doi:10.1038/nature14510"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "dn",
+      "label": "Dominante-negativo dose-dependente (cis, mesma célula)",
+      "group": "molecular",
+      "status": "confirmed",
+      "evidence": "Asante 2015; Gatdula 2026",
+      "detail": "PrP-V127 inibe a propagação de PrP selvagem co-expresso, em função da dose. Verificado em camundongo e em células CAD5 (G126V murino): previne e SUPRIME infecção estabelecida.",
+      "refs": [
+        "doi:10.1038/nature14510",
+        "bioRxiv 2026.02.17.703887"
+      ],
+      "prob": null,
+      "updated": "2026-08-25",
+      "delta": null
+    },
+    {
+      "id": "struct",
+      "label": "Base estrutural: impedimento estérico na interface de conversão",
+      "group": "molecular",
+      "status": "confirmed",
+      "evidence": "Zheng 2018 · Sci Rep",
+      "detail": "A substituição G→V em 127 bloqueia a transferência conformacional na interface PrPSc–PrPC. O 'escudo estérico' do protocolo é estruturalmente plausível.",
+      "refs": [
+        "doi:10.1038/s41598-018-31394-6"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "trans",
+      "label": "DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)",
+      "group": "molecular",
+      "status": "confirmed",
+      "evidence": "Gatdula 2026 · bioRxiv/PMID 41757113",
+      "detail": "PrP-V127 recombinante anchorless retém potente atividade dominante-negativa → o agente difusível do anel de contenção é REAL. Promovido de hipótese não-testada a documentado (in vitro) nesta sessão. Efeito atravessa cepas naturais e artificiais.",
+      "refs": [
+        "bioRxiv 2026.02.17.703887",
+        "PMID 41757113"
+      ],
+      "prob": "50-65% (na margem)",
+      "updated": "2026-08-25",
+      "delta": "up"
+    },
+    {
+      "id": "persist",
+      "label": "Resistência persiste após cessar a expressão do transgene",
+      "group": "molecular",
+      "status": "confirmed",
+      "evidence": "Gatdula 2026",
+      "detail": "A proteção permanece depois que a expressão de G126V cessa → terapia de depósito transitório pode ser suficiente; reduz a dependência de uma 'fábrica permanente'.",
+      "refs": [
+        "bioRxiv 2026.02.17.703887"
+      ],
+      "prob": null,
+      "updated": "2026-08-25",
+      "delta": null
+    },
+    {
+      "id": "aav",
+      "label": "PoC in vivo: AAV-sc V127ΔGPI sistêmico → +~50 dias (roedor)",
+      "group": "molecular",
+      "status": "confirmed",
+      "evidence": "Zerbes 2026 · preprint NIH (PMC13041815)",
+      "detail": "Entrega retrógrada sistêmica de V127 sem âncora GPI estende sobrevida ~7 semanas e preserva o proteoma. Prova de conceito do agente anchorless in vivo; valida a lógica de liberar V127 livre no interstício.",
+      "refs": [
+        "PMC13041815"
+      ],
+      "prob": null,
+      "updated": "2026-08-25",
+      "delta": "up"
+    },
+    {
+      "id": "depletion",
+      "label": "Depleção de PrP reverte espongiose e cognição precoces",
+      "group": "classe",
+      "status": "confirmed",
+      "evidence": "Mallucci 2003 Science; 2007 Neuron",
+      "detail": "Remover PrPC neuronal em infecção estabelecida reverte dano precoce — a doença precoce é reversível e PrP é o gargalo. Fundamento da estratégia de negação de substrato.",
+      "refs": [
+        "doi:10.1126/science.1090187"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "aso",
+      "label": "ASO anti-PRNP: +61-98% de sobrevida (camundongo)",
+      "group": "classe",
+      "status": "confirmed",
+      "evidence": "Raymond 2019; Minikel 2020",
+      "detail": "PrP-lowering funciona entre cepas e estágios; dose única tardia +55%. Melhor evidência de eficácia da área.",
+      "refs": [
+        "JCI Insight 2019;4:e131175",
+        "NAR 2020;48:10615"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "ion717",
+      "label": "ION717 (ASO) em first-in-human desde 2023",
+      "group": "classe",
+      "status": "active",
+      "evidence": "Ionis / Ultragenyx",
+      "detail": "A classe já está em clínica. Competidor e parceiro potencial: kill honesto do programa celular se ASO resolver sozinho.",
+      "refs": [
+        "bioxconomy 2025"
+      ],
+      "prob": null,
+      "updated": "2026-08-25",
+      "delta": null
+    },
+    {
+      "id": "prn100",
+      "label": "PRN100 anti-PrP: seguro, sem eficácia clínica clara",
+      "group": "classe",
+      "status": "constraint",
+      "evidence": "Mead 2022 · Lancet Neurol",
+      "detail": "Primeiro anti-PrP em humanos: segurança ok, eficácia incerta. Calibra expectativa: segurança ≠ desaceleração. Desfecho realista do programa = desaceleração, não cura.",
+      "refs": [
+        "Lancet Neurol 2022"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "edit",
+      "label": "CRISPR: knock-in V127 bialélico + silêncio do alelo selvagem",
+      "group": "celular",
+      "status": "proposed",
+      "evidence": "desenho do plano (G0)",
+      "detail": "Rotina técnica em centros BR (HUG-CELL, LaNCE). O bialélico é exigência direta do constraint do heterozigoto (vCJD). QC: NGS off-target, cariótipo, pureza <0,1% pluripotente.",
+      "refs": [
+        "dossiê G0"
+      ],
+      "prob": "80-90% (GMP)",
+      "updated": "2026-08-25",
+      "delta": null
+    },
+    {
+      "id": "secretor",
+      "label": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
+      "group": "celular",
+      "status": "proposed",
+      "evidence": "NOSSA contribuição original (G0-A5)",
+      "detail": "A lacuna que resta ao campo: entrega celular local do agente anchorless (gradiente proximal>distal no parênquima). Ninguém testou célula secretora; formas recombinante e AAV já publicadas.",
+      "refs": [
+        "experiments/g0_protocol.md"
+      ],
+      "prob": "testável em G0 (90d pós-seeding)",
+      "updated": "2026-08-25",
+      "delta": null
+    },
+    {
+      "id": "microglia",
+      "label": "NSC gera micróglia de vigilância",
+      "group": "celular",
+      "status": "refuted",
+      "evidence": "Ginhoux 2010 · Science",
+      "detail": "REFUTADO: micróglia origina-se de macrófagos do saco vitelínico (mesoderma), não de NSC neuroectodérmica. Claim removido; alternativa = co-enxerto separado se imunovigilância for desejada.",
+      "refs": [
+        "doi:10.1126/science.1194637"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": "down"
+    },
+    {
+      "id": "svz",
+      "label": "Nicho SVZ como fábrica autossustentável humana",
+      "group": "celular",
+      "status": "refuted",
+      "evidence": "Sorrells 2018; Relaño-Ginés 2013",
+      "detail": "REFUTADO no formato original: neurogênese SVZ humana adulta é mínima E o nicho replica príons. Reformulado: depósito de liberação lenta; 'persist' (Gatdula) reduz a necessidade de permanência alta.",
+      "refs": [
+        "Nature 2018;558:253",
+        "PLoS Pathog 2013;9:e1003485"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": "down"
+    },
+    {
+      "id": "organoid",
+      "label": "Organoide sCJD humano = plataforma de teste (90 d)",
+      "group": "celular",
+      "status": "confirmed",
+      "evidence": "Williams 2023 · Stem Cell Res Ther",
+      "detail": "NPCs integram em organoides infectados; modelo humano direto já publicado — é o palco do gate G0.",
+      "refs": [
+        "doi:10.1186/s13287-023-03591-2"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "electro",
+      "label": "NPCs restauram eletrofisiologia mesmo com príon ativo",
+      "group": "celular",
+      "status": "confirmed",
+      "evidence": "Williams 2023",
+      "detail": "Spike/burst rates voltam ao nível controle após seeding de NPCs. Benefício funcional independente da contenção — desfecho secundário legítimo do programa.",
+      "refs": [
+        "doi:10.1186/s13287-023-03591-2"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "ced",
+      "label": "CED: cânula step-design anti-refluxo validada",
+      "group": "entrega",
+      "status": "confirmed",
+      "evidence": "Krauze 2005; Parvar 2025",
+      "detail": "Tecnologia madura, em ensaios clínicos ativos. Resolve a pendência de pressão/refluxo levantada pelo próprio protocolo.",
+      "refs": [
+        "PMID 16304999",
+        "Adv Drug Deliv Rev 2025"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "dti",
+      "label": "Rota pelo 'caminho danificado' (DTI + neuronavegação)",
+      "group": "entrega",
+      "status": "proposed",
+      "evidence": "conceito do protocolo",
+      "detail": "Plausível e preservador de parênquima sadio, mas nunca testado em doença priônica; margem microscópica além da resolução do DTI é o limite.",
+      "refs": [],
+      "prob": "plausível, não documentado",
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "ring",
+      "label": "Anel de contenção ('bombeiros') nas bordas sadias",
+      "group": "entrega",
+      "status": "proposed",
+      "evidence": "redesenho v1.1",
+      "detail": "Mecanismo agora documentado (trans anchorless); topologia ainda é o gargalo: disseminação multifocal/sináptica → redesenhar para injeção em NÓS de rede + células secretoras (não portadoras de membrana).",
+      "refs": [
+        "analysis/review_verdicts.md"
+      ],
+      "prob": "10-20% contenção total / 35-50% desaceleração",
+      "updated": "2026-08-25",
+      "delta": null
+    },
+    {
+      "id": "coax",
+      "label": "Cânula coaxial de uso único (anti-semeadura priônica)",
+      "group": "entrega",
+      "status": "proposed",
+      "evidence": "ajuste de biossegurança",
+      "detail": "O trajeto atravessa tecido infectado até o SVZ → risco de arrasto mecânico de PrPSc. Uso único + camisa externa + protocolo WHO 134°C/NaOH obrigatórios no desenho.",
+      "refs": [
+        "Thomas 2013 (iatrogenia)"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "rtquicop",
+      "label": "RT-QuIC intraoperatório para calibrar margens",
+      "group": "entrega",
+      "status": "proposed",
+      "evidence": "ajuste incremental",
+      "detail": "Substitui a margem 'anatômica' do DTI por margem molecular (amostras de LCR regional/biópsia de borda).",
+      "refs": [
+        "Green 2018"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "e200k",
+      "label": "E200K no Brasil (Smid 2007) — população-alvo pré-sintomática",
+      "group": "traducao",
+      "status": "confirmed",
+      "evidence": "Smid 2007 · Dement Neuropsychol",
+      "detail": "Primeiro relato brasileiro; E200K = >70% das DCJ hereditárias mundiais. Redirecionamento estrutural do plano: portadores pré-sintomáticos = janela de anos, autóloga viável.",
+      "refs": [
+        "Demneuropsy 2007",
+        "Lee 1999"
+      ],
+      "prob": "40-60% enxerto sobrevive (pré-sintom.)",
+      "updated": "2026-08-25",
+      "delta": "up"
+    },
+    {
+      "id": "rtquic",
+      "label": "RT-QuIC: diagnóstico antemortem precoce validado",
+      "group": "traducao",
+      "status": "confirmed",
+      "evidence": "Green 2018; Hermann 2021",
+      "detail": "LCR + mucosa olfatória; base da triagem pré-sintomática (banda de conversão com NfL/PrP-LCR).",
+      "refs": [
+        "Pract Neurol 2018",
+        "Lancet Neurol 2021"
+      ],
+      "prob": null,
+      "updated": "2026-08-24",
+      "delta": null
+    },
+    {
+      "id": "window",
+      "label": "Janela da DCJ esporádica incompatível com produção celular",
+      "group": "traducao",
+      "status": "constraint",
+      "evidence": "análise v1",
+      "detail": "Sobrevida 6-8 m, diagnóstico tardio ~2-3 m → autóloga impossível, off-the-shelf imunogênica. Esporádica vira uso compassivo; ensaio estruturado é em genética pré-sintomática.",
+      "refs": [
+        "probability_reassessment.md"
+      ],
+      "prob": "3-8% resgate (esporádica)",
+      "updated": "2026-08-24",
+      "delta": "down"
+    },
+    {
+      "id": "reg",
+      "label": "Rota regulatória: CEP → CONEP → Anvisa (ATMP)",
+      "group": "traducao",
+      "status": "active",
+      "evidence": "dossiê v1 (2026-08-25)",
+      "detail": "Esqueleto pronto: RDC 522/489/555, fase 1 dose-escalation 3+3, DSMB com parada por teratoma. Estimativa honesta 18-30 m — corre em paralelo com G0-G3.",
+      "refs": [
+        "paper/e200k_br_dossier.md"
+      ],
+      "prob": null,
+      "updated": "2026-08-25",
+      "delta": null
+    },
+    {
+      "id": "gates",
+      "label": "Programa em gates G0→G4 com kill-switches pré-registrados",
+      "group": "traducao",
+      "status": "active",
+      "evidence": "plan.md + G0 protocol",
+      "detail": "G0 (organoide, 6 braços, GO/NO-GO pré-registrado) pronto para parceiro; se proteína recombinante (A6) igualar célula → pivot AAV/proteína, convergindo com o campo.",
+      "refs": [
+        "experiments/g0_protocol.md"
+      ],
+      "prob": "~6% cura funcional / 20-30% desaceleração",
+      "updated": "2026-08-25",
+      "delta": null
+    }
   ],
   "edges": [
-    {"from":"kuru","to":"v127total","type":"supports"},
-    {"from":"kuru","to":"dn","type":"supports"},
-    {"from":"struct","to":"trans","type":"supports"},
-    {"from":"dn","to":"trans","type":"supports"},
-    {"from":"aav","to":"secretor","type":"enables"},
-    {"from":"persist","to":"secretor","type":"supports"},
-    {"from":"trans","to":"secretor","type":"supports"},
-    {"from":"trans","to":"ring","type":"supports"},
-    {"from":"het","to":"edit","type":"constrains"},
-    {"from":"v127total","to":"edit","type":"supports"},
-    {"from":"organoid","to":"secretor","type":"tests"},
-    {"from":"electro","to":"secretor","type":"supports"},
-    {"from":"depletion","to":"aso","type":"supports"},
-    {"from":"aso","to":"ion717","type":"enables"},
-    {"from":"prn100","to":"gates","type":"constrains"},
-    {"from":"ion717","to":"gates","type":"constrains"},
-    {"from":"ced","to":"ring","type":"enables"},
-    {"from":"coax","to":"dti","type":"enables"},
-    {"from":"dti","to":"ring","type":"enables"},
-    {"from":"rtquic","to":"rtquicop","type":"enables"},
-    {"from":"rtquic","to":"e200k","type":"enables"},
-    {"from":"window","to":"e200k","type":"enables"},
-    {"from":"window","to":"edit","type":"constrains"},
-    {"from":"e200k","to":"gates","type":"supports"},
-    {"from":"secretor","to":"gates","type":"supports"}
+    {
+      "from": "kuru",
+      "to": "v127total",
+      "type": "supports"
+    },
+    {
+      "from": "kuru",
+      "to": "dn",
+      "type": "supports"
+    },
+    {
+      "from": "struct",
+      "to": "trans",
+      "type": "supports"
+    },
+    {
+      "from": "dn",
+      "to": "trans",
+      "type": "supports"
+    },
+    {
+      "from": "aav",
+      "to": "secretor",
+      "type": "enables"
+    },
+    {
+      "from": "persist",
+      "to": "secretor",
+      "type": "supports"
+    },
+    {
+      "from": "trans",
+      "to": "secretor",
+      "type": "supports"
+    },
+    {
+      "from": "trans",
+      "to": "ring",
+      "type": "supports"
+    },
+    {
+      "from": "het",
+      "to": "edit",
+      "type": "constrains"
+    },
+    {
+      "from": "v127total",
+      "to": "edit",
+      "type": "supports"
+    },
+    {
+      "from": "organoid",
+      "to": "secretor",
+      "type": "tests"
+    },
+    {
+      "from": "electro",
+      "to": "secretor",
+      "type": "supports"
+    },
+    {
+      "from": "depletion",
+      "to": "aso",
+      "type": "supports"
+    },
+    {
+      "from": "aso",
+      "to": "ion717",
+      "type": "enables"
+    },
+    {
+      "from": "prn100",
+      "to": "gates",
+      "type": "constrains"
+    },
+    {
+      "from": "ion717",
+      "to": "gates",
+      "type": "constrains"
+    },
+    {
+      "from": "ced",
+      "to": "ring",
+      "type": "enables"
+    },
+    {
+      "from": "coax",
+      "to": "dti",
+      "type": "enables"
+    },
+    {
+      "from": "dti",
+      "to": "ring",
+      "type": "enables"
+    },
+    {
+      "from": "rtquic",
+      "to": "rtquicop",
+      "type": "enables"
+    },
+    {
+      "from": "rtquic",
+      "to": "e200k",
+      "type": "enables"
+    },
+    {
+      "from": "window",
+      "to": "e200k",
+      "type": "enables"
+    },
+    {
+      "from": "window",
+      "to": "edit",
+      "type": "constrains"
+    },
+    {
+      "from": "e200k",
+      "to": "gates",
+      "type": "supports"
+    },
+    {
+      "from": "secretor",
+      "to": "gates",
+      "type": "supports"
+    }
   ],
   "probability_history": [
-    {"component":"Escudo DN trans na margem","points":[{"date":"2026-08-24","low":25,"high":40,"note":"hipótese não-testada"},{"date":"2026-08-25","low":50,"high":65,"note":"documentado in vitro (Gatdula) + PoC AAV (Zerbes)"}]},
-    {"component":"Resgate clínico global (DCJ esporádica)","points":[{"date":"proposta original","low":15,"high":15,"note":"estimativa do proponente"},{"date":"2026-08-24","low":3,"high":8,"note":"recalibrado"}]},
-    {"component":"Desaceleração significativa (cenário otimizado)","points":[{"date":"2026-08-24","low":20,"high":30,"note":"desfecho primário recomendado"}]},
-    {"component":"Sobrevida do enxerto (pré-sintomático)","points":[{"date":"2026-08-24","low":40,"high":60,"note":"vs 15-30% em esporádica ativa"}]}
+    {
+      "component": "Escudo DN trans na margem",
+      "points": [
+        {
+          "date": "2026-08-24",
+          "low": 25,
+          "high": 40,
+          "note": "hipótese não-testada"
+        },
+        {
+          "date": "2026-08-25",
+          "low": 50,
+          "high": 65,
+          "note": "documentado in vitro (Gatdula) + PoC AAV (Zerbes)"
+        }
+      ]
+    },
+    {
+      "component": "Resgate clínico global (DCJ esporádica)",
+      "points": [
+        {
+          "date": "proposta original",
+          "low": 15,
+          "high": 15,
+          "note": "estimativa do proponente"
+        },
+        {
+          "date": "2026-08-24",
+          "low": 3,
+          "high": 8,
+          "note": "recalibrado"
+        }
+      ]
+    },
+    {
+      "component": "Desaceleração significativa (cenário otimizado)",
+      "points": [
+        {
+          "date": "2026-08-24",
+          "low": 20,
+          "high": 30,
+          "note": "desfecho primário recomendado"
+        }
+      ]
+    },
+    {
+      "component": "Sobrevida do enxerto (pré-sintomático)",
+      "points": [
+        {
+          "date": "2026-08-24",
+          "low": 40,
+          "high": 60,
+          "note": "vs 15-30% em esporádica ativa"
+        }
+      ]
+    }
   ],
   "gates": [
-    {"id":"G0","name":"Organoide sCJD — 6 braços","status":"PROTOCOLO PRONTO","detail":"A5 secretora vs A6 proteína recombinante; kill-switch de pivot; aguarda parceiro de lab (BSL-3)","tone":"ready"},
-    {"id":"G1","name":"Camundongo humanizado PrP","status":"PENDENTE GO DO G0","detail":"Sobrevida, carga PrP-res, tropismo — linhagens Asante","tone":"wait"},
-    {"id":"G2","name":"Builds solúveis V127","status":"REENQUADRADO","detail":"Campo publicou a forma anchorless (Gatdula/Zerbes); G2 agora = validar a forma CÉLULA-LOCAL (A5)","tone":"ready"},
-    {"id":"G3","name":"Combinação ASO-ponte + enxerto","status":"AGUARDANDO G0/G1","detail":"Sinergia nunca testada; partes validadas separadamente","tone":"wait"},
-    {"id":"G4","name":"Portadores E200K/D178N pré-sintomáticos","status":"DOSSIÊ ÉTICO PRONTO","detail":"CEP→CONEP→Anvisa; dependente de mapear kindreds BR (ação externa)","tone":"ready"}
+    {
+      "id": "G0",
+      "name": "Organoide sCJD — 6 braços",
+      "status": "PROTOCOLO PRONTO",
+      "detail": "A5 secretora vs A6 proteína recombinante; kill-switch de pivot; aguarda parceiro de lab (BSL-3)",
+      "tone": "ready"
+    },
+    {
+      "id": "G1",
+      "name": "Camundongo humanizado PrP",
+      "status": "PENDENTE GO DO G0",
+      "detail": "Sobrevida, carga PrP-res, tropismo — linhagens Asante",
+      "tone": "wait"
+    },
+    {
+      "id": "G2",
+      "name": "Builds solúveis V127",
+      "status": "REENQUADRADO",
+      "detail": "Campo publicou a forma anchorless (Gatdula/Zerbes); G2 agora = validar a forma CÉLULA-LOCAL (A5)",
+      "tone": "ready"
+    },
+    {
+      "id": "G3",
+      "name": "Combinação ASO-ponte + enxerto",
+      "status": "AGUARDANDO G0/G1",
+      "detail": "Sinergia nunca testada; partes validadas separadamente",
+      "tone": "wait"
+    },
+    {
+      "id": "G4",
+      "name": "Portadores E200K/D178N pré-sintomáticos",
+      "status": "DOSSIÊ ÉTICO PRONTO",
+      "detail": "CEP→CONEP→Anvisa; dependente de mapear kindreds BR (ação externa)",
+      "tone": "ready"
+    }
   ],
   "changelog": [
-    {"date":"2026-08-25","version":"v1.1","text":"Pendências fechadas (E200K-BR Smid 2007; Gatdula PMID 41757113; Relaño-Ginés Brain Pathol). DN trans PROMOVIDO de cinza-escuro a documentado (Gatdula in vitro + Zerbes AAV +50d in vivo). Prob trans 25-40% → 50-65%. Pacote executivo: protocolo G0 (6 braços, GO/NO-GO), dossiê ético E200K-BR, whitepaper de posicionamento. Originalidade retificada: resta a entrega celular local."},
-    {"date":"2026-08-24","version":"v1","text":"Revisão completa da proposta: 12/12 queries + 4 papers full-text. Fundamento molecular confirmado (Nature 2015 etc.); erros identificados (micróglia impossível, fábrica SVZ superestimada); população redirecionada para genética pré-sintomática; probabilidades recalibradas; plano 5-gates com falsificabilidade."}
+    {
+      "date": "2026-08-25",
+      "version": "v1.2 (UX)",
+      "text": "Dashboard: painel de detalhe vira drawer dispensável (oculto por padrão — sem bloco vazio; abre sobre o mapa ao tocar no nó/linha; fecha por ✕, Esc, toque fora; foco gerenciado e devolvido ao nó). Alvos de toque ≥40px em filtros e 48px no fechar (WCAG 2.2/Android); foco visível em todos os controles; nós navegáveis por teclado (Tab/Enter); barra de probabilidades com aria-label; prefers-reduced-motion respeitado. Diretrizes aplicadas via skill ui-ux-pro-max."
+    },
+    {
+      "date": "2026-08-25",
+      "version": "v1.1",
+      "text": "Pendências fechadas (E200K-BR Smid 2007; Gatdula PMID 41757113; Relaño-Ginés Brain Pathol). DN trans PROMOVIDO de cinza-escuro a documentado (Gatdula in vitro + Zerbes AAV +50d in vivo). Prob trans 25-40% → 50-65%. Pacote executivo: protocolo G0 (6 braços, GO/NO-GO), dossiê ético E200K-BR, whitepaper de posicionamento. Originalidade retificada: resta a entrega celular local."
+    },
+    {
+      "date": "2026-08-24",
+      "version": "v1",
+      "text": "Revisão completa da proposta: 12/12 queries + 4 papers full-text. Fundamento molecular confirmado (Nature 2015 etc.); erros identificados (micróglia impossível, fábrica SVZ superestimada); população redirecionada para genética pré-sintomática; probabilidades recalibradas; plano 5-gates com falsificabilidade."
+    }
   ]
 }
