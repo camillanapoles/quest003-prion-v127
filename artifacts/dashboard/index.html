@@ -261,20 +261,36 @@ function build(){
   defs.appendChild(bgGrad);
   svg.appendChild(defs);
 
-  /* faixas sutis das camadas + rótulos (sem containers que prendam o layout) */
-  layers.forEach((L,li)=>{
-    const y=20+li*(NH+GAPY)+LABELY-26;
-    const bg=document.createElementNS(NS,'rect');
-    bg.setAttribute('x',0);bg.setAttribute('y',y);
-    bg.setAttribute('width',W);bg.setAttribute('height',NH+52);
-    if(li%2===0)bg.setAttribute('fill','rgba(255,255,255,.015)');
-    svg.appendChild(bg);
-    const t=document.createElementNS(NS,'text');
-    t.setAttribute('class','layer-label');t.setAttribute('x',MARG-30);t.setAttribute('y',y+30);
-    const g=GROUPS.find(g=>g.id===L[0].group);
-    t.textContent=g.label;
-    svg.appendChild(t);
-  });
+  if(clusters){
+    const deg={};edges.forEach(e=>{deg[e.from]=(deg[e.from]||0)+1;deg[e.to]=(deg[e.to]||0)+1;});
+    clusters.forEach((C,ci)=>{
+      const hub=C.slice().sort((a,b)=>(deg[b.id]||0)-(deg[a.id]||0))[0];
+      const bg=document.createElementNS(NS,'rect');
+      bg.setAttribute('x',C._x-12);bg.setAttribute('y',C._y-8);
+      bg.setAttribute('width',C._w+24);bg.setAttribute('height',C._h+16);
+      bg.setAttribute('rx',14);bg.setAttribute('fill','#0f1730');bg.setAttribute('stroke','#1d2946');
+      svg.appendChild(bg);
+      const t=document.createElementNS(NS,'text');
+      t.setAttribute('class','layer-label');t.setAttribute('x',C._x+4);t.setAttribute('y',C._y+18);
+      t.textContent=(hub.title||hub.label).slice(0,34)+(C.length>1?'  ·  '+C.length+' achados':'');
+      svg.appendChild(t);
+    });
+  }else{
+    const bandsL=GROUPS.map(g=>nodes.filter(n=>n.group===g.id)).filter(L=>L.length);
+    bandsL.forEach((L,li)=>{
+      const y=20+li*(NH+GAPY)+LABELY-26;
+      const bg=document.createElementNS(NS,'rect');
+      bg.setAttribute('x',0);bg.setAttribute('y',y);
+      bg.setAttribute('width',W);bg.setAttribute('height',NH+52);
+      if(li%2===0)bg.setAttribute('fill','rgba(255,255,255,.015)');
+      svg.appendChild(bg);
+      const t=document.createElementNS(NS,'text');
+      t.setAttribute('class','layer-label');t.setAttribute('x',MARG-30);t.setAttribute('y',y+30);
+      const g=GROUPS.find(g=>g.id===L[0].group);
+      t.textContent=g.label;
+      svg.appendChild(t);
+    });
+  }
 
   /* ---- arestas: bézier de fluxo ---- */
   const fanOut={},fanIn={},backLane={};
@@ -295,13 +311,14 @@ function build(){
     else{ec='#8b9bb8';dash=true}
     const la=layerOf[e.from],lb=layerOf[e.to];
     let d='';
-    if(lb>la){ /* fluxo pra frente: bottom → top, bézier vertical */
+    const xcl=clusterOf&&clusterOf[e.from]!==clusterOf[e.to];
+    if(lb>la&&!xcl){ /* fluxo pra frente (mesmo cluster): bézier vertical curta */
       const i=fo(e.from,'B'),j=fi(e.to,'T');
       const x1=src.cx+spread(i,3,36),x2=dst.cx+spread(j,3,36);
       const y1=src.y+NH,y2=dst.y;
       const my=(y1+y2)/2;
       d=`M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}`;
-    }else if(lb===la){ /* mesma camada: arco por baixo */
+    }else if(lb===la&&!xcl){ /* mesma camada (mesmo cluster): arco por baixo */
       const i=fo(e.from,'B'),j=fi(e.to,'B');
       const right=dst.cx>src.cx;
       const x1=src.cx+(right?spread(i,3,40):spread(i,3,40)), x2=dst.cx+spread(j,3,40);
