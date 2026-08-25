@@ -3,7 +3,7 @@
  "multigraph": false,
  "graph": {
   "name": "Quest 003 — achados DCJ/PrP-G127V",
-  "version": "v1.5"
+  "version": "v1.6"
  },
  "nodes": [
   {
@@ -241,7 +241,7 @@
    "status": "refuted",
    "evidence": "Ginhoux 2010 · Science",
    "prob": "",
-   "detail": "REFUTADO: micróglia origina-se de macrófagos do saco vitelínico (mesoderma), não de NSC neuroectodérmica. Claim removido; alternativa = co-enxerto separado se imunovigilância for desejada. NOTA adendo 25/08: De Lucia 201",
+   "detail": "REFUTADO: micróglia origina-se de macrófagos do saco vitelínico (mesoderma), não de NSC neuroectodérmica. Claim removido; alternativa = co-enxerto separado se imunovigilância for desejada.  NOTA v1.6: a FUNÇÃO imune foi ",
    "group": "celular",
    "focal": false,
    "delta": "down"
@@ -466,6 +466,22 @@
    "evidence": "Gomez-Nicola 2014 Brain; Jalland 2016; De Lucia 2016",
    "prob": "",
    "detail": "Neurogênese hipocampal aumenta durante o príon e contrabalça parcialmente a doença (Gomez-Nicola 2014); Neil3-neurogênese PROTEGE (Jalland 2016); micróglia expandida SUSTENTA essa neurogênese (De Lucia 2016) — função pró",
+   "group": "celular",
+   "focal": false,
+   "delta": "up"
+  },
+  {
+   "id": "img",
+   "label": "Co-enxerto iMG: micróglia de iPSC como coadjuvante fagocítico",
+   "community": 2,
+   "file_type": "doc",
+   "norm_label": "co-enxerto img: micróglia de ipsc como c",
+   "source_file": "quests/003",
+   "source_location": "2026-08-25",
+   "status": "active",
+   "evidence": "Abud 2017 Neuron (adotado 25/08)",
+   "prob": "segurança plausível; eficácia a testar em G1",
+   "detail": "Correção aceita do colaborador: consórcio celular = NP secretora V127ΔGPI (tese) + iMG (iMGL, Abud 2017: ~5 semanas) para depuração fagocítica; justificativa funcional via De Lucia 2016. Entra em G1+ (G0 segue limpo, só ",
    "group": "celular",
    "focal": false,
    "delta": "up"
@@ -750,6 +766,39 @@
   {
    "source": "endog",
    "target": "svz",
+   "relation": "constrains",
+   "_origin": "curated",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "context": "limita/exige",
+   "source_file": "quests/003",
+   "weight": 1.5
+  },
+  {
+   "source": "endog",
+   "target": "img",
+   "relation": "supports",
+   "_origin": "curated",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "context": "sustenta",
+   "source_file": "quests/003",
+   "weight": 2.0
+  },
+  {
+   "source": "img",
+   "target": "gates",
+   "relation": "supports",
+   "_origin": "curated",
+   "confidence": "EXTRACTED",
+   "confidence_score": 1.0,
+   "context": "sustenta",
+   "source_file": "quests/003",
+   "weight": 2.0
+  },
+  {
+   "source": "microglia",
+   "target": "img",
    "relation": "constrains",
    "_origin": "curated",
    "confidence": "EXTRACTED",

@@ -80,3 +80,18 @@ Fonte: documento colaborador externo ("mecanismo de defesa + regeneração + CED
 2. **Uso enviesado de Relaño-Ginés 2013.** O paper demonstra que o príon INVADE o nicho e altera o destino neuronal; o adendo cita como se "blindar o miolo reverts o quadro" — inferência NÃO testada no paper. Citação vale para "o nicho é alvo do príon", não para "blindagem reverte".
 3. **"Inundar o espaço intercelular com PrP-G127V"** — só é válido se lido como a isoforma SEM ÂNCORA (achado do próprio Gatdula que o adendo cita): PrP de membrana (GPI) não inunda nada. O paper final DEVE explicitar V127ΔGPI secretada; sem isso o mecanismo trans não existe.
 4. **Hidrogel-scaffold para "esticar conexões"** — sem ref; permanece proposto/não documentado; e gera tensão de projeto: gel que prende células pode reter também a proteína secretada (porosidade deve ser dimensionada — levar para WS-7 transporte).
+
+## H. Adendo "correção micróglia" 2026-08-25 (noite) — verificação + adoção
+
+O colaborador aceitou a refutação NSC→micróglia e propôs 2 soluções. Verificação própria:
+
+### Refs citadas vs. realidade
+| Ref citada | Veredito | A literatura real que suporta a IDEIA |
+|---|---|---|
+| "Science: HSCT rescues Alexander disease by macrophage-to-microglia transition" | ❌ **NÃO LOCALIZADA** como citada (busca direta: não existe paper com este título/veículo) | ✅ Conceito HSC→micróglia é real com OUTRAS refs: **Shibuya 2022 Sci Transl Med** (doença genética cerebral tratada por substituição de micróglia via BMT — mas autores admitem: lenta, ineficiente, variável), **Colella 2024 Nat Commun** (repopulação CNS por derivados hematopoéticos entregando proteínas terapêuticas), **Chen 2025** (>90% substituição sem condicionamento — lab-stage) |
+| "Nature Protocols nprot.2017.100: Generation of microglia from hPSCs" | ❌ **LINK ERRADO** — resolve para paper de proteômica LiP-MS (Schopper), nada a ver | ✅ A referência correta: **Abud et al. 2017, Neuron 94:278-293** (iMGLs de iPSC em ~5 semanas, 1300+ citações); McQuade 2018; Teo 2024; Hasselmann 2020 |
+
+### Adjudicação para o programa (decisão)
+- **ADOTADA: Solução 2 (coquetel iPSC)** — mas com 3 correções: (1) terminologia: "microglicócitos" não existe → **micróglia derivada de iPSC (iMG/iMGL)**; (2) o texto proposto PELO COLABORADOR ABANDONA o mecanismo secretor — restaurar: o componente neural é o **Progenitor Neural SECRETOR de PrP-V127ΔGPI** (a tese); iMG é coadjuvante fagocítico; (3) ordem de gates: iMG entra em G1+ (G0 segue testando o mecanismo secretor puro, sem confundidor imunológico)
+- **Solução 1 (HSC/HSCT): segunda linha, documentada** — constraints proibitivas para o desenho atual: mieloablação/condicionamento em paciente neurológico, substituição lenta/parcial/variável (Shibuya 2022), plataforma GMP duplicada. Reavaliável se métodos >90% sem condicionamento (Chen 2025) amadurecerem
+- Justificativa funcional do iMG no príon: De Lucia 2016 (micróglia pró-neurogênica) + papel fagocítico sobre agregados; atenção: papel da micróglia na propagação priônica é duplo (pode também disseminar) → desenho G1 deve incluir braço iMG-versus-controle

@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 18:30",
-    "version": "v1.5",
+    "updated": "2026-08-25 19:20",
+    "version": "v1.6",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
     "views": [
@@ -252,7 +252,7 @@
       "group": "celular",
       "status": "refuted",
       "evidence": "Ginhoux 2010 · Science",
-      "detail": "REFUTADO: micróglia origina-se de macrófagos do saco vitelínico (mesoderma), não de NSC neuroectodérmica. Claim removido; alternativa = co-enxerto separado se imunovigilância for desejada. NOTA adendo 25/08: De Lucia 2016 reabilita a FUNÇÃO pró-neurogênica da micróglia no príon — o co-enxerto de iPSC-micróglia como produto separado ganhou justificativa; a geração a partir de NSC permanece impossível.",
+      "detail": "REFUTADO: micróglia origina-se de macrófagos do saco vitelínico (mesoderma), não de NSC neuroectodérmica. Claim removido; alternativa = co-enxerto separado se imunovigilância for desejada.  NOTA v1.6: a FUNÇÃO imune foi reabilitada via co-enxerto iMG (nó irmão) — a geração a partir de NSC segue impossível.",
       "refs": [
         "doi:10.1126/science.1194637"
       ],
@@ -459,6 +459,21 @@
       "prob": null,
       "updated": "2026-08-25",
       "delta": "up"
+    },
+    {
+      "id": "img",
+      "label": "Co-enxerto iMG: micróglia de iPSC como coadjuvante fagocítico",
+      "group": "celular",
+      "status": "active",
+      "evidence": "Abud 2017 Neuron (adotado 25/08)",
+      "detail": "Correção aceita do colaborador: consórcio celular = NP secretora V127ΔGPI (tese) + iMG (iMGL, Abud 2017: ~5 semanas) para depuração fagocítica; justificativa funcional via De Lucia 2016. Entra em G1+ (G0 segue limpo, só secretor). Alternativa HSC/HSCT documentada como 2ª linha (mieloablação; substituição lenta — Shibuya 2022).",
+      "refs": [
+        "Neuron 2017;94:278-293",
+        "Shibuya 2022 STM"
+      ],
+      "prob": "segurança plausível; eficácia a testar em G1",
+      "updated": "2026-08-25",
+      "delta": "up"
     }
   ],
   "edges": [
@@ -591,6 +606,21 @@
       "from": "endog",
       "to": "svz",
       "type": "constrains"
+    },
+    {
+      "from": "endog",
+      "to": "img",
+      "type": "supports"
+    },
+    {
+      "from": "img",
+      "to": "gates",
+      "type": "supports"
+    },
+    {
+      "from": "microglia",
+      "to": "img",
+      "type": "constrains"
     }
   ],
   "probability_history": [
@@ -663,7 +693,7 @@
       "id": "G1",
       "name": "Camundongo humanizado PrP",
       "status": "PENDENTE GO DO G0",
-      "detail": "Sobrevida, carga PrP-res, tropismo — linhagens Asante",
+      "detail": "Sobrevida, carga PrP-res, tropismo — linhagens Asante; inclui braço iMG (co-enxerto) vs controle para isolar efeito fagocítico vs secretor",
       "tone": "wait"
     },
     {
@@ -689,6 +719,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v1.6 (correção micróglia adotada)",
+      "text": "Adendo do colaborador (aceitou refutação NSC→micróglia) auditado: as 2 refs citadas estão ERRADAS (paper Alexander não localizado; link Nat Protocols resolve p/ proteômica LiP-MS) MAS as ideias são reais com refs corretas (Shibuya 2022/Colella 2024 p/ HSC; Abud 2017 Neuron p/ iMG). ADOTADA Solução 2 (coquetel iPSC: NP secretora + iMG) com correções de terminologia e preservação do mecanismo secretor; Solução 1 (HSCT) 2ª linha documentada. Nó img ativo; G1 ganha braço iMG-vs-controle."
+    },
     {
       "date": "2026-08-25",
       "version": "v1.5 (adendo externo)",
