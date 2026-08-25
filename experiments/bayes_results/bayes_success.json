@@ -1,0 +1,168 @@
+{
+ "meta": {
+  "model": "analogia-ponderada Beta/Jeffreys + Monte Carlo 200k",
+  "analogos": {
+   "tofersen(SOD1 ASO→aprov)": {
+    "s": 1,
+    "n": 1,
+    "sim": 0.85,
+    "fonte": "FDA 2023 — mecanismo anti-agregação por gene/oligo em proteopatia letal: 1/1 aprovado, biologicamente plausível"
+   },
+   "tafamidis(TTR stabilizer→aprov)": {
+    "s": 1,
+    "n": 1,
+    "sim": 0.8,
+    "fonte": "estabilização dominante do nativo: categoria aprovada"
+   },
+   "prion_drug_failures(PPS,quinacrine,doxy,flupirtine...)": {
+    "s": 0,
+    "n": 6,
+    "sim": 0.55,
+    "fonte": "SEIS candidatos anti-príon falharam em clínica — o análogo NEGATIVO: moduladores inespecíficos de conversão"
+   },
+   "ION717(prion ASO fase1+ ongoing)": {
+    "s": 0,
+    "n": 1,
+    "sim": 0.9,
+    "fonte": "o programa-irmão exato (negação de substrato em príon) está em clínica; ainda sem aprovação → 0/1 por ora"
+   },
+   "organoid_predictivity(PDO)": {
+    "s": 4,
+    "n": 5,
+    "sim": 0.7,
+    "fonte": "validade preditiva ~80% (4/5 coortes PDO vs resposta clínica)"
+   },
+   "cell_therapy_brain(Lund2026+DANCES...)": {
+    "s": 1,
+    "n": 3,
+    "sim": 0.75,
+    "fonte": "transplante neural em PD: ensaios modernos viáveis (1 sucesso-conceptual /3 tentativas histórico fetal)"
+   },
+   "AAV_CNS(gene therapy approved Liq/HemB)": {
+    "s": 3,
+    "n": 20,
+    "sim": 0.6,
+    "fonte": "vetores em CNS: 3/20 aprovados (Zolgensa, Luxturna, Hemgenix-classe)"
+   },
+   "ASO_CNS(nusinersen,tofersen,inotersen)": {
+    "s": 3,
+    "n": 5,
+    "sim": 0.75,
+    "fonte": "oligos intratecais: 3/5 aprovados — a classe mais exitosa do CNS"
+   },
+   "mRNA_LNP_CNS(experimental)": {
+    "s": 0,
+    "n": 2,
+    "sim": 0.65,
+    "fonte": "LNP intratecal em CNS: seguro em fase pré-clínica, sem aprovação ainda"
+   }
+  },
+  "notas": "similaridade² = peso; análogo negativo (prion failures 0/6) incluído; neurologia base 5.9% (Citeline/BIO) usado só no cenário C; organoide PDO ~80% preditivo é proxy oncológico"
+ },
+ "cenarios": {
+  "G0_GO": {
+   "label": "B · Gate G0 (organoide mostra halo/gradiente)",
+   "mean": 0.3663925832473197,
+   "p5": 0.14559555654610423,
+   "p95": 0.6052143332150631,
+   "median": 0.3616443413763707,
+   "gates": {
+    "mecanismo_funciona": {
+     "mean": 0.5,
+     "ic90": [
+      0.276,
+      0.727
+     ]
+    },
+    "organoide_prevê": {
+     "mean": 0.733,
+     "ic90": [
+      0.369,
+      0.973
+     ]
+    }
+   }
+  },
+  "desaceleracao": {
+   "label": "A · Desaceleração significativa (qualquer vetor, genético pré-sintomático)",
+   "mean": 0.050294649510588554,
+   "p5": 0.004396637359987175,
+   "p95": 0.13569911986395233,
+   "median": 0.03869705814656815,
+   "gates": {
+    "mecanismo_funciona": {
+     "mean": 0.5,
+     "ic90": [
+      0.276,
+      0.726
+     ]
+    },
+    "organoide_prevê": {
+     "mean": 0.733,
+     "ic90": [
+      0.369,
+      0.973
+     ]
+    },
+    "vetor_entrega": {
+     "mean": 0.358,
+     "ic90": [
+      0.172,
+      0.556
+     ]
+    },
+    "clinica_genética": {
+     "mean": 0.385,
+     "ic90": [
+      0.049,
+      0.808
+     ]
+    }
+   }
+  },
+  "aprovacao": {
+   "label": "C · Aprovação regulatória plena (2035+)",
+   "mean": 0.003426318066076873,
+   "p5": 0.00021292794779843489,
+   "p95": 0.010692746372658915,
+   "median": 0.0022229755537296145,
+   "gates": {
+    "mecanismo_funciona": {
+     "mean": 0.5,
+     "ic90": [
+      0.276,
+      0.726
+     ]
+    },
+    "organoide_prevê": {
+     "mean": 0.733,
+     "ic90": [
+      0.369,
+      0.973
+     ]
+    },
+    "vetor_entrega": {
+     "mean": 0.358,
+     "ic90": [
+      0.172,
+      0.556
+     ]
+    },
+    "clinica_genética": {
+     "mean": 0.385,
+     "ic90": [
+      0.049,
+      0.808
+     ]
+    },
+    "neurologia_base": {
+     "mean": 0.068,
+     "ic90": [
+      0.022,
+      0.133
+     ]
+    }
+   }
+  }
+ }
+}

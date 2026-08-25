@@ -1,0 +1,57 @@
+{
+ "P_mecanismo_funciona": {
+  "valor": 1.0,
+  "leitura": "~certo; falha exigiria 4 linhas independentes de evidência estarem todas erradas"
+ },
+ "P_plataforma_detecta": {
+  "valor": 0.8,
+  "base": [
+   "Groveman 2019 infecção fiel",
+   "Groveman 2021 PPS(droga fraca)>efeito → range dinâmico",
+   "Williams 2023 célula viável"
+  ],
+  "risco_residual": "variabilidade organoide/seeding"
+ },
+ "geometria_G0": {
+  "halo_ℓ_mm": 3.6,
+  "raio_organoide_mm": "1-2",
+  "leitura": "o organoide INTEIRO está dentro do alcance de um depósito central — se o agente difunde, cobre tudo; gradiente proximal/distal mede escala real"
+ },
+ "modos_de_falha": {
+  "secreção abaixo do limiar DN (θ desconhecido; dose-dep de Gatdula sem Km absoluto)": 0.3,
+  "células morrem no microambiente infectado (Williams: NPC sobreviveu; secretora expressa mais)": 0.22,
+  "falso negativo do readout (RT-QuIC/PrP-res variabilidade)": 0.18,
+  "dependência de cepa sCJD MM1 específica (Gatdula: cobertura ampla)": 0.12
+ },
+ "P_falha_compartilhada": {
+  "valor": 0.394,
+  "leitura": "prob. de TODOS os braços falharem por causa comum (não independente)"
+ },
+ "P_braço": {
+  "A6_proteína": 0.648,
+  "A5_secretora": 0.496,
+  "A7_mRNA": 0.416
+ },
+ "P_G0_algum_GO": {
+  "valor": 0.394,
+  "leitura": "≥1 braço com ≥50% redução proximal+gradiente (union: falha comum domina)"
+ },
+ "desdobramentos": {
+  "GO forte (A5 secretora)": 0.496,
+  "GO forte (A6 proteína) → pivot acelular": 0.648,
+  "GO (A7 mRNA) → ramo compassivo": 0.416,
+  "NO-GO total": 0.606
+ },
+ "analogias_ponderadas": {
+  "mecanismo célulo-autônomo 2D→organoide reproduz (base do campo)": 0.75,
+  "Zerbes: mecanismo já cruzou p/ in vivo sistêmico (de-risca G1)": 0.85,
+  "PPS: droga fraca funcionou no mesmo ensaio (nosso agente é mais forte a priori)": 0.7
+ },
+ "P_G1_positivo_dado_G0": {
+  "valor": 0.65,
+  "base": "organoide→camundongo p/ mecanismos com validação Tg prévia + AAV in vivo já demonstrado"
+ },
+ "P_G1_positivo_absoluto": {
+  "valor": 0.256
+ }
+}
