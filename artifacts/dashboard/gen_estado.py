@@ -13,8 +13,9 @@ def card(n):
     c,ico,_=S[n['status']]
     iv=n.get('implies',{})
     col,sym=IV.get(iv.get('val','-'),('#8b96b3','·'))
+    plain=html.escape(n.get('plain',''))
     imp=html.escape(iv.get('text','')) if iv else ''
-    return f'''<div class="card" style="border-color:{c}"><span class="ico" style="color:{c}">{ico}</span><b>{html.escape(n['label'])}</b><span class="ev">📄 o que diz: {html.escape(n.get('evidence',''))}</span><div class="imp" style="border-left-color:{col}"><span style="color:{col}">➞ diretriz {sym}</span><br>{imp}</div></div>'''
+    return f'''<div class="card" style="border-color:{c}"><span class="ico" style="color:{c}">{ico}</span><b>{html.escape(n['label'])}</b><div class="diz">📄 {plain}</div><div class="imp" style="border-left-color:{col}"><span style="color:{col}">➞ diretriz {sym}</span> {imp}</div><span class="ev">fonte: {html.escape(n.get('evidence',''))}</span></div>'''
 ramos=[
  ("R1 · NSC não gera micróglia","#ef4444",[("✔ RESOLVIDO — co-enxerto iMG (Abud 2017 Neuron, ~5 sem); iMG entra em G1+, G0 segue limpo","#22c55e","")]),
  ("R2 · Fábrica SVZ impossível como prometida","#ef4444",[
@@ -66,10 +67,11 @@ h2{font-size:13px;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:12
 h2 .n{color:var(--mut);font-weight:400}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
 .card{border:1px solid;border-radius:10px;background:#141d3a;padding:10px 12px;position:relative}
-.card b{display:block;font-size:13px;margin:2px 0 4px;padding-right:22px}
-.card .ev{font-size:11px;color:var(--mut);display:block;margin-bottom:6px}
+.card b{display:block;font-size:13.5px;margin:2px 0 6px;padding-right:22px;line-height:1.3}
+.card .diz{font-size:13px;color:#e5eaf5;display:block;margin-bottom:8px;line-height:1.4}
+.card .ev{font-size:10.5px;color:var(--mut);display:block;margin-top:8px}
 .card .ico{position:absolute;top:10px;right:10px;font-size:14px}
-.card .imp{font-size:12px;color:#c9d2e8;border-left:3px solid;padding:4px 8px;background:#101830;border-radius:0 6px 6px 0}
+.card .imp{font-size:12.5px;color:#c9d2e8;border-left:3px solid;padding:6px 8px;background:#101830;border-radius:0 6px 6px 0;line-height:1.4}
 .ref{margin-bottom:14px}.rtitle{font-size:13.5px;font-weight:650;border-left:4px solid;padding:4px 10px;background:#151d38;border-radius:0 8px 8px 0;margin-bottom:6px}
 .branch{font-size:12.5px;padding:6px 10px 6px 26px;border-left:2px solid var(--line);margin:3px 0 3px 14px;color:#c9d2e8;border-radius:0 8px 8px 0;background:#101830}
 .branch.focal{border-left-color:var(--focal);background:#1d1626;color:#ffd9c7}

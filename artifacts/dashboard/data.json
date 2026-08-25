@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 21:30",
-    "version": "v1.9",
+    "updated": "2026-08-25 22:10",
+    "version": "v2.0",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "Mecanismo validado; agora há PLANOS B com âncoras reais: mRNA no líquor (dias, sem cirurgia), gel protetor, célula invisível. G0 testa os três contra o padrão.",
     "views": [
@@ -62,8 +62,9 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "Abrir o paper com a prova evolutiva: a seleção natural já validou o escudo (Mead 2009) — o artigo é engenharia sobre um teorema existente, não especulação."
-      }
+        "text": "Abrir o paper assim: a natureza já testou o escudo e aprovou. A gente só copia."
+      },
+      "plain": "Na tribo do kuru, quem tinha o gene V127 sobreviveu à epidemia."
     },
     {
       "id": "v127total",
@@ -83,8 +84,9 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "Especificar o produto celular como V127/V127 homozigoto exclusivo — resistência autônoma 90-95% é o piso do desenho, cite Asante como teorema de espectro completo."
-      }
+        "text": "Nossa célula usa só V127, nos dois lados do gene. É o piso do produto."
+      },
+      "plain": "Camundongo com SÓ V127: não pegou príon nenhum, de tipo nenhum."
     },
     {
       "id": "het",
@@ -103,8 +105,9 @@
       "cluster_id": 0,
       "implies": {
         "val": "-",
-        "text": "EXIGIR edição bialélica + silenciamento do selvagem como critério de LIBERAÇÃO GMP (confirmação NGS em ambos os alelos). Sem blindagem dupla, o anel vaza pela metade vulnerável."
-      }
+        "text": "Editar os DOIS lados. Meio-editado não vale — o escudo vaza."
+      },
+      "plain": "Quem tem V127 misturado com gene normal ainda pode pegar a forma vCJD."
     },
     {
       "id": "dn",
@@ -124,8 +127,9 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "Dimensionar o anel por DENSIDADE: a dosagem na penumbra precisa alcançar nível dominante-negativo — a dose-dependência é a regra de sizing do protocolo."
-      }
+        "text": "O anel precisa de MUITA célula na borda. Dose baixa não segura."
+      },
+      "plain": "Quanto mais V127 junto do gene normal, menos príon se forma."
     },
     {
       "id": "struct",
@@ -145,8 +149,9 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "Redigir o mecanismo como restrição conformacional + estabilização de dímeros (Zheng+Hosszu): enquadramento físico verificável, sem linguagem especulativa."
-      }
+        "text": "Explicar o escudo como peça travada. Sem mística."
+      },
+      "plain": "A mutação trava o formato da proteína, como encaixe que não fecha (raio-X + NMR)."
     },
     {
       "id": "trans",
@@ -168,8 +173,9 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "Nomear o agente ativo explicitamente como V127ΔGPI (sem âncora) em TODO claim intersticial — o anel só existe porque a forma solúvel bloqueia fora da célula (Gatdula)."
-      }
+        "text": "Toda frase do paper fala da forma SOLTA. A presa na membrana não se espalha."
+      },
+      "plain": "V127 SOLTA da célula bloqueia o príon FORA da célula (provado em tubo, 2026)."
     },
     {
       "id": "persist",
@@ -188,8 +194,9 @@
       "cluster_id": 0,
       "implies": {
         "val": "+",
-        "text": "Arquitetar para o TRANSITÓRIO: depósito/pulso basta, a proteção remanesce pós-cessação — a palavra 'fábrica permanente' sai do manuscrito."
-      }
+        "text": "Não precisa de fábrica eterna. Depósito temporário resolve."
+      },
+      "plain": "Depois que a produção de V127 para, a proteção continua."
     },
     {
       "id": "aav",
@@ -209,8 +216,9 @@
       "cluster_id": 0,
       "implies": {
         "val": "±",
-        "text": "Posicionar a célula como complemento focal-permanente do AAV sistêmico; citar Zerbes +50d como prova in-class E como relógio competitivo do programa."
-      }
+        "text": "Citar como prova de que funciona em corpo vivo — e como concorrente."
+      },
+      "plain": "Vírus carregando V127 solta deu +50 dias de vida em camundongo (2026)."
     },
     {
       "id": "depletion",
@@ -229,8 +237,9 @@
       "cluster_id": 1,
       "implies": {
         "val": "+",
-        "text": "Justificar o alvo pré-sintomático com a reversibilidade da lesão precoce (Mallucci): quanto mais cedo, mais cérebro resgatável — isso AMARRA o redirect E200K à biologia."
-      }
+        "text": "Quanto mais cedo, mais cérebro volta. Isso amarra o alvo pré-sintomático."
+      },
+      "plain": "Tirar a proteína-alvo do neurônio reverte o dano se for cedo."
     },
     {
       "id": "aso",
@@ -250,8 +259,9 @@
       "cluster_id": 1,
       "implies": {
         "val": "±",
-        "text": "Reivindicar apenas o nicho permanência+focalidade; reconhecer a classe ASO (61-98%) como o benchmark de eficácia a superar em durabilidade."
-      }
+        "text": "Nosso produto tem que durar MAIS que o remédio. Esse é o benchmark."
+      },
+      "plain": "Remédio que baixa a proteína-alvo deu +61-98% de vida em camundongo."
     },
     {
       "id": "ion717",
@@ -270,8 +280,9 @@
       "cluster_id": 1,
       "implies": {
         "val": "-",
-        "text": "Declarar o kill honesto no paper: se ION717 desacelerar sozinho (dados ~2027), o programa pivota para combinação/coadjuvante — ciência com data de validade assumida."
-      }
+        "text": "Escrever com honestidade: se ele resolver sozinho, viramos coadjuvante."
+      },
+      "plain": "O remédio da Ionis já está em gente desde 2023."
     },
     {
       "id": "prn100",
@@ -290,8 +301,9 @@
       "cluster_id": 1,
       "implies": {
         "val": "-",
-        "text": "Calibrar toda promessa como 'desaceleração de progressão', nunca 'cura'; usar PRN100 como precedente seguro-mas-ineficaz na discussão — é o anti-exemplo que motiva a engenharia espacial."
-      }
+        "text": "Prometer FREIO, não cura. O erro dos outros é nosso limite."
+      },
+      "plain": "Anticorpo foi seguro em gente, mas não freou a doença."
     },
     {
       "id": "edit",
@@ -311,8 +323,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "o",
-        "text": "Tratar a edição como checklist de QC, não claim científico: knock-in bialélico + NGS off-target + cariótipo + pureza <0,1% como gates de release do lote."
-      }
+        "text": "Edição é checklist de qualidade do lote, não descoberta."
+      },
+      "plain": "Fazer a edição genética é rotina em centros brasileiros."
     },
     {
       "id": "secretor",
@@ -333,8 +346,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "ESTE é o claim original do paper — biofábrica local de V127ΔGPI secretada via CED. Todo o resto é andaime; G0-A5 é o veredito."
-      }
+        "text": "Este é o parágrafo original do paper. Todo o resto é andaime."
+      },
+      "plain": "Tese: célula que FABRICA e solta o escudo, no lugar certo, o tempo todo."
     },
     {
       "id": "microglia",
@@ -354,8 +368,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "-",
-        "text": "PROIBIDO claim NSC→micróglia no manuscrito; a função imune entra SÓ como co-enxerto iMG (Abud 2017) a partir de G1+ — fronteira de linhagem é regra dura."
-      }
+        "text": "Micróglia só entra como segundo produto, feito em bancada, na fase G1."
+      },
+      "plain": "Célula neural NÃO vira micróglia. Origens diferentes do embrião."
     },
     {
       "id": "svz",
@@ -376,8 +391,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "-",
-        "text": "Renomear o depósito central como 'depósito de liberação lenta na parede ventricular' — a palavra 'fábrica' está banida do vocabulário do paper."
-      }
+        "text": "Chamar o depósito de liberação lenta. A palavra fábrica está proibida."
+      },
+      "plain": "O ninho de células novas do cérebro adulto é pequeno E o príon se replica nele."
     },
     {
       "id": "organoid",
@@ -397,8 +413,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Fazer do G0 o primeiro experimento do paper: organoide humano, decisão em ~90 dias — o gate falsificável mais barato que a área permite hoje."
-      }
+        "text": "Primeiro experimento do paper: decisão em 90 dias."
+      },
+      "plain": "Mini-cérebro humano em placa se infecta com príon de verdade."
     },
     {
       "id": "electro",
@@ -417,8 +434,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Pré-registrar resgate eletrofisiológico como desfecho co-primário de qualidade de vida: benefício garantido mesmo se a contenção underperformar (Williams 2023)."
-      }
+        "text": "Prometer também melhora de função, não só contenção."
+      },
+      "plain": "Célula implantada devolve a eletricidade do tecido mesmo com príon ativo."
     },
     {
       "id": "ced",
@@ -439,8 +457,9 @@
       "cluster_id": 3,
       "implies": {
         "val": "+",
-        "text": "Citar a linhagem CED 2005→2025 (Krauze→Elder/Lonser) como engenharia-resolvida; cânula step-design é o padrão de referência do apêndice cirúrgico."
-      }
+        "text": "Anexo cirúrgico pronto: cânula anti-vazamento é padrão de mercado."
+      },
+      "plain": "Injeção com microbomba no cérebro é técnica madura, 20 anos de uso."
     },
     {
       "id": "dti",
@@ -458,8 +477,9 @@
       "cluster_id": 3,
       "implies": {
         "val": "o",
-        "text": "Usar a rota DTI como mitigação de iatrogenia, pareada com margem molecular RT-QuIC — a imagem sozinha não resolve frentes microscópicas."
-      }
+        "text": "O instrumento passa só onde já morreu. Menos dano novo."
+      },
+      "plain": "Imagem de difusão mostra por onde o tecido já morreu."
     },
     {
       "id": "ring",
@@ -479,8 +499,9 @@
       "cluster_id": 3,
       "implies": {
         "val": "-",
-        "text": "Redesenhar o anel como injeção em NÓS de rede (tratografia) + camada global mRNA: geometria sozinha não segura a linha — a contenção vira gradiente dose/frequência."
-      }
+        "text": "O anel vira: injeção nos pontos de conexão + escudo solto em camada geral."
+      },
+      "plain": "O príon avança por vários focos ao mesmo tempo, não numa frente só."
     },
     {
       "id": "coax",
@@ -499,8 +520,9 @@
       "cluster_id": 3,
       "implies": {
         "val": "o",
-        "text": "MANDATAR cânula coaxial de uso único + protocolo WHO 134°C/NaOH no anexo cirúrgico: anti-semeadura priônica é inegociável em comitê."
-      }
+        "text": "Cânula de uso único + limpeza padrão OMS. Inegociável."
+      },
+      "plain": "Instrumento que passa em tecido infectado carrega príon (já houve contaminação hospitalar)."
     },
     {
       "id": "rtquicop",
@@ -519,8 +541,9 @@
       "cluster_id": 3,
       "implies": {
         "val": "o",
-        "text": "Converter margem anatômica em margem MOLECULAR: biópsias de borda com RT-QuIC intraoperatório calibram a linha de injeção em tempo real."
-      }
+        "text": "Testar a borda DURANTE a cirurgia e ajustar a linha na hora."
+      },
+      "plain": "Teste rápido detecta príon no líquido em horas."
     },
     {
       "id": "e200k",
@@ -541,8 +564,9 @@
       "cluster_id": 4,
       "implies": {
         "val": "+",
-        "text": "Endereçar o programa aos kindreds E200K brasileiros (Smid 2007): autólogo + janela de anos — a ÚNICA população onde o desenho fecha por inteiro."
-      }
+        "text": "O programa tem endereço: essas famílias. Tempo de sobra para célula própria."
+      },
+      "plain": "Famílias com o gene E200K existem no Brasil (documentado desde 2007)."
     },
     {
       "id": "rtquic",
@@ -562,8 +586,9 @@
       "cluster_id": 4,
       "implies": {
         "val": "+",
-        "text": "Construir a espinha dorsal de recrutamento na banda de conversão RT-QuIC + NfL: triagem pré-sintomática E monitoramento de endpoint dependem dela."
-      }
+        "text": "Recrutar só quem tem o gene + teste positivo + sem sintomas."
+      },
+      "plain": "Teste do líquido da coluna detecta príon antes dos sintomas."
     },
     {
       "id": "window",
@@ -583,8 +608,9 @@
       "cluster_id": 4,
       "implies": {
         "val": "-",
-        "text": "DIVIDIR a indicação no paper: ensaio estruturado = genética pré-sintomática; esporádica = compassivo via ciclo-rápido (mRNA/banco R4b) — nunca autólogo-em-tempo."
-      }
+        "text": "Separar as indicações: ensaio = genética; esporádica = emergência via mRNA."
+      },
+      "plain": "A forma comum da doença mata rápido demais para fabricar célula sob medida."
     },
     {
       "id": "reg",
@@ -603,8 +629,9 @@
       "cluster_id": 4,
       "implies": {
         "val": "o",
-        "text": "Iniciar CEP→CONEP→Anvisa AGORA (RDC 522/489/555) em paralelo aos gates: 18-30 meses é tempo de pipeline, não tempo morto."
-      }
+        "text": "Começar a papelada agora, em paralelo aos testes. Não é atraso."
+      },
+      "plain": "A trilha regulatória no Brasil está mapeada (18-30 meses)."
     },
     {
       "id": "gates",
@@ -624,8 +651,9 @@
       "cluster_id": 4,
       "implies": {
         "val": "+",
-        "text": "Publicar a estrutura de gates/kill-switches como espinha dorsal metodológica do paper: falsificabilidade é contribuição ANTES de qualquer resultado."
-      }
+        "text": "Publicar os gates como espinha do paper: ciência que sabe quando se matar."
+      },
+      "plain": "O plano tem pontos de decisão com critério de morte definido antes."
     },
     {
       "id": "endog",
@@ -646,8 +674,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Enquadrar o enxerto como AMPLIFICADOR de um programa de reparo endógeno que já é protetor (Gomez-Nicola/Jalland) — narrativa de sinergia, não de substituição."
-      }
+        "text": "Nosso enxerto multiplica um esforço que já existe. Ajuda, não substitui."
+      },
+      "plain": "O cérebro com príon já tenta se consertar sozinho — e isso protege."
     },
     {
       "id": "img",
@@ -668,8 +697,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Sequenciar: primeiro o secretor decide (G0 limpo), iMG só em G1+ com braço-controle próprio — nunca misturar as duas perguntas num só gate."
-      }
+        "text": "iMG é coadjuvante, com grupo próprio de comparação, a partir do G1."
+      },
+      "plain": "Micróglia feita em bancada a partir de célula-programa é produto validado."
     },
     {
       "id": "containfull",
@@ -686,8 +716,9 @@
       "cluster_id": 3,
       "implies": {
         "val": "-",
-        "text": "Prometer DESACELERAÇÃO, nunca contenção perfeita (10-20%): a multifocalidade torna o anel furável por construção — dizer isso upfront no paper."
-      }
+        "text": "O paper promete frear. Cercar por completo, só se for muito cedo."
+      },
+      "plain": "Cercar TODA a doença em fase avançada: improvável."
     },
     {
       "id": "graftsurv",
@@ -704,8 +735,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "±",
-        "text": "Tratar sobrevida do enxerto como variável-rainha do desenho esporádico: hidrogel-HA (alavanca 1) + população pré-sintomática (alavanca 2) — ambas no protocolo."
-      }
+        "text": "Duas alavancas no protocolo: gel macio + paciente ainda saudável."
+      },
+      "plain": "Célula implantada em cérebro doente morre muito (só 15-30% sobrevivem)."
     },
     {
       "id": "regen",
@@ -722,8 +754,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "-",
-        "text": "Escopo fechado no desenho: resgate de penumbra + controle de progressão; exclusão explícita de 'reconstrução funcional do núcleo espongiforme'."
-      }
+        "text": "Fora do escopo. Salvamos a borda, não o miolo morto."
+      },
+      "plain": "Reconstruir região do cérebro já destruída: ninguém conseguiu."
     },
     {
       "id": "mrna",
@@ -742,8 +775,9 @@
       "cluster_id": 1,
       "implies": {
         "val": "+",
-        "text": "Adicionar o braço G0-A7 (LNP-mRNA): o 'pronto-socorro molecular' para compassivo esporádico — expressão transiente da secretada, ciclo de dias, sem cirurgia grau-0."
-      }
+        "text": "Adicionar o braço A7: opção de emergência sem cirurgia, para o caso esporádico."
+      },
+      "plain": "Já existe 'vacina' (mRNA) que manda o cérebro produzir uma proteína por uns dias."
     },
     {
       "id": "hypo",
@@ -762,8 +796,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Abrir o gate G1.5 (aloenxerto em cérebro inflamado) para qualificar o banco hipoimune CD47 — a rota off-the-shelf que quebra a dependência do autólogo."
-      }
+        "text": "Testar o banco universal em cérebro inflamado (G1.5). Se passar, não precisa de célula própria."
+      },
+      "plain": "Célula invisível ao sistema imune já existe (provado em rato)."
     },
     {
       "id": "gel",
@@ -782,8 +817,9 @@
       "cluster_id": 3,
       "implies": {
         "val": "+",
-        "text": "Adotar hidrogel HA macio de gelificação LENTA como carreador celular; especificar porosidade da malha p/ manter V127ΔGPI difusível (input direto do WS-7)."
-      }
+        "text": "Gel lento e poroso — deixar o escudo sair. Nunca gel instantâneo."
+      },
+      "plain": "Gel macio de ácido hialurônico aumenta a sobrevida da célula implantada."
     },
     {
       "id": "mrna",
@@ -803,8 +839,9 @@
       "cluster_id": 1,
       "implies": {
         "val": "+",
-        "text": "Adicionar o braço G0-A7 (LNP-mRNA): o 'pronto-socorro molecular' para compassivo esporádico — expressão transiente da secretada, ciclo de dias, sem cirurgia grau-0."
-      }
+        "text": "Adicionar o braço A7: opção de emergência sem cirurgia, para o caso esporádico."
+      },
+      "plain": "Já existe 'vacina' (mRNA) que manda o cérebro produzir uma proteína por uns dias."
     },
     {
       "id": "hypo",
@@ -825,8 +862,9 @@
       "cluster_id": 2,
       "implies": {
         "val": "+",
-        "text": "Abrir o gate G1.5 (aloenxerto em cérebro inflamado) para qualificar o banco hipoimune CD47 — a rota off-the-shelf que quebra a dependência do autólogo."
-      }
+        "text": "Testar o banco universal em cérebro inflamado (G1.5). Se passar, não precisa de célula própria."
+      },
+      "plain": "Célula invisível ao sistema imune já existe (provado em rato)."
     }
   ],
   "edges": [
@@ -1189,6 +1227,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v2.0 (linguagem simples)",
+      "text": "Cards simplificados a pedido do usuário: novo campo plain = o fato em UMA frase sem jargão; diretriz reescrita em UMA frase com verbo, sem siglas (GMP→padrão de fábrica, NGS→teste de DNA, CED→microbomba etc.); fonte vira rodapé discreto. Card: título / 📄 diz (frase simples) / ➞ diretriz ▲▼◆ / fonte pequena."
+    },
     {
       "date": "2026-08-25",
       "version": "v1.9 (formato diretriz)",
