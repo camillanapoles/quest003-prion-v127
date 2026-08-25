@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-25 20:55",
-    "version": "v1.8",
+    "updated": "2026-08-25 21:40",
+    "version": "v1.9",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "O mecanismo trans está documentado (Gatdula/Zerbes 2026); a lacuna aberta é a entrega celular local — o gate G0 decide se a NSC secretora de V127ΔGPI vive.",
     "views": [
@@ -14,15 +14,16 @@
         "desc": "a história em 8 passos — do kuru ao ensaio clínico",
         "cols": 4,
         "nodes": [
+          "kuru",
+          "v127total",
           "trans",
           "aav",
           "secretor",
-          "ring",
           "e200k",
           "window",
-          "ion717",
           "gates"
-        ]
+        ],
+        "numbered": true
       },
       {
         "id": "pesquisador",
@@ -56,7 +57,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "title": "Gene raro venceu o kuru"
     },
     {
       "id": "v127total",
@@ -71,7 +73,8 @@
       "prob": "90-95% (autonomia celular)",
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "title": "Escudo total contra príons"
     },
     {
       "id": "het",
@@ -135,7 +138,8 @@
       "updated": "2026-08-25",
       "delta": "up",
       "focal": true,
-      "outlook": "valid"
+      "outlook": "valid",
+      "title": "A versão 'solta' bloqueia o príon"
     },
     {
       "id": "persist",
@@ -165,7 +169,8 @@
       "prob": null,
       "updated": "2026-08-25",
       "delta": "up",
-      "outlook": "valid"
+      "outlook": "valid",
+      "title": "Funcionou em camundongos"
     },
     {
       "id": "depletion",
@@ -241,7 +246,8 @@
       "prob": "80-90% (GMP)",
       "updated": "2026-08-25",
       "delta": null,
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "title": "Edição genética cria a célula blindada"
     },
     {
       "id": "secretor",
@@ -257,7 +263,8 @@
       "updated": "2026-08-25",
       "delta": null,
       "focal": true,
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "title": "Nossa aposta: a célula-fábrica"
     },
     {
       "id": "microglia",
@@ -272,7 +279,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": "down",
-      "outlook": "invalid"
+      "outlook": "invalid",
+      "title": "Célula-tronco NÃO faz microglia"
     },
     {
       "id": "svz",
@@ -288,7 +296,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": "down",
-      "outlook": "invalid"
+      "outlook": "invalid",
+      "title": "A 'fábrica' do cérebro é fraca"
     },
     {
       "id": "organoid",
@@ -303,7 +312,8 @@
       "prob": null,
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "valid"
+      "outlook": "valid",
+      "title": "Mini-cérebros para testar"
     },
     {
       "id": "electro",
@@ -348,7 +358,8 @@
       "prob": "plausível, não documentado",
       "updated": "2026-08-24",
       "delta": null,
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "title": "Cirurgia pelo caminho já morto"
     },
     {
       "id": "ring",
@@ -363,7 +374,8 @@
       "prob": "10-20% contenção total / 35-50% desaceleração",
       "updated": "2026-08-25",
       "delta": null,
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "title": "Anel de defesa na fronteira"
     },
     {
       "id": "coax",
@@ -409,7 +421,8 @@
       "prob": "40-60% enxerto sobrevive (pré-sintom.)",
       "updated": "2026-08-25",
       "delta": "up",
-      "outlook": "valid"
+      "outlook": "valid",
+      "title": "Pacientes certos: Brasil, antes dos sintomas"
     },
     {
       "id": "rtquic",
@@ -440,7 +453,8 @@
       "prob": "3-8% resgate (esporádica)",
       "updated": "2026-08-24",
       "delta": "down",
-      "outlook": "valid"
+      "outlook": "valid",
+      "title": "Por que não a forma comum"
     },
     {
       "id": "reg",
@@ -470,7 +484,8 @@
       "prob": "~6% cura funcional / 20-30% desaceleração",
       "updated": "2026-08-25",
       "delta": null,
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "title": "Rota: do teste ao ensaio clínico"
     },
     {
       "id": "endog",
@@ -486,7 +501,8 @@
       "prob": null,
       "updated": "2026-08-25",
       "delta": "up",
-      "outlook": "valid"
+      "outlook": "valid",
+      "title": "O cérebro já tenta se reparar"
     },
     {
       "id": "img",
@@ -502,7 +518,8 @@
       "prob": "segurança plausível; eficácia a testar em G1",
       "updated": "2026-08-25",
       "delta": "up",
-      "outlook": "gray_light"
+      "outlook": "gray_light",
+      "title": "Microglia de laboratório entra como aliada"
     },
     {
       "id": "containfull",
@@ -545,6 +562,11 @@
     }
   ],
   "edges": [
+    {
+      "from": "kuru",
+      "to": "v127total",
+      "type": "supports"
+    },
     {
       "from": "struct",
       "to": "trans",
@@ -817,6 +839,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-25",
+      "version": "v1.9 (títulos+padrão)",
+      "text": "Legibilidade 2: títulos curtos em linguagem clara nos cards-chave (termo técnico vira subtítulo); vista-história com badges numerados 1→8 e ordem fixa (barycenter desligado nela); aresta kuru→V127 restaurada para a cadeia narrativa."
+    },
     {
       "date": "2026-08-25",
       "version": "v1.8 (simplificação)",
