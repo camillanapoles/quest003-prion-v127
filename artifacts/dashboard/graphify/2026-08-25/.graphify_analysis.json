@@ -63,15 +63,26 @@
   "gods": [],
   "surprises": [
     {
-      "source": "DN 'em trans' por PrP-V127 SEM âncora GPI (anchorless)",
+      "source": "Janela da DCJ esporádica incompatível com produção celular",
+      "target": "E200K no Brasil (Smid 2007) — população-alvo pré-sintomática",
+      "source_files": [
+        "quests/003",
+        "quests/003"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "enables",
+      "note": "Bridges community 0 → community 4"
+    },
+    {
+      "source": "Janela da DCJ esporádica incompatível com produção celular",
       "target": "Ramo ⭐: mRNA-LNP intratecal codando V127ΔGPI secretada",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
-      "relation": "supports",
-      "note": "Bridges community 3 → community 5"
+      "relation": "enables",
+      "note": "Bridges community 0 → community 5"
     },
     {
       "source": "ION717 (ASO) em first-in-human desde 2023",
@@ -85,26 +96,15 @@
       "note": "Bridges community 1 → community 4"
     },
     {
-      "source": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
-      "target": "Programa em gates G0→G4 com kill-switches pré-registrados",
+      "source": "Rota pelo 'caminho danificado' (DTI + neuronavegação)",
+      "target": "Anel de contenção ('bombeiros') nas bordas sadias",
       "source_files": [
         "quests/003",
         "quests/003"
       ],
       "confidence": "EXTRACTED",
-      "relation": "supports",
-      "note": "Bridges community 5 → community 4"
-    },
-    {
-      "source": "NSC SECRETORA de V127ΔGPI — biofábrica local via CED",
-      "target": "Sobrevida do enxerto ≥ necessário em cérebro DCJ ativo",
-      "source_files": [
-        "quests/003",
-        "quests/003"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "constrains",
-      "note": "Bridges community 5 → community 0"
+      "relation": "enables",
+      "note": "Bridges community 2 → community 3"
     },
     {
       "source": "NPCs restauram eletrofisiologia mesmo com príon ativo",
