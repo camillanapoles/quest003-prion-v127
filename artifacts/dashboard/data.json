@@ -920,6 +920,41 @@
       "updated": "2026-08-26",
       "delta": null,
       "cluster_id": 4
+    },
+    {
+      "id": "ws9",
+      "title": "O G0 ganhou um ensaio gêmeo no computador",
+      "label": "WS-9: código Igel 2024 (iScience, Zenodo 11093945) adquirido — kernel Gillespie de propagação priônica; acoplagem do termo capping V127ΔGPI inédita",
+      "group": "entrega",
+      "outlook": "valid",
+      "status": "confirmed",
+      "evidence": "Fornara et al. iScience 2024 (PMID 39717079); código Zenodo",
+      "detail": "Lacuna confirmada (ninguém simulou organoide-príon) + metades públicas: kernel estocástico RD do grupo Béringue/Rezaei (MATLAB: Neuron Bed/Co-propagation/Axon; Params.csv com taxas reais) + frameworks organoide. Nosso acréscimo inédito: termo de capping V127ΔGPI → 'ensaio in silico do G0': varrer θ antes do lab com IC do WS-8.",
+      "refs": [
+        "doi:10.1101/2024.05.01.592001",
+        "Zenodo 11093945"
+      ],
+      "prob": null,
+      "updated": "2026-08-26",
+      "delta": "up",
+      "cluster_id": 4
+    },
+    {
+      "id": "ws8",
+      "title": "Bayes por analogia: as falhas do passado pesam",
+      "label": "WS-8: inferência bayesiana hierárquica ponderada por similaridade (10 análogos incl. 6 falhas anti-prion 0/6)",
+      "group": "traducao",
+      "outlook": "valid",
+      "status": "confirmed",
+      "evidence": "Monte Carlo 200k + Beta/Jeffreys (bayes_success.json)",
+      "detail": "RECALIBRE HONESTO: P(G0 GO no organoide)=36.6% IC90[14.6-60.5]; P(desaceleração clínica significativa)=5.0% IC90[0.4-13.6] — MUITO abaixo da estimativa estruturada 30-45%, porque o prior empírico inclui 6/6 falhas anti-prion históricas + ION717 0/1. As duas estimativas coexistem rotuladas: estruturada=otimismo de desenho; bayesiana=história do campo. Decisão não muda (G0 barato informa), expectativa sim.",
+      "refs": [
+        "BIO 2011-20; CROMO neuro 5.9%"
+      ],
+      "prob": "G0 GO 36.6% [14.6-60.5] · desaceleração 5% [0.4-13.6]",
+      "updated": "2026-08-26",
+      "delta": null,
+      "cluster_id": 4
     }
   ],
   "edges": [
@@ -1212,6 +1247,16 @@
       "from": "bayes",
       "to": "ws7",
       "type": "supports"
+    },
+    {
+      "from": "ws9",
+      "to": "gates",
+      "type": "supports"
+    },
+    {
+      "from": "ws8",
+      "to": "gates",
+      "type": "constrains"
     }
   ],
   "probability_history": [
@@ -1360,6 +1405,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-26",
+      "version": "v3.1 (WS-8 Bayes + WS-9 aquisição)",
+      "text": "WS-8 Bayes concluído (hierárquico, 200k MC, 10 análogos c/ n tentativas incl. 6/6 falhas anti-prion): G0-GO 36.6% IC90[14.6-60.5]; desaceleração clínica 5.0% IC90[0.4-13.6] — recalibre honesto vs 30-45% estruturada (duas lentes coexistem). WS-9: código Igel 2024 (iScience, Zenodo 11093945) baixado e auditado (kernel Gillespie B_i + difusão + UPR, Params.csv) — acoplagem do capping V127ΔGPI = ensaio in silico do G0."
+    },
     {
       "date": "2026-08-26",
       "version": "v3.1 (modelo bayesiano)",

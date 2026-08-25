@@ -1,0 +1,5 @@
+t_lim	L	div	N_neur	tpr	uprr	uprt	uprd	s	D	Kt	Kc	Kr
+5	1	50	9	6	10	0.5	100	10	1000	50	10	50
+										5	10	50
+										50	1	500
+										5	50	500
