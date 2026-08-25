@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-26 02:10",
-    "version": "v2.6",
+    "updated": "2026-08-26 03:30",
+    "version": "v3.1",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "Mecanismo validado + planos B ancorados + AGORA ESCALA FÍSICA: o halo do escudo mede 4-6mm, o anel se dimensiona em 8-12mm entre nós, e o hidrogel certo (HA 1-2%) deixa a proteína sair. O desenho deixou de ser conceitual.",
     "views": [
@@ -902,6 +902,24 @@
       "updated": "2026-08-26",
       "delta": "up",
       "cluster_id": 4
+    },
+    {
+      "id": "bayes",
+      "title": "Modelo bayesiano: os números honestos do zero",
+      "label": "PS por analogia (Beta/Jeffreys + MC 200k): G0=36,6% [15-61] · desaceleração do zero=5,0% · aprovação=0,3% — vs condicionais 30-45%",
+      "group": "traducao",
+      "outlook": "valid",
+      "status": "confirmed",
+      "evidence": "computacional (taxas históricas Citeline/BIO; PDO ~80%)",
+      "detail": "Ponderação de sucessos/insucessos dos análogos (tofersen, tafamidis, nusinersen, 6 falhas anti-príon, PDO, AAV/ASO/mRNA) por similaridade². Leitura: as estimativas 30-45% são P(slow|tudo OK); 5% é P(slow|hoje). G0 é o update bayesiano mais barato: EVPI ≈ +2,6pp por R$300-800k. Limitações: similaridades por rubrica, gates independentes (conservador).",
+      "refs": [
+        "bayes_success_model.py",
+        "bayes_results/bayes_success.json"
+      ],
+      "prob": null,
+      "updated": "2026-08-26",
+      "delta": null,
+      "cluster_id": 4
     }
   ],
   "edges": [
@@ -1179,6 +1197,21 @@
       "from": "analogy",
       "to": "secretor",
       "type": "supports"
+    },
+    {
+      "from": "bayes",
+      "to": "gates",
+      "type": "supports"
+    },
+    {
+      "from": "bayes",
+      "to": "analogy",
+      "type": "supports"
+    },
+    {
+      "from": "bayes",
+      "to": "ws7",
+      "type": "supports"
     }
   ],
   "probability_history": [
@@ -1254,6 +1287,39 @@
           "note": "ramo R4c — fabricação em dias"
         }
       ]
+    },
+    {
+      "component": "G0 dá GO (modelo bayesiano por analogia, MC 200k)",
+      "points": [
+        {
+          "date": "2026-08-26 (modelo)",
+          "low": 15,
+          "high": 61,
+          "note": "36,6% média; análogos ponderados por sim² incl. 0/6 anti-príon"
+        }
+      ]
+    },
+    {
+      "component": "Desaceleração clínica — marginal DO ZERO (bayes)",
+      "points": [
+        {
+          "date": "2026-08-26 (modelo)",
+          "low": 0.4,
+          "high": 13.6,
+          "note": "5,0% média; P marginal ≠ P condicional 30-45% (estruturada) — perguntas diferentes, ambas válidas"
+        }
+      ]
+    },
+    {
+      "component": "Aprovação plena (bayes, com base neuro 5,9%)",
+      "points": [
+        {
+          "date": "2026-08-26 (modelo)",
+          "low": 0,
+          "high": 1.1,
+          "note": "0,3% — first-in-class em príon; campo neuro médio 5,9%"
+        }
+      ]
     }
   ],
   "gates": [
@@ -1294,6 +1360,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-26",
+      "version": "v3.1 (modelo bayesiano)",
+      "text": "Probabilidade de sucesso por analogia (pedido do usuário): modelo Beta/Jeffreys + MC 200k ponderando análogos por similaridade² (incluindo análogo NEGATIVO 0/6 anti-príon e base neurologia 5,9%). Resultados: G0-GO 36,6% [15-61]; desaceleração marginal do zero 5,0% [0,4-13,6] (≠ condicional 30-45% — perguntas distintas, ambas rotuladas); aprovação 0,3%. EVPI do G0 ≈ +2,6pp por R$300-800k. Skills scientific-agent-skills (clinical-decision-support, experimental-design) consultadas para rubrica."
+    },
     {
       "date": "2026-08-26",
       "version": "v2.6 (mapa de analogias)",
