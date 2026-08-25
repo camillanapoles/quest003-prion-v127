@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quest 003 — Diagrama Lógico dos Achados</title>
+<style>
+  :root{
+    --bg:#0b1020; --panel:#111832; --panel2:#0e142a; --ink:#e5eaf5; --mut:#8b96b3;
+    --confirmed:#22c55e; --constraint:#f59e0b; --refuted:#ef4444; --proposed:#3b82f6; --active:#a78bfa;
+    --line:#26304f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  header{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;padding:14px 20px 10px;border-bottom:1px solid var(--line)}
+  header h1{font-size:17px;font-weight:650;letter-spacing:.2px}
+  header .sub{color:var(--mut);font-size:12px}
+  header .right{margin-left:auto;display:flex;gap:10px;align-items:center;font-size:12px;color:var(--mut)}
+  .pill{padding:2px 10px;border-radius:999px;border:1px solid var(--line);font-size:11px}
+  .layout{display:flex;gap:0;align-items:stretch}
+  #scroller{flex:1;overflow:auto;max-height:calc(100vh - 150px)}
+  aside{width:340px;min-width:300px;border-left:1px solid var(--line);background:var(--panel2);padding:14px 16px;overflow-y:auto;max-height:calc(100vh - 150px)}
+  .legend{display:flex;flex-wrap:wrap;gap:8px;padding:10px 20px;border-bottom:1px solid var(--line);align-items:center}
+  .chip{display:inline-flex;gap:6px;align-items:center;padding:3px 10px;border-radius:8px;border:1px solid var(--line);cursor:pointer;font-size:12px;user-select:none}
+  .chip .dot{width:9px;height:9px;border-radius:50%}
+  .chip.on{background:#1a2342}
+  .stats{margin-left:auto;display:flex;gap:8px;font-size:12px;color:var(--mut)}
+  .stats b{color:var(--ink)}
+  svg text{font-family:inherit}
+  .node rect.box{cursor:pointer;stroke-width:1.4}
+  .node text.lbl{font-size:11.5px;fill:var(--ink);pointer-events:none}
+  .node text.ev{font-size:9.5px;fill:var(--mut);pointer-events:none}
+  .node text.ico{font-size:12px;pointer-events:none}
+  .band-label{font-size:11px;letter-spacing:1.6px;fill:var(--mut);text-transform:uppercase}
+  .dimmed{opacity:.13}
+  .panel h2{font-size:14px;margin-bottom:6px}
+  .panel .kv{font-size:12px;color:var(--mut);margin:2px 0}
+  .panel .detail{font-size:12.5px;margin:10px 0;color:#c9d2e8}
+  .panel .refs{font-size:11px;color:var(--mut);word-break:break-all}
+  .badge{display:inline-block;padding:1px 8px;border-radius:6px;font-size:11px;margin:2px 4px 2px 0}
+  .placeholder{color:var(--mut);font-size:12.5px}
+  section.block{padding:14px 20px;border-bottom:1px solid var(--line)}
+  section.block h3{font-size:13px;letter-spacing:.8px;text-transform:uppercase;color:var(--mut);margin-bottom:10px}
+  .gates{display:flex;flex-wrap:wrap;gap:10px}
+  .gate{border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-width:200px;flex:1;background:var(--panel)}
+  .gate b{font-size:13px}
+  .gate .st{font-size:11px;margin:4px 0;display:block}
+  .gate .dt{font-size:11px;color:var(--mut)}
+  table{border-collapse:collapse;width:100%;font-size:12px}
+  th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}
+  th{color:var(--mut);font-weight:600;font-size:11px}
+  .probrow{display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line)}
+  .probrow .name{width:280px;font-size:12.5px}
+  .probbar{position:relative;height:16px;background:#1a2240;border-radius:6px;flex:1;overflow:hidden}
+  .probbar .seg{position:absolute;top:0;bottom:0;border-radius:6px}
+  .probbar .cap{position:absolute;top:0;height:100%;border-left:2px solid #fff6}
+  .probrow .dir{font-size:15px;width:22px;text-align:center}
+  .chg{margin-bottom:10px}
+  .chg .d{font-size:11px;color:var(--mut)}
+  .chg .v{color:#7cc4ff;font-size:11px;margin-left:6px}
+  .chg p{font-size:12.5px;color:#c9d2e8;margin-top:2px}
+  #err{display:none;padding:12px 20px;background:#3a1620;color:#fca5a5;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1 id="title">—</h1>
+    <div class="sub" id="subtitle"></div>
+  </div>
+  <div class="right">
+    <span class="pill" id="ver"></span>
+    <span class="pill" id="upd"></span>
+  </div>
+</header>
+<div id="err"></div>
+<div class="legend" id="legend"></div>
+<div class="layout">
+  <div id="scroller"></div>
+  <aside id="panel" class="panel">
+    <span class="placeholder">Clique em um nó do diagrama para ver evidência, status, probabilidade e histórico.</span>
+  </aside>
+</div>
+<section class="block"><h3>Portões do programa (gates de falsificabilidade)</h3><div class="gates" id="gates"></div></section>
+<section class="block"><h3>Evolução das probabilidades (por sessão)</h3><div id="probs"></div></section>
+<section class="block"><h3>Validações e confirmações (tabela viva)</h3><table id="valtbl"></table></section>
+<section class="block"><h3>Changelog por sessão</h3><div id="changelog"></div></section>
+
+<script>
+'use strict';
+const GROUPS=[
+ {id:'molecular',label:'① Fundamento molecular — o escudo V127'},
+ {id:'classe',label:'② Classe terapêutica — negação de substrato'},
+ {id:'celular',label:'③ Modelo celular — o que a célula pode e não pode'},
+ {id:'entrega',label:'④ Entrega cirúrgica — CED e contenção'},
+ {id:'traducao',label:'⑤ Tradução — população, regulatório, programa'}
+];
+const STATUS={
+ confirmed:{c:'var(--confirmed)',i:'✓',t:'CONFIRMADO',n:'confirmado por literatura'},
+ constraint:{c:'var(--constraint)',i:'⚠',t:'RESTRIÇÃO',n:'válido com condição/constraint'},
+ refuted:{c:'var(--refuted)',i:'✕',t:'REFUTADO',n:'refutado — corrigido/ajustado'},
+ proposed:{c:'var(--proposed)',i:'⏳',t:'PROPOSTO',n:'proposto — aguarda teste'},
+ active:{c:'var(--active)',i:'▶',t:'ATIVO',n:'em curso / desenho ativo'}
+};
+const EDGES={supports:{c:'#15803d',d:'sustenta'},constrains:{c:'#b45309',d:'limita/exige'},refutes:{c:'#b91c1c',d:'refuta'},enables:{c:'#1d4ed8',d:'habilita'},tests:{c:'#7c3aed',d:'testado por'}};
+const NW=238,NH=78,COLS=6,GX=26,GY=24,ML=30,MT=16,BANDH=64;
+
+function wrap(t,n){const w=t.split(' ');const L=[];let cur='';for(const x of w){if((cur+' '+x).trim().length<=n){cur=(cur+' '+x).trim()}else{L.push(cur);cur=x;if(L.length>=3)break}}if(cur&&L.length<3)L.push(cur);if(L.length===3&&cur!==L[2]&&w.join(' ').length>t.slice(0,0).length){}
+ if(t.length>110)L[2]=(L[2]||'')+'…';return L.slice(0,3)}
+
+function build(d){
+  document.getElementById('title').textContent=d.meta.title;
+  document.getElementById('subtitle').textContent=d.meta.subtitle+' · '+d.meta.audit;
+  document.getElementById('ver').textContent=d.meta.version;
+  document.getElementById('upd').textContent='atualizado '+d.meta.updated;
+
+  // positions
+  const byId={};let y=MT;
+  GROUPS.forEach(g=>{
+    const ns=d.nodes.filter(n=>n.group===g.id);
+    const rows=Math.max(1,Math.ceil(ns.length/COLS));
+    g.y=y;g.h=rows*(NH+GY)+BANDH;y+=g.h+18;
+    ns.forEach((n,i)=>{const r=Math.floor(i/COLS),c=i%COLS;
+      n.x=ML+c*(NW+GX);n.y=g.y+BANDH-14+r*(NH+GY);byId[n.id]=n;});
+    g.w=Math.min(ns.length||1,COLS)*(NW+GX);
+  });
+  const W=ML*2+COLS*(NW+GX)-GX+40,H=y;
+
+  // svg
+  const NS='http://www.w3.org/2000/svg';
+  const svg=document.createElementNS(NS,'svg');
+  svg.setAttribute('width',W);svg.setAttribute('height',H);
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  svg.style.display='block';svg.style.margin='0 auto';
+
+  // defs markers
+  const defs=document.createElementNS(NS,'defs');
+  Object.entries(EDGES).forEach(([k,v])=>{
+    const m=document.createElementNS(NS,'marker');
+    m.setAttribute('id','ar_'+k);m.setAttribute('viewBox','0 0 10 10');
+    m.setAttribute('refX',9);m.setAttribute('refY',5);
+    m.setAttribute('markerWidth',7);m.setAttribute('markerHeight',7);m.setAttribute('orient','auto-start-reverse');
+    const p=document.createElementNS(NS,'path');p.setAttribute('d','M0,0 L10,5 L0,10 z');p.setAttribute('fill',v.c);
+    m.appendChild(p);defs.appendChild(m);
+  });
+  svg.appendChild(defs);
+
+  // bands
+  GROUPS.forEach(g=>{
+    if(!d.nodes.some(n=>n.group===g.id))return;
+    const bg=document.createElementNS(NS,'rect');
+    bg.setAttribute('x',0);bg.setAttribute('y',g.y);
+    bg.setAttribute('width',W);bg.setAttribute('height',g.h);
+    bg.setAttribute('fill','#101830');bg.setAttribute('rx',12);
+    svg.appendChild(bg);
+    const t=document.createElementNS(NS,'text');
+    t.setAttribute('x',ML);t.setAttribute('y',g.y+22);t.setAttribute('class','band-label');
+    t.textContent=g.label;svg.appendChild(t);
+  });
+
+  // edges
+  const edgesG=document.createElementNS(NS,'g');
+  d.edges.forEach(e=>{
+    const a=byId[e.from],b=byId[e.to];if(!a||!b)return;
+    const spec=EDGES[e.type]||EDGES.supports;
+    const sameRow=Math.abs(a.y-b.y)<NH/2;
+    let x1,y1,x2,y2;
+    if(sameRow&&a.x<b.x){x1=a.x+NW;y1=a.y+NH/2;x2=b.x;y2=b.y+NH/2}
+    else if(sameRow){x1=a.x;y1=a.y+NH/2;x2=b.x+NW;y2=b.y+NH/2}
+    else{const down=b.y>a.y;x1=a.x+NW/2;y1=down?a.y+NH:a.y;x2=b.x+NW/2;y2=down?b.y:b.y+NH}
+    const p=document.createElementNS(NS,'path');
+    const mx=(x1+x2)/2,my=(y1+y2)/2;
+    p.setAttribute('d',sameRow?`M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2},${y2}`:`M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2}`);
+    p.setAttribute('stroke',spec.c);p.setAttribute('fill','none');
+    p.setAttribute('stroke-width',1.8);
+    if(e.type==='constrains')p.setAttribute('stroke-dasharray','6 4');
+    p.setAttribute('marker-end',`url(#ar_${e.type})`);
+    p.setAttribute('data-from',e.from);p.setAttribute('data-to',e.to);
+    p.setAttribute('data-type',e.type);
+    edgesG.appendChild(p);
+  });
+  svg.appendChild(edgesG);
+
+  // nodes
+  const nodesG=document.createElementNS(NS,'g');
+  d.nodes.forEach(n=>{
+    const s=STATUS[n.status]||STATUS.proposed;
+    const g=document.createElementNS(NS,'g');
+    g.setAttribute('class','node');g.setAttribute('transform',`translate(${n.x},${n.y})`);
+    g.setAttribute('data-id',n.id);g.setAttribute('data-status',n.status);
+    const r=document.createElementNS(NS,'rect');
+    r.setAttribute('class','box');r.setAttribute('width',NW);r.setAttribute('height',NH);
+    r.setAttribute('rx',10);r.setAttribute('fill','#16203f');
+    r.setAttribute('stroke',s.c);
+    g.appendChild(r);
+    const strip=document.createElementNS(NS,'rect');
+    strip.setAttribute('width',5);strip.setAttribute('height',NH);strip.setAttribute('rx',2.5);
+    strip.setAttribute('fill',s.c);g.appendChild(strip);
+    const lines=wrap(n.label,32);
+    lines.forEach((ln,i)=>{
+      const t=document.createElementNS(NS,'text');
+      t.setAttribute('class','lbl');t.setAttribute('x',14);t.setAttribute('y',22+i*15);
+      t.textContent=ln;g.appendChild(t);
+    });
+    const ev=document.createElementNS(NS,'text');
+    ev.setAttribute('class','ev');ev.setAttribute('x',14);ev.setAttribute('y',NH-10);
+    ev.textContent=n.evidence||'';g.appendChild(ev);
+    const ic=document.createElementNS(NS,'text');
+    ic.setAttribute('class','ico');ic.setAttribute('x',NW-20);ic.setAttribute('y',20);
+    ic.setAttribute('fill',s.c);ic.textContent=s.i;g.appendChild(ic);
+    if(n.delta==='up'||n.delta==='down'){
+      const dd=document.createElementNS(NS,'text');
+      dd.setAttribute('x',NW-20);dd.setAttribute('y',36);dd.setAttribute('font-size','11');
+      dd.setAttribute('fill',n.delta==='up'?'var(--confirmed)':'var(--refuted)');
+      dd.textContent=n.delta==='up'?'▲':'▼';g.appendChild(dd);
+    }
+    g.addEventListener('click',()=>select(n,d));
+    g.addEventListener('mouseenter',()=>hi(n.id,true));
+    g.addEventListener('mouseleave',()=>hi(null));
+    nodesG.appendChild(g);
+  });
+  svg.appendChild(nodesG);
+  const sc=document.getElementById('scroller');sc.innerHTML='';sc.appendChild(svg);
+
+  // legend+stats+filter
+  const lg=document.getElementById('legend');lg.innerHTML='';
+  Object.entries(STATUS).forEach(([k,v])=>{
+    const c=document.createElement('span');c.className='chip on';c.dataset.f=k;
+    c.innerHTML=`<span class="dot" style="background:${v.c}"></span>${v.t.toLowerCase()}`;
+    c.title=v.n;c.onclick=()=>toggleFilter(c);
+    lg.appendChild(c);
+  });
+  Object.entries(EDGES).forEach(([k,v])=>{
+    const c=document.createElement('span');c.className='chip';c.title='aresta: '+v.d;
+    c.innerHTML=`<span style="width:16px;height:0;border-top:2px ${k==='constrains'?'dashed':'solid'} ${v.c};display:inline-block"></span>${v.d}`;
+    lg.appendChild(c);
+  });
+  const st=document.createElement('div');st.className='stats';
+  const cnt=k=>d.nodes.filter(n=>n.status===k).length;
+  st.innerHTML=`<span><b>${cnt('confirmed')}</b> confirmados</span><span><b>${cnt('constraint')}</b> restrições</span><span><b>${cnt('refuted')}</b> refutados</span><span><b>${cnt('proposed')+cnt('active')}</b> em curso</span><span><b>${d.nodes.length}</b> achados · <b>${d.edges.length}</b> conexões</span>`;
+  lg.appendChild(st);
+
+  // gates
+  const gt=document.getElementById('gates');gt.innerHTML='';
+  const tones={ready:'var(--confirmed)',wait:'var(--constraint)'};
+  d.gates.forEach(g=>{
+    const el=document.createElement('div');el.className='gate';
+    el.innerHTML=`<b>${g.id} · ${g.name}</b><span class="st" style="color:${tones[g.tone]||'var(--mut)'}">${g.status}</span><div class="dt">${g.detail}</div>`;
+    gt.appendChild(el);
+  });
+
+  // probs
+  const pb=document.getElementById('probs');pb.innerHTML='';
+  d.probability_history.forEach(p=>{
+    const row=document.createElement('div');row.className='probrow';
+    const pts=p.points;const last=pts[pts.length-1];
+    const prev=pts[pts.length-2];
+    let dir='—',dc='var(--mut)';
+    if(prev){if(last.low+last.high>prev.low+prev.high){dir='↗';dc='var(--confirmed)'}else if(last.low+last.high<prev.low+prev.high){dir='↘';dc='var(--refuted)'}else{dir='≈'}}
+    row.innerHTML=`<div class="name">${p.component}</div><div class="probbar"></div><div class="dir" style="color:${dc}">${dir}</div>`;
+    const bar=row.querySelector('.probbar');
+    pts.forEach((pt,i)=>{
+      const seg=document.createElement('div');seg.className='seg';
+      seg.style.left=(pt.low*0.8)+'%';seg.style.width=((pt.high-pt.low)*0.8+1)+'%';
+      seg.style.background=i===pts.length-1?'#2f6f4f':'#33406b';
+      seg.title=pt.date+': '+pt.low+'–'+pt.high+'% — '+pt.note;
+      bar.appendChild(seg);
+    });
+    const cap=document.createElement('div');cap.className='cap';cap.style.left=(last.high*0.8)+'%';
+    cap.title=last.date+': '+last.low+'–'+last.high+'% — '+last.note;bar.appendChild(cap);
+    pb.appendChild(row);
+  });
+
+  // validations table
+  const vt=document.getElementById('valtbl');
+  vt.innerHTML='<tr><th>Achado</th><th>Bloco</th><th>Evidência</th><th>Status</th><th>Atualizado</th></tr>';
+  d.nodes.filter(n=>n.status==='confirmed'||n.status==='constraint').forEach(n=>{
+    const s=STATUS[n.status];
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td>${n.label}</td><td style="color:var(--mut)">${GROUPS.find(g=>g.id===n.group)?.label.split('—')[0]||''}</td><td>${n.evidence||''}</td><td><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span></td><td style="color:var(--mut)">${n.updated}</td>`;
+    tr.style.cursor='pointer';tr.onclick=()=>select(n,d);
+    vt.appendChild(tr);
+  });
+
+  // changelog
+  const cg=document.getElementById('changelog');cg.innerHTML='';
+  [...d.changelog].reverse().forEach(c=>{
+    const el=document.createElement('div');el.className='chg';
+    el.innerHTML=`<span class="d">${c.date}</span><span class="v">${c.version}</span><p>${c.text}</p>`;
+    cg.appendChild(el);
+  });
+}
+
+function select(n,d){
+  const s=STATUS[n.status];
+  const p=document.getElementById('panel');
+  const g=GROUPS.find(x=>x.id===n.group);
+  p.innerHTML=`<h2>${n.label}</h2>
+   <div><span class="badge" style="border:1px solid ${s.c};color:${s.c}">${s.i} ${s.t}</span>
+   <span class="badge" style="border:1px solid var(--line);color:var(--mut)">${g?g.label.split('—')[0]:n.group}</span>
+   ${n.delta?`<span class="badge" style="border:1px solid ${n.delta==='up'?'var(--confirmed)':'var(--refuted)'};color:${n.delta==='up'?'var(--confirmed)':'var(--refuted)'}">${n.delta==='up'?'▲ subiu nesta versão':'▼ caiu/foi corrigido'}</span>`:''}</div>
+   <div class="kv"><b>Evidência:</b> ${n.evidence||'—'}</div>
+   ${n.prob?`<div class="kv"><b>Probabilidade:</b> ${n.prob}</div>`:''}
+   <div class="kv"><b>Última atualização:</b> ${n.updated}</div>
+   <div class="detail">${n.detail||''}</div>
+   ${(n.refs&&n.refs.length)?`<div class="refs"><b>Refs:</b> ${n.refs.join(' · ')}</div>`:''}`;
+  hi(n.id);
+}
+let curFilter=new Set(Object.keys(STATUS));
+function toggleFilter(chip){
+  const k=chip.dataset.f;
+  if(curFilter.has(k)&&curFilter.size===1)return;
+  if(curFilter.has(k)){curFilter.delete(k);chip.classList.remove('on')}else{curFilter.add(k);chip.classList.add('on')}
+  document.querySelectorAll('.node').forEach(el=>{
+    el.classList.toggle('dimmed',!curFilter.has(el.dataset.status));
+  });
+}
+let selId=null;
+function hi(id,hover){
+  const active=hover?id:selId;
+  document.querySelectorAll('.node').forEach(el=>el.classList.toggle('dimmed',false));
+  document.querySelectorAll('svg path[data-type]').forEach(p=>p.style.opacity='');
+  if(!active)return;
+  document.querySelectorAll('.node').forEach(el=>{
+    if(el.dataset.id!==active)el.classList.add('dimmed');
+  });
+  document.querySelectorAll('svg path[data-type]').forEach(p=>{
+    if(p.dataset.from!==active&&p.dataset.to!==active)p.style.opacity=.08;
+  });
+  if(!hover)selId=active;else selId=null;
+}
+
+fetch('data.json').then(r=>r.json()).then(build).catch(e=>{
+  const el=document.getElementById('err');
+  el.style.display='block';
+  el.textContent='Não consegui carregar data.json ('+e+'). Sirva esta pasta via HTTP (ex.: python3 -m http.server 8137) — fetch não funciona sobre file://.';
+});
+</script>
+</body>
+</html>
