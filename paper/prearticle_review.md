@@ -1,13 +1,13 @@
 # Revisão Pré-Artigo — Terapia de Contenção Priônica via NSC PrP-V127: Auditoria de Plausibilidade, Risco e Otimização de Plano
 
 **Tipo:** Revisão crítica narrativa (narrative review) com auditoria estruturada de proposta pré-clínica
-**Quest:** 003 · **Data:** 2026-08-24 · **Versão:** v1.1 (delta 2026-08-25) · **Estado:** rascunho para formalização
+**Quest:** 003 · **Data:** 2026-08-24 · **Versão:** v1.2 (sync 2026-08-25 v2.2) · **Estado:** rascunho para formalização
 
 ---
 
 ## Resumo (abstract)
 
-Propostas de terapia para a Doença de Creutzfeldt-Jakob (DCJ) exigem plausibilidade molecular e honestidade sobre lacunas. Auditoriamos um protocolo combinado de transplante de células-tronco neurais (NSCs) de iPSC editadas por CRISPR para expressar PrP-V127 bialélico — a variante sob seleção positiva na epidemia de kuru — com entrega por convecção (CED): depósito no nicho subventricular e "anel de contenção" na penumbra cortical. O fundamento molecular é sólido (Nature 2015; Sci Rep 2018; 2026) e a classe estratégica — negação de substrato — é a única com terapia em fase clínica (ASO anti-PRNP, first-in-human 2023). **Atualização v1.1: a inibição dominante-negativa da PrP-V127 sem âncora GPI (difusível) foi documentada in vitro (Gatdula 2026) e validada in vivo por vetor AAV sistêmico (+50 dias de sobrevida em roedor; Zerbes 2026), promovendo o mecanismo do anel de contenção de hipótese não-testada a mecanismo documentado — restando como lacuna original a entrega celular local (biofábrica de NSC via CED).** Identificamos um erro de biologia do desenvolvimento (NSCs não geram micróglia), e uma alocação populacional subótima (DCJ esporádica tardia em vez de portadores genéticos pré-sintomáticos — com primeiro relato E200K brasileiro publicado, Smid 2007). Propomos um plano de pesquisa reestruturado em cinco gates de falsificabilidade, com objetivo realista de desaceleração (não cura), população E200K/D178N pré-sintomática, e um experimento decisivo de 90 dias em organoides cerebrais infectados. Conclusão: plausível como programa de pesquisa de 5+ anos; inviável como protocolo clínico no formato atual.
+Propostas de terapia para a Doença de Creutzfeldt-Jakob (DCJ) exigem plausibilidade molecular e honestidade sobre lacunas. Auditoriamos um protocolo combinado de transplante de células-tronco neurais (NSCs) de iPSC editadas por CRISPR para expressar PrP-V127 bialélico — a variante sob seleção positiva na epidemia de kuru — com entrega por convecção (CED): depósito no nicho subventricular e "anel de contenção" na penumbra cortical. O fundamento molecular é sólido (Nature 2015; Sci Rep 2018; 2026) e a classe estratégica — negação de substrato — é a única com terapia em fase clínica (ASO anti-PRNP, first-in-human 2023). **Atualização v1.1: a inibição dominante-negativa da PrP-V127 sem âncora GPI (difusível) foi documentada in vitro (Gatdula 2026) e validada in vivo por vetor AAV sistêmico (+50 dias de sobrevida em roedor; Zerbes 2026), promovendo o mecanismo do anel de contenção de hipótese não-testada a mecanismo documentado — restando como lacuna original a entrega celular local (biofábrica de NSC via CED).** Identificamos um erro de biologia do desenvolvimento (NSCs não geram micróglia), e uma alocação populacional subótima (DCJ esporádica tardia em vez de portadores genéticos pré-sintomáticos — com primeiro relato E200K brasileiro publicado, Smid 2007). **Atualização v1.2: cada refutação passou a ter ramos de solução ancorados em literatura verificada** — mRNA-LNP intratecal codando V127ΔGPI (Xue 2025: 29,6% neurônios/38,1% astrócitos após dose única; braço G0-A7), hidrogel de ácido hialurônico pró-sobrevivência (Liang 2013; recupera o carreador na formulação correta) e iPSC hipoimune HLA-KO+CD47 (Han 2019; Hu 2024; Pavan 2025 em enxerto neural) — elevando a estimativa de desaceleração significativa para 30-45% e tornando viável (50-70%) o uso compassivo na forma esporádica via vetor acelular. O protocolo G0 comparativo (7 braços: célula secretora vs proteína recombinante vs mRNA transiente) decide qual vetor escala. Propomos um plano de pesquisa reestruturado em cinco gates de falsificabilidade, com objetivo realista de desaceleração (não cura), população E200K/D178N pré-sintomática, e um experimento decisivo de 90 dias em organoides cerebrais infectados. Conclusão: plausível como programa de pesquisa de 5+ anos; inviável como protocolo clínico no formato atual.
 
 ---
 
@@ -102,3 +102,23 @@ O protocolo é biologicamente plausível no núcleo (V127 resistente e dominante
 26. Goldman JS, et al. 2022 — aconselhamento genético em doença priônica (melhores práticas)
 
 *Pendências v1.1: peer-review status de Gatdula e Zerbes (acompanhar); DOI final de Gatdula.*
+
+## Apêndice v1.2 — Regras de integridade e adições (2026-08-25)
+27. Xue Y, et al. Adv Mater. 2025 (PMID 40317512) — LNP-mRNA intratecal CNS (TD5: 29,6% neurônios/38,1% astrócitos)
+28. Dong S, et al. 2025 — P3B LNP biodegradável, segurança intratecal
+29. Han X, et al. PNAS. 2019;116:10441-6 — iPSC hipoimune (HLA-I/II-KO+CD47)
+30. Hu X, et al. Nat Biotechnol. 2024;42:807-15 — CD47 necessário e suficiente; macaco imunocompetente
+31. Pavan C, et al. Cell Stem Cell. 2025 — enxerto neural "cloaked" (HLA-KO) funcionante
+32. Liang Y, et al. Biomaterials. 2013 (PMID 23623429) — hidrogel HA ↑ sobrevida de NSC enxertada
+33. Nih LR, et al. 2017 — HA-gel otimizado com iPSC-NPC
+34. Cheng S, et al. Sci Rep. 2015;5:10535 — minociclina: ↓neuroinflamação sem ganho de sobrevida
+35. Gentile JE, et al. 2024 — minociclina confunde NfL (regra de exclusão na triagem E200K)
+36. De Lucia C, et al. 2016 — micróglia sustenta neurogênese no príon (função pró-reparo)
+37. Jalland CMO, et al. Sci Rep. 2016 — Neil3-neurogênese protege contra príon
+38. Abud EM, et al. Neuron. 2017;94:278-293 — iMGL de iPSC (~5 semanas)
+39. Elder JB/Lonser RR, et al. J Neurosurg. 2025;143:1431-41 — CED de terapias gênicas e celulares
+40. Hosszu LP, et al. Commun Biol. 2020;3:580 — base estrutural V127 (dímeros; loop β2-α2)
+41. Gomez-Nicola D, et al. Brain. 2014;137:2312-28 — neurogênese endógena contrabalça o príon
+
+**Proibida a citação de:** Shah SZA, et al. Neurotherapeutics. 2017 (minociclina/FK506 em príon) — RETRACTED (Retraction Note 2020, doi:10.1007/s13311-020-00909-3).
+**G0 v2:** 7 braços (adicionado A7: LNP-mRNA V127ΔGPI). **Matriz v2.2:** desaceleração 30-45%; compassivo esporádica 50-70% (mRNA); enxerto esporádica 30-50% (HA-gel).
