@@ -37,6 +37,8 @@
   svg text{font-family:inherit}
   .node rect.box{cursor:pointer;stroke-width:1.6}
   .node text.lbl{font-size:12.5px;fill:var(--ink);pointer-events:none}
+  .node text.ttl{font-size:14px;font-weight:700}
+  .node text.sub{font-size:11px;fill:var(--mut)}
   .node text.tier{font-size:8.5px;letter-spacing:1.4px;fill:var(--mut);pointer-events:none}
   .node text.ico{font-size:13px;pointer-events:none}
   .node:focus-visible{outline:none}
@@ -211,8 +213,14 @@ function build(){
 
   /* camadas por nível semântico (apenas as não-vazias) */
   const layers=GROUPS.map(g=>nodes.filter(n=>n.group===g.id)).filter(L=>L.length);
+  const vnum0=(D.meta.views||[]).find(x=>x.id===VIEW);
+  if(vnum0&&vnum0.numbered&&vnum0.nodes){
+    let st=1;
+    vnum0.nodes.forEach(id=>{const n=nodes.find(x=>x.id===id);if(n)n.step=st++;});
+  }
   const layerOf={};layers.forEach((L,li)=>L.forEach(n=>layerOf[n.id]=li));
-  orderLayers(layers,edges);
+  const vnum=(D.meta.views||[]).find(x=>x.id===VIEW);
+  if(!(vnum&&vnum.numbered))orderLayers(layers,edges);
 
   /* dimensões: camada mais larga define a largura; x centrado em cada camada */
   const rowW=L=>L.length*NW+(L.length-1)*GAPX;
@@ -350,11 +358,31 @@ function build(){
       ft.textContent=n.id==='secretor'?'◆ TESE':'◆ EVIDÊNCIA-CHAVE';
       g.appendChild(ft);
     }
-    wrap(n.label,30).forEach((ln,i)=>{
-      const t=document.createElementNS(NS,'text');
-      t.setAttribute('class','lbl');t.setAttribute('x',16);t.setAttribute('y',26+i*16);
-      t.textContent=ln;g.appendChild(t);
-    });
+    if(n.title){
+      const t0=document.createElementNS(NS,'text');
+      t0.setAttribute('class','lbl ttl');t0.setAttribute('x',16);t0.setAttribute('y',26);
+      t0.textContent=n.title;g.appendChild(t0);
+      wrap(n.label,30).slice(0,2).forEach((ln,i)=>{
+        const t=document.createElementNS(NS,'text');
+        t.setAttribute('class','lbl sub');t.setAttribute('x',16);t.setAttribute('y',45+i*14);
+        t.textContent=ln;g.appendChild(t);
+      });
+    }else{
+      wrap(n.label,30).forEach((ln,i)=>{
+        const t=document.createElementNS(NS,'text');
+        t.setAttribute('class','lbl');t.setAttribute('x',16);t.setAttribute('y',26+i*16);
+        t.textContent=ln;g.appendChild(t);
+      });
+    }
+    if(vnum&&vnum.numbered&&n.step){
+      const bd=document.createElementNS(NS,'circle');
+      bd.setAttribute('cx',16);bd.setAttribute('cy',-6);bd.setAttribute('r',11);
+      bd.setAttribute('fill',s.c);g.appendChild(bd);
+      const bt=document.createElementNS(NS,'text');
+      bt.setAttribute('x',16);bt.setAttribute('y',-1.5);bt.setAttribute('text-anchor','middle');
+      bt.setAttribute('font-size','11.5');bt.setAttribute('font-weight','bold');
+      bt.setAttribute('fill','#0b1020');bt.textContent=n.step;g.appendChild(bt);
+    }
     const tier=document.createElementNS(NS,'text');
     tier.setAttribute('class','tier');tier.setAttribute('x',16);tier.setAttribute('y',NH-12);
     tier.textContent=TIER_SHORT[n.group]||'';
