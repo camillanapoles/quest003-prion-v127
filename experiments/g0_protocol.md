@@ -23,6 +23,7 @@
 | A4 — Membrana | sCJD + NSC **V127/V127 bialélica** (PrP de membrana) | resistência cis + trans apenas por juxtacrine |
 | A5 — Secretora ⭐ | sCJD + NSC **V127/V127 + delecção da âncora GPI (ΔGPI), PrP secretado** | **mecanismo trans por agente difusível — o núcleo do anel** |
 | A6 — Proteína direta | sCJD + PrP-V127ΔGPI recombinante aplicado ao meio (2 pulpos, d0 e d45 pós-seeding) | replica Gatdula 2026 como comparador acelular; valida o agente sem o veículo celular |
+| A8 — Controle positivo PPS (v2.5) | sCJD + pentosan polissulfato (paradigmas profilático e terapêutico-like de Groveman 2021) | benchmark publicado NO MESMO modelo: permite comparar magnitude V127 vs. PPS para revisores |
 | A7 — mRNA transiente ⭐ (v2.2) | sCJD + **LNP-mRNA codando V127ΔGPI secretada** (pulso único no seeding; LNP de referência comercial, nucleosídeos modificados; ancorado em Xue 2025: 29.6% neurônios/38.1% astrócitos expressando após dose única intratecal) | **vetor sem célula**: teste do ramo R2c — expressão transiente basta? (Gatdula: proteção persiste pós-cessação) — abre via compassiva esporádica SEM GMP celular/cirurgia |
 
 ### 2.2 Linhagens celulares (produção independente do ensaio, com QC próprio)

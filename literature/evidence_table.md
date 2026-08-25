@@ -95,3 +95,23 @@ O colaborador aceitou a refutação NSC→micróglia e propôs 2 soluções. Ver
 - **ADOTADA: Solução 2 (coquetel iPSC)** — mas com 3 correções: (1) terminologia: "microglicócitos" não existe → **micróglia derivada de iPSC (iMG/iMGL)**; (2) o texto proposto PELO COLABORADOR ABANDONA o mecanismo secretor — restaurar: o componente neural é o **Progenitor Neural SECRETOR de PrP-V127ΔGPI** (a tese); iMG é coadjuvante fagocítico; (3) ordem de gates: iMG entra em G1+ (G0 segue testando o mecanismo secretor puro, sem confundidor imunológico)
 - **Solução 1 (HSC/HSCT): segunda linha, documentada** — constraints proibitivas para o desenho atual: mieloablação/condicionamento em paciente neurológico, substituição lenta/parcial/variável (Shibuya 2022), plataforma GMP duplicada. Reavaliável se métodos >90% sem condicionamento (Chen 2025) amadurecerem
 - Justificativa funcional do iMG no príon: De Lucia 2016 (micróglia pró-neurogênica) + papel fagocítico sobre agregados; atenção: papel da micróglia na propagação priônica é duplo (pode também disseminar) → desenho G1 deve incluir braço iMG-versus-controle
+
+## I. Busca "este experimento já existe?" (2026-08-26) — G0 vs. literatura
+
+| Componente do G0 | Já feito? | Onde |
+|---|---|---|
+| Infectar organoide humano com sCJD | ✅ SIM (2019) | Groveman et al., Acta Neuropathol 2019 (NIH Rocky Mountain/Caughey) — subtipos MM1/MV1 replicam com cinética humana |
+| **Tratar organoide infectado com droga** | ✅ SIM (2021) | **Groveman et al., Sci Rep 2021: pentosan polissulfato (PPS)** — profilático E terapêutico-like; "primeiro sistema humano 3D para screening" |
+| Semear células (NPC) em organoide infectado | ✅ SIM (2023) | Williams et al. — integração + restauração eletrofisiológica (sem edição genética) |
+| V127 em cultura 2D | ✅ (2026) | Gatdula — CAD5 + recombinante anchorless (não organoide) |
+| ASO em organoides (outras doenças) | ✅ review | Lange 2022 Frontiers — plataforma ASO×organoide existe, príon não testado |
+| **Célula editida V127 (A4/A5) em organoide** | ❌ NINGUÉM | — |
+| **Proteína V127ΔGPI recombinante (A6) em organoide** | ❌ NINGUÉM | — |
+| **mRNA-LNP V127 (A7) em organoide** | ❌ NINGUÉM | — |
+| Readout de gradiente proximal/distal do halo | ❌ NINGUÉM | Williams mediu global |
+
+**Conclusões da busca:**
+1. Plataforma 100% validada e publicada (infecção + tratamento, NIH) → risco de modelo baixo; G0 não inventa método, aplica agente novo
+2. Agente V127 em qualquer forma nunca entrou em organoide → G0 permanece NOVO no que testa, não em como testa
+3. **Upgrade de desenho: braço A8 (PPS como controle-positivo histórico)** — benchmark publicado no mesmo modelo permite comparar magnitude do efeito V127 vs. PPS na MESMA plataforma (padroniza interpretação para revisores)
+4. Alvos de parceiro confirmados: Rocky Mountain Labs (Caughey/Groveman — donos do modelo+screening) e Calgary (Williams — donos do braço celular); grupo brasileiro de organoides (HUG-CELL) para executar sob licença/colaboração

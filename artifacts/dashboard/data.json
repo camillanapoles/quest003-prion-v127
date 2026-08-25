@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-26 00:45",
-    "version": "v2.4",
+    "updated": "2026-08-26 01:40",
+    "version": "v2.5",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "Mecanismo validado + planos B ancorados + AGORA ESCALA FÍSICA: o halo do escudo mede 4-6mm, o anel se dimensiona em 8-12mm entre nós, e o hidrogel certo (HA 1-2%) deixa a proteína sair. O desenho deixou de ser conceitual.",
     "views": [
@@ -400,8 +400,8 @@
       "label": "Organoide sCJD humano = plataforma de teste (90 d)",
       "group": "celular",
       "status": "confirmed",
-      "evidence": "Williams 2023 · Stem Cell Res Ther",
-      "detail": "NPCs integram em organoides infectados; modelo humano direto já publicado — é o palco do gate G0.",
+      "evidence": "Groveman 2019, 2021; Williams 2023",
+      "detail": "Plataforma VALIDADA por 3 publicações: infecção sCJD (Groveman 2019), TRATAMENTO com droga — PPS profilático+terapêutico (Groveman 2021, Sci Rep: primeiro screening humano 3D) — e semeadura celular (Williams 2023). O que ninguém fez: V127 em qualquer forma (célula editada A4/A5, proteína A6, mRNA A7) nem gradiente proximal/distal. G0 v2.5 ganha braço A8 = PPS como controle-positivo benchmark.",
       "refs": [
         "doi:10.1186/s13287-023-03591-2"
       ],
@@ -1260,6 +1260,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-26",
+      "version": "v2.5 (busca de precedência)",
+      "text": "Busca \"G0 já realizado?\": plataforma de organoide infectado+tratado PUBLISHED (Groveman 2019 infecção; Groveman 2021 PPS profilático+terapêutico = primeiro screening de droga em modelo humano 3D; Williams 2023 células). Agente V127 em organoide: NUNCA — G0 é novo no agente, maduro no método. Upgrade: braço A8 (PPS controle-positivo, mesmo modelo, benchmark direto). Parceiros-alvo confirmados: Rocky Mountain Labs (dono do modelo) e Calgary (dono do braço celular)."
+    },
     {
       "date": "2026-08-26",
       "version": "v2.4 (WS-7 v2)",
