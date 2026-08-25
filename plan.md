@@ -24,3 +24,13 @@ Revisão pré-clínica do "Protocolo Combinado de Fortalecimento de Nicho e Cont
 - `analysis/review_verdicts.md` — auditoria pos/neg/cinza (núcleo)
 - `analysis/probability_reassessment.md` — probabilidades recalibradas
 - `paper/prearticle_review.md` — revisão pré-artigo (deliverable final)
+
+## WS-6 — Pacote executivo v1 (2026-08-25, MODO DIRETO)
+| Entregável | Path | Status |
+|---|---|---|
+| Protocolo G0 executável (6 braços, GO/NO-GO pré-registrado) | experiments/g0_protocol.md | ✅ pronto p/ parceiro |
+| Pré-artigo v1.1 (delta Gatdula/Zerbes/Smid integrado) | paper/prearticle_review.md | ✅ |
+| Dossiê E200K-Brasil + esqueleto ético/regulatório | paper/e200k_br_dossier.md | ✅ |
+| Whitepaper posicionamento vs AAV/ASO | paper/positioning_whitepaper.md | ✅ |
+| Delta de evidência (F1-F5) | literature/evidence_table.md | ✅ |
+Próximos gates: G1 camundongo humanizado (após GO do G0); mapeamento de kindreds E200K BR (ação externa)

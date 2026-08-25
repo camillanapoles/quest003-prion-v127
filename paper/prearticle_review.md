@@ -1,13 +1,13 @@
 # Revisão Pré-Artigo — Terapia de Contenção Priônica via NSC PrP-V127: Auditoria de Plausibilidade, Risco e Otimização de Plano
 
 **Tipo:** Revisão crítica narrativa (narrative review) com auditoria estruturada de proposta pré-clínica
-**Quest:** 003 · **Data:** 2026-08-24 · **Estado:** rascunho para formalização (refs principais com DOI; grade final pendente)
+**Quest:** 003 · **Data:** 2026-08-24 · **Versão:** v1.1 (delta 2026-08-25) · **Estado:** rascunho para formalização
 
 ---
 
 ## Resumo (abstract)
 
-Propostas de terapia para a Doença de Creutzfeldt-Jakob (DCJ) exigem plausibilidade molecular e honestidade sobre lacunas. Auditoriamos um protocolo combinado de transplante de células-tronco neurais (NSCs) de iPSC editadas por CRISPR para expressar PrP-V127 bialélico — a variante sob seleção positiva na epidemia de kuru — com entrega por convecção (CED): depósito no nicho subventricular e "anel de contenção" na penumbra cortical. O fundamento molecular é sólido (Nature 2015; Sci Rep 2018; 2026) e a classe estratégica — negação de substrato — é a única com terapia em fase clínica (ASO anti-PRNP, first-in-human 2023). Identificamos um erro de biologia do desenvolvimento (NSCs não geram micróglia), uma fragilidade mecanística central não testada (inibição dominante-negativa interestital "em trans"), e uma alocação populacional subótima (DCJ esporádica tardia em vez de portadores genéticos pré-sintomáticos). Propomos um plano de pesquisa reestruturado em cinco gates de falsificabilidade, com objetivo realista de desaceleração (não cura), população E200K/D178N pré-sintomática, e um experimento decisivo de 90 dias em organoides cerebrais infectados. Conclusão: plausível como programa de pesquisa de 5+ anos; inviável como protocolo clínico no formato atual.
+Propostas de terapia para a Doença de Creutzfeldt-Jakob (DCJ) exigem plausibilidade molecular e honestidade sobre lacunas. Auditoriamos um protocolo combinado de transplante de células-tronco neurais (NSCs) de iPSC editadas por CRISPR para expressar PrP-V127 bialélico — a variante sob seleção positiva na epidemia de kuru — com entrega por convecção (CED): depósito no nicho subventricular e "anel de contenção" na penumbra cortical. O fundamento molecular é sólido (Nature 2015; Sci Rep 2018; 2026) e a classe estratégica — negação de substrato — é a única com terapia em fase clínica (ASO anti-PRNP, first-in-human 2023). **Atualização v1.1: a inibição dominante-negativa da PrP-V127 sem âncora GPI (difusível) foi documentada in vitro (Gatdula 2026) e validada in vivo por vetor AAV sistêmico (+50 dias de sobrevida em roedor; Zerbes 2026), promovendo o mecanismo do anel de contenção de hipótese não-testada a mecanismo documentado — restando como lacuna original a entrega celular local (biofábrica de NSC via CED).** Identificamos um erro de biologia do desenvolvimento (NSCs não geram micróglia), e uma alocação populacional subótima (DCJ esporádica tardia em vez de portadores genéticos pré-sintomáticos — com primeiro relato E200K brasileiro publicado, Smid 2007). Propomos um plano de pesquisa reestruturado em cinco gates de falsificabilidade, com objetivo realista de desaceleração (não cura), população E200K/D178N pré-sintomática, e um experimento decisivo de 90 dias em organoides cerebrais infectados. Conclusão: plausível como programa de pesquisa de 5+ anos; inviável como protocolo clínico no formato atual.
 
 ---
 
@@ -39,8 +39,8 @@ DCJ: encefalopatia espongiforme transmissível, letalidade 100%, sobrevida media
 
 ## 4. Pontos cinzentos (documentação inexistente)
 
-- **🌑 Escuro (lógica → negativo):** DN trans interestital; contenção completa em doença estabelecida; regeneração de território espongiforme; aprovação regulatória compassiva de célula editada no tempo da doença; sobrevida do enxerto sob tempestade de citocinas.
-- **🌕 Claro (lógica → positivo):** resistência autonômica das células V127/V127 (extensão direta, testável em 90 dias); PrP-V127 solúvel/vesicular como DN trans (nunca combinado na lit.; hipótese NOSSA conversora do risco nº1); combinação ASO-ponte + célula (partes validadas, conjunto novo); enxerto em ambiente pré-sintomático (lacuna, não contradição); benefício funcional residual das NPCs independentemente da contenção.
+- **🌑 Escuro (lógica → negativo):** *(v1.1: DN trans removido desta lista — documentado por Gatdula/Zerbes 2026)* contenção completa em doença estabelecida; regeneração de território espongiforme; aprovação regulatória compassiva de célula editada no tempo da doença; sobrevida do enxerto sob tempestade de citocinas.
+- **🌕 Claro (lógica → positivo):** resistência autonômica das células V127/V127 (extensão direta, testável em 90 dias); **entrega celular do V127ΔGPI como biofábrica local via CED** (mecanismo documentado nas formas recombinante/AAV; a forma célula-local é a lacuna original — protocolo G0 anexo); combinação ASO-ponte + célula (partes validadas, conjunto novo); enxerto em ambiente pré-sintomático (lacuna, não contradição); benefício funcional residual das NPCs independentemente da contenção.
 
 ## 5. Probabilidades recalibradas (síntese)
 
@@ -48,7 +48,7 @@ DCJ: encefalopatia espongiforme transmissível, letalidade 100%, sobrevida media
 |---|---|
 | Linhagem V127/V127 em GMP | >90% → 80-90% |
 | Resistência célula-autônoma | — → 90-95% |
-| Escudo trans na margem | — → 25-40% |
+| Escudo trans na margem (v1.1) | — → 50-65% (documentado in vitro/AAV; incerteza = forma celular local) |
 | Contenção total / desaceleração | 30-40% → 10-20% / 35-50% |
 | Sobrevida do enxerto (ativa / pré-sintom.) | 20-30% → 15-30% / 40-60% |
 | Resgate clínico global (esporádica / genética pré-sintom.) | ~15% → 3-8% / 15-25% |
@@ -77,22 +77,28 @@ O protocolo é biologicamente plausível no núcleo (V127 resistente e dominante
 1. Mead S, et al. N Engl J Med. 2009;361:2056-2065. doi:10.1056/NEJMoa0809716
 2. Asante EA, et al. Nature. 2015;522:478-481. doi:10.1038/nature14510
 3. Zheng Z, et al. Sci Rep. 2018;8:11458. doi:10.1038/s41598-018-31394-6
-4. Gatdula JRP, et al. Curr Res Struct Biol. 2026 (S0969996126002512)
-5. Mallucci G, et al. Science. 2003;302:871-874. doi:10.1126/science.1090187
-6. Mallucci GR, et al. Neuron. 2007;53:325-335
-7. Raymond GJ, et al. JCI Insight. 2019;4:e131175
-8. Minikel EV, et al. Nucleic Acids Res. 2020;48:10615-10631
-9. Mead S, et al. Lancet Neurol. 2022;21(3) (PRN100)
-10. Relaño-Ginés A, et al. PLoS Pathog. 2013;9:e1003485
-11. Williams K, et al. Stem Cell Res Ther. 2023;14:348. doi:10.1186/s13287-023-03591-2
-12. Krauze MT, et al. J Neurosurg. 2005 (PMID 16304999)
-13. Parvar SJ, et al. Adv Drug Deliv Rev. 2025 (CED)
-14. Hermann P, et al. Lancet Neurol. 2021 (critérios RT-QuIC)
-15. Curtis E, et al. Cell Stem Cell. 2018;23:30-40
-16. Mazzini L, et al. J Transl Med. 2015 (PMC4359401)
-17. Ginhoux F, et al. Science. 2010;330:841-845
-18. Sorrells SF, et al. Nature. 2018;558:253-258
-19. Thomas JG, et al. J Clin Neurosci. 2013 (DCJ iatrogênica)
-20. Bartz JC, et al. Prion strain diversity (PMC5131755)
+4. **Gatdula JRP, et al. bioRxiv 2026.02.17.703887 (PMID 41757113)** — DN trans anchorless documentado; resistência persiste pós-cessação; generaliza entre cepas
+5. **Zerbes T, et al. 2026 (PMC13041815, preprint NIH)** — AAV-sc V127ΔGPI sistêmico, +~50 d sobrevida em roedor
+6. Mallucci G, et al. Science. 2003;302:871-874
+7. Mallucci GR, et al. Neuron. 2007;53:325-335
+8. Raymond GJ, et al. JCI Insight. 2019;4:e131175
+9. Minikel EV, et al. Nucleic Acids Res. 2020;48:10615-10631
+10. Mead S, et al. Lancet Neurol. 2022 (PRN100)
+11. Relaño-Ginés A, et al. PLoS Pathog. 2013;9:e1003485
+12. Relaño-Ginés A, et al. Brain Pathol. 2019 (PMID 30472550) — review terapia celular príons
+13. Williams K, et al. Stem Cell Res Ther. 2023;14:348. doi:10.1186/s13287-023-03591-2
+14. Krauze MT, et al. J Neurosurg. 2005 (PMID 16304999)
+15. Parvar SJ, et al. Adv Drug Deliv Rev. 2025 (CED)
+16. Hermann P, et al. Lancet Neurol. 2021 (RT-QuIC)
+17. Curtis E, et al. Cell Stem Cell. 2018;23:30-40
+18. Mazzini L, et al. J Transl Med. 2015
+19. Ginhoux F, et al. Science. 2010;330:841-845
+20. Sorrells SF, et al. Nature. 2018;558:253-258
+21. Thomas JG, et al. J Clin Neurosci. 2013 (DCJ iatrogênica)
+22. Bartz JC, et al. 2016 (PMC5131755) — diversidade de cepas
+23. **Smid J, et al. Dement Neuropsychol. 2007** — primeiro relato E200K no Brasil
+24. Lee HS, et al. 1999 — E200K = >70% das DCJ hereditárias mundiais
+25. Appleby BS, et al. 2026 (PMC12799623) — genetic CJD E200K, panorama atual
+26. Goldman JS, et al. 2022 — aconselhamento genético em doença priônica (melhores práticas)
 
-*Pendências: DOI exato de Gatdula 2026 e do review Relaño-Ginés 2019; verificação de agrupamentos E200K brasileiros para o cenário G4.*
+*Pendências v1.1: peer-review status de Gatdula e Zerbes (acompanhar); DOI final de Gatdula.*
