@@ -1,0 +1,41 @@
+{
+ "containment_radius_mm_by_theta": [
+  [
+   0.5,
+   1.7
+  ],
+  [
+   0.2,
+   2.9
+  ],
+  [
+   0.1,
+   4.2
+  ],
+  [
+   0.05,
+   5.6
+  ],
+  [
+   0.02,
+   7.7
+  ],
+  [
+   0.01,
+   9.5
+  ]
+ ],
+ "theta_meaning": "θ = (taxa de replicação da onda)/(capacidade de capping no PICO do depósito). θ<1 → o pico sempre vence; r* = até onde o escudo vence.",
+ "verdict_A": "r* = 4-9 mm para θ 0.1-0.02: um depósito de 1mm contém a onda numa casca de ~4-9mm de espessura SE a capacidade de capping no pico exceder a replicação em 10-50× (θ). Espaçamento do anel 8-12mm (v1) permanece coerente: cascas vizinhas se sobrepõem com margem para θ~0.1.",
+ "mrna_pulse_valley_ratio_by_interval_days": {
+  "3": 0.996,
+  "5": 0.807,
+  "7": 0.559,
+  "10": 0.287,
+  "14": 0.108,
+  "21": 0.018
+ },
+ "verdict_B": "intervalo ≤7 dias mantém vale ≥~30% do pico (f_min=0.3); com 10-14 dias o vale cai para ~15-25%. REDOSING RULE (G0-A7 → clínica): pulsos a cada ≤7 dias, ou t½ de produção ≥4 dias (LNP de segunda geração).",
+ "self_test_A_theta_1_returns_deposit_edge": 1.0,
+ "self_test_B_T_tiny_ratio": 1.0
+}

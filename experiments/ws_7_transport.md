@@ -55,6 +55,20 @@ Equação resolvida (ADR em meio poroso):
 
 **D. Canalização por cistos (κ×50):** na escala simulada (Q = 0,1 µL/min, ~1,6 h) a captura precoce ≈ 0 — o regime é difusão-limitado longe da cânula; advecção intersticial de infusões discretas é local. **Limitação honesta:** o teste de canalização exige Q maiores/dias de infusão contínua (cenário in-dwelling) — fica como extensão, não como resultado.
 
+## 4-B. RESULTADOS v2 — onda×escudo e pulso mRNA (`ws_7_v2_wave.py` → `ws_7_results/ws_7_v2.json`)
+
+**A. Condição de contenção (r*):** a onda priônica morre onde o capping excede a replicação. Com o campo do v1, a casca de contenção em torno de um depósito de 1 mm vale:
+
+| θ (replicação/capping no pico) | 0.5 | 0.2 | 0.1 | 0.05 | 0.02 | 0.01 |
+|---|---|---|---|---|---|---|
+| **r* (mm)** | 1,7 | 2,9 | **4,2** | 5,6 | 7,7 | 9,5 |
+
+*Leitura:* se o pico do depósito tiver capacidade de capping 10-50× a taxa de replicação (θ 0,1-0,02 — plausível para secreção contínua vs conversão que depende de PrPSc disponível), a casca protetora tem 4-9 mm — **consistente com o espaçamento 8-12 mm do anel (v1)**: cascas vizinhas se sobrepõem com margem. θ é o parâmetro que o **G0-A5/A7 mede na prática** (gradiente proximal/distal), fechando o loop desenho⇄experimento.
+
+**B. Trem de pulsos mRNA (R2c / G0-A7):** vale entre pulsos (c_final/c_pico) por intervalo — 3d: 1,00 · 5d: 0,81 · **7d: 0,56** · 10d: 0,29 · 14d: 0,11.
+**REGRA DE DESENHO 3 (redose):** intervalo **≤7 dias** mantém cobertura contínua (≥50% do pico; alvo f≥0,3); a 10-14 dias aparecem vales de exposição. Alternativa: LNP de t½ de produção ≥4 dias (segunda geração) permitiria quinzenal.
+*Self-tests v2:* θ→1 retorna borda do depósito (1,0 mm) ✓; T→0 → razão 1,00 ✓.
+
 ## 5. Limitações (declaradas)
 1. k_eff é paramétrico (varredura 1e-6..1e-5) — o capping real depende da densidade de pontas de fibrila (acoplamento completo ao modelo de Masel fica para a versão 2 do solver).
 2. κ do espongiforme é sintética (50×) — substituir por mapa DTI/poroelástico quando houver imagem de paciente.

@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-26 00:05",
-    "version": "v2.3",
+    "updated": "2026-08-26 00:45",
+    "version": "v2.4",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "Mecanismo validado + planos B ancorados + AGORA ESCALA FÍSICA: o halo do escudo mede 4-6mm, o anel se dimensiona em 8-12mm entre nós, e o hidrogel certo (HA 1-2%) deixa a proteína sair. O desenho deixou de ser conceitual.",
     "views": [
@@ -869,12 +869,12 @@
     {
       "id": "ws7",
       "title": "O escudo alcança 4-6 mm — e isso dimensiona a cirurgia",
-      "label": "WS-7 solver: halo protetor ℓ=√(D/k)≈3,6mm; espaçamento do anel 8-12mm; hidrogel ξ≥5×r_p aprovado",
+      "label": "WS-7 solver v1+v2: halo 4-6mm; casca de contenção r*=4-9mm (θ 0.1-0.02); anel 8-12mm; hidrogel ξ≥5×r_p; mRNA redose ≤7d",
       "group": "entrega",
       "outlook": "valid",
       "status": "confirmed",
       "evidence": "computacional auto-testado (Thorne&Nicholson 2006; Masel 1999)",
-      "detail": "ADR FV em meio poroso heterogêneo: halo r10% = 4,2-5,8mm por nó → anel precisa de múltiplos nós espaçados 8-12mm; t_regime ~4 dias (readouts 90d OK); regra do hidrogel: ξ≥5×r_p (HA 1-2% APROVADO, >5% retém a secretora). Self-tests: massa 100%, ℓ err 0,5%. Reenquadramento: raio de proteção = módulo de Thiele clássico da eng. química.",
+      "detail": "ADR FV auto-testado (massa 100%, ℓ err 0,5%): halo r10%≈4-6mm/nó → anel espaçado 8-12mm; t_regime ~4d; hidrogel HA 1-2% aprovado (>5% retém). v2: casca de contenção r*=4,2-9,5mm para θ=0.1-0.02 (capping 10-50× replicação) — coerente com o anel; θ é o que o G0-A5/A7 mede. mRNA: redose ≤7d mantém vale ≥50% do pico (10d=29% <alvo).",
       "refs": [
         "PNAS 2006 (Thorne&Nicholson)",
         "Biophys Chem 1999 (Masel)"
@@ -1260,6 +1260,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-26",
+      "version": "v2.4 (WS-7 v2)",
+      "text": "WS-7 v2: confronto onda×escudo — casca de contenção r*=4,2mm(θ=0.1) a 9,5mm(θ=0.01) em torno do depósito; espaçamento 8-12mm do anel confirmado coerente (sobrepõe cascas). Regra mRNA: redose ≤7 dias (vale 56% do pico; 10d cai a 29%). θ = parâmetro que o G0-A5/A7 mede empiricamente. Self-tests v2 verdes."
+    },
     {
       "date": "2026-08-26",
       "version": "v2.3 (WS-7 solver)",
