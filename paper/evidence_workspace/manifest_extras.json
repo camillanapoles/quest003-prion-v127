@@ -1,0 +1,154 @@
+{
+ "provenance_note": "Every source below was opened and read by the accountability agents during Quest 003 (2026-08-24..26). Verification method recorded per source: [FT] full text fetched & extracted (archived in repo), [ABS] abstract fetched & read, [AUDIT] bibliographic record cross-checked in batch audit, [CODE] code/artifact downloaded & inspected, [RUN] executed ourselves. Repository anchors: literature/evidence_table.md, literature/refs_audit.md.",
+ "supports_map": {
+  "E001": [
+   "C001",
+   "C002",
+   "C003"
+  ],
+  "E002": [
+   "C004"
+  ],
+  "E003": [
+   "C005",
+   "C006",
+   "C007"
+  ],
+  "E004": [
+   "C008"
+  ],
+  "E005": [
+   "C009"
+  ],
+  "E006": [
+   "C009"
+  ],
+  "E007": [
+   "C010",
+   "C011",
+   "C012"
+  ],
+  "E008": [
+   "C013",
+   "C014"
+  ],
+  "E009": [
+   "C015",
+   "C016"
+  ],
+  "E010": [
+   "C017"
+  ],
+  "E011": [
+   "C018"
+  ],
+  "E012": [
+   "C019",
+   "C020"
+  ],
+  "E013": [
+   "C021"
+  ],
+  "E014": [
+   "C022"
+  ],
+  "E015": [
+   "C023"
+  ],
+  "E016": [
+   "C024"
+  ],
+  "E017": [
+   "C025"
+  ],
+  "E018": [
+   "C025"
+  ],
+  "E019": [
+   "C026"
+  ],
+  "E020": [
+   "C027"
+  ],
+  "E021": [
+   "C028"
+  ],
+  "E022": [
+   "C029"
+  ],
+  "E023": [
+   "C030"
+  ],
+  "E024": [
+   "C031"
+  ],
+  "E025": [
+   "C032"
+  ],
+  "E026": [
+   "C032"
+  ],
+  "E027": [
+   "C033"
+  ],
+  "E028": [
+   "C033"
+  ],
+  "E029": [
+   "C033"
+  ],
+  "E030": [
+   "C034",
+   "C035",
+   "C036"
+  ],
+  "E031": [
+   "C037",
+   "C038"
+  ],
+  "E032": [
+   "C039",
+   "C040",
+   "C041",
+   "C042"
+  ],
+  "E033": [
+   "C043"
+  ]
+ },
+ "notes": {
+  "E001": "FT — full text extracted 2026-08-24 via PMC (archived); abstract re-read 2026-08-25; heterozygote-vCJD caveat read directly from abstract",
+  "E002": "ABS — abstract fetched via search 2026-08-24; kuru/G127V positive selection",
+  "E003": "FT — full text (biorxiv .full-text) extracted 2026-08-25; anchorless DN, dose-dependence, post-cessation persistence, strain generality read directly",
+  "E004": "FT — PMC page + abstract extracted 2026-08-25; AAV-sc BvPrP-V127ΔGPI, retro-orbital, ~+50 days, proteomics",
+  "E005": "FT — Nature page + abstract 2026-08-25; NMR/X-ray: backbone constraint pre-β, H-bond dimer stabilization, β2-α2 loop dynamics",
+  "E006": "FT — PMC 2026-08-25 (structural basis)",
+  "E007": "FT — METHODS+RESULTS extracted in 3 sequential fetches 2026-08-26 (inocula titers, eclipse 25-28dpi, de-novo 35dpi, 169dpi titers MV2 2.13e5 / MV1 1.69e3, WB MV2-only) — anchors of WS-9 humanization",
+  "E008": "FT — abstract+intro 2026-08-25; PPS prophylactic+therapeutic in organoids = positive-control arm A8 rationale; also confirms model precedent",
+  "E009": "CODE+FT — preprint full text via webreader (113KB archived) AND MATLAB source downloaded, NB_Init/NB_Run/findreac decoded line-by-line; Params.csv values transcribed (Kt=[10,5] Kc=[10,50] Kr=[50,10] D0=1000)",
+  "E010": "ABS + figures legend 2026-08-26; ECS α≈0.20, tortuosity λ (macromolecule regime 1.6-2.0) — parameters of WS-7",
+  "E011": "ABS 2026-08-26; nucleated-polymerization kinetic framework (k_eff anchoring)",
+  "E012": "FT — Springer 2026-08-24; NPC seeding in sCJD organoids, electrophysiological restoration",
+  "E013": "FT — PLOS 2026-08-24; NSC prion replication + fate alteration",
+  "E014": "AUDIT+ABS — lineage refutation NSC→microglia",
+  "E015": "AUDIT+ABS — quiescent adult human SVZ",
+  "E016": "AUDIT (link corrected from a wrong Nat Protocols citation in an external document) + ABS",
+  "E017": "AUDIT 6/6 verified 2026-08-26 (hypoimmunogenic HLA-KO+CD47)",
+  "E018": "AUDIT 6/6 — CD47 necessary & sufficient, rhesus allograft survival",
+  "E019": "AUDIT 6/6 — 29.6% neurons / 38.1% astrocytes expression after single intrathecal dose",
+  "E020": "AUDIT 6/6 — HA hydrogel increases engrafted NSC survival",
+  "E021": "AUDIT — retraction note located & confirmed; exclusion rule in manuscript",
+  "E022": "AUDIT — minocycline reduces neuroinflammation without survival benefit; replaces E021 as the citable minocycline evidence",
+  "E023": "AUDIT — NfL 3.5× plasma / 5.7× CSF rise in at-risk individual",
+  "E024": "ABS — first Brazilian E200K report",
+  "E025": "ABS — canonical prion-like propagation review (added in hostile-review fix M7)",
+  "E026": "ABS — propagation canonical (M7)",
+  "E027": "ABS — regulatory anchor for biomarker-path approval",
+  "E028": "AUDIT — chronic intrathecal redosing precedent",
+  "E029": "ABS — human brain cell-graft precedent 2026",
+  "E030": "RUN — executed in-repo; self-tests: mass conservation 100.0%, Thiele numeric-vs-analytic error 0.5% (documented run logs)",
+  "E031": "RUN — 200k Monte-Carlo draws; analogue weights archived in artifact",
+  "E032": "RUN — executed twice on Google Colab VMs (user-witnessed); acceptance tiers T1/T2 asserted in-code and passed; outputs archived",
+  "E033": "PUBLIC — predictions committed before any wet-lab data exist"
+ }
+}

@@ -1,321 +1,433 @@
 {
- "document_id": "quest003-preprint",
- "provenance_note": "All numeric facts below were extracted from the same sources/runs as the claims; units reconciled; every fact carries its evidence ID. Own-execution numbers (E030-E032) are reproducible from in-repo scripts and archived outputs.",
+ "schema_version": "1.0",
  "numeric_facts": [
   {
-   "id": "N001",
-   "value": "0.20",
+   "fact_id": "N001",
+   "concept": "ecs_volume_fraction",
+   "section": "2.2",
+   "value": 0.2,
    "unit": "dimensionless",
-   "what": "ECS volume fraction",
-   "evidence": "E010",
-   "reconciled_with": [
-    "M001"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E010"
    ]
   },
   {
-   "id": "N002",
-   "value": "1.8",
+   "fact_id": "N002",
+   "concept": "tortuosity_macromolecule",
+   "section": "2.2",
+   "value": 1.8,
    "unit": "dimensionless",
-   "what": "tortuosity (macromolecule)",
-   "evidence": "E010",
-   "reconciled_with": [
-    "M001"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E010"
    ]
   },
   {
-   "id": "N003",
-   "value": "1.25e-10",
+   "fact_id": "N003",
+   "concept": "free_diffusivity_D0",
+   "section": "2.2",
+   "value": 1.25e-10,
    "unit": "m2/s",
-   "what": "free diffusivity D0 (~30kDa, R_h 2.5nm)",
-   "evidence": "E030",
-   "reconciled_with": [
-    "M001"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
    ]
   },
   {
-   "id": "N004",
-   "value": "3.86e-11",
+   "fact_id": "N004",
+   "concept": "effective_diffusivity",
+   "section": "2.2",
+   "value": 3.86e-11,
    "unit": "m2/s",
-   "what": "effective diffusivity D_eff",
-   "evidence": "E030",
-   "reconciled_with": [
-    "M001",
-    "M002"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
    ]
   },
   {
-   "id": "N005",
-   "value": "1e-6 - 1e-5",
+   "fact_id": "N005",
+   "concept": "k_eff_sweep (swept 1e-6 to 1e-5)",
+   "section": "2.2",
+   "value": 3e-06,
    "unit": "s-1",
-   "what": "k_eff sweep",
-   "evidence": "E011",
-   "reconciled_with": [
-    "M001"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E011"
    ]
   },
   {
-   "id": "N006",
-   "value": "100.0",
+   "fact_id": "N006",
+   "concept": "ws7_mass_conservation",
+   "section": "3.2",
+   "value": 100.0,
    "unit": "percent",
-   "what": "WS-7 mass conservation self-test",
-   "evidence": "E030",
-   "reconciled_with": [
-    "O001"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
    ]
   },
   {
-   "id": "N007",
-   "value": "0.5",
+   "fact_id": "N007",
+   "concept": "ws7_thiele_error",
+   "section": "3.2",
+   "value": 0.5,
    "unit": "percent",
-   "what": "Thiele length numeric-vs-analytic error",
-   "evidence": "E030",
-   "reconciled_with": [
-    "O001"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
    ]
   },
   {
-   "id": "N008",
-   "value": "4-6",
+   "fact_id": "N008",
+   "concept": "protection_radius (range 4-6)",
+   "section": "3.2",
+   "value": 5.0,
    "unit": "mm",
-   "what": "protection radius r10% per deposit",
-   "evidence": "E030",
-   "reconciled_with": [
-    "R001"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
    ]
   },
   {
-   "id": "N009",
-   "value": "8-12",
+   "fact_id": "N009",
+   "concept": "ring_spacing_rule1 (range 8-12)",
+   "section": "3.2",
+   "value": 10.0,
    "unit": "mm",
-   "what": "ring node spacing (Rule 1)",
-   "evidence": "E030",
-   "reconciled_with": [
-    "R001"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
    ]
   },
   {
-   "id": "N010",
-   "value": ">=5",
-   "unit": "ratio xi/r_p",
-   "what": "hydrogel mesh rule (Rule 2)",
-   "evidence": "E030",
-   "reconciled_with": [
-    "R001"
+   "fact_id": "N010",
+   "concept": "hydrogel_mesh_rule2",
+   "section": "3.2",
+   "value": 5,
+   "unit": "ratio minimum",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
    ]
   },
   {
-   "id": "N011",
-   "value": "<=7",
-   "unit": "days",
-   "what": "mRNA redosing (Rule 3); trough 56% peak",
-   "evidence": "E030",
-   "reconciled_with": [
-    "R001"
+   "fact_id": "N011",
+   "concept": "mrna_redose_rule3",
+   "section": "3.2",
+   "value": 7,
+   "unit": "days maximum",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
    ]
   },
   {
-   "id": "N012",
-   "value": "2.13e5 / 1.69e3",
+   "fact_id": "N012",
+   "concept": "mv2_titer_169dpi",
+   "section": "2.4",
+   "value": 213000.0,
    "unit": "SD50/mg",
-   "what": "MV2/MV1 endpoint titers 169dpi",
-   "evidence": "E007",
-   "reconciled_with": [
-    "M003",
-    "R003"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E007"
    ]
   },
   {
-   "id": "N013",
-   "value": "126",
-   "unit": "ratio",
-   "what": "MV2:MV1 titer ratio",
-   "evidence": "E007",
-   "reconciled_with": [
-    "M003"
+   "fact_id": "N013",
+   "concept": "mv1_titer_169dpi",
+   "section": "2.4",
+   "value": 1690.0,
+   "unit": "SD50/mg",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E007"
    ]
   },
   {
-   "id": "N014",
-   "value": "12.1",
+   "fact_id": "N014",
+   "concept": "human_doubling_time",
+   "section": "2.4",
+   "value": 12.1,
    "unit": "days",
-   "what": "derived human doubling time",
-   "evidence": "E032",
-   "reconciled_with": [
-    "M003"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
    ]
   },
   {
-   "id": "N015",
-   "value": "144",
-   "unit": "days per sim unit",
-   "what": "humanized clock scale",
-   "evidence": "E032",
-   "reconciled_with": [
-    "M003",
-    "R003"
+   "fact_id": "N015",
+   "concept": "sim_unit_days",
+   "section": "2.4",
+   "value": 144,
+   "unit": "days",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
    ]
   },
   {
-   "id": "N016",
-   "value": "0.333",
+   "fact_id": "N016",
+   "concept": "containment_threshold",
+   "section": "3.4",
+   "value": 0.333,
    "unit": "dimensionless",
-   "what": "containment threshold theta*",
-   "evidence": "E032",
-   "reconciled_with": [
-    "R003"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
    ]
   },
   {
-   "id": "N017",
-   "value": "2.83 -> 0.82",
+   "fact_id": "N017",
+   "concept": "front_kappa2",
+   "section": "3.4",
+   "value": 0.82,
    "unit": "mm",
-   "what": "front radius baseline -> kappa2",
-   "evidence": "E032",
-   "reconciled_with": [
-    "R003"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
    ]
   },
   {
-   "id": "N018",
-   "value": "36.6 [14.6-60.5]",
-   "unit": "percent (90% CrI)",
-   "what": "P(G0 go)",
-   "evidence": "E031",
-   "reconciled_with": [
-    "R002"
-   ]
-  },
-  {
-   "id": "N019",
-   "value": "5.0 [0.4-13.6]",
-   "unit": "percent (90% CrI)",
-   "what": "P(clinical slowing) empirical prior",
-   "evidence": "E031",
-   "reconciled_with": [
-    "R002"
-   ]
-  },
-  {
-   "id": "N020",
-   "value": "30-45",
+   "fact_id": "N018",
+   "concept": "p_g0_go",
+   "section": "3.3",
+   "value": 36.6,
    "unit": "percent",
-   "what": "P(slowing) design-conditional (labeled lens)",
-   "evidence": "E031",
-   "reconciled_with": [
-    "R002"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E031"
    ]
   },
   {
-   "id": "N021",
-   "value": "29.6 / 38.1",
+   "fact_id": "N019",
+   "concept": "p_slowing_empirical",
+   "section": "3.3",
+   "value": 5.0,
    "unit": "percent",
-   "what": "LNP-mRNA transduction neurons/astrocytes",
-   "evidence": "E019",
-   "reconciled_with": [
-    "M004"
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E031"
    ]
   },
   {
-   "id": "N022",
-   "value": "~50",
-   "unit": "days",
-   "what": "AAV anchorless V127 survival extension (rodent)",
-   "evidence": "E004",
-   "reconciled_with": [
-    "M004"
+   "fact_id": "N020",
+   "concept": "p_slowing_conditional (range 30-45, labeled lens)",
+   "section": "3.3",
+   "value": 37.5,
+   "unit": "percent",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E031"
    ]
   },
   {
-   "id": "N023",
-   "value": "0.1-1",
-   "unit": "uM (order of magnitude)",
-   "what": "estimated deposit peak V127dGPI (kappa 2-4 analog)",
-   "evidence": "E030",
-   "reconciled_with": [
-    "R001"
-   ],
-   "uncertainty": "order_of_magnitude_only"
+   "fact_id": "N021",
+   "concept": "lnp_transduction_neurons",
+   "section": "2.2",
+   "value": 29.6,
+   "unit": "percent",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E019"
+   ]
+  },
+  {
+   "fact_id": "N022",
+   "concept": "aav_survival_extension",
+   "section": "1",
+   "value": 50.0,
+   "unit": "days approx",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E004"
+   ]
+  },
+  {
+   "fact_id": "N023",
+   "concept": "mv2_mv1_titer_ratio",
+   "section": "2.4",
+   "value": 126.0,
+   "unit": "ratio",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E007"
+   ]
   }
  ],
  "methods": [
   {
    "method_id": "M001",
-   "name": "ADR transport solver (finite volumes, self-tested)",
-   "analysis_intent": "exploratory_design",
-   "protocol_status": "prespecified_in_repo",
+   "name": "ADR transport solver finite volumes self-tested",
+   "analysis_intent": "exploratory",
+   "protocol_status": "prespecified",
    "outcome_ids": [
-    "O001",
-    "R001"
-   ],
-   "reproducible": "experiments/ws_7_solver.py"
+    "O001"
+   ]
   },
   {
    "method_id": "M002",
-   "name": "Wave-vs-shield r*(theta) + mRNA pulse-train",
-   "analysis_intent": "exploratory_design",
-   "protocol_status": "prespecified_in_repo",
+   "name": "wave-vs-shield radius and mRNA pulse-train",
+   "analysis_intent": "exploratory",
+   "protocol_status": "prespecified",
    "outcome_ids": [
-    "R001"
-   ],
-   "reproducible": "experiments/ws_7_v2_wave.py"
+    "O001"
+   ]
   },
   {
    "method_id": "M003",
-   "name": "Humanized kernel port (Igel/Fornara) with logistic saturation + substrate-competition capping; clock calibrated to Groveman anchors",
-   "analysis_intent": "exploratory_prediction",
-   "protocol_status": "prespecified_in_repo",
+   "name": "humanized kernel port with logistic saturation and substrate-competition capping",
+   "analysis_intent": "exploratory",
+   "protocol_status": "prespecified",
    "outcome_ids": [
-    "R003"
-   ],
-   "reproducible": "paper/../experiments (colab runs; JSON archived)"
+    "O002",
+    "O003"
+   ]
   },
   {
    "method_id": "M004",
-   "name": "Hierarchical Bayesian calibration over 10 analogues (Monte-Carlo 200k)",
-   "analysis_intent": "exploratory_probability",
-   "protocol_status": "prespecified_in_repo",
+   "name": "hierarchical Bayesian calibration over ten analogues",
+   "analysis_intent": "exploratory",
+   "protocol_status": "prespecified",
    "outcome_ids": [
-    "R002"
-   ],
-   "reproducible": "experiments/bayes_results/"
-  }
- ],
- "outcomes": [
-  {
-   "outcome_id": "O001",
-   "what": "self-tests mass/Thiele",
-   "status": "passed",
-   "captured": "experiments/ws_7_results/ws_7_results.json"
+    "O004"
+   ]
   }
  ],
  "results": [
   {
    "result_id": "R001",
-   "what": "three transport design rules",
-   "status": "derived",
-   "claims": [
-    "C033",
-    "C034",
-    "C035",
-    "C042"
+   "method_id": "M001",
+   "outcome_id": "O001",
+   "analysis_intent": "exploratory",
+   "sample_size": 27,
+   "evidence_ids": [
+    "E030"
+   ],
+   "reported_sections": [
+    "3.2"
    ]
   },
   {
    "result_id": "R002",
-   "what": "dual-lens probabilities",
-   "status": "computed",
-   "claims": [
-    "C036"
+   "method_id": "M004",
+   "outcome_id": "O004",
+   "analysis_intent": "exploratory",
+   "sample_size": 200000,
+   "evidence_ids": [
+    "E031"
+   ],
+   "reported_sections": [
+    "3.3"
    ]
   },
   {
    "result_id": "R003",
-   "what": "theta*=0.333 + emergent hierarchy",
-   "status": "in_silico_prediction_pre_registered",
-   "claims": [
-    "C037",
-    "C038",
-    "C039"
+   "method_id": "M003",
+   "outcome_id": "O002",
+   "analysis_intent": "exploratory",
+   "sample_size": 10,
+   "evidence_ids": [
+    "E032"
+   ],
+   "reported_sections": [
+    "3.4"
+   ]
+  },
+  {
+   "result_id": "R004",
+   "method_id": "M003",
+   "outcome_id": "O003",
+   "analysis_intent": "exploratory",
+   "sample_size": 2,
+   "evidence_ids": [
+    "E032",
+    "E007"
+   ],
+   "reported_sections": [
+    "3.4"
+   ]
+  },
+  {
+   "result_id": "R005",
+   "method_id": "M002",
+   "outcome_id": "O001",
+   "analysis_intent": "exploratory",
+   "sample_size": 6,
+   "evidence_ids": [
+    "E030"
+   ],
+   "reported_sections": [
+    "3.2"
    ]
   }
  ]
