@@ -1,0 +1,115 @@
+{
+ "methods": [
+  {
+   "analysis_intent": "confirmatory",
+   "method_id": "M001",
+   "name": "[[TODO:verified-method-name]]",
+   "outcome_ids": [
+    "O001"
+   ],
+   "protocol_status": "prespecified"
+  }
+ ],
+ "numeric_facts": [
+  {
+   "fact": "theta_star_human",
+   "value": "0.333",
+   "units": "dimensionless",
+   "locations": [
+    "abstract",
+    "s8",
+    "fig1",
+    "s8_pred"
+   ],
+   "verified": false
+  },
+  {
+   "fact": "clock",
+   "value": "144",
+   "units": "days per simulation unit",
+   "locations": [
+    "abstract",
+    "s8"
+   ],
+   "verified": false
+  },
+  {
+   "fact": "t_double_human",
+   "value": "12.1",
+   "units": "days",
+   "locations": [
+    "s8"
+   ],
+   "verified": false
+  },
+  {
+   "fact": "halo_r10pct",
+   "value": "4.2-5.8",
+   "units": "mm",
+   "locations": [
+    "s7"
+   ],
+   "verified": false
+  },
+  {
+   "fact": "ring_spacing",
+   "value": "8-12",
+   "units": "mm",
+   "locations": [
+    "s7_rules",
+    "s8_pred"
+   ],
+   "verified": false
+  },
+  {
+   "fact": "bayes_g0",
+   "value": "36.6 [14.6,60.5]",
+   "units": "percent CI90",
+   "locations": [
+    "s9"
+   ],
+   "verified": false
+  },
+  {
+   "fact": "bayes_slow",
+   "value": "5.0 [0.4,13.6]",
+   "units": "percent CI90",
+   "locations": [
+    "s9"
+   ],
+   "verified": false
+  },
+  {
+   "fact": "refs_count",
+   "value": "42",
+   "units": "references",
+   "locations": [
+    "refs"
+   ],
+   "verified": false
+  },
+  {
+   "fact": "mv2_mv1_ratio",
+   "value": "126",
+   "units": "x",
+   "locations": [
+    "s8_emerg"
+   ],
+   "verified": false
+  }
+ ],
+ "results": [
+  {
+   "analysis_intent": "confirmatory",
+   "evidence_ids": [
+    "E001"
+   ],
+   "method_id": "M001",
+   "outcome_id": "O001",
+   "reported_sections": [],
+   "result_id": "R001",
+   "sample_size": null
+  }
+ ],
+ "schema_version": "1.0"
+}

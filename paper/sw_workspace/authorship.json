@@ -1,0 +1,41 @@
+{
+ "accountability": {
+  "all_authors_approved": false,
+  "guarantor_author_ids": []
+ },
+ "ai_use": {
+  "disclosed": true,
+  "ai_is_author": false,
+  "scope": "literature retrieval, code execution, simulation porting, draft generation under human instruction",
+  "policy_ref": "SW-S01/SW-S03"
+ },
+ "authors": [
+  {
+   "name": "Camilla N.",
+   "role": "corresponding",
+   "affiliation": "Independent Researcher, S\u00e3o Paulo, Brazil",
+   "credit": [
+    "conceptualization",
+    "methodology",
+    "software",
+    "investigation",
+    "formal analysis",
+    "writing original draft",
+    "project administration"
+   ],
+   "accountable_for": [
+    "source verification of E001-E012 critical claims",
+    "final approval"
+   ]
+  }
+ ],
+ "contributors": [],
+ "corresponding_author_id": "",
+ "declarations": {
+  "ethics": "computational/literature only; no human/animal primary data by consortium",
+  "funding": "none; volunteer; Colab free tier",
+  "conflicts": "none declared",
+  "code_license": "MIT (code), CC BY 4.0 (documents)"
+ },
+ "schema_version": "1.0"
+}

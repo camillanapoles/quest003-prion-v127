@@ -1,0 +1,149 @@
+{
+ "schema_version": "1.0",
+ "sources": [
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E001",
+   "identifiers": {
+    "doi": "",
+    "isbn": "",
+    "pmcid": "",
+    "pmid": "",
+    "url": ""
+   },
+   "locator": "[[TODO:page-table-figure-section-or-record-location]]",
+   "source_type": "other",
+   "title": "[[TODO:verified-source-title]]",
+   "verification": {
+    "source_opened": false,
+    "status": "unverified",
+    "verified_by": "",
+    "verified_on": ""
+   },
+   "year": null
+  },
+  {
+   "id": "E001",
+   "doi_or_handle": "10.1038/nature14510",
+   "title": "Asante EA et al. 2015 Nature 522:478-481 \u2014 biallelic V127 complete resistance; heterozygote vCJD permeability; DN dose-dependent",
+   "locator": "https://pubmed.ncbi.nlm.nih.gov/26061765/",
+   "verification": {
+    "verified_by_agent_fetch": "verified"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E002",
+   "doi_or_handle": "bioRxiv 2026.02.17.703887",
+   "title": "Gatdula JRP et al. 2026 \u2014 anchorless V127 dominant-negative in trans; protection persists post-cessation",
+   "locator": "https://www.biorxiv.org/content/10.64898/2026.02.17.703887v1",
+   "verification": {
+    "verified_by_agent_fetch": "verified_preprint"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E003",
+   "doi_or_handle": "PMC13041815",
+   "title": "Zerbes T et al. 2026 \u2014 AAV anchorless V127 +50d survival rodent",
+   "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13041815/",
+   "verification": {
+    "verified_by_agent_fetch": "verified_preprint"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E004",
+   "doi_or_handle": "10.1056/NEJMoa0809716",
+   "title": "Mead S et al. 2009 NEJM \u2014 kuru selection of G127V",
+   "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4486072/",
+   "verification": {
+    "verified_by_agent_fetch": "verified"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E005",
+   "doi_or_handle": "doi:10.1038/s42003-020-01126-6",
+   "title": "Hosszu 2020 Commun Biol \u2014 dimer stabilization structural basis",
+   "locator": "https://www.nature.com/articles/s42003-020-01126-6",
+   "verification": {
+    "verified_by_agent_fetch": "verified"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E006",
+   "doi_or_handle": "10.1186/s40478-019-0742-2",
+   "title": "Groveman 2019 Acta Neuropathol \u2014 organoid infection; MV2/MV1 titers 2.13e5/1.69e3; eclipse 25-35dpi",
+   "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6567389/",
+   "verification": {
+    "verified_by_agent_fetch_fulltext": "verified"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E007",
+   "doi_or_handle": "10.1038/s41598-021-84689-6",
+   "title": "Groveman 2021 Sci Rep \u2014 PPS organoid screening (positive control basis)",
+   "locator": "https://www.nature.com/articles/s41598-021-84689-6",
+   "verification": {
+    "verified_by_agent_fetch": "verified"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E008",
+   "doi_or_handle": "10.1186/s13287-023-03591-2",
+   "title": "Williams 2023 SCRT \u2014 NPC seeding restores electrophysiology",
+   "locator": "https://link.springer.com/article/10.1186/s13287-023-03591-2",
+   "verification": {
+    "verified_by_agent_fetch": "verified"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E009",
+   "doi_or_handle": "Zenodo 11093945",
+   "title": "Fornara/Igel iScience 2024 \u2014 stochastic spreading model + code (kernel ported in WS-9)",
+   "locator": "https://zenodo.org/records/11093945",
+   "verification": {
+    "verified_by_agent_fetch_code": "verified"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E010",
+   "doi_or_handle": "10.1073/pnas.0509425103",
+   "title": "Thorne & Nicholson 2006 PNAS \u2014 ECS alpha=0.20 lambda=1.8 human in-vivo",
+   "locator": "https://www.pnas.org/doi/10.1073/pnas.0509425103",
+   "verification": {
+    "verified_by_agent_search": "verified"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E011",
+   "doi_or_handle": "10.1007/s13311-020-00909-3",
+   "title": "RETRACTION: Shah 2017 Neurotherapeutics minocycline/FK506 (retracted 2020) \u2014 banned by rule",
+   "locator": "https://link.springer.com/article/10.1007/s13311-020-00909-3",
+   "verification": {
+    "verified_by_agent_fetch": "retracted_excluded"
+   },
+   "confidentiality": "public"
+  },
+  {
+   "id": "E012",
+   "doi_or_handle": "repo:quest003-computations",
+   "title": "Consortium computations WS-7/WS-8/WS-9: self-tested ADR solver; humanized port; deterministic builds",
+   "locator": "git:quests/003 (commits 550c86b..7199abc)",
+   "verification": {
+    "verified_by_reproduction": "verified_own"
+   },
+   "confidentiality": "public"
+  }
+ ],
+ "document_id": "quest003v4",
+ "status": "draft-complete-pending-human-verification"
+}

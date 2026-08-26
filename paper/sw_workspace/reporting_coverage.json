@@ -1,0 +1,17 @@
+{
+ "disclaimer": "Non-scoring coverage aid only; not a quality appraisal or compliance certificate.",
+ "guideline_id": "[[TODO:guideline-id]]",
+ "items": [],
+ "schema_version": "1.0",
+ "coverage": {
+  "design": "methodological preprint (no primary study) \u2014 guideline: none-complete; SPIRIT-style for protocol sections",
+  "reproducibility": {
+   "deterministic_builds": true,
+   "parameters_version_locked": true,
+   "code_public": "MIT"
+  },
+  "limitations_declared": 6,
+  "preregistered_predictions": "theta<0.33 containment; halo 4-6mm; readout 90-120d",
+  "bilingual": "EN+PT full parity"
+ }
+}
