@@ -120,3 +120,13 @@ Equação resolvida (ADR em meio poroso):
 ```
 **θ* ∈ (0,20 ; 0,33)** — transição abrupta (bifurcação de frente FKPP), contenção ROBUSTA acima do limiar e progressiva até esterilização. R=0,8mm ≈ raio da semente. Motor: auto-cat C→2C (findreac Igel decodificado) + saturação logística. T1=True (guard-rail do usuário) respeitado antes da leitura.
 **Predição pré-registrada p/ G0:** se θ_medido(organoide) < ~0,2 → contenção vence in situ.
+
+## WS-9 v4 HUMANIZADO — RESULTADO FINAL (execução completa, 17,3 min de VM, usuário no Colab)
+**Relógio:** 1 unidade sim = **144 dias reais** (t_dupl humano = 12,1 dias, âncoras Groveman 2019) → sim completa ≈ 720 dias ≈ 24 meses — espelha a janela real 169dpi expandida p/ escala de terapia crônica.
+**Sweep MV2 (semente alta):** κ=2 (θ=0,333) JÁ contém (R=0,82mm) → θ*_humano = **0,333** — limiar MAIS BAIXO que o v2 murino (0,20-0,33): com clock/amplitude humanos, a contenção fica MAIS fácil.
+**Progressão:** κ=2→32: R 0,82→0,70mm (contenção monotônica, sem platô-teto do v2).
+**MV1-like (semente 126× menor):** baseline cresce (R=2,83mm igual!) mas κ=4 contém a 0,69mm — contido com MARGEM ainda maior. Ordem qualitativa reproduz o Groveman: MV2 agressivo/WB+, MV1 contível.
+**Predição pré-registrada final do G0 (trava):**
+- θ_medido < 0,33 → contenção vence (limiar humanizado)
+- Halo/anel: espaçamento 8-12mm (WS-7) inalterado (espaço é humano desde o início)
+- Calendário: efeitos detectáveis ~90-120 dias pós-seeding no organoide; equivalente tecidual ≈ 24 meses de doença coberto pela sim
