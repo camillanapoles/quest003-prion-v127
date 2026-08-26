@@ -1,0 +1,55 @@
+{
+ "self_tests": {
+  "T1_cresce_sem_V127": false,
+  "T2_contem_com_V127": false
+ },
+ "baseline": {
+  "final_R_mm": 1.07,
+  "total_final": 206.0
+ },
+ "theta_sweep": [
+  {
+   "kcap": 0,
+   "theta_ref": 1.0,
+   "final_R_mm": 1.07,
+   "total": 206.0
+  },
+  {
+   "kcap": 0.5,
+   "theta_ref": 0.667,
+   "final_R_mm": 1.09,
+   "total": 206.0
+  },
+  {
+   "kcap": 1,
+   "theta_ref": 0.5,
+   "final_R_mm": 1.09,
+   "total": 206.0
+  },
+  {
+   "kcap": 2,
+   "theta_ref": 0.333,
+   "final_R_mm": 1.09,
+   "total": 206.0
+  },
+  {
+   "kcap": 4,
+   "theta_ref": 0.2,
+   "final_R_mm": 1.09,
+   "total": 206.0
+  },
+  {
+   "kcap": 8,
+   "theta_ref": 0.111,
+   "final_R_mm": 1.09,
+   "total": 206.0
+  },
+  {
+   "kcap": 16,
+   "theta_ref": 0.059,
+   "final_R_mm": 1.09,
+   "total": 206.0
+  }
+ ],
+ "nota": "Port mean-field do Igel 2024 (params Zenodo) + capping V127ΔGPI (κ·c inibe templating); r* emerge da varredura; validação fina exige port estocástico completo (próx. passo)."
+}

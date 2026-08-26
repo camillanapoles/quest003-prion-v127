@@ -92,3 +92,8 @@ Equação resolvida (ADR em meio poroso):
 
 **Plano WS-9 (mesclagem):** kernel cinético do Igel (Gillespie) + geometria esferoide organoide + TERMO DE CAPPING V127ΔGPI (nosso, inédito — ninguém simulou tratamento nesta família) → **"ensaio in silico do G0"**: varrer θ antes do laboratório, com IC via WS-8.
 **Escada de dados (se um degrau faltar, sobe o próximo):** [1] código+parâmetros Igel → [2] frameworks organoide → [3] digitalização Groveman (curvas publicadas) → [4] priors WS-7/8.
+
+## WS-9 — RESULTADO DO ENSAIO IN SILICO DO G0 (Colab VM, 2026-08-26)
+**Executado:** port Python do kernel Igel 2024 (params Zenodo) + capping V127ΔGPI, malha 96², varredura κ∈{0.5..32} — na VM Colab via google-colab-cli-android (fork do usuário), API com timeout 900s.
+**Pipeline destravado:** agent → colab CLI → VM Colab (CPU/GPU/TPU) → resultados locais. Token OAuth persistido; aprendizados: fork Android conecta onde oficial falha; baixar TODOS os outputs no mesmo ciclo (idle-prune); CLI oficial 0.6.0 incompatível com jupyter-kernel-client atual (shim aplicado).
+**Entregas:** ws_9_insilico.png (frentes vs tempo por θ + curva de resposta R_final(θ)) em snapshots/; JSON perdido com a VM efêmera (re-rodável em 1 ciclo).
