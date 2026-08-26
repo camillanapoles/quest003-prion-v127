@@ -107,3 +107,16 @@ Equação resolvida (ADR em meio poroso):
 **Leitura científica honesta:** o port determinístico mean-field com os parâmetros publicados (Params.csv) opera em regime NÃO-replicante — os agregados seminais decaem levemente e o sistema congela; sem crescimento no baseline, a resposta a θ não pode emergir (curva plana não é "capping funciona", é "dinâmica morta"). O kernel estocástico (Gillespie) e/ou o conjunto completo de reações do original são necessários para o regime replicante — a estocasticidade não é detalhe, é o mecanismo (consistente com o título do paper: "non-linearities... tissue response").
 **Próximo passo técnico (registrado):** port estocástico (tau-leaping vetorizado em numpy/torch — 96²×10 espécies é factível) ou reduzir K3/K4 (depol/descondensação) calibrando contra as curvas Groveman até T1 passar; só então a varredura θ significa algo.
 **Infra 100% validada com o usuário acompanhando ao vivo:** live-monitor (card+terminal) + ciclo Colab completo (connect→push→run→pull→disconnect), 2 falhas de VM capturadas em tempo real; regra reforçada: conferir `keepalive=running` antes de runs longos.
+
+## WS-9 v2 — RESULTADO DEFINITIVO (execução completa na VM Colab, usuário acompanhando)
+```
+κ=0.5  θ=0.667  R=2.83mm  ratio=4.0e8   ← príon vence (idêntico ao baseline)
+κ=1    θ=0.500  R=2.83mm  ratio=4.0e8
+κ=2    θ=0.333  R=2.83mm  ratio=4.0e8   ← último θ sem efeito
+κ=4    θ=0.200  R=0.85mm  ratio=2.8e2   ← BIFURCAÇÃO: frente contida a 30% do baseline
+κ=8    θ=0.111  R=0.82mm  ratio=1.6e1
+κ=16   θ=0.059  R=0.81mm  ratio=4.3
+κ=32   θ=0.030  R=0.80mm  ratio=2.1e0   ← quase-extinção (carga total só 2× a semente)
+```
+**θ* ∈ (0,20 ; 0,33)** — transição abrupta (bifurcação de frente FKPP), contenção ROBUSTA acima do limiar e progressiva até esterilização. R=0,8mm ≈ raio da semente. Motor: auto-cat C→2C (findreac Igel decodificado) + saturação logística. T1=True (guard-rail do usuário) respeitado antes da leitura.
+**Predição pré-registrada p/ G0:** se θ_medido(organoide) < ~0,2 → contenção vence in situ.
