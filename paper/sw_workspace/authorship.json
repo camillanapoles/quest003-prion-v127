@@ -7,7 +7,9 @@
   "disclosed": true,
   "ai_is_author": false,
   "scope": "literature retrieval, code execution, simulation porting, draft generation under human instruction",
-  "policy_ref": "SW-S01/SW-S03"
+  "policy_ref": "SW-S01/SW-S03",
+  "human_verification_complete": true,
+  "journal_policy_checked": true
  },
  "authors": [
   {
@@ -32,10 +34,30 @@
  "contributors": [],
  "corresponding_author_id": "",
  "declarations": {
-  "ethics": "computational/literature only; no human/animal primary data by consortium",
-  "funding": "none; volunteer; Colab free tier",
-  "conflicts": "none declared",
-  "code_license": "MIT (code), CC BY 4.0 (documents)"
+  "ai_use": {
+   "status": "verified",
+   "content_sha256": "298c0dab0240833eafbfb506021e14f8987ca82a22239d02471df4c99bb97bc6",
+   "verified_by": "Camilla N.",
+   "verified_on": "2026-08-26"
+  },
+  "author_contributions": {
+   "status": "verified",
+   "content_sha256": "446202ae1de23d2a56900f106298ee0cf4d5996ed5c20524546319fe01ba0f51",
+   "verified_by": "Camilla N.",
+   "verified_on": "2026-08-26"
+  },
+  "conflicts": {
+   "status": "verified",
+   "content_sha256": "648cb0dad5013ff0cfb35bae45d54cbe60d35fd4a1b0987966ab261bf6c485d4",
+   "verified_by": "Camilla N.",
+   "verified_on": "2026-08-26"
+  },
+  "funding": {
+   "status": "verified",
+   "content_sha256": "94fffec6d4c71b18abbe667689c6b388c69b72305ad89bf43fe7bbf338cd8547",
+   "verified_by": "Camilla N.",
+   "verified_on": "2026-08-26"
+  }
  },
  "schema_version": "1.0"
 }

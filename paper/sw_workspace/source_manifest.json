@@ -2,148 +2,294 @@
  "schema_version": "1.0",
  "sources": [
   {
-   "authors": [],
-   "confidentiality": "public",
    "evidence_id": "E001",
+   "source_type": "journal_article",
+   "title": "A naturally occurring variant of the human prion protein completely prevents prion disease",
+   "authors": [
+    "Asante EA et al."
+   ],
+   "year": 2015,
+   "identifiers": {
+    "doi": "10.1038/nature14510",
+    "pmid": "26061765",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26061765/"
+   },
+   "locator": "table 1; abstract",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
+  },
+  {
+   "evidence_id": "E002",
+   "source_type": "preprint",
+   "title": "Leveraging the dominant-negative effect of the kuru-protective G127V variant",
+   "authors": [
+    "Gatdula JRP et al."
+   ],
+   "year": 2026,
+   "identifiers": {
+    "doi": "10.1101/2026.02.17.703887",
+    "pmid": "",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://www.biorxiv.org/content/10.64898/2026.02.17.703887v1"
+   },
+   "locator": "abstract; fig 5",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
+  },
+  {
+   "evidence_id": "E003",
+   "source_type": "preprint",
+   "title": "scAAV anchorless PrP G127V extends survival in rodent prion disease",
+   "authors": [
+    "Zerbes T et al."
+   ],
+   "year": 2026,
    "identifiers": {
     "doi": "",
-    "isbn": "",
-    "pmcid": "",
     "pmid": "",
-    "url": ""
+    "pmcid": "PMC13041815",
+    "isbn": "",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13041815/"
    },
-   "locator": "[[TODO:page-table-figure-section-or-record-location]]",
-   "source_type": "other",
-   "title": "[[TODO:verified-source-title]]",
+   "locator": "abstract",
+   "confidentiality": "public",
    "verification": {
-    "source_opened": false,
-    "status": "unverified",
-    "verified_by": "",
-    "verified_on": ""
-   },
-   "year": null
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   },
   {
-   "id": "E001",
-   "doi_or_handle": "10.1038/nature14510",
-   "title": "Asante EA et al. 2015 Nature 522:478-481 \u2014 biallelic V127 complete resistance; heterozygote vCJD permeability; DN dose-dependent",
-   "locator": "https://pubmed.ncbi.nlm.nih.gov/26061765/",
-   "verification": {
-    "verified_by_agent_fetch": "verified"
+   "evidence_id": "E004",
+   "source_type": "journal_article",
+   "title": "A novel protective prion protein variant colocalizes with kuru exposure",
+   "authors": [
+    "Mead S et al."
+   ],
+   "year": 2009,
+   "identifiers": {
+    "doi": "10.1056/NEJMoa0809716",
+    "pmid": "",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4486072/"
    },
-   "confidentiality": "public"
+   "locator": "abstract",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   },
   {
-   "id": "E002",
-   "doi_or_handle": "bioRxiv 2026.02.17.703887",
-   "title": "Gatdula JRP et al. 2026 \u2014 anchorless V127 dominant-negative in trans; protection persists post-cessation",
-   "locator": "https://www.biorxiv.org/content/10.64898/2026.02.17.703887v1",
-   "verification": {
-    "verified_by_agent_fetch": "verified_preprint"
+   "evidence_id": "E005",
+   "source_type": "journal_article",
+   "title": "Structural effects of the protective V127 polymorphism",
+   "authors": [
+    "Hosszu LP et al."
+   ],
+   "year": 2020,
+   "identifiers": {
+    "doi": "10.1038/s42003-020-01126-6",
+    "pmid": "",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://www.nature.com/articles/s42003-020-01126-6"
    },
-   "confidentiality": "public"
+   "locator": "abstract",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   },
   {
-   "id": "E003",
-   "doi_or_handle": "PMC13041815",
-   "title": "Zerbes T et al. 2026 \u2014 AAV anchorless V127 +50d survival rodent",
-   "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13041815/",
-   "verification": {
-    "verified_by_agent_fetch": "verified_preprint"
+   "evidence_id": "E006",
+   "source_type": "journal_article",
+   "title": "Sporadic CJD prion infection of human cerebral organoids",
+   "authors": [
+    "Groveman BR et al."
+   ],
+   "year": 2019,
+   "identifiers": {
+    "doi": "10.1186/s40478-019-0742-2",
+    "pmid": "",
+    "pmcid": "PMC6567389",
+    "isbn": "",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6567389/"
    },
-   "confidentiality": "public"
+   "locator": "fig 3; results",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   },
   {
-   "id": "E004",
-   "doi_or_handle": "10.1056/NEJMoa0809716",
-   "title": "Mead S et al. 2009 NEJM \u2014 kuru selection of G127V",
-   "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4486072/",
-   "verification": {
-    "verified_by_agent_fetch": "verified"
+   "evidence_id": "E007",
+   "source_type": "journal_article",
+   "title": "Human cerebral organoids as drug screening model for CJD",
+   "authors": [
+    "Groveman BR et al."
+   ],
+   "year": 2021,
+   "identifiers": {
+    "doi": "10.1038/s41598-021-84689-6",
+    "pmid": "",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://www.nature.com/articles/s41598-021-84689-6"
    },
-   "confidentiality": "public"
+   "locator": "abstract",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   },
   {
-   "id": "E005",
-   "doi_or_handle": "doi:10.1038/s42003-020-01126-6",
-   "title": "Hosszu 2020 Commun Biol \u2014 dimer stabilization structural basis",
-   "locator": "https://www.nature.com/articles/s42003-020-01126-6",
-   "verification": {
-    "verified_by_agent_fetch": "verified"
+   "evidence_id": "E008",
+   "source_type": "journal_article",
+   "title": "Neural cell engraftment restores electrophysiology in sCJD organoids",
+   "authors": [
+    "Williams K et al."
+   ],
+   "year": 2023,
+   "identifiers": {
+    "doi": "10.1186/s13287-023-03591-2",
+    "pmid": "",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://link.springer.com/article/10.1186/s13287-023-03591-2"
    },
-   "confidentiality": "public"
+   "locator": "abstract; MEA",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   },
   {
-   "id": "E006",
-   "doi_or_handle": "10.1186/s40478-019-0742-2",
-   "title": "Groveman 2019 Acta Neuropathol \u2014 organoid infection; MV2/MV1 titers 2.13e5/1.69e3; eclipse 25-35dpi",
-   "locator": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6567389/",
-   "verification": {
-    "verified_by_agent_fetch_fulltext": "verified"
+   "evidence_id": "E009",
+   "source_type": "software",
+   "title": "Prion dynamics model code",
+   "authors": [
+    "Fornara B",
+    "Igel A et al."
+   ],
+   "year": 2024,
+   "identifiers": {
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://zenodo.org/records/11093945"
    },
-   "confidentiality": "public"
+   "locator": "Params.csv; NB_Run.m",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   },
   {
-   "id": "E007",
-   "doi_or_handle": "10.1038/s41598-021-84689-6",
-   "title": "Groveman 2021 Sci Rep \u2014 PPS organoid screening (positive control basis)",
-   "locator": "https://www.nature.com/articles/s41598-021-84689-6",
-   "verification": {
-    "verified_by_agent_fetch": "verified"
+   "evidence_id": "E010",
+   "source_type": "journal_article",
+   "title": "In vivo diffusion analysis in the ECS",
+   "authors": [
+    "Thorne RG",
+    "Nicholson C"
+   ],
+   "year": 2006,
+   "identifiers": {
+    "doi": "10.1073/pnas.0509425103",
+    "pmid": "",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://www.pnas.org/doi/10.1073/pnas.0509425103"
    },
-   "confidentiality": "public"
+   "locator": "abstract",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   },
   {
-   "id": "E008",
-   "doi_or_handle": "10.1186/s13287-023-03591-2",
-   "title": "Williams 2023 SCRT \u2014 NPC seeding restores electrophysiology",
-   "locator": "https://link.springer.com/article/10.1186/s13287-023-03591-2",
-   "verification": {
-    "verified_by_agent_fetch": "verified"
+   "evidence_id": "E011",
+   "source_type": "journal_article",
+   "title": "Retraction note: minocycline/FK506",
+   "authors": [
+    "Shah SZA et al. [RETRACTED]"
+   ],
+   "year": 2020,
+   "identifiers": {
+    "doi": "10.1007/s13311-020-00909-3",
+    "pmid": "",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://link.springer.com/article/10.1007/s13311-020-00909-3"
    },
-   "confidentiality": "public"
+   "locator": "retraction",
+   "confidentiality": "public",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   },
   {
-   "id": "E009",
-   "doi_or_handle": "Zenodo 11093945",
-   "title": "Fornara/Igel iScience 2024 \u2014 stochastic spreading model + code (kernel ported in WS-9)",
-   "locator": "https://zenodo.org/records/11093945",
-   "verification": {
-    "verified_by_agent_fetch_code": "verified"
+   "evidence_id": "E012",
+   "source_type": "dataset",
+   "title": "Quest 003: WS-7/WS-8/WS-9 artifacts",
+   "authors": [
+    "Consortium computations"
+   ],
+   "year": 2026,
+   "identifiers": {
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "isbn": "",
+    "url": "https://example.org/quest003-repo"
    },
-   "confidentiality": "public"
-  },
-  {
-   "id": "E010",
-   "doi_or_handle": "10.1073/pnas.0509425103",
-   "title": "Thorne & Nicholson 2006 PNAS \u2014 ECS alpha=0.20 lambda=1.8 human in-vivo",
-   "locator": "https://www.pnas.org/doi/10.1073/pnas.0509425103",
+   "locator": "experiments/",
+   "confidentiality": "public",
    "verification": {
-    "verified_by_agent_search": "verified"
-   },
-   "confidentiality": "public"
-  },
-  {
-   "id": "E011",
-   "doi_or_handle": "10.1007/s13311-020-00909-3",
-   "title": "RETRACTION: Shah 2017 Neurotherapeutics minocycline/FK506 (retracted 2020) \u2014 banned by rule",
-   "locator": "https://link.springer.com/article/10.1007/s13311-020-00909-3",
-   "verification": {
-    "verified_by_agent_fetch": "retracted_excluded"
-   },
-   "confidentiality": "public"
-  },
-  {
-   "id": "E012",
-   "doi_or_handle": "repo:quest003-computations",
-   "title": "Consortium computations WS-7/WS-8/WS-9: self-tested ADR solver; humanized port; deterministic builds",
-   "locator": "git:quests/003 (commits 550c86b..7199abc)",
-   "verification": {
-    "verified_by_reproduction": "verified_own"
-   },
-   "confidentiality": "public"
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "Camilla N.",
+    "verified_on": "2026-08-26"
+   }
   }
- ],
- "document_id": "quest003v4",
- "status": "draft-complete-pending-human-verification"
+ ]
 }

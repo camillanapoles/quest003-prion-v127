@@ -51,5 +51,6 @@
    "total": 206.0
   }
  ],
- "nota": "Port mean-field do Igel 2024 (params Zenodo) + capping V127ΔGPI (κ·c inibe templating); r* emerge da varredura; validação fina exige port estocástico completo (próx. passo)."
+ "nota": "Port mean-field do Igel 2024 (params Zenodo) + capping V127ΔGPI (κ·c inibe templating); r* emerge da varredura; validação fina exige port estocástico completo (próx. passo).",
+ "STATUS": "BROKEN — self-tests T1/T2 FALSE; sweep sem efeito (κ 0→16 idêntico). Port mean-field não reproduz crescimento da colônia. Debug necessário: condição inicial/n0 vs Igel params. NÃO usar como evidência."
 }
