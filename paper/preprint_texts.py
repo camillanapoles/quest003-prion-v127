@@ -168,6 +168,15 @@ EN={
   'Elder JB, Lonser RR, et al. J Neurosurg. 2025;143:1431-1441.','Krauze MT, et al. J Neurosurg. 2005.',
   'Cheng S, et al. Sci Rep. 2015;5:10535.','Gentile JE, et al. 2024 (minocycline confounds NfL).',
   'Retraction note: Shah SZA, et al. Neurotherapeutics 2017 (retracted 2020).','Kim J, et al. 2025 (universal iPSC).'],
+
+ 'decl_h':'Declarations',
+ 'decl':[
+  '**Ethics:** this preprint describes computational work, published-literature synthesis and protocol design only; no human participants, animals or primary tissue were used by the consortium. Planned clinical-pathway research (E200K presymptomatic cohort) will require CEP/CONEP/ANVISA approval and is presented as protocol skeleton only. Autopsy-derived source data cited (Groveman 2019) were exempt from NIH human-subjects review per the original publication.',
+  '**Funding:** no external funding; consortium volunteer work; compute donated by Google Colab free tier and author equipment. Funders: none.',
+  '**Conflicts of interest:** the authors declare no financial or non-financial competing interests. No patent filings have been made on the described designs at the time of deposition.',
+  '**Author contributions (CRediT):** C.N. — conceptualization, methodology, software, investigation (simulations), writing (original draft). RikkaHub Agent (AI) — software execution, drafting assistance UNDER HUMAN DIRECTION AND REVIEW; per SW-S01/SW-S03, the AI system is NOT an author and generated fluency is never evidence; all scientific decisions rest with the accountable human author.',
+  '**AI use disclosure:** an AI agent (RikkaHub/DeepScientist pipeline) assisted with literature retrieval, code execution, simulation porting and draft generation under explicit human instruction; every claim was source-verified by the human author or carries a declared unverified status; simulations are deterministic and reproducible from the published build scripts.',
+  '**Reporting guidelines:** no completed reporting checklist applies (no primary study data); protocol sections follow SPIRIT-style structure where applicable; computational sections follow reproducibility practices (deterministic builds, version-locked parameters).'],
  'data_h':'Data, code and audit availability',
  'data_p':'All program artefacts — solvers (self-tested), the humanized in-silico port with parameters, animation notebooks, knowledge-graph data (40 nodes / 51 edges with status history), audit registers and every intermediate document — are version-controlled in the consortium repository with timestamps preceding any wet-lab data. Analysis scripts are deterministic; simulations reproduce from the published notebooks. This preprint itself is generated from those sources by a reproducible build script.',
 }

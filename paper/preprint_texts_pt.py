@@ -168,6 +168,15 @@ PT={
   'Elder JB, Lonser RR, et al. J Neurosurg. 2025;143:1431-1441.','Krauze MT, et al. J Neurosurg. 2005.',
   'Cheng S, et al. Sci Rep. 2015;5:10535.','Gentile JE, et al. 2024 (minociclina confunde NfL).',
   'Nota de retratação: Shah SZA, et al. Neurotherapeutics 2017 (retraído 2020).','Kim J, et al. 2025 (iPSC universal).'],
+
+ 'decl_h':'Declarações',
+ 'decl':[
+  '**Ética:** este preprint descreve apenas trabalho computacional, síntese de literatura publicada e desenho de protocolo; nenhum participante humano, animal ou tecido primário foi utilizado pelo consórcio. A pesquisa clínica planejada (coorte E200K pré-sintomática) exigirá aprovação CEP/CONEP/Anvisa e é apresentada apenas como esqueleto de protocolo. Dados-fonte derivados de autópsia citados (Groveman 2019) eram isentos de revisão de sujeitos humanos do NIH conforme a publicação original.',
+  '**Financiamento:** nenhum financiamento externo; trabalho voluntário do consórcio; computação doada pelo tier gratuito do Google Colab e equipamento do autor. Financiadores: nenhum.',
+  '**Conflitos de interesse:** os autores declaram nenhum interesse financeiro ou não financeiro concorrente. Nenhum depósito de patente foi feito sobre os desenhos descritos à data do depósito.',
+  '**Contribuições de autor (CRediT):** C.N. — conceitualização, metodologia, software, investigação (simulações), redação (rascunho original). Agente RikkaHub (IA) — execução de software, assistência de redação SOB DIREÇÃO E REVISÃO HUMANA; conforme SW-S01/SW-S03, o sistema de IA NÃO é autor e fluência gerada jamais é evidência; todas as decisões científicas pertencem ao autor humano responsável.',
+  '**Divulgação de uso de IA:** um agente de IA (pipeline RikkaHub/DeepScientist) auxiliou na recuperação de literatura, execução de código, porting de simulação e geração de rascunho sob instrução humana explícita; toda alegação foi verificada na fonte pelo autor humano ou carrega status de não-verificada declarado; simulações são determinísticas e reprodutíveis dos scripts de build publicados.',
+  '**Diretrizes de relato:** nenhuma checklist completa se aplica (sem dados primários de estudo); seções de protocolo seguem estrutura estilo SPIRIT onde aplicável; seções computacionais seguem práticas de reprodutibilidade (builds determinísticos, parâmetros travados em versão).'],
  'data_h':'Disponibilidade de dados, código e auditoria',
  'data_p':'Todos os artefatos do programa — solvers (auto-testados), o port in silico humanizado com parâmetros, notebooks de animação, dados do grafo de conhecimento (40 nós / 51 arestas com histórico de status), registros de auditoria e todos os documentos intermediários — estão versionados no repositório do consórcio com timestamps anteriores a qualquer dado úmido. Scripts de análise são determinísticos; simulações reproduzem-se dos notebooks publicados. Este preprint é gerado dessas fontes por script de build reprodutível.',
 }

@@ -158,6 +158,8 @@ def build(lang):
     # 13 síntese fractal
     P(txt['s13_h'],S_H1)
     for t in txt['s13']: P(t)
+    P(txt['decl_h'],S_H1)
+    for t in txt.get('decl',[]): P(t)
     # refs
     P(txt['refs_h'],S_H1)
     for i,r in enumerate(txt['refs'],1): P(f'[{i}] {r}',S_REF)
