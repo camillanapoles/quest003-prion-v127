@@ -3,8 +3,8 @@
     "quest": "003",
     "title": "DCJ / PrP-G127V — Diagrama Lógico dos Achados",
     "subtitle": "Terapia de contenção priônica: NSC editada V127 + CED · DeepScientist Quest 003",
-    "updated": "2026-08-26 03:30",
-    "version": "v3.1",
+    "updated": "2026-08-26 03:50",
+    "version": "v3.2",
     "audit": "histórico completo em `git log` de quests/003",
     "message": "Mecanismo validado + planos B ancorados + AGORA ESCALA FÍSICA: o halo do escudo mede 4-6mm, o anel se dimensiona em 8-12mm entre nós, e o hidrogel certo (HA 1-2%) deixa a proteína sair. O desenho deixou de ser conceitual.",
     "views": [
@@ -924,17 +924,17 @@
     {
       "id": "ws9",
       "title": "O G0 ganhou um ensaio gêmeo no computador",
-      "label": "WS-9: código Igel 2024 (iScience, Zenodo 11093945) adquirido — kernel Gillespie de propagação priônica; acoplagem do termo capping V127ΔGPI inédita",
+      "label": "WS-9 humanizado: θ*=0,333 — abaixo disso o escudo V127 contém a frente (relógio Groveman, 12,1d/duplicação)",
       "group": "entrega",
       "outlook": "valid",
       "status": "confirmed",
       "evidence": "Fornara et al. iScience 2024 (PMID 39717079); código Zenodo",
-      "detail": "Lacuna confirmada (ninguém simulou organoide-príon) + metades públicas: kernel estocástico RD do grupo Béringue/Rezaei (MATLAB: Neuron Bed/Co-propagation/Axon; Params.csv com taxas reais) + frameworks organoide. Nosso acréscimo inédito: termo de capping V127ΔGPI → 'ensaio in silico do G0': varrer θ antes do lab com IC do WS-8.",
+      "detail": "v4 final: 1 unidade sim=144 dias reais; sweep MV2: κ=2(θ=0,333) JÁ contém (R=0,82mm) — limiar humano MELHOR que o murino; MV1-like contível c/ margem (0,69mm @κ4); progressão monotônica até 0,70mm. Predição pré-registrada do G0: θ_medido<0,33 → contenção vence; calendário 90-120d pós-seeding. Execução: 17,3min VM Colab, notebook celular a celular pelo usuário.",
       "refs": [
         "doi:10.1101/2024.05.01.592001",
         "Zenodo 11093945"
       ],
-      "prob": null,
+      "prob": "θ* humano = 0,333 [banda MV1/MV2 testada]",
       "updated": "2026-08-26",
       "delta": "up",
       "cluster_id": 4
@@ -1405,6 +1405,11 @@
     }
   ],
   "changelog": [
+    {
+      "date": "2026-08-26",
+      "version": "v3.2 (WS-9 humanizado FINAL)",
+      "text": "v4 executado completo (17,3min VM): relógio humano 144d/unidade (t_dupl 12,1d Groveman); θ*_humano=0,333 — MAIS FAVORÁVEL que o murino (v2: 0,20-0,33); MV1-like contível com margem extra (ordem qualitativa reproduz Groveman 2019); predição pré-registrada do G0 travada: θ<0,33→contenção, leitura 90-120d. Pipeline in silico do programa FECHADO."
+    },
     {
       "date": "2026-08-26",
       "version": "v3.1 (WS-8 Bayes + WS-9 aquisição)",
