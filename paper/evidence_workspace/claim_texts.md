@@ -1,0 +1,45 @@
+# Claim texts (normalized hashes in claims.csv)
+
+- **C001** (2.1/3.1,factual) [E001]: V127 homozygous transgenic mice are completely resistant to all tested prion strains, as protective as gene deletion
+- **C002** (2.1/3.1,factual) [E001]: Heterozygous G/V127 mice resist kuru and classical CJD prions but remain infectable by vCJD prions
+- **C003** (2.1/3.1,factual) [E001;E003;E005]: V127 acts as a potent dose-dependent dominant-negative inhibitor of wild-type prion propagation
+- **C004** (1,factual) [E002]: G127V was under positive selection during the kuru epidemic; heterozygote carriers were protected
+- **C005** (1/3.1,factual) [E003]: Recombinant anchorless V127 retains potent dominant-negative activity in trans in cell culture
+- **C006** (1/3.1,factual) [E003]: Prion resistance in cell culture persists after transgene expression ceases
+- **C007** (1/3.1,factual) [E004]: Systemic AAV delivery of anchorless V127GPI extended survival approximately 50 days in a rodent prion model
+- **C008** (2.1,factual) [E005;E006]: V127 restricts the pre-beta-sheet backbone and stabilizes dimers via intermolecular hydrogen bonds; alters beta2-alpha2 loop dynamics
+- **C009** (2.4,factual) [E007]: Human cerebral organoids are susceptible to sCJD infection with subtype-dependent kinetics
+- **C010** (2.4,factual) [E007]: Organoid infection anchors: inoculum cleared by 25-28 dpi, de-novo seeding activity from 35 dpi
+- **C011** (2.4,factual) [E007]: Endpoint titers at 169 dpi: MV2 = 2.13(+/-1.63)e5 and MV1 = 1.69(+/-0.70)e3 SD50 per mg; protease-resistant PrP detected only in MV2
+- **C012** (2.1/3.1,factual) [E008]: Pentosan polysulfate delays prion propagation in infected organoids in prophylactic-like and therapeutic-like paradigms (published positive control)
+- **C013** (2.4,factual) [E009]: The prion-spreading kernel is a published stochastic reaction-diffusion model with open code (Gillespie over aggregate classes with UPR-gated templating)
+- **C014** (2.2,factual) [E010]: In vivo brain extracellular space: volume fraction approximately 0.20 and tortuosity approximately 1.8 for macromolecules
+- **C015** (2.2,methodological) [E011]: First-order consumption swept 1e-6 to 1e-5 per second anchored to nucleated-polymerization kinetics
+- **C016** (3.1,factual) [E012]: NPC seeding restores electrophysiological parameters of sCJD-infected organoids toward uninfected levels
+- **C017** (3.1,factual) [E013]: Endogenous adult neural stem cells accumulate and replicate prions; neuronal fate is altered by infection
+- **C018** (3.1,factual) [E014]: NSCs do not generate microglia; microglia derive from yolk-sac macrophage lineage
+- **C019** (3.1,factual) [E015]: Adult human SVZ neurogenesis is minimal; the niche is largely quiescent
+- **C020** (3.1,factual) [E016]: iPSC-derived microglia-like cells are generated in approximately five weeks by a defined protocol
+- **C021** (3.1,factual) [E017;E018]: HLA-KO hypoimmunogenic pluripotent cells evade rejection; CD47 is necessary and sufficient against NK-mediated rejection with long-term allogeneic survival
+- **C022** (2.2/3.1,factual) [E019]: A single intrathecal dose of brain-targeting LNP mRNA expresses in 29.6 percent of neurons and 38.1 percent of astrocytes in rodents
+- **C023** (2.2/3.1,factual) [E020]: Hyaluronic-acid hydrogel scaffolding increases survival of engrafted neural stem cells
+- **C024** (methods,factual) [E021]: A 2017 Neurotherapeutics minocycline/FK506 prion trial was retracted in 2020 and is excluded by rule
+- **C025** (methods,factual) [E022]: Minocycline reduces neuroinflammation without survival benefit in prion-infected mice
+- **C026** (methods,factual) [E023]: Minocycline confounds neurofilament-light chain biomarker interpretation (3.5x plasma, 5.7x CSF increase)
+- **C027** (1.1,factual) [E024]: Brazilian E200K kindreds have been documented since 2007
+- **C028** (4.2,factual) [E025;E026]: Alzheimer and Parkinson proteins spread by templated misfolding along stereotyped routes (prion-like propagation)
+- **C029** (4.3,factual) [E027]: Tofersen received accelerated approval for SOD1-ALS with a biomarker (NfL) endpoint in 2023
+- **C030** (4.3,factual) [E028]: Nusinersen established chronic intrathecal ASO redosing safety since 2016
+- **C031** (4.3,factual) [E029]: Dopaminergic progenitor cell transplantation in Parkinson patients proved feasible in a 2026 trial
+- **C032** (2.2,result) [E030]: WS-7 self-tests pass: mass conservation 100.0 percent; numeric vs analytic Thiele length error 0.5 percent
+- **C033** (3.2,result) [E030]: Design rule 1: containment-ring node spacing 8-12 mm (protection radius 4-6 mm per deposit)
+- **C034** (3.2,result) [E030;E020]: Design rule 2: hydrogel mesh must exceed 5x protein radius; HA 1-2 percent passes, above 5 percent sequesters the secretome
+- **C035** (3.2,result) [E030;E019]: Design rule 3: LNP-mRNA redosing interval of 7 days or less keeps inter-pulse trough at 56 percent of peak; 10-14 days leaves valleys
+- **C036** (3.3,result) [E031]: Bayesian frame: P(G0 go) = 36.6 percent with 90 percent credible interval 14.6 to 60.5; P(clinical slowing) = 5.0 percent [0.4-13.6] empirical vs 30-45 percent design-conditional
+- **C037** (2.4,result) [E032;E007]: Humanization: 1 simulation unit = 144 days; derived human doubling time 12.1 days from organoid anchors
+- **C038** (3.4,result) [E032]: Containment threshold theta-star = 0.333: front contained at kappa=2 (2.83 to 0.82 mm), monotone to near-extinction at kappa=32 (0.70 mm, biomass ratio 2.1x seed)
+- **C039** (3.4,result) [E032;E007]: Emergent consistency: seeding by the published 126x titer ratio reproduces the MV2-greater-than-MV1 hierarchy without fitting
+- **C040** (2.5,factual) [E033]: All program predictions were committed to the public repository with timestamps before any wet-lab experiment exists
+- **C041** (methods,factual) [E033]: External document references were audited individually: of 19 audited, 11 correct, 3 duplicates, 1 non-scientific, 1 wrong link
+- **C042** (3.2,result) [E030]: Steady-state establishment takes approximately 4 days; planned readouts operate in steady state
+- **C043** (2.4,methodological) [E032;E009]: Humanization is a global time rescaling; relative rates remain murine pending fits to published series
