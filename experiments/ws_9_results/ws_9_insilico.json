@@ -52,5 +52,5 @@
   }
  ],
  "nota": "Port mean-field do Igel 2024 (params Zenodo) + capping V127ΔGPI (κ·c inibe templating); r* emerge da varredura; validação fina exige port estocástico completo (próx. passo).",
- "STATUS": "BROKEN — self-tests T1/T2 FALSE; sweep sem efeito (κ 0→16 idêntico). Port mean-field não reproduz crescimento da colônia. Debug necessário: condição inicial/n0 vs Igel params. NÃO usar como evidência."
+ "STATUS": "REGISTRO HISTÓRICO v1 (run local mean-field, 2026-08-25 23:22): self-tests falhos aqui motivaram o pivot para o solver estocástico — v2 DEFINITIVO (θ*∈0.20-0.33 bifurcação, commit 550c86b) e v4 HUMANIZADO (θ*=0.333, relógio 144d/unidade, predição G0 travada, commit a95f33c; notebook WS9_v4_HUMAN.ipynb; figura snapshots/ws9_curva_resposta.png; preprint seção 4-A commit 0cb0dc7). ESTE ARQUIVO não é o estado da arte — ver v4."
 }
