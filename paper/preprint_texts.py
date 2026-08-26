@@ -3,8 +3,8 @@
 
 EN={
  'title':'PrP-V127 as a Modular Antiprion Platform: An Open-Science Program From Population Genetics to Pre-Registered Organoid Predictions, Tissue-Scale Transport Design, and Regulatory Precedents for Creutzfeldt-Jakob Disease',
- 'subtitle':'Full preprint · Open-science consortium · DeepScientist Quest 003 · 2026-08-26',
- 'authors':'Prion & Molecular Engineering Consortium — open code, data and audit trail (git-audited, 40+ commits)',
+ 'subtitle':'Full preprint · Open-science consortium · version 4.2 · 2026-08-26',
+ 'authors':'Camilla N. — Independent Researcher, Sa&tilde;o Paulo, Brazil (corresponding; ORCID to be added at deposition) · Prion & Molecular Engineering Consortium',
  'footer':'PrP-V127 Antiprion Platform — Consortium preprint v4.0 (EN)',
  'footer2':'p. %(p)d — preprint, not peer-reviewed',
  'abstract_h':'Abstract',
@@ -79,7 +79,7 @@ EN={
  's7_h':'7. Transport engineering (WS-7): from opinion to numbers',
  's7':[
   'Delivery is where prion candidates have historically died (PPS never reached CNS levels in humans). We solved the transport problem quantitatively before any bench work: an advection-diffusion-reaction solver on heterogeneous porous medium, with ECS parameters from human in-vivo measurements (&alpha; = 0.20, &lambda; = 1.8; Thorne & Nicholson 2006) and first-order consumption parameterized 10&#8315;&#8310;-10&#8315;&#8309; s&#8315;&sup1;. Solver self-tests: mass conservation 100.0%; Thiele length vs analytic 0.5% error.',
-  'The protection halo of a deposit follows the classic chemical-engineering Thiele problem: penetration length &ell;=&radic;(D/k). For the mid case (k=3&times;10&#8315;&#8310; s&#8315;&sup1;), &ell;&asymp;3.6 mm and r&#8321;&#8320;% = 4.2-5.8 mm per node; steady state establishes in ~4 days, so 90-day organoid readouts operate deep in equilibrium.'],
+  'The protection halo of a deposit (quantified in Table 2) follows the classic chemical-engineering Thiele problem: penetration length &ell;=&radic;(D/k). For the mid case (k=3&times;10&#8315;&#8310; s&#8315;&sup1;), &ell;&asymp;3.6 mm and r&#8321;&#8320;% = 4.2-5.8 mm per node; steady state establishes in ~4 days, so 90-day organoid readouts operate deep in equilibrium.'],
  's7_rh':'Table 2 — Thiele sweep (r10% in mm)',
  's7_t1':[['k (s&#8315;&sup1;)','D=5e-12','D=3.9e-11','D=1e-10'],
   ['1&times;10&#8315;&#8310;','3.4','5.1','6.0'],
@@ -175,8 +175,8 @@ EN={
   '**Funding:** no external funding; consortium volunteer work; compute donated by Google Colab free tier and author equipment. Funders: none.',
   '**Conflicts of interest:** the authors declare no financial or non-financial competing interests. No patent filings have been made on the described designs at the time of deposition.',
   '**Author contributions (CRediT):** C.N. — conceptualization, methodology, software, investigation (simulations), writing (original draft). RikkaHub Agent (AI) — software execution, drafting assistance UNDER HUMAN DIRECTION AND REVIEW; per SW-S01/SW-S03, the AI system is NOT an author and generated fluency is never evidence; all scientific decisions rest with the accountable human author.',
-  '**AI use disclosure:** an AI agent (RikkaHub/DeepScientist pipeline) assisted with literature retrieval, code execution, simulation porting and draft generation under explicit human instruction; every claim was source-verified by the human author or carries a declared unverified status; simulations are deterministic and reproducible from the published build scripts.',
+  '**AI use disclosure:** AI-assisted tools were used under explicit human instruction for literature retrieval, code execution, simulation porting and draft generation; every claim was source-verified or carries a declared unverified status; simulations are deterministic and reproducible from the published build scripts.',
   '**Reporting guidelines:** no completed reporting checklist applies (no primary study data); protocol sections follow SPIRIT-style structure where applicable; computational sections follow reproducibility practices (deterministic builds, version-locked parameters).'],
  'data_h':'Data, code and audit availability',
- 'data_p':'All program artefacts — solvers (self-tested), the humanized in-silico port with parameters, animation notebooks, knowledge-graph data (40 nodes / 51 edges with status history), audit registers and every intermediate document — are version-controlled in the consortium repository with timestamps preceding any wet-lab data. Analysis scripts are deterministic; simulations reproduce from the published notebooks. This preprint itself is generated from those sources by a reproducible build script.',
+ 'data_p':'All program artefacts are released under the MIT License (code and notebooks) and CC BY 4.0 (documents), with persistent identifiers to be minted at deposition.  — solvers (self-tested), the humanized in-silico port with parameters, animation notebooks, knowledge-graph data (40 nodes / 51 edges with status history), audit registers and every intermediate document — are version-controlled in the consortium repository with timestamps preceding any wet-lab data. Analysis scripts are deterministic; simulations reproduce from the published notebooks. This preprint itself is generated from those sources by a reproducible build script.',
 }
