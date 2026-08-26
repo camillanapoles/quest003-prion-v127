@@ -99,4 +99,9 @@ json.dump(res,open('ws_9_insilico.json','w'),indent=1)
 print(json.dumps(res,indent=1))
 
 
- files.download('ws_9_insilico.png')
+try:
+    from google.colab import files as _gfiles  # derivado do notebook Colab; no-op fora do Colab
+    _gfiles.download('ws_9_insilico.png')
+    _gfiles.download('ws_9_insilico.json')
+except Exception:
+    pass

@@ -1,6 +1,55 @@
 {
-  "disclaimer": "Non-scoring coverage aid only; not a quality appraisal or compliance certificate.",
-  "guideline_id": "prisma-2020",
-  "items": [],
-  "schema_version": "1.0"
+ "disclaimer": "Non-scoring coverage aid only; not a quality appraisal or compliance certificate.",
+ "guideline_id": "prisma-2020",
+ "schema_version": "1.0",
+ "items": [
+  {
+   "topic_id": "eligibility-and-information-sources",
+   "status": "addressed",
+   "location": "manuscript_EN_v4.md \u00a72.1 (audit blocks, ~90 searches, sources per source_manifest.json); refs_audit.md (exclusions: retracted/non-scientific/duplicate)",
+   "locations": [
+    "manuscript_EN_v4.md \u00a72.1",
+    "source_manifest.json",
+    "literature/refs_audit.md"
+   ]
+  },
+  {
+   "topic_id": "selection-and-data-collection",
+   "status": "addressed",
+   "location": "\u00a72.1 verification tiers [FT]/[ABS]/[AUDIT]/[CODE]/[RUN] per source in source_manifest.json; claims.csv binding",
+   "locations": [
+    "manuscript_EN_v4.md \u00a72.1 verification tiers",
+    "claims.csv"
+   ]
+  },
+  {
+   "topic_id": "synthesis-and-heterogeneity",
+   "status": "addressed",
+   "location": "\u00a72.2-2.4 + \u00a73 (WS-7 transport, WS-8 Bayes dual-lens, WS-9 humanized in-silico); heterogeneity handled as parametric sweeps + uncertainty labels in claims.csv",
+   "locations": [
+    "manuscript_EN_v4.md \u00a72.2-2.4, \u00a73",
+    "consistency_manifest.json"
+   ]
+  },
+  {
+   "topic_id": "bias-and-certainty",
+   "status": "missing",
+   "location": "hostile_review_v4.md (M1-M8) + \u00a75 Limitations (10 items); claims.csv uncertainty per claim; formal per-study RoB/GRADE not applied \u2014 declared gap",
+   "locations": [
+    "hostile_review_v4.md M1-M8",
+    "manuscript_EN_v4.md \u00a75 Limitations"
+   ],
+   "note": "Bias: hostile review + 10 limitations + per-claim uncertainty recorded; FORMAL per-study RoB/GRADE not applied \u2014 declared gap (kept honest per no-fabrication rule)."
+  },
+  {
+   "topic_id": "registration-support-and-availability",
+   "status": "addressed",
+   "location": "E033 repo timestamped pre-registrations (release v1.0); Declarations \u00a76; full data/code in github.com/camillanapoles/quest003-prion-v127",
+   "locations": [
+    "E033 source_manifest",
+    "manuscript_EN_v4.md \u00a76 Declarations",
+    "github.com/camillanapoles/quest003-prion-v127"
+   ]
+  }
+ ]
 }

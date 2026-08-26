@@ -1,0 +1,46 @@
+{
+ "motor": "v4 humano (clock Groveman 2019)",
+ "days_per_simunit": 144.02,
+ "t_double_human_days": 12.1,
+ "anchors": {
+  "clear_dpi": 25.5,
+  "first_denovo_dpi": 35,
+  "final_dpi": 169,
+  "titer_MV2": 213000.0,
+  "titer_MV1": 1690.0,
+  "WB_MV2_only": true
+ },
+ "sweep_MV2": [
+  {
+   "kappa": 2.0,
+   "theta": 0.333,
+   "R_mm": 0.82
+  },
+  {
+   "kappa": 3.0,
+   "theta": 0.25,
+   "R_mm": 0.8
+  },
+  {
+   "kappa": 4.0,
+   "theta": 0.2,
+   "R_mm": 0.78
+  },
+  {
+   "kappa": 8.0,
+   "theta": 0.111,
+   "R_mm": 0.76
+  },
+  {
+   "kappa": 32.0,
+   "theta": 0.03,
+   "R_mm": 0.7
+  }
+ ],
+ "theta_star": 0.333,
+ "MV1": {
+  "kappa4_R_mm": 0.69,
+  "baseline_R_mm": 2.83
+ },
+ "wall_total_s": 1037.6
+}
