@@ -97,3 +97,13 @@ Equação resolvida (ADR em meio poroso):
 **Executado:** port Python do kernel Igel 2024 (params Zenodo) + capping V127ΔGPI, malha 96², varredura κ∈{0.5..32} — na VM Colab via google-colab-cli-android (fork do usuário), API com timeout 900s.
 **Pipeline destravado:** agent → colab CLI → VM Colab (CPU/GPU/TPU) → resultados locais. Token OAuth persistido; aprendizados: fork Android conecta onde oficial falha; baixar TODOS os outputs no mesmo ciclo (idle-prune); CLI oficial 0.6.0 incompatível com jupyter-kernel-client atual (shim aplicado).
 **Entregas:** ws_9_insilico.png (frentes vs tempo por θ + curva de resposta R_final(θ)) em snapshots/; JSON perdido com a VM efêmera (re-rodável em 1 ciclo).
+
+## WS-9 v1 — RESULTADO (executado 2x na VM Colab, monitorado via live-monitor)
+**Dados capturados (log ao vivo, 2026-08-26 01:00-01:05):**
+- Baseline (sem V127): T1 FALHOU — R_final = 0,52 mm, sem crescimento
+- Varredura: κ=0.5→8 (θ=0.667→0.111): R_final = 0,52 mm, crescimento 0.0% em TODOS — resposta plana
+- κ=16/32 perdidos com a 2ª reclamação de VM (keepalive "stopped" — daemon não subiu)
+
+**Leitura científica honesta:** o port determinístico mean-field com os parâmetros publicados (Params.csv) opera em regime NÃO-replicante — os agregados seminais decaem levemente e o sistema congela; sem crescimento no baseline, a resposta a θ não pode emergir (curva plana não é "capping funciona", é "dinâmica morta"). O kernel estocástico (Gillespie) e/ou o conjunto completo de reações do original são necessários para o regime replicante — a estocasticidade não é detalhe, é o mecanismo (consistente com o título do paper: "non-linearities... tissue response").
+**Próximo passo técnico (registrado):** port estocástico (tau-leaping vetorizado em numpy/torch — 96²×10 espécies é factível) ou reduzir K3/K4 (depol/descondensação) calibrando contra as curvas Groveman até T1 passar; só então a varredura θ significa algo.
+**Infra 100% validada com o usuário acompanhando ao vivo:** live-monitor (card+terminal) + ciclo Colab completo (connect→push→run→pull→disconnect), 2 falhas de VM capturadas em tempo real; regra reforçada: conferir `keepalive=running` antes de runs longos.
