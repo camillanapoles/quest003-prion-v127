@@ -1,6 +1,6 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 9 (BLOCKED=0, AMEND=0, NOTE=9)
+**Rodadas executadas:** 3 · **Achados:** 8 (BLOCKED=0, AMEND=0, NOTE=8)
 
 ## Gate
 
@@ -38,8 +38,4 @@
 
 ### [NOTE] R3-TODO-GATEF-SIGNATURE — todo-registry
 - **Problema:** TODO aberto registrado: GATEF-SIGNATURE.
-- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
-
-### [NOTE] R3-TODO-THETA-OBS-V11 — todo-registry
-- **Problema:** TODO aberto registrado: THETA-OBS-V11.
 - **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).

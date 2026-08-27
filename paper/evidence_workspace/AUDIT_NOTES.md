@@ -25,3 +25,6 @@ Simulation-based calibration (grade κ 1.5–8; ruído organoide CV 30/40%; 1000
 
 ## Parte 2 · THETA-OBS-POOLED (2026-08-27)
 Regime §2.7 (mediana por braço, n=8, 1000 boots): **PASS integral em κ=2** — a fronteira de decisão (θ≈0,333) é a região de melhor precisão (bias 0,008; modal 69%). κ=4 falha modal por 1 p.p.; κ=8 tem bias +0,060 **em direção conservadora** (superestima θ ⇒ subestima contenção — erro no lado seguro da predição travada). Cobertura 3/3 com IC largo (limitado à grade de 6 pontos; κ̂ por vizinho-mais-próximo quantiza). Próximo refinamento pré-GATE-F: estimador v1.1 com interpolação contínua em κ.
+
+## Parte 2 · THETA-OBS-V11 — testado e REJEITADO (2026-08-27)
+Estimador interpolado (IDW-2 vizinhos) avaliado contra os mesmos critérios pré-declarados: PIORA a fronteira de decisão (κ=2: bias −0,037 vs +0,008 do NN; direção agora ANTI-conservadora) e quebra cobertura em κ=8. Conclusão epistêmica: o sinal ruidoso com grade esparsa se beneficia do NN (quantização dura) — suavização espalha probabilidade entre κs. Decisão: v1.0-NN permanece a estimadora de freeze; F1 fechado. Refinamento opcional futuro = grade mais fina (novas sims), não interpolação.

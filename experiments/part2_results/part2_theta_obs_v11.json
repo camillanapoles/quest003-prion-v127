@@ -1,0 +1,39 @@
+{
+ "artefato": "Parte 2 \u00b7 THETA-OBS-V11 (\u03ba\u0302 cont\u00ednuo por IDW-2)",
+ "n_arm": 8,
+ "n_boot": 1000,
+ "k2": {
+  "theta_true": 0.333,
+  "theta_arm_median": 0.297,
+  "bias": -0.037,
+  "ic90": [
+   0.125,
+   0.365
+  ],
+  "coverage": true,
+  "within_1.5step": 0.632,
+  "PASS": false
+ },
+ "k4": {
+  "theta_true": 0.2,
+  "theta_arm_median": 0.202,
+  "bias": 0.002,
+  "ic90": [
+   0.125,
+   0.364
+  ],
+  "coverage": true,
+  "within_1.5step": 0.422,
+  "PASS": false
+ },
+ "k8": {
+  "theta_true": 0.111,
+  "theta_arm_median": 0.173,
+  "bias": 0.062,
+  "ic90": [
+   0.125,
+   0.363
+  ],
+  "coverage": false,
+  "within_1.5step": 0.407,
+  "PASS": 
