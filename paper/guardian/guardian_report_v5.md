@@ -1,6 +1,6 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 15 (BLOCKED=0, AMEND=10, NOTE=5)
+**Rodadas executadas:** 3 · **Achados:** 11 (BLOCKED=0, AMEND=6, NOTE=5)
 
 ## Gate
 
@@ -28,28 +28,12 @@
 - **Problema:** Checklist hostil M6-refcount não satisfeito (padrão não encontrado).
 - **Exigência:** M6: contagem de referências deve bater com o manifest (33 fontes E-ID) — remover '42 verified' ou reconciliar.
 
-### [AMEND] R2-PT-MISSING — ..
-- **Problema:** Companion PT sem claim-tags (paridade declarada como passo futuro).
-- **Exigência:** Gerar manuscript_PT_v5.md com as mesmas tags.
-
-### [AMEND] R2-PT-MISSING — ..
-- **Problema:** Companion PT sem claim-tags (paridade declarada como passo futuro).
-- **Exigência:** Gerar manuscript_PT_v5.md com as mesmas tags.
-
-### [AMEND] R2-PT-MISSING — ..
-- **Problema:** Companion PT sem claim-tags (paridade declarada como passo futuro).
-- **Exigência:** Gerar manuscript_PT_v5.md com as mesmas tags.
-
-### [AMEND] R2-PT-MISSING — ..
-- **Problema:** Companion PT sem claim-tags (paridade declarada como passo futuro).
-- **Exigência:** Gerar manuscript_PT_v5.md com as mesmas tags.
-
 ### [AMEND] R3-R3-UNLOCK — manuscript
 - **Problema:** Interrogação epistêmica R3-UNLOCK: procedimento ausente.
 - **Exigência:** Dossier de liberação do G0 (argumentário ao comitê) deve existir e ser referenciado na superfície de planejamento; claims do dossier não migram ao manuscrito sem gate.
 
 ### [NOTE] R0-UNUSED — ../manuscript_EN_v5.md
-- **Problema:** Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023, C047, C049.
+- **Problema:** Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023.
 - **Exigência:** Confirmar que são intencional (claims de outline/suplemento).
 
 ### [NOTE] R1-BATTERY-factual — claims
@@ -57,7 +41,7 @@
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-BATTERY-method — claims
-- **Problema:** Bateria hostil aplicada a 6 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C015, C043, C044, C045, C046, C048)
+- **Problema:** Bateria hostil aplicada a 8 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C015, C043, C044, C045, C046, C047, C048, C049)
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-BATTERY-result — claims

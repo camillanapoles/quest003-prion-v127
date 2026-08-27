@@ -1,13 +1,13 @@
 {
   "round": 3,
-  "n_findings": 15,
+  "n_findings": 11,
   "gate_pass": true,
   "findings": [
     {
       "id": "R0-UNUSED",
       "severity": "NOTE",
       "where": "../manuscript_EN_v5.md",
-      "issue": "Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023, C047, C049.",
+      "issue": "Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023.",
       "demand": "Confirmar que são intencional (claims de outline/suplemento)."
     },
     {
@@ -56,7 +56,7 @@
       "id": "R1-BATTERY-method",
       "severity": "NOTE",
       "where": "claims",
-      "issue": "Bateria hostil aplicada a 6 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C015, C043, C044, C045, C046, C048)",
+      "issue": "Bateria hostil aplicada a 8 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C015, C043, C044, C045, C046, C047, C048, C049)",
       "demand": "Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação."
     },
     {
@@ -72,34 +72,6 @@
       "where": "manifest",
       "issue": "2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.",
       "demand": "Rotular no texto (ex.: bioRxiv preprint)."
-    },
-    {
-      "id": "R2-PT-MISSING",
-      "severity": "AMEND",
-      "where": "..",
-      "issue": "Companion PT sem claim-tags (paridade declarada como passo futuro).",
-      "demand": "Gerar manuscript_PT_v5.md com as mesmas tags."
-    },
-    {
-      "id": "R2-PT-MISSING",
-      "severity": "AMEND",
-      "where": "..",
-      "issue": "Companion PT sem claim-tags (paridade declarada como passo futuro).",
-      "demand": "Gerar manuscript_PT_v5.md com as mesmas tags."
-    },
-    {
-      "id": "R2-PT-MISSING",
-      "severity": "AMEND",
-      "where": "..",
-      "issue": "Companion PT sem claim-tags (paridade declarada como passo futuro).",
-      "demand": "Gerar manuscript_PT_v5.md com as mesmas tags."
-    },
-    {
-      "id": "R2-PT-MISSING",
-      "severity": "AMEND",
-      "where": "..",
-      "issue": "Companion PT sem claim-tags (paridade declarada como passo futuro).",
-      "demand": "Gerar manuscript_PT_v5.md com as mesmas tags."
     },
     {
       "id": "R3-R3-UNLOCK",
