@@ -1,6 +1,6 @@
 {
   "round": 3,
-  "n_findings": 4,
+  "n_findings": 9,
   "gate_pass": true,
   "findings": [
     {
@@ -30,6 +30,41 @@
       "where": "manifest",
       "issue": "2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.",
       "demand": "Rotular no texto (ex.: bioRxiv preprint)."
+    },
+    {
+      "id": "R3-TODO-BIORXIV-ADDENDUM",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: BIORXIV-ADDENDUM.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
+      "id": "R3-TODO-COST-DECOMP",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: COST-DECOMP.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
+      "id": "R3-TODO-EMAIL-GROVEMAN",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: EMAIL-GROVEMAN.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
+      "id": "R3-TODO-GATEF-SIGNATURE",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: GATEF-SIGNATURE.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
+      "id": "R3-TODO-THETA-OBS-POOLED",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: THETA-OBS-POOLED.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
     }
   ]
 }

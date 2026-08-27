@@ -1,6 +1,6 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 4 (BLOCKED=0, AMEND=0, NOTE=4)
+**Rodadas executadas:** 3 · **Achados:** 9 (BLOCKED=0, AMEND=0, NOTE=9)
 
 ## Gate
 
@@ -23,3 +23,23 @@
 ### [NOTE] R1-PREPRINT — manifest
 - **Problema:** 2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.
 - **Exigência:** Rotular no texto (ex.: bioRxiv preprint).
+
+### [NOTE] R3-TODO-BIORXIV-ADDENDUM — todo-registry
+- **Problema:** TODO aberto registrado: BIORXIV-ADDENDUM.
+- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
+
+### [NOTE] R3-TODO-COST-DECOMP — todo-registry
+- **Problema:** TODO aberto registrado: COST-DECOMP.
+- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
+
+### [NOTE] R3-TODO-EMAIL-GROVEMAN — todo-registry
+- **Problema:** TODO aberto registrado: EMAIL-GROVEMAN.
+- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
+
+### [NOTE] R3-TODO-GATEF-SIGNATURE — todo-registry
+- **Problema:** TODO aberto registrado: GATEF-SIGNATURE.
+- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
+
+### [NOTE] R3-TODO-THETA-OBS-POOLED — todo-registry
+- **Problema:** TODO aberto registrado: THETA-OBS-POOLED.
+- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).

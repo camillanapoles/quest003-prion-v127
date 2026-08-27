@@ -48,7 +48,7 @@ Respectfully,
 6. Link do repo/git (audit trail: 38 fontes · 51 claims · guardião R0-R3 · release v1.0 trava as predições) — sob acordo de colaboração
 
 ## Regras do envio
-- [v2.1] Envio liberado SEM DOI (decisão da autora): prioridade intelectual protegida pelo release público timestamped v3.0 (predições travadas desde v1.0); bioRxiv vira adendo
+- [v2.1] Envio liberado SEM DOI (decisão da autora): prioridade intelectual protegida pelo release público timestamped v3.0 (predições travadas desde v1.0); {{TODO:BIORXIV-ADDENDUM:quando depositar, adicionar DOI como adendo nos PDFs/repo}} · {{TODO:EMAIL-GROVEMAN:endereço institucional + envio do kit #1 pela autora}}
 - Um email por vez (personalizar [colchetes]); aguardar 2 semanas antes de follow-up
 - Oferecer call de 30 min; nunca anexar dados brutos do repo antes de acordo
 - IP: desenho e predições já timestampados em git público do consórcio; formalizar MTA/acordo de colaboração antes de qualquer material biológico

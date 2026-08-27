@@ -4,7 +4,7 @@
 
 | # | Item a congelar | Artefato | Status |
 |---|---|---|---|
-| F1 | Estimador θ_obs (grade, features, função-objetivo, margem de decisão vs 0.333) | `part2_theta_obs_v1.py` + JSON de calibração | ⏳ calibração [SIM] rodando |
+| F1 | Estimador θ_obs (grade, features, função-objetivo, margem de decisão vs 0.333) | `part2_theta_obs_v1.py` + JSON de calibração | ✅ CALIBRADO (part2_theta_obs_v1.json): veredito ADEQUADO por critérios pré-declarados (cobertura 3/3, bias≤0.032) · NOTA HONESTA: resolução por-órganoide é baixa (IC unitário ~grade inteira) — o pooling n=8/mediana por braço (§2.7) é a fonte de precisão; {{TODO:THETA-OBS-POOLED:validar estimador no regime pooled n=8 (mediana por braço) antes do GATE-F}} |
 | F2 | Análise estatística braço-a-braço (Welch vs A2; Holm α=0.05 nas 5 comparações; n=8→12; poder declarado) | §2.5 manuscrito v5 + g0_protocol.md | ✅ escrito |
 | F3 | Cegamento: scorer do PrP-res (WB/IHC) cego ao braço; código de aleatorização por lote/linha de iPSC | este checklist + SOP do lab | ✅ especificado |
 | F4 | Estratificação por lote e aleatorização (dado DP MV2 ≈77% da média) | §2.5 + checklist | ✅ especificado |
@@ -23,5 +23,5 @@
 Regra: nada além deste esquema entra no estimador; qualquer campo faltante → organoid excluído ANTES da análise (lista de exclusões publicada, não editada pós-hoc).
 
 ## Gates formais do freeze
-- **GATE-F** (liberação para infectar): F1–F9 todos ✅ + estimador com veredito ADEQUADO na calibração [SIM] + assinatura da PI do lab parceiro.
+- **GATE-F** (liberação para infectar): F1–F9 todos ✅ + estimador com veredito ADEQUADO na calibração [SIM] + {{TODO:GATEF-SIGNATURE:assinatura da PI do lab parceiro — último item do gate}}.
 - Qualquer mudança pós-GATE-F = emenda auditada (commit + justificativa + re-análise com e sem a mudança).

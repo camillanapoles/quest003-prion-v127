@@ -19,3 +19,6 @@ A autora re-executou o WS-9 v4 humanizado no Colab e re-enviou JSON+PNG. Hash sh
 
 ## Re-execução independente dos sweeps v5 [SIM] (2026-08-27)
 A autora re-executou a fase S1 em ambiente próprio (wall 500,5 s vs 813,9 s do run local — máquinas distintas). Comparação semântica campo a campo: **todos os valores idênticos** (exp1 k2/k4/k8 = 2.828/0.85/0.819; exp2 = 0.819/0.778/0.76; baseline 2.828 mm / 144,02 d-unid; T1 pass). Solver determinístico, port paritário entre ambientes. Arquivo arquivado como `ws_9_v5_sweeps_S1_authors_rerun.json`. Cadeia de reprodutibilidade do programa: v4 reproduzido hash-idêntico (executante humana) + v5-S1 reproduzido valor-a-valor em segundo ambiente.
+
+## Parte 2 · 2.1 — Calibração do estimador θ_obs v1 [SIM] (2026-08-27)
+Simulation-based calibration (grade κ 1.5–8; ruído organoide CV 30/40%; 1000 boots/unidade): **veredito ADEQUADO** pelos critérios pré-declarados (cobertura do θ verdadeiro 3/3; bias mediano ≤0,032). Leitura honesta: os modos de κ̂ espalham-se (ex.: κ_true=8 → 483 acertos, 252 em 1,5) — o IC unitário cobre quase toda a grade; a precisão declarada para o G0-wet é a da MEDIANA POR BRAÇO com n=8 (§2.7), e a validação do regime pooled fica como TODO pré-GATE-F (THETA-OBS-POOLED). A grade revelou ainda que a biomassa carrega a informação que o raio perde por saturação (R 0,843→0,760 vs ratio 48→1,25).

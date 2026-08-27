@@ -1,0 +1,106 @@
+{
+ "artefato": "Parte 2 \u00b7 2.1 estimador \u03b8_obs v1 (sim-based calibration)",
+ "motor": "v5 sobre v4 humano",
+ "noise_cv": {
+  "R": 0.3,
+  "ratio": 0.4
+ },
+ "n_boot": 1000,
+ "grid": {
+  "1.5": {
+   "kappa": 1.5,
+   "R_mm": 0.843,
+   "biomass_ratio": 48.108
+  },
+  "2": {
+   "kappa": 2.0,
+   "R_mm": 0.819,
+   "biomass_ratio": 14.676
+  },
+  "3": {
+   "kappa": 3.0,
+   "R_mm": 0.801,
+   "biomass_ratio": 4.375
+  },
+  "4": {
+   "kappa": 4.0,
+   "R_mm": 0.778,
+   "biomass_ratio": 2.498
+  },
+  "6": {
+   "kappa": 6.0,
+   "R_mm": 0.768,
+   "biomass_ratio": 1.53
+  },
+  "8": {
+   "kappa": 8.0,
+   "R_mm": 0.76,
+   "biomass_ratio": 1.254
+  },
+  "base": {
+   "kappa": 0.0,
+   "R_mm": 2.828,
+   "biomass_ratio": 401556727.465
+  }
+ },
+ "validacao": {
+  "2": {
+   "kappa_true": 2.0,
+   "theta_true": 0.333,
+   "theta_hat_median": 0.333,
+   "bias_theta": 0.0,
+   "ic90": [
+    0.111,
+    0.4
+   ],
+   "coverage_of_true": true,
+   "kappa_hat_modes": {
+    "1.5": 430,
+    "2.0": 90,
+    "3.0": 27,
+    "4.0": 81,
+    "8.0": 372
+   }
+  },
+  "4": {
+   "kappa_true": 4.0,
+   "theta_true": 0.2,
+   "theta_hat_median": 0.2,
+   "bias_theta": 0.0,
+   "ic90": [
+    0.111,
+    0.4
+   ],
+   "coverage_of_true": true,
+   "kappa_hat_modes": {
+    "1.5": 326,
+    "2.0": 58,
+    "3.0": 93,
+    "4.0": 53,
+    "6.0": 23,
+    "8.0": 447
+   }
+  },
+  "8": {
+   "kappa_true": 8.0,
+   "theta_true": 0.111,
+   "theta_hat_median": 0.143,
+   "bias_theta": 0.032,
+   "ic90": [
+    0.111,
+    0.4
+   ],
+   "coverage_of_true": true,
+   "kappa_hat_modes": {
+    "1.5": 252,
+    "2.0": 52,
+    "3.0": 142,
+    "4.0": 31,
+    "6.0": 40,
+    "8.0": 483
+   }
+  }
+ },
+ "wall_s": 741.8,
+ "estimator_verdict_SIM": "ADEQUADO para freeze (crit\u00e9rios pr\u00e9-declarados)"
+}

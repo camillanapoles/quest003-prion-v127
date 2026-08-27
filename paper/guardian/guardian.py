@@ -259,6 +259,34 @@ class Guardian:
                       "Ligar a N-fato/claim, ou rotular como assumption ilustrativa no contexto.")
         return len(self.findings)
 
+    # ---------- TODO registry (garantidor de procedimento) ----------
+    def todo_registry(self):
+        """TODOs marcados {{TODO:id:descrição}} nas superfícies passam ao relatório;
+        TODO solto/mal-formado é AMEND (deve ser normalizado ou resolvido)."""
+        import re as _re
+        body = self.md + "\n" + self.tex
+        base = os.path.dirname(os.path.abspath(self.md_path)) if self.md_path else "."
+        for extra in ["../experiments/G0_EXECUTION_FREEZE_CHECKLIST.md",
+                      "../experiments/REPARAM_LOOP.md",
+                      "lab_outreach_package.md",
+                      "../THESIS_ROADMAP_2028.md"]:
+            p = os.path.normpath(os.path.join(base, extra))
+            if os.path.exists(p):
+                try:
+                    body += "\n" + open(p, encoding="utf-8").read()
+                except OSError:
+                    pass
+        fmt = set(_re.findall(r"\{\{TODO:([^:}]+):[^}]*\}\}", body))
+        for t in sorted(fmt):
+            self.flag(f"R3-TODO-{t}", "NOTE", "todo-registry",
+                      f"TODO aberto registrado: {t}.", "Resolver e remover o marcador (o relatório lista todos a cada gate).")
+        loose = [m.start() for m in _re.finditer(r"TODO", body)
+                 if not _re.match(r"\{\{TODO:[^:}]+:", body[max(0,m.start()-2):m.start()+30])]
+        if loose:
+            self.flag("R3-TODO-LOOSE", "AMEND", "manuscript+tex",
+                      f"{len(loose)} ocorrência(s) de 'TODO' fora do formato {{TODO:id:descrição}}.",
+                      "Normalizar para o formato com id (para rastreio no gate) ou resolver.")
+
     # ---------- R3: epistemic interrogation ----------
     # Presença dos PROCEDIMENTOS que a crítica semântica exige (cada um nasceu de
     # uma pergunta "o quê falta / por quê?" — ver guardian_report_v5_epistemic.md)
@@ -409,6 +437,7 @@ def main():
             if new == 0:
                 break
         g.round3()
+        g.todo_registry()
     reg = {"round": a.round, "n_findings": len(g.findings),
            "gate_pass": not any(f["severity"]=="BLOCKED" for f in g.findings),
            "findings": g.findings}
