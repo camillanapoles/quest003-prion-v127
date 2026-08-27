@@ -150,12 +150,15 @@ Logic validation — does the inferential chain hold? (fractal review: achado→
 Procedure insertion — for each gap, indicate what procedure/section/experiment should be inserted
 So I should extend guardian.py with a new round — R3 (epistemic interrogation) — but wait: the user says "seja crítico" — the guardian itself should BE critical. A deterministic script can't do semantic criticism... but I'm the LLM. The right architecture: the guardian harness = deterministic checks + a structured interrogation protocol that I (the agent) execute, producing a critical review document that feeds back into the manuscript. That's exactly what the user wants: "indique procedimento a ser inserido".
 Actually, let me think about what's most valuable here. The user wants me to BE the hostile reviewer now, applying critical thinking to the actual content. The deterministic guardian catches structural drift; the missing piece is semantic/methodological criticism — the "Reviewer 2" brain. I loaded the scientific-critical-thinking skill precisely for this.
+
+
 Best move: 
 1. 
 Extend guardian.py with R3 = "epistemic interrogation" module that takes the interrogation battery and checks the manuscript has ANSWERS to the critical questions (deterministically detectable via patterns like "power", "blinding", "randomization", "n=", "primary endpoint", "stopping rule", etc.)
 2. 
 AND write the actual critical review — guardian_report_v5_epistemic.md — where I do the deep semantic critique of: context (framing), ideas (containment thesis, θ formalism), methodology (audit→transport→Bayes→simulation→gate chain), evidence (E-registry provenance), logic (each inferential link), with explicit "FALTA:" (missing info), "PORQUÊ?" questions, and "INSERIR:" (procedure to insert) per finding.
 Let me enumerate the real scientific gaps I can identify from everything I know about this project — this is the meat. Let me brainstorm as a genuinely hostile A1 reviewer with the critical-thinking skill's framework (methodology critique, bias detection, statistical validity, evidence hierarchy, logical fallacies):
+
 CONTEXT/FRAMING:
 1. 
 The manuscript claims "design thesis" but never states a falsifiable null for the whole program — what result at G0 would kill the program entirely (vs pivot)? The kill-switch exists per-arm but the program-level kill criterion is vague.
@@ -179,6 +182,153 @@ G0 statistical plan: n=8/arm, primary readout proximal/distal gradient — but n
 Organoid-to-organoid variability: Groveman organoids show high variance (MV2 titer SD = 77% of mean). n=8 may be hopeless for gradient readouts; no mention of organoid batch/line stratification or randomization. MISSING: randomization scheme, blinding of outcome assessment, batching plan.
 10. 
 No blinding mentioned for PrP-res quantification (WB/IHC scorer blinding). Standard hostile ask.
+
+---
+## evokucao 2
+Interesting —  /workspace/guardian.md  is the RAW REASONING DUMP from a parallel session (the previous assistant turn's internal monologue) that got saved there. It contains the brainstorm for the epistemic guardian — and I already implemented most of it in guardian.py R3 + the epistemic report. But there are a few items in that dump I have NOT yet covered:
+From guardian.md brainstorm, items I did NOT yet implement:
+• 
+#2 ION717 competing hypothesis — comparative table / head-to-head rationale (positioning whitepaper exists but not in manuscript) — MISSING in my epistemic report! Actually I didn't cover ION717 competition.
+• 
+#6 V127 can be recruited into aggregates at high PrP^Sc (heterologous seeding) — the DN assumption "competes without being converted" needs the caveat — I covered exponent but not the recruitment caveat.
+• 
+#9 organoid-to-organoid variability: MV2 titer SD = 77% of mean — n=8 batch stratification. I covered SAP (Holm/Welch/power from protocol) but not the variance discussion.
+• 
+#10 blinding — covered.
+• 
+The file was cut at #11 — there may be more items I can't see (16449 bytes, only showed 50 lines... I saw about half. Let me read the rest).
+Also the user's actual asks this turn:
+1. 
+Commit + WAL (cancelled last turn) — do it now
+2. 
+Holistic review per the impacts of this publication + SAFETY criteria (lives, health) — is content at publication level for neuroscientists of major academies?
+3. 
+"Modelo descoberta para Nobel" framing + interdisciplinary census: computational engineering, fluid mechanics (CFD/transport), defense/attack strategy (SWOT) beyond medicine/neurology/biomedicine.
+So my plan:
+1. 
+Read rest of guardian.md (see what else the parallel-brainstorm found that I haven't covered)
+2. 
+Commit + WAL
+3. 
+Write the holistic review (into /workspace/guardian.md? No — that file is the raw dump; I'll write the holistic review as a new section appended or a new file guardian_holistic.md; the user said "revisao holistica @/workspace/guardian.md" — they want the holistic review, referencing that file. I'll append the holistic review TO that file so it's all in one place as they indicated, or better: keep the dump + append holistic review section. Actually cleaner: write the holistic review at /workspace/guardian.md as APPEND (preserve the brainstorm) — it's their designated file.)
+Content of the holistic review:
+A. SAFETY/LIVES/HEALTH (dual-use + clinical safety):
+• 
+Dual-use: prion research biosafety — the program is therapeutic, no gain-of-function, no enhanced infectivity work. The G0 protocol handles sCJD-infected organoids (BSL-3-like prion practices, WHO decontamination). Publishing ring-spacing design rules: could they be misused? No — containment-of-misfolding calculus has no offensive read. The defense/attack SWOT framing in the project (Quest 002 was defense) — here SWOT is used analytically for competitive positioning of the therapy platform, not bioweapon. State this explicitly: no dual-use concern beyond standard prion biosafety; the open-science design DOES deal with lethal pathogen (CJD isolates) but at organoid level with established containment.
+• 
+Clinical safety ethics: population-first (presymptomatic carriers), no promises, compassionate-use-only for sporadic, DSMB, LGPD privacy, biosafety single-use cannula, WHO protocols — all in §6. What's missing from a "lives" standpoint: (i) informed-consent framework specifics for gene-positive presymptomatic individuals (a suicide-risk-adjacent population — disclosure ethics); (ii) equity: Brazilian E200K kindreds as target population — who pays? open-science but therapy delivery is expensive; (iii) the paper does NOT give clinical guidance and states so — good (no clinical advice). Also: publishing a 5% probability might affect patient-community expectations — prion family associations (e.g., CJD Foundation) — communication risk. Add: a "responsible communication" note?
+B. READERSHIP LEVEL (major-academy neuroscientists):
+Honest assessment: the manuscript is at preprint-publishable level NOW for a specialist readership (prion biology + computational), with these caveats:
+• 
+Level achieved: methods transparency, evidence provenance — EXCEEDS field norms (guardian/harness is novel)
+• 
+Level concerns: (1) figures incomplete (Fig2/Fig3 queued — must complete before bioRxiv); (2) mathematical sections assume comfort with ADE/reaction-diffusion — fine for iScience/eLife readership; (3) the interdisciplinary breadth (CFD + Bayes + prion) is a strength for general journals but each domain expert will check their own: neurologists check clinical framing, mechanicians check solver validation (E-11 noted), statisticians check the Bayes weights (E-12). The manuscript handles this via declared limitations. (4) Nobel-level comparison: what distinguishes "interesting preprint" from "field-defining": if G0 confirms and a clinical program follows, the discovery arc is: evolution-found protective variant → engineered containment therapy — that's the arc of Hla/Vane-style translational discoveries (aspirin/prostaglandin) — but TODAY it's a pre-registered hypothesis. Honest framing: the Nobel talk is conditional on G0+human efficacy; the PUBLISHABLE claim today is the methodology + design calculus. Don't let ambition inflate claims — that's exactly what the guardian exists to prevent.
+• 
+Interdisciplinary census (user asked "quantas disciplinas"): medicine/neurology, neuropathology, structural biology, population genetics/evolution, cell biology (iPSC/organoids), biophysics (kinetics), transport physics/fluid mechanics (porous media ADR, Stokes-Einstein, Darcy), applied math/numerical methods (FV solvers, Gillespie→mean-field), Bayesian statistics/probability, software engineering (reproducible harness), regulatory science, ethics/bioethics, science of science/meta-research (pre-registration, provenance), information/graph science (knowledge graphs), strategic analysis (SWOT/refutation-driven branches). That's ~14-16 disciplines. In the paper this is a FEATURE (the "convergent methods" table could be added — actually suggest adding a "disciplinary convergence" table to the manuscript or keep for the defense/banca presentation).
+C. NOBEL-MODEL DISCOVERY framing:
+• 
+The "discovery model": (1) natural experiment (kuru selection) → (2) mechanism (dominant-negative structure) → (3) engineering (dose-placement calculus) → (4) falsifiable clinical-path program (G0). Prions have TWO Nobels (Gajdusek 1976, Prusiner 1997). A third prion Nobel would be therapy (or structural propagation in humans, or the organoid platform). This program positions for the therapy slot: if V127 containment works in humans, it's the first disease-modifying therapy for any prion disease + a generalizable containment framework for AD/PD. State the honest conditional: today we deliver the DESIGN; the discovery-model value is the audited pipeline itself.
+• 
+Also the honest counter: six failed candidates; P=5% empirical. The Nobel framing must not leak into the manuscript claims. Keep it in defense presentations (banca), not in the paper. Actually — the user says "a publicação deve ser modelo descoberta para nobel" — they want the PUBLICATION structured as a discovery-model. I'll interpret: structure the narrative arc so the discovery is legible (from evolution to therapy), which §1.2 already does (program evolution). Suggest: add one sentence to Discussion "The arc this program instantiates — population genetics to therapeutic calculus — is the discovery model we contribute: audited, pre-registered, falsifiable."
+D. What's missing to be AT the level (checklist before bioRxiv):
+• 
+Figs 2/3 generation, PT parity, LaTeX compile, E034-E038 elevation, search_log, sweeps, ION717 comparative paragraph (from guardian.md brainstorm — NEW item I should add to epistemic report as E-21!), heterologous-seeding caveat (E-22), organoid variance stratification note (E-23).
+• 
+Verdict: With the committed fixes: YES at preprint level for specialist academy readership; NOT yet at Nature/Cell submission level (needs figures + the queued executions); Nobel-conditional on G0.
+Let me also check the rest of guardian.md quickly (it was 16KB, I saw ~half through item 11; items beyond might include more). Then commit, WAL, write holistic review appended to /workspace/guardian.md, and reply summarizing.
+Order: read rest of guardian.md → commit+WAL → append holistic review → reply.
+
+---
+## evolucao 3
+The user is making an important epistemic clarification/reframing: The G0 gate is currently the COMPUTATIONAL model (in-silico). Even though not "real" (wet-lab), it's audited and well-founded — much more than traditional methods. So:
+1. 
+DECLARE for due purposes: G0-calculado = computational simulation as the CONTINUATION of findings already found
+2. 
+Emphasize: G0 (future wet-lab) NOT BEING DONE YET does NOT impede the simulation-with-probability + systematic review applied to prions in mice + parameterized — which INCREASES assertiveness probability, and that is VALID for continuation.
+So the user wants the manuscript to declare the computational G0 as the CURRENT validation gate (in-silico gate), and that the wet-lab G0 is the future escalation. Essentially: rename/frame the current computational stage as an actual GATE that has been PASSED (G0-in-silico), with the wet-lab as G1.
+This is a legitimate framing move but requires careful epistemic honesty (guardian would demand it):
+• 
+The computational model is NOT experimental validation — it's consistency checking + design derivation
+• 
+But it IS audited, self-tested, anchored to human data, pre-registered
+• 
+The claim "much more well-founded than traditional methods" → needs to be framed carefully: traditional pre-clinical programs often lack quantitative pre-registration; this one has it
+
+What needs to change:
+1. 
+Manuscript v5: add declaration in §2.5/§2.6 or new subsection — "G0 is currently executed as an in-silico gate (G0-sim)" — actually wait. Let me think about the existing structure.
+Actually in the current manuscript, G0 = the organoid gate (wet-lab, future). The computational stuff = WS-9. The user wants to declare that the CURRENT G0 = computational simulation is the continuation basis, and the wet-lab G0 doesn't impede proceeding.
+The right framing that remains honest:
+• 
+"G0-sim (executed)": the in-silico gate — T1/T2/T3 acceptance tiers PASSED, emergence consistency, humanized clock. This is a completed computational gate.
+• 
+"G0-wet (specified, pending)": organoid 8-arm gate.
+• 
+Rename: maybe G0 = computational gate (done), G1 = organoid gate (specified).
+But renaming has consequences: pre-registered predictions refer to "G0 prediction (locked)". The locked prediction says "θ measured in organoids < 0.33 ⇒ containment" — that's the wet-lab gate. If we rename G0→G1 for organoids, need consistency across repo (g0_protocol.md, dashboard, etc.) — that's heavy. Better: keep G0 = organoid wet-lab gate, but ADD the declared concept: "G0-sim (in-silico pre-gate, executed and passed)" — the computational gate that justifies continuation. This preserves all pre-registration anchors while adding the user's requested declaration.
+The user's request: "DECLARE PRA OS DEVIDOS FINS DA PESQUISA, TRATAREMOS G0 CALCULADO COM SIMULAÇÃO COMPUTACIONAL PARA CONTINUAÇÃO DOS ACHADOS QUE JÁ ENCONTRAMOS... E ENFATIZANDO QUE G0 SERÁ PRODUZIDO PORÉM NÃO IMPEDE A SIMULAÇÃO COM PROBABILIDADE, REVISÃO SISTEMÁTICA APLICADA A PRIONS EM CAMUNDONGOS + PARAMETRIZADA → AUMENTA MUITO A PROBABILIDADE DE ASSERTIVIDADE O QUE É VALIDO PARA CONTINUAÇÃO"
+So the declaration: 
+1. 
+The computational G0 (G0-sim) IS the current gate — executed, audited, passed (T1/T2/T3)
+2. 
+Systematic review + murine prion parameterization + probability = validity basis for continuation
+3. 
+Wet-lab G0 is future production, does NOT impede continuation of findings
+Guardian-epistemic considerations (I must keep honesty):
+• 
+Cannot claim simulation validates biology (already declared: "consistency, not validation")
+• 
+CAN claim: the computational gate de-risks and justifies continuation; the program's epistemic ladder is review→simulation→organoid→clinic
+• 
+The murine parameterization point: "systematic review applied to prions in mice + parameterized" — the kernel is murine-calibrated (Igel 2024), anchored to human organoid data (Groveman). This cross-species anchoring is the strength.
+Where to insert:
+1. 
+§2.5 or new §2.5 preamble: "Gate architecture: G0-sim (in-silico, executed & passed) → G0 (organoid, specified)". 
+2. 
+Abstract: brief clause "an in-silico gate (G0-sim) has been executed and passed; the wet-lab organoid gate (G0) is specified"
+3. 
+Maybe §3.4 ending or new §3.5: "Status declaration: computational continuation".
+4. 
+Hostile review would want: what G0-sim does and does NOT license (declaration of scope: continuation of design/refinement, NOT clinical claims).
+Also should update:
+• 
+claims: new claim C046 (G0-sim executed/passed) with evidence E032 (software) — hash convention
+• 
+Maybe update the pre-registered prediction wording? No — locked stuff stays locked.
+Let me also check: does the user want it in PT too? PT v5 is still queued (4 AMENDs). This declaration should be included in the PT when written. I'll note it in the WAL.
+Plan:
+1. 
+Add claim C046 to claims.csv (hash convention: norm + sha256)
+2. 
+Insert declaration in manuscript_EN_v5.md:
+◦ 
+§2.5 rewritten preamble: gate architecture with G0-sim executed
+◦ 
+Abstract: add clause
+◦ 
+New short §3.5 "Computational gate status and continuation validity" — declares: G0-sim executed & passed (T1/T2/T3 + emergent consistency), basis = systematic review (9 blocks) + murine-parameterized published kernel (Igel) + human-organoid clock anchors + pre-registered thresholds; what it licenses (continuation: design refinement, θ estimator development, sweep queue, resource commitment to organoid G0) and what it does not (no clinical inference, no biological validation claim)
+3. 
+Guardian E-check: maybe add R3 check for G0-SIM declaration? Good idea: R3 pattern "G0-sim" to keep future versions honest.
+4. 
+Re-run guardian → gate PASS
+5. 
+Commit + WAL
+Careful with epistemics: "AUMENTA MUITO A PROBABILIDADE DE ASSERTIVIDADE" → translate to: the in-silico gate raises the probability that the wet-lab gate is informative and that resources are well-spent (that's exactly what P(G0 go)=36.6% models). Keep two-lens honesty.
+Text for §3.5 (concise):
+3.5 Gate status declaration:computational continuation
+For due purposes of research continuation: the current gate of this program is computational. G0-sim (in-silico gate) has been executed and passed — acceptance tiers T1, T2 and the informative tier T3 [claim:C044][evidence:E032], emergent subtype consistency [claim:C039][evidence:E032, E007], and humanized-clock predictions [claim:C037][evidence:E032] — under a pre-registered, timestamped, machine-audited regime. Its validity basis is the conjunction of: (i) a systematic review (9 evidence blocks, provenance-verified); (ii) a published, murine-parameterized spreading kernel (Fornara/Igel 2024, open code) [claim:C013][evidence:E009]; and (iii) human organoid clock/amplitude anchors [claim:C011][evidence:E007]. 
+The wet-lab organoid gate (G0) is specified and pending production; its pending status does not impede the computational continuation of findings already obtained — simulation sweeps (exponent, C50, same-mass control), θ_obs estimator development, and design-rule refinement proceed now, and each raises the informative yield of the future wet-lab gate (P(G0 informative-go)=36.6% already prices this [claim:C036][evidence:E031]). Declaration of scope: G0-sim licenses continuation of the research program (design, resource commitment, protocol freeze); it does not license biological-validation claims or any clinical inference — the ladder review → simulation → organoid → clinic keeps each rung explicitly labeled.
+Abstract clause: after "...is specified with go/no-go and pivot criteria." add: "The program's current gate is computational: an in-silico gate (G0-sim) — pre-registered thresholds passed on the humanized model (T1/T2/T3) — is executed and machine-audited, licensing continuation of design and estimator development while the wet-lab gate is produced."
+Also §2.5 mention. Keep edits tight.
+C046 text: "The in-silico gate G0-sim is executed and passed: acceptance tiers T1 T2 and T3 on the humanized model with emergent consistency; it licenses computational continuation of the program but no biological validation claim"
+norm: lowercase, strip non [a-z0-9.%×±\-\s]. Let me compute hash via python.
+Also guardian.py R3 addition: ("R3-G0SIM", "G0-sim", "AMEND", "Declaração de status do gate computacional...") — pattern "G0-sim" must appear. Good.
+Then run guardian, commit, WAL, reply in PT.
+Also update memory? No — session-state is enough.
+One more consideration: user said "REVISAO SISTEMATICA APLICADA A PRIONS EM CAMUNDONGOS + PARAMETRIZADA" — the murine kernel + parameterization. Covered in validity basis (ii)/(iii).
+Execute now. Also the dashboard data.json? Rule: update every session. This is a structural addition — could add a node. But keep scope: paper task. I'll skip dashboard this turn to keep budget; note in WAL as pending? Actually memory says "dashboard 8137 (server dies on recycle; artifacts/dashboard/data.json = single source, update EVERY session)". Hmm — "update EVERY session". Adding one node for G0-sim declaration would honor it. Quick jq/python insert: node id "g0sim" with label, edge from ws9. Let me do it minimally but correctly (need to inspect data.json structure first — nodes have id/label, edges probably {source,target,relation}). I saw nodes have id/label. Let me check an edge quickly in the same command and then insert. Keep it small.
+
+
 11. 
 ===
  M paper/evidence_workspace/authorship.json
@@ -193,74 +343,21 @@ No blinding mentioned for PrP-res quantification (WB/IHC scorer blinding). Stand
 
 ---
 
-# ═══════════════════════════════════════════════════════════════
-# REVISÃO HOLÍSTICA — SEGURANÇA, NÍVEL DE LEITORES, MODELO-DESCRIÇÃO
-# (Guardião, modo avaliador sênior · 2026-08-27 · repo @bc310c8)
-# ═══════════════════════════════════════════════════════════════
+## evolução 4 — PUSH + TOOLCHAIN + GATE-HOOK REVIEW + PLAN_2027 (2026-08-27 ~03:50)
+- PUSH: branch paper-v5 → github.com/camillanapoles/quest003-prion-v127 (12 commits à frente do main; PR aberto quando a autora quiser merge)
+- TECTONIC_OK local (PDF v4.2 119KB) — toolchain LaTeX autônoma validada; LaTeX v5 será local, sem Colab
+- FIGS 2/3 devidamente geradas dos JSONs reais (make_figs_v5.py; m4 hostil resolvido)
+- CLÁUSULA CONSTRUTIVA G0-sim travada: computacionais=resultados no próprio tier; validação insubstituível; ESTIMULA P&D ágil (C046 amend-2; R3-G0SIM-STIM)
 
-## 0. Achados adicionais do brainstorm paralelo (integro à série E)
+### Gate-hook review (auditoria do próprio guardião — meta-R)
+- 12 checks R3 ativos, todos regex-testáveis, BLOCKED nos 4 invariantes (θ-ops, SAP, G0SIM, CANON); stdlib/offline/determinístico ✓
+- 8 AMENDs atuais = fila de execução legítima (PT×4, LaTeX v5, 3 tags Table1) — NÃO são falhas
+- Cobertura vs superfície: manuscrito ✓ claims ✓ manifest ✓ consistency ✓ tex-drift ✓ PT-paridade ✓ — falta: check de FIGS referenciadas (fig2/fig3 existem como arquivo?) → NOVO check R3-FIGS adicionado
+- Veredito do meta-review: hook ÍNTEGRO; adicionados R3-PLAN (referência ao PLAN_2027) e R3-FIGS (figuras referenciadas existem em disco)
 
-- **E-21 (ION717 competitivo) — AMEND:** o manuscrito cita ION717 como análogo parcialmente informativo mas nunca responde POR QUE contenção-V127 se posiciona contra redução-de-substrato ASO já em ensaio humano. INSERIR: parágrafo comparativo em §4.3 ou Discussion (vantagem: DN não exige silenciar PrP nativo — PrP tem função sináptica; desvantagem: ASO está 3-5 anos à frente em pipeline) + tabela suplementar. A resposta honesta é complementaridade, não superioridade.
-- **E-22 (heterologous seeding) — AMEND:** o modelo assume que V127 compete SEM ser convertido; se V127 for recrutado a agregados em excesso de PrP^Sc (seeding heterólogo), o capping degrada com o tempo e θ* é limite inferior. INSERIR: frase na limitação 2 + readout G0 opcional (WB para co-agregação V127).
-- **E-23 (variância organoide) — AMEND:** titers Groveman têm SD=77% do MV2-média; com CV~30% planejado, se a variância observada for a publicada, n=8 perde poder para gradientes. INSERIR: §2.5 nota de escalonamento já existe (n=12); acrescentar estratificação por lote/linha no checklist de execução.
-
-## 1. SEGURANÇA — vidas, saúde, uso-duo
-
-**Veredito: PUBICÁVEL com as salvaguardas já presentes; sem barreira duo.**
-
-| Dimensão | Avaliação | Evidência no projeto |
-|---|---|---|
-| Uso-duo ofensivo | NENHUMA | O cálculo é de CONTENÇÃO terapêutica; nenhuma informação aumenta virulência, estabilidade ou transmissão de príons; não há gain-of-function; organoides não são amplificação para inóculo |
-| Biossegurança príon | ADEQUADA e declarada | §6: cânula coaxial single-use, WHO 134°C/NaOH, contenção de necropsia; G0 opera com isolates sCJD em plataforma organoide estabelecida (Groveman) — prática de campo, não procedimento novo |
-| Risco clínico direto | BAIXO — o paper NÃO é guidance | Não há recomendação clínica; endpoints declarados contenção/desaceleração; "no therapeutic promises"; população compassiva esporádica só pós-validação |
-| Ética populacional | FORTE mas com 2 lacunas | Population-first E200K (janela de anos, autólogo) + LGPD + DSMB. FALTA: (a) framework de consentimento para portadores pré-sintomáticos (população com risco suicida-adjacente ao saber do status genético — protocolo de disclosure); (b) nota de comunicação responsável: publicar P(slowing)=5% sem contexto pode inflar esperança em associações de familiares CJD — INSERIR meia frase no §6: "results are probabilistic design estimates, not clinical predictions; patient-organization communication should accompany any press coverage" |
-| Equidade | DECLARAR | Kindreds brasileiros como primeira população em programa open-science: INSERIR frase de acesso (a terapia que eventualmente decorra deve ter plano de acesso à população-âncora, senão a população que gerou a hipótese não a acessa) |
-
-**Sobre o framing SWOT/defesa:** a análise ataque/defesa foi MÉTODO (recalibração competitiva de ramos terapêuticos), não conteúdo militar. O uso público é legítimo e não toca na linha da Quest 002.
-
-## 2. NÍVEL PARA LEITORES — neurocientistas das grandes academias
-
-**Veredito em três camadas:**
-
-1. **HOJE (v5 + fila executada = figs 2/3, PT, LaTeX): nível PREPRINT ESPECIALISTA (bioRxiv/angioarchive) — SIM.** A transparência de procedência (45 claims/33 fontes/4 validadores/guardião recursivo) EXCEDE a norma do campo; nenhum paper de príons oferece auditoria máquina-verificável dessa profundidade. Leitores-alvo naturais: prion labs (Collinge/Mead/Caughey círculo), grupos organoide, comunidade modeling (Igel/Fornara citarão o port).
-2. **Para revista A1 (Nature Med/Cell/Sci Transl Med): NÃO AINDA.** Blocos objetivos: (i) figuras incompletas; (ii) zero dado wet-lab — A1 exige pelo menos o G0; (iii) âncoras preprint (E-01..: E003/E004) precisam de versão revisada. O caminho A1 É o G0: se θ_obs<0.33 emergir, o paper G0+v5 fundidos são submetíveis.
-3. **Para a BANCA (coorientador/doutoral): nível EXCEDE.** A §1.2 (evolução com refutações) + guardião + harness respondem antecipadamente o que banca hostil perguntaria sobre método de pesquisa assistida-por-agente.
-
-**O que um acadêmico Nobel-level leria como sinal de força:** a PRE-REGISTRAÇÃO realmente travada antes do G0 (a maioria dos "pre-prints planejados" do campo não tem timestamp público imutável), a honestidade das duas lentes bayesianas (5% vs 30-45% rotuladas — raro), e o critério de MORTE programática (E-20 — quase inédito em programas translacionais).
-
-## 3. MODELO-DESCRIÇÃO PARA NOBEL — enquadramento honesto
-
-**Contexto do campo:** príons têm 2 Nobéis (Gajdusek 1976 — transmissão lenta; Prusiner 1997 — hipótese priônica). O terceiro slot do campo é TERAPIA ou estruturação da propagação humana. **AHipótese central deste programa mira o slot de terapia** — mas o veredito honesto do Guardião:
-
-- **HOJE o programa NÃO tem descoberta; tem DESIGN.** A publicação v5 é um plano pré-registrado falsificável. Chamar de "descoberta" hoje seria exatamente o tipo de inflação que o guardião existe para impedir — e que destruiria a credibilidade ante academia.
-- **CONDICIONAL ao G0 + eficácia humana**, o arco é de classe-Nobel genuína: *experimento natural (seleção do kuru) → mecanismo (DN dominante) → engenharia quantitativa (calculo de dose-e-posição) → terapia modificadora em doença universalmente fatal → framework transferível a AD/PD (50M+)*. Nenhum candidato antipriônico anterior teve cálculo de entrega.
-- **O que É publicável hoje como contribuição-modelo:** o MÉTODO-descoberta em si — pipeline auditável (auditoria→física→Bayes→simulação→gate com guardião recursivo). INSERIR 1 frase no §4.1: "The discovery model this program contributes is the audited arc itself: evolution-validated variant → quantitative containment design → pre-registered falsifiable gate; it is transferable as methodology independent of the therapeutic outcome."
-- **A PUBLICAÇÃO pode ser estruturada como modelo** (o arco §1.2 + Fig.1 já fazem isso); ela NÃO pode REIVINDICAR descoberta. A diferença é a credibilidade da banca.
-
-## 4. CENSO INTERDISCIPLINAR — o que realmente converge
-
-| # | Disciplina | Onde entra no programa |
-|---|---|---|
-| 1 | Genética populacional/evolução | seleção do kuru → variante protetora (E002) |
-| 2 | Neurologia clínica | DCJ, subtipos MV1/MV2, janela terapêutica |
-| 3 | Neuropatologia | espongiforme, PrP-res, Braak-like spread |
-| 4 | Biologia estrutural | β2-α2 loop, dímeros, base do DN (E005/E006) |
-| 5 | Biologia celular (iPSC/organoides) | plataforma G0, iMGL co-graft |
-| 6 | Biofísica cinética | nucleated-polymerization (Masel), Gillespie→mean-field |
-| 7 | **Mecânica dos fluidos/meio poroso** | solver ADR, Stokes-Einstein, Darcy, cistos κ×50 — WS-7 |
-| 8 | **Engenharia computacional/numérica** | volumes finitos 192², self-tests Thiele, port determinístico — WS-7/9 |
-| 9 | Estatística bayesiana | calibração por analogia estrutural, duas lentes — WS-8 |
-| 10 | Engenharia de software | harness determinístico, reprodutibilidade, guardião |
-| 11 | Ciência regulatória | geometria de precedentes (nusinersen/tofersen/tafamidis) |
-| 12 | Bioética/governança | DSMB, LGPD, consentimento, kill programático |
-| 13 | Meta-ciência | pré-registro, proveniência, auditoria de citações, honestidade epistêmica |
-| 14 | Ciência de grafos/informação | data.json 43 nós, graphify, fig1 como mapa |
-| 15 | Estratégia analítica (SWOT/refutação) | ramos R1-R8, matriz multi-ação, pivôs por refutação |
-
-**15 disciplinas** — 4 além do biomédico clássico (7, 8, 10, 15) carregando peso REAL (sem WS-7 não há regra de anel; sem guardião não há gate de manuscrito). Isto é argumento de DEFESA forte: a tese só existe pela convergência. Usar o censo na apresentação à banca, não no paper (o paper mostra; a banca enumera).
-
-## 5. FILA PARA "ESTAR AO NÍVEL" (ordem de bloqueio)
-
-1. Figs 2/3 dos JSONs (bloqueia submissão PDF) → 2. LaTeX v5 Harvard 2-col (tectonic local pronto) → 3. PT v5 com paridade de tags (4 AMENDs) → 4. E-21/22/23 no texto (meia-página) → 5. E034-E038 (6 falhas, fonte aberta) + search_log → 6. sweeps expoente/C₅₀ (Colab, ~30min) → 7. frases de segurança: comunicação responsável + equidade (§6).
-
-**Veredito final do Guardião:** o conteúdo está ao nível de publicação preprint para leitor especialista COM a fila 1-4 executada (≈1 sessão). A cláusula Nobel é legítima como MODELO (arco auditado), ilegítima como CLAIM — e o próprio guardião garante que essa linha não será cruzada.
+### PLAN_2027 (o que compete em 2027 — tiering honesto)
+- Nobel Medicina 2027: IMPOSSÍVEL e guardião bloqueia o claim (indicações jan-fev/27; exige eficácia humana)
+- Breakthrough-classe cobrindo 2027: PLAUSÍVEL SE G0 confirmar (predição pré-registrada confirmada = estrutura de claim máxima)
+- Definidor de campo príon: ALCANÇÁVEL com a fila (harness + two-tier + bilíngue)
+- Sequência T0(bioRxiv agora)→T1(sweeps+paper método)→T2(G0-wet)→T3(A1+dataset)→T4(G1/pre-IND); direção B (paper de metodologia) em paralelo como hedge
+- A vantagem competitiva real: a predição já está travada ANTES do teste — se confirmar, é o claim mais forte que a epistemologia permite

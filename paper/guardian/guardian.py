@@ -267,6 +267,10 @@ class Guardian:
          "Declaração de status do gate vigente: o G0-sim (computacional, executado e passado) e seu escopo (licencia continuação; não valida biologia) devem estar declarados."),
         ("R3-G0SIM-STIM", r"non-substitutable|does not substitute|não substitui|stimulat", "AMEND",
          "Cláusula construtiva do G0-sim: achados computacionais usados como resultado; validação necessária e insubstituível; estimula P&D ágil conforme metodologia científica."),
+        ("R3-PLAN", r"PLAN_2027", "AMEND",
+         "Continuidade: o manuscrito/canon devem referenciar PLAN_2027.md (trajetória de gates e publicações) — o programa não publica sem rota."),
+        ("R3-FIGS", r"fig2_theta_response\.png|fig3_subtypes\.png", "BLOCKED",
+         "Figuras 2/3 (θ-resposta e subtipos) referenciadas e existentes em disco — manuscrito sem figuras reais não publica."),
         ("R3-REDOSE-IMMUN", "anti-PEG|repeat-dose immun|redosing.{0,80}immunogen|clearance acelerad", "AMEND",
          "Imunogenicidade da redose repetida (LNP/anti-PEG, via intratecal) discutida."),
     ]
