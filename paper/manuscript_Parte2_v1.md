@@ -55,7 +55,7 @@ Em vez de laboratório ou teste humano, **o que valida e compõe a tese neste es
 O objetivo operacional: converter gradiente proximal/distal medido em θ_obs comparável ao limiar travado θ\*=0,333 [claim:C038] [evidence:E032] **sem circularidade** (grade e função-objetivo congeladas antes do dado; Parte 1 §2.7). A validação do próprio instrumento é computacional — simulation-based calibration sobre a grade κ∈{1,5–8} do motor v4 exato:
 
 - **Calibração unitária** (1000 boots; ruído organoide publicado CV 30/40%): veredito **ADEQUADO** por critérios pré-declarados (cobertura do θ verdadeiro 3/3; bias ≤ 0,032) [claim:C052] [evidence:E032, E033] — com nota honesta: resolução por-órganoide é baixa; a precisão vem do **regime declarado** (mediana por braço, n=8).
-- **Regime pooled n=8**: PASS integral **na fronteira de decisão** (κ=2: bias 0,008; recuperação modal 69%; cobertura ✓) — a região exata onde a predição travada decide (θ<0,33) [claim:C052] [evidence:E032, E033]; em κ alto o bias é **conservador** (+0,060: superestima θ, subestima contenção — erro no lado seguro).
+- **Regime pooled n=8**: PASS integral **na fronteira de decisão** (κ=2: bias −0,008; recuperação modal 69%; cobertura ✓) — a região exata onde a predição travada decide (θ<0,33) [claim:C052] [evidence:E032, E033]; em κ alto o bias é **conservador** (+0,060: superestima θ, subestima contenção — erro no lado seguro).
 - **v1.1-IDW (interpolação) testada e rejeitada**: piorou a fronteira (bias −0,037, direção anti-conservadora) e quebrou cobertura em κ=8 — registrado como evidência de que a disciplina anti-hindsight está viva: o upgrade que falha é descartado, não embranquecido [claim:C052] [evidence:E032, E033].
 - Achado de design que o método produziu: a razão de biomassa carrega a informação que o raio perde por saturação (R 0,843→0,760 mm contra razão 48→1,25 na grade) — o estimador opera no par de features por necessidade [claim:C052] [evidence:E032, E033].
 
@@ -81,7 +81,7 @@ Replicabilidade posterior: qualquer pesquisador re-executa as strings, re-tria, 
 
 ## 6. M5 — Infraestrutura de continuidade (guardião + runbook)
 
-Toda superfície de manuscrito é gated por revisão hostil recursiva (R0 drift estrutural · R1 checklist+baterias · R2 recursão de emendas · R3 interrogação epistêmica + registro {{TODO:id:desc}}); o decálogo vivo (tiers de dado · locked-stays-locked · ilustrativo≠evidência · paridade · anti-hindsight · fim-de-sessão=/RECAP) está no guardian.md com comandos copy-paste — a continuidade não depende de memória de quem continua, e sim de método documentado — índice-mestre no KNOWLEDGE_CANON.md.
+O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Parte 2 tem contrato próprio de gate (mesmos TODO-registry, baterias e binding de números citados; sem herdar os padrões literais da Parte 1), e a **Base de Validade (§1-bis) é check BLOCKED permanente** neste perfil. Toda superfície de manuscrito é gated por revisão hostil recursiva (R0 drift estrutural · R1 checklist+baterias · R2 recursão de emendas · R3 interrogação epistêmica + registro {{TODO:id:desc}}); o decálogo vivo (tiers de dado · locked-stays-locked · ilustrativo≠evidência · paridade · anti-hindsight · fim-de-sessão=/RECAP) está no guardian.md com comandos copy-paste — a continuidade não depende de memória de quem continua, e sim de método documentado — índice-mestre no KNOWLEDGE_CANON.md.
 
 ## 7. Promessas e limites desta Parte 2
 
@@ -93,3 +93,20 @@ Parte 1: release v3.0 (manuscritos EN/PT + harness 38 fontes · 51 claims · 43 
 
 ---
 *Parte 2 [SEM ANO] — o resultado define; as fases são estimativas. Toda cifra deste manuscrito vem de JSON arquivado ou do registro E (regra: nunca digitar valor). Gated: guardian R0–R3, 0 BLOCKED exigido.*
+
+
+## 8. Apêndice — Inventário dos artefatos da Parte 2 (verificável em disco)
+
+| Artefato | O que é | Estado |
+|---|---|---|
+| `experiments/part2_theta_obs_v1.py` + `part2_results/part2_theta_obs_v1.json` | estimador v1-NN: grade κ 1,5–8 + calibração unitária (veredito ADEQUADO pré-declarado) | executado |
+| `experiments/part2_theta_obs_pooled.py` + `.json` | regime declarado §2.7: mediana por braço n=8 (bias −0,008 na fronteira; modal 69%) | executado |
+| `experiments/part2_theta_obs_v11.py` + `.json` | estimador interpolado IDW-2 — **testado e REJEITADO** (bias anti-conservador na fronteira; cobertura quebra em κ=8); JSON regenerado por script após truncamento da primeira execução (nota de integridade in-file) | executado (rejeitado) |
+| `experiments/part2_results/part2_derived_summary.json` | tabela-decisão derivada (κ↔θ↔R↔biomassa↔margem) — zero novas simulações | derivado |
+| `experiments/part2_results/partner_selection_log.md` v0.2 | aplicação-piloto do método M4 (9 registros → 8 grupos → 2+1+3+2) — não-decisório | piloto |
+| `experiments/G0_EXECUTION_FREEZE_CHECKLIST.md` | F1–F10 + GATE-F (M2 — dormant por reenquadramento) | especificado |
+| `experiments/REPARAM_LOOP.md` | regra anti-hindsight de realimentação (M3) | especificado |
+| `experiments/PARTNER_SELECTION_PROTOCOL.md` v2.1 | método M4 (query bank + I/X + pesos + fluxo) | método |
+| `paper/guardian/guardian.py` (`--profile part2`) | gate da Parte 2 (inclui R3-BASE-VALIDADE BLOCKED) | operante |
+
+*Nota de integridade da auditoria 27/08 (tarde): dois defeitos encontrados e corrigidos no próprio ato — JSON da v11 truncado por erro de serialização (regenerado por script salvo, seed idêntica, veredito idêntico) e sinal do bias pooled invertido na prosa (−0,008 conforme o JSON; corrigido nos três documentos). Ambos registrados aqui porque a auditoria que não publica suas correções não é auditoria.*

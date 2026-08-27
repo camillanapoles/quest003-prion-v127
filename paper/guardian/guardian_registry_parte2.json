@@ -1,6 +1,6 @@
 {
   "round": 3,
-  "n_findings": 10,
+  "n_findings": 11,
   "gate_pass": true,
   "findings": [
     {
@@ -72,6 +72,13 @@
       "where": "todo-registry",
       "issue": "TODO aberto registrado: id.",
       "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
+      "id": "R3-TODO-LOOSE",
+      "severity": "AMEND",
+      "where": "manuscript+tex",
+      "issue": "1 ocorrência(s) de 'TODO' fora do formato {TODO:id:descrição}.",
+      "demand": "Normalizar para o formato com id (para rastreio no gate) ou resolver."
     }
   ]
 }

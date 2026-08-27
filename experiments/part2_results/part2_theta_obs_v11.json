@@ -2,6 +2,7 @@
  "artefato": "Parte 2 \u00b7 THETA-OBS-V11 (\u03ba\u0302 cont\u00ednuo por IDW-2)",
  "n_arm": 8,
  "n_boot": 1000,
+ "nota": "regenerado por script ap\u00f3s truncamento da execu\u00e7\u00e3o original; seed id\u00eantica",
  "k2": {
   "theta_true": 0.333,
   "theta_arm_median": 0.297,
@@ -36,4 +37,7 @@
   ],
   "coverage": false,
   "within_1.5step": 0.407,
-  "PASS": 
+  "PASS": false
+ },
+ "veredito_v11": "REJEITADA: piora a fronteira de decis\u00e3o (bias anti-conservador) e quebra cobertura em \u03ba=8 \u2014 v1.0-NN mantida"
+}
