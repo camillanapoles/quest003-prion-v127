@@ -1,5 +1,5 @@
 # Pacote de Contato — Laboratórios Parceiros para o Gate G0
-## Quest 003 · v2 · 2026-08-27 · USO: enviar após depósito do preprint no bioRxiv
+## Quest 003 · v2.1 · 2026-08-27 · USO: envio LIBERADO (decisão da autora 27/08: sem DOI — release v3.0 é a fonte citável; bioRxiv DOI será adicionado como adendo quando depositado, sem impacto no conteúdo)
 
 **Novo na v2:** manuscrito v5 bilíngue (EN+PT, claim-audited) · gate computacional G0-sim EXECUTADO e re-produzido em 2 ambientes (hash-idêntico + valor-a-valor) · colheita de sensibilidade com PREDIÇÃO DISCRIMINADORA para o braço A6 (a dose-resposta distingue heterodímero vs dois-eventos: unidade inibitória molecular) · dossier de liberação científica pronto (G0_UNLOCK_DOSSIER.md) · estimador θ_obs operacional pré-especificado (anti-circularidade)
 
@@ -11,7 +11,7 @@
 
 Dear Dr. [Caughey / Williams / Okamoto / Martins],
 
-We are an open-science research consortium that has completed a structured preclinical program on the therapeutic use of the kuru-protective PrP-V127 variant for Creutzfeldt-Jakob disease. Our preprint (attached; bioRxiv DOI forthcoming) integrates three components your group is uniquely positioned to test:
+We are an open-science research consortium that has completed a structured preclinical program on the therapeutic use of the kuru-protective PrP-V127 variant for Creutzfeldt-Jakob disease. Our preprint (attached; deposited open-source with full audit trail at github.com/camillanapoles/quest003-prion-v127, release v3.0; bioRxiv DOI to follow as addendum) integrates three components your group is uniquely positioned to test:
 
 **1. The agents.** Based on the 2026 demonstrations that recombinant anchorless V127 retains potent dominant-negative activity in trans (Gatdula et al.) and that AAV-delivered V127ΔGPI extends survival in vivo (Zerbes et al.), we specified three delivery vectors for the anchorless agent: CRISPR-edited secretory neural progenitors, recombinant protein, and intrathecal LNP-mRNA.
 
@@ -48,7 +48,7 @@ Respectfully,
 6. Link do repo/git (audit trail: 38 fontes · 51 claims · guardião R0-R3 · release v1.0 trava as predições) — sob acordo de colaboração
 
 ## Regras do envio
-- Enviar SÓ após o depósito do preprint (prioridade intelectual primeiro)
+- [v2.1] Envio liberado SEM DOI (decisão da autora): prioridade intelectual protegida pelo release público timestamped v3.0 (predições travadas desde v1.0); bioRxiv vira adendo
 - Um email por vez (personalizar [colchetes]); aguardar 2 semanas antes de follow-up
 - Oferecer call de 30 min; nunca anexar dados brutos do repo antes de acordo
 - IP: desenho e predições já timestampados em git público do consórcio; formalizar MTA/acordo de colaboração antes de qualquer material biológico

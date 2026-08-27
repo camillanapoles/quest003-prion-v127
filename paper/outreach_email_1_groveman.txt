@@ -1,0 +1,28 @@
+# KIT ENVIO #1 — Groveman/Caughey (Rock Mountain Labs, NIH/NIAID) — v2.1 sem DOI
+**Para:** [endereço institucional do grupo — completar] 
+**Anexos:** manuscript_v5_EN.pdf + manuscript_v5_PT.pdf + g0_protocol.md + G0_UNLOCK_DOSSIER.md + ws_9_v5_sweeps_S1.json/S2.json
+**Link:** github.com/camillanapoles/quest003-prion-v127/releases/tag/v3.0
+
+---CORPO---
+Dear Dr. Groveman and Dr. Caughey,
+
+
+Building directly on your organoid-prion platform (Groveman 2019/2021), we are an open-science consortium that has completed a structured preclinical program on the therapeutic use of the kuru-protective PrP-V127 variant for Creutzfeldt-Jakob disease. Our preprint (attached; deposited open-source with full audit trail at github.com/camillanapoles/quest003-prion-v127, release v3.0; bioRxiv DOI to follow as addendum) integrates three components your group is uniquely positioned to test:
+
+**1. The agents.** Based on the 2026 demonstrations that recombinant anchorless V127 retains potent dominant-negative activity in trans (Gatdula et al.) and that AAV-delivered V127ΔGPI extends survival in vivo (Zerbes et al.), we specified three delivery vectors for the anchorless agent: CRISPR-edited secretory neural progenitors, recombinant protein, and intrathecal LNP-mRNA.
+
+**2. The pre-registered organoid assay (G0).** Built directly on your group's platform [Groveman 2019/2021 — infected organoids; PPS screening | Williams 2023 — NPC seeding], it asks one question: does anchorless V127 generate a proximal-to-distal PrP-res containment gradient? Eight arms (n=8), including pentosan polysulfate as published positive control; kill-switches pre-registered, including pivot-to-acellular if protein matches cells. Full protocol attached.
+
+**3. Quantitative predictions to falsify — now including a discriminating one.** Our self-tested transport model (mass-conservation 100%, Thiele-length 0.5% vs analytic) predicts a 4-6 mm protection radius per deposit and a containment threshold θ*=0.333 under a humanized clock. The in-silico gate (G0-sim) is executed, machine-audited and independently re-executed with identical values; sensitivity harvest shows the threshold is robust to C50 over a tenfold range but *discriminates the functional form*: under a first-power inhibition term, containment shifts from kappa 2 to 4 — so the arm-A6 dose-response curve can distinguish the molecular inhibitory unit (heterodimer vs two independent events). The result is informative in every direction, including negative.
+
+A Bayesian success model calibrated on historical analogs (all six clinical failures now registry-bound with verified identifiers) places P(GO) at ~37% — we are asking you to help run an experiment we honestly expect to fail 6 times out of 10, because it is the cheapest decisive measurement in the field. A committee-facing unlock dossier (validity basis, guarantees, declared scope) and the pre-specified θ_obs estimator (blinded scorer, pre-committed grid and objective) are attached — the assay arrives pre-registered against circularity.
+
+We seek: [your organoid+BSL-3 infrastructure | your NPC expertise] for a ~10-month, 8-arm assay (estimated reagents+staffing USD 60-160k; we are preparing FAPESP/CNPq applications and welcome co-application with your institution). All materials, protocols, analysis code and the full audit trail (git-versioned) are available; we propose co-authorship per ICMJE and open publication of results regardless of direction.
+
+We would welcome a 30-minute call at your convenience.
+
+
+Respectfully,
+Camilla N. — Open Prion & Molecular Engineering Consortium (corresponding author)
+---
+**Follow-up:** 2 semanas; próximo destinatário na fila: Williams/Calgary (braço A5)
