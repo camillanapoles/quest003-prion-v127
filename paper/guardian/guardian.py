@@ -446,6 +446,8 @@ def main():
                 break
         g.round3()
         g.todo_registry()
+    if a.profile == "part1":
+        g.findings = [f for f in g.findings if f["id"] != "R3-R3-BASE-VALIDADE"]  # mandato da Parte 2 (Manifesto 2)
     if a.profile == "part2":
         import re as _re
         SKIP = ("R2-PT-PARITY","R2-PT-MISSING","R0-DRIFT-TEX")

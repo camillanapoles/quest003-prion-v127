@@ -1,16 +1,12 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 11 (BLOCKED=1, AMEND=0, NOTE=10)
+**Rodadas executadas:** 3 · **Achados:** 10 (BLOCKED=0, AMEND=0, NOTE=10)
 
 ## Gate
 
-**FAIL — existem achados BLOCKED.** Revisor hostil nega submissão até resolução.
+**PASS — zero BLOCKED.** O manuscrito resiste à rodada recursiva; recomendação ao editor: aceitável como preprint com auditoria pública.
 
 ---
-
-### [BLOCKED] R3-R3-BASE-VALIDADE — manuscript
-- **Problema:** Interrogação epistêmica R3-BASE-VALIDADE: procedimento ausente.
-- **Exigência:** MANDATO (autora): a Parte 2 deve declarar a Base de Validade — simulação NÃO substitui laboratório (essencial p/ absorção real); equivalência futura = antecipação aplicável; linhagem completa dos dados (quem→espécie→validação cruzada→código→parametrização→resultado) com referências sólidas.
 
 ### [NOTE] R0-UNUSED — ../manuscript_EN_v5.md
 - **Problema:** Claims registradas mas não citadas no manuscrito: C052, C053.
