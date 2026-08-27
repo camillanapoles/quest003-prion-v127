@@ -1,0 +1,1 @@
+{"query":"Q2","string":"(organoid*[tiab]) AND (antiprion[tiab] OR \"prion propagation\"[tiab]) AND (treatment[tiab] OR screening[tiab] OR therapeutic[tiab])","db":"pubmed","endpoint":"esearch.fcgi","count":2,"date":"2026-08-28T00:20Z"}

@@ -64,3 +64,7 @@ identificados(5) → dedup(5) → triagem: passam(2)+condicional(1)+excluídos(2
 **Fluxo v0.2: identificados 9 registros → 8 grupos (+1 não-identificado R8) → elegíveis 2 (RML, Calgary) + condicional 1 (USP) + watchlist 3 (Broad, UCL, La Trobe) + técnico 2 (UTHealth, Nihat).**
 {{TODO:IDENTIFY-ORGANOID-DONOR-LAB:identificar o grupo da palestra CJDF-2026 (programa do evento/agenda pública) — potencial 3º elegível}}
 Decisão: ordem de contato INALTERADA (1º RML, 2º Calgary); R8 pode reordenar APÓS identificação e pontuação.
+
+
+## 7. Rodada v0.3 — CONFORMIDADE PUBMED-DIRETO (28/08 00:20Z)
+Q1 e Q2 executadas **sem modificação** no PubMed via E-utilities (esearch.fcgi, JSON arquivado em part2_results/q{1,2}.json): **Q1 = 23 registros; Q2 = 2 registros** — strings-as-registered responderam no banco oficial (sem ajuste necessário; nenhuma emenda de string). Os registros identificados na v0.1 (proxy) permanecem compatíveis com a escala oficial (23 papers organoide×príon no PubMed todo). TODO PUBMED-DIRECT: **RESOLVIDO**. Pendência restante do piloto: Q3–Q5 em fonte oficial (CTG API/agenda pública) — mantido como conformidade futura {{TODO:Q3Q5-OFFICIAL:rodar Q3-Q5 em fonte oficial quando o executor for executar}}.
