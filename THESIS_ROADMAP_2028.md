@@ -7,7 +7,18 @@
 
 ---
 
-## A LADDER ATÉ 2028 (condicional, gate a gate)
+## ARQUITETURA DA TESE — duas partes unidas na junção G0 (claim C049)
+
+| | **PARTE 1 — pré-G0** (este manuscrito) | **PARTE 2 — pós-G0** (tese de continuidade) |
+|---|---|---|
+| Conteúdo | pesquisa, achados, simulação parametrizada, regras de design, quadros de probabilidade, benefícios | pesquisa E validação usando os dados parametrizados da simulação como substrato de trabalho |
+| Gatilho | G0-sim executado & passado [SIM] | G0-wet produz [ORGANOID] → realimenta os modelos |
+| Método | colheita final [SIM] + especificação completa do G0 (braços, SAP, estimador, kill) | estimador θ_obs consome a grade-κ da simulação; braços/doses/posições escolhidos pelas regras; loop realimenta parâmetros |
+| Por que insustentável sozinha | design não-exercido: simulação sem validação consome a própria autoridade | experimentação sem prior quantitativo desperdiça os recursos que diz respeitar |
+
+**A junção é o G0 — por isso sua declaração (§3.5), estimador (§2.7), plano estatístico (§2.5) e critérios de morte estão especificados ANTES de qualquer wet-lab existir.** A Parte 2 operacionaliza a inovação metodológica: previsibilidade e antecipação de informação para design terapêutico — decidir o que medir, onde, em que dose, antes de gastar qualquer recurso wet-lab.
+
+## A LADDER ATÉ OS RESULTADOS (condicional, gate a gate — estimativas de fase)
 
 **Nomenclatura por meio (claim C047):** G0-sim [SIM] (executado) → G0-wet [ORGANOID] (especificado) → G1 [MOUSE] (condicional) → G2 [HUMAN] (condicional). Todo dado do programa é rotulado pelo tier do gate que o produziu; até G0-wet existir, todo output novo é [SIM] — simulação parametrizada auditada, usada como resultado no seu tier, nunca como dado medido.
 

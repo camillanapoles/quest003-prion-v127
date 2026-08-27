@@ -282,6 +282,8 @@ class Guardian:
          "Dossier de liberação do G0 (argumentário ao comitê) deve existir e ser referenciado na superfície de planejamento; claims do dossier não migram ao manuscrito sem gate."),
         ("R3-TIER", r"data-tier|\[SIM\]", "AMEND",
          "Regra de rotulagem por tier (C047): dados daqui em diante rotulados [SIM]/[ORGANOID]/[MOUSE]/[HUMAN]; escada nomeada por meio (G0-sim→G0-wet→G1→G2)."),
+        ("R3-THESIS-ARCH", r"Thesis architecture|Parte 1|Part 1 \(pre-G0\)", "AMEND",
+         "Arquitetura da tese (C049): Parte 1 pré-G0 + Parte 2 pós-G0 unidas na junção G0; sustentabilidade conjunta; P2 = previsibilidade/antecipação."),
         ("R3-SEMANO", r"\[SEM ANO\]|without a calendar year", "AMEND",
          "Tese [SEM ANO]: objetivo é o resultado, não data; fases têm estimativas. Roadmap e §3.5 devem declarar."),
         ("R3-INNOV", r"information anticipation|antecipação de informação", "AMEND",

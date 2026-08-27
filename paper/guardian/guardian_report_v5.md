@@ -1,6 +1,6 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 14 (BLOCKED=0, AMEND=9, NOTE=5)
+**Rodadas executadas:** 3 · **Achados:** 15 (BLOCKED=0, AMEND=10, NOTE=5)
 
 ## Gate
 
@@ -21,8 +21,12 @@
 - **Exigência:** Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número.
 
 ### [AMEND] R0-DRIFT-TEX — latex
-- **Problema:** Números presentes no LaTeX e ausentes no manuscrito-fonte (drift): 103, 10441, 10615, 11458, 116, 137, 139, 2003, 2014, 2022, 2056, 2312, 253, 278, 3.9, 302, 330, 348, 361, 37844, 3948, 478, 5160, 522, 558.
+- **Problema:** Números presentes no LaTeX e ausentes no manuscrito-fonte (drift): 103, 10441, 11458, 116, 137, 139, 2056, 253, 278, 330, 361, 3948, 478, 5160, 522, 558, 580, 807, 8217, 841, 94, 987.
 - **Exigência:** Retropropagar ao md (source of truth) ou remover do LaTeX.
+
+### [AMEND] R1-CHK-M6-refcount — manuscript+tex
+- **Problema:** Checklist hostil M6-refcount não satisfeito (padrão não encontrado).
+- **Exigência:** M6: contagem de referências deve bater com o manifest (33 fontes E-ID) — remover '42 verified' ou reconciliar.
 
 ### [AMEND] R2-PT-MISSING — ..
 - **Problema:** Companion PT sem claim-tags (paridade declarada como passo futuro).
@@ -45,7 +49,7 @@
 - **Exigência:** Dossier de liberação do G0 (argumentário ao comitê) deve existir e ser referenciado na superfície de planejamento; claims do dossier não migram ao manuscrito sem gate.
 
 ### [NOTE] R0-UNUSED — ../manuscript_EN_v5.md
-- **Problema:** Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023, C047.
+- **Problema:** Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023, C047, C049.
 - **Exigência:** Confirmar que são intencional (claims de outline/suplemento).
 
 ### [NOTE] R1-BATTERY-factual — claims
