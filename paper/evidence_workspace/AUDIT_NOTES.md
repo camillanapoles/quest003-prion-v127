@@ -16,3 +16,6 @@ Abertas via busca web + landing pages PubMed/editor em 27/08/2026; identificador
 
 ## Reprodutibilidade do run bandeira [SIM] (2026-08-27 03:25)
 A autora re-executou o WS-9 v4 humanizado no Colab e re-enviou JSON+PNG. Hash sha256 do JSON re-executado = `31f02e13485a…` — **idêntico** ao arquivado (experiments/ws_9_results/ws_9_v4_human.json). θ*=0.333, sweep κ, âncoras MV1/MV2 e relógio (144.02 d/unid) reproduzidos bit a bit pelo executor humano independente da sessão que gerou. Cadeia: Colab autora (26/08 23:02) → commit repo (23:48) → re-execução confirmada (27/08 03:25). O resultado central da Parte 1 é **reprodutível**, não apenas arquivado.
+
+## Re-execução independente dos sweeps v5 [SIM] (2026-08-27)
+A autora re-executou a fase S1 em ambiente próprio (wall 500,5 s vs 813,9 s do run local — máquinas distintas). Comparação semântica campo a campo: **todos os valores idênticos** (exp1 k2/k4/k8 = 2.828/0.85/0.819; exp2 = 0.819/0.778/0.76; baseline 2.828 mm / 144,02 d-unid; T1 pass). Solver determinístico, port paritário entre ambientes. Arquivo arquivado como `ws_9_v5_sweeps_S1_authors_rerun.json`. Cadeia de reprodutibilidade do programa: v4 reproduzido hash-idêntico (executante humana) + v5-S1 reproduzido valor-a-valor em segundo ambiente.
