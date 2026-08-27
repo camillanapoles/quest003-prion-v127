@@ -54,6 +54,7 @@
 | F-28 | Auto-testes solver: massa 100%, Thiele 0,5% | C032·E030 | ⊕ | M | — | — |
 | F-29 | Cistos κ×50 canalizam fluxo (limitação honesta) | C-sec6·E030 | ⊕lim | D | poroelastografia de paciente | — |
 | F-30 | **G0-sim EXECUTADO e PASSADO (T1/T2/T3)** — gate computacional vigente | C044,C046·E032 | ⊕ | M,R | — | sweeps + θ_obs estimator |
+| F-39 | Colheita de sensibilidade [SIM] executada: exp=2 reproduz v4 exato; C50 10x insensivel; exp=1: k=2 NAO contem (contencao->k=4) = prediciao discriminadora p/ A6; same-mass: subtipo=e seed-mass (hierarquia por construcao) | C051-E032,E033 | + | D,P,M | dose-resposta A6 falsifica forma | congelar no checklist A6 |
 
 ## ZOOM 4 — PROGRAMA/TRADUÇÃO
 
