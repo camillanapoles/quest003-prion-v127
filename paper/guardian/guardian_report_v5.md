@@ -45,7 +45,7 @@
 - **Exigência:** Dossier de liberação do G0 (argumentário ao comitê) deve existir e ser referenciado na superfície de planejamento; claims do dossier não migram ao manuscrito sem gate.
 
 ### [NOTE] R0-UNUSED — ../manuscript_EN_v5.md
-- **Problema:** Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023.
+- **Problema:** Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023, C047.
 - **Exigência:** Confirmar que são intencional (claims de outline/suplemento).
 
 ### [NOTE] R1-BATTERY-factual — claims

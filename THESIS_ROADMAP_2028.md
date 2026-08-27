@@ -7,6 +7,8 @@
 
 ## A LADDER ATÉ 2028 (condicional, gate a gate)
 
+**Nomenclatura por meio (claim C047):** G0-sim [SIM] (executado) → G0-wet [ORGANOID] (especificado) → G1 [MOUSE] (condicional) → G2 [HUMAN] (condicional). Todo dado do programa é rotulado pelo tier do gate que o produziu; até G0-wet existir, todo output novo é [SIM] — simulação parametrizada auditada, usada como resultado no seu tier, nunca como dado medido.
+
 | Janela | Gate/Entrega | Critério objetivo | Se GO | Se NO-GO |
 |---|---|---|---|---|
 | **2026 Q3–Q4** | v5 público (bioRxiv) + harness fechado (E034-38, sweeps expoente/C₅₀/same-mass, θ_obs estimator v1, search_log) | gate PASS mantido; zero BLOCKED | credibilidade metodológica estabelecida | — (já assegurado pela arquitetura) |

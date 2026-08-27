@@ -280,6 +280,8 @@ class Guardian:
          "Figuras 2/3 (θ-resposta e subtipos) referenciadas e existentes em disco — manuscrito sem figuras reais não publica."),
         ("R3-UNLOCK", r"G0_UNLOCK_DOSSIER", "AMEND",
          "Dossier de liberação do G0 (argumentário ao comitê) deve existir e ser referenciado na superfície de planejamento; claims do dossier não migram ao manuscrito sem gate."),
+        ("R3-TIER", r"data-tier|\[SIM\]", "AMEND",
+         "Regra de rotulagem por tier (C047): dados daqui em diante rotulados [SIM]/[ORGANOID]/[MOUSE]/[HUMAN]; escada nomeada por meio (G0-sim→G0-wet→G1→G2)."),
         ("R3-REDOSE-IMMUN", "anti-PEG|repeat-dose immun|redosing.{0,80}immunogen|clearance acelerad", "AMEND",
          "Imunogenicidade da redose repetida (LNP/anti-PEG, via intratecal) discutida."),
     ]

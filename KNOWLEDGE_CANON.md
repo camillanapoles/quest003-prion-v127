@@ -89,6 +89,7 @@
 ## CONTINUIDADE (o que mantém o canon vivo)
 
 1. **Regra:** achado novo → linha nova aqui + binding; manuscrito → guardian gate. Sem canon, sem publicação (R3-CANON).
+2. **Regra de rotulagem por tier (C047, diretriz da usuária 2026-08-27):** a escada é nomeada por meio — **G0-sim [SIM]** (executado) → **G0-wet [ORGANOID]** (especificado) → **G1 [MOUSE]** (condicional) → **G2 [HUMAN]** (condicional). Todo output do programa daqui em diante carrega a tag do seu tier; todo dado até o G0-wet existir é **[SIM]** — usado como resultado no seu tier, nunca como dado medido. Achados F-* novos devem indicar o tier no campo Status (⊕=[SIM] já cobre os computacionais; ✓=publicado por terceiros; ⏳=pendente do tier seguinte).
 2. Fila atual: figs 2/3 · LaTeX v5 (tectonic) · PT v5 paridade · E034-E038 · search_log · sweeps expoente{1,2}+C₅₀+same-mass · E029→NCT.
 3. Gatilho de revisão do canon: qualquer novo commit de resultado (sweeps, G0) → re-gate → bump de versão aqui.
 4. Fontes vivas: claims.csv (46) · consistency_manifest (39 N-fatos) · data.json (44 nós) · session-state (WAL).

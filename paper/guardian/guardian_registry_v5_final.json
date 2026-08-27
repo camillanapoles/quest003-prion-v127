@@ -7,7 +7,7 @@
       "id": "R0-UNUSED",
       "severity": "NOTE",
       "where": "../manuscript_EN_v5.md",
-      "issue": "Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023.",
+      "issue": "Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023, C047.",
       "demand": "Confirmar que são intencional (claims de outline/suplemento)."
     },
     {
