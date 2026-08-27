@@ -1,0 +1,30 @@
+{
+ "sources": 18,
+ "claims": 46,
+ "open_verified": 15,
+ "unresolved_evidence": [
+  "C007",
+  "C011",
+  "C012",
+  "C014",
+  "C016",
+  "C020",
+  "C021",
+  "C022",
+  "C023",
+  "C024",
+  "C025",
+  "C026",
+  "C027",
+  "C028",
+  "C030",
+  "C031",
+  "C032",
+  "C033",
+  "C034",
+  "C039",
+  "C040",
+  "C043"
+ ],
+ "note": "ETL determin\u00edstico de data.json+JSONs; fontes intactas; re-executar ap\u00f3s cada sess\u00e3o"
+}

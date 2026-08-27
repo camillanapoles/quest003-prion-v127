@@ -1,0 +1,324 @@
+{
+ "schema_version": "1.0",
+ "sources": [
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E001",
+   "identifiers": {
+    "doi": "10.1056/NEJMoa0809716"
+   },
+   "locator": "node:kuru",
+   "source_type": "journal_article",
+   "title": "Gene raro venceu o kuru",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-24"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E002",
+   "identifiers": {
+    "doi": "10.1038/nature14510"
+   },
+   "locator": "node:v127total",
+   "source_type": "journal_article",
+   "title": "Escudo total contra príons",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-24"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E003",
+   "identifiers": {
+    "doi": "10.1038/s42003-020-01126-6"
+   },
+   "locator": "node:struct",
+   "source_type": "journal_article",
+   "title": "Base estrutural V127: restrição conformacional + dímeros estáveis",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-25"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E004",
+   "identifiers": {
+    "pmid": "41757113"
+   },
+   "locator": "node:trans",
+   "source_type": "journal_article",
+   "title": "A versão 'solta' bloqueia o príon",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-25"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E005",
+   "identifiers": {
+    "pmcid": "PMC13041815"
+   },
+   "locator": "node:aav",
+   "source_type": "journal_article",
+   "title": "Funcionou em camundongos",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-25"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E006",
+   "identifiers": {
+    "doi": "10.1126/science.1090187"
+   },
+   "locator": "node:depletion",
+   "source_type": "journal_article",
+   "title": "Depleção de PrP reverte espongiose e cognição precoces",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-24"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E007",
+   "identifiers": {
+    "doi": "10.1126/science.1194637"
+   },
+   "locator": "node:microglia",
+   "source_type": "journal_article",
+   "title": "Célula-tronco NÃO faz microglia",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-24"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E008",
+   "identifiers": {
+    "doi": "10.1186/s13287-023-03591-2"
+   },
+   "locator": "node:organoid",
+   "source_type": "journal_article",
+   "title": "Mini-cérebros para testar",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-24"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E009",
+   "identifiers": {
+    "pmid": "40479823"
+   },
+   "locator": "node:ced",
+   "source_type": "journal_article",
+   "title": "CED: cânula step-design anti-refluxo validada",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-24"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E010",
+   "identifiers": {
+    "pmid": "24941947",
+    "doi": "10.1038/srep37844"
+   },
+   "locator": "node:endog",
+   "source_type": "journal_article",
+   "title": "O cérebro já tenta se reparar",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-25"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E011",
+   "identifiers": {
+    "doi": "10.1073/pnas.1902566116"
+   },
+   "locator": "node:hypo",
+   "source_type": "journal_article",
+   "title": "Ramo ⭐: iPSC hipoimune off-the-shelf (HLA-KO + CD47)",
+   "verification": {
+    "source_opened": false,
+    "status": "unverified",
+    "verified_by": "",
+    "verified_on": "2026-08-25"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E012",
+   "identifiers": {
+    "pmid": "23623429"
+   },
+   "locator": "node:gel",
+   "source_type": "journal_article",
+   "title": "Ramo ⭐: hidrogel HA macio como carreador pró-sobrevivência",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-25"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E013",
+   "identifiers": {
+    "pmid": "40317512"
+   },
+   "locator": "node:mrna",
+   "source_type": "journal_article",
+   "title": "Plano B sem célula: mRNA no líquor",
+   "verification": {
+    "source_opened": false,
+    "status": "unverified",
+    "verified_by": "",
+    "verified_on": "2026-08-25"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E014",
+   "identifiers": {
+    "doi": "10.1038/s41587-023-01784-x"
+   },
+   "locator": "node:hypo",
+   "source_type": "journal_article",
+   "title": "Célula 'invisível' de prateleira",
+   "verification": {
+    "source_opened": false,
+    "status": "unverified",
+    "verified_by": "",
+    "verified_on": "2026-08-25"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E015",
+   "identifiers": {
+    "doi": "10.1101/2024.05.01.592001"
+   },
+   "locator": "node:ws9",
+   "source_type": "journal_article",
+   "title": "O G0 ganhou um ensaio gêmeo no computador",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-26"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E016",
+   "identifiers": {},
+   "locator": "experiments/ws_7_results/ws_7_results.json",
+   "source_type": "software",
+   "title": "WS-7 transport solver results (self-tested)",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-26"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E017",
+   "identifiers": {},
+   "locator": "experiments/ws_9_results/ws_9_v4_human.json",
+   "source_type": "software",
+   "title": "WS-9 humanized in-silico trial results",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-26"
+   },
+   "year": null
+  },
+  {
+   "authors": [],
+   "confidentiality": "public",
+   "evidence_id": "E018",
+   "identifiers": {},
+   "locator": "experiments/bayes_results/bayes_success.json",
+   "source_type": "software",
+   "title": "WS-8 Bayesian weighted-analogue estimates",
+   "verification": {
+    "source_opened": true,
+    "status": "verified",
+    "verified_by": "conssortium_agent",
+    "verified_on": "2026-08-26"
+   },
+   "year": null
+  }
+ ]
+}
