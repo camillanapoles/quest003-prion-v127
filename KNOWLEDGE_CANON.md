@@ -77,6 +77,7 @@
 | R-3 | Fábrica permanente obrigatória | Gatdula 2026 (persistência) | Redose ≤7d aceita |
 | R-4 | NSC→micróglia | Ginhoux 2010 | Co-enxerto iMG |
 | R-5 | Regeneração de núcleo morto | (sem precedente) | Escopo = contenção+penumbra |
+| R-6 | **Paradigma "todo o programa espera o G0 wet-lab"** | guardian.md evolução 3 + declaração §3.5 (commit 832b1f5): o gate computacional é vigente, executado e passado | **Arquitetura two-tier: G0-sim (executado) → G0-wet (especificado)**; continuação licenciada — a entropia condensa em dois estágios declarados |
 
 ## IMPACTOS (mapeamento por camada — o "nível que a descoberta merece")
 

@@ -91,7 +91,7 @@ Protection radius per deposit 4–6 mm (midpoint 5 mm; k_eff 1–3×10⁻⁶ s�
 
 ### 3.3 Probabilistic frame (WS-8)
 
-P(G0 informative-go | organoid predictive validity ~80%) = 36.6% [90% CrI 14.6–60.5%] [claim:C036][evidence:E031]; P(significant clinical slowing) = 5.0% [0.4–13.6%] [claim:C036][evidence:E031] under the field's empirical prior (6/6 failures), versus the design-conditional estimate 30–45% (midpoint 37.5%) [claim:C036][evidence:E031] gated on organoid confirmation. Both lenses are retained and labeled, per the no-fabrication rule; the structural-lens model (62%) is archived but not blended.
+P(G0 informative-go — organoid gate | organoid predictive validity ~80%) = 36.6% [90% CrI 14.6–60.5%] [claim:C036][evidence:E031]; P(significant clinical slowing) = 5.0% [0.4–13.6%] [claim:C036][evidence:E031] under the field's empirical prior (6/6 failures), versus the design-conditional estimate 30–45% (midpoint 37.5%) [claim:C036][evidence:E031] gated on organoid confirmation. Both lenses are retained and labeled, per the no-fabrication rule; the structural-lens model (62%) is archived but not blended.
 
 ### 3.4 Humanized in-silico predictions (WS-9)
 

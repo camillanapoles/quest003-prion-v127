@@ -35,7 +35,8 @@
 - **C033** (3.2,result) [E030]: Design rule 1: containment-ring node spacing 8-12 mm (protection radius 4-6 mm per deposit)
 - **C034** (3.2,result) [E030;E020]: Design rule 2: hydrogel mesh must exceed 5x protein radius; HA 1-2 percent passes, above 5 percent sequesters the secretome
 - **C035** (3.2,result) [E030;E019]: Design rule 3: LNP-mRNA redosing interval of 7 days or less keeps inter-pulse trough at 56 percent of peak; 10-14 days leaves valleys
-- **C036** (3.3,result) [E031]: Bayesian frame: P(G0 go) = 36.6 percent with 90 percent credible interval 14.6 to 60.5; P(clinical slowing) = 5.0 percent [0.4-13.6] empirical vs 30-45 percent design-conditional
+- **C036** (3.3,result) [E031]: Bayesian frame: P(G0 organoid gate informative-go) = 36.6 percent with 90 percent credible interval 14.6 to 60.5; P(clinical slowing) = 5.0 percent [0.4-13.6] empirical vs 30-45 percent design-conditional; the operative computational gate G0-sim is already executed (two-tier gate architecture)
+  - *v5 amendment (2026-08-27, per guardian.md evolução 3): re-labeled to two-tier gate architecture; NUMBERS UNCHANGED (bayes_success.json).*
 - **C037** (2.4,result) [E032;E007]: Humanization: 1 simulation unit = 144 days; derived human doubling time 12.1 days from organoid anchors
 - **C038** (3.4,result) [E032]: Containment threshold theta-star = 0.333: front contained at kappa=2 (2.83 to 0.82 mm), monotone to near-extinction at kappa=32 (0.70 mm, biomass ratio 2.1x seed)
 - **C039** (3.4,result) [E032;E007]: Emergent consistency: seeding by the published 126x titer ratio reproduces the MV2-greater-than-MV1 hierarchy without fitting
