@@ -261,6 +261,8 @@ class Guardian:
          "O cálculo do anel 8–12 mm depende de SABER onde está a frente — nenhum procedimento de localização in vivo é especificado."),
         ("R3-SENS-SWEEP", "exponent|C[₅_]{0,2}50.{0,60}sweep|sensitivity sweep", "AMEND",
          "Sensibilidades estruturais pendentes: expoente do freeS (1 vs 2) e C50 sweep sobre θ*."),
+        ("R3-G0SIM", r"G0-sim", "BLOCKED",
+         "Declaração de status do gate vigente: o G0-sim (computacional, executado e passado) e seu escopo (licencia continuação; não valida biologia) devem estar declarados."),
         ("R3-REDOSE-IMMUN", "anti-PEG|repeat-dose immun|redosing.{0,80}immunogen|clearance acelerad", "AMEND",
          "Imunogenicidade da redose repetida (LNP/anti-PEG, via intratecal) discutida."),
     ]

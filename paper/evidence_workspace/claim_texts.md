@@ -46,3 +46,4 @@
 
 - **C044** (2.4,method) [E032]: Acceptance tiers: T1 and T2 are minimal screening criteria; T3 is the informative mechanistic success tier - front radius below 50 percent of baseline at kappa at most 8 with monotone radial gradient - satisfied by the humanized run at kappa 2 (0.82 mm = 29 percent of 2.83 mm baseline)
 - **C045** (3.4,method) [E033]: A same-mass MV1-seed control run (MV1 seeded with the MV2-mass inoculum) is queued to disentangle seed mass from subtype-specific kinetics in the hierarchy consistency test
+- **C046** (3.5,method) [E032;E009;E007;E033]: The in-silico gate G0-sim is executed and passed: acceptance tiers T1 T2 and T3 on the humanized model plus emergent subtype consistency; it licenses computational continuation of the research program but no biological validation or clinical claim

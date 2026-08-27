@@ -49,7 +49,7 @@
       "id": "R1-BATTERY-method",
       "severity": "NOTE",
       "where": "claims",
-      "issue": "Bateria hostil aplicada a 4 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C015, C043, C044, C045)",
+      "issue": "Bateria hostil aplicada a 5 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C015, C043, C044, C045, C046)",
       "demand": "Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação."
     },
     {
