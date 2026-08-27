@@ -17,7 +17,7 @@
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-BATTERY-result — claims
-- **Problema:** Bateria hostil aplicada a 9 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C032, C033, C034, C035, C036, C037, C038, C039, C042)
+- **Problema:** Bateria hostil aplicada a 10 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C032, C033, C034, C035, C036, C037, C038, C039, C042, C051)
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-PREPRINT — manifest
