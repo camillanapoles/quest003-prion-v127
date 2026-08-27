@@ -60,16 +60,19 @@ def num_variants(v):
         add(f"{x:g}%"); add(f"{round(x,1):g}%")
     if abs(x) < 1 and x != 0:
         add(f"{x*100:g}%"); add(f"{round(x*100,1):g}%")
-    m = re.match(r"([-\d.]+)e-?(\d+)", f"{x:.6e}")
+    m = re.match(r"([-\d.]+)e([+-])(\d+)", f"{x:.6e}")
     if m:
-        mant, exp = m.group(1), int(m.group(2))
+        mant, sgn, exp = m.group(1), m.group(2), int(m.group(3))
+        if sgn == "-":
+            exp = -exp
         mant_t = mant.rstrip("0").rstrip(".") if "." in mant else mant
         for mm_ in {mant, mant_t}:
-            add(m.group(0).replace(".0e", "e"))
             add(f"{mm_}×10{sup(exp)}"); add(f"{mm_} × 10^{exp}")
-            add(f"{mm_}e{exp}"); add(f"{mm_}e-{exp}")
+            add(f"{mm_}e{exp}")
+            if exp < 0:
+                add(f"{mm_}e-{exp}"); add(m.group(0))
             # mantissa com gap até o expoente (ex.: 2.13(±1.63)×10⁵)
-            out.add(f"__RX__{re.escape(mm_)}{{0,16}}10{re.escape(sup(exp))}")
+            out.add(f"__RX__{re.escape(mm_)}.{{0,16}}10{re.escape(sup(exp))}")
     # round-2 (θ*: 0.333 -> predição escrita como 0.33)
     add(f"{round(x,2):g}")
     if x == round(x, 2) or True:
@@ -83,6 +86,8 @@ def num_variants(v):
 def variant_matches(txt, var):
     if var.startswith("__RX__"):
         return re.search(var[6:], txt) is not None
+    if re.fullmatch(r"[\d.]+", var):  # numérico puro: word-boundary digital
+        return re.search(rf"(?<![0-9.]){re.escape(var)}(?![0-9.])", txt) is not None
     return var in txt
 
 class Guardian:
@@ -129,10 +134,11 @@ class Guardian:
             for var in num_variants(n.get("value")):
                 if not variant_matches(self.md, var):
                     continue
-                idx = 0 if not var.startswith("__RX__") else self.md.find(
-                    re.search(var[6:], self.md).group(0)) if re.search(var[6:], self.md) else 0
-                m = re.search(var[6:], self.md) if var.startswith("__RX__") else None
-                start = m.start() if m else self.md.find(var)
+                pat = var[6:] if var.startswith("__RX__") else rf"(?<![0-9.]){re.escape(var)}(?![0-9.])"
+                m = re.search(pat, self.md)
+                if not m:
+                    continue
+                start = m.start()
                 ctx = self.md[max(0,start-220):start+220+len(var)]
                 if "[claim:" in ctx or "[evidence:" in ctx:
                     break
@@ -143,7 +149,8 @@ class Guardian:
                           "Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número.")
         # 4. DRIFT TEX<->MD: números que estão no tex e não no md
         if self.tex and self.md:
-            tex_nums = set(re.findall(r"\d+\.\d+|\d+", self.tex))
+            tex_body = self.tex.split("\\section*{References")[0]  # refs (vol:page só no tex) fora do drift
+            tex_nums = set(re.findall(r"\d+\.\d+|\d+", tex_body))
             md_nums = set(re.findall(r"\d+\.\d+|\d+", self.md))
             drift = sorted(n for n in tex_nums - md_nums if len(n) >= 2 and n not in
                            {"1","2","3","4","5","6","7","8","9","0"} | {str(i) for i in range(10,60)})

@@ -1,28 +1,12 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 8 (BLOCKED=0, AMEND=4, NOTE=4)
+**Rodadas executadas:** 3 · **Achados:** 4 (BLOCKED=0, AMEND=0, NOTE=4)
 
 ## Gate
 
 **PASS — zero BLOCKED.** O manuscrito resiste à rodada recursiva; recomendação ao editor: aceitável como preprint com auditoria pública.
 
 ---
-
-### [AMEND] R0-NBIND-N011 — ../manuscript_EN_v5.md
-- **Problema:** N-fato N011 (mrna_redose_rule3=7 days maximum) aparece no texto sem marker de rastreabilidade próximo.
-- **Exigência:** Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número.
-
-### [AMEND] R0-NBIND-N012 — ../manuscript_EN_v5.md
-- **Problema:** N-fato N012 (mv2_titer_169dpi=213000.0 SD50/mg) aparece no texto sem marker de rastreabilidade próximo.
-- **Exigência:** Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número.
-
-### [AMEND] R0-NBIND-N013 — ../manuscript_EN_v5.md
-- **Problema:** N-fato N013 (mv1_titer_169dpi=1690.0 SD50/mg) aparece no texto sem marker de rastreabilidade próximo.
-- **Exigência:** Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número.
-
-### [AMEND] R0-DRIFT-TEX — latex
-- **Problema:** Números presentes no LaTeX e ausentes no manuscrito-fonte (drift): 103, 10441, 11458, 116, 137, 139, 2056, 253, 278, 330, 361, 3948, 478, 5160, 522, 558, 580, 807, 8217, 841, 94, 987.
-- **Exigência:** Retropropagar ao md (source of truth) ou remover do LaTeX.
 
 ### [NOTE] R1-BATTERY-factual — claims
 - **Problema:** Bateria hostil aplicada a 33 claims factual: Status de revisão por pares da fonte? (preprint ≠ revisado — rotular) | Fonte única ou corroboração independente? | Transferência de espécie/modelo → humano declarada? (IDs: C001, C002, C003, C004, C005, C006, C007, C008, C009, C010, C011, C012, C013, C014, C016, C017, C018, C019, C020, C021, C022, C023, C024, C025, C026, C027, C028, C029, C030, C031, C040, C041, C050)
