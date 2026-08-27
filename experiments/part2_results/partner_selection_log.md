@@ -1,5 +1,5 @@
 # Partner Selection Log — execução do protocolo 2.5 (PRISMA-análogo)
-## v0.1 · 2026-08-27 · executor: agente (guardian-gated) · registro por commit (PROSPERO-análogo)
+## v0.2 · 2026-08-27 (+ Q3-Q5 executadas) · executor: agente (guardian-gated) · registro por commit (PROSPERO-análogo)
 
 **Nota de execução (honestidade):** Q1 e Q2 foram executadas via **meta-busca web** (proxy das strings PubMed registradas) — a execução direta no PubMed fica como pendência de conformidade plena ({{TODO:PUBMED-DIRECT:rodar Q1-Q2 no PubMed interface e anexar contagens}}). Q3-Q5 pendentes. Resultados abaixo com data e URL.
 
@@ -48,3 +48,18 @@
 identificados(5) → dedup(5) → triagem: passam(2)+condicional(1)+excluídos(2, motivo I1)
 → pontuação parcial → contato sequencial: próximo = RML-NIH (1º)
 ```
+
+
+## 6. Rodada v0.2 — Q3, Q4, Q5 (2026-08-27 18:40, proxy web; PubMed-direto segue pendente)
+
+| # | Registro novo | Grupo | Fonte | Triagem |
+|---|---|---|---|---|
+| R6 | Prions@Broad — PrP-siRNA em ensaio clínico (enrolling) | Broad Institute (EUA) | Q3 (broadinstitute.org; cjdfoundation.org NN112) | I1 ✗ (não organoide) → **watchlist estratégico** (classe redução-de-substrato; concorrência/convergência p/ G2) |
+| R7 | prionregistry.org — prevenção em príon genético (Mead/UCL) | UCL/MRC Prion Unit (UK) | Q3 (prionregistry.org) | I1 ✗ → **watchlist estratégico** (coorte G2/biomarcador NfL; alinhado à nossa população-alvo E200K) |
+| R8 | Palestra CJDF-2026: "Generating cerebral organoids from donors with sporadic CJD" | **lab NÃO identificado na fonte** | Q4 (qgiv.com evento 2026) | **PENDENTE DE IDENTIFICAÇÃO** → potencial NOVO elegível I1 |
+| R9 | La Trobe — 'living' brain slices CJD | La Trobe University (AUS) | Q4 (cjdisa.com) | I1 ✗ (fatias, não organoides) → técnico-adjacente |
+| Q5-BR | Nenhum outro grupo BR organoide-príon surfaced no proxy; ensaiosclinicos.gov.br noticia tratamentos (não lab) | — | Q5 | **confirma USP-hub como âncora BR** (condicional I1 mantém) |
+
+**Fluxo v0.2: identificados 9 registros → 8 grupos (+1 não-identificado R8) → elegíveis 2 (RML, Calgary) + condicional 1 (USP) + watchlist 3 (Broad, UCL, La Trobe) + técnico 2 (UTHealth, Nihat).**
+{{TODO:IDENTIFY-ORGANOID-DONOR-LAB:identificar o grupo da palestra CJDF-2026 (programa do evento/agenda pública) — potencial 3º elegível}}
+Decisão: ordem de contato INALTERADA (1º RML, 2º Calgary); R8 pode reordenar APÓS identificação e pontuação.
