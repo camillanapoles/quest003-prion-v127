@@ -1,12 +1,20 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 9 (BLOCKED=0, AMEND=0, NOTE=9)
+**Rodadas executadas:** 3 · **Achados:** 11 (BLOCKED=1, AMEND=0, NOTE=10)
 
 ## Gate
 
-**PASS — zero BLOCKED.** O manuscrito resiste à rodada recursiva; recomendação ao editor: aceitável como preprint com auditoria pública.
+**FAIL — existem achados BLOCKED.** Revisor hostil nega submissão até resolução.
 
 ---
+
+### [BLOCKED] R3-R3-BASE-VALIDADE — manuscript
+- **Problema:** Interrogação epistêmica R3-BASE-VALIDADE: procedimento ausente.
+- **Exigência:** MANDATO (autora): a Parte 2 deve declarar a Base de Validade — simulação NÃO substitui laboratório (essencial p/ absorção real); equivalência futura = antecipação aplicável; linhagem completa dos dados (quem→espécie→validação cruzada→código→parametrização→resultado) com referências sólidas.
+
+### [NOTE] R0-UNUSED — ../manuscript_EN_v5.md
+- **Problema:** Claims registradas mas não citadas no manuscrito: C052, C053.
+- **Exigência:** Confirmar que são intencional (claims de outline/suplemento).
 
 ### [NOTE] R1-BATTERY-factual — claims
 - **Problema:** Bateria hostil aplicada a 33 claims factual: Status de revisão por pares da fonte? (preprint ≠ revisado — rotular) | Fonte única ou corroboração independente? | Transferência de espécie/modelo → humano declarada? (IDs: C001, C002, C003, C004, C005, C006, C007, C008, C009, C010, C011, C012, C013, C014, C016, C017, C018, C019, C020, C021, C022, C023, C024, C025, C026, C027, C028, C029, C030, C031, C040, C041, C050)

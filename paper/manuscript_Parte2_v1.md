@@ -28,6 +28,24 @@ A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o 
 
 > **⏳ VALIDAÇÃO EXPRESSA PENDENTE:** esta tabela (e o reenquadramento M1→R1/M2-dormant) só se torna definitiva do texto da tese com validação expressa da autora. {{TODO:PARTE2-V2-VALIDACAO:autora valida ou ajusta a tabela reenquadrada}}
 
+
+## 1-bis. Base de Validade (MANDATÓRIA — exigência do guardião)
+
+**Declaração tríade:** (i) esta tese é **baseada em simulação computacional e NÃO SUBSTITUI a validação de laboratório** — o laboratório é **essencial** para que a tese seja absorvida como real; (ii) a continuidade do estudo provém dos **prognósticos**: se os exames iniciais de laboratório (G0-wet [ORGANOID], e no futuro o humano) **equivalerem ao que foi simulado**, nós já possuímos **antecipação de dados e informações aplicáveis imediatamente** — essa é a metodologia da tese; (iii) o rigor exigido de uma tese experimental — como foi feito, por quem, com quais critérios, quais resultados — é aqui **convertido para o ambiente computacional**: cada dado tem linhagem completa declarada (quem produziu, em que espécie/sistema, validação cruzada por qual fonte independente, qual código simulou, como foi parametrizado para humano, qual resultado produziu).
+
+**Linhagem dos dados (data lineage — o "métodos experimental" convertido):**
+
+| Dado | Produzido por (primário) | Espécie/sistema | Validação cruzada (independente) | Simulado por (código) | Parametrização humana | Resultado [SIM] |
+|---|---|---|---|---|---|---|
+| Cinética de replicação do prião | Fornara/Igel 2024, iScience, código aberto [E009] | camundongo | Masel 1999 (polimerização nucleada) [E011] | kernel reação–difusão (Zenodo 11093945) portado [C013] | relógio calibrado às âncoras humanas | θ\*=0,333 [C038] |
+| Relógio e amplitude humanos | Groveman 2019, Acta Neuropathol [E007] | organoide humano sCJD | Groveman 2021 (ensaio de droga na mesma plataforma) [E008]; subtipos 2023 (RML) | regressão de duplicação (12,1 d; 144 d/unid) [C037] | direto (já humano) | predição travada θ<0,33 [C040] |
+| Transporte intersticial | Thorne & Nicholson 2006, PNAS (IOI in-vivo) [E010] | humano (in-vivo) | Stokes–Einstein (físico-química, derivação auditável) | solver ADR auto-testado [C032] | direto (já humano) | regras 1–3 [C033][C034][C035] |
+| Agente V127 anchorless | Asante 2015 Nature [E001] · Gatdula 2026 [E003] · Zerbes 2026 [E004] | população→camundongo→cultura→AAV in-vivo | quatro níveis independentes de evidência | termo de capping freeS | dose ↔ κ (âncora ilustrativa; A6 fecharia) | contenção em κ=2 [C038] |
+| Prior de falhas clínicas | Geschwind 2013 · Haïk 2014 · Newman 2014 · Otto 2004 · Mead 2022 · Cheng 2015 [E034–E038, E022] | humano (ensaios clínicos) | registry-bound, identificadores abertos | Beta–Binomial WS-8 [C036] | direto | P=5%/30–45% duas lentes |
+| Sensibilidade estrutural | (este programa) | in-silico | motor reproduzido 2× ambientes (hash+valor) | sweeps S1/S2 + estimador | — | predição discriminadora [C051] |
+
+**Por que isto é ciência com referências sólidas:** toda célula da linhagem amarra a fonte peer-reviewed ou ao run arquivado com hash; nenhum número vive fora do registro (51 claims · 38 fontes · 48 N-fatos · 4 validadores em zero); o código é aberto e o guardião audita máquina-a-máquina — a cadeia **quem→espécie→cruzamento→código→parâmetro→resultado** é verificável de ponta a ponta, exatamente como um "métodos" experimental exige, só que executada em ambiente computacional e declarada com a mesma disciplina.
+
 ## 2-bis. Os resultados da tese são os resultados da simulação já realizada
 
 Em vez de laboratório ou teste humano, **o que valida e compõe a tese neste estágio é o conjunto computacional executado** — completo, arquivado e reproduzido: (i) limiar de contenção θ\*=0,333 com relógio humanizado [claim:C038] [evidence:E032]; (ii) três regras de design falseáveis [claim:C033] [evidence:E030] [claim:C034] [evidence:E030, E020] [claim:C035] [evidence:E030, E019]; (iii) colheita de sensibilidade com predição discriminadora (C₅₀ 10× insensível; forma funcional falseável por dose-resposta) [claim:C051] [evidence:E032, E033]; (iv) quadro probabilístico de duas lentes com prior registry-bound [claim:C036] [evidence:E031]; (v) estimador θ_obs calibrado no regime declarado [claim:C052] [evidence:E032, E033]; (vi) reprodução independente em dois ambientes (hash + valor-a-valor); e (vii) a **tabela-decisão derivada** (κ↔θ_obs↔frente↔biomassa↔margem) extraída sem nova simulação — que mostra a margem de raio saturando cedo (70,2% já em κ=1,5) e confirma a **razão de biomassa como coordenada informativa** (48→1,25), com θ\*=0,333 como variável-de-decisão pré-registrada [claim:C052] [evidence:E032, E033]. De cada valor razoável aqui, **pesquisa derivada já pode prosseguir** — portas abertas.

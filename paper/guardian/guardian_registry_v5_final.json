@@ -1,8 +1,15 @@
 {
   "round": 3,
-  "n_findings": 9,
-  "gate_pass": true,
+  "n_findings": 11,
+  "gate_pass": false,
   "findings": [
+    {
+      "id": "R0-UNUSED",
+      "severity": "NOTE",
+      "where": "../manuscript_EN_v5.md",
+      "issue": "Claims registradas mas não citadas no manuscrito: C052, C053.",
+      "demand": "Confirmar que são intencional (claims de outline/suplemento)."
+    },
     {
       "id": "R1-BATTERY-factual",
       "severity": "NOTE",
@@ -30,6 +37,13 @@
       "where": "manifest",
       "issue": "2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.",
       "demand": "Rotular no texto (ex.: bioRxiv preprint)."
+    },
+    {
+      "id": "R3-R3-BASE-VALIDADE",
+      "severity": "BLOCKED",
+      "where": "manuscript",
+      "issue": "Interrogação epistêmica R3-BASE-VALIDADE: procedimento ausente.",
+      "demand": "MANDATO (autora): a Parte 2 deve declarar a Base de Validade — simulação NÃO substitui laboratório (essencial p/ absorção real); equivalência futura = antecipação aplicável; linhagem completa dos dados (quem→espécie→validação cruzada→código→parametrização→resultado) com referências sólidas."
     },
     {
       "id": "R3-TODO-BIORXIV-ADDENDUM",
