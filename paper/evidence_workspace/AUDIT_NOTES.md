@@ -9,3 +9,7 @@
 3. **Linha da âncora ilustrativa κ↔µM (Tabela 1)**: o guardião (R2-ASSUM-TAGGED, nível BLOCKED) **proíbe** tag de evidência em estimativa ilustrativa — os dois validadores divergem aqui por propósito: a skill quer binding em todo número; o guardião quer separação assumção↔evidência. Resolução adotada: **a proibição do guardião prevalece para assumptions; a skill prevalece para fatos** — divergência documentada, não silenciada.
 
 *Qualquer revisão futura deve manter esta decomposição atualizada.*
+
+
+## Verificação das E034–E038 (2026-08-27)
+Abertas via busca web + landing pages PubMed/editor em 27/08/2026; identificadores confirmados das páginas (Geschwind PMID 24122181 · Haïk 24411709 · Newman 24554103 · Otto DOI 10.1212/01.WNL.0000113764.35026.ef · Mead 35305340). Re-confirmação humana pela autora responsável pendente (mesma prática das 5 críticas originais, commit 5d6e698).
