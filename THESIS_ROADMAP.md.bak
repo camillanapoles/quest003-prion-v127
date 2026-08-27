@@ -26,7 +26,7 @@
 |---|---|---|---|---|
 | **Y0 Q3–Q4** | v5 público (bioRxiv) + harness fechado (E034-38, sweeps expoente/C₅₀/same-mass, θ_obs estimator v1, search_log) | gate PASS mantido; zero BLOCKED | credibilidade metodológica estabelecida | — (já assegurado pela arquitetura) |
 | **Y0 Q4** | Lab outreach B1 (USP > Butantan > Einstein; pacote pronto + **G0_UNLOCK_DOSSIER.md** — argumentário de liberação ao comitê baseado no G0-sim validado) | 1 lab parceiro assinado para G0-wet | G0-wet em produção | ampliar para labs internacionais (Caughey/NIH circle) |
-| **Y1 H1** | **G0-wet executado** (8 braços, n=8–12; readouts 90–120 d) | θ_obs medido; gradiente proximal/distal por braço | θ_obs<0.33 ⇒ contenção confirmada in situ; manuscrito v7 c/ dado organoide → submissão A1 candidata | critério de morte programática dispara; negative-result publicado (contribuição metodológica permanece) |
+| **Y1 H1** | **G0-wet executado** (8 braços, n=8–12; readouts 90–120 d) | θ_obs medido; gradiente proximal/distal por braço | θ_obs<0.33 ⇒ contenção confirmada in situ; manuscrito v6 c/ dado organoide → submissão A1 candidata | critério de morte programática dispara; negative-result publicado (contribuição metodológica permanece) |
 | **Y1 H2** | G1 camundongo humanizado (se G0 GO) | sobrevida/gradiente in vivo | pacote pre-IND aberto (Anvisa/FDA) | pivot acelular (A6≈A5 rule) |
 | **Y2** | **Contensão de classe-descoberta**: programa first-in-human compassivo E200K (se G1 GO) + paper A1 (organoide+camundongo+quadro probabilístico completo) | sinal modificador de doença (NfL/clínico) | **ARC-Y2: descoberta candidata** — primeira terapia modificadora em doença priônica, com cálculo de entrega quantitativo | arco metodológico já publicado independente do desfecho |
 
@@ -39,7 +39,7 @@
 
 ## ASSEGURANDO QUE O GUARDIÃO NÃO BLOQUEIA ESTE PLANO
 
-- `guardian.py` opera sobre superfícies de manuscrito (md/tex). Este roadmap é **PLAN_DOC** — fora do escopo dos gates por desenho; a ambição STARTA-YEAR +2 é legítima AQUI.
+- `guardian.py` opera sobre superfícies de manuscrito (md/tex). Este roadmap é **PLAN_DOC** — fora do escopo dos gates por desenho; a ambição Y2 é legítima AQUI.
 - A única regra da faixa: claims de descoberta só entram no manuscrito APÓS o gate correspondente passar. O roadmap os marca como condicionais (tabela acima faz isso linha a linha).
 - Continuidade: este arquivo é citado no KNOWLEDGE_CANON (continuidade) e atualizado a cada gate.
 
@@ -47,12 +47,5 @@
 
 - harness: E034–E038 elevadas · sweeps rodados · θ_obs v1 congelado
 - wet-lab: nº braços executados / 8 · labs parceiros: 0→1
-- publicações: v5 (Parte 1, release v3.0 ✓) → v6 (Parte 2/ACP ✓ PR#2 aberto) → v7 (dado organoide, condicional ao G0-wet) → A1 (organoide+mus)
+- publicações: v5 (preprint) → v6 (organoide) → A1 (organoide+mus)
 - reputação metodológica: citações do harness; adoção por terceiros
-
-
-## ESTADO ATUAL DO PLANO (Y0-08-28)
-- **Parte 1**: FECHADA — release v3.0 (PR#1 merged); manuscritos v5 EN+PT 51=51; gates 0/0.
-- **Parte 2**: v6 — manuscrito próprio (md+PDF; PR #2, branch paper-v6): **ACP nomeada (C054; P0–P6)**; Base de Validade §1-bis (linhagem, check BLOCKED); **M2 (freeze/GATE-F) DORMANT por recorte da autora** (metodologia-somente: a tese não seleciona nem executa — portas abertas, não pendências); M4 = método SLR-análogo (piloto não-decisório, PubMed-direto conforme Q1=23/Q2=2); estimador θ_obs calibrado (v1.1 rejeitada honestamente).
-- Registro: 54 claims · 38 fontes · 48 N-fatos · gates part1+part2 0/0 · canon 42 achados.
-- Pendências: autora (PARTE2-V2-VALIDACAO; BIORXIV-ADDENDUM); agente (COST-DECOMP opcional); lab (GATEF, dormant).

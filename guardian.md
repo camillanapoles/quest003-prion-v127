@@ -45,7 +45,7 @@ python3 $S/audit_claims.py ../manuscript_EN_v5.md claims.csv source_manifest.jso
 - **Seleção de parceiro (SLR-análogo)**: query bank pré-registrada → log datado → triagem I/X → pontuação A-H ("?" não pontua) → contato sequencial por score.
 
 ## §5 · MAPA DE ARTEFATOS (onde mora o quê)
-manuscritos (paper/manuscript_{EN,PT}_v5.md) · PDFs (paper/latex/*.pdf) · harness (paper/guardian/) · registro (paper/evidence_workspace/: source_manifest 38 fontes · claims 51 · consistency 43 N-fatos · AUDIT_NOTES) · canon (KNOWLEDGE_CANON.md, F-01..F-39 + R-1..R-6) · Parte 2 (experiments/: G0_EXECUTION_FREEZE_CHECKLIST F1-F10 · REPARAM_LOOP · PARTNER_SELECTION_PROTOCOL v2 + part2_results/) · dossier (paper/G0_UNLOCK_DOSSIER.md) · outreach (paper/lab_outreach_package.md v2.1 + outreach_email_1) · roadmap (THESIS_ROADMAP_2028.md, TESE [SEM ANO]) · releases v1.0→v3.0.
+manuscritos (paper/manuscript_{EN,PT}_v5.md) · PDFs (paper/latex/*.pdf) · harness (paper/guardian/) · registro (paper/evidence_workspace/: source_manifest 38 fontes · claims 51 · consistency 43 N-fatos · AUDIT_NOTES) · canon (KNOWLEDGE_CANON.md, F-01..F-39 + R-1..R-6) · Parte 2 (experiments/: G0_EXECUTION_FREEZE_CHECKLIST F1-F10 · REPARAM_LOOP · PARTNER_SELECTION_PROTOCOL v2 + part2_results/) · dossier (paper/G0_UNLOCK_DOSSIER.md) · outreach (paper/lab_outreach_package.md v2.1 + outreach_email_1) · roadmap canônico (THESIS_ROADMAP.md — Y0/Y1/Y2 relativo; _2028 é stub) · releases v1.0→v3.0.
 
 ## §6 · PROTOCOLO /RECAP (obrigatório ao final de toda sessão)
 Bloco anexado AQUI e no ~/session-state.md:
