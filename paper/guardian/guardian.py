@@ -265,6 +265,8 @@ class Guardian:
          "Canon do conhecimento: o manuscrito deve referenciar KNOWLEDGE_CANON.md (índice-mestre achado→evidência→impacto→falsificador) — nenhum achado publica sem linha no canon."),
         ("R3-G0SIM", r"G0-sim", "BLOCKED",
          "Declaração de status do gate vigente: o G0-sim (computacional, executado e passado) e seu escopo (licencia continuação; não valida biologia) devem estar declarados."),
+        ("R3-G0SIM-STIM", r"non-substitutable|does not substitute|não substitui|stimulat", "AMEND",
+         "Cláusula construtiva do G0-sim: achados computacionais usados como resultado; validação necessária e insubstituível; estimula P&D ágil conforme metodologia científica."),
         ("R3-REDOSE-IMMUN", "anti-PEG|repeat-dose immun|redosing.{0,80}immunogen|clearance acelerad", "AMEND",
          "Imunogenicidade da redose repetida (LNP/anti-PEG, via intratecal) discutida."),
     ]
