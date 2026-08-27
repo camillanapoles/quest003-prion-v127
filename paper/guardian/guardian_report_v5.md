@@ -40,6 +40,6 @@
 - **Problema:** TODO aberto registrado: GATEF-SIGNATURE.
 - **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
 
-### [NOTE] R3-TODO-THETA-OBS-POOLED — todo-registry
-- **Problema:** TODO aberto registrado: THETA-OBS-POOLED.
+### [NOTE] R3-TODO-THETA-OBS-V11 — todo-registry
+- **Problema:** TODO aberto registrado: THETA-OBS-V11.
 - **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).

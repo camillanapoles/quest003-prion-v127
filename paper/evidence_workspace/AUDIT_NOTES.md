@@ -22,3 +22,6 @@ A autora re-executou a fase S1 em ambiente próprio (wall 500,5 s vs 813,9 s do 
 
 ## Parte 2 · 2.1 — Calibração do estimador θ_obs v1 [SIM] (2026-08-27)
 Simulation-based calibration (grade κ 1.5–8; ruído organoide CV 30/40%; 1000 boots/unidade): **veredito ADEQUADO** pelos critérios pré-declarados (cobertura do θ verdadeiro 3/3; bias mediano ≤0,032). Leitura honesta: os modos de κ̂ espalham-se (ex.: κ_true=8 → 483 acertos, 252 em 1,5) — o IC unitário cobre quase toda a grade; a precisão declarada para o G0-wet é a da MEDIANA POR BRAÇO com n=8 (§2.7), e a validação do regime pooled fica como TODO pré-GATE-F (THETA-OBS-POOLED). A grade revelou ainda que a biomassa carrega a informação que o raio perde por saturação (R 0,843→0,760 vs ratio 48→1,25).
+
+## Parte 2 · THETA-OBS-POOLED (2026-08-27)
+Regime §2.7 (mediana por braço, n=8, 1000 boots): **PASS integral em κ=2** — a fronteira de decisão (θ≈0,333) é a região de melhor precisão (bias 0,008; modal 69%). κ=4 falha modal por 1 p.p.; κ=8 tem bias +0,060 **em direção conservadora** (superestima θ ⇒ subestima contenção — erro no lado seguro da predição travada). Cobertura 3/3 com IC largo (limitado à grade de 6 pontos; κ̂ por vizinho-mais-próximo quantiza). Próximo refinamento pré-GATE-F: estimador v1.1 com interpolação contínua em κ.

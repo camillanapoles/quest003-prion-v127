@@ -60,10 +60,10 @@
       "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
     },
     {
-      "id": "R3-TODO-THETA-OBS-POOLED",
+      "id": "R3-TODO-THETA-OBS-V11",
       "severity": "NOTE",
       "where": "todo-registry",
-      "issue": "TODO aberto registrado: THETA-OBS-POOLED.",
+      "issue": "TODO aberto registrado: THETA-OBS-V11.",
       "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
     }
   ]

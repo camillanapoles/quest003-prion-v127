@@ -1,0 +1,93 @@
+{
+ "artefato": "Parte 2 \u00b7 THETA-OBS-POOLED (regime \u00a72.7: mediana por bra\u00e7o n=8)",
+ "grid_source": "experiments/part2_results/part2_theta_obs_v1.json",
+ "noise_cv": {
+  "R": 0.3,
+  "ratio": 0.4
+ },
+ "n_arm": 8,
+ "n_boot": 1000,
+ "criterios_pre": [
+  "P1 cobertura 3/3",
+  "P2 |bias mediana|<=0.02",
+  "P3 recupera\u00e7\u00e3o modal >=60%"
+ ],
+ "validacao": {
+  "2": {
+   "theta_true": 0.333,
+   "theta_arm_median": 0.325,
+   "bias": -0.008,
+   "ic90_arm": [
+    0.111,
+    0.4
+   ],
+   "ic90_width": 0.289,
+   "coverage": true,
+   "modal_recovery": 0.689,
+   "mode_distribution": {
+    "1.5": 689,
+    "2.0": 13,
+    "3.0": 1,
+    "4.0": 3,
+    "8.0": 294
+   },
+   "criterios": {
+    "P1": true,
+    "P2": true,
+    "P3": true,
+    "PASS": true
+   }
+  },
+  "4": {
+   "theta_true": 0.2,
+   "theta_arm_median": 0.181,
+   "bias": -0.019,
+   "ic90_arm": [
+    0.111,
+    0.4
+   ],
+   "ic90_width": 0.289,
+   "coverage": true,
+   "modal_recovery": 0.588,
+   "mode_distribution": {
+    "1.5": 380,
+    "2.0": 9,
+    "3.0": 19,
+    "4.0": 4,
+    "8.0": 588
+   },
+   "criterios": {
+    "P1": true,
+    "P2": true,
+    "P3": false,
+    "PASS": false
+   }
+  },
+  "8": {
+   "theta_true": 0.111,
+   "theta_arm_median": 0.171,
+   "bias": 0.06,
+   "ic90_arm": [
+    0.111,
+    0.367
+   ],
+   "ic90_width": 0.256,
+   "coverage": true,
+   "modal_recovery": 0.693,
+   "mode_distribution": {
+    "1.5": 258,
+    "2.0": 5,
+    "3.0": 42,
+    "4.0": 2,
+    "8.0": 693
+   },
+   "criterios": {
+    "P1": true,
+    "P2": false,
+    "P3": true,
+    "PASS": false
+   }
+  }
+ },
+ "veredito_pooled": "PARCIAL \u2014 ver crit\u00e9rios por ponto (P3 modal \u00e9 o limitante: n=8 mediana)"
+}
