@@ -13,3 +13,6 @@
 
 ## Verificação das E034–E038 (2026-08-27)
 Abertas via busca web + landing pages PubMed/editor em 27/08/2026; identificadores confirmados das páginas (Geschwind PMID 24122181 · Haïk 24411709 · Newman 24554103 · Otto DOI 10.1212/01.WNL.0000113764.35026.ef · Mead 35305340). Re-confirmação humana pela autora responsável pendente (mesma prática das 5 críticas originais, commit 5d6e698).
+
+## Reprodutibilidade do run bandeira [SIM] (2026-08-27 03:25)
+A autora re-executou o WS-9 v4 humanizado no Colab e re-enviou JSON+PNG. Hash sha256 do JSON re-executado = `31f02e13485a…` — **idêntico** ao arquivado (experiments/ws_9_results/ws_9_v4_human.json). θ*=0.333, sweep κ, âncoras MV1/MV2 e relógio (144.02 d/unid) reproduzidos bit a bit pelo executor humano independente da sessão que gerou. Cadeia: Colab autora (26/08 23:02) → commit repo (23:48) → re-execução confirmada (27/08 03:25). O resultado central da Parte 1 é **reprodutível**, não apenas arquivado.
