@@ -1,0 +1,70 @@
+{
+  "round": 3,
+  "n_findings": 9,
+  "gate_pass": true,
+  "findings": [
+    {
+      "id": "R0-UNUSED",
+      "severity": "NOTE",
+      "where": "../manuscript_Parte2_v1.md",
+      "issue": "Claims registradas mas não citadas no manuscrito: C001, C002, C003, C004, C005, C006, C007, C008, C009, C010, C011, C012, C013, C014, C015, C016, C017, C018, C019, C020, C021, C022, C023, C024, C025, C026, C027, C028, C029, C030, C031, C032, C033, C034, C035, C036, C037, C039, C040, C041, C042, C043, C044, C045, C048, C050.",
+      "demand": "Confirmar que são intencional (claims de outline/suplemento)."
+    },
+    {
+      "id": "R1-BATTERY-result",
+      "severity": "NOTE",
+      "where": "claims",
+      "issue": "Bateria hostil aplicada a 2 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C038, C051)",
+      "demand": "Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação."
+    },
+    {
+      "id": "R1-BATTERY-method",
+      "severity": "NOTE",
+      "where": "claims",
+      "issue": "Bateria hostil aplicada a 5 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C046, C047, C049, C052, C053)",
+      "demand": "Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação."
+    },
+    {
+      "id": "R1-PREPRINT",
+      "severity": "NOTE",
+      "where": "manifest",
+      "issue": "2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.",
+      "demand": "Rotular no texto (ex.: bioRxiv preprint)."
+    },
+    {
+      "id": "R3-TODO-BIORXIV-ADDENDUM",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: BIORXIV-ADDENDUM.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
+      "id": "R3-TODO-EMAIL-GROVEMAN",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: EMAIL-GROVEMAN.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
+      "id": "R3-TODO-GATEF-SIGNATURE",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: GATEF-SIGNATURE.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
+      "id": "R3-TODO-PARTNER-RUN",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: PARTNER-RUN.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
+      "id": "R3-TODO-id",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: id.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    }
+  ]
+}

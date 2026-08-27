@@ -619,6 +619,76 @@
    "evidence_ids": [
     "E032"
    ]
+  },
+  {
+   "fact_id": "N044",
+   "concept": "pooled_bias_k2_theta",
+   "section": "2",
+   "value": 0.008,
+   "unit": "theta",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N045",
+   "concept": "pooled_modal_recovery_k2",
+   "section": "2",
+   "value": 0.69,
+   "unit": "fraction",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N046",
+   "concept": "v11_bias_k2_theta",
+   "section": "2",
+   "value": -0.037,
+   "unit": "theta",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N047",
+   "concept": "pilot_groups_identified",
+   "section": "5",
+   "value": 8,
+   "unit": "groups",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E033"
+   ]
+  },
+  {
+   "fact_id": "N048",
+   "concept": "arm_n_per_protocol",
+   "section": "3",
+   "value": 8,
+   "unit": "organoids",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
   }
  ],
  "methods": [

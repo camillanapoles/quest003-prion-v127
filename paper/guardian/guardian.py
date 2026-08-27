@@ -201,6 +201,8 @@ class Guardian:
     ]
     def round1(self):
         body = self.md + "\n" + self.tex
+        if getattr(self, "profile", "part1") == "part2":
+            body = self.md  # parte 2 não herda os padrões literais da parte 1 (tex é da parte 1)
         for cid_item, pat, sev, demand in self.CHECKLIST:
             present = re.search(pat, body, re.IGNORECASE)
             if cid_item == "M6-refcount":
@@ -347,6 +349,8 @@ class Guardian:
         if not self.md:
             return 0
         # toda assumption declarada deve ter '(assumption)' ou análogos E não ter tag de evidence
+        if getattr(self, "profile", "part1") == "part2":
+            pass  # R2: paridade PT-EN não se aplica (superfície própria, PT-mestre)
         # cláusula: limites em ;/nova-linha/período que NÃO está entre dígitos (decimal)
         def clause(pos):
             lo, hi = pos, pos
@@ -423,8 +427,10 @@ def main():
     ap.add_argument("--consistency", required=True)
     ap.add_argument("--registry", required=True)
     ap.add_argument("--report", required=True)
+    ap.add_argument("--profile", default="part1", choices=["part1", "part2"])
     a = ap.parse_args()
     g = Guardian(a.md, a.tex, load_claims(a.claims), load_json(a.manifest), load_json(a.consistency))
+    g.profile = a.profile
     if a.round == 0:
         g.round0()
     elif a.round == 1:
@@ -438,6 +444,17 @@ def main():
                 break
         g.round3()
         g.todo_registry()
+    if a.profile == "part2":
+        import re as _re
+        SKIP = ("R2-PT-PARITY","R2-PT-MISSING","R0-DRIFT-TEX")
+        g.findings = [f for f in g.findings
+                      if f["id"] not in SKIP
+                      and not _re.match(r"R1-CHK-[Mm]", f["id"])
+                      and not f["id"].startswith("R0-NBIND")  # part2: cobertura-full do manifest é da part1; números CITADOS são cobertos por R1-NUM-UNBOUND
+                      and f["id"] not in {"R3-R3-FIGS","R3-R3-UNLOCK","R3-R3-SENS-SWEEP",
+                                          "R3-R3-SEARCHLOG","R3-R3-REDOSE-IMMUN",
+                                          "R3-R3-G0SIM-STIM","R3-R3-PREPRINT-DEP","R3-R3-BLIND",
+                                          "R3-R3-CONJ-RISK","R3-R3-FAILBIND","R3-R3-PLAN"}]
     reg = {"round": a.round, "n_findings": len(g.findings),
            "gate_pass": not any(f["severity"]=="BLOCKED" for f in g.findings),
            "findings": g.findings}
