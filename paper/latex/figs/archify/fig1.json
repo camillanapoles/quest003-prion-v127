@@ -1,0 +1,156 @@
+{
+ "schema_version": 1,
+ "diagram_type": "workflow",
+ "meta": {
+  "title": "Quest 003 \u2014 Program Execution: Audited Design to Pre-Registered Gates",
+  "quality_profile": "showcase",
+  "locale": "en"
+ },
+ "lanes": [
+  {
+   "id": "evidence",
+   "label": "Part 1 \u00b7 Evidence Building"
+  },
+  {
+   "id": "assurance",
+   "label": "Harness + Guardian"
+  },
+  {
+   "id": "gates",
+   "label": "Two-Tier Gates"
+  },
+  {
+   "id": "continuity",
+   "label": "Part 2 \u00b7 Continuity Thesis"
+  }
+ ],
+ "phases": [
+  {
+   "id": "ph_audit",
+   "label": "Audit",
+   "fromCol": 0,
+   "toCol": 0
+  },
+  {
+   "id": "ph_core",
+   "label": "Models + Assurance [SIM]",
+   "fromCol": 1,
+   "toCol": 3,
+   "variant": "emphasis"
+  },
+  {
+   "id": "ph_g0",
+   "label": "G0 Junction \u2192 Part 2",
+   "fromCol": 4,
+   "toCol": 5,
+   "variant": "dashed"
+  }
+ ],
+ "mainPath": [
+  "audit",
+  "models",
+  "harness",
+  "guardian",
+  "g0sim",
+  "g0wet",
+  "reparam"
+ ],
+ "nodes": [
+  {
+   "id": "audit",
+   "lane": "evidence",
+   "col": 0,
+   "width": 72,
+   "type": "database",
+   "label": "Audit",
+   "sublabel": "38 src"
+  },
+  {
+   "id": "models",
+   "lane": "evidence",
+   "col": 2,
+   "width": 140,
+   "type": "backend",
+   "label": "WS-7 / 8 / 9",
+   "sublabel": "rules \u00b7 lenses \u00b7 \u03b8*=0.333"
+  },
+  {
+   "id": "harness",
+   "lane": "assurance",
+   "col": 2,
+   "width": 84,
+   "type": "database",
+   "label": "Harness",
+   "sublabel": "51 claims \u00b7 0 err"
+  },
+  {
+   "id": "guardian",
+   "lane": "assurance",
+   "col": 3,
+   "width": 84,
+   "type": "security",
+   "label": "Guardian",
+   "sublabel": "R0\u2013R3 \u00b7 \u03b8<0.33 \u2713"
+  },
+  {
+   "id": "g0sim",
+   "lane": "gates",
+   "col": 4,
+   "width": 84,
+   "type": "cloud",
+   "label": "G0-sim \u2713",
+   "sublabel": "[SIM] \u00d72 env"
+  },
+  {
+   "id": "g0wet",
+   "lane": "gates",
+   "col": 5,
+   "width": 96,
+   "type": "external",
+   "label": "G0-wet",
+   "sublabel": "[ORGANOID] F1\u201310"
+  },
+  {
+   "id": "reparam",
+   "lane": "continuity",
+   "col": 5,
+   "width": 84,
+   "type": "messagebus",
+   "label": "Reparam",
+   "sublabel": "\u2192MOUSE\u2192HUMAN"
+  }
+ ],
+ "edges": [
+  {
+   "from": "audit",
+   "to": "models",
+   "label": "grounds"
+  },
+  {
+   "from": "models",
+   "to": "harness",
+   "label": "results"
+  },
+  {
+   "from": "harness",
+   "to": "guardian",
+   "label": "gates"
+  },
+  {
+   "from": "guardian",
+   "to": "g0sim",
+   "label": "tested by"
+  },
+  {
+   "from": "g0sim",
+   "to": "g0wet",
+   "label": "escalates",
+   "labelDy": -22
+  },
+  {
+   "from": "g0wet",
+   "to": "reparam",
+   "label": "recalibrates"
+  }
+ ]
+}
