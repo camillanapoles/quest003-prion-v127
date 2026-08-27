@@ -1,5 +1,7 @@
-# THESIS ROADMAP 2028 — Contenção V127 como Descoberta de Classe-Nobel (PLANO, não claim)
-## Documento de planejamento de continuidade da tese — Quest 003 (v1 · 2026-08-27)
+# THESIS ROADMAP — Contenção V127 até os Resultados Finais (PLANO, não claim) · **TESE [SEM ANO]**
+## Documento de planejamento de continuidade da tese — Quest 003 (v2 · 2026-08-27)
+
+**TESE [SEM ANO] — o objetivo é o RESULTADO.** A tese não tem ano: é definida por resultados. Primeiro, colher os RESULTADOS FINAIS que a simulação traz [SIM] (dados reais parametrizados, até o fim do arco em ambiente simulado — detalhado na §3.5 do manuscrito); depois, validar gate a gate [ORGANOID]→[MOUSE]→[HUMAN]. As janelas abaixo são ESTIMATIVAS de fase para planejamento de recursos — jamais promessas de calendário. O horizonte que atrai mais pesquisa é o resultado quantitativo, não a data.
 
 **Natureza epistêmica:** este é um PLANO DE VOO, não um manuscrito. Pertença à faixa de planejamento (exenta dos gates de manuscrito do guardião por desenho — ver guardian.py PLAN_DOCS). O guardião não bloqueia ambição aqui; ele bloquearia apenas o VAZAMENTO de claims de descoberta para o manuscrito antes dos gates. As probabilidades citadas são as do frame bayesiano auditado: P(desaceleração clínica)=5% empírica / 30–45% condicional aos gates.
 
