@@ -2,6 +2,8 @@
 ## Como será escolhido o laboratório que executa o G0-wet — metodologia ANTES do contato
 **v1 · 2026-08-27 · congelado por commit antes de qualquer abordagem (anti-hindsight)**
 
+> **ESCOPO DA TESE (v2.1, diretriz da autora 27/08):** a tese documenta o **MÉTODO** — critérios de inclusão/exclusão, pesos, fontes de busca, fluxo — para **replicabilidade posterior**. A tese **não seleciona laboratório nenhum**: seleção, pontuação final e contato são ATOS DE EXECUÇÃO fora do escopo da tese, do executor que vier a aplicar o método. O que já tem paper = evidência utilizável (pesquisa); o que não tem = PLANO metodológico. (O log em part2_results é aplicação-PILOTO do método — demonstra que o método roda; NÃO é decisão de seleção.)
+
 ### 0. Pergunta focal e princípio
 *Qual laboratório maximiza a probabilidade de um G0-wet válido e decisivo, dado o desenho travado (8 braços, θ_obs §2.7, SAP §2.5, kill §2.5)?*
 A Parte 2 é **previsibilidade**: decidir o que medir, onde e em que dose antes de gastar recurso. A escolha de ONDE medir segue a mesma disciplina — critérios, inclusão/exclusão e pesos **declarados antes da triagem**, como uma revisão sistemática (SLR) de laboratórios em vez de artigos.

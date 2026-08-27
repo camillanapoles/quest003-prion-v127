@@ -1,5 +1,5 @@
 # Pacote de Contato — Laboratórios Parceiros para o Gate G0
-## Quest 003 · v2.1 · 2026-08-27 · USO: envio LIBERADO (decisão da autora 27/08: sem DOI — release v3.0 é a fonte citável; bioRxiv DOI será adicionado como adendo quando depositado, sem impacto no conteúdo)
+## Quest 003 · v2.1 · 2026-08-27 · ANEXO OPERACIONAL (FORA da tese — a tese documenta o método, não executa) · USO: envio LIBERADO (decisão da autora 27/08: sem DOI — release v3.0 é a fonte citável; bioRxiv DOI será adicionado como adendo quando depositado, sem impacto no conteúdo)
 
 **Novo na v2:** manuscrito v5 bilíngue (EN+PT, claim-audited) · gate computacional G0-sim EXECUTADO e re-produzido em 2 ambientes (hash-idêntico + valor-a-valor) · colheita de sensibilidade com PREDIÇÃO DISCRIMINADORA para o braço A6 (a dose-resposta distingue heterodímero vs dois-eventos: unidade inibitória molecular) · dossier de liberação científica pronto (G0_UNLOCK_DOSSIER.md) · estimador θ_obs operacional pré-especificado (anti-circularidade)
 

@@ -1,4 +1,5 @@
-# Partner Selection Log — execução do protocolo 2.5 (PRISMA-análogo)
+# Partner Selection Log — APLICAÇÃO-PILOTO do protocolo 2.5 (PRISMA-análogo)
+> **NATUREZA (diretriz da autora):** demonstração de EXECUTABILIDADE do método — prova que o protocolo roda e produz rastreio auditável. **NÃO é uma seleção**: nenhuma ordem de contato é decisão da tese; as ordens abaixo são SAÍDAS DO MÉTODO ilustrativas para o futuro executor.
 ## v0.2 · 2026-08-27 (+ Q3-Q5 executadas) · executor: agente (guardian-gated) · registro por commit (PROSPERO-análogo)
 
 **Nota de execução (honestidade):** Q1 e Q2 foram executadas via **meta-busca web** (proxy das strings PubMed registradas) — a execução direta no PubMed fica como pendência de conformidade plena ({{TODO:PUBMED-DIRECT:rodar Q1-Q2 no PubMed interface e anexar contagens}}). Q3-Q5 pendentes. Resultados abaixo com data e URL.
@@ -37,8 +38,8 @@
 
 *\*parcial = soma só dos eixos com evidência documental; classificação final após contato (I4/I5/G/H). A ordem de contato pré-declarada é por score TOTAL previsto (máx=100): RML segue 1º pela regra do desempate-A caso a diferença ≤5 — mas Calgary mostrou PESO REAL no eixo D (braço A5, a tese ◆) que a pré-triagem v1 subestimava. **Método corrigindo estimativa a priori: registrado.***
 
-## 4. Decisões desta rodada
-1. **Contato 1º: RML-NIH** (kit #1 pronto — outreach_email_1_groveman.txt).
+## 4. Saídas do método nesta rodada (não-decisões da tese)
+1. O método ordena: se executado, contato 1º = RML-NIH (maior score verificável) — kit operacional existe (anexo fora da tese).
 2. **Contato 2º: Calgary** — kit a personalizar com JCI 2026 (novo no mapa; atualizar E-registry? JCI 2026 = candidato a E039 **se** usado como evidência; por ora, registro no log apenas).
 3. UTHealth → lista técnica (assay readout); Nihat → watchlist; USP → verificação I1 documental no primeiro contato.
 4. {{TODO:Q3-Q5-EXEC:executar queries restantes + PubMed direto}}; {{TODO:PUBMED-DIRECT:conformidade plena das contagens}}.
