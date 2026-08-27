@@ -9,7 +9,7 @@
 ---
 
 ### [NOTE] R0-UNUSED — ../manuscript_EN_v5.md
-- **Problema:** Claims registradas mas não citadas no manuscrito: C052, C053.
+- **Problema:** Claims registradas mas não citadas no manuscrito: C052, C053, C054.
 - **Exigência:** Confirmar que são intencional (claims de outline/suplemento).
 
 ### [NOTE] R1-BATTERY-factual — claims
