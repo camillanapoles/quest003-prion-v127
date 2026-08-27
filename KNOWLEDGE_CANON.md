@@ -48,8 +48,8 @@
 | F-22 | Casca de contenção r*=4,2-9,5 mm fecha geometricamente | C033·E030 | ⊕ | D,P | — | — |
 | F-23 | Hidrogel ξ≥5×r_p (Regra 2) | C034·E030,E020 | ⊕ | D | — | — |
 | F-24 | Redose mRNA ≤7d (Regra 3) | C035·E030,E019 | ⊕ | D,R | PK divergente in vivo | marcadores A7 |
-| F-25 | θ* = 0,333 humanizado; κ=2 contém (0,82 mm) | C038·E032 | ⊕ (G0-sim) | D,P | sweeps expoente/C₅₀ | executar sweeps |
-| F-26 | Hierarquia MV2>MV1 emergente sem fitting | C039·E032,E007 | ⊕ | M | controle same-mass | executar (queued) |
+| F-25 | θ* = 0,333 humanizado; κ=2 contém (0,82 mm) | C038·E032 | ⊕ (G0-sim) | D,P | dose-resposta A6 falsifica forma | ✓ sweeps executados (ver F-39) |
+| F-26 | Hierarquia MV2>MV1 emergente sem fitting | C039·E032,E007 | ⊕ | M | dado cinético por subtipo (fora do kernel v4) | ✓ same-mass resolvido analiticamente (F-39) |
 | F-27 | Relógio humano: 1 unidade=144d; duplicação 12,1d | C037·E032,E007 | ⊕ | D | séries MM1 publicadas | — |
 | F-28 | Auto-testes solver: massa 100%, Thiele 0,5% | C032·E030 | ⊕ | M | — | — |
 | F-29 | Cistos κ×50 canalizam fluxo (limitação honesta) | C-sec6·E030 | ⊕lim | D | poroelastografia de paciente | — |
@@ -68,6 +68,9 @@
 | F-36 | Duas lentes bayesianas honestas: 5% empírica / 30-45% condicional | C036·E031 | ⊕ | D,M | — | elevar E034-E038 (6 falhas) |
 | F-37 | Auditoria corrigiu registro de citações do campo (trial retraído circulando) | C024,C041·E021,E033 | ✓ | M | — | search_log.md |
 | F-38 | mRNA compassivo esporádica 50-70% viável (análise) | C-análise·E033 | 🌕⊕ | D,R | G0-A7/A6 negativos | — |
+| F-40 | **ACP — método nomeado** (P0–P6; 'é simulação e é dito'; P6: real análogo ⇒ passos já avançados) | C054·E009,E010,E031,E032,E033,E007 | ⊕⊕ | M,P | réplica metodológica | aplicá-la a novo domínio |
+| F-41 | Estimador θ_obs: calibrado (fronteira bias −0,008; v1.1 rejeitada honestamente) | C052·E032,E033 | ⊕ | M,D | grade mais fina (pré-declarado) | — |
+| F-42 | Base de Validade com linhagem completa dos 6 dados (mandato BLOCKED do guardião-2) | C053·E033 + §1-bis | ✓⊕ | M,D,R | fonte da linhagem cair | monitorar |
 
 ## REFUTAÇÕES COMO ACHADOS (a espinha epistêmica do programa — §1.2)
 
