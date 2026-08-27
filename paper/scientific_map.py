@@ -4,7 +4,7 @@ Para: coorientador / banca doutoral. Render PIL 1600x1150."""
 from PIL import Image, ImageDraw, ImageFont
 import os
 
-OUT = "/root/DeepScientist/quests/003/artifacts/dashboard/snapshots/scientific_map.png"
+OUT = "/root/DeepScientist/quests/quest003-fixfig1/artifacts/dashboard/snapshots/scientific_map.png"
 FD = "/usr/share/fonts/truetype/dejavu/"
 def F(sz, b=False): return ImageFont.truetype(FD + ("DejaVuSans-Bold.ttf" if b else "DejaVuSans.ttf"), int(sz))
 
