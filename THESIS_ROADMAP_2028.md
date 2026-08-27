@@ -16,7 +16,7 @@
 | Método | colheita final [SIM] + especificação completa do G0 (braços, SAP, estimador, kill) | estimador θ_obs consome a grade-κ da simulação; braços/doses/posições escolhidos pelas regras; loop realimenta parâmetros |
 | Por que insustentável sozinha | design não-exercido: simulação sem validação consome a própria autoridade | experimentação sem prior quantitativo desperdiça os recursos que diz respeitar |
 
-**A junção é o G0 — por isso sua declaração (§3.5), estimador (§2.7), plano estatístico (§2.5) e critérios de morte estão especificados ANTES de qualquer wet-lab existir.** A Parte 2 operacionaliza a inovação metodológica: previsibilidade e antecipação de informação para design terapêutico — decidir o que medir, onde, em que dose, antes de gastar qualquer recurso wet-lab.
+**A junção é o G0 — por isso sua declaração (§3.5), estimador (§2.7), plano estatístico (§2.5) e critérios de morte estão especificados ANTES de qualquer wet-lab existir.** A escolha de ONDE medir segue a mesma disciplina: protocolo SLR-análogo de seleção de parceiro (critérios de inclusão/exclusão binários, pesos congelados 25/15/15/10/10/10/10/5, vetos absolutos, fluxo PRISMA-like com log público) — `experiments/PARTNER_SELECTION_PROTOCOL.md`. A Parte 2 operacionaliza a inovação metodológica: previsibilidade e antecipação de informação para design terapêutico — decidir o que medir, onde, em que dose, antes de gastar qualquer recurso wet-lab.
 
 ## A LADDER ATÉ OS RESULTADOS (condicional, gate a gate — estimativas de fase)
 

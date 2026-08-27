@@ -12,6 +12,7 @@
 | F6 | Kill-switches por braço + critério de morte programática (nenhum gradiente EM θ_obs>0.33 em todos ⇒ programa encerra, negativo publicado) | §2.5 | ✅ |
 | F7 | Formato de dado [ORGANOID] cru (tabela: orgão_id, lote, braço, dpi, R_medido_mm, biomass_ratio, scorer_id) — esquema que o estimador consumirá | spec abaixo | ✅ novo |
 | F8 | Loop de re-parametrização (o que recalibra, com que prior, quando) | `REPARAM_LOOP.md` | ✅ novo |
+| F10 | Parceiro selecionado pelo PROTOCOLO SLR-análogo (critérios/pesos congelados pré-contato; log público) | `PARTNER_SELECTION_PROTOCOL.md` + selection_log | {{TODO:PARTNER-RUN:executar o fluxo identificados→triagem→pontuação→contato; log em part2_results}} |
 | F9 | Timelines de readout (90–120 d pós-seeding; regime estacionário desde ~4 d) | g0_protocol | ✅ |
 
 ## Esquema de dado [ORGANOID] (F7) — o contrato entre bancada e estimador
