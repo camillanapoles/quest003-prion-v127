@@ -1,5 +1,7 @@
 # Pacote de Contato — Laboratórios Parceiros para o Gate G0
-## Quest 003 · v1 · 2026-08-26 · USO: enviar após depósito do preprint no bioRxiv
+## Quest 003 · v2 · 2026-08-27 · USO: enviar após depósito do preprint no bioRxiv
+
+**Novo na v2:** manuscrito v5 bilíngue (EN+PT, claim-audited) · gate computacional G0-sim EXECUTADO e re-produzido em 2 ambientes (hash-idêntico + valor-a-valor) · colheita de sensibilidade com PREDIÇÃO DISCRIMINADORA para o braço A6 (a dose-resposta distingue heterodímero vs dois-eventos: unidade inibitória molecular) · dossier de liberação científica pronto (G0_UNLOCK_DOSSIER.md) · estimador θ_obs operacional pré-especificado (anti-circularidade)
 
 ---
 
@@ -15,9 +17,9 @@ We are an open-science research consortium that has completed a structured precl
 
 **2. The pre-registered organoid assay (G0).** Built directly on your group's platform [Groveman 2019/2021 — infected organoids; PPS screening | Williams 2023 — NPC seeding], it asks one question: does anchorless V127 generate a proximal-to-distal PrP-res containment gradient? Eight arms (n=8), including pentosan polysulfate as published positive control; kill-switches pre-registered, including pivot-to-acellular if protein matches cells. Full protocol attached.
 
-**3. Quantitative predictions to falsify.** Our self-tested transport model (mass-conservation 100%, Thiele-length 0.5% vs analytic) predicts a 4-6 mm protection radius per deposit and specifies the capping/replication ratio θ your assay would measure — we predict the gradient scale in advance, so the result is informative whether positive or negative.
+**3. Quantitative predictions to falsify — now including a discriminating one.** Our self-tested transport model (mass-conservation 100%, Thiele-length 0.5% vs analytic) predicts a 4-6 mm protection radius per deposit and a containment threshold θ*=0.333 under a humanized clock. The in-silico gate (G0-sim) is executed, machine-audited and independently re-executed with identical values; sensitivity harvest shows the threshold is robust to C50 over a tenfold range but *discriminates the functional form*: under a first-power inhibition term, containment shifts from kappa 2 to 4 — so the arm-A6 dose-response curve can distinguish the molecular inhibitory unit (heterodimer vs two independent events). The result is informative in every direction, including negative.
 
-A Bayesian success model calibrated on historical analogs (including the 0/6 record of antiprion candidates) places P(GO) at ~37% — we are asking you to help run an experiment we honestly expect to fail 6 times out of 10, because it is the cheapest decisive measurement in the field.
+A Bayesian success model calibrated on historical analogs (all six clinical failures now registry-bound with verified identifiers) places P(GO) at ~37% — we are asking you to help run an experiment we honestly expect to fail 6 times out of 10, because it is the cheapest decisive measurement in the field. A committee-facing unlock dossier (validity basis, guarantees, declared scope) and the pre-specified θ_obs estimator (blinded scorer, pre-committed grid and objective) are attached — the assay arrives pre-registered against circularity.
 
 We seek: [your organoid+BSL-3 infrastructure | your NPC expertise] for a ~10-month, 8-arm assay (estimated reagents+staffing USD 60-160k; we are preparing FAPESP/CNPq applications and welcome co-application with your institution). All materials, protocols, analysis code and the full audit trail (git-versioned) are available; we propose co-authorship per ICMJE and open publication of results regardless of direction.
 
@@ -38,11 +40,12 @@ Respectfully,
 | 4 | Grupo de organoides com LNP-mRNA publicado (ex.: laboratório Xue-afins) | Braço A7 (mRNA) | Parceria de vetor para A7 |
 
 ## Anexos do pacote
-1. `preprint_v3_quest003.pdf` (após depósito bioRxiv, citar DOI)
+1. `manuscript_v5_EN.pdf` + `manuscript_v5_PT.pdf` (v5, claim-audited, bilíngue; após depósito bioRxiv, citar DOI)
 2. `experiments/g0_protocol.md` (protocolo completo 8 braços)
-3. `experiments/ws_7_transport.md` (modelo de transporte + previsões falsificáveis)
-4. `analysis/bayes_analogia.md` (frame probabilístico pré-registrado)
-5. Link do repo/git (audit trail) — sob acordo de colaboração
+3. `paper/G0_UNLOCK_DOSSIER.md` (dossier de liberação: base de validade + garantias ao comitê + escopo declarado)
+4. `experiments/ws_7_transport.md` + `experiments/ws_9_results/ws_9_v5_sweeps_*.json` (transporte + colheita de sensibilidade com a predição discriminadora A6)
+5. `analysis/bayes_analogia.md` (frame probabilístico pré-registrado; falhas históricas registry-bound E034-E038)
+6. Link do repo/git (audit trail: 38 fontes · 51 claims · guardião R0-R3 · release v1.0 trava as predições) — sob acordo de colaboração
 
 ## Regras do envio
 - Enviar SÓ após o depósito do preprint (prioridade intelectual primeiro)

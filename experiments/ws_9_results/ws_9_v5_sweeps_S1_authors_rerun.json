@@ -1,0 +1,35 @@
+{
+ "motor": "v5 sweeps sobre v4 humano (C0 exato + fs_exp param)",
+ "phase": "S1",
+ "wall_total_s": 500.5,
+ "anchors": {
+  "clear_dpi": 25.5,
+  "first_denovo_dpi": 35,
+  "final_dpi": 169,
+  "titer_MV2": 213000.0,
+  "titer_MV1": 1690.0,
+  "WB_MV2_only": true
+ },
+ "baseline": {
+  "final_R_mm": 2.828,
+  "days_per_simunit": 144.02,
+  "T1_pass": true
+ },
+ "S1_exponent": {
+  "1": {
+   "k2": 2.828,
+   "k4": 0.85,
+   "k8": 0.819
+  },
+  "2": {
+   "k2": 0.819,
+   "k4": 0.778,
+   "k8": 0.76
+  }
+ },
+ "S3_same_mass": {
+  "k4_seed_MV2mass_R_mm": 0.778,
+  "k4_seed_MV1like_R_mm_v4ref": 0.69,
+  "conclusion": "no kernel v4 subtipo \u2261 seed_mass; hierarquia MV2>MV1 \u00e9 seed-mass-driven POR CONSTRU\u00c7\u00c3O \u2014 cin\u00e9tica subtipo-espec\u00edfica est\u00e1 fora do escopo do port (limita\u00e7\u00e3o 12 formalmente demonstrada)"
+ }
+}

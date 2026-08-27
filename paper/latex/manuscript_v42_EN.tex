@@ -1,0 +1,83 @@
+\documentclass[10pt,twocolumn]{article}
+% ═══════════ PRP-V127 PLATFORM — v4.2 EN (FROM CLAIM-TAGGED MANUSCRIPT) ═══════════
+% Source of truth: manuscript_EN_v4.md (claim-tagged; 4 validators zero-errors)
+% This LaTeX renders it in Cambridge/Harvard 2-column style, PRESERVING traceability.
+\usepackage[margin=1.9cm,columnsep=0.7cm]{geometry}
+\usepackage{lmodern}
+\usepackage{mathptmx}
+\usepackage{graphicx,booktabs,amsmath,amssymb}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{caption}\captionsetup{font=small,labelfont=bf}
+\usepackage{titlesec}\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\usepackage{fancyhdr}\pagestyle{fancy}\fancyhf{}
+\fancyfoot[C]{\tiny Preprint v4.2EN --- full audit: github.com/camillanapoles/quest003-prion-v127 (harness: 33 sources, 43 claims, 4 validators 0 errors)}
+\fancyfoot[R]{\thepage}\renewcommand{\headrulewidth}{0pt}
+\usepackage{xcolor}
+% rastreabilidade inline: sobrescrito discreto com nota
+\newcommand{\rtnote}[2]{\ensuremath{^{\textcolor{gray}{\scriptsize\texttt{#1}}}}\footnotemark}
+\setlength{\footnotesep}{2pt}\setlength{\skip\footins}{6pt}
+
+\title{\bfseries PrP-V127 as a Modular Antiprion Platform: Audited Review, Quantitative Transport Design, Humanized In-Silico Predictions, and a Pre-Registered Organoid Gate for Creutzfeldt--Jakob Disease}
+\author{\normalsize Open Prion \& Molecular Engineering Consortium\thanks{Volunteer open-science initiative (DeepScientist Quest 003). AI agents assisted literature curation, code and drafting under continuous human supervision; every citation and number verified against sources by the accountability authors; AI is not an author (SW-S01/03). Full audit trail incl.\ claim-level traceability: \texttt{github.com/camillanapoles/quest003-prion-v127}.}}
+\date{}
+
+\begin{document}\maketitle
+
+\begin{abstract}\small
+Prion diseases are universally fatal with no approved therapy. We report an end-to-end preclinical program converting the naturally selected human variant PrP-V127 into a quantitatively designed therapeutic platform for CJD. \textbf{Methods:} (i)~agent-assisted, provenance-verified literature audit ($\approx$90 searches; 60 findings in 9 blocks; $\sim$30 papers read in depth; 42 verified references; recurring citation errors corrected; a retracted trial excluded). (ii)~A self-tested advection--diffusion--reaction transport solver (mass conservation 100\%; Thiele error 0.5\%) yielding three falsifiable design rules: containment-ring spacing 8--12\,mm; hydrogel mesh $\xi\ge5r_p$ (HA 1--2\% passes, $>$5\% sequesters); LNP-mRNA redosing $\le$7\,d (trough 56\% of peak). (iii)~A hierarchical Bayesian frame over 10 structural analogues including the six historical antiprion failures: P(G0~go)$=$36.6\% [90\% CrI 14.6--60.5]; P(clinical slowing)$=$5.0\% [0.4--13.6] empirical \emph{vs} 30--45\% design-conditional (both lenses labeled). (iv)~A humanized in-silico infection model: the open stochastic kernel of Fornara et al.\ (iScience 2024) ported with fidelity-corrected autocatalysis ($C{\to}2C$) and fragmentation, capped by V127$\Delta$GPI as saturable substrate competition, clock-calibrated to human organoid anchors (Groveman 2019): 1 simulation unit $=$ 144 days. \textbf{Results:} containment threshold $\theta^{*}=0.333$ (front 2.83$\to$0.82\,mm at $\kappa{=}2$; near-extinction at $\kappa{=}32$) and unprompted reproduction of the MV2$>$MV1 subtype hierarchy (emergent consistency, not curve-fitting). \textbf{Pre-registered prediction (locked at release v1.0):} $\theta_{\text{measured}}<0.33$ in infected organoids $\Rightarrow$ containment in situ; readouts 90--120\,d post-seeding. \textbf{Conclusions:} every program pillar maps to an approved regulatory category (nusinersen; tofersen/NfL; 2026 Parkinsonian cell grafts; tafamidis); the program requests a conjunction of precedents, not an unprecedented category. The framework transfers as a dose-and-placement containment calculus to prion-like neurodegeneration (Alzheimer, Parkinson) --- hypothesis-generating, explicitly.
+\end{abstract}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figs/fig1_scientific_map.png}
+\caption{\textbf{How this program was executed.} Four methodological phases (audit $\to$ transport physics $\to$ probability $\to$ humanized in-silico) each feeding the evidence harness (33 sources, 43 claims, four validators at zero errors) which locks the pre-registered G0 prediction. Regulatory geometry and transferability are mapping layers, not experimental claims. Every number shown traces to repository JSONs via the traceability appendix.}
+\label{fig:map}
+\end{figure*}
+
+\section{Introduction}
+Human prion diseases are rapidly progressive and universally fatal; sporadic CJD (sCJD) survival is 6--8 months. Six candidates failed clinically (pentosan polysulfate, quinacrine, doxycycline, flupirtine, PRN100, minocycline-combinations). The G127V polymorphism of \emph{PRNP}, positively selected during the kuru epidemic, protected heterozygous carriers and confers complete resistance when homozygous in transgenic mice --- ``as protective as gene deletion'' --- with dose-dependent dominant-negative inhibition of wild-type propagation; heterozygotes remain vCJD-susceptible, mandating biallelic or anchorless designs. In 2026, recombinant anchorless V127 retained trans dominant-negative activity (with protection persisting after transgene cessation) and systemic AAV delivery of anchorless V127 extended survival $\sim$50 days in a rodent model; the structural basis is established ($\beta2$--$\alpha2$ loop restriction, intermolecular H-bond dimer stabilization). The mechanism is thus validated at four levels --- population genetics, transgenic mouse, cell culture, gene-therapy proof-of-concept. What is missing is the \emph{engineering}: delivery modality, dose, placement, timing, and a decision architecture that spends laboratory resources only where models cannot answer. This manuscript reports the complete pre-wet-lab program, fully audited.
+
+\emph{Populations and ethics frame.} Primary target: presymptomatic genetic carriers (E200K/D178N), for whom the therapeutic window is years and autologous manufacture feasible; Brazilian E200K kindreds documented since 2007; RT-QuIC/NfL screening operational. Sporadic CJD: exclusively via an acellular LNP-mRNA vector under compassionate use, after organoid validation.
+
+\section{Methods}
+\subsection{Agent-assisted audit (provenance-verified)}
+Structured blocks ($\approx$90 searches $\to$ 9 evidence tables, 60 findings; $\sim$30 papers in depth). Verification tier per source: [FT] full text extracted; [ABS] abstract; [AUDIT] bibliographic cross-check; [CODE] code inspected; [RUN] executed by us. External documents' references audited individually (one batch of 19: 11 correct, 3 duplicates, 1 non-scientific, 1 wrong link). A retracted Neurotherapeutics trial (minocycline/FK506; retraction 2020) still cited as evidence is excluded by rule; minocycline additionally confounds the NfL endpoint.
+
+\subsection{Transport solver (WS-7)}
+ADR in heterogeneous porous medium; finite volumes (2D, $192^2$, explicit Euler):
+\begin{equation}
+\partial(\alpha c)/\partial t=\nabla\!\cdot\!(D_{\text{eff}}\nabla c)-\nabla\!\cdot\!(\mathbf{v}c)+S(\mathbf{x})-k_{\text{eff}}c
+\end{equation}
+Parameters (with provenance): $\alpha{=}0.20$, $\lambda{=}1.8$ (in-vivo integrative optical imaging, Thorne \& Nicholson 2006); $D_0{=}1.25{\times}10^{-10}$\,m$^2$/s (Stokes--Einstein, $R_h{\approx}2.5$\,nm, $\sim$30\,kDa) $\Rightarrow D_{\text{eff}}{\approx}3.9{\times}10^{-11}$\,m$^2$/s; $k_{\text{eff}}$ swept $10^{-6}$--$10^{-5}$\,s$^{-1}$ (nucleated-polymerization kinetics, Masel 1999); Darcy flow with spongiform cysts at $\kappa\times50$. Self-tests: mass conservation 100.0\%; numeric vs analytic Thiele length error 0.5\%. \emph{Order-of-magnitude $\kappa$-anchoring:} a $10^5$-cell deposit at 10\,pg/cell/day gives a steady peak $\sim$0.1--1\,\textmu M within 1\,mm --- the range of half-maximal dominant-negative effect in cell culture --- so $\kappa{=}2$--4 $\leftrightarrow$ roughly 0.1--1\,\textmu M interstitial V127$\Delta$GPI (closed experimentally by arm A6).
+
+\subsection{Bayesian frame (WS-8)}
+Hierarchical Beta--Binomial over 10 analogues weighted by similarity (mechanism, vector, population, endpoint); six antiprion failures as a negative analogue; ION717 partially informative; organoid predictive validity $\approx$0.8 (PDO cohorts); $2{\times}10^5$ Monte-Carlo draws. P(G0 informative-go)$=$36.6\% [14.6--60.5]; P(clinical slowing)$=$5.0\% [0.4--13.6] empirical \emph{vs} 30--45\% design-conditional --- both lenses retained.
+
+\subsection{Humanized in-silico model (WS-9)}
+\emph{Kernel.} The stochastic reaction--diffusion model of Fornara/Igel et al.\ (iScience 2024; open code, Zenodo 11093945) ported to deterministic mean-field (96$^2$, $dt{=}5{\times}10^{-4}$). Two fidelity-critical corrections decoded from the original \texttt{findreac}: the $s{+}1$ channel is autocatalytic ($C{\to}2C$) --- the replication engine --- and the cross-reaction is fragmentation ($B_a{\to}B_{a-1}{+}C$). Mean-field unbounded autocatalysis braked by logistic saturation $C/(C+C_{50})$ (documented port limitation). \emph{Capping (this work):} freeS $=(1/(1+\kappa c_{V127}))^{2}$ enters all templating/autocatalysis terms (two-participant competitive saturation; mechanistically anchored in dose-dependent dominant-negative data). \emph{Humanization:} clock matched to human organoid anchors (Groveman 2019: clearance 25--28\,dpi; de-novo 35\,dpi; endpoint titers MV2 $2.13{\times}10^{5}$ \emph{vs} MV1 $1.69{\times}10^{3}$ SD50/mg; protease-resistant PrP only in MV2) $\Rightarrow$ human doubling $\approx$12.1\,d; 1 unit $=$ 144\,d. \emph{Humanization is a global time rescaling; relative rates remain murine} (full fitting is future work; MM1 series unpublished). MV1/MV2-like seeds differ by the 126$\times$ titer ratio. \emph{Acceptance tiers:} T1/T2 minimal screening; T3 informative success $=$ front $<$50\% baseline at $\kappa\le8$ with monotone radial gradient --- satisfied.
+
+\subsection{Pre-registration and reproducibility}
+All predictions locked at repository release v1.0 (timestamped commits) before any wet-lab data exist. Code, parameters, outputs and the executed figure (JSON+PNG of the actual run) archived in-repo. G0 gate: 8 arms (mock; disease; unedited cell; membrane-V127; \emph{secretory graft}; recombinant protein; LNP-mRNA; pentosan-polysulfate positive control), $n{=}8$/arm, primary readout proximal/distal PrP-res gradient, pre-registered go/no-go and pivot rules.
+
+\section{Results}
+\subsection{Audit} Four-layer validated core; five recurring design errors corrected (NSC$\to$microglia lineage impossibility; quiescent prion-replicating SVZ; others), each replaced by evidence-compatible branches (iPSC-microglia co-graft; slow-release deposits; LNP-mRNA).
+\subsection{Design rules} R1 spacing 8--12\,mm (radius 4--6\,mm); R2 hydrogel $\xi\ge5r_p$; R3 redosing $\le$7\,d; steady state $\sim$4\,d.
+\subsection{Probabilities} As \S2.3.
+\subsection{Humanized thresholds} $\theta^{*}{=}0.333$; monotone to near-extinction ($\kappa{=}32$: 0.70\,mm; biomass 2.1$\times$ seed); one run $=$ 24 months tissue disease. Emergent consistency: the 126$\times$ seeding ratio reproduces MV2$>$MV1 \emph{unfitted}; because seeds differ in mass, this is hierarchy consistency, not proof of subtype-specific kinetics (same-mass control queued). \textbf{Locked prediction:} $\theta_{\text{measured}}<0.33\Rightarrow$ containment; readouts 90--120\,d.
+
+\section{Discussion}
+\emph{Contribution:} a dose-and-placement calculus no prior antiprion candidate possessed; a corrected citation record; falsifiable pre-registered predictions with a 10-month, $\sim$\$100--150k kill-or-advance assay; an executable template of agent-assisted provenance-verified translational planning. \emph{Transferability (hypothesis-generating):} Alzheimer and Parkinson spread by templated misfolding along stereotyped routes (prion-like propagation); the platform calculus is protein-agnostic; prion disease is the fastest, cheapest-to-read instance; validated containment transfers as design framework to diseases of $>$50 million people. \emph{Regulatory geometry:} chronic intrathecal redosing (nusinersen); accelerated approval by biomarker (tofersen, NfL); human brain cell grafts (2026 Parkinson trial); dominant native-state stabilization (tafamidis); substrate lowering (ASO/RNAi). The program requests the conjunction of approved categories.
+
+\section{Limitations and gaps}
+(1) $\kappa\to$concentration is order-of-magnitude only; closed by G0-A6. (2) Mean-field port omits stochastic extinction/strain diversity. (3) $C_{50}$ stability choice. (4) Anchors are MV1/MV2; MM1 unpublished; humanization $=$ global time rescale, rates murine. (5) Detection floor $10^{2}$ assumed. (6) Transport parameters healthy-tissue; synthetic cyst $\kappa\times50$. (7) Analogue weights $=$ structured judgment. (8) No wet-lab data yet --- all in-silico outputs are predictions. (9) Species/strain transfer assumed via dimensional $\theta$. (10) Immunogenicity/clearance of the anchorless construct uncharacterized (G0-A6 gives first exposure data).
+
+\section{Ethics, governance, declarations}
+Population-first design; DSMB with pre-specified stop (any confirmed teratoma); prion biosafety (single-use coaxial cannula; WHO 134\,\textdegree C/NaOH; autopsy containment); genetic privacy (LGPD); containment/slowing endpoints only. \textbf{Funding:} none (volunteer consortium). \textbf{Conflicts:} none. \textbf{AI disclosure} as title footnote. \textbf{Data/code:} everything in the public repository incl.\ claim-level traceability (33 sources E-ID; 43 claims C-ID; 23 numeric facts; four validators, zero errors). CRediT: consortium authorship; accountability authors listed in-repo; feedback channel open. Bilingual companion (PT-BR) in-repo.
+
+\input{_trace_appendix}
+
+\section*{References (42 verified; selection)}
+\small
+Asante EA, et al. Nature 522:478 (2015). Mead S, et al. NEJM 361:2056 (2009). Gatdula JRP, et al. bioRxiv 2026.02.17.703887. Zerbes T, et al. preprint PMC13041815 (2026). Hosszu LP, et al. Commun Biol 3:580 (2020). Zheng Z, et al. Sci Rep 8:11458 (2018). Groveman BR, et al. Acta Neuropathol 137:987 (2019). Groveman BR, et al. Sci Rep 11:5160 (2021). Fornara B, et al. iScience (2024; Zenodo 11093945). Thorne RG, Nicholson C. PNAS 103:8217 (2006). Masel J, et al. Biophys Chem 77:139 (1999). Williams K, et al. SCRT 14:348 (2023). Rela\~no-Gin\'es A, et al. PLoS Pathog 9:e1003485 (2013). Ginhoux F, et al. Science 330:841 (2010). Sorrells SF, et al. Nature 558:253 (2018). Abud EM, et al. Neuron 94:278 (2017). Han X, et al. PNAS 116:10441 (2019). Hu X, et al. Nat Biotechnol 42:807 (2024). Pavan C, et al. Cell Stem Cell (2025). Liang Y, et al. Biomaterials 34:3948 (2013). Xue Y, et al. Adv Mater (2025). Dong S, et al. (2025). Mallucci G, et al. Science 302:871 (2003). Raymond GJ, et al. JCI Insight 4:e131175 (2019). Minikel EV, et al. NAR 48:10615 (2020). Mead S, et al. Lancet Neurol (2022, PRN100). Hermann P, et al. Lancet Neurol (2021). Green AJE. Pract Neurol (2018). Stopschinski BE, Diamond B. Lancet Neurol (2017). Jucker M, Walker LC. Nature (2018). FDA tofersen accelerated approval (2023). Nusinersen approval (2016). Lund Parkinson cell-transplant trial (2026). Tafamidis (ATTR). De Lucia C, et al. (2016). Jalland CMO, et al. Sci Rep 6:37844 (2016). Gomez-Nicola D, et al. Brain 137:2312 (2014). Cheng S, et al. Sci Rep 5:10535 (2015). Gentile JE, et al. (2024). Retraction: Shah SZA, et al. Neurotherapeutics (2020). Smid J, et al. Dement Neuropsychol (2007). \emph{Full verified list with DOI/PMID/URL and verification tier per source: repository \texttt{source\_manifest.json}.}
+
+\end{document}

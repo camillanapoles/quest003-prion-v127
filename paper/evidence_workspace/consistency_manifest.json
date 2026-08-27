@@ -322,6 +322,303 @@
    "evidence_ids": [
     "E007"
    ]
+  },
+  {
+   "fact_id": "N024",
+   "concept": "baseline_front_radius",
+   "section": "3.4",
+   "value": 2.83,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ],
+   "note": "disease-baseline front radius, ws_9_v4_human.json"
+  },
+  {
+   "fact_id": "N025",
+   "concept": "keff_central_per_day",
+   "section": "2.2",
+   "value": 0.26,
+   "unit": "day-1",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E011",
+    "E030"
+   ],
+   "note": "unit conversion of N005 central k_eff"
+  },
+  {
+   "fact_id": "N026",
+   "concept": "mv1like_contained_R",
+   "section": "3.4",
+   "value": 0.69,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ],
+   "note": "ws_9_v4_human.json MV1.kappa4_R_mm"
+  },
+  {
+   "fact_id": "N027",
+   "concept": "mv2like_contained_R_k4",
+   "section": "3.4",
+   "value": 0.78,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ],
+   "note": "ws_9_v4_human.json sweep_MV2 kappa=4"
+  },
+  {
+   "fact_id": "N028",
+   "concept": "near_extinction_R_k32",
+   "section": "3.4",
+   "value": 0.7,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ],
+   "note": "ws_9_v4_human.json sweep_MV2 kappa=32"
+  },
+  {
+   "fact_id": "N029",
+   "concept": "pg0_crI",
+   "section": "3.3",
+   "value": 14.6,
+   "unit": "percent",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E031"
+   ],
+   "note": "bayes_success.json G0_GO.p5"
+  },
+  {
+   "fact_id": "N030",
+   "concept": "pg0_crI_hi",
+   "section": "3.3",
+   "value": 60.5,
+   "unit": "percent",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E031"
+   ],
+   "note": "bayes_success.json G0_GO.p95"
+  },
+  {
+   "fact_id": "N031",
+   "concept": "pslow_crI_lo",
+   "section": "3.3",
+   "value": 0.4,
+   "unit": "percent",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E031"
+   ],
+   "note": "bayes_success.json desaceleracao.p5"
+  },
+  {
+   "fact_id": "N032",
+   "concept": "pslow_crI_hi",
+   "section": "3.3",
+   "value": 13.6,
+   "unit": "percent",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E031"
+   ],
+   "note": "bayes_success.json desaceleracao.p95"
+  },
+  {
+   "fact_id": "N033",
+   "concept": "lnp_transduction_astro",
+   "section": "1.1",
+   "value": 38.1,
+   "unit": "percent",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E019"
+   ],
+   "note": "Xue 2025 single intrathecal dose"
+  },
+  {
+   "fact_id": "N034",
+   "concept": "mv2_titer_sd",
+   "section": "2.4",
+   "value": 1.63,
+   "unit": "e5 SD50/mg",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E007"
+   ],
+   "note": "Groveman 2019 MV2 SD (±1.63e5)"
+  },
+  {
+   "fact_id": "N035",
+   "concept": "mv1_titer_sd",
+   "section": "2.4",
+   "value": 0.7,
+   "unit": "e3 SD50/mg",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E007"
+   ],
+   "note": "Groveman 2019 MV1 SD (±0.70e3)"
+  },
+  {
+   "fact_id": "N036",
+   "concept": "thiele_ell",
+   "section": "2.2",
+   "value": 3.59,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
+   ],
+   "note": "ws_7_results.json ℓ=√(D/k) central"
+  },
+  {
+   "fact_id": "N037",
+   "concept": "wave_shield_theta_range",
+   "section": "3.2",
+   "value": 0.01,
+   "unit": "dimensionless",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030"
+   ],
+   "note": "lower bound of swept θ 0.1–0.01"
+  },
+  {
+   "fact_id": "N038",
+   "concept": "t1_seed_multiple",
+   "section": "2.4",
+   "value": 1.5,
+   "unit": "ratio",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ],
+   "note": "pre-specified screening threshold T1 (>1.5× seed)"
+  },
+  {
+   "fact_id": "N039",
+   "concept": "front_fraction_k2",
+   "section": "3.4",
+   "value": 0.29,
+   "unit": "fraction",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ],
+   "note": "0.82/2.83 — T3 satisfaction"
+  },
+  {
+   "fact_id": "N040",
+   "concept": "sweep_exp1_k2_front",
+   "section": "3.4",
+   "value": 2.828,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N041",
+   "concept": "sweep_exp1_k4_front",
+   "section": "3.4",
+   "value": 0.85,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N042",
+   "concept": "sweep_exp2_parity_fronts",
+   "section": "3.4",
+   "value": 0.819,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N043",
+   "concept": "sweep_c50_invariance_front",
+   "section": "3.4",
+   "value": 0.819,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
   }
  ],
  "methods": [
