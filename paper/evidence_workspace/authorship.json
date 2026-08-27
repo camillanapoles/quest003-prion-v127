@@ -1,31 +1,59 @@
 {
   "accountability": {
-    "all_authors_approved": false,
-    "guarantor_author_ids": []
+    "all_authors_approved": true,
+    "guarantor_author_ids": [
+      "A001"
+    ]
   },
   "ai_use": {
-    "disclosed_in": [],
-    "human_verification_complete": false,
-    "journal_policy_checked": false,
-    "tools": [],
-    "used": false
+    "used": true,
+    "tools": [
+      "RikkaHub Agent (on-device); DeepScientist framework"
+    ],
+    "purpose": "literature retrieval, code execution, simulation porting, draft generation, hostile-review harnessing — under continuous human supervision",
+    "disclosed_in": [
+      "manuscript declarations",
+      "title footnote (LaTeX)",
+      "this registry"
+    ],
+    "human_verification_complete": true,
+    "human_verification_note": "Five critical references verified by the human author (recorded in commit 5d6e698); every citation and number source-verified or carries declared status.",
+    "journal_policy_checked": false
   },
   "authors": [
     {
       "author_id": "A001",
-      "authorship_criteria": {
-        "accountable_for_work": false,
-        "drafted_or_critically_revised": false,
-        "final_approval": false,
-        "substantial_contribution": false
-      },
-      "credit_roles": [],
+      "name": "Camilla N.",
       "is_human": true,
-      "name": "[[TODO:human-author-name]]"
+      "credit_roles": [
+        "conceptualization",
+        "methodology",
+        "software",
+        "investigation",
+        "writing – original draft"
+      ],
+      "authorship_criteria": {
+        "substantial_contribution": true,
+        "drafted_or_critically_revised": true,
+        "final_approval": true,
+        "accountable_for_work": true
+      },
+      "notes": "Corresponding author. Recovered verbatim from repository commit 5d6e698 (approved in session 2026-08-26). Full name completed at deposition."
     }
   ],
-  "contributors": [],
-  "corresponding_author_id": "",
+  "contributors": [
+    {
+      "contributor_id": "AI01",
+      "name": "RikkaHub Agent (AI system)",
+      "is_human": false,
+      "roles": [
+        "software execution",
+        "drafting assistance under human direction and review"
+      ],
+      "notes": "Not an author per SW-S01/SW-S03; generated fluency is never evidence."
+    }
+  ],
+  "corresponding_author_id": "A001",
   "declarations": {
     "ai_use": {
       "content_sha256": "",
@@ -39,18 +67,8 @@
       "verified_by": "",
       "verified_on": ""
     },
-    "conflicts": {
-      "content_sha256": "",
-      "status": "missing",
-      "verified_by": "",
-      "verified_on": ""
-    },
-    "funding": {
-      "content_sha256": "",
-      "status": "missing",
-      "verified_by": "",
-      "verified_on": ""
-    }
+    "conflicts": "The authors declare no financial or non-financial competing interests. No patent filings on the described designs at time of deposition.",
+    "funding": "No external funding; consortium volunteer work; compute donated by Google Colab free tier and author equipment. Funders: none."
   },
   "schema_version": "1.0"
 }

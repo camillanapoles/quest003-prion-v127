@@ -1,0 +1,98 @@
+{
+  "round": 3,
+  "n_findings": 13,
+  "gate_pass": true,
+  "findings": [
+    {
+      "id": "R0-UNUSED",
+      "severity": "NOTE",
+      "where": "../manuscript_EN_v5.md",
+      "issue": "Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023.",
+      "demand": "Confirmar que são intencional (claims de outline/suplemento)."
+    },
+    {
+      "id": "R0-NBIND-N011",
+      "severity": "AMEND",
+      "where": "../manuscript_EN_v5.md",
+      "issue": "N-fato N011 (mrna_redose_rule3=7 days maximum) aparece no texto sem marker de rastreabilidade próximo.",
+      "demand": "Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número."
+    },
+    {
+      "id": "R0-NBIND-N012",
+      "severity": "AMEND",
+      "where": "../manuscript_EN_v5.md",
+      "issue": "N-fato N012 (mv2_titer_169dpi=213000.0 SD50/mg) aparece no texto sem marker de rastreabilidade próximo.",
+      "demand": "Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número."
+    },
+    {
+      "id": "R0-NBIND-N013",
+      "severity": "AMEND",
+      "where": "../manuscript_EN_v5.md",
+      "issue": "N-fato N013 (mv1_titer_169dpi=1690.0 SD50/mg) aparece no texto sem marker de rastreabilidade próximo.",
+      "demand": "Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número."
+    },
+    {
+      "id": "R0-DRIFT-TEX",
+      "severity": "AMEND",
+      "where": "latex",
+      "issue": "Números presentes no LaTeX e ausentes no manuscrito-fonte (drift): 103, 10441, 10615, 11458, 116, 137, 139, 2003, 2014, 2022, 2056, 2312, 253, 278, 3.9, 302, 330, 348, 361, 37844, 3948, 478, 5160, 522, 558.",
+      "demand": "Retropropagar ao md (source of truth) ou remover do LaTeX."
+    },
+    {
+      "id": "R1-BATTERY-factual",
+      "severity": "NOTE",
+      "where": "claims",
+      "issue": "Bateria hostil aplicada a 26 claims factual: Status de revisão por pares da fonte? (preprint ≠ revisado — rotular) | Fonte única ou corroboração independente? | Transferência de espécie/modelo → humano declarada? (IDs: C002, C003, C004, C005, C007, C008, C010, C011, C012, C013, C014, C017, C018, C019, C020, C022, C024, C025, C026, C027, C028, C029, C030, C031, C040, C041)",
+      "demand": "Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação."
+    },
+    {
+      "id": "R1-BATTERY-method",
+      "severity": "NOTE",
+      "where": "claims",
+      "issue": "Bateria hostil aplicada a 4 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C015, C043, C044, C045)",
+      "demand": "Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação."
+    },
+    {
+      "id": "R1-BATTERY-result",
+      "severity": "NOTE",
+      "where": "claims",
+      "issue": "Bateria hostil aplicada a 9 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C032, C033, C034, C035, C036, C037, C038, C039, C042)",
+      "demand": "Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação."
+    },
+    {
+      "id": "R1-PREPRINT",
+      "severity": "NOTE",
+      "where": "manifest",
+      "issue": "2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.",
+      "demand": "Rotular no texto (ex.: bioRxiv preprint)."
+    },
+    {
+      "id": "R2-PT-MISSING",
+      "severity": "AMEND",
+      "where": "..",
+      "issue": "Companion PT sem claim-tags (paridade declarada como passo futuro).",
+      "demand": "Gerar manuscript_PT_v5.md com as mesmas tags."
+    },
+    {
+      "id": "R2-PT-MISSING",
+      "severity": "AMEND",
+      "where": "..",
+      "issue": "Companion PT sem claim-tags (paridade declarada como passo futuro).",
+      "demand": "Gerar manuscript_PT_v5.md com as mesmas tags."
+    },
+    {
+      "id": "R2-PT-MISSING",
+      "severity": "AMEND",
+      "where": "..",
+      "issue": "Companion PT sem claim-tags (paridade declarada como passo futuro).",
+      "demand": "Gerar manuscript_PT_v5.md com as mesmas tags."
+    },
+    {
+      "id": "R2-PT-MISSING",
+      "severity": "AMEND",
+      "where": "..",
+      "issue": "Companion PT sem claim-tags (paridade declarada como passo futuro).",
+      "demand": "Gerar manuscript_PT_v5.md com as mesmas tags."
+    }
+  ]
+}

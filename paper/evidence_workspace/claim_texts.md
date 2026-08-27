@@ -43,3 +43,6 @@
 - **C041** (methods,factual) [E033]: External document references were audited individually: of 19 audited, 11 correct, 3 duplicates, 1 non-scientific, 1 wrong link
 - **C042** (3.2,result) [E030]: Steady-state establishment takes approximately 4 days; planned readouts operate in steady state
 - **C043** (2.4,methodological) [E032;E009]: Humanization is a global time rescaling; relative rates remain murine pending fits to published series
+
+- **C044** (2.4,method) [E032]: Acceptance tiers: T1 and T2 are minimal screening criteria; T3 is the informative mechanistic success tier - front radius below 50 percent of baseline at kappa at most 8 with monotone radial gradient - satisfied by the humanized run at kappa 2 (0.82 mm = 29 percent of 2.83 mm baseline)
+- **C045** (3.4,method) [E033]: A same-mass MV1-seed control run (MV1 seeded with the MV2-mass inoculum) is queued to disentangle seed mass from subtype-specific kinetics in the hierarchy consistency test
