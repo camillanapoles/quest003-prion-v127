@@ -64,3 +64,35 @@ A execução é ela mesma metodologia documentada: `partner_selection/RUNBOOK.md
 
 ### 8. Ligação com a tese
 Este protocolo É a Parte 2 em ação no plano da parceria: a previsibilidade aplicada à escolha de onde medir — com o mesmo padrão de auditabilidade da SLR do §2.1 do manuscrito (critérios antes de resultados, decisão reproduzível, registro público). Referência cruzada: THESIS_ROADMAP (componente 2.3) · G0_EXECUTION_FREEZE_CHECKLIST (novo item F10: parceiro selecionado por este protocolo) · G0_UNLOCK_DOSSIER (§3 o que o comitê recebe).
+
+
+---
+
+# v2 — REPLICABILIDADE POSTERIOR (método como parte da tese)
+## 9. QUERY BANK (strings exatas — análogas às strings de busca da RSL; registradas ANTES da execução)
+| ID | Plataforma | String exata | Data-registro |
+|---|---|---|---|
+| Q1 | PubMed | ("cerebral organoid*"[tiab] OR "brain organoid*"[tiab]) AND (prion*[tiab] OR "Creutzfeldt-Jakob"[tiab] OR PrPSc[tiab] OR "PrP-res"[tiab]) | 2026-08-27 (commit) |
+| Q2 | PubMed | (organoid*[tiab]) AND (antiprion[tiab] OR "prion propagation"[tiab]) AND (treatment[tiab] OR screening[tiab] OR therapeutic[tiab]) | idem |
+| Q3 | ClinicalTrials.gov | condição: prion OR Creutzfeldt-Jakob; tipo: interventional | idem |
+| Q4 | Cinza | apresentadores/lab-abstracts PRION 2025-2026 (cópia arquivada se acessível); rede SCRT | idem |
+| Q5 | BR/gray | "E200K" OR "Creutzfeldt-Jakob" Brasil laboratório (universidades FAPESP/CNPq; HUG-CELL; HC-FMUSP) | idem |
+
+**Regras de execução:** (i) strings rodam SEM modificação; qualquer ajuste = emenda versionada; (ii) resultados salvos com data+URL no log; (iii) deduplicação por grupo-PI; (iv) um grupo = um registro.
+
+## 10. FORMULÁRIO DE EXTRAÇÃO (características do lab — análogo ao data-extraction da RSL)
+Para cada grupo identificado, extrair: `lab_id | PI | instituição/país | plataforma organoide-príon (pubs E-grade?) | BSL-príon (sim/não/?) | capacidade declarada (n organoides/estudo) | braços cobertos nativamente (A2-A8) | publicações 2019-2026 (n prion-organoid) | open-science (repo/dados públicos? sim/não) | contato público (endereço verificável) | fonte(Q1-Q5) | data extração`
+Campos "?" = não-verificável sem contato → não pontuam (regra da pré-triagem v1).
+
+## 11. FLUXO PRISMA-análogo (números REAIS preenchidos no log a cada execução)
+```
+identificados (n=?)  →  deduplicados (n=?)  →  triagem I1-I5 (n excluídos + motivo por X)
+→  elegíveis pontuados A-H (score por lab)  →  contatados (sequencial, 1 por vez)
+→  selecionado (1) [+ plausibilidade de co-parceiros p/ braços subcontratados]
+```
+Cada seta = linha datada no `partner_selection_log.md`. Diagrama regenerado do log (script), nunca desenhado à mão.
+
+## 12. Registro e replicabilidade (PROSPERO-analogue)
+- **Registro do protocolo** = este commit (hash); mudanças só por emenda versionada com justificativa — como PROSPERO para RSL.
+- **Replicabilidade**: qualquer pesquisador re-executa Q1-Q5, re-tria por I/X, re-pontua por A-H → divergências >10 pts de score em algum lab = registradas como discrepância auditável (não erro).
+- **Assertividade por método**: a escolha do parceiro deixa de ser rede/contato/sorte e passa a ser um estimador com viés declarado (single-rater v1; co-rating TODO) — a mesma lente probabilística do resto da tese aplicada à decisão de parceria.
