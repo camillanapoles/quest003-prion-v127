@@ -17,7 +17,7 @@
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-BATTERY-method — claims
-- **Problema:** Bateria hostil aplicada a 4 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C046, C047, C052, C053)
+- **Problema:** Bateria hostil aplicada a 5 claims method: Self-test executado e arquivado? | Critérios de aceitação especificados ANTES do resultado? | Código+params arquivados no repo? (IDs: C046, C047, C052, C053, C054)
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-PREPRINT — manifest

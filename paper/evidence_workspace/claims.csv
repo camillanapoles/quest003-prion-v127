@@ -52,3 +52,4 @@ C050,2.3,factual,721e8abbb49e0b008e26fde05bde5524049ccf3b2937e0857d2c532a24b273e
 C051,3.4,result,072b752b80716b64ebdc337584e1b5211e952290a05b4ed4501c50a74c07132c,E032;E033,verified,low,exploratory
 C052,2,method,c1259f326b4c4b8e1debefc8731d18a0720b12c43af296f10eca53131eab89e1,E032;E033,verified,low,exploratory
 C053,5,method,7f904fba14f97409670d755f2fddd590542fe7f1d11d301a1d2a80d5f3a167ca,E033,verified,low,exploratory
+C054,1-met,method,628f56dc768827c6bfc53eb35ec5a9fc0a0e66735fa9fb7fd0c1fe05f5e90931,E009;E010;E031;E032;E033;E007,verified,low,confirmatory

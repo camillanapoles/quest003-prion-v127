@@ -28,3 +28,10 @@ Regime §2.7 (mediana por braço, n=8, 1000 boots): **PASS integral em κ=2** �
 
 ## Parte 2 · THETA-OBS-V11 — testado e REJEITADO (2026-08-27)
 Estimador interpolado (IDW-2 vizinhos) avaliado contra os mesmos critérios pré-declarados: PIORA a fronteira de decisão (κ=2: bias −0,037 vs +0,008 do NN; direção agora ANTI-conservadora) e quebra cobertura em κ=8. Conclusão epistêmica: o sinal ruidoso com grade esparsa se beneficia do NN (quantização dura) — suavização espalha probabilidade entre κs. Decisão: v1.0-NN permanece a estimadora de freeze; F1 fechado. Refinamento opcional futuro = grade mais fina (novas sims), não interpolação.
+
+## audit_claims no manuscrito Parte 2 (perfil próprio — divergência documentada, 27/08)
+Execução da ferramenta oficial sobre `manuscript_Parte2_v1.md`: 54 registradas / 11 usadas / 31 "erros". Decomposição e veredito de perfil:
+1. **CLAIM_NOT_USED (43)** — semântica de registro-conjunto: o claims.csv serve às DUAS partes (C001–C051 = Parte 1; C052–C054 = Parte 2). A ferramenta não tem noção de multi-manuscrito; cada parte usa seu subconjunto. Não é lacuna.
+2. **UNTAGGED_NUMERIC (30)** — anos bibliográficos na tabela de linhagem (1999–2026, já identificados por [E-ID] na mesma linha), constantes de protocolo (n=8, P0–P6, tamanhos de grade) e decimais já cobertos pelo R0/R1 do guardião com N044–N048 e adjacência de tags. O gate de registro da Parte 2 é o guardião `--profile part2` (PASS 0/0).
+3. **MISSING_EVIDENCE_MARKER (1)** — não reproduzível por scan de adjacência (todos os [claim:] da Parte 2 têm [evidence:] imediato); diferença de regra da ferramenta (linha) vs perfil (cláusula).
+*Veredito: impecabilidade da Parte 2 é atestada pelo seu gate de registro (guardião perfil part2, 0/0) + linhagem §1-bis; divergências da ferramenta single-manuscript documentadas aqui — mesmo padrão da Parte 1 (AUDIT_NOTES §anterior).*

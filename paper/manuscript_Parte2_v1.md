@@ -29,6 +29,25 @@ A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o 
 > **⏳ VALIDAÇÃO EXPRESSA PENDENTE:** esta tabela (e o reenquadramento M1→R1/M2-dormant) só se torna definitiva do texto da tese com validação expressa da autora. {{TODO:PARTE2-V2-VALIDACAO:autora valida ou ajusta a tabela reenquadrada}}
 
 
+
+## 1-met. O método nomeado: ACP — Antecipação Computacional Parametrizada (*Parameterized Computational Anticipation*)
+
+O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, é possível **continuar pesquisa por simulação** — com dados publicados e validados como insumo, execução determinística auditável e prognósticos travados antes de qualquer medição — sem que isso substitua ou espere o laboratório. **Declaração de eixo retórico (obrigatória em toda a Parte 2):** tudo aqui **é simulação, e é dito que é**; não prometemos aplicar nem validar na Parte 2 — antes: **se dados reais vierem a exibir resultados análogos aos simulados, os passos seguintes já terão sido dados** — a antecipação estará bancada, não pendente [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
+
+**Passos formais do método (P0–P6):**
+
+| Passo | Nome | Entrada | Procedimento | Saída | Garantia |
+|---|---|---|---|---|---|
+| P0 | identificação | pergunta focal | SLR auditada de dados publicados validados (espécie, sistema, fontes cruzadas) | base de insumos com E-IDs | linhagem completa (§1-bis) |
+| P1 | parametrização | base E-registrada | derivação física/estatística com proveniência por parâmetro | modelos parametrizados | cada número amarra a fonte |
+| P2 | execução | modelos | motores determinísticos, código aberto, self-tests | runs arquivados [SIM] | reprodução entre ambientes |
+| P3 | colheita | runs | critérios de aceitação pré-declarados | resultados [SIM] + margens | veredito sem meta móvel |
+| P4 | prognóstico | resultados | predições travadas por release antes de qualquer medição | limiares/decision-table | âncora anti-hindsight |
+| P5 | pesquisa derivada | valores razoáveis | novas perguntas/produtos derivam **imediatamente** (portas abertas) | agenda derivada [SIM] | geração, não espera |
+| P6 | confronto (opcional) | dados reais futuros, **se existirem e forem análogos** | comparação à âncora travada (nunca retreino) | passos seguintes **já avançados** | antecipação bancada |
+
+**Posição na família dos métodos antecipatórios:** a ACP é irmã da meta-análise (agrega o publicado), da modelagem física (deriva comportamento) e dos in-silico trials (executa cenários) — e distingue-se por **travar prognósticos antes da medição e declarar a simulação como simulação em cada saída** (tiers [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] [claim:C047] [evidence:E032, E033]). Onde a Parte 1 demonstrou a ACP no caso V127 (Parte 1 §2–§3), a Parte 2 **é** a ACP enquanto método de continuidade [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
+
 ## 1-bis. Base de Validade (MANDATÓRIA — exigência do guardião)
 
 **Declaração tríade:** (i) esta tese é **baseada em simulação computacional e NÃO SUBSTITUI a validação de laboratório** — o laboratório é **essencial** para que a tese seja absorvida como real; (ii) a continuidade do estudo provém dos **prognósticos**: se os exames iniciais de laboratório (G0-wet [ORGANOID], e no futuro o humano) **equivalerem ao que foi simulado**, nós já possuímos **antecipação de dados e informações aplicáveis imediatamente** — essa é a metodologia da tese; (iii) o rigor exigido de uma tese experimental — como foi feito, por quem, com quais critérios, quais resultados — é aqui **convertido para o ambiente computacional**: cada dado tem linhagem completa declarada (quem produziu, em que espécie/sistema, validação cruzada por qual fonte independente, qual código simulou, como foi parametrizado para humano, qual resultado produziu).
@@ -85,7 +104,7 @@ O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Par
 
 ## 7. Promessas e limites desta Parte 2
 
-Promete: método completo, replicável e em parte já demonstrado (M1 executado; M4 piloto) para dar continuidade à tese por estimativa computacional — como a física, sem parar à espera de cada confirmação. **Não promete**: seleção de parceiro (execução externa), dado [ORGANOID]+ (não existe ainda — e é rotulado como tal), nem qualquer claim clínica (escada de tiers: nenhum degrau empresta a autoridade do seguinte). Limites declarados: pesos e scores são julgamento estruturado single-rater; a calibração do estimador é na grade atual (refinamento futuro = grade mais fina, pré-declarado); PubMed-direto e identificação R8 pendem como conformidade do piloto.
+Promete: a ACP como método completo, replicável e em parte já demonstrado (M1 executado; M4 piloto) — continuar pesquisa por simulação hoje, como a física, sem parar à espera de cada confirmação. E declara: os resultados daqui **são de simulação e assim permanecem rotulados**; a aplicação/validação em ambiente real não é prometida nesta Parte — se dados reais futuros forem análogos aos simulados, **os passos seguintes já estão avançados** (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007]. **Não promete**: seleção de parceiro (execução externa), dado [ORGANOID]+ (não existe ainda — e é rotulado como tal), nem qualquer claim clínica (escada de tiers: nenhum degrau empresta a autoridade do seguinte). Limites declarados: pesos e scores são julgamento estruturado single-rater; a calibração do estimador é na grade atual (refinamento futuro = grade mais fina, pré-declarado); PubMed-direto e identificação R8 pendem como conformidade do piloto.
 
 ## Referências (herdam da Parte 1 + artefatos próprios)
 
