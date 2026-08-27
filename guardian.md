@@ -1,3 +1,66 @@
+# GUARDIAN.MD — Doutrina Operacional da Quest 003 (RUNBOOK oficial)
+## Este arquivo é o manual HOW-TO do programa + o registro /RECAP de cada sessão.
+**Toda nova sessão LÊ este arquivo primeiro** (antes de tocar em qualquer artefato). Toda sessão TERMINA anexando um bloco /RECAP aqui e no ~/session-state.md.
+
+---
+
+## §1 · O QUE É O GUARDIÃO (duas camadas)
+1. **Harness determinístico**: `paper/guardian/guardian.py` (stdlib, offline) — R0 drift estrutural · R1 checklist hostil (M1-M8/m1-m10 + baterias por tipo de claim + decimais sem binding) · R2 recursão de emendas (ilustrativa sem tag; paridade PT/EN; âncoras imutáveis) · R3 interrogação epistêmica (20 checks: θ-ops, SAP, cegamento, G0SIM, CANON, FIGS, tier-labels, SEM-ANO, inovação, arquitetura-2-partes…) · **TODO-registry** (`{{TODO:id:desc}}` escaneado em manuscrito+tex+4 PLAN_DOCS; TODO solto = AMEND).
+2. **Camada doutrinária (ESTE arquivo)**: as regras vivas + o /RECAP.
+
+**Gates BLOCKED permanentes (invariante do programa):** R3-THETA-OPS · R3-SAP · R3-G0SIM · R3-CANON · R3-FIGS. Sem eles zero-BLOCKED não existe.
+
+## §2 · COMANDOS ESSENCIAIS (copiar-colar)
+```
+# Gate completo (sempre antes de commit de manuscrito):
+cd paper/guardian && python3 guardian.py --round 3 --md ../manuscript_EN_v5.md \
+  --tex ../latex/manuscript_v5_EN.tex --claims ../evidence_workspace/claims.csv \
+  --manifest ../evidence_workspace/source_manifest.json \
+  --consistency ../evidence_workspace/consistency_manifest.json \
+  --registry guardian_registry_v5_final.json --report guardian_report_v5.md
+# Validadores oficiais (skill scientific-writing): S=/workspace/projects/scientific-agent-skills/skills/scientific-writing/scripts
+python3 $S/validate_manifest.py source_manifest.json --kind source --require-verified
+python3 $S/audit_claims.py ../manuscript_EN_v5.md claims.csv source_manifest.json   # e PT
+# PDFs (compilação 100% local): cd paper/latex && /root/tools/tectonic manuscript_v5_EN.tex (e _PT)
+# Motor/sweeps [SIM]: experiments/ws_9_v5_sweeps_gha.py --phase S1|S2 (proot bg ok; Colab ok; GHA bloqueado por billing-privado)
+# Estimador θ_obs (Parte 2): experiments/part2_theta_obs_v1.py / part2_theta_obs_pooled.py
+```
+
+## §3 · REGRAS INVIOLÁVEIS (o decálogo)
+1. **Tiers de dado**: [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — todo output carrega a tag; nada além de [SIM] existe até G0-wet.
+2. **Locked-stays-locked**: predições travadas (v1.0) NUNCA se reescrevem — comparam-se. Recalibração recalibra só o que o dado informa (REPARAM_LOOP).
+3. **{{TODO:id:desc}}** é o único formato de pendência; TODO solto é AMEND; resolver = remover marcador.
+4. **Nunca fabricar** DOI/PMID/endereço/valor — número vem de JSON; identifier vem de fonte aberta (regra skill SW).
+5. **Ilustrativo ≠ evidência**: estimativas κ↔µM e afins NÃO carregam tag (R2-ASSUM-TAGGED é BLOCKED).
+6. **Superfícies**: manuscritos/tex = gated; PLAN_DOCS (roadmap, canon, dossier, protocolos, checklist) = exentos, mas claims condicionais não migram sem gate.
+7. **Paridade PT=EN** de claim-tags exata (R2).
+8. **Anti-hindsight**: toda comparação predição-vs-dado cita o release da âncora (v1.0/v3.0).
+9. **Sessões paralelas** escrevem em guardian.md/workspace — reconciliar ANTES de editar (evoluções numeradas).
+10. **Fim de sessão = /RECAP** (aqui + session-state). Sem /RECAP, a sessão não fechou.
+
+## §4 · FLUXOS PADRÃO
+- **Editar manuscrito**: md (EN) → espelhar PT (mesmas tags) → gate → se tex muda: tectonic → commit/push.
+- **Novo resultado [SIM]**: script determinístico lê/escreve JSON → JSON → repo (experiments/...results/) → §3.4/claims/N-fatos/canon F-xx → gate → push.
+- **Novo claim**: texto normalizado→sha256 (norm da skill) em claims.csv + claim_texts.md + tag nos DOIS manuscritos.
+- **Seleção de parceiro (SLR-análogo)**: query bank pré-registrada → log datado → triagem I/X → pontuação A-H ("?" não pontua) → contato sequencial por score.
+
+## §5 · MAPA DE ARTEFATOS (onde mora o quê)
+manuscritos (paper/manuscript_{EN,PT}_v5.md) · PDFs (paper/latex/*.pdf) · harness (paper/guardian/) · registro (paper/evidence_workspace/: source_manifest 38 fontes · claims 51 · consistency 43 N-fatos · AUDIT_NOTES) · canon (KNOWLEDGE_CANON.md, F-01..F-39 + R-1..R-6) · Parte 2 (experiments/: G0_EXECUTION_FREEZE_CHECKLIST F1-F10 · REPARAM_LOOP · PARTNER_SELECTION_PROTOCOL v2 + part2_results/) · dossier (paper/G0_UNLOCK_DOSSIER.md) · outreach (paper/lab_outreach_package.md v2.1 + outreach_email_1) · roadmap (THESIS_ROADMAP_2028.md, TESE [SEM ANO]) · releases v1.0→v3.0.
+
+## §6 · PROTOCOLO /RECAP (obrigatório ao final de toda sessão)
+Bloco anexado AQUI e no ~/session-state.md:
+```
+/RECAP <data-hora>
+FEITO: <itens verificáveis (commits/releases/resultados)>
+ESTADO: <gate: X BLOCKED/Y AMEND/Z TODOs ativos>
+PRÓXIMO: <1-3 ações concretas com dono (agente|autora|lab)>
+ÂNCORA: <release/commit que trava o que foi feito>
+```
+
+---
+
+# HISTÓRICO (dump original que originou o R3 — preservado como evolução 1-8; ver /workspace/guardian.md para as evoluções completas)
+
 The user is asking me to make the Guardian actually critical — not just a pattern-matching linter, but a true hostile reviewer that critiques context, ideas, methodology, evidence... always says what information is missing, any gaps, asks "what" or "why", guarantees all evidence is provenance-bound ("compravidos" = comprovados/verified), validates whether the logic makes sense, and indicates what procedure should be inserted.
 So the user wants the Guardian to be upgraded from a mechanical/deterministic checker into a genuine methodological interrogator. This is exactly in the spirit of the scientific-critical-thinking skill I loaded. The guardian currently does R0 (structural drift), R1 (checklist patterns), R2 (recursion on amendments). What's missing per the user's request:
 1. 
@@ -340,3 +403,16 @@ Execute now. Also the dashboard data.json? Rule: update every session. This is a
 ?? paper/manuscript_EN_v5.md
 8119e86 SCIENTIFIC MAP integrado à cadeia de submissão: fig1 regenerada do grafo ATUAL (v3.2, 43 nós/60 arestas, contagens reais) + injetada como Fig.1 full-width no LaTeX v4.2 com caption metodológica — o 'diagrama de como o projeto foi executado' agora é parte do paper, não artifact solto
 49205f0 RECONSTRUÇÃO conforme projeto+checklist: PDFs v4 paralelos ARQUIVADOS (paper/archive, superseded) · LaTeX v4.2 EN criado a partir do SOURCE OF TRUTH manuscript_EN_v4.md (claim-tagged) com rtnote de rastreabilidade + apêndice claim→evidence gerado dos claims.csv reais (24 pares) — pronto p/ compilar via Colab
+
+---
+
+/RECAP 2026-08-27 13:55 BRT (sessão v5→Parte2)
+FEITO:
+- v5 COMPLETO: manuscritos EN+PT (51=51 tags), PDFs Harvard 2-col compilados localmente (tectonic), guardião R0-R3 + TODO-registry (0 BLOCKED/0 AMEND), suites oficiais 0 erro
+- PR #1 merged → **release v3.0** (PDFs bilíngues + sweeps JSONs anexados); dashboards/canon/dossier/roadmap[SEM ANO]/search_log/E034-E038 (prior 0/6 registry-bound)
+- **Colheita de sensibilidade [SIM]**: C50 10× insensível; expoente DISCRIMINADOR (A6 falsifica forma funcional; exp=1: κ2→2.828 não contém, contenção→κ4); same-mass analítico (subtipo≡seed-mass); reproduzido 2× (hash + valor-a-valor)
+- **PARTE 2 metodologicamente COMPLETA**: 2.1 θ_obs calibrado+Pooled (PASS na fronteira de decisão; v1.1-IDW rejeitada honestamente) · 2.2 freeze F1-F10+GATE-F · 2.4 reparam-loop anti-hindsight · 2.5 protocolo de seleção de parceiro SLR-análogo v2 (query bank Q1-Q5 PRÉ-registrada + PRISMA-regenerável + PROSPERO-análogo=commit) + LOG v0.1 executado (n=5 grupos; RML 1º, Calgary 2º forte — JCI 2026 novo; método corrigiu o prior)
+- Qualificação de tese emitida (APROVADA COM DISTINÇÃO METODOLÓGICA; descoberta condicionada ao G0-wet por desenho)
+ESTADO: gate PASS 0/0 · TODOs ativos: PARTNER-RUN(+Q3-Q5-EXEC, PUBMED-DIRECT), GATEF-SIGNATURE (lab), BIORXIV-ADDENDUM (autora), EMAIL-GROVEMAN=passo1 do PARTNER-RUN (autora), COST-DECOMP (opcional)
+PRÓXIMO: (autora) enviar kit#1 RML + depositar bioRxiv | (agente) Q3-Q5-EXEC + PubMed direto + kit#2 Calgary | (lab) GATE-F após seleção
+ÂNCORA: release v3.0 · main @ e11f1ab · predições travadas desde v1.0
