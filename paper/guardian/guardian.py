@@ -15,7 +15,14 @@ Rodadas:
         (foi claim-tagged? assumption declarada? contradição com N-facts?).
         Converge quando rodada não gera novos achados (delta=0).
 
-Gate de saída: zero BLOCKED. Findings: BLOCKED > AMEND > NOTE.
+Gate: zero BLOCKED. Findings: BLOCKED > AMEND > NOTE.
+
+FAIXAS DE DOCUMENTO (por desenho):
+  - SUPERFÍCIES DE MANUSCRITO (gated): manuscript_*.md, latex/*.tex — R0-R3 aplicam-se integralmente.
+  - PLAN_DOCS (EXENTOS por desenho): THESIS_ROADMAP_2028.md, guardian.md, KNOWLEDGE_CANON.md,
+    epistemic/holistic reports — planejamento, ambição e índice vivem aqui SEM gate;
+    a única regra é que CLAIMS condicionais destes docs não migram para manuscrito
+    antes do gate correspondente (os checks R0/R1 detectam vazamento numérico/tag).
 Uso:
   python3 guardian.py --round 0|1|2 --md ../manuscript_EN_v5.md \
       --claims ../evidence_workspace/claims.csv \
@@ -271,6 +278,8 @@ class Guardian:
          "Continuidade: o manuscrito/canon devem referenciar PLAN_2027.md (trajetória de gates e publicações) — o programa não publica sem rota."),
         ("R3-FIGS", r"fig2_theta_response\.png|fig3_subtypes\.png", "BLOCKED",
          "Figuras 2/3 (θ-resposta e subtipos) referenciadas e existentes em disco — manuscrito sem figuras reais não publica."),
+        ("R3-UNLOCK", r"G0_UNLOCK_DOSSIER", "AMEND",
+         "Dossier de liberação do G0 (argumentário ao comitê) deve existir e ser referenciado na superfície de planejamento; claims do dossier não migram ao manuscrito sem gate."),
         ("R3-REDOSE-IMMUN", "anti-PEG|repeat-dose immun|redosing.{0,80}immunogen|clearance acelerad", "AMEND",
          "Imunogenicidade da redose repetida (LNP/anti-PEG, via intratecal) discutida."),
     ]

@@ -1,6 +1,6 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 13 (BLOCKED=0, AMEND=8, NOTE=5)
+**Rodadas executadas:** 3 · **Achados:** 14 (BLOCKED=0, AMEND=9, NOTE=5)
 
 ## Gate
 
@@ -39,6 +39,10 @@
 ### [AMEND] R2-PT-MISSING — ..
 - **Problema:** Companion PT sem claim-tags (paridade declarada como passo futuro).
 - **Exigência:** Gerar manuscript_PT_v5.md com as mesmas tags.
+
+### [AMEND] R3-R3-UNLOCK — manuscript
+- **Problema:** Interrogação epistêmica R3-UNLOCK: procedimento ausente.
+- **Exigência:** Dossier de liberação do G0 (argumentário ao comitê) deve existir e ser referenciado na superfície de planejamento; claims do dossier não migram ao manuscrito sem gate.
 
 ### [NOTE] R0-UNUSED — ../manuscript_EN_v5.md
 - **Problema:** Claims registradas mas não citadas no manuscrito: C001, C006, C009, C016, C021, C023.

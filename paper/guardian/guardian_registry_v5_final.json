@@ -1,6 +1,6 @@
 {
   "round": 3,
-  "n_findings": 13,
+  "n_findings": 14,
   "gate_pass": true,
   "findings": [
     {
@@ -93,6 +93,13 @@
       "where": "..",
       "issue": "Companion PT sem claim-tags (paridade declarada como passo futuro).",
       "demand": "Gerar manuscript_PT_v5.md com as mesmas tags."
+    },
+    {
+      "id": "R3-R3-UNLOCK",
+      "severity": "AMEND",
+      "where": "manuscript",
+      "issue": "Interrogação epistêmica R3-UNLOCK: procedimento ausente.",
+      "demand": "Dossier de liberação do G0 (argumentário ao comitê) deve existir e ser referenciado na superfície de planejamento; claims do dossier não migram ao manuscrito sem gate."
     }
   ]
 }
