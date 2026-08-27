@@ -1,6 +1,6 @@
 {
   "round": 3,
-  "n_findings": 11,
+  "n_findings": 9,
   "gate_pass": true,
   "findings": [
     {
@@ -39,13 +39,6 @@
       "demand": "Retropropagar ao md (source of truth) ou remover do LaTeX."
     },
     {
-      "id": "R1-CHK-M6-refcount",
-      "severity": "AMEND",
-      "where": "manuscript+tex",
-      "issue": "Checklist hostil M6-refcount não satisfeito (padrão não encontrado).",
-      "demand": "M6: contagem de referências deve bater com o manifest (33 fontes E-ID) — remover '42 verified' ou reconciliar."
-    },
-    {
       "id": "R1-BATTERY-factual",
       "severity": "NOTE",
       "where": "claims",
@@ -72,13 +65,6 @@
       "where": "manifest",
       "issue": "2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.",
       "demand": "Rotular no texto (ex.: bioRxiv preprint)."
-    },
-    {
-      "id": "R3-R3-UNLOCK",
-      "severity": "AMEND",
-      "where": "manuscript",
-      "issue": "Interrogação epistêmica R3-UNLOCK: procedimento ausente.",
-      "demand": "Dossier de liberação do G0 (argumentário ao comitê) deve existir e ser referenciado na superfície de planejamento; claims do dossier não migram ao manuscrito sem gate."
     }
   ]
 }

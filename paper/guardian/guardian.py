@@ -182,7 +182,7 @@ class Guardian:
         ("M4-murine", r"relative rates remain murine|taxas relativas permanecem|time rescal", "AMEND",
          "M4: declaração explícita de que humanização = rescala global de tempo, taxas relativas murinas."),
         ("M6-refcount", r"42 verified", "AMEND",
-         "M6: contagem de referências deve bater com o manifest (33 fontes E-ID) — remover '42 verified' ou reconciliar."),
+         "M6: contagem de referências não deve declarar '42 verified' fora do manifest (33 E-IDs) — este check flagge se o padrão APARECER (ref count inflado)."),
         ("M7-prionlike", r"Stopschinski|Jucker", "AMEND", "M7: refs canônicas de prion-like citadas no §transferência."),
         ("M8-safety", r"immunogenicity|imunogenicidade", "AMEND", "M8: parágrafo/limite de segurança (imunogenicidade/clearance) do construto."),
         ("m1-theta-def", r"θ\s*≡|\\\\theta\s*\\equiv|theta ≡|θ \u2261", "AMEND", "m1: definição formal de θ na primeira ocorrência."),
@@ -195,7 +195,13 @@ class Guardian:
     def round1(self):
         body = self.md + "\n" + self.tex
         for cid_item, pat, sev, demand in self.CHECKLIST:
-            if not re.search(pat, body, re.IGNORECASE):
+            present = re.search(pat, body, re.IGNORECASE)
+            if cid_item == "M6-refcount":
+                if present:  # flag APENAS se o padrão inflado aparecer
+                    self.flag(f"R1-CHK-{cid_item}", sev, "manuscript+tex",
+                              f"Checklist hostil {cid_item}: padrão indevido presente.", demand)
+                continue
+            if not present:
                 self.flag(f"R1-CHK-{cid_item}", sev, "manuscript+tex",
                           f"Checklist hostil {cid_item} não satisfeito (padrão não encontrado).", demand)
         # bateria por claim_kind (amostra executável: claims citadas)
