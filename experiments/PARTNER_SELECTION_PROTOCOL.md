@@ -59,5 +59,8 @@ Cada etapa registrada em `experiments/part2_results/partner_selection_log.md` (d
 
 *Não há pontuação de laboratório específico além dos públicos das fontes E-registry; pontuações completas só após contato e verificação documental — os "?" permanecem não-pontuados por honestidade.*
 
+### 7-bis. Instrumento executável (runbook + fichas)
+A execução é ela mesma metodologia documentada: `partner_selection/RUNBOOK.md` (procedimento por etapa + padrão de prova por critério + regras de replicabilidade) e fichas máquina-verificáveis `candidates_v1.csv` / `contacts_log.csv` / `decision_log.md` — o que torna a seleção replicável por terceiros, como o fluxo PRISMA o é para artigos.
+
 ### 8. Ligação com a tese
 Este protocolo É a Parte 2 em ação no plano da parceria: a previsibilidade aplicada à escolha de onde medir — com o mesmo padrão de auditabilidade da SLR do §2.1 do manuscrito (critérios antes de resultados, decisão reproduzível, registro público). Referência cruzada: THESIS_ROADMAP (componente 2.3) · G0_EXECUTION_FREEZE_CHECKLIST (novo item F10: parceiro selecionado por este protocolo) · G0_UNLOCK_DOSSIER (§3 o que o comitê recebe).
