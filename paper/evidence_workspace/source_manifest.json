@@ -769,6 +769,102 @@
     "verified_by": "accountability agents (consortium); human-supervised",
     "verified_on": "2026-08-26"
    }
+  },
+  {
+   "evidence_id": "E034",
+   "source_type": "journal_article",
+   "title": "Quinacrine treatment trial for sporadic Creutzfeldt-Jakob disease (Class I: no survival benefit)",
+   "authors": "Geschwind Michael, D; Kuo Alexander, L; Wong Karen, S; Haman Aimee; Devereux Michael, C; Raudabaugh Brian, J; ... ; Miller Bruce, L",
+   "year": 2013,
+   "identifiers": {
+    "pmid": "24122181",
+    "pmcid": "PMC4211922"
+   },
+   "locator": "pmid:24122181",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "accountability agents (consortium); human-supervised",
+    "verified_on": "2026-08-27",
+    "method": "opened via web search + publisher/PubMed landing on 2026-08-27; identifiers confirmed from landing pages; human re-confirmation queued"
+   }
+  },
+  {
+   "evidence_id": "E035",
+   "source_type": "journal_article",
+   "title": "Doxycycline in Creutzfeldt-Jakob disease: a phase 2, randomised, double-blind, placebo-controlled trial (no significant effect)",
+   "authors": "Haik Stephane; Marcon Graziella; Mallet Angelo; ... ; Brandel Jean-Philippe",
+   "year": 2014,
+   "identifiers": {
+    "pmid": "24411709"
+   },
+   "locator": "pmid:24411709",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "accountability agents (consortium); human-supervised",
+    "verified_on": "2026-08-27",
+    "method": "opened via web search + publisher/PubMed landing on 2026-08-27; identifiers confirmed from landing pages; human re-confirmation queued"
+   }
+  },
+  {
+   "evidence_id": "E036",
+   "source_type": "journal_article",
+   "title": "Postmortem findings in a case of variant CJD treated with intraventricular pentosan polysulfate (iPPS): biological effect without cure",
+   "authors": "Newman, P K; ... ; Todd, N V",
+   "year": 2014,
+   "identifiers": {
+    "pmid": "24554103"
+   },
+   "locator": "pmid:24554103",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "accountability agents (consortium); human-supervised",
+    "verified_on": "2026-08-27",
+    "method": "opened via web search + publisher/PubMed landing on 2026-08-27; identifiers confirmed from landing pages; human re-confirmation queued"
+   }
+  },
+  {
+   "evidence_id": "E037",
+   "source_type": "journal_article",
+   "title": "Efficacy of flupirtine on cognitive function in patients with CJD: a double-blind placebo-controlled study (cognitive endpoint; no survival benefit)",
+   "authors": "Otto Markus; ... ; Zerr Inga",
+   "year": 2004,
+   "identifiers": {
+    "doi": "10.1212/01.WNL.0000113764.35026.ef"
+   },
+   "locator": "doi:10.1212/01.WNL.0000113764.35026.ef",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "accountability agents (consortium); human-supervised",
+    "verified_on": "2026-08-27",
+    "method": "opened via web search + publisher/PubMed landing on 2026-08-27; identifiers confirmed from landing pages; human re-confirmation queued"
+   }
+  },
+  {
+   "evidence_id": "E038",
+   "source_type": "journal_article",
+   "title": "Prion protein monoclonal antibody (PRN100) therapy for Creutzfeldt-Jakob disease: evaluation of a first-in-human treatment programme",
+   "authors": "Mead Simon; ... ; Collinge John",
+   "year": 2022,
+   "identifiers": {
+    "pmid": "35305340"
+   },
+   "locator": "pmid:35305340",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "accountability agents (consortium); human-supervised",
+    "verified_on": "2026-08-27",
+    "method": "opened via web search + publisher/PubMed landing on 2026-08-27; identifiers confirmed from landing pages; human re-confirmation queued"
+   }
   }
  ]
 }
