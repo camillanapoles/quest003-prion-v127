@@ -1,6 +1,6 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 9 (BLOCKED=0, AMEND=0, NOTE=9)
+**Rodadas executadas:** 3 · **Achados:** 10 (BLOCKED=0, AMEND=0, NOTE=10)
 
 ## Gate
 
@@ -42,4 +42,8 @@
 
 ### [NOTE] R3-TODO-PARTNER-RUN — todo-registry
 - **Problema:** TODO aberto registrado: PARTNER-RUN.
+- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
+
+### [NOTE] R3-TODO-TESE-FICHA — todo-registry
+- **Problema:** TODO aberto registrado: TESE-FICHA.
 - **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).

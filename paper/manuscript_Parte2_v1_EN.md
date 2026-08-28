@@ -1,3 +1,15 @@
+<!-- THESIS FRONT MATTER (EN mirror; PT is master) -->
+# PARAMETRIZED COMPUTATIONAL CONTINUITY OF RESEARCH IN PRION DISEASES: THE ACP METHOD APPLIED TO THE PrP-V127 THERAPEUTIC PLATFORM
+**Part 2 of the Thesis** — Author: Camilla N. · {{TODO:TESE-FICHA:academic record (PT master)}}
+**Structured abstract and keywords:** see PT master (RESUMO) — EN keywords: prions; computational simulation; Parameterized Computational Anticipation; PrP-V127; Creutzfeldt–Jakob disease; research methodology; in-silico.
+**Summary:** 1 Introduction (problem/justification/questions Q1–Q3/objectives OE1–OE5/hypotheses H1–H3) · 2 Background · 3 Methodology (ACP; validity basis; analogical mapping) · 4 Results [SIM] · 5 Findings/impacts/correlated areas/next approaches (mandatory declaration) · 6 Discussion · 7 Conclusions by objective · Appendix A · References & concordance.
+
+## CHAPTER 1 — INTRODUCTION (compact mirror; PT master holds the full form)
+**Problem:** translational research in rare fatal diseases stalls without clinical data, while lacking quantitative prediction wastes it; prions produced six clinical failures without a delivery model. **Justification:** epistemic (simulation prognosis is future-time), ethical-economic (decide what to measure before spending), methodological (the tools existed; the method needed naming). **Questions:** Q1 formalize a simulation-continuation method with experimental-grade rigor? Q2 does it produce own results with declared validity? Q3 how does it position against the anticipation family? **Objectives:** OE1 name/formalize ACP (P0–P6); OE2 Validity Basis with full lineage; OE3 deliver [SIM] results as thesis results; OE4 document continuity as method (not executed); OE5 hostile review + author validation. **Hypotheses:** H1 experimental-grade form (analogical mapping); H2 own falsifiable results (locked since release v1.0); H3 structural position distinct from in-silico trials.
+
+## CHAPTER 2 — BACKGROUND (compact mirror)
+Mechanism validated at four levels [1][3][4][5]; organoid platform [7][8]; transport in-vivo [10]; open murine kinetics [9]; six registry-bound clinical failures [33–38]; the anticipation family and in-silico trials (Ch.2 §2.2–2.3 PT master); ACP position: locks prognosis before measurement, labels simulation, banks anticipation, derives research immediately.
+
 # Methodological Continuity Plan — Part 2 of the Thesis
 ## From parameterized data to gate-by-gate continuation: G0-sim [SIM] → G0-wet [ORGANOID] → G1 [MOUSE] → G2 [HUMAN]
 
@@ -10,7 +22,9 @@ Companion to Part 1 (manuscript v5 EN/PT, release v3.0) — does not modify it. 
 
 **Why [NO YEAR]:** the thesis deals with **prognoses obtained from simulated data**. Simulation operates, by nature, in future time — independent of the current year — the thesis is stated without a calendar year: referencing a year has no impact on the thesis, since predictions are of the "what happens if" kind, not "when it happens." Phase durations, where present, are planning estimates, never promises.
 
-## 1. The named method: ACP — Parameterized Computational Anticipation
+## CHAPTER 3 — METHODOLOGY
+
+### 3.1 The named method: ACP — Parameterized Computational Anticipation
 
 Today it is possible to **continue research by simulation** — validated published data as input, auditable deterministic execution, prognoses locked before any measurement — without replacing or waiting for the laboratory — the thesis architecture (C049): Part 1 (pre-G0) + Part 2 joined at the G0 junction. **Mandatory rhetorical axis:** everything here is simulation and is declared as such; we do not promise to apply or validate in Part 2 — rather: **if real data ever prove analogous to the simulated ones, the subsequent steps will already have been taken** (anticipation *banked*, never pending) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
@@ -18,14 +32,14 @@ Today it is possible to **continue research by simulation** — validated publis
 
 **Family position (related-work):** the in-silico-trials field is established (they simulate **the trial**). ACP simulates **research continuation**, distinguished by four structural points: locked prognosis before measurement; simulation labeled in every output (tiers [claim:C047] [evidence:E032, E033]); P6 banked anticipation; P5 derived research as a first-class product.
 
-### 1-bis-0. Mathematical formulation with provenance
+#### 3.2 Mathematical formulation with provenance
 **Transport (ADR):** ∂(αc)/∂t = ∇·(D_eff∇c) − ∇·(vc) + S(x) − k_eff·c; α=0.20, λ=1.8 in-vivo [10]; D_eff=D₀/λ²=3.86×10⁻¹¹ m²/s (D₀ Stokes–Einstein, R_h≈2.5 nm); k_eff 10⁻⁶–10⁻⁵ s⁻¹ [11]; self-tests: mass 100%, Thiele 0.5% (ℓ=3.59≈3.6 mm) [claim:C032] [evidence:E030]. **Capping/threshold:** freeS=(1+κc_V127)⁻²; θ≡(1+κc_peak)⁻¹; containment = front <50% baseline (T3) [claim:C033] [evidence:E030]. **Humanized clock [7]:** doubling ≈12.1 d; 1 unit = 144 d [claim:C037] [evidence:E032, E007]. **Estimator:** features (R, log biomass ratio); NN on κ∈{1.5–8}; per-arm median n=8, bootstrap IC90; pre-declared verdict (boundary bias −0.008; v1.1 rejected) [claim:C052] [evidence:E032, E033].
 
-## 1-bis. Validity Basis (MANDATORY — guardian-enforced)
+### 3.3 Validity Basis (MANDATORY — guardian-enforced)
 
 **Triad:** (i) simulation-based thesis that **does NOT replace laboratory validation** — the laboratory is **essential** for real absorption; (ii) continuation comes from **prognoses**: if future laboratory exams are **equivalent to the simulated**, we already hold **anticipated, immediately applicable data and information**; (iii) experimental rigor — how, by whom, criteria, results — is **converted to the computational environment** with **complete data lineage** (who produced → species/system → independent cross-validation → code → parametrization → result). The six-row lineage table lives in the PT master (§1-bis) with E-IDs and claims per row [claim:C013] [evidence:E009, E011] · [claim:C037] [evidence:E032, E007] · [claim:C032] [evidence:E032] · [claim:C038] [evidence:E032].
 
-## 1-ter. The thesis in experimental form — the analogical mapping
+### 3.4 The thesis in experimental form — the analogical mapping
 
 A thesis **equal in form** to the experimental one, whose "research subject" is the set papers+sources+code+simulation, documented exactly as a protocol with human participants documents its people:
 
@@ -44,11 +58,13 @@ A thesis **equal in form** to the experimental one, whose "research subject" is 
 
 *An examiner who can read an experimental thesis can read this one: swap person for source, instrument for code, collection for run — the documentary form is identical; the basis is computational simulation.* Tier semantics preserved: the **role** changes, the [SIM] label does not.
 
-## 2-bis. The thesis results are the results of the simulation already performed
+## CHAPTER 4 — RESULTS
+
+### 4.1 The thesis results are the results of the simulation already performed
 
 Instead of laboratory or human testing, what validates and composes this thesis at this stage is the executed, archived computational set: θ\*=0.333 [claim:C038] [evidence:E032]; three falsifiable design rules [claim:C033] [evidence:E030] [claim:C034] [evidence:E030, E020] [claim:C035] [evidence:E030, E019]; sensitivity harvest with a discriminating prediction [claim:C051] [evidence:E032, E033]; two-lens probabilistic frame with registry-bound prior [claim:C036] [evidence:E031]; calibrated θ_obs estimator (pre-declared verdict; at the decision boundary, per-arm regime, bias −0.008; v1.1 rejected honestly) [claim:C052] [evidence:E032, E033]; independent reproduction in two environments; and the derived decision table — radius margin saturates early (70.2% already at κ=1.5) confirming **biomass ratio as the informative coordinate** (48→1.25). From each reasonable value, derived research proceeds immediately.
 
-## 3–5. Components M1–M5 (reframed under the in-silico basis)
+### 4.2 Components M1–M5 (reframed under the in-silico basis)
 
 **M1 estimator** — the continuity instrument: converts any gradient into θ_obs comparable to the locked threshold (executed and passed) [claim:C052] [evidence:E032, E033]. **R1 results-as-results** — the [SIM] findings are the thesis results. **M3 re-parametrization loop** — recalibrates only what the data informs; compares, never retrrains; every comparison cites the release anchor. **M2 freeze/GATE-F** — optional, **dormant** future extension (documented; not a requirement). **M4 partner selection** — SLR-analogue method for replicability (pre-registered query bank; binary I/X criteria; frozen weights A–H incl. the co-localization BR/E200K axis; regenerable PRISMA-like flow; non-decisional pilot that corrected the prior) [claim:C053] [evidence:E033]. **M5 infrastructure** — guardian with surface profiles and decalogue; continuity by method, not memory — master findings index in KNOWLEDGE_CANON.md (F-01…F-42 + R-1…R-6), extended by this Part without retro-editing. M2's dormant checklist carries the pre-specified statistical plan (Welch per arm vs disease control, α=0.05 Holm-corrected across 5 comparisons; n=8→12, ~80% power for Δ≥50%; Part 1 §2.5).
 
@@ -66,5 +82,5 @@ Part 1: release v3.0. Own: `experiments/part2_results/` (theta_obs v1/pooled/v11
 *Part 2 [NO YEAR] — results define; phases are estimates. Every figure in this manuscript comes from archived JSON or the E-registry. Gated: guardian R0–R3 profile part2, zero BLOCKED required. PT is the master manuscript.*
 
 
-## Chapter 7 — Conclusions by objective
+## CHAPTER 7 — Conclusions by objective
 **OE1** ACP formalized (P0–P6; own BLOCKED check). **OE2** Validity Basis with full lineage of the six data. **OE3** [SIM] results delivered (threshold; rules; discriminating sensitivity; probabilistic frame; calibrated estimator; decision table). **OE4** continuity as method (anti-hindsight loop; SLR-analogue selection; dormant freeze) — not executed. **OE5** hostile review (gates 0/0; AST 6/6) + author's express validation. **Hypotheses:** H1 corroborated at documentary level; H2 by locked predictions; H3 by structural positioning. **Synthesis:** thesis realized — if real data prove analogous, subsequent steps are already advanced (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].

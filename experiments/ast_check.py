@@ -4,6 +4,7 @@ Um comando = estado de garantia inteiro. Saída: tabela PASS/FAIL + veredito.
 Componentes: A1 solver WS-7 (massa/Thiele) · A2 gate parte 1 · A3 gate parte 2 ·
 A4 validate_manifest (38 fontes) · A5 contagem de registro · A6 drift de artefatos-chave."""
 import subprocess, sys, os, json, csv
+FAST = "--fast" in sys.argv  # pula A1 (solver ~3min); releases usam 8/8 completo
 
 R = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 G = os.path.join(R, "paper", "guardian")
@@ -65,7 +66,10 @@ def a6_artefatos():
     miss = [f for f in need if not os.path.exists(os.path.join(R, f))]
     return not miss, f"faltando: {miss}" if miss else f"{len(need)}/{len(need)} presentes"
 
-run("A1 WS-7 self-tests", a1_ws7)
+if not FAST:
+    run("A1 WS-7 self-tests", a1_ws7)
+elif False:
+    pass
 run("A2 Gate Parte 1 (0 BLOCKED)", _gate("part1", "../manuscript_EN_v5.md", "../latex/manuscript_v5_EN.tex", "guardian_registry_v5_final.json"))
 run("A3 Gate Parte 2 (0 BLOCKED)", _gate("part2", "../manuscript_Parte2_v1.md", "../latex/manuscript_Parte2_v1.tex", "guardian_registry_parte2.json"))
 run("A4 validate_manifest", a4_manifest)
