@@ -80,7 +80,7 @@ Esta é **uma tese igual em forma à tese experimental** — com "sujeito", inst
 | Instrumentos de medição calibrados | **Código**: kernel publicado + solvers auto-testados (massa 100% · ℓ 0,5%) — calibração documentada |
 | Protocolo experimental executado | Parametrização com proveniência por parâmetro (P1) + execução determinística (P2) |
 | Eventos/dados coletados e registrados | **Runs arquivados [SIM]** (JSONs: sweeps, grade, calibração do estimador; reprodução em 2 ambientes) |
-| Prontuário/documentação clínica | **Registro da tese**: 54 claims · 48 N-fatos · linhagem completa · TODO-registry · AUDIT_NOTES |
+| Prontuário/documentação clínica | **Registro da tese**: 54 claims · 48 N-fatos · linhagem completa · registro de pendências estruturado · AUDIT_NOTES |
 | Análise estatística pré-especificada | Colheita sob critérios pré-declarados (P3) + estimador θ_obs com calibração sim-a-sim |
 | Consequências/implicações relatadas | Prognósticos travados por release (P4) + pesquisa derivada imediata (P5) + antecipação bancada se análogo (P6) |
 | Auditoria/supervisão | **Guardião-2**: revisor hostil da tese em metodologia · dados · conformidade · conteúdo |
