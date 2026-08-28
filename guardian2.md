@@ -10,6 +10,15 @@ O gate da Parte 2 existe para responder uma pergunta só: **"isto ainda é méto
 2. **Dados**: todo número vem de JSON arquivado ou do registro E (nunca digitado); linhagem §1-bis (quem→espécie→cruzamento→código→parametrização→resultado) íntegra; tiers rotulados.
 3. **Conformidade estrutural**: guardian.py `--profile part2` com **R3-BASE-VALIDADE BLOCKED** — a Parte 2 sem Base de Validade declarada não passa, por invariante.
 
+
+**As quatro dimensões de revisão hostil de tese (mapeamento formal):**
+| Dimensão | Como o gate-2 atesta | Check-chave |
+|---|---|---|
+| **Metodologia** | ACP P0–P6 declarada; critérios antes de resultado; anti-hindsight; rejeições publicadas | R3-BASE-VALIDADE · R3-G0SIM · eixo retórico |
+| **Dados** | linhagem §1-bis (quem→espécie→cruzamento→código→parâmetro→resultado); número só de JSON/registro; tiers | R0-drift · N-fatos · R1-NUM-UNBOUND |
+| **Conformidade** | formato de claims/evidência da skill; paridades; TODO-registry; decálogo | R0-ORPHAN · R2 · TODO-registry |
+| **Conteúdo** | §1-met a §8 íntegros; PRODUTO FINAL declarado; promessas/limites honestos | R3-CANON · R3-THETA-OPS · R3-SAP |
+
 **Gates BLOCKED permanentes do perfil part2:** R3-BASE-VALIDADE · R3-THETA-OPS · R3-SAP · R3-G0SIM · R3-CANON (mesma espinha da Parte 1 + o mandato próprio).
 
 ## §2 · COMANDOS ESSENCIAIS (copiar-colar)
