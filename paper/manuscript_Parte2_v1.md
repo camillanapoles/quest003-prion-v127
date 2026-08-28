@@ -67,6 +67,26 @@ O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, �
 
 **Por que isto é ciência com referências sólidas:** toda célula da linhagem amarra a fonte peer-reviewed ou ao run arquivado com hash; nenhum número vive fora do registro (51 claims · 38 fontes · 48 N-fatos · 4 validadores em zero); o código é aberto e o guardião audita máquina-a-máquina — a cadeia **quem→espécie→cruzamento→código→parâmetro→resultado** é verificável de ponta a ponta, exatamente como um "métodos" experimental exige, só que executada em ambiente computacional e declarada com a mesma disciplina.
 
+
+## 1-ter. A tese em forma experimental — o mapeamento análogo (diretriz da autora, 28/08)
+
+Esta é **uma tese igual em forma à tese experimental** — com "sujeito", instrumentos, coleta, documentos e implicações documentados como um protocolo com pessoas documenta seus participantes. A diferença é uma só: **em vez de pessoas, o sujeito da pesquisa é o conjunto papers + fontes + código + simulação** — e cada elemento é documentado exatamente como o seria numa tese de laboratório. O dado produzido permanece rotulado [SIM] (a semântica dos tiers não muda; muda quem desempenha cada papel):
+
+| Elemento de tese experimental (com pessoas) | Nesta tese (baseada em simulação computacional) |
+|---|---|
+| Participantes/pacientes recrutados | **Fontes publicadas** — os "sujeitos de dados" (38 fontes E-registradas; linhas 1–6 da linhagem §1-bis) |
+| Critérios de recrutamento/inclusão-exclusão | SLR auditada com query bank pré-registrada (P0; protocolo 2.5 quando o objeto é parceiro) |
+| Consentimento/aprovação ética | Verificação de proveniência por fonte aberta (identifier confirmado; método e data no manifest) |
+| Instrumentos de medição calibrados | **Código**: kernel publicado + solvers auto-testados (massa 100% · ℓ 0,5%) — calibração documentada |
+| Protocolo experimental executado | Parametrização com proveniência por parâmetro (P1) + execução determinística (P2) |
+| Eventos/dados coletados e registrados | **Runs arquivados [SIM]** (JSONs: sweeps, grade, calibração do estimador; reprodução em 2 ambientes) |
+| Prontuário/documentação clínica | **Registro da tese**: 54 claims · 48 N-fatos · linhagem completa · TODO-registry · AUDIT_NOTES |
+| Análise estatística pré-especificada | Colheita sob critérios pré-declarados (P3) + estimador θ_obs com calibração sim-a-sim |
+| Consequências/implicações relatadas | Prognósticos travados por release (P4) + pesquisa derivada imediata (P5) + antecipação bancada se análogo (P6) |
+| Auditoria/supervisão | **Guardião-2**: revisor hostil da tese em metodologia · dados · conformidade · conteúdo |
+
+*Um examinador que sabe ler tese experimental sabe ler esta: basta trocar "pessoa" por "fonte", "instrumento" por "código", "coleta" por "run" — a forma documental é idêntica; a base é simulação computacional.*
+
 ## 2-bis. Os resultados da tese são os resultados da simulação já realizada
 
 Em vez de laboratório ou teste humano, **o que valida e compõe a tese neste estágio é o conjunto computacional executado** — completo, arquivado e reproduzido: (i) limiar de contenção θ\*=0,333 com relógio humanizado [claim:C038] [evidence:E032]; (ii) três regras de design falseáveis [claim:C033] [evidence:E030] [claim:C034] [evidence:E030, E020] [claim:C035] [evidence:E030, E019]; (iii) colheita de sensibilidade com predição discriminadora (C₅₀ 10× insensível; forma funcional falseável por dose-resposta) [claim:C051] [evidence:E032, E033]; (iv) quadro probabilístico de duas lentes com prior registry-bound [claim:C036] [evidence:E031]; (v) estimador θ_obs calibrado no regime declarado [claim:C052] [evidence:E032, E033]; (vi) reprodução independente em dois ambientes (hash + valor-a-valor); e (vii) a **tabela-decisão derivada** (κ↔θ_obs↔frente↔biomassa↔margem) extraída sem nova simulação — que mostra a margem de raio saturando cedo (70,2% já em κ=1,5) e confirma a **razão de biomassa como coordenada informativa** (48→1,25), com θ\*=0,333 como variável-de-decisão pré-registrada [claim:C052] [evidence:E032, E033]. De cada valor razoável aqui, **pesquisa derivada já pode prosseguir** — portas abertas.
