@@ -67,6 +67,26 @@ Cap. 2 fundamentação (Ciclo 2) · Cap. 3 metodologia (ACP; Base de Validade; m
 
 ---
 
+# CAPÍTULO 2 — FUNDAMENTAÇÃO
+
+### 2.1 Doenças priônicas: o gargalo terapêutico que motiva a continuidade
+
+As doenças priônicas humanas são neurodegenerativas, transmissíveis e universalmente fatais; a forma esporádica (sCJD) mata em meses. A base molecular do programa — a variante G127V selecionada pela epidemia de kuru [6], a resistência completa do homozigoto V127 [1], a ressalva do heterozigoto (infectável por vCJD) [1], o efeito dominante-negativo dose-dependente [1][3][5] e sua persistência em trans sem âncora GPI [3] com prova-de-conceito AAV in vivo [4] — constitui o núcleo validado em quatro níveis (população→camundongo→cultura→gene-terapia). O gargalo histórico éterapêutico, não mecanístico: **seis candidatos clínicos fracassaram sem modelo quantitativo de entrega** — quinacrina [35], doxiciclina [36], pentosan-polissulfato intraventricular [37], flupirtina [38], PRN100 [34] e minociclina [33] (com o ensaio retraído [21] excluído por regra) — todos agora **registry-bound** (concordância completa no fim deste documento). A plataforma organoide humana [7][8] fornece as âncoras que humanizam o relógio da simulação; a cinética murina publicada com código aberto [9] e o transporte intersticial humano in vivo [10] completam a base paramétrica.
+
+### 2.2 A família dos métodos antecipatórios e os in-silico trials
+
+A agregação do publicado (meta-análise/revisão sistemática), a derivação física (modelagem de transporte) e a execução de cenários (in-silico trials) formam a família de métodos que decidem sob incerteza antes do dado. Os in-silico trials consolidaram-se como campo — com workflows formais (CORTÉS-RÍOS et al., 2025, PMCID PMC12706418; verificação completa pendente) e ferramentas abertas de validação de coortes virtuais (doi:10.1038/s41598-025-99720-3) — e simulam **o ensaio**: pacientes virtuais, desenho, vias regulatórias.
+
+### 2.3 Posicionamento da ACP (corroborando H3)
+
+A ACP ocupa o espaço complementar: simula **a continuação da pesquisa**, distinta por quatro diferenciais estruturais — (i) prognóstico travado por release **antes** da medição (anti-hindsight como requisito, não virtude); (ii) simulação rotulada em toda saída (tiers); (iii) P6: dado real análogo ⇒ antecipação **bancada**; (iv) P5: pesquisa derivada imediata como produto de primeira classe. A herança metodológica é explícita: a tese emerge da própria pesquisa (Parte 1) e **herda sua lógica e suas claims** — corroborando-as e ampliando com o que somar (fontes complementares em verificação).
+
+### 2.4 Síntese
+
+O campo oferece mecanismo validado em quatro níveis [1][3][4][5], plataforma de âncora humana [7][8], parâmetros de transporte in vivo [10], cinética aberta [9] e um registro de fracassos que calibra honestamente o prior [33–38] — e a família de métodos oferece os instrumentos. O que faltava — e esta tese fornece — é o método nomeado que converte esse acervo em continuidade.
+
+---
+
 ## 1-met. O método nomeado: ACP — Antecipação Computacional Parametrizada (*Parameterized Computational Anticipation*)
 
 O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, é possível **continuar pesquisa por simulação** — com dados publicados e validados como insumo, execução determinística auditável e prognósticos travados antes de qualquer medição — sem que isso substitua ou espere o laboratório. **Declaração de eixo retórico (obrigatória em toda a Parte 2):** tudo aqui **é simulação, e é dito que é**; não prometemos aplicar nem validar na Parte 2 — antes: **se dados reais vierem a exibir resultados análogos aos simulados, os passos seguintes já terão sido dados** — a antecipação estará bancada, não pendente [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
