@@ -101,3 +101,9 @@ PRÓXIMO: Ciclo 3 (equações ADR/freeS/calibração com procedência por parâm
 FEITO: capítulos renumerados (1-5 + Apêndice A) · §3.2 equações com proveniência (ADR/freeS+θ/relógio/estimador — claims+refs adjacentes) · gate 0/0 · memória id32: 13 instruções da autora consolidadas
 ESTADO: documento ~85% · falta Ciclo 4: figuras próprias no Cap.4 (θ-response/subtipos/tabela-decisão como figuras) + §5.2 discussão ampliada + CAPÍTULO 6 CONCLUSÕES POR OBJETIVO (OE1-OE5/H1-H3) + EN sincronizar + PDFs regenerar
 ÂNCORA: main@HEAD · 54/38/48
+
+/RECAP 2026-08-28 06:05 — CICLO 4 FECHADO · DOCUMENTO DE TESE COMPLETO
+FEITO: figuras no corpo (Fig1-3 dos JSONs) · §5.2 discussão (significa/não-significa) · CAPÍTULO 6 CONCLUSÕES POR OBJETIVO (OE1-OE5 ✓ · H1-H3 c/ veredicto · síntese P6) · cross-check matemático P2↔P1 (17/18 idênticos; ℓ 3,59≈3,6 notado) · tex/PDF PT 75,7KB recompilado c/ §3.2+Cap6 · EN sync (formulação+conclusões) · gates PT+EN 0/0
+ESTADO: DOCUMENTO DE DOUTORADO COMPLETO — pré-textuais · Cap1 introdução formal · Cap2 fundamentação c/ 38 refs ABNT · Cap3 metodologia c/ equações · Cap4 resultados c/ figuras · Cap5 discussão · Cap6 conclusões-por-objetivo · Apêndice A · concordância 54 claims→refs · válida por estrutura padrão de tese (ficha acadêmica {{TODO:TESE-FICHA}} = única pendência interna, da autora)
+PRÓXIMO: (autora) preencher ficha acadêmica; eventual defesa; BIORXIV P1; GATEF dormant — interno: FINDADO como documento
+ÂNCORA: main@e175c68 · 54/38/48 · predições v1.0
