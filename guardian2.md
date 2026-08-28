@@ -51,6 +51,12 @@ python3 experiments/ws_9_v5_sweeps_gha.py --phase S1|S2
 - **Novo claim C05x**: texto normalizado→sha (norm da skill) no claims.csv + claim_texts.md + tag `[claim:Cxxx] [evidence:Exxx]` no manifesto2.
 - **Validação expressa da autora**: pendências de validação ficam como TODO (hoje: `PARTE2-V2-VALIDACAO`) e só fecham com OK dela registrado em commit.
 
+
+### Protocolo de Ciclo (diretriz da autora, 28/08) — TODO ciclo de trabalho
+1. **RELATE (antes)**: ao usuário, o que será realizado, COMO e PORQUÊ — nenhuma ação sem anúncio metódico prévio.
+2. **EXECUTE**: a ação, com o método já declarado.
+3. **AST (verificar)**: fechamento obrigatório do ciclo com verificação — `python3 experiments/ast_check.py` (6/6) ou o gate específico da superfície tocada. Ciclo sem AST não está fechado.
+
 ## §5 · MAPA DE ARTEFATOS PARTE 2
 manifesto: `paper/manuscript_Parte2_v1.md` (PT mestre) · gate: `paper/guardian/guardian.py --profile part2` + `guardian_registry_parte2.json`/`guardian_report_parte2.md` · resultados: `experiments/part2_results/` (theta_obs v1/pooled/v11 + derived_summary + partner_log) · scripts: `experiments/part2_theta_obs_*.py` · método-docs: `G0_EXECUTION_FREEZE_CHECKLIST.md` (dormant) · `REPARAM_LOOP.md` · `PARTNER_SELECTION_PROTOCOL.md` v2.1 · registro compartilhado: `paper/evidence_workspace/` (54 claims · 38 fontes · 48 N-fatos) · divergências audit: `AUDIT_NOTES.md` §part2.
 
