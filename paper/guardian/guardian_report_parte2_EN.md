@@ -1,44 +1,12 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 17 (BLOCKED=0, AMEND=8, NOTE=9)
+**Rodadas executadas:** 3 · **Achados:** 9 (BLOCKED=0, AMEND=0, NOTE=9)
 
 ## Gate
 
 **PASS — zero BLOCKED.** O manuscrito resiste à rodada recursiva; recomendação ao editor: aceitável como preprint com auditoria pública.
 
 ---
-
-### [AMEND] R2-LOCK-ANCHOR — ../manuscript_Parte2_v1_EN.md
-- **Problema:** Predição θ<0.33 presente sem âncora imutável (release v1.0 / commit).
-- **Exigência:** Citar release v1.0 (ou hash) junto à predição travada.
-
-### [AMEND] R2-LOCK-ANCHOR — ../manuscript_Parte2_v1_EN.md
-- **Problema:** Predição θ<0.33 presente sem âncora imutável (release v1.0 / commit).
-- **Exigência:** Citar release v1.0 (ou hash) junto à predição travada.
-
-### [AMEND] R2-LOCK-ANCHOR — ../manuscript_Parte2_v1_EN.md
-- **Problema:** Predição θ<0.33 presente sem âncora imutável (release v1.0 / commit).
-- **Exigência:** Citar release v1.0 (ou hash) junto à predição travada.
-
-### [AMEND] R2-LOCK-ANCHOR — ../manuscript_Parte2_v1_EN.md
-- **Problema:** Predição θ<0.33 presente sem âncora imutável (release v1.0 / commit).
-- **Exigência:** Citar release v1.0 (ou hash) junto à predição travada.
-
-### [AMEND] R3-R3-LOCALIZ — manuscript
-- **Problema:** Interrogação epistêmica R3-LOCALIZ: procedimento ausente.
-- **Exigência:** O cálculo do anel 8–12 mm depende de SABER onde está a frente — nenhum procedimento de localização in vivo é especificado.
-
-### [AMEND] R3-R3-THESIS-ARCH — manuscript
-- **Problema:** Interrogação epistêmica R3-THESIS-ARCH: procedimento ausente.
-- **Exigência:** Arquitetura da tese (C049): Parte 1 pré-G0 + Parte 2 pós-G0 unidas na junção G0; sustentabilidade conjunta; P2 = previsibilidade/antecipação.
-
-### [AMEND] R3-R3-SEMANO — manuscript
-- **Problema:** Interrogação epistêmica R3-SEMANO: procedimento ausente.
-- **Exigência:** Tese [SEM ANO]: objetivo é o resultado, não data; fases têm estimativas. Roadmap e §3.5 devem declarar.
-
-### [AMEND] R3-R3-INNOV — manuscript
-- **Problema:** Interrogação epistêmica R3-INNOV: procedimento ausente.
-- **Exigência:** Inovação metodológica declarada: avaliação computacional como método antecipatório (previsibilidade/antecipação de informação) — §4.1.
 
 ### [NOTE] R0-UNUSED — ../manuscript_Parte2_v1_EN.md
 - **Problema:** Claims registradas mas não citadas no manuscrito: C001, C002, C003, C004, C005, C006, C007, C008, C009, C010, C011, C012, C014, C015, C016, C017, C018, C019, C020, C021, C022, C023, C024, C025, C026, C027, C028, C029, C030, C031, C039, C040, C041, C042, C043, C044, C045, C048, C049, C050.

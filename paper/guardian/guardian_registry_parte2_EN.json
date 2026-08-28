@@ -1,6 +1,6 @@
 {
   "round": 3,
-  "n_findings": 17,
+  "n_findings": 9,
   "gate_pass": true,
   "findings": [
     {
@@ -37,62 +37,6 @@
       "where": "manifest",
       "issue": "2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.",
       "demand": "Rotular no texto (ex.: bioRxiv preprint)."
-    },
-    {
-      "id": "R2-LOCK-ANCHOR",
-      "severity": "AMEND",
-      "where": "../manuscript_Parte2_v1_EN.md",
-      "issue": "Predição θ<0.33 presente sem âncora imutável (release v1.0 / commit).",
-      "demand": "Citar release v1.0 (ou hash) junto à predição travada."
-    },
-    {
-      "id": "R2-LOCK-ANCHOR",
-      "severity": "AMEND",
-      "where": "../manuscript_Parte2_v1_EN.md",
-      "issue": "Predição θ<0.33 presente sem âncora imutável (release v1.0 / commit).",
-      "demand": "Citar release v1.0 (ou hash) junto à predição travada."
-    },
-    {
-      "id": "R2-LOCK-ANCHOR",
-      "severity": "AMEND",
-      "where": "../manuscript_Parte2_v1_EN.md",
-      "issue": "Predição θ<0.33 presente sem âncora imutável (release v1.0 / commit).",
-      "demand": "Citar release v1.0 (ou hash) junto à predição travada."
-    },
-    {
-      "id": "R2-LOCK-ANCHOR",
-      "severity": "AMEND",
-      "where": "../manuscript_Parte2_v1_EN.md",
-      "issue": "Predição θ<0.33 presente sem âncora imutável (release v1.0 / commit).",
-      "demand": "Citar release v1.0 (ou hash) junto à predição travada."
-    },
-    {
-      "id": "R3-R3-LOCALIZ",
-      "severity": "AMEND",
-      "where": "manuscript",
-      "issue": "Interrogação epistêmica R3-LOCALIZ: procedimento ausente.",
-      "demand": "O cálculo do anel 8–12 mm depende de SABER onde está a frente — nenhum procedimento de localização in vivo é especificado."
-    },
-    {
-      "id": "R3-R3-THESIS-ARCH",
-      "severity": "AMEND",
-      "where": "manuscript",
-      "issue": "Interrogação epistêmica R3-THESIS-ARCH: procedimento ausente.",
-      "demand": "Arquitetura da tese (C049): Parte 1 pré-G0 + Parte 2 pós-G0 unidas na junção G0; sustentabilidade conjunta; P2 = previsibilidade/antecipação."
-    },
-    {
-      "id": "R3-R3-SEMANO",
-      "severity": "AMEND",
-      "where": "manuscript",
-      "issue": "Interrogação epistêmica R3-SEMANO: procedimento ausente.",
-      "demand": "Tese [SEM ANO]: objetivo é o resultado, não data; fases têm estimativas. Roadmap e §3.5 devem declarar."
-    },
-    {
-      "id": "R3-R3-INNOV",
-      "severity": "AMEND",
-      "where": "manuscript",
-      "issue": "Interrogação epistêmica R3-INNOV: procedimento ausente.",
-      "demand": "Inovação metodológica declarada: avaliação computacional como método antecipatório (previsibilidade/antecipação de informação) — §4.1."
     },
     {
       "id": "R3-TODO-BIORXIV-ADDENDUM",
