@@ -1,34 +1,46 @@
-# Plano de Continuidade Metodológica — Parte 2 da Tese
-## Do dado parametrizado à validação gate-a-gate: G0-sim [SIM] → G0-wet [ORGANOID] → G1 [MOUSE] → G2 [HUMAN]
-
-**Manuscrito Parte 2 · v1 · 2026-08-27 · PT-BR (mestre)**
-Open Prion & Molecular Engineering Consortium — correspondente: Camilla N. (CRediT in-repo)
-Companion da Parte 1 (manuscript_EN_v5/PT_v5, release v3.0) — **não a modifica**: cita-a, estende-a. Gated pelo guardião R0–R3 [claim:C046] [evidence:E032, E033].
+# PARAMETRIZAÇÃO COMPUTACIONAL PARA CONTINUIDADE DE PESQUISA EM DOENÇAS PRIÔNICAS: O MÉTODO ACP APLICADO À PLATAFORMA TERAPÊUTICA PrP-V127
+## Parte 2 da Tese — Continuidade Metodológica Realizada
 
 ---
 
-## Resumo
+**AUTORA:** Camilla N. *(correspondente)* — {{TODO:TESE-FICHA:programa de pós-graduação, área de concentração, orientadora e coorientadora — preencher}}
+**DOCUMENTO:** Parte 2 da tese (companion validado da Parte 1, release v3.0) · v1 · 2026-08-28
+**NATUREZA:** tese baseada em simulação computacional — G0 validado por simulação; dados reais de pesquisa em ambiente simulado; forma experimental análoga (§ "mapeamento análogo")
+
+---
+
+## RESUMO
+
+**Introdução.** Doenças priônicas são 100% fatais e seis candidatos clínicos fracassaram sem modelo quantitativo de entrega. A Parte 1 desta tese construiu, por auditoria sistemática, física de transporte, calibração bayesiana e simulação humanizada, uma plataforma de contenção terapêutica (PrP-V127) com limiar adimensional θ*=0,333 — executada, aprovada e reproduzida em dois ambientes computacionais. **Objetivo.** Esta Parte 2 formaliza e realiza a continuidade: (i) nomeia e formaliza o método de pesquisa que a sustenta — a ACP (Antecipação Computacional Parametrizada), passos P0–P6; (ii) estabelece a Base de Validade com linhagem completa de cada dado (quem→espécie→validação cruzada→código→parametrização→resultado); (iii) declara a tese em forma experimental análoga, na qual o sujeito da pesquisa é o conjunto papers+fontes+código+simulação; (iv) entrega os resultados da tese como os próprios achados [SIM] já executados; e (v) documenta, como método replicável, a seleção futura de parceiros (SLR-análogo) sem executá-la. **Método.** ACP P0–P6 sobre base E-registrada (38 fontes), motores determinísticos auto-testados (conservação de massa 100%; erro de Thiele 0,5%), colheita sob critérios pré-declarados, prognósticos travados por release antes de qualquer medição, estimador θ_obs calibrado por simulação (veredito pré-declarado; fronteira de decisão com bias −0,008; v1.1 interpolada testada e rejeitada), guardião recursivo R0–R3 em dois perfis de superfície. **Resultados.** Limiar θ*=0,333; três regras de design; colheita de sensibilidade com predição discriminadora (C50 insensível em faixa 10×; forma funcional falseável por dose-resposta); quadro probabilístico de duas lentes com prior registry-bound; tabela-decisão derivada κ↔θ↔frente↔biomassa (margem de raio satura cedo; biomassa é a coordenada informativa); registro de 54 claims, 38 fontes, 48 fatos numéricos com validação por máquina. **Conclusão.** A tese está realizada nos termos da ACP: continuar pesquisa por simulação parametrizada sem substituir o laboratório — se dados reais futuros forem análogos aos simulados, os passos seguintes já estarão avançados (P6, antecipação bancada).
+
+**Palavras-chave:** príons; simulação computacional; Antecipação Computacional Parametrizada; PrP-V127; doença de Creutzfeldt-Jakob; metodologia de pesquisa; in-silico.
+
+## ABSTRACT
+
+*(companion EN — manuscript_Parte2_v1_EN.md; keywords: prions; computational simulation; Parameterized Computational Anticipation; PrP-V127; Creutzfeldt-Jakob disease; research methodology; in-silico)*
+
+## SUMÁRIO
+
+1. **INTRODUÇÃO** (este capítulo)
+2. **FUNDAMENTAÇÃO — o campo dos métodos antecipatórios e dos in-silico trials** *(a completar — Ciclo 2: revisão estruturada com as 38 fontes formatadas ABNT)*
+3. **METODOLOGIA — o método ACP** *(conteúdo consolidado: método nomeado P0–P6; Base de Validade com linhagem; tese em forma experimental — mapeamento análogo)*
+4. **RESULTADOS — os resultados da tese são os resultados da simulação** *(conteúdo consolidado + figuras próprias — Ciclo 4)*
+5. **COMPONENTES E CONTINUIDADE** *(M1–M5 reenquadrados; seleção de parceiro como método)*
+6. **DISCUSSÃO E CONCLUSÕES POR OBJETIVO** *(Ciclo 4)*
+REFERÊNCIAS · APÊNDICES (inventário de artefatos)
+
+## LISTA DE SIGLAS
+
+ACP — Antecipação Computacional Parametrizada · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · κ — força de capping · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · WB — western blot · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade
+
+---
+
+# CAPÍTULO 1 — INTRODUÇÃO
+
+> ## PRODUTO FINAL — ESTA É A TESE (declaração de abertura)
+> **Este manifesto (v6) é a tese realizada.** A Parte 1 produziu os achados (manifesto v5, release v3.0); o **G0 foi validado por simulação computacional** — executado, aprovado e reproduzido em dois ambientes; e a **continuidade está realizada** nos termos da ACP (P0–P6). Os dados são **reais de pesquisa**: cinética murina publicada [E009], dados de organoide humano publicados [E007], parâmetros de transporte humano in-vivo [E010], código aberto — **parametrizados para humanos e executados em ambiente simulado**, o que garante **aproximação e expectativa quantitativas** (prognóstico falseável) sem reivindicar medição. As claims são reais e registry-bound; o ambiente é simulado; a tese é o produto. **Guardião-2 atesta** como revisor hostil nas quatro dimensões: metodologia, dados, conformidade e conteúdo.
 
 **Por que [SEM ANO]:** a tese lida com **prognósticos obtidos de dados simulados**. Simulação opera, por natureza, em tempo futuro — independe do ano em que se esteja: a referência a ano não tem impacto sobre a tese, pois as predições são do tipo "o que acontece se", não "quando acontece". Por isso o horizonte temporal é declarado vazio por construção, e as durações de fase que porventura apareçam são apenas estimativas de planejamento, nunca promessas.
-
-A Parte 1 demonstrou a tese de design: plataforma de contenção V127 quantitativamente dimensionada, com gate computacional G0-sim **executado, aprovado e reproduzido em dois ambientes** [claim:C046] [evidence:E032, E009, E007, E033], colheita de sensibilidade com predição discriminadora [claim:C051] [evidence:E032, E033] e estimador θ_obs com calibração por simulação com **veredito ADEQUADO por critérios pré-declarados na fronteira de decisão** [claim:C052] [evidence:E032, E033]. A Parte 2 **deste manuscrito** reenquadra a continuidade: **a base validada da tese são os próprios dados in-silico já realizados** — não a metodologia de validação por experimento humano. Os **resultados da tese são os resultados da simulação computacional já executada** (§2). O intuito é **gerar novas pesquisas, não fechar portas aguardando cenários futuros**: onde um valor razoável já existe, a pesquisa derivada prossegue imediatamente; onde algo dependeria de medição, entra como metodologia pré-declarada — e segue válido e não-prendente. O modo epistêmico é o da física teórica — previsibilidade e antecipação de informação (estimativas precedem, dirigem e valem até a medição — Parte 1 §4.1): o programa computacional não para à espera do wet-lab; tudo que tem publicação é usado como evidência direta; tudo que não tem entra como metodologia pré-declarada. A tese tem **[SEM ANO]**: definida por resultados, com durações de fase como estimativas de planejamento [claim:C047] [evidence:E032, E033]. Esta Parte 2 documenta **método somente** — nenhuma seleção de laboratório é feita aqui; a seleção é ato de execução, do executor futuro, guiado pelo método §5 [claim:C053] [evidence:E033].
-
-## 1. Natureza e escopo
-
-A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o seu fundamento é a **base validada in-silico**: conforme aclamado antecipadamente, lidamos com dados simulados; o gate computacional G0-sim **executado, aprovado e reproduzido** [claim:C046] [evidence:E032, E009, E007, E033] É a validação da tese neste estágio. Isto não prende a pesquisa — ao contrário, a liberta para derivar novas pesquisas de cada valor razoável já obtido, sem aguardar cenários de confirmação. A tabela abaixo reenquadra os componentes M1–M5 **sob essa compreensão** (coluna direita) e **aguarda validação expressa da autora**:
-
-| # | Componente (ferramenta) | Reenquadramento sob a base validada in-silico | Estado | Artefato |
-|---|---|---|---|---|
-| M1 | Estimador θ_obs | **instrumento da continuidade**: converte qualquer gradiente (simulado hoje; medido amanhã, se a autora quiser) em θ_obs comparável ao limiar travado | **executado e aprovado** (§2) | part2_theta_obs_{v1,pooled,v11}.json |
-| R1 | Resultados como resultados | **os achados da simulação já realizada SÃO os resultados da tese** (§2-bis) — nada fica "pendente de lab" para valer | realizado | §2-bis + part2_derived_summary.json |
-| M3 | Loop de re-parametrização | regra de como pesquisa derivada realimenta os modelos sem retro-alterar predições (anti-hindsight) — vale já entre cenários [SIM] | especificado | REPARAM_LOOP.md |
-| M2 | Freeze/GATE-F (F1–F10) | **extensão futura OPCIONAL**: pronta e documentada caso a autora decida, um dia, estender ao [ORGANOID] — não é requisito da tese | especificado (dormant) | G0_EXECUTION_FREEZE_CHECKLIST.md |
-| M4 | Seleção de parceiro (SLR-análogo) | **método documentado para replicabilidade** — sem seleção, sem contato; existe para quem, no futuro, escolher executar | método + piloto | PARTNER_SELECTION_PROTOCOL v2.1 + log v0.2 |
-| M5 | Infraestrutura (guardião + runbook) | garantia de que a continuidade é por método, não por memória | operante | guardian.py + guardian.md |
-
-> **✓ VALIDAÇÃO EXPRESSA DA AUTORA — REGISTRADA (28/08, no commit do merge do PR #2):** a tabela reenquadrada (M1→R1/M2-dormant/M4-método), a Base de Validade §1-bis, o inventário §8 e a declaração PRODUTO FINAL foram validadas expressamente e são definitivas.
-
-
 
 ### 1.1 Problema
 
@@ -66,6 +78,21 @@ Três razões. (i) **Epistêmica**: simulação parametrizada com dados reais pu
 Cap. 2 fundamentação (Ciclo 2) · Cap. 3 metodologia (ACP; Base de Validade; mapeamento análogo) · Cap. 4 resultados [SIM] · Cap. 5 componentes e continuidade · Cap. 6 discussão e conclusões por objetivo (Ciclo 4) · Referências completas (Ciclo 2) · Apêndices.
 
 ---
+
+### 1.7 Componentes M1–M5 (tabela validada pela autora) e natureza do escopo
+
+A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o seu fundamento é a **base validada in-silico**: conforme aclamado antecipadamente, lidamos com dados simulados; o gate computacional G0-sim **executado, aprovado e reproduzido** [claim:C046] [evidence:E032, E009, E007, E033] É a validação da tese neste estágio. Isto não prende a pesquisa — ao contrário, a liberta para derivar novas pesquisas de cada valor razoável já obtido, sem aguardar cenários de confirmação. A tabela abaixo reenquadra os componentes M1–M5 **sob essa compreensão** (coluna direita) e **aguarda validação expressa da autora**:
+
+| # | Componente (ferramenta) | Reenquadramento sob a base validada in-silico | Estado | Artefato |
+|---|---|---|---|---|
+| M1 | Estimador θ_obs | **instrumento da continuidade**: converte qualquer gradiente (simulado hoje; medido amanhã, se a autora quiser) em θ_obs comparável ao limiar travado | **executado e aprovado** (§2) | part2_theta_obs_{v1,pooled,v11}.json |
+| R1 | Resultados como resultados | **os achados da simulação já realizada SÃO os resultados da tese** (§2-bis) — nada fica "pendente de lab" para valer | realizado | §2-bis + part2_derived_summary.json |
+| M3 | Loop de re-parametrização | regra de como pesquisa derivada realimenta os modelos sem retro-alterar predições (anti-hindsight) — vale já entre cenários [SIM] | especificado | REPARAM_LOOP.md |
+| M2 | Freeze/GATE-F (F1–F10) | **extensão futura OPCIONAL**: pronta e documentada caso a autora decida, um dia, estender ao [ORGANOID] — não é requisito da tese | especificado (dormant) | G0_EXECUTION_FREEZE_CHECKLIST.md |
+| M4 | Seleção de parceiro (SLR-análogo) | **método documentado para replicabilidade** — sem seleção, sem contato; existe para quem, no futuro, escolher executar | método + piloto | PARTNER_SELECTION_PROTOCOL v2.1 + log v0.2 |
+| M5 | Infraestrutura (guardião + runbook) | garantia de que a continuidade é por método, não por memória | operante | guardian.py + guardian.md |
+
+> **✓ VALIDAÇÃO EXPRESSA DA AUTORA — REGISTRADA (28/08, no commit do merge do PR #2):** a tabela reenquadrada (M1→R1/M2-dormant/M4-método), a Base de Validade §1-bis, o inventário §8 e a declaração PRODUTO FINAL foram validadas expressamente e são definitivas.
 
 # CAPÍTULO 2 — FUNDAMENTAÇÃO
 
@@ -185,6 +212,22 @@ O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Par
 
 Promete: a ACP como método completo, replicável e em parte já demonstrado (M1 executado; M4 piloto) — continuar pesquisa por simulação hoje, como a física, sem parar à espera de cada confirmação. E declara: os resultados daqui **são de simulação e assim permanecem rotulados**; a aplicação/validação em ambiente real não é prometida nesta Parte — se dados reais futuros forem análogos aos simulados, **os passos seguintes já estão avançados** (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007]. **Não promete**: seleção de parceiro (execução externa), dado [ORGANOID]+ (não existe ainda — e é rotulado como tal), nem qualquer claim clínica (escada de tiers: nenhum degrau empresta a autoridade do seguinte). Limites declarados: pesos e scores são julgamento estruturado single-rater; a calibração do estimador é na grade atual (refinamento futuro = grade mais fina, pré-declarado); PubMed-direto e identificação R8 pendem como conformidade do piloto.
 
+## 8. Apêndice — Inventário dos artefatos da Parte 2 (verificável em disco)
+
+| Artefato | O que é | Estado |
+|---|---|---|
+| `experiments/part2_theta_obs_v1.py` + `part2_results/part2_theta_obs_v1.json` | estimador v1-NN: grade κ 1,5–8 + calibração unitária (veredito ADEQUADO pré-declarado) | executado |
+| `experiments/part2_theta_obs_pooled.py` + `.json` | regime declarado §2.7: mediana por braço n=8 (bias −0,008 na fronteira; modal 69%) | executado |
+| `experiments/part2_theta_obs_v11.py` + `.json` | estimador interpolado IDW-2 — **testado e REJEITADO** (bias anti-conservador na fronteira; cobertura quebra em κ=8); JSON regenerado por script após truncamento da primeira execução (nota de integridade in-file) | executado (rejeitado) |
+| `experiments/part2_results/part2_derived_summary.json` | tabela-decisão derivada (κ↔θ↔R↔biomassa↔margem) — zero novas simulações | derivado |
+| `experiments/part2_results/partner_selection_log.md` v0.2 | aplicação-piloto do método M4 (9 registros → 8 grupos → 2+1+3+2) — não-decisório | piloto |
+| `experiments/G0_EXECUTION_FREEZE_CHECKLIST.md` | F1–F10 + GATE-F (M2 — dormant por reenquadramento) | especificado |
+| `experiments/REPARAM_LOOP.md` | regra anti-hindsight de realimentação (M3) | especificado |
+| `experiments/PARTNER_SELECTION_PROTOCOL.md` v2.1 | método M4 (query bank + I/X + pesos + fluxo) | método |
+| `paper/guardian/guardian.py` (`--profile part2`) | gate da Parte 2 (inclui R3-BASE-VALIDADE BLOCKED) | operante |
+
+*Nota de integridade da auditoria 27/08 (tarde): dois defeitos encontrados e corrigidos no próprio ato — JSON da v11 truncado por erro de serialização (regenerado por script salvo, seed idêntica, veredito idêntico) e sinal do bias pooled invertido na prosa (−0,008 conforme o JSON; corrigido nos três documentos). Ambos registrados aqui porque a auditoria que não publica suas correções não é auditoria.*
+
 ## REFERÊNCIAS E CONCORDÂNCIA
 
 ### Referências (38 fontes do registro, geradas do manifest)
@@ -294,63 +337,5 @@ Promete: a ACP como método completo, replicável e em parte já demonstrado (M1
 ---
 ---
 *Parte 2 [SEM ANO] — o resultado define; as fases são estimativas. Toda cifra deste manuscrito vem de JSON arquivado ou do registro E (regra: nunca digitar valor). Gated: guardian R0–R3, 0 BLOCKED exigido.*
-
-
-## 8. Apêndice — Inventário dos artefatos da Parte 2 (verificável em disco)
-
-| Artefato | O que é | Estado |
-|---|---|---|
-| `experiments/part2_theta_obs_v1.py` + `part2_results/part2_theta_obs_v1.json` | estimador v1-NN: grade κ 1,5–8 + calibração unitária (veredito ADEQUADO pré-declarado) | executado |
-| `experiments/part2_theta_obs_pooled.py` + `.json` | regime declarado §2.7: mediana por braço n=8 (bias −0,008 na fronteira; modal 69%) | executado |
-| `experiments/part2_theta_obs_v11.py` + `.json` | estimador interpolado IDW-2 — **testado e REJEITADO** (bias anti-conservador na fronteira; cobertura quebra em κ=8); JSON regenerado por script após truncamento da primeira execução (nota de integridade in-file) | executado (rejeitado) |
-| `experiments/part2_results/part2_derived_summary.json` | tabela-decisão derivada (κ↔θ↔R↔biomassa↔margem) — zero novas simulações | derivado |
-| `experiments/part2_results/partner_selection_log.md` v0.2 | aplicação-piloto do método M4 (9 registros → 8 grupos → 2+1+3+2) — não-decisório | piloto |
-| `experiments/G0_EXECUTION_FREEZE_CHECKLIST.md` | F1–F10 + GATE-F (M2 — dormant por reenquadramento) | especificado |
-| `experiments/REPARAM_LOOP.md` | regra anti-hindsight de realimentação (M3) | especificado |
-| `experiments/PARTNER_SELECTION_PROTOCOL.md` v2.1 | método M4 (query bank + I/X + pesos + fluxo) | método |
-| `paper/guardian/guardian.py` (`--profile part2`) | gate da Parte 2 (inclui R3-BASE-VALIDADE BLOCKED) | operante |
-
-*Nota de integridade da auditoria 27/08 (tarde): dois defeitos encontrados e corrigidos no próprio ato — JSON da v11 truncado por erro de serialização (regenerado por script salvo, seed idêntica, veredito idêntico) e sinal do bias pooled invertido na prosa (−0,008 conforme o JSON; corrigido nos três documentos). Ambos registrados aqui porque a auditoria que não publica suas correções não é auditoria.*
-# PARAMETRIZAÇÃO COMPUTACIONAL PARA CONTINUIDADE DE PESQUISA EM DOENÇAS PRIÔNICAS: O MÉTODO ACP APLICADO À PLATAFORMA TERAPÊUTICA PrP-V127
-## Parte 2 da Tese — Continuidade Metodológica Realizada
-
 ---
-
-**AUTORA:** Camilla N. *(correspondente)* — {{TODO:TESE-FICHA:programa de pós-graduação, área de concentração, orientadora e coorientadora — preencher}}
-**DOCUMENTO:** Parte 2 da tese (companion validado da Parte 1, release v3.0) · v1 · 2026-08-28
-**NATUREZA:** tese baseada em simulação computacional — G0 validado por simulação; dados reais de pesquisa em ambiente simulado; forma experimental análoga (§ "mapeamento análogo")
-
----
-
-## RESUMO
-
-**Introdução.** Doenças priônicas são 100% fatais e seis candidatos clínicos fracassaram sem modelo quantitativo de entrega. A Parte 1 desta tese construiu, por auditoria sistemática, física de transporte, calibração bayesiana e simulação humanizada, uma plataforma de contenção terapêutica (PrP-V127) com limiar adimensional θ*=0,333 — executada, aprovada e reproduzida em dois ambientes computacionais. **Objetivo.** Esta Parte 2 formaliza e realiza a continuidade: (i) nomeia e formaliza o método de pesquisa que a sustenta — a ACP (Antecipação Computacional Parametrizada), passos P0–P6; (ii) estabelece a Base de Validade com linhagem completa de cada dado (quem→espécie→validação cruzada→código→parametrização→resultado); (iii) declara a tese em forma experimental análoga, na qual o sujeito da pesquisa é o conjunto papers+fontes+código+simulação; (iv) entrega os resultados da tese como os próprios achados [SIM] já executados; e (v) documenta, como método replicável, a seleção futura de parceiros (SLR-análogo) sem executá-la. **Método.** ACP P0–P6 sobre base E-registrada (38 fontes), motores determinísticos auto-testados (conservação de massa 100%; erro de Thiele 0,5%), colheita sob critérios pré-declarados, prognósticos travados por release antes de qualquer medição, estimador θ_obs calibrado por simulação (veredito pré-declarado; fronteira de decisão com bias −0,008; v1.1 interpolada testada e rejeitada), guardião recursivo R0–R3 em dois perfis de superfície. **Resultados.** Limiar θ*=0,333; três regras de design; colheita de sensibilidade com predição discriminadora (C50 insensível em faixa 10×; forma funcional falseável por dose-resposta); quadro probabilístico de duas lentes com prior registry-bound; tabela-decisão derivada κ↔θ↔frente↔biomassa (margem de raio satura cedo; biomassa é a coordenada informativa); registro de 54 claims, 38 fontes, 48 fatos numéricos com validação por máquina. **Conclusão.** A tese está realizada nos termos da ACP: continuar pesquisa por simulação parametrizada sem substituir o laboratório — se dados reais futuros forem análogos aos simulados, os passos seguintes já estarão avançados (P6, antecipação bancada).
-
-**Palavras-chave:** príons; simulação computacional; Antecipação Computacional Parametrizada; PrP-V127; doença de Creutzfeldt-Jakob; metodologia de pesquisa; in-silico.
-
-## ABSTRACT
-
-*(companion EN — manuscript_Parte2_v1_EN.md; keywords: prions; computational simulation; Parameterized Computational Anticipation; PrP-V127; Creutzfeldt-Jakob disease; research methodology; in-silico)*
-
-## SUMÁRIO
-
-1. **INTRODUÇÃO** (este capítulo)
-2. **FUNDAMENTAÇÃO — o campo dos métodos antecipatórios e dos in-silico trials** *(a completar — Ciclo 2: revisão estruturada com as 38 fontes formatadas ABNT)*
-3. **METODOLOGIA — o método ACP** *(conteúdo consolidado: método nomeado P0–P6; Base de Validade com linhagem; tese em forma experimental — mapeamento análogo)*
-4. **RESULTADOS — os resultados da tese são os resultados da simulação** *(conteúdo consolidado + figuras próprias — Ciclo 4)*
-5. **COMPONENTES E CONTINUIDADE** *(M1–M5 reenquadrados; seleção de parceiro como método)*
-6. **DISCUSSÃO E CONCLUSÕES POR OBJETIVO** *(Ciclo 4)*
-REFERÊNCIAS · APÊNDICES (inventário de artefatos)
-
-## LISTA DE SIGLAS
-
-ACP — Antecipação Computacional Parametrizada · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · κ — força de capping · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · WB — western blot · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade
-
----
-
-# CAPÍTULO 1 — INTRODUÇÃO
-
-> ## PRODUTO FINAL — ESTA É A TESE (declaração de abertura)
-> **Este manifesto (v6) é a tese realizada.** A Parte 1 produziu os achados (manifesto v5, release v3.0); o **G0 foi validado por simulação computacional** — executado, aprovado e reproduzido em dois ambientes; e a **continuidade está realizada** nos termos da ACP (P0–P6). Os dados são **reais de pesquisa**: cinética murina publicada [E009], dados de organoide humano publicados [E007], parâmetros de transporte humano in-vivo [E010], código aberto — **parametrizados para humanos e executados em ambiente simulado**, o que garante **aproximação e expectativa quantitativas** (prognóstico falseável) sem reivindicar medição. As claims são reais e registry-bound; o ambiente é simulado; a tese é o produto. **Guardião-2 atesta** como revisor hostil nas quatro dimensões: metodologia, dados, conformidade e conteúdo.
-
-
+*Parte 2 [SEM ANO] — o resultado define; as fases são estimativas. Toda cifra vem de JSON arquivado ou do registro E (regra: nunca digitar valor). Gated: guardian R0–R3 perfil part2, 0 BLOCKED exigido. PT é o mestre; EN companion: manuscript_Parte2_v1_EN.md.*
