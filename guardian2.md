@@ -84,3 +84,9 @@ PRÓXIMO: (autora) validar tabela M1–M5 reenquadrada + linhagem §1-bis + inve
 
 
 /RECAP 2026-08-28 (merge) — PR #2 MERGED em main@a01f8c2: **TESE COMPLETA EM DUAS PARTES** (P1=v5/release v3.0; P2=v6=ACP com PRODUTO FINAL + validação expressa da autora registrada). Gates 0/0 · AST 6/6 · fila agente vazia · restam: BIORXIV (autora) + GATEF (lab, dormant)
+
+/RECAP 2026-08-28 (FINAL — tese finda COMPLETA conforme produzida)
+FEITO: Parte 2 BILÍNGUE (companion EN integral: PRODUTO FINAL·[NO YEAR]·ACP P0-P6·Validity Basis·mapeamento análogo·resultados·M1-M5·promessas; paridade claims 14=14) · LaTeX EN+PDF (57,5KB tectonic) · gates PT+EN ambos 0/0 (padrão Validity Basis aceito; EN impecável com literais de invariante) · PDF EN anexado ao release v6.0
+ESTADO: TESE COMPLETA E BILÍNGUE — releases v3.0 (P1) + v6.0 (P2: PT+EN) · gates 4 superfícies 0/0 · AST 6/6 · registro 54/38/48
+PRÓXIMO: externo apenas — BIORXIV (autora) · GATEF (lab, dormant) — internamente, FINDADA
+ÂNCORA: main@9102c36 · v3.0/v6.0 · predições v1.0
