@@ -313,7 +313,7 @@ class Guardian:
          "Sensibilidades estruturais pendentes: expoente do freeS (1 vs 2) e C50 sweep sobre θ*."),
         ("R3-CANON", r"KNOWLEDGE_CANON", "BLOCKED",
          "Canon do conhecimento: o manuscrito deve referenciar KNOWLEDGE_CANON.md (índice-mestre achado→evidência→impacto→falsificador) — nenhum achado publica sem linha no canon."),
-        ("R3-BASE-VALIDADE", r"Base de Validade", "BLOCKED",
+        ("R3-BASE-VALIDADE", r"Base de Validade|Validity Basis", "BLOCKED",
          "MANDATO (autora): a Parte 2 deve declarar a Base de Validade — simulação NÃO substitui laboratório (essencial p/ absorção real); equivalência futura = antecipação aplicável; linhagem completa dos dados (quem→espécie→validação cruzada→código→parametrização→resultado) com referências sólidas."),
         ("R3-G0SIM", r"G0-sim", "BLOCKED",
          "Declaração de status do gate vigente: o G0-sim (computacional, executado e passado) e seu escopo (licencia continuação; não valida biologia) devem estar declarados."),

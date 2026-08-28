@@ -1,7 +1,7 @@
 {
   "round": 3,
-  "n_findings": 20,
-  "gate_pass": false,
+  "n_findings": 17,
+  "gate_pass": true,
   "findings": [
     {
       "id": "R0-UNUSED",
@@ -67,32 +67,11 @@
       "demand": "Citar release v1.0 (ou hash) junto à predição travada."
     },
     {
-      "id": "R3-R3-SAP",
-      "severity": "BLOCKED",
-      "where": "manuscript",
-      "issue": "Interrogação epistêmica R3-SAP: procedimento ausente.",
-      "demand": "Plano estatístico do G0 (teste, α, correção de multiplicidade, poder) deve estar NO manuscrito, não só no protocolo."
-    },
-    {
       "id": "R3-R3-LOCALIZ",
       "severity": "AMEND",
       "where": "manuscript",
       "issue": "Interrogação epistêmica R3-LOCALIZ: procedimento ausente.",
       "demand": "O cálculo do anel 8–12 mm depende de SABER onde está a frente — nenhum procedimento de localização in vivo é especificado."
-    },
-    {
-      "id": "R3-R3-CANON",
-      "severity": "BLOCKED",
-      "where": "manuscript",
-      "issue": "Interrogação epistêmica R3-CANON: procedimento ausente.",
-      "demand": "Canon do conhecimento: o manuscrito deve referenciar KNOWLEDGE_CANON.md (índice-mestre achado→evidência→impacto→falsificador) — nenhum achado publica sem linha no canon."
-    },
-    {
-      "id": "R3-R3-BASE-VALIDADE",
-      "severity": "BLOCKED",
-      "where": "manuscript",
-      "issue": "Interrogação epistêmica R3-BASE-VALIDADE: procedimento ausente.",
-      "demand": "MANDATO (autora): a Parte 2 deve declarar a Base de Validade — simulação NÃO substitui laboratório (essencial p/ absorção real); equivalência futura = antecipação aplicável; linhagem completa dos dados (quem→espécie→validação cruzada→código→parametrização→resultado) com referências sólidas."
     },
     {
       "id": "R3-R3-THESIS-ARCH",

@@ -1,24 +1,12 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 20 (BLOCKED=3, AMEND=8, NOTE=9)
+**Rodadas executadas:** 3 · **Achados:** 17 (BLOCKED=0, AMEND=8, NOTE=9)
 
 ## Gate
 
-**FAIL — existem achados BLOCKED.** Revisor hostil nega submissão até resolução.
+**PASS — zero BLOCKED.** O manuscrito resiste à rodada recursiva; recomendação ao editor: aceitável como preprint com auditoria pública.
 
 ---
-
-### [BLOCKED] R3-R3-SAP — manuscript
-- **Problema:** Interrogação epistêmica R3-SAP: procedimento ausente.
-- **Exigência:** Plano estatístico do G0 (teste, α, correção de multiplicidade, poder) deve estar NO manuscrito, não só no protocolo.
-
-### [BLOCKED] R3-R3-CANON — manuscript
-- **Problema:** Interrogação epistêmica R3-CANON: procedimento ausente.
-- **Exigência:** Canon do conhecimento: o manuscrito deve referenciar KNOWLEDGE_CANON.md (índice-mestre achado→evidência→impacto→falsificador) — nenhum achado publica sem linha no canon.
-
-### [BLOCKED] R3-R3-BASE-VALIDADE — manuscript
-- **Problema:** Interrogação epistêmica R3-BASE-VALIDADE: procedimento ausente.
-- **Exigência:** MANDATO (autora): a Parte 2 deve declarar a Base de Validade — simulação NÃO substitui laboratório (essencial p/ absorção real); equivalência futura = antecipação aplicável; linhagem completa dos dados (quem→espécie→validação cruzada→código→parametrização→resultado) com referências sólidas.
 
 ### [AMEND] R2-LOCK-ANCHOR — ../manuscript_Parte2_v1_EN.md
 - **Problema:** Predição θ<0.33 presente sem âncora imutável (release v1.0 / commit).
