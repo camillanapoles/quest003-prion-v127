@@ -335,8 +335,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E032"
-   ],
-   "note": "disease-baseline front radius, ws_9_v4_human.json"
+   ]
   },
   {
    "fact_id": "N025",
@@ -351,8 +350,7 @@
    "evidence_ids": [
     "E011",
     "E030"
-   ],
-   "note": "unit conversion of N005 central k_eff"
+   ]
   },
   {
    "fact_id": "N026",
@@ -366,8 +364,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E032"
-   ],
-   "note": "ws_9_v4_human.json MV1.kappa4_R_mm"
+   ]
   },
   {
    "fact_id": "N027",
@@ -381,8 +378,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E032"
-   ],
-   "note": "ws_9_v4_human.json sweep_MV2 kappa=4"
+   ]
   },
   {
    "fact_id": "N028",
@@ -396,8 +392,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E032"
-   ],
-   "note": "ws_9_v4_human.json sweep_MV2 kappa=32"
+   ]
   },
   {
    "fact_id": "N029",
@@ -411,8 +406,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E031"
-   ],
-   "note": "bayes_success.json G0_GO.p5"
+   ]
   },
   {
    "fact_id": "N030",
@@ -426,8 +420,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E031"
-   ],
-   "note": "bayes_success.json G0_GO.p95"
+   ]
   },
   {
    "fact_id": "N031",
@@ -441,8 +434,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E031"
-   ],
-   "note": "bayes_success.json desaceleracao.p5"
+   ]
   },
   {
    "fact_id": "N032",
@@ -456,8 +448,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E031"
-   ],
-   "note": "bayes_success.json desaceleracao.p95"
+   ]
   },
   {
    "fact_id": "N033",
@@ -471,8 +462,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E019"
-   ],
-   "note": "Xue 2025 single intrathecal dose"
+   ]
   },
   {
    "fact_id": "N034",
@@ -486,8 +476,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E007"
-   ],
-   "note": "Groveman 2019 MV2 SD (±1.63e5)"
+   ]
   },
   {
    "fact_id": "N035",
@@ -501,8 +490,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E007"
-   ],
-   "note": "Groveman 2019 MV1 SD (±0.70e3)"
+   ]
   },
   {
    "fact_id": "N036",
@@ -516,8 +504,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E030"
-   ],
-   "note": "ws_7_results.json ℓ=√(D/k) central"
+   ]
   },
   {
    "fact_id": "N037",
@@ -531,8 +518,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E030"
-   ],
-   "note": "lower bound of swept θ 0.1–0.01"
+   ]
   },
   {
    "fact_id": "N038",
@@ -546,8 +532,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E032"
-   ],
-   "note": "pre-specified screening threshold T1 (>1.5× seed)"
+   ]
   },
   {
    "fact_id": "N039",
@@ -561,8 +546,7 @@
    "analysis_set": "program-level",
    "evidence_ids": [
     "E032"
-   ],
-   "note": "0.82/2.83 — T3 satisfaction"
+   ]
   },
   {
    "fact_id": "N040",
