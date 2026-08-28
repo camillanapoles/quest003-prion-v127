@@ -114,7 +114,9 @@ O campo oferece mecanismo validado em quatro níveis [1][3][4][5], plataforma de
 
 ---
 
-## 1-met. O método nomeado: ACP — Antecipação Computacional Parametrizada (*Parameterized Computational Anticipation*)
+# CAPÍTULO 3 — METODOLOGIA
+
+### 3.1 O método nomeado: ACP — Antecipação Computacional Parametrizada (*Parameterized Computational Anticipation*)
 
 O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, é possível **continuar pesquisa por simulação** — com dados publicados e validados como insumo, execução determinística auditável e prognósticos travados antes de qualquer medição — sem que isso substitua ou espere o laboratório. **Declaração de eixo retórico (obrigatória em toda a Parte 2):** tudo aqui **é simulação, e é dito que é**; não prometemos aplicar nem validar na Parte 2 — antes: **se dados reais vierem a exibir resultados análogos aos simulados, os passos seguintes já terão sido dados** — a antecipação estará bancada, não pendente [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
@@ -134,7 +136,25 @@ O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, �
 
 **Posição na família dos métodos antecipatórios:** a ACP é irmã da meta-análise (agrega o publicado), da modelagem física (deriva comportamento) e dos in-silico trials (executa cenários) — e distingue-se por **travar prognósticos antes da medição e declarar a simulação como simulação em cada saída** (tiers [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] [claim:C047] [evidence:E032, E033]). Onde a Parte 1 demonstrou a ACP no caso V127 (Parte 1 §2–§3), a Parte 2 **é** a ACP enquanto método de continuidade [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
-## 1-bis. Base de Validade (MANDATÓRIA — exigência do guardião)
+### 3.2 Formulação matemática com proveniência (equações herdadas ESCRITAS nesta tese)
+
+**Transporte (ADR) em meio poroso heterogêneo** (volumes finitos 2D 192², Euler explícito):
+
+∂(αc)/∂t = ∇·(D_eff∇c) − ∇·(vc) + S(x) − k_eff·c
+
+com α=0,20 e λ=1,8 medidos in-vivo por imagem óptica integrativa [10] [claim:C014] [evidence:E010]; D_eff=D₀/λ²=3,86×10⁻¹¹ m²/s com D₀=1,25×10⁻¹⁰ m²/s (Stokes–Einstein, R_h≈2,5 nm, ~30 kDa) [claim:C014] [evidence:E030]; k_eff varrido 10⁻⁶–10⁻⁵ s⁻¹ ancorado à polimerização nucleada [11] [claim:C015] [evidence:E011]; fluxo intersticial por Darcy; cistos espongiformes κ×50. Auto-testes do solver: conservação de massa 100,0% e erro de Thiele 0,5% (ℓ=3,59 mm) [claim:C032] [evidence:E030].
+
+**Capping dominante-negativo e o limiar θ** (termo próprio deste programa):
+
+freeS(r) = (1 + κ·c_V127(r))⁻² ;  c_V127(r) ∝ exp(−r/ℓ), ℓ=3,59 mm ;  **θ ≡ (1 + κ·c_pico)⁻¹ ∈ (0,1]**
+
+θ é a fração de atividade máxima de replicação remanescente no pico do campo secretor; contenção declarada quando a frente assintótica cai abaixo de 50% do baseline (T3) [claim:C033] [evidence:E030]. A forma quadrática reflete conversão de dois participantes (ambos dessequestrados); a alternativa de primeira potência (heterodímero) é falseável pela dose-resposta do braço A6 [claim:C051] [evidence:E032, E033].
+
+**Relógio humanizado** (âncoras de organoide humano [7] [E007]): duplicação ≈12,1 dias e 1 unidade de simulação = 144 dias, derivadas de clareza do inóculo 25–28 dpi, produção de-novo 35 dpi e títulos 169 dpi [claim:C037] [evidence:E032, E007].
+
+**Estimador θ_obs (instrumento da continuidade; calibração sim-a-sim)**: features (raio da frente R, log-razão de biomassa); κ̂ por vizinho-mais-próximo na grade κ∈{1,5–8} do motor v4; θ̂=1/(1+κ̂); regime por braço: mediana com n=8 e IC bootstrap 90%. Veredito pré-declarado: ADEQUADO na fronteira de decisão (cobertura do θ verdadeiro 3/3; bias −0,008 em κ=2; recuperação modal 69%); a variante interpolada v1.1 foi testada e rejeitada [claim:C052] [evidence:E032, E033]. Toda saída carrega o rótulo do tier que a produziu [claim:C047] [evidence:E032, E033].
+
+### 3.3 Base de Validade (MANDATÓRIA — exigência do guardião)
 
 **Declaração tríade:** (i) esta tese é **baseada em simulação computacional e NÃO SUBSTITUI a validação de laboratório** — o laboratório é **essencial** para que a tese seja absorvida como real; (ii) a continuidade do estudo provém dos **prognósticos**: se os exames iniciais de laboratório (G0-wet [ORGANOID], e no futuro o humano) **equivalerem ao que foi simulado**, nós já possuímos **antecipação de dados e informações aplicáveis imediatamente** — essa é a metodologia da tese; (iii) o rigor exigido de uma tese experimental — como foi feito, por quem, com quais critérios, quais resultados — é aqui **convertido para o ambiente computacional**: cada dado tem linhagem completa declarada (quem produziu, em que espécie/sistema, validação cruzada por qual fonte independente, qual código simulou, como foi parametrizado para humano, qual resultado produziu).
 
@@ -152,7 +172,7 @@ O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, �
 **Por que isto é ciência com referências sólidas:** toda célula da linhagem amarra a fonte peer-reviewed ou ao run arquivado com hash; nenhum número vive fora do registro (51 claims · 38 fontes · 48 N-fatos · 4 validadores em zero); o código é aberto e o guardião audita máquina-a-máquina — a cadeia **quem→espécie→cruzamento→código→parâmetro→resultado** é verificável de ponta a ponta, exatamente como um "métodos" experimental exige, só que executada em ambiente computacional e declarada com a mesma disciplina.
 
 
-## 1-ter. A tese em forma experimental — o mapeamento análogo (diretriz da autora, 28/08)
+### 3.4 A tese em forma experimental — o mapeamento análogo (diretriz da autora, 28/08)
 
 Esta é **uma tese igual em forma à tese experimental** — com "sujeito", instrumentos, coleta, documentos e implicações documentados como um protocolo com pessoas documenta seus participantes. A diferença é uma só: **em vez de pessoas, o sujeito da pesquisa é o conjunto papers + fontes + código + simulação** — e cada elemento é documentado exatamente como o seria numa tese de laboratório. O dado produzido permanece rotulado [SIM] (a semântica dos tiers não muda; muda quem desempenha cada papel):
 
@@ -171,11 +191,13 @@ Esta é **uma tese igual em forma à tese experimental** — com "sujeito", inst
 
 *Um examinador que sabe ler tese experimental sabe ler esta: basta trocar "pessoa" por "fonte", "instrumento" por "código", "coleta" por "run" — a forma documental é idêntica; a base é simulação computacional.*
 
-## 2-bis. Os resultados da tese são os resultados da simulação já realizada
+# CAPÍTULO 4 — RESULTADOS
+
+### 4.1 Os resultados da tese são os resultados da simulação já realizada
 
 Em vez de laboratório ou teste humano, **o que valida e compõe a tese neste estágio é o conjunto computacional executado** — completo, arquivado e reproduzido: (i) limiar de contenção θ\*=0,333 com relógio humanizado [claim:C038] [evidence:E032]; (ii) três regras de design falseáveis [claim:C033] [evidence:E030] [claim:C034] [evidence:E030, E020] [claim:C035] [evidence:E030, E019]; (iii) colheita de sensibilidade com predição discriminadora (C₅₀ 10× insensível; forma funcional falseável por dose-resposta) [claim:C051] [evidence:E032, E033]; (iv) quadro probabilístico de duas lentes com prior registry-bound [claim:C036] [evidence:E031]; (v) estimador θ_obs calibrado no regime declarado [claim:C052] [evidence:E032, E033]; (vi) reprodução independente em dois ambientes (hash + valor-a-valor); e (vii) a **tabela-decisão derivada** (κ↔θ_obs↔frente↔biomassa↔margem) extraída sem nova simulação — que mostra a margem de raio saturando cedo (70,2% já em κ=1,5) e confirma a **razão de biomassa como coordenada informativa** (48→1,25), com θ\*=0,333 como variável-de-decisão pré-registrada [claim:C052] [evidence:E032, E033]. De cada valor razoável aqui, **pesquisa derivada já pode prosseguir** — portas abertas.
 
-## 2. M1 — Estimador θ_obs: o dado parametrizado como instrumento
+### 4.2 M1 — Estimador θ_obs: o dado parametrizado como instrumento
 
 O objetivo operacional: converter gradiente proximal/distal medido em θ_obs comparável ao limiar travado θ\*=0,333 [claim:C038] [evidence:E032] **sem circularidade** (grade e função-objetivo congeladas antes do dado; Parte 1 §2.7). A validação do próprio instrumento é computacional — simulation-based calibration sobre a grade κ∈{1,5–8} do motor v4 exato:
 
@@ -184,15 +206,15 @@ O objetivo operacional: converter gradiente proximal/distal medido em θ_obs com
 - **v1.1-IDW (interpolação) testada e rejeitada**: piorou a fronteira (bias −0,037, direção anti-conservadora) e quebrou cobertura em κ=8 — registrado como evidência de que a disciplina anti-hindsight está viva: o upgrade que falha é descartado, não embranquecido [claim:C052] [evidence:E032, E033].
 - Achado de design que o método produziu: a razão de biomassa carrega a informação que o raio perde por saturação (R 0,843→0,760 mm contra razão 48→1,25 na grade) — o estimador opera no par de features por necessidade [claim:C052] [evidence:E032, E033].
 
-## 3. M2 — Freeze de execução: o que trava antes do primeiro organoide
+### 4.3 M2 — Freeze de execução: o que trava antes do primeiro organoide
 
 Dez itens F1–F10, com GATE-F de liberação: estimador (F1, fechado — §2), plano estatístico (Welch/Holm α=0,05, 5 comparações; n=8→12; poder ~80% para Δ≥50%), cegamento do scorer, randomização/estratificação por lote (DP MV2 ≈77% da média publicada), controle positivo A8-PPS como critério de validade do ensaio, kill-switches por braço + **critério de morte programática**, esquema de dado [ORGANOID] (contrato bancada→estimador; exclusões publicadas nunca editadas), loop M3, timelines (readouts 90–120 d; regime estacionário desde ~4 d) e M4 (parceiro por método). Regra: pós-GATE-F, qualquer mudança é emenda auditada com re-análise com-e-sem.
 
-## 4. M3 — Loop de re-parametrização (o coração anti-hindsight)
+### 4.4 M3 — Loop de re-parametrização (o coração anti-hindsight)
 
 O dado medido recalibra **exatamente o que informa**: o braço A6 (dose conhecida) fecha κ↔µM — âncora ilustrativa da Parte 1 §2.2 tornado absoluto pelo dado — convertendo o cálculo de contenção de relativo a absoluto — e executa o teste discriminador da forma funcional (primeira potência vs quadrática; travado na colheita [SIM] da Parte 1) [claim:C051] [evidence:E032, E033]; θ\* **compara-se, nunca se retreina**; taxas murinas relativas e parâmetros de transporte humano só mudam por dado do seu próprio escopo. Toda comparação cita a âncora do release onde a predição foi travada (v1.0 / v3.0); toda recalibração gera pre-dição nova **antes** do próximo dado — o loop nunca "explica depois" sem ter previsto antes.
 
-## 5. M4 — Método de seleção de parceiro: assertividade por método (SLR-análogo)
+### 4.5 M4 — Método de seleção de parceiro: assertividade por método (SLR-análogo)
 
 **A tese documenta o COMO; não seleciona o QUEM** [claim:C053] [evidence:E033]. O protocolo (v2.1) é o análogo de revisão sistemática aplicado à decisão "onde medir":
 
@@ -204,15 +226,17 @@ O dado medido recalibra **exatamente o que informa**: o braço A6 (dose conhecid
 
 Replicabilidade posterior: qualquer pesquisador re-executa as strings, re-tria, re-pontua; divergências >10 pts viram auditoria, não erro. Viés declarado: single-rater v1 (co-rating pré-declarado como pendência).
 
-## 6. M5 — Infraestrutura de continuidade (guardião + runbook)
+### 4.6 M5 — Infraestrutura de continuidade (guardião + runbook)
 
 O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Parte 2 tem contrato próprio de gate (mesmo registro de pendências estruturado, baterias e binding de números citados; sem herdar os padrões literais da Parte 1), e a **Base de Validade (§1-bis) é check BLOCKED permanente** neste perfil. Toda superfície de manuscrito é gated por revisão hostil recursiva (R0 drift estrutural · R1 checklist+baterias · R2 recursão de emendas · R3 interrogação epistêmica + registro {{TODO:id:desc}}); o decálogo vivo (tiers de dado · locked-stays-locked · ilustrativo≠evidência · paridade · anti-hindsight · fim-de-sessão=/RECAP) está no guardian.md com comandos copy-paste — a continuidade não depende de memória de quem continua, e sim de método documentado — índice-mestre no KNOWLEDGE_CANON.md.
 
-## 7. Promessas e limites desta Parte 2
+# CAPÍTULO 5 — DISCUSSÃO
+
+### 5.1 Promessas e limites desta Parte 2
 
 Promete: a ACP como método completo, replicável e em parte já demonstrado (M1 executado; M4 piloto) — continuar pesquisa por simulação hoje, como a física, sem parar à espera de cada confirmação. E declara: os resultados daqui **são de simulação e assim permanecem rotulados**; a aplicação/validação em ambiente real não é prometida nesta Parte — se dados reais futuros forem análogos aos simulados, **os passos seguintes já estão avançados** (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007]. **Não promete**: seleção de parceiro (execução externa), dado [ORGANOID]+ (não existe ainda — e é rotulado como tal), nem qualquer claim clínica (escada de tiers: nenhum degrau empresta a autoridade do seguinte). Limites declarados: pesos e scores são julgamento estruturado single-rater; a calibração do estimador é na grade atual (refinamento futuro = grade mais fina, pré-declarado); PubMed-direto e identificação R8 pendem como conformidade do piloto.
 
-## 8. Apêndice — Inventário dos artefatos da Parte 2 (verificável em disco)
+# APÊNDICE A — Inventário dos artefatos da Parte 2 (verificável em disco)
 
 | Artefato | O que é | Estado |
 |---|---|---|
