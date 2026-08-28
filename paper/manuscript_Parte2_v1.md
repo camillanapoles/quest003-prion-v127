@@ -58,7 +58,7 @@ Três razões. (i) **Epistêmica**: simulação parametrizada com dados reais pu
 
 ### 1.4 Objetivos
 
-**Geral.** Formalizar, demonstrar e documentar a ACP — Antecipação Computacional Parametrizada — como método de continuidade de pesquisa por simulação, realizando a Parte 2 da tese sobre os achados da Parte 1.
+**Geral.** Formalizar, demonstrar e documentar a ACP — Antecipação Computacional Parametrizada — como método de continuidade de pesquisa por simulação, realizando a Parte 2 da tese sobre os achados da Parte 1: previsibilidade e antecipação de informação para decisão de pesquisa (o que medir, onde, em que dose, antes de gastar recurso).
 
 **Específicos.**
 - **OE1** — Nomear e formalizar a ACP com passos P0–P6 e garantias por passo [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
