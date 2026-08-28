@@ -422,3 +422,9 @@ FEITO:
 ESTADO: gate PASS 0/0 · TODOs ativos: PARTNER-RUN(+Q3-Q5-EXEC, PUBMED-DIRECT), GATEF-SIGNATURE (lab), BIORXIV-ADDENDUM (autora), EMAIL-GROVEMAN=passo1 do PARTNER-RUN (autora), COST-DECOMP (opcional)
 PRÓXIMO: (autora) enviar kit#1 RML + depositar bioRxiv | (agente) Q3-Q5-EXEC + PubMed direto + kit#2 Calgary | (lab) GATE-F após seleção
 ÂNCORA: release v3.0 · main @ e11f1ab · predições travadas desde v1.0
+
+/RECAP 2026-08-28 ~01:40 (sessão Parte2→v6 continuity)
+FEITO: skill-scout scientific-**+correlatas (SKILL_SCOUT_PARTE2.md): nenhuma skill revela gap não-coberto; achado D2 — related-work ACP vs in-silico trials (Cortés-Ríos 2025 PMC12706418; Sci Rep 2025 s41598-025-99720-3; framework EU): IST simula o ENSAIO, ACP simula a CONTINUAÇÃO DA PESQUISA (4 diferenciais estruturais) · AST consolidado executável 6/6 VERDE (ast_check.py) · Protocolo de Ciclo RELATE→EXECUTE→AST institucionalizado nos 2 runbooks · PubMed-direto conforme (Q1=23/Q2=2) · reconciliação roadmaps (THESIS_ROADMAP.md canônico Y0; v6→v7 colisão corrigida) · COST-DECOMP como template-de-cotação (10 drivers; preço=como-DOI) · canon 42 achados (F-40/41/42) · memória id17 atualizada
+ESTADO: gates P1+P2 0/0 · AST 6/6 · PR#2 (paper-v6) completo: manuscrito P2 md+PDF (ACP C054) + guardian2 + scout · 54/38/48
+PRÓXIMO: (autora) PARTE2-V2-VALIDACAO + entrada-do-posicionamento-C-na-v6 (juntas) → merge PR#2 → BIORXIV P1 · (lab) GATEF dormant · (agente) fila vazia
+ÂNCORA: main@67b2ee6 · paper-v6@d71b42e(+) · v3.0 · predições v1.0

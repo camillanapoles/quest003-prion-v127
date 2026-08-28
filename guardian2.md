@@ -70,3 +70,5 @@ FEITO: guardian2.md criado (réplica estrutural do guardian.md p/ conformidade d
 ESTADO: Parte 1 gate PASS 0/0 · Parte 2 gate PASS 0/0 · 54 claims/38 fontes/48 N-fatos · main @67b2ee6 sincado · TODOs: PARTE2-V2-VALIDACAO (autora), BIORXIV-ADDENDUM (autora), GATEF-SIGNATURE (lab, dormant), PARTNER-RUN/EMAIL-GROVEMAN (anexo operacional, fora da tese), COST-DECOMP (opcional)
 PRÓXIMO: (autora) validar tabela M1–M5 reenquadrada + linhagem §1-bis + inventário §8 | (agente) PDF/LaTeX da Parte 2 impecável p/ publicação
 ÂNCORA: main @67b2ee6 · predições travadas v1.0 · Parte 1 release v3.0 intacta
+
+/RECAP 2026-08-28 ~01:40 — P2/v6 idem guardian.md (FEITO incl. scout D2-related-work p/ ACP; AST 6/6; Protocolo de Ciclo) · PRÓXIMO aguarda autora (validação+posicionamento C opcional→merge) · guardião-2 íntegro
