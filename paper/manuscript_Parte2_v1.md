@@ -26,7 +26,7 @@ A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o 
 | M4 | Seleção de parceiro (SLR-análogo) | **método documentado para replicabilidade** — sem seleção, sem contato; existe para quem, no futuro, escolher executar | método + piloto | PARTNER_SELECTION_PROTOCOL v2.1 + log v0.2 |
 | M5 | Infraestrutura (guardião + runbook) | garantia de que a continuidade é por método, não por memória | operante | guardian.py + guardian.md |
 
-> **⏳ VALIDAÇÃO EXPRESSA PENDENTE:** esta tabela (e o reenquadramento M1→R1/M2-dormant) só se torna definitiva do texto da tese com validação expressa da autora. {{TODO:PARTE2-V2-VALIDACAO:autora valida ou ajusta a tabela reenquadrada}}
+> **✓ VALIDAÇÃO EXPRESSA DA AUTORA — REGISTRADA (28/08, no commit do merge do PR #2):** a tabela reenquadrada (M1→R1/M2-dormant/M4-método), a Base de Validade §1-bis, o inventário §8 e a declaração PRODUTO FINAL foram validadas expressamente e são definitivas.
 
 
 
@@ -45,6 +45,8 @@ O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, �
 | P4 | prognóstico | resultados | predições travadas por release antes de qualquer medição | limiares/decision-table | âncora anti-hindsight |
 | P5 | pesquisa derivada | valores razoáveis | novas perguntas/produtos derivam **imediatamente** (portas abertas) | agenda derivada [SIM] | geração, não espera |
 | P6 | confronto (opcional) | dados reais futuros, **se existirem e forem análogos** | comparação à âncora travada (nunca retreino) | passos seguintes **já avançados** | antecipação bancada |
+
+**Posição na família (related-work):** o campo dos *in-silico trials* é estabelecido (simulam **o ensaio**: pacientes virtuais, desenho, via regulatória). A ACP ocupa o espaço adjacente e complementar: simula **a continuação da pesquisa**, distinguindo-se por quatro pontos estruturais — (i) prognóstico travado por release **antes** de qualquer medição; (ii) simulação rotulada em toda saída (tiers); (iii) P6: dado real análogo ⇒ antecipação **bancada**; (iv) P5: pesquisa derivada imediata como produto de primeira classe. Mapeamento de fontes candidatas em `SKILL_SCOUT_PARTE2.md` (elevação a registro E pendente de abertura, conforme regra).
 
 **Posição na família dos métodos antecipatórios:** a ACP é irmã da meta-análise (agrega o publicado), da modelagem física (deriva comportamento) e dos in-silico trials (executa cenários) — e distingue-se por **travar prognósticos antes da medição e declarar a simulação como simulação em cada saída** (tiers [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] [claim:C047] [evidence:E032, E033]). Onde a Parte 1 demonstrou a ACP no caso V127 (Parte 1 §2–§3), a Parte 2 **é** a ACP enquanto método de continuidade [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 

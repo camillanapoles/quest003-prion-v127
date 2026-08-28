@@ -1,6 +1,6 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 10 (BLOCKED=0, AMEND=0, NOTE=10)
+**Rodadas executadas:** 3 · **Achados:** 9 (BLOCKED=0, AMEND=0, NOTE=9)
 
 ## Gate
 
@@ -34,10 +34,6 @@
 
 ### [NOTE] R3-TODO-GATEF-SIGNATURE — todo-registry
 - **Problema:** TODO aberto registrado: GATEF-SIGNATURE.
-- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
-
-### [NOTE] R3-TODO-PARTE2-V2-VALIDACAO — todo-registry
-- **Problema:** TODO aberto registrado: PARTE2-V2-VALIDACAO.
 - **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
 
 ### [NOTE] R3-TODO-PARTNER-RUN — todo-registry
