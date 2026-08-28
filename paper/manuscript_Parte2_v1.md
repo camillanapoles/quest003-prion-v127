@@ -5,7 +5,7 @@
 
 **AUTORA:** Camilla N. *(correspondente)*
 
-> 🔖 **FICHA ACADÊMICA — A PREENCHER PELA AUTORA APÓS LEITURA** {{TODO:TESE-FICHA}}
+> 🔖 **FICHA ACADÊMICA — A PREENCHER PELA AUTORA APÓS LEITURA** {{TODO:TESE-FICHA:programa/área/orientadora/coorientadora — preencher após leitura}}
 > **PROGRAMA DE PÓS-GRADUAÇÃO:** ══════════════════════════════
 > **ÁREA DE CONCENTRAÇÃO:** ══════════════════════════════
 > **ORIENTADORA:** ══════════════════════════════

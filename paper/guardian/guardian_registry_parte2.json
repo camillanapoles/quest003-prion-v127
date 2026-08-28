@@ -74,18 +74,18 @@
       "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
     },
     {
+      "id": "R3-TODO-TESE-FICHA",
+      "severity": "NOTE",
+      "where": "todo-registry",
+      "issue": "TODO aberto registrado: TESE-FICHA.",
+      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
+    },
+    {
       "id": "R3-TODO-id",
       "severity": "NOTE",
       "where": "todo-registry",
       "issue": "TODO aberto registrado: id.",
       "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
-    },
-    {
-      "id": "R3-TODO-LOOSE",
-      "severity": "AMEND",
-      "where": "manuscript+tex",
-      "issue": "1 ocorrência(s) de 'TODO' fora do formato {TODO:id:descrição}.",
-      "demand": "Normalizar para o formato com id (para rastreio no gate) ou resolver."
     }
   ]
 }
