@@ -96,3 +96,8 @@ FEITO: Cap.2 Fundamentação (corroborado pelas 38 fontes; herança=lógica corr
 ESTADO: documento de tese ~70% (faltam: Ciclo 3 = renumerar Cap.3-4 + EQUAÇÕES da metodologia; Ciclo 4 = figuras próprias em resultados + discussão/conclusões-por-objetivo + EN sincronizar; PDFs regenerar ao final)
 PRÓXIMO: Ciclo 3 (equações ADR/freeS/calibração com procedência por parâmetro no corpo) — depois Ciclo 4 e /RECAP de fechamento do documento
 ÂNCORA: main@HEAD · registro 54/38/48 · predições v1.0
+
+/RECAP 2026-08-28 04:35 — Ciclo 3 FECHADO
+FEITO: capítulos renumerados (1-5 + Apêndice A) · §3.2 equações com proveniência (ADR/freeS+θ/relógio/estimador — claims+refs adjacentes) · gate 0/0 · memória id32: 13 instruções da autora consolidadas
+ESTADO: documento ~85% · falta Ciclo 4: figuras próprias no Cap.4 (θ-response/subtipos/tabela-decisão como figuras) + §5.2 discussão ampliada + CAPÍTULO 6 CONCLUSÕES POR OBJETIVO (OE1-OE5/H1-H3) + EN sincronizar + PDFs regenerar
+ÂNCORA: main@HEAD · 54/38/48
