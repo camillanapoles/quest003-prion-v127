@@ -1,0 +1,78 @@
+\documentclass[10pt,twocolumn]{article}
+% ═══ PARTE 2 — Plano de Continuidade Metodológica (ACP) · PT mestre · guardian2-gated ═══
+\usepackage[margin=1.9cm,columnsep=0.7cm]{geometry}
+\usepackage{lmodern}\usepackage{mathptmx}
+\usepackage{graphicx,booktabs,amsmath,amssymb}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{caption}\captionsetup{font=small,labelfont=bf}
+\usepackage{titlesec}\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\usepackage{fancyhdr}\pagestyle{fancy}\fancyhf{}
+\fancyfoot[C]{\tiny Parte 2 — Continuidade Metodológica (ACP) · github.com/camillanapoles/quest003-prion-v127 · tiers [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] · guardian2 gate}
+\fancyfoot[R]{\thepage}\renewcommand{\headrulewidth}{0pt}
+\usepackage{xcolor}\usepackage{microtype}
+
+\title{\bfseries Plano de Continuidade Metodológica — Parte 2 da Tese: o Método de Antecipação Computacional Parametrizada (ACP) do Dado Simulado à Pesquisa Derivada}
+\author{\normalsize Open Prion \& Molecular Engineering Consortium\thanks{Correspondente: Camilla N. (CRediT in-repo). IA sob supervisão humana contínua; não é autora (SW-S01/03). Companheiro da Parte 1 (release v3.0), que não modifica. Gated: guardian.py --profile part2 (R3-BASE-VALIDADE BLOCKED).}}
+\date{}
+
+\begin{document}\maketitle
+
+\begin{abstract}\small
+A Parte 1 demonstrou a tese de design (plataforma V127, $\theta^{*}{=}0{,}333$, reproduzida em dois ambientes). A Parte 2 --- este manuscrito --- formaliza \textbf{o método de pesquisa} que a continua: a \textbf{ACP, Antecipação Computacional Parametrizada} (\emph{Parameterized Computational Anticipation}), com passos P0--P6 declarados (identificação $\to$ parametrização $\to$ execução $\to$ colheita $\to$ prognóstico travado $\to$ pesquisa derivada imediata $\to$ confronto opcional). \textbf{Eixo retórico obrigatório:} tudo aqui é simulação e é dito que é; não prometemos aplicar nem validar nesta parte --- se dados reais vierem a exibir resultados análogos aos simulados, os passos seguintes já terão sido dados (antecipação \emph{bancada}, nunca pendente). A \textbf{Base de Validade} é mandatória (check BLOCKED do guardião-2): simulação não substitui o laboratório --- essencial para a absorção real da tese --- e cada dado tem linhagem completa (quem $\to$ espécie $\to$ validação cruzada $\to$ código $\to$ parametrização $\to$ resultado). Resultados-da-tese: os próprios achados [SIM] já executados (§2-bis), incluindo o estimador $\theta_{\text{obs}}$ calibrado e o achado de que a razão de biomassa carrega a informação que o raio saturado perde. A tese é [SEM ANO]: prognósticos de simulação operam em tempo futuro por natureza --- o ano não tem impacto. \textbf{Método, não seleção:} nenhum laboratório é escolhido; o protocolo de seleção (SLR-análogo) existe para replicabilidade de quem vier a executar.
+\end{abstract}
+
+\section{O método nomeado: ACP}
+Nos dias atuais é possível \textbf{continuar pesquisa por simulação}: dados publicados validados como insumo, execução determinística auditável, prognósticos travados antes de qualquer medição --- sem substituir nem esperar o laboratório. A ACP é irmã da meta-análise (agrega o publicado), da modelagem física (deriva comportamento) e dos \emph{in-silico trials} (executa cenários), e distingue-se por \textbf{travar o prognóstico antes da medição} e \textbf{rotular simulação em cada saída} (tiers [SIM]/[ORGANOID]/[MOUSE]/[HUMAN]).
+
+\begin{table*}[t]\centering\small
+\caption{\textbf{ACP — passos formais P0--P6.}}
+\begin{tabular}{llllp{5.6cm}l}
+\toprule
+Passo & Nome & Entrada & Procedimento & Saída & Garantia \\
+\midrule
+P0 & identificação & pergunta focal & SLR auditada de dados validados & base E-registrada & linhagem completa \\
+P1 & parametrização & base & derivação c/ proveniência por parâmetro & modelos parametrizados & número amarra fonte \\
+P2 & execução & modelos & motores determinísticos, self-tests & runs [SIM] & reprodução entre ambientes \\
+P3 & colheita & runs & critérios pré-declarados & resultados [SIM] & veredito sem meta móvel \\
+P4 & prognóstico & resultados & predições travadas por release & limiares/tabela-decisão & âncora anti-hindsight \\
+P5 & pesquisa derivada & valores razoáveis & novas perguntas derivam imediatamente & agenda [SIM] & geração, não espera \\
+P6 & confronto (opcional) & dados reais análogos, se existirem & comparação à âncora (nunca retreino) & passos seguintes \textbf{já avançados} & antecipação bancada \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Base de Validade (mandatória)}
+\textbf{Tríade declarada:} (i) tese baseada em simulação computacional \textbf{não substitui} a validação de laboratório --- o laboratório é \textbf{essencial} para a absorção real; (ii) a continuidade provém dos prognósticos: exames laboratoriais futuros \emph{equivalentes ao simulado} significam dados e informações \textbf{já antecipados e aplicáveis imediatamente}; (iii) o rigor experimental --- como, por quem, critérios, resultados --- é convertido ao ambiente computacional com \textbf{linhagem completa de cada dado} (Tabela 2).
+
+\begin{table*}[t]\centering\footnotesize
+\caption{\textbf{Linhagem dos dados} (o ``métodos experimental'' convertido).}
+\begin{tabular}{llllp{4.2cm}p{3.4cm}}
+\toprule
+Dado & Produzido por (primário) & Espécie/sistema & Validação cruzada & Simulado por / parametrização & Resultado [SIM] \\
+\midrule
+Cinética de replicação & Fornara/Igel 2024 (código aberto) & camundongo & Masel 1999 & kernel RD (Zenodo 11093945); relógio humano & $\theta^{*}{=}0{,}333$ \\
+Relógio/amplitude & Groveman 2019 (organoide) & humano sCJD & Groveman 2021; subtipos 2023 & regressão 12,1\,d; 144\,d/unidade & predição travada \\
+Transporte & Thorne\&Nicholson 2006 (in-vivo) & humano & Stokes--Einstein & solver ADR auto-testado & regras 1--3 \\
+Agente V127 & Asante 2015; Gatdula 2026; Zerbes 2026 & população$\to$camundongo$\to$cultura$\to$AAV & 4 níveis independentes & capping freeS & contenção $\kappa{=}2$ \\
+Prior de falhas & Geschwind 2013; Ha\"ik 2014; Newman 2014; Otto 2004; Mead 2022; Cheng 2015 & humano (ensaios) & registry-bound & Beta--Binomial & P 5\%/30--45\% \\
+Sensibilidade & este programa & in-silico & reprodução 2 ambientes & sweeps + estimador & discriminadora \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Os resultados da tese são os resultados da simulação já realizada}
+Em vez de laboratório ou teste humano, o que valida e compõe a tese neste estágio é o conjunto computacional executado e arquivado: $\theta^{*}$; regras de design; colheita de sensibilidade com predição discriminadora (C$_{50}$ insensível em faixa 10$\times$; forma funcional falseável por dose-resposta); quadro probabilístico de duas lentes com prior \emph{registry-bound}; estimador $\theta_{\text{obs}}$ calibrado (veredito pré-declarado; na fronteira de decisão, no regime por braço n=8, bias $-0{,}008$; a v1.1 interpolada foi testada e \textbf{rejeitada}); reprodução independente em dois ambientes; e a tabela-decisão derivada ($\kappa\leftrightarrow\theta\leftrightarrow R\leftrightarrow$ biomassa $\leftrightarrow$ margem) --- que mostra a margem de raio saturando cedo (70,2\% já em $\kappa{=}1{,}5$) e confirma a \textbf{razão de biomassa como coordenada informativa} (48$\to$1,25). De cada valor razoável, pesquisa derivada prossegue imediatamente.
+
+\section{Componentes M1--M5 (reenquadrados sob a base in-silico)}
+\textbf{M1 estimador} --- instrumento da continuidade: converte qualquer gradiente em $\theta_{\text{obs}}$ comparável ao limiar travado (executado e aprovado). \textbf{R1 resultados-como-resultados} --- os achados [SIM] são os resultados da tese. \textbf{M3 loop de re-parametrização} --- recalibra só o que o dado informa; compara, nunca retreina; toda comparação cita o release da âncora. \textbf{M2 freeze/GATE-F} --- extensão futura \emph{opcional e dormente} (documentada, sem ser requisito). \textbf{M4 seleção de parceiro} --- método SLR-análogo para replicabilidade (query bank pré-registrada; inclusão/exclusão binárias; pesos congelados; fluxo regenerável; piloto não-decisório que corrigiu o prior). \textbf{M5 infraestrutura} --- guardião com perfis de superfície e decálogo; continuidade por método, não por memória.
+
+\section{Posição e validação}
+\textbf{Related-work:} os \emph{in-silico trials} simulam o ensaio; a ACP simula a \emph{continuação da pesquisa} (prognóstico travado antes da medição; simulação rotulada; P6 antecipação bancada; P5 pesquisa derivada imediata). \textbf{Validação expressa da autora:} registrada no commit do merge --- tabela M1--M5 reenquadrada, Base de Validade e PRODUTO FINAL são definitivos.
+
+\section{Promessas e limites}
+Promete: a ACP como método replicável, em parte demonstrado, para continuar pesquisa hoje --- como a física, sem parar à espera de cada confirmação. Declara: os resultados são de simulação e assim permanecem rotulados; aplicação/validação real não é prometida nesta parte; se dados reais futuros forem análogos, os passos seguintes já estão avançados (P6). Limites: julgamentos estruturados single-rater; calibração na grade atual (refinamento futuro pré-declarado = grade mais fina); divergências da ferramenta single-manuscript documentadas no AUDIT\_NOTES.
+
+\section*{Inventário de artefatos (verificável em disco)}
+{\small scripts: \texttt{part2\_theta\_obs\_\{v1,pooled,v11\}.py} · resultados: \texttt{part2\_results/} (v1/pooled/v11 + derived\_summary + partner\_log) · método-docs: checklist (dormente), REPARAM\_LOOP, PARTNER\_SELECTION\_PROTOCOL v2.1 · gate: \texttt{guardian.py --profile part2} (R3-BASE-VALIDADE BLOCKED) · registro compartilhado: 54 claims · 38 fontes · 48 N-fatos. Nota de integridade: dois defeitos da auditoria (JSON v11 truncado; sinal do bias) corrigidos e publicados --- auditoria que não publica suas correções não é auditoria.}
+
+\end{document}

@@ -1,0 +1,1 @@
+{"query":"Q1","string":"(\"cerebral organoid*\"[tiab] OR \"brain organoid*\"[tiab]) AND (prion*[tiab] OR \"Creutzfeldt-Jakob\"[tiab] OR PrPSc[tiab] OR \"PrP-res\"[tiab])","db":"pubmed","endpoint":"esearch.fcgi","count":23,"date":"2026-08-28T00:20Z"}

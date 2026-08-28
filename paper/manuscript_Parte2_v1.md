@@ -26,7 +26,7 @@ A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o 
 | M4 | Seleção de parceiro (SLR-análogo) | **método documentado para replicabilidade** — sem seleção, sem contato; existe para quem, no futuro, escolher executar | método + piloto | PARTNER_SELECTION_PROTOCOL v2.1 + log v0.2 |
 | M5 | Infraestrutura (guardião + runbook) | garantia de que a continuidade é por método, não por memória | operante | guardian.py + guardian.md |
 
-> **⏳ VALIDAÇÃO EXPRESSA PENDENTE:** esta tabela (e o reenquadramento M1→R1/M2-dormant) só se torna definitiva do texto da tese com validação expressa da autora. {{TODO:PARTE2-V2-VALIDACAO:autora valida ou ajusta a tabela reenquadrada}}
+> **✓ VALIDAÇÃO EXPRESSA DA AUTORA — REGISTRADA (28/08, no commit do merge do PR #2):** a tabela reenquadrada (M1→R1/M2-dormant/M4-método), a Base de Validade §1-bis, o inventário §8 e a declaração PRODUTO FINAL foram validadas expressamente e são definitivas.
 
 
 
@@ -45,6 +45,8 @@ O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, �
 | P4 | prognóstico | resultados | predições travadas por release antes de qualquer medição | limiares/decision-table | âncora anti-hindsight |
 | P5 | pesquisa derivada | valores razoáveis | novas perguntas/produtos derivam **imediatamente** (portas abertas) | agenda derivada [SIM] | geração, não espera |
 | P6 | confronto (opcional) | dados reais futuros, **se existirem e forem análogos** | comparação à âncora travada (nunca retreino) | passos seguintes **já avançados** | antecipação bancada |
+
+**Posição na família (related-work):** o campo dos *in-silico trials* é estabelecido (simulam **o ensaio**: pacientes virtuais, desenho, via regulatória). A ACP ocupa o espaço adjacente e complementar: simula **a continuação da pesquisa**, distinguindo-se por quatro pontos estruturais — (i) prognóstico travado por release **antes** de qualquer medição; (ii) simulação rotulada em toda saída (tiers); (iii) P6: dado real análogo ⇒ antecipação **bancada**; (iv) P5: pesquisa derivada imediata como produto de primeira classe. Mapeamento de fontes candidatas em `SKILL_SCOUT_PARTE2.md` (elevação a registro E pendente de abertura, conforme regra).
 
 **Posição na família dos métodos antecipatórios:** a ACP é irmã da meta-análise (agrega o publicado), da modelagem física (deriva comportamento) e dos in-silico trials (executa cenários) — e distingue-se por **travar prognósticos antes da medição e declarar a simulação como simulação em cada saída** (tiers [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] [claim:C047] [evidence:E032, E033]). Onde a Parte 1 demonstrou a ACP no caso V127 (Parte 1 §2–§3), a Parte 2 **é** a ACP enquanto método de continuidade [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
@@ -129,3 +131,7 @@ Parte 1: release v3.0 (manuscritos EN/PT + harness 38 fontes · 51 claims · 43 
 | `paper/guardian/guardian.py` (`--profile part2`) | gate da Parte 2 (inclui R3-BASE-VALIDADE BLOCKED) | operante |
 
 *Nota de integridade da auditoria 27/08 (tarde): dois defeitos encontrados e corrigidos no próprio ato — JSON da v11 truncado por erro de serialização (regenerado por script salvo, seed idêntica, veredito idêntico) e sinal do bias pooled invertido na prosa (−0,008 conforme o JSON; corrigido nos três documentos). Ambos registrados aqui porque a auditoria que não publica suas correções não é auditoria.*
+> ## PRODUTO FINAL — ESTA É A TESE (declaração de abertura)
+> **Este manifesto (v6) é a tese realizada.** A Parte 1 produziu os achados (manifesto v5, release v3.0); o **G0 foi validado por simulação computacional** — executado, aprovado e reproduzido em dois ambientes; e a **continuidade está realizada** nos termos da ACP (P0–P6). Os dados são **reais de pesquisa**: cinética murina publicada [E009], dados de organoide humano publicados [E007], parâmetros de transporte humano in-vivo [E010], código aberto — **parametrizados para humanos e executados em ambiente simulado**, o que garante **aproximação e expectativa quantitativas** (prognóstico falseável) sem reivindicar medição. As claims são reais e registry-bound; o ambiente é simulado; a tese é o produto. **Guardião-2 atesta** como revisor hostil nas quatro dimensões: metodologia, dados, conformidade e conteúdo.
+
+

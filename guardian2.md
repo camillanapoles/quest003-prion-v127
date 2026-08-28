@@ -10,6 +10,15 @@ O gate da Parte 2 existe para responder uma pergunta só: **"isto ainda é méto
 2. **Dados**: todo número vem de JSON arquivado ou do registro E (nunca digitado); linhagem §1-bis (quem→espécie→cruzamento→código→parametrização→resultado) íntegra; tiers rotulados.
 3. **Conformidade estrutural**: guardian.py `--profile part2` com **R3-BASE-VALIDADE BLOCKED** — a Parte 2 sem Base de Validade declarada não passa, por invariante.
 
+
+**As quatro dimensões de revisão hostil de tese (mapeamento formal):**
+| Dimensão | Como o gate-2 atesta | Check-chave |
+|---|---|---|
+| **Metodologia** | ACP P0–P6 declarada; critérios antes de resultado; anti-hindsight; rejeições publicadas | R3-BASE-VALIDADE · R3-G0SIM · eixo retórico |
+| **Dados** | linhagem §1-bis (quem→espécie→cruzamento→código→parâmetro→resultado); número só de JSON/registro; tiers | R0-drift · N-fatos · R1-NUM-UNBOUND |
+| **Conformidade** | formato de claims/evidência da skill; paridades; TODO-registry; decálogo | R0-ORPHAN · R2 · TODO-registry |
+| **Conteúdo** | §1-met a §8 íntegros; PRODUTO FINAL declarado; promessas/limites honestos | R3-CANON · R3-THETA-OPS · R3-SAP |
+
 **Gates BLOCKED permanentes do perfil part2:** R3-BASE-VALIDADE · R3-THETA-OPS · R3-SAP · R3-G0SIM · R3-CANON (mesma espinha da Parte 1 + o mandato próprio).
 
 ## §2 · COMANDOS ESSENCIAIS (copiar-colar)
@@ -51,6 +60,12 @@ python3 experiments/ws_9_v5_sweeps_gha.py --phase S1|S2
 - **Novo claim C05x**: texto normalizado→sha (norm da skill) no claims.csv + claim_texts.md + tag `[claim:Cxxx] [evidence:Exxx]` no manifesto2.
 - **Validação expressa da autora**: pendências de validação ficam como TODO (hoje: `PARTE2-V2-VALIDACAO`) e só fecham com OK dela registrado em commit.
 
+
+### Protocolo de Ciclo (diretriz da autora, 28/08) — TODO ciclo de trabalho
+1. **RELATE (antes)**: ao usuário, o que será realizado, COMO e PORQUÊ — nenhuma ação sem anúncio metódico prévio.
+2. **EXECUTE**: a ação, com o método já declarado.
+3. **AST (verificar)**: fechamento obrigatório do ciclo com verificação — `python3 experiments/ast_check.py` (6/6) ou o gate específico da superfície tocada. Ciclo sem AST não está fechado.
+
 ## §5 · MAPA DE ARTEFATOS PARTE 2
 manifesto: `paper/manuscript_Parte2_v1.md` (PT mestre) · gate: `paper/guardian/guardian.py --profile part2` + `guardian_registry_parte2.json`/`guardian_report_parte2.md` · resultados: `experiments/part2_results/` (theta_obs v1/pooled/v11 + derived_summary + partner_log) · scripts: `experiments/part2_theta_obs_*.py` · método-docs: `G0_EXECUTION_FREEZE_CHECKLIST.md` (dormant) · `REPARAM_LOOP.md` · `PARTNER_SELECTION_PROTOCOL.md` v2.1 · registro compartilhado: `paper/evidence_workspace/` (54 claims · 38 fontes · 48 N-fatos) · divergências audit: `AUDIT_NOTES.md` §part2.
 
@@ -64,3 +79,5 @@ FEITO: guardian2.md criado (réplica estrutural do guardian.md p/ conformidade d
 ESTADO: Parte 1 gate PASS 0/0 · Parte 2 gate PASS 0/0 · 54 claims/38 fontes/48 N-fatos · main @67b2ee6 sincado · TODOs: PARTE2-V2-VALIDACAO (autora), BIORXIV-ADDENDUM (autora), GATEF-SIGNATURE (lab, dormant), PARTNER-RUN/EMAIL-GROVEMAN (anexo operacional, fora da tese), COST-DECOMP (opcional)
 PRÓXIMO: (autora) validar tabela M1–M5 reenquadrada + linhagem §1-bis + inventário §8 | (agente) PDF/LaTeX da Parte 2 impecável p/ publicação
 ÂNCORA: main @67b2ee6 · predições travadas v1.0 · Parte 1 release v3.0 intacta
+
+/RECAP 2026-08-28 ~01:40 — P2/v6 idem guardian.md (FEITO incl. scout D2-related-work p/ ACP; AST 6/6; Protocolo de Ciclo) · PRÓXIMO aguarda autora (validação+posicionamento C opcional→merge) · guardião-2 íntegro

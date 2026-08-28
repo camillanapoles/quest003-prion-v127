@@ -1,6 +1,6 @@
 {
   "round": 3,
-  "n_findings": 10,
+  "n_findings": 9,
   "gate_pass": true,
   "findings": [
     {
@@ -50,13 +50,6 @@
       "severity": "NOTE",
       "where": "todo-registry",
       "issue": "TODO aberto registrado: GATEF-SIGNATURE.",
-      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
-    },
-    {
-      "id": "R3-TODO-PARTE2-V2-VALIDACAO",
-      "severity": "NOTE",
-      "where": "todo-registry",
-      "issue": "TODO aberto registrado: PARTE2-V2-VALIDACAO.",
       "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
     },
     {

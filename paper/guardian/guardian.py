@@ -271,7 +271,7 @@ class Guardian:
         for extra in ["../experiments/G0_EXECUTION_FREEZE_CHECKLIST.md",
                       "../experiments/REPARAM_LOOP.md",
                       "lab_outreach_package.md",
-                      "../THESIS_ROADMAP_2028.md"]:
+                      "../THESIS_ROADMAP.md"]:
             p = os.path.normpath(os.path.join(base, extra))
             if os.path.exists(p):
                 try:
