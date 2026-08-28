@@ -41,6 +41,10 @@ P6 & confronto (opcional) & dados reais análogos, se existirem & comparação �
 \end{tabular}
 \end{table*}
 
+
+\subsection{Formulação matemática com proveniência}
+\textbf{Transporte (ADR):} $\partial(\alpha c)/\partial t=\nabla\!\cdot\!(D_{\text{ef}}\nabla c)-\nabla\!\cdot\!(\mathbf{v}c)+S(\mathbf{x})-k_{\text{ef}}c$, com $\alpha{=}0{,}20$, $\lambda{=}1{,}8$ in-vivo [10]; $D_{\text{ef}}{=}D_0/\lambda^2{=}3{,}86{\times}10^{-11}$\,m$^2$/s ($D_0$ Stokes--Einstein, $R_h{\approx}2{,}5$\,nm); $k_{\text{ef}}$ $10^{-6}$--$10^{-5}$\,s$^{-1}$ [11]; auto-testes: massa 100\%, Thiele 0,5\% ($\ell{=}3{,}59{\approx}3{,}6$\,mm). \textbf{Capping e limiar:} $\mathrm{freeS}=(1+\kappa c_{V127})^{-2}$; $\theta\equiv(1+\kappa c_{\text{pico}})^{-1}$; contenção $=$ frente $<$50\% do baseline (T3). \textbf{Relógio humanizado [7]:} duplicação $\approx$12,1\,d; 1 unidade $=$ 144\,d. \textbf{Estimador $\theta_{\text{obs}}$:} features $(R,\log$ razão de biomassa$)$; $\hat\kappa$ NN na grade $\kappa\in\{1{,}5\text{--}8\}$; mediana por braço $n{=}8$, IC90 bootstrap; veredito pré-declarado (fronteira: bias $-0{,}008$; v1.1 rejeitada).
+
 \section{Base de Validade (mandatória)}
 \textbf{Tríade declarada:} (i) tese baseada em simulação computacional \textbf{não substitui} a validação de laboratório --- o laboratório é \textbf{essencial} para a absorção real; (ii) a continuidade provém dos prognósticos: exames laboratoriais futuros \emph{equivalentes ao simulado} significam dados e informações \textbf{já antecipados e aplicáveis imediatamente}; (iii) o rigor experimental --- como, por quem, critérios, resultados --- é convertido ao ambiente computacional com \textbf{linhagem completa de cada dado} (Tabela 2).
 
@@ -75,6 +79,10 @@ Em vez de laboratório ou teste humano, o que valida e compõe a tese neste est�
 
 \section{Promessas e limites}
 Promete: a ACP como método replicável, em parte demonstrado, para continuar pesquisa hoje --- como a física, sem parar à espera de cada confirmação. Declara: os resultados são de simulação e assim permanecem rotulados; aplicação/validação real não é prometida nesta parte; se dados reais futuros forem análogos, os passos seguintes já estão avançados (P6). Limites: julgamentos estruturados single-rater; calibração na grade atual (refinamento futuro pré-declarado = grade mais fina); divergências da ferramenta single-manuscript documentadas no AUDIT\_NOTES.
+
+
+\section{Conclusões por objetivo}
+\textbf{OE1} ACP formalizada (P0--P6; check BLOCKED próprio). \textbf{OE2} Base de Validade com linhagem completa dos seis dados. \textbf{OE3} resultados [SIM] entregues (limiar; regras; sensibilidade discriminadora; probabilístico; estimador calibrado; tabela-decisão). \textbf{OE4} continuidade como método (loop anti-hindsight; seleção SLR-análogo conforme; freeze dormente) — sem execução. \textbf{OE5} revisão hostil (gates 0/0; AST 6/6) + validação expressa da autora. \textbf{Hipóteses:} H1 corroborada em nível documental; H2 corroborada pelas predições travadas; H3 pelo posicionamento estrutural. \textbf{Síntese:} tese realizada — se dados reais forem análogos, os passos seguintes já estão avançados (P6).
 
 \section*{Inventário de artefatos (verificável em disco)}
 {\small scripts: \texttt{part2\_theta\_obs\_\{v1,pooled,v11\}.py} · resultados: \texttt{part2\_results/} (v1/pooled/v11 + derived\_summary + partner\_log) · método-docs: checklist (dormente), REPARAM\_LOOP, PARTNER\_SELECTION\_PROTOCOL v2.1 · gate: \texttt{guardian.py --profile part2} (R3-BASE-VALIDADE BLOCKED) · registro compartilhado: 54 claims · 38 fontes · 48 N-fatos. Nota de integridade: dois defeitos da auditoria (JSON v11 truncado; sinal do bias) corrigidos e publicados --- auditoria que não publica suas correções não é auditoria.}

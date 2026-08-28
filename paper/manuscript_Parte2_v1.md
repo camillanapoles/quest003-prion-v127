@@ -26,7 +26,8 @@
 3. **METODOLOGIA — o método ACP** *(conteúdo consolidado: método nomeado P0–P6; Base de Validade com linhagem; tese em forma experimental — mapeamento análogo)*
 4. **RESULTADOS — os resultados da tese são os resultados da simulação** *(conteúdo consolidado + figuras próprias — Ciclo 4)*
 5. **COMPONENTES E CONTINUIDADE** *(M1–M5 reenquadrados; seleção de parceiro como método)*
-6. **DISCUSSÃO E CONCLUSÕES POR OBJETIVO** *(Ciclo 4)*
+5. **DISCUSSÃO** (5.1 promessas/limites · 5.2 o que significa e o que não)
+6. **CONCLUSÕES POR OBJETIVO** (OE1–OE5 · H1–H3 · síntese final)
 REFERÊNCIAS · APÊNDICES (inventário de artefatos)
 
 ## LISTA DE SIGLAS
@@ -146,7 +147,7 @@ com α=0,20 e λ=1,8 medidos in-vivo por imagem óptica integrativa [10] [claim:
 
 **Capping dominante-negativo e o limiar θ** (termo próprio deste programa):
 
-freeS(r) = (1 + κ·c_V127(r))⁻² ;  c_V127(r) ∝ exp(−r/ℓ), ℓ=3,59 mm ;  **θ ≡ (1 + κ·c_pico)⁻¹ ∈ (0,1]**
+freeS(r) = (1 + κ·c_V127(r))⁻² ;  c_V127(r) ∝ exp(−r/ℓ), ℓ=3,59 mm (≈3,6 mm, forma arredondada usada na Parte 1 §2.4) ;  **θ ≡ (1 + κ·c_pico)⁻¹ ∈ (0,1]**
 
 θ é a fração de atividade máxima de replicação remanescente no pico do campo secretor; contenção declarada quando a frente assintótica cai abaixo de 50% do baseline (T3) [claim:C033] [evidence:E030]. A forma quadrática reflete conversão de dois participantes (ambos dessequestrados); a alternativa de primeira potência (heterodímero) é falseável pela dose-resposta do braço A6 [claim:C051] [evidence:E032, E033].
 
@@ -195,6 +196,13 @@ Esta é **uma tese igual em forma à tese experimental** — com "sujeito", inst
 
 ### 4.1 Os resultados da tese são os resultados da simulação já realizada
 
+**Figuras da tese** (geradas dos JSONs arquivados por scripts commitados — regra: valor só de dado):
+
+- **Figura 1** — Resposta de contenção: raio assintótico R vs κ com os tiers T2/T3 anotados (`paper/latex/figs/fig2_theta_response.png`) [claim:C038] [evidence:E032].
+- **Figura 2** — Consistência emergente de subtipos MV2>MV1 (painéis frente contida + âncoras de semente 126×, entrada sem ajuste) (`paper/latex/figs/fig3_subtypes.png`) [claim:C039] [evidence:E032, E007].
+- **Figura 3 (tabela-decisão)** — derivada sem nova simulação: κ ↔ θ_obs ↔ R ↔ razão de biomassa ↔ margem vs baseline (`experiments/part2_results/part2_derived_summary.json`; §4.1) [claim:C052] [evidence:E032, E033].
+
+
 Em vez de laboratório ou teste humano, **o que valida e compõe a tese neste estágio é o conjunto computacional executado** — completo, arquivado e reproduzido: (i) limiar de contenção θ\*=0,333 com relógio humanizado [claim:C038] [evidence:E032]; (ii) três regras de design falseáveis [claim:C033] [evidence:E030] [claim:C034] [evidence:E030, E020] [claim:C035] [evidence:E030, E019]; (iii) colheita de sensibilidade com predição discriminadora (C₅₀ 10× insensível; forma funcional falseável por dose-resposta) [claim:C051] [evidence:E032, E033]; (iv) quadro probabilístico de duas lentes com prior registry-bound [claim:C036] [evidence:E031]; (v) estimador θ_obs calibrado no regime declarado [claim:C052] [evidence:E032, E033]; (vi) reprodução independente em dois ambientes (hash + valor-a-valor); e (vii) a **tabela-decisão derivada** (κ↔θ_obs↔frente↔biomassa↔margem) extraída sem nova simulação — que mostra a margem de raio saturando cedo (70,2% já em κ=1,5) e confirma a **razão de biomassa como coordenada informativa** (48→1,25), com θ\*=0,333 como variável-de-decisão pré-registrada [claim:C052] [evidence:E032, E033]. De cada valor razoável aqui, **pesquisa derivada já pode prosseguir** — portas abertas.
 
 ### 4.2 M1 — Estimador θ_obs: o dado parametrizado como instrumento
@@ -235,6 +243,27 @@ O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Par
 ### 5.1 Promessas e limites desta Parte 2
 
 Promete: a ACP como método completo, replicável e em parte já demonstrado (M1 executado; M4 piloto) — continuar pesquisa por simulação hoje, como a física, sem parar à espera de cada confirmação. E declara: os resultados daqui **são de simulação e assim permanecem rotulados**; a aplicação/validação em ambiente real não é prometida nesta Parte — se dados reais futuros forem análogos aos simulados, **os passos seguintes já estão avançados** (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007]. **Não promete**: seleção de parceiro (execução externa), dado [ORGANOID]+ (não existe ainda — e é rotulado como tal), nem qualquer claim clínica (escada de tiers: nenhum degrau empresta a autoridade do seguinte). Limites declarados: pesos e scores são julgamento estruturado single-rater; a calibração do estimador é na grade atual (refinamento futuro = grade mais fina, pré-declarado); PubMed-direto e identificação R8 pendem como conformidade do piloto.
+
+### 5.2 Discussão: o que os resultados significam e o que não significam
+
+Os resultados [SIM] significam: (i) existe um limiar adimensional (θ\*=0,333) acima do qual o modelo contém a frente — quantidade comparável entre subtipos e, no futuro, entre meios [claim:C038] [evidence:E032]; (ii) o design é quantitativo (anel 8–12 mm; malha ≥5×; redose ≤7 d) — nenhum candidato anterior o teve [claim:C033] [evidence:E030]; (iii) o método é falseável em três frentes pré-registradas (θ medido; C50 invariância; dose-resposta do A6 discriminando a forma funcional) [claim:C051] [evidence:E032, E033]. Não significam: contenção em tecido humano medido (isso é [ORGANOID]+, inexistente); eficácia clínica; nem substituição do laboratório (§3.3). A contribuição de maior alcance é a demonstração de que a própria continuidade da pesquisa pode ser metodologicamente rigorosa sem parar à espera de confirmação — a ACP executada de ponta a ponta com revisão hostil de máquina e validação expressa da autora [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
+
+
+# CAPÍTULO 6 — CONCLUSÕES POR OBJETIVO
+
+**OE1 (nomear e formalizar a ACP) — alcançado.** ACP definida com passos P0–P6 e garantias por passo; check BLOCKED próprio no guardião (R3-BASE-VALIDADE) garante permanência [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
+
+**OE2 (Base de Validade) — alcançado.** Tríade declarada + linhagem completa dos seis dados (quem→espécie→cruzamento→código→parametrização→resultado), com referências sólidas por linha [claim:C046] [evidence:E032, E033].
+
+**OE3 (resultados como achados [SIM]) — alcançado.** Limiar θ\*=0,333; regras 1–3; sensibilidade com predição discriminadora; probabilístico de duas lentes; estimador calibrado na fronteira (bias −0,008) com a v1.1 rejeitada honestamente; tabela-decisão derivada [claim:C038] [evidence:E032] [claim:C051] [evidence:E032, E033] [claim:C052] [evidence:E032, E033].
+
+**OE4 (continuidade documentada como método, não executada) — alcançado.** Loop de re-parametrização anti-hindsight; seleção de parceiro SLR-análogo (query bank pré-registrada; PubMed-direto conforme Q1=23/Q2=2; piloto não-decisório); freeze F1–F10 dormente [claim:C053] [evidence:E033].
+
+**OE5 (revisão hostil + validação expressa) — alcançado.** Gates R0–R3 nos dois perfis, 0 BLOCKED/0 AMEND; AST executável 6/6; validação expressa da autora registrada em commit (merge do PR #2).
+
+**Hipóteses.** H1 corroborada no nível documental (o mapeamento análogo §3.4 permite leitura por examinador experimental; a banca decidirá em grau superior). H2 corroborada pelas predições travadas desde o release v1.0 e pela colheita que as refinou sem movê-las [claim:C051] [evidence:E032, E033]. H3 corroborada pelo posicionamento estrutural vs in-silico trials (Cap. 2 §2.3).
+
+**Síntese final.** A tese está realizada nos termos declarados: pesquisa continuada por simulação parametrizada sobre dados reais, com prognósticos travados antes de qualquer medição e continuidade futura documentada como método. Se dados reais vierem a ser análogos aos simulados, os passos seguintes já estão avançados (P6) — antecipação bancada, nunca pendente [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
 # APÊNDICE A — Inventário dos artefatos da Parte 2 (verificável em disco)
 

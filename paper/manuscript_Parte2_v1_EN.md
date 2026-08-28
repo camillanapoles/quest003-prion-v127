@@ -18,6 +18,9 @@ Today it is possible to **continue research by simulation** — validated publis
 
 **Family position (related-work):** the in-silico-trials field is established (they simulate **the trial**). ACP simulates **research continuation**, distinguished by four structural points: locked prognosis before measurement; simulation labeled in every output (tiers [claim:C047] [evidence:E032, E033]); P6 banked anticipation; P5 derived research as a first-class product.
 
+### 1-bis-0. Mathematical formulation with provenance
+**Transport (ADR):** ∂(αc)/∂t = ∇·(D_eff∇c) − ∇·(vc) + S(x) − k_eff·c; α=0.20, λ=1.8 in-vivo [10]; D_eff=D₀/λ²=3.86×10⁻¹¹ m²/s (D₀ Stokes–Einstein, R_h≈2.5 nm); k_eff 10⁻⁶–10⁻⁵ s⁻¹ [11]; self-tests: mass 100%, Thiele 0.5% (ℓ=3.59≈3.6 mm) [claim:C032] [evidence:E030]. **Capping/threshold:** freeS=(1+κc_V127)⁻²; θ≡(1+κc_peak)⁻¹; containment = front <50% baseline (T3) [claim:C033] [evidence:E030]. **Humanized clock [7]:** doubling ≈12.1 d; 1 unit = 144 d [claim:C037] [evidence:E032, E007]. **Estimator:** features (R, log biomass ratio); NN on κ∈{1.5–8}; per-arm median n=8, bootstrap IC90; pre-declared verdict (boundary bias −0.008; v1.1 rejected) [claim:C052] [evidence:E032, E033].
+
 ## 1-bis. Validity Basis (MANDATORY — guardian-enforced)
 
 **Triad:** (i) simulation-based thesis that **does NOT replace laboratory validation** — the laboratory is **essential** for real absorption; (ii) continuation comes from **prognoses**: if future laboratory exams are **equivalent to the simulated**, we already hold **anticipated, immediately applicable data and information**; (iii) experimental rigor — how, by whom, criteria, results — is **converted to the computational environment** with **complete data lineage** (who produced → species/system → independent cross-validation → code → parametrization → result). The six-row lineage table lives in the PT master (§1-bis) with E-IDs and claims per row [claim:C013] [evidence:E009, E011] · [claim:C037] [evidence:E032, E007] · [claim:C032] [evidence:E032] · [claim:C038] [evidence:E032].
@@ -61,3 +64,7 @@ Part 1: release v3.0. Own: `experiments/part2_results/` (theta_obs v1/pooled/v11
 
 ---
 *Part 2 [NO YEAR] — results define; phases are estimates. Every figure in this manuscript comes from archived JSON or the E-registry. Gated: guardian R0–R3 profile part2, zero BLOCKED required. PT is the master manuscript.*
+
+
+## Conclusions by objective
+**OE1** ACP formalized (P0–P6; own BLOCKED check). **OE2** Validity Basis with full lineage of the six data. **OE3** [SIM] results delivered (threshold; rules; discriminating sensitivity; probabilistic frame; calibrated estimator; decision table). **OE4** continuity as method (anti-hindsight loop; SLR-analogue selection; dormant freeze) — not executed. **OE5** hostile review (gates 0/0; AST 6/6) + author's express validation. **Hypotheses:** H1 corroborated at documentary level; H2 by locked predictions; H3 by structural positioning. **Synthesis:** thesis realized — if real data prove analogous, subsequent steps are already advanced (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
