@@ -35,6 +35,9 @@ cd paper/guardian && python3 guardian.py --round 3 --profile part2 \
 # Audit oficial (ferramenta single-manuscript — divergências em AUDIT_NOTES §part2):
 S=/workspace/projects/scientific-agent-skills/skills/scientific-writing/scripts
 python3 $S/audit_claims.py ../manuscript_Parte2_v1.md claims.csv source_manifest.json
+# AST EXECUTÁVEL (com a bateria oficial EMBUTIDA — 8/8: solver+2 gates+validate_manifest+registro+artefatos+check_consistency+check_references):
+#   python3 experiments/ast_check.py   ← rodar a TODO ciclo; A7/A7-bateria garantem que 'check_consistency não rodava' NUNCA mais escorrega
+
 # Artefatos executáveis da Parte 2:
 python3 experiments/part2_theta_obs_v1.py       # grade+calibração unitária
 python3 experiments/part2_theta_obs_pooled.py   # regime n=8 (§2.7)

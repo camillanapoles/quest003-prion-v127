@@ -72,6 +72,23 @@ run("A4 validate_manifest", a4_manifest)
 run("A5 registro ≥54/38/48", a5_registro)
 run("A6 artefatos-chave", a6_artefatos)
 
+def a7_consistency():
+    p = subprocess.run([sys.executable, os.path.join(S, "check_consistency.py"),
+                        os.path.join(R, "paper", "evidence_workspace", "consistency_manifest.json")],
+                       capture_output=True, text=True, timeout=120)
+    ok = '"errors": 0' in p.stdout
+    return ok, "errors=0 (48 N-fatos)" if ok else p.stdout[-200:]
+
+def a8_references():
+    p = subprocess.run([sys.executable, os.path.join(S, "check_references.py"),
+                        os.path.join(R, "paper", "evidence_workspace", "source_manifest.json")],
+                       capture_output=True, text=True, timeout=120)
+    ok = '"errors": 0' in p.stdout and '"warnings": 0' in p.stdout
+    return ok, "38 fontes 0/0" if ok else p.stdout[-200:]
+
+run("A7 check_consistency (bateria)", a7_consistency)
+run("A8 check_references (bateria)", a8_references)
+
 print("═" * 62)
 print("AST — ASSERTION SELF-TEST CONSOLIDADO (Parte 1 + Parte 2)")
 print("═" * 62)
