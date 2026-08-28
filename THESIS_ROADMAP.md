@@ -53,6 +53,6 @@
 
 ## ESTADO ATUAL DO PLANO (Y0-08-28)
 - **Parte 1**: FECHADA — release v3.0 (PR#1 merged); manuscritos v5 EN+PT 51=51; gates 0/0.
-- **Parte 2**: v6 — manuscrito próprio (md+PDF; PR #2, branch paper-v6): **ACP nomeada (C054; P0–P6)**; Base de Validade §1-bis (linhagem, check BLOCKED); **M2 (freeze/GATE-F) DORMANT por recorte da autora** (metodologia-somente: a tese não seleciona nem executa — portas abertas, não pendências); M4 = método SLR-análogo (piloto não-decisório, PubMed-direto conforme Q1=23/Q2=2); estimador θ_obs calibrado (v1.1 rejeitada honestamente).
+- **Parte 2**: MERGED em main (a01f8c2, PR #2, 28/08) — tese COMPLETA: v6 é o produto final (PRODUTO FINAL declarado; VALIDAÇÃO EXPRESSA da autora registrada no commit do merge): **ACP nomeada (C054; P0–P6)**; Base de Validade §1-bis (linhagem, check BLOCKED); **M2 (freeze/GATE-F) DORMANT por recorte da autora** (metodologia-somente: a tese não seleciona nem executa — portas abertas, não pendências); M4 = método SLR-análogo (piloto não-decisório, PubMed-direto conforme Q1=23/Q2=2); estimador θ_obs calibrado (v1.1 rejeitada honestamente).
 - Registro: 54 claims · 38 fontes · 48 N-fatos · gates part1+part2 0/0 · canon 42 achados.
-- Pendências: autora (PARTE2-V2-VALIDACAO; BIORXIV-ADDENDUM); agente (COST-DECOMP opcional); lab (GATEF, dormant).
+- Pendências: autora (BIORXIV-ADDENDUM da Parte 1); lab (GATEF, dormant). ~~PARTE2-V2-VALIDACAO~~ RESOLVIDA (28/08, commit do merge).

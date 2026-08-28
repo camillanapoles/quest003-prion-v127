@@ -428,3 +428,6 @@ FEITO: skill-scout scientific-**+correlatas (SKILL_SCOUT_PARTE2.md): nenhuma ski
 ESTADO: gates P1+P2 0/0 · AST 6/6 · PR#2 (paper-v6) completo: manuscrito P2 md+PDF (ACP C054) + guardian2 + scout · 54/38/48
 PRÓXIMO: (autora) PARTE2-V2-VALIDACAO + entrada-do-posicionamento-C-na-v6 (juntas) → merge PR#2 → BIORXIV P1 · (lab) GATEF dormant · (agente) fila vazia
 ÂNCORA: main@67b2ee6 · paper-v6@d71b42e(+) · v3.0 · predições v1.0
+
+
+/RECAP 2026-08-28 (merge) — PR #2 MERGED em main@a01f8c2: **TESE COMPLETA EM DUAS PARTES** (P1=v5/release v3.0; P2=v6=ACP com PRODUTO FINAL + validação expressa da autora registrada). Gates 0/0 · AST 6/6 · fila agente vazia · restam: BIORXIV (autora) + GATEF (lab, dormant)

@@ -81,3 +81,6 @@ PRÓXIMO: (autora) validar tabela M1–M5 reenquadrada + linhagem §1-bis + inve
 ÂNCORA: main @67b2ee6 · predições travadas v1.0 · Parte 1 release v3.0 intacta
 
 /RECAP 2026-08-28 ~01:40 — P2/v6 idem guardian.md (FEITO incl. scout D2-related-work p/ ACP; AST 6/6; Protocolo de Ciclo) · PRÓXIMO aguarda autora (validação+posicionamento C opcional→merge) · guardião-2 íntegro
+
+
+/RECAP 2026-08-28 (merge) — PR #2 MERGED em main@a01f8c2: **TESE COMPLETA EM DUAS PARTES** (P1=v5/release v3.0; P2=v6=ACP com PRODUTO FINAL + validação expressa da autora registrada). Gates 0/0 · AST 6/6 · fila agente vazia · restam: BIORXIV (autora) + GATEF (lab, dormant)
