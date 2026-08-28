@@ -110,3 +110,9 @@ FEITO: figuras no corpo (Fig1-3 dos JSONs) · §5.2 discussão (significa/não-s
 ESTADO: DOCUMENTO DE DOUTORADO COMPLETO — pré-textuais · Cap1 introdução formal · Cap2 fundamentação c/ 38 refs ABNT · Cap3 metodologia c/ equações · Cap4 resultados c/ figuras · Cap5 discussão · Cap6 conclusões-por-objetivo · Apêndice A · concordância 54 claims→refs · válida por estrutura padrão de tese (ficha acadêmica {{TODO:TESE-FICHA}} = única pendência interna, da autora)
 PRÓXIMO: (autora) preencher ficha acadêmica; eventual defesa; BIORXIV P1; GATEF dormant — interno: FINDADO como documento
 ÂNCORA: main@e175c68 · 54/38/48 · predições v1.0
+
+/RECAP 2026-08-28 21:00 — ZERO-DÉBITO + HOOK GARANTISTA
+FEITO: pre-commit hook (bateria A2-A8 bloqueante; --fast 7/7s; 8/8 completo p/ releases) · varredura de TODOs classificada (agente=0) · EN thesis-structure sync (front+Cap1-2+rótulos; gate 0/0) · commit PROPOSTO ATTRA VÉS DO HOOK (prova mecânica)
+ESTADO: débito agente ZERO · pendências: autora (TESE-FICHA; ADENDO-FILOSOFICO — SOLICITAR no pré-final) · executor (PARTNER-RUN/GATEF, dormant)
+PRÓXIMO: pré-final com autora (ficha+adendo) → documento FINAL único → release final → BIORXIV externo
+ÂNCORA: main@HEAD · AST 8/8 · predições v1.0

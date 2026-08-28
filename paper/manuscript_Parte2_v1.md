@@ -3,7 +3,13 @@
 
 ---
 
-**AUTORA:** Camilla N. *(correspondente)* — {{TODO:TESE-FICHA:programa de pós-graduação, área de concentração, orientadora e coorientadora — preencher}}
+**AUTORA:** Camilla N. *(correspondente)*
+
+> 🔖 **FICHA ACADÊMICA — A PREENCHER PELA AUTORA APÓS LEITURA** {{TODO:TESE-FICHA}}
+> **PROGRAMA DE PÓS-GRADUAÇÃO:** ══════════════════════════════
+> **ÁREA DE CONCENTRAÇÃO:** ══════════════════════════════
+> **ORIENTADORA:** ══════════════════════════════
+> **COORIENTADORA:** ══════════════════════════════
 **DOCUMENTO:** Parte 2 da tese (companion validado da Parte 1, release v3.0) · v1 · 2026-08-28
 **NATUREZA:** tese baseada em simulação computacional — G0 validado por simulação; dados reais de pesquisa em ambiente simulado; forma experimental análoga (§ "mapeamento análogo")
 
@@ -257,7 +263,7 @@ O método ACP aplica-se onde houver (a) base de dados publicados e validados, (b
 
 **O que deve ser mandatoriamente realizado, conforme a metodologia, para garantir resultados aplicáveis à sociedade:** (1) execução do degrau [ORGANOID] pelo protocolo congelado (F1–F10; GATE-F com assinatura de PI; estimador θ_obs com scorer cego; plano estatístico Welch/Holm; kill-switches por braço e programa); (2) degrau [MOUSE] sob as regras de pivot pré-declaradas; (3) degrau [HUMAN] exclusivamente pela via compassiva E200K com DSMB, endpoints de contenção/desaceleração, comunicação responsável às famílias e equidade de acesso à população-âncora; (4) em todos os degraus: pré-registro antes do dado, publicação do resultado negativo quando ocorrer, e rótulo de tier em toda saída. Nenhum atalho fora desta sequência produz resultado aplicável — é o que a metodologia exige e o guardião atesta.
 
-{{TODO:ADENDO-FILOSOFICO:autora fornecerá o adendo filosófico final (título, introdução e conclusão) no momento pré-final — o agente deve SOLICITÁ-LO explicitamente antes de findar o documento}}
+{{TODO:ADENDO-FILOSOFICO:autora em reflexão ISOLADA em paper/ADENDO_FILOSOFICO_CAMARA.md (agente não acessa até STATUS=DEVOLVIDO); integração nos três pontos (título/introdução/conclusão) somente com o texto dela + gates}}
 
 # CAPÍTULO 6 — DISCUSSÃO
 

@@ -1,6 +1,6 @@
 <!-- THESIS FRONT MATTER (EN mirror; PT is master) -->
 # PARAMETRIZED COMPUTATIONAL CONTINUITY OF RESEARCH IN PRION DISEASES: THE ACP METHOD APPLIED TO THE PrP-V127 THERAPEUTIC PLATFORM
-**Part 2 of the Thesis** — Author: Camilla N. · {{TODO:TESE-FICHA:academic record (PT master)}}
+**Part 2 of the Thesis** — Author: Camilla N. · 🔖 **ACADEMIC RECORD — TO BE FILLED BY THE AUTHOR AFTER READING** (see PT master)
 **Structured abstract and keywords:** see PT master (RESUMO) — EN keywords: prions; computational simulation; Parameterized Computational Anticipation; PrP-V127; Creutzfeldt–Jakob disease; research methodology; in-silico.
 **Summary:** 1 Introduction (problem/justification/questions Q1–Q3/objectives OE1–OE5/hypotheses H1–H3) · 2 Background · 3 Methodology (ACP; validity basis; analogical mapping) · 4 Results [SIM] · 5 Findings/impacts/correlated areas/next approaches (mandatory declaration) · 6 Discussion · 7 Conclusions by objective · Appendix A · References & concordance.
 
