@@ -185,10 +185,113 @@ O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Par
 
 Promete: a ACP como método completo, replicável e em parte já demonstrado (M1 executado; M4 piloto) — continuar pesquisa por simulação hoje, como a física, sem parar à espera de cada confirmação. E declara: os resultados daqui **são de simulação e assim permanecem rotulados**; a aplicação/validação em ambiente real não é prometida nesta Parte — se dados reais futuros forem análogos aos simulados, **os passos seguintes já estão avançados** (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007]. **Não promete**: seleção de parceiro (execução externa), dado [ORGANOID]+ (não existe ainda — e é rotulado como tal), nem qualquer claim clínica (escada de tiers: nenhum degrau empresta a autoridade do seguinte). Limites declarados: pesos e scores são julgamento estruturado single-rater; a calibração do estimador é na grade atual (refinamento futuro = grade mais fina, pré-declarado); PubMed-direto e identificação R8 pendem como conformidade do piloto.
 
-## Referências (herdam da Parte 1 + artefatos próprios)
+## REFERÊNCIAS E CONCORDÂNCIA
 
-Parte 1: release v3.0 (manuscritos EN/PT + harness 38 fontes · 51 claims · 43 N-fatos). Próprias: `experiments/part2_results/part2_theta_obs_{v1,pooled,v11}.json` (calibração/pooled/rejeição) · `experiments/G0_EXECUTION_FREEZE_CHECKLIST.md` · `experiments/REPARAM_LOOP.md` · `experiments/PARTNER_SELECTION_PROTOCOL.md` v2.1 + `partner_selection_log.md` v0.2 · `guardian.md` (runbook/decálogo). Claims novas desta Parte: C052 (estimador calibrado/regime pooled/v1.1 rejeitada) · C053 (método de seleção como metodologia de tese; piloto não-decide) — registro em claims.csv/claim_texts.md.
+### Referências (38 fontes do registro, geradas do manifest)
 
+[1] ASANTE, E.A. et al. A naturally occurring variant of the human prion protein completely prevents prion disease. 2015. doi:10.1038/nature14510.
+[2] MEAD, S. et al. A novel protective prion protein variant that colocalizes with kuru exposure. 2009. doi:10.1056/NEJMoa0809716.
+[3] GATDULA, J.R. et al. Leveraging the dominant-negative effect of the kuru-protective G127V prion protein variant as a novel therapeu. 2026. PMID 41757113.
+[4] ZERBES, T. et al. A self-complementary recombinant adeno-associated virus vector coding for an anchorless prion protein carrying. 2026. .
+[5] HOSSZU, L.P. et al. Structural effects of the highly protective V127 polymorphism on human prion protein. 2020. doi:10.1038/s42003-020-01126-6.
+[6] ZHENG, Z. et al. Structural basis for the complete resistance of the human prion protein mutant G127V to prion disease. 2018. doi:10.1038/s41598-018-31394-6.
+[7] GROVEMAN, B.R. et al. Sporadic Creutzfeldt-Jakob disease prion infection of human cerebral organoids. 2019. doi:10.1186/s40478-019-0742-2.
+[8] GROVEMAN, B.R. et al. Human cerebral organoids as a therapeutic drug screening model for Creutzfeldt-Jakob disease. 2021. doi:10.1038/s41598-021-84689-6.
+[9] FORNARA, B. et al. The dynamics of prion spreading is governed by the interplay between the non-linearities of tissue response an. 2024. PMID 39717079.
+[10] THORNE, R.G. et al. In vivo diffusion analysis with quantum dots and dextrans predicts extracellular space and tortuosity in brain. 2006. doi:10.1073/pnas.0509425103.
+[11] MASEL, J. et al. Quantifying the kinetic parameters of prion replication. 1999. doi:10.1016/S0301-4622(99)00004-3.
+[12] WILLIAMS, K. et al. Neural cell engraftment therapy for sporadic Creutzfeldt-Jakob disease restores neuroelectrophysiological para. 2023. doi:10.1186/s13287-023-03591-2.
+[13] RELANO-GINES, A. et al. Prion replication occurs in endogenous adult neural stem cells and alters their neuronal fate. 2013. doi:10.1371/journal.ppat.1003485.
+[14] GINHOUX, F. et al. Fate mapping analysis reveals that hematopoietic cells of yolk-sacil origin give rise to microglia. 2010. doi:10.1126/science.1194637.
+[15] SORRELLS, S.F. et al. Human hippocampal neurogenesis drops sharply in children to undetectable levels in adults. 2018. doi:10.1038/s41586-018-0336-4.
+[16] ABUD, E.M. et al. iPSC-derived human microglia-like cells to study neurological diseases. 2017. PMID 28426964.
+[17] HAN, X. et al. Generation of hypoimmunogenic human pluripotent stem cells. 2019. doi:10.1073/pnas.1902566116.
+[18] HU, X. et al. Hypoimmune induced pluripotent stem cells survive long-term in fully immunocompetent allogeneic rhesus macaque. 2024. doi:10.1038/s41587-023-01784-x.
+[19] XUE, Y. et al. Lipid nanoparticles enhance mRNA delivery to the central nervous system upon intrathecal injection. 2025. PMID 40317512.
+[20] LIANG, Y. et al. The survival of engrafted neural stem cells within hyaluronic acid hydrogels. 2013. PMID 23623429.
+[21] SHAH, S.Z. et al. Early minocycline and late FK506 treatment improves survival... in prion-infected hamsters (RETRACTED). 2017. doi:10.1007/s13311-020-00909-3.
+[22] CHENG, S. et al. Minocycline reduces neuroinflammation but does not improve survival in prion-infected mice. 2015. doi:10.1038/srep10535.
+[23] GENTILE, J.E. et al. Evidence that minocycline treatment confounds neurofilament light chain biomarker interpretation. 2024. https://www.ukdri.ac.uk/publications/evidence-minocycline-treatment-confounds-interpretation-neurofilament-biomarker.
+[24] SMID, J. et al. Creutzfeldt-Jakob disease associated with a missense mutation at codon 200 of the prion protein gene in Brazil. 2007. https://www.demneuropsy.com.br/article/creutzfeldt-jakob-disease-associated-with-a-missense-mutation-at-codon-200-of-the-prion-protein-gene-in-brazil/.
+[25] STOPSCHINSKI, B.E. et al. Prion-like mechanisms in neurodegenerative disease. 2017. doi:10.1016/S1474-4422(17)30370-6.
+[26] JUCKER, M. et al. Propagation and spread of pathogenic protein assemblies in neurodegenerative diseases. 2018. doi:10.1038/s41586-018-0344-4.
+[27] FDA, (.F. et al. FDA grants accelerated approval of tofersen for SOD1-ALS (press release/decision summary). 2023. https://www.fda.gov/news-events/press-announcements/fda-grants-accelerated-approval-first-treatment-als-patients-rare-genetic-form-disease.
+[28] FDA, (.F. et al. FDA approval of nusinersen (Spinraza) — regulatory record. 2016. https://www.fda.gov/vaccines-blood-biologics/approved-blood-products/spinraza-nusinersen.
+[29] BENGTSSON, S. et al. Clinical trial of stem-cell derived dopaminergic progenitor transplantation in Parkinson's disease (feasibilit. 2026. https://www.newscientist.com/article/....
+[30] OPEN, P.&. et al. WS-7: ADR transport solver — self-tested design rules (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127.
+[31] OPEN, P.&. et al. WS-8: hierarchical Bayesian calibration over structural analogues (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127.
+[32] OPEN, P.&. et al. WS-9: humanized in-silico infection model with V127 capping (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127.
+[33] OPEN, P.&. et al. Quest 003 repository — timestamped pre-registrations and audit trail (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127.
+[34] GESCHWIND, M.D. et al. Quinacrine treatment trial for sporadic Creutzfeldt-Jakob disease (Class I: no survival benefit). 2013. PMID 24122181.
+[35] HAIK, S. et al. Doxycycline in Creutzfeldt-Jakob disease: a phase 2, randomised, double-blind, placebo-controlled trial (no si. 2014. PMID 24411709.
+[36] NEWMAN, P.K. et al. Postmortem findings in a case of variant CJD treated with intraventricular pentosan polysulfate (iPPS): biolog. 2014. PMID 24554103.
+[37] OTTO, M. et al. Efficacy of flupirtine on cognitive function in patients with CJD: a double-blind placebo-controlled study (co. 2004. doi:10.1212/01.WNL.0000113764.35026.ef.
+[38] MEAD, S. et al. Prion protein monoclonal antibody (PRN100) therapy for Creutzfeldt-Jakob disease: evaluation of a first-in-hum. 2022. PMID 35305340.
+
+### Fontes complementares (skill-scout; verificação completa pendente — snippet-level)
+- CORTÉS-RÍOS, J. et al. A step-by-step workflow for performing in silico clinical trials. 2025. PMCID PMC12706418. *(abertura completa pendente antes de registro E)*
+- An open source statistical web application for validation of in-silico trials and virtual cohorts. 2025. doi:10.1038/s41598-025-99720-3. *(idem)*
+
+### Concordância claims → referências (régua da autora: claim sem referência é inaceitável)
+
+| Claim | Evidências | Referências |
+|---|---|---|
+| C001 | E001 | [1] |
+| C002 | E001 | [1] |
+| C003 | E001, E003, E005 | [1], [3], [5] |
+| C004 | E002 | [2] |
+| C005 | E003 | [3] |
+| C006 | E003 | [3] |
+| C007 | E004 | [4] |
+| C008 | E005, E006 | [5], [6] |
+| C009 | E007 | [7] |
+| C010 | E007 | [7] |
+| C011 | E007 | [7] |
+| C012 | E008 | [8] |
+| C013 | E009 | [9] |
+| C014 | E010, E030 | [10], [30] |
+| C015 | E011, E030 | [11], [30] |
+| C016 | E012 | [12] |
+| C017 | E013 | [13] |
+| C018 | E014 | [14] |
+| C019 | E015 | [15] |
+| C020 | E016 | [16] |
+| C021 | E017, E018 | [17], [18] |
+| C022 | E019 | [19] |
+| C023 | E020 | [20] |
+| C024 | E021 | [21] |
+| C025 | E022 | [22] |
+| C026 | E023 | [23] |
+| C027 | E024 | [24] |
+| C028 | E025, E026 | [25], [26] |
+| C029 | E027 | [27] |
+| C030 | E028 | [28] |
+| C031 | E029 | [29] |
+| C032 | E030 | [30] |
+| C033 | E030 | [30] |
+| C034 | E030, E020 | [30], [20] |
+| C035 | E030, E019 | [30], [19] |
+| C036 | E031 | [31] |
+| C037 | E032, E007 | [32], [7] |
+| C038 | E032 | [32] |
+| C039 | E032, E007 | [32], [7] |
+| C040 | E033 | [33] |
+| C041 | E033 | [33] |
+| C042 | E030 | [30] |
+| C043 | E032, E009 | [32], [9] |
+| C044 | E032 | [32] |
+| C045 | E033 | [33] |
+| C046 | E032, E009, E007, E033 | [32], [9], [7], [33] |
+| C047 | E032, E033 | [32], [33] |
+| C048 | E009, E010, E030, E031, E032, E033 | [9], [10], [30], [31], [32], [33] |
+| C049 | E032, E033 | [32], [33] |
+| C050 | E021, E022, E034, E035, E036, E037, E038 | [21], [22], [34], [35], [36], [37], [38] |
+| C051 | E032, E033 | [32], [33] |
+| C052 | E032, E033 | [32], [33] |
+| C053 | E033 | [33] |
+| C054 | E009, E010, E031, E032, E033, E007 | [9], [10], [31], [32], [33], [7] |
+
+---
 ---
 *Parte 2 [SEM ANO] — o resultado define; as fases são estimativas. Toda cifra deste manuscrito vem de JSON arquivado ou do registro E (regra: nunca digitar valor). Gated: guardian R0–R3, 0 BLOCKED exigido.*
 
