@@ -282,7 +282,7 @@ class Guardian:
         for t in sorted(fmt):
             self.flag(f"R3-TODO-{t}", "NOTE", "todo-registry",
                       f"TODO aberto registrado: {t}.", "Resolver e remover o marcador (o relatório lista todos a cada gate).")
-        loose = [m.start() for m in _re.finditer(r"TODO", body)
+        loose = [m.start() for m in _re.finditer(r"(?<![A-Za-zÀ-ÿ])TODO(?![A-Za-zÀ-ÿ])", body)
                  if not _re.match(r"\{\{TODO:[^:}]+:", body[max(0,m.start()-2):m.start()+30])]
         if loose:
             self.flag("R3-TODO-LOOSE", "AMEND", "manuscript+tex",
