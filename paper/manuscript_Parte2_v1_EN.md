@@ -66,5 +66,5 @@ Part 1: release v3.0. Own: `experiments/part2_results/` (theta_obs v1/pooled/v11
 *Part 2 [NO YEAR] — results define; phases are estimates. Every figure in this manuscript comes from archived JSON or the E-registry. Gated: guardian R0–R3 profile part2, zero BLOCKED required. PT is the master manuscript.*
 
 
-## Conclusions by objective
+## Chapter 7 — Conclusions by objective
 **OE1** ACP formalized (P0–P6; own BLOCKED check). **OE2** Validity Basis with full lineage of the six data. **OE3** [SIM] results delivered (threshold; rules; discriminating sensitivity; probabilistic frame; calibrated estimator; decision table). **OE4** continuity as method (anti-hindsight loop; SLR-analogue selection; dormant freeze) — not executed. **OE5** hostile review (gates 0/0; AST 6/6) + author's express validation. **Hypotheses:** H1 corroborated at documentary level; H2 by locked predictions; H3 by structural positioning. **Synthesis:** thesis realized — if real data prove analogous, subsequent steps are already advanced (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
