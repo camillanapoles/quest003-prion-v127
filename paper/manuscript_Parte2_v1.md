@@ -26,8 +26,9 @@
 3. **METODOLOGIA — o método ACP** *(conteúdo consolidado: método nomeado P0–P6; Base de Validade com linhagem; tese em forma experimental — mapeamento análogo)*
 4. **RESULTADOS — os resultados da tese são os resultados da simulação** *(conteúdo consolidado + figuras próprias — Ciclo 4)*
 5. **COMPONENTES E CONTINUIDADE** *(M1–M5 reenquadrados; seleção de parceiro como método)*
-5. **DISCUSSÃO** (5.1 promessas/limites · 5.2 o que significa e o que não)
-6. **CONCLUSÕES POR OBJETIVO** (OE1–OE5 · H1–H3 · síntese final)
+5. **ACHADOS, IMPACTOS E ÁREAS CORRELATAS; PRÓXIMAS ABORDAGENS** (5.1 achados/impactos · 5.2 correlatas · 5.3 declaração mandatória)
+6. **DISCUSSÃO** (6.1 promessas/limites · 6.2 significa/não-significa)
+7. **CONCLUSÕES POR OBJETIVO** (OE1–OE5 · H1–H3 · síntese)
 REFERÊNCIAS · APÊNDICES (inventário de artefatos)
 
 ## LISTA DE SIGLAS
@@ -238,18 +239,39 @@ Replicabilidade posterior: qualquer pesquisador re-executa as strings, re-tria, 
 
 O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Parte 2 tem contrato próprio de gate (mesmo registro de pendências estruturado, baterias e binding de números citados; sem herdar os padrões literais da Parte 1), e a **Base de Validade (§1-bis) é check BLOCKED permanente** neste perfil. Toda superfície de manuscrito é gated por revisão hostil recursiva (R0 drift estrutural · R1 checklist+baterias · R2 recursão de emendas · R3 interrogação epistêmica + registro {{TODO:id:desc}}); o decálogo vivo (tiers de dado · locked-stays-locked · ilustrativo≠evidência · paridade · anti-hindsight · fim-de-sessão=/RECAP) está no guardian.md com comandos copy-paste — a continuidade não depende de memória de quem continua, e sim de método documentado — índice-mestre no KNOWLEDGE_CANON.md.
 
-# CAPÍTULO 5 — DISCUSSÃO
+# CAPÍTULO 5 — ACHADOS, IMPACTOS E ÁREAS CORRELATAS; PRÓXIMAS ABORDAGENS
 
-### 5.1 Promessas e limites desta Parte 2
+### 5.1 Achados e impactos
+
+**Achados [SIM] consolidados:** o limiar adimensional θ\*=0,333 (contenção acima dele, monotônica à quase-extinção) [claim:C038] [evidence:E032]; três regras de design quantitativas (anel 8–12 mm; malha ≥5×r_p; redose ≤7 d) [claim:C033] [evidence:E030]; a predição discriminadora (a dose-resposta do braço A6 distingue a unidade inibitória molecular) [claim:C051] [evidence:E032, E033]; o estimador θ_obs calibrado na fronteira de decisão [claim:C052] [evidence:E032, E033]; e a tabela-decisão derivada (biomassa como coordenada informativa; raio saturado).
+
+**Impactos por camada:** (i) *direto (DCJ)* — primeiro dimensionamento quantitativo de entrega para uma doença 100% fatal, com população-âncora E200K-Brasil e rota compassiva acelular desenhada; (ii) *plataforma (prion-like: AD/PD, >50M)* — o cálculo (campo secretor → limiar → posicionamento → calendário) é agnóstico de proteína, transferível como framework de design — explicitamente gerador-de-hipótese; (iii) *meta-científico* — a ACP demonstrada de ponta a ponta com auditoria de máquina: como continuar pesquisa com rigor antes e independente da confirmação [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
+
+### 5.2 Áreas correlatas com a mesma usabilidade
+
+O padrão ACP aplica-se onde houver (a) base de dados publicados e validados, (b) motor determinístico auditável e (c) decisão de pesquisa sob incerteza: farmacologia de doenças raras (priorização de dose/rota antes do primeiro animal); oncologia depreciação de combinações (ordenação de candidatos antes do ensaio); doenças neurodegenerativas prion-like (o caso direto); toxicologia/regulação (in-silico first, na linha dos frameworks regulatórios emergentes); e qualquer programa que precise decidir *o que medir, onde e em que dose* antes de gastar recurso — a função-objetivo da própria ACP.
+
+### 5.3 Próximas abordagens (declaração mandatória conforme metodologia)
+
+**Este trabalho foi realizado com base simulada.** Faz-se **necessário o laboratório experimental e testes humanos para validação** — a simulação não substitui nem substituirá essa etapa (§3.3). Contudo, **assim que dados humanos forem encontrados — independentemente dos valores que exibam — eles podem ser parametrizados contra os valores aqui obtidos** (loop de re-parametrização, Cap. metodologia), o que **já representa um passo à frente na pesquisa**: dado análogo confirma a antecipação (passos seguintes já avançados, P6); dado divergente recalibra exatamente o que informa, com a predição anterior preservada como âncora — em ambos os casos, conhecimento novo bancado [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
+
+**O que deve ser mandatoriamente realizado, conforme a metodologia, para garantir resultados aplicáveis à sociedade:** (1) execução do degrau [ORGANOID] pelo protocolo congelado (F1–F10; GATE-F com assinatura de PI; estimador θ_obs com scorer cego; plano estatístico Welch/Holm; kill-switches por braço e programa); (2) degrau [MOUSE] sob as regras de pivot pré-declaradas; (3) degrau [HUMAN] exclusivamente pela via compassiva E200K com DSMB, endpoints de contenção/desaceleração, comunicação responsável às famílias e equidade de acesso à população-âncora; (4) em todos os degraus: pré-registro antes do dado, publicação do resultado negativo quando ocorrer, e rótulo de tier em toda saída. Nenhum atalho fora desta sequência produz resultado aplicável — é o que a metodologia exige e o guardião atesta.
+
+{{TODO:ADENDO-FILOSOFICO:autora fornecerá o adendo filosófico final (título, introdução e conclusão) no momento pré-final — o agente deve SOLICITÁ-LO explicitamente antes de findar o documento}}
+
+# CAPÍTULO 6 — DISCUSSÃO
+
+
+### 6.1 Promessas e limites desta Parte 2
 
 Promete: a ACP como método completo, replicável e em parte já demonstrado (M1 executado; M4 piloto) — continuar pesquisa por simulação hoje, como a física, sem parar à espera de cada confirmação. E declara: os resultados daqui **são de simulação e assim permanecem rotulados**; a aplicação/validação em ambiente real não é prometida nesta Parte — se dados reais futuros forem análogos aos simulados, **os passos seguintes já estão avançados** (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007]. **Não promete**: seleção de parceiro (execução externa), dado [ORGANOID]+ (não existe ainda — e é rotulado como tal), nem qualquer claim clínica (escada de tiers: nenhum degrau empresta a autoridade do seguinte). Limites declarados: pesos e scores são julgamento estruturado single-rater; a calibração do estimador é na grade atual (refinamento futuro = grade mais fina, pré-declarado); PubMed-direto e identificação R8 pendem como conformidade do piloto.
 
-### 5.2 Discussão: o que os resultados significam e o que não significam
+### 6.2 Discussão: o que os resultados significam e o que não significam
 
 Os resultados [SIM] significam: (i) existe um limiar adimensional (θ\*=0,333) acima do qual o modelo contém a frente — quantidade comparável entre subtipos e, no futuro, entre meios [claim:C038] [evidence:E032]; (ii) o design é quantitativo (anel 8–12 mm; malha ≥5×; redose ≤7 d) — nenhum candidato anterior o teve [claim:C033] [evidence:E030]; (iii) o método é falseável em três frentes pré-registradas (θ medido; C50 invariância; dose-resposta do A6 discriminando a forma funcional) [claim:C051] [evidence:E032, E033]. Não significam: contenção em tecido humano medido (isso é [ORGANOID]+, inexistente); eficácia clínica; nem substituição do laboratório (§3.3). A contribuição de maior alcance é a demonstração de que a própria continuidade da pesquisa pode ser metodologicamente rigorosa sem parar à espera de confirmação — a ACP executada de ponta a ponta com revisão hostil de máquina e validação expressa da autora [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
 
-# CAPÍTULO 6 — CONCLUSÕES POR OBJETIVO
+# CAPÍTULO 7 — CONCLUSÕES POR OBJETIVO
 
 **OE1 (nomear e formalizar a ACP) — alcançado.** ACP definida com passos P0–P6 e garantias por passo; check BLOCKED próprio no guardião (R3-BASE-VALIDADE) garante permanência [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
