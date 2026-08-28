@@ -249,7 +249,7 @@ O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Par
 
 ### 5.2 Áreas correlatas com a mesma usabilidade
 
-O padrão ACP aplica-se onde houver (a) base de dados publicados e validados, (b) motor determinístico auditável e (c) decisão de pesquisa sob incerteza: farmacologia de doenças raras (priorização de dose/rota antes do primeiro animal); oncologia depreciação de combinações (ordenação de candidatos antes do ensaio); doenças neurodegenerativas prion-like (o caso direto); toxicologia/regulação (in-silico first, na linha dos frameworks regulatórios emergentes); e qualquer programa que precise decidir *o que medir, onde e em que dose* antes de gastar recurso — a função-objetivo da própria ACP.
+O método ACP aplica-se onde houver (a) base de dados publicados e validados, (b) motor determinístico auditável e (c) decisão de pesquisa sob incerteza: farmacologia de doenças raras (priorização de dose/rota antes do primeiro animal); oncologia — triagem de combinações (ordenação de candidatos antes do ensaio); doenças neurodegenerativas prion-like (o caso direto); toxicologia/regulação (in-silico first, na linha dos frameworks regulatórios emergentes); e qualquer programa que precise decidir *o que medir, onde e em que dose* antes de gastar recurso — a função-objetivo da própria ACP.
 
 ### 5.3 Próximas abordagens (declaração mandatória conforme metodologia)
 
