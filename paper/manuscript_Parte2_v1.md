@@ -30,6 +30,43 @@ A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o 
 
 
 
+### 1.1 Problema
+
+A pesquisa translacional em doenças raras fatais paralisa-se num dilema: sem dado clínico não há financiamento; sem previsão quantitativa, o dado clínico é desperdiçado. Nos príons, esse dilema produziu seis fracassos clínicos sequenciais sem modelo de entrega que os orientasse. A Parte 1 resolveu a metade quantitativa (cálculo de contenção com limiar travado); resta o problema da **continuidade**: como uma tese avança **hoje**, com método, quando a validação de laboratório é essencial mas não é pré-requisito para produzir conhecimento?
+
+### 1.2 Justificativa
+
+Três razões. (i) **Epistêmica**: simulação parametrizada com dados reais publicados é prognóstico — opera em tempo futuro e não depende de ano; interrompê-la à espera de confirmação reduziria a produção de conhecimento (como a física teórica não esperou testar cada predição). (ii) **Ética/econômica**: cada experimento wet-lab desperdiçado em príon custa meses e recursos escassos; decidir *o que medir, onde e em que dose antes de gastar* é responsabilidade metodológica. (iii) **Metodológica**: as ferramentas (revisão sistemática auditável, código aberto, bayesiana hierárquica, pré-registro) hoje permitem rigor documental equivalente ao experimental — faltava formalizá-lo como método com nome e passos.
+
+### 1.3 Questões de pesquisa
+
+- **Q1.** É possível formalizar um método de continuidade de pesquisa por simulação computacional com o mesmo rigor documental de uma tese experimental?
+- **Q2.** Esse método, aplicado ao caso V127, produz resultados próprios (não meros planos) com validade declarada e linhagem completa?
+- **Q3.** Como tal método se posiciona e se diferencia da família existente de métodos antecipatórios (meta-análise, in-silico trials)?
+
+### 1.4 Objetivos
+
+**Geral.** Formalizar, demonstrar e documentar a ACP — Antecipação Computacional Parametrizada — como método de continuidade de pesquisa por simulação, realizando a Parte 2 da tese sobre os achados da Parte 1.
+
+**Específicos.**
+- **OE1** — Nomear e formalizar a ACP com passos P0–P6 e garantias por passo [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
+- **OE2** — Estabelecer a Base de Validade: tríade declarada + linhagem completa dos dados (Cap. 3) [claim:C046] [evidence:E032, E033].
+- **OE3** — Entregar os resultados da tese como os achados [SIM] realizados: limiar, regras, sensibilidade, probabilístico, estimador [claim:C038] [evidence:E032] [claim:C051] [evidence:E032, E033] [claim:C052] [evidence:E032, E033].
+- **OE4** — Documentar a continuidade futura como método replicável (loop de re-parametrização; seleção de parceiro SLR-análogo; freeze dormant) sem executá-la [claim:C053] [evidence:E033].
+- **OE5** — Submeter o conjunto a revisão hostil de máquina (guardião R0–R3, dois perfis) e validação expressa da autora.
+
+### 1.5 Hipóteses
+
+- **H1 (metodológica).** A ACP é formalizável com rigor documental equivalente ao experimental — *predição discriminadora*: um examinador de tese experimental consegue auditá-la trocando apenas os termos do mapeamento análogo (§ Cap. 3) sem perdê-la.
+- **H2 (de caso).** A aplicação ACP ao caso V127 gera resultados próprios falsificáveis independentes de medição — *predições travadas desde o release v1.0*: θ<0,33 ⇒ contenção; C50 insensível 10×; dose-resposta do braço A6 distingue a forma funcional do capping [claim:C051] [evidence:E032, E033].
+- **H3 (de posicionamento).** A ACP ocupa espaço estrutural distinto dos in-silico trials (que simulam o ensaio): prognóstico travado antes da medição; simulação rotulada; antecipação bancada; pesquisa derivada imediata.
+
+### 1.6 Estrutura do documento
+
+Cap. 2 fundamentação (Ciclo 2) · Cap. 3 metodologia (ACP; Base de Validade; mapeamento análogo) · Cap. 4 resultados [SIM] · Cap. 5 componentes e continuidade · Cap. 6 discussão e conclusões por objetivo (Ciclo 4) · Referências completas (Ciclo 2) · Apêndices.
+
+---
+
 ## 1-met. O método nomeado: ACP — Antecipação Computacional Parametrizada (*Parameterized Computational Anticipation*)
 
 O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, é possível **continuar pesquisa por simulação** — com dados publicados e validados como insumo, execução determinística auditável e prognósticos travados antes de qualquer medição — sem que isso substitua ou espere o laboratório. **Declaração de eixo retórico (obrigatória em toda a Parte 2):** tudo aqui **é simulação, e é dito que é**; não prometemos aplicar nem validar na Parte 2 — antes: **se dados reais vierem a exibir resultados análogos aos simulados, os passos seguintes já terão sido dados** — a antecipação estará bancada, não pendente [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
@@ -151,6 +188,45 @@ Parte 1: release v3.0 (manuscritos EN/PT + harness 38 fontes · 51 claims · 43 
 | `paper/guardian/guardian.py` (`--profile part2`) | gate da Parte 2 (inclui R3-BASE-VALIDADE BLOCKED) | operante |
 
 *Nota de integridade da auditoria 27/08 (tarde): dois defeitos encontrados e corrigidos no próprio ato — JSON da v11 truncado por erro de serialização (regenerado por script salvo, seed idêntica, veredito idêntico) e sinal do bias pooled invertido na prosa (−0,008 conforme o JSON; corrigido nos três documentos). Ambos registrados aqui porque a auditoria que não publica suas correções não é auditoria.*
+# PARAMETRIZAÇÃO COMPUTACIONAL PARA CONTINUIDADE DE PESQUISA EM DOENÇAS PRIÔNICAS: O MÉTODO ACP APLICADO À PLATAFORMA TERAPÊUTICA PrP-V127
+## Parte 2 da Tese — Continuidade Metodológica Realizada
+
+---
+
+**AUTORA:** Camilla N. *(correspondente)* — {{TODO:TESE-FICHA:programa de pós-graduação, área de concentração, orientadora e coorientadora — preencher}}
+**DOCUMENTO:** Parte 2 da tese (companion validado da Parte 1, release v3.0) · v1 · 2026-08-28
+**NATUREZA:** tese baseada em simulação computacional — G0 validado por simulação; dados reais de pesquisa em ambiente simulado; forma experimental análoga (§ "mapeamento análogo")
+
+---
+
+## RESUMO
+
+**Introdução.** Doenças priônicas são 100% fatais e seis candidatos clínicos fracassaram sem modelo quantitativo de entrega. A Parte 1 desta tese construiu, por auditoria sistemática, física de transporte, calibração bayesiana e simulação humanizada, uma plataforma de contenção terapêutica (PrP-V127) com limiar adimensional θ*=0,333 — executada, aprovada e reproduzida em dois ambientes computacionais. **Objetivo.** Esta Parte 2 formaliza e realiza a continuidade: (i) nomeia e formaliza o método de pesquisa que a sustenta — a ACP (Antecipação Computacional Parametrizada), passos P0–P6; (ii) estabelece a Base de Validade com linhagem completa de cada dado (quem→espécie→validação cruzada→código→parametrização→resultado); (iii) declara a tese em forma experimental análoga, na qual o sujeito da pesquisa é o conjunto papers+fontes+código+simulação; (iv) entrega os resultados da tese como os próprios achados [SIM] já executados; e (v) documenta, como método replicável, a seleção futura de parceiros (SLR-análogo) sem executá-la. **Método.** ACP P0–P6 sobre base E-registrada (38 fontes), motores determinísticos auto-testados (conservação de massa 100%; erro de Thiele 0,5%), colheita sob critérios pré-declarados, prognósticos travados por release antes de qualquer medição, estimador θ_obs calibrado por simulação (veredito pré-declarado; fronteira de decisão com bias −0,008; v1.1 interpolada testada e rejeitada), guardião recursivo R0–R3 em dois perfis de superfície. **Resultados.** Limiar θ*=0,333; três regras de design; colheita de sensibilidade com predição discriminadora (C50 insensível em faixa 10×; forma funcional falseável por dose-resposta); quadro probabilístico de duas lentes com prior registry-bound; tabela-decisão derivada κ↔θ↔frente↔biomassa (margem de raio satura cedo; biomassa é a coordenada informativa); registro de 54 claims, 38 fontes, 48 fatos numéricos com validação por máquina. **Conclusão.** A tese está realizada nos termos da ACP: continuar pesquisa por simulação parametrizada sem substituir o laboratório — se dados reais futuros forem análogos aos simulados, os passos seguintes já estarão avançados (P6, antecipação bancada).
+
+**Palavras-chave:** príons; simulação computacional; Antecipação Computacional Parametrizada; PrP-V127; doença de Creutzfeldt-Jakob; metodologia de pesquisa; in-silico.
+
+## ABSTRACT
+
+*(companion EN — manuscript_Parte2_v1_EN.md; keywords: prions; computational simulation; Parameterized Computational Anticipation; PrP-V127; Creutzfeldt-Jakob disease; research methodology; in-silico)*
+
+## SUMÁRIO
+
+1. **INTRODUÇÃO** (este capítulo)
+2. **FUNDAMENTAÇÃO — o campo dos métodos antecipatórios e dos in-silico trials** *(a completar — Ciclo 2: revisão estruturada com as 38 fontes formatadas ABNT)*
+3. **METODOLOGIA — o método ACP** *(conteúdo consolidado: método nomeado P0–P6; Base de Validade com linhagem; tese em forma experimental — mapeamento análogo)*
+4. **RESULTADOS — os resultados da tese são os resultados da simulação** *(conteúdo consolidado + figuras próprias — Ciclo 4)*
+5. **COMPONENTES E CONTINUIDADE** *(M1–M5 reenquadrados; seleção de parceiro como método)*
+6. **DISCUSSÃO E CONCLUSÕES POR OBJETIVO** *(Ciclo 4)*
+REFERÊNCIAS · APÊNDICES (inventário de artefatos)
+
+## LISTA DE SIGLAS
+
+ACP — Antecipação Computacional Parametrizada · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · κ — força de capping · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · WB — western blot · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade
+
+---
+
+# CAPÍTULO 1 — INTRODUÇÃO
+
 > ## PRODUTO FINAL — ESTA É A TESE (declaração de abertura)
 > **Este manifesto (v6) é a tese realizada.** A Parte 1 produziu os achados (manifesto v5, release v3.0); o **G0 foi validado por simulação computacional** — executado, aprovado e reproduzido em dois ambientes; e a **continuidade está realizada** nos termos da ACP (P0–P6). Os dados são **reais de pesquisa**: cinética murina publicada [E009], dados de organoide humano publicados [E007], parâmetros de transporte humano in-vivo [E010], código aberto — **parametrizados para humanos e executados em ambiente simulado**, o que garante **aproximação e expectativa quantitativas** (prognóstico falseável) sem reivindicar medição. As claims são reais e registry-bound; o ambiente é simulado; a tese é o produto. **Guardião-2 atesta** como revisor hostil nas quatro dimensões: metodologia, dados, conformidade e conteúdo.
 
