@@ -90,3 +90,9 @@ FEITO: Parte 2 BILÍNGUE (companion EN integral: PRODUTO FINAL·[NO YEAR]·ACP P
 ESTADO: TESE COMPLETA E BILÍNGUE — releases v3.0 (P1) + v6.0 (P2: PT+EN) · gates 4 superfícies 0/0 · AST 6/6 · registro 54/38/48
 PRÓXIMO: externo apenas — BIORXIV (autora) · GATEF (lab, dormant) — internamente, FINDADA
 ÂNCORA: main@9102c36 · v3.0/v6.0 · predições v1.0
+
+/RECAP 2026-08-28 03:40 — Ciclo 2 FECHADO (após 3 tentativas honestas)
+FEITO: Cap.2 Fundamentação (corroborado pelas 38 fontes; herança=lógica correta; in-silico trials c/ 2 complementares em verificação) · REFERÊNCIAS COMPLETAS 38 ABNT programáticas do manifest + CONCORDÂNCIA 54 claims→refs (régua: claim sem referência = inaceitável — atendida) · RECONSTRUÇÃO CANÔNICA do documento (pré-textuais→Cap1→Cap2→metodo→resultados→componentes→refs; esqueleto verificado linha a linha) · gates 0/0
+ESTADO: documento de tese ~70% (faltam: Ciclo 3 = renumerar Cap.3-4 + EQUAÇÕES da metodologia; Ciclo 4 = figuras próprias em resultados + discussão/conclusões-por-objetivo + EN sincronizar; PDFs regenerar ao final)
+PRÓXIMO: Ciclo 3 (equações ADR/freeS/calibração com procedência por parâmetro no corpo) — depois Ciclo 4 e /RECAP de fechamento do documento
+ÂNCORA: main@HEAD · registro 54/38/48 · predições v1.0
