@@ -42,21 +42,17 @@
 
 ## SUMÁRIO
 
-1. **INTRODUÇÃO** (este capítulo)
-2. **FUNDAMENTAÇÃO — o campo dos métodos antecipatórios e dos in-silico trials** *(a completar — Ciclo 2: revisão estruturada com as 38 fontes formatadas ABNT)*
-3. **METODOLOGIA — o método da etrização** *(conteúdo consolidado: método nomeado P0–P6; Base de Validade com linhagem; tese em forma experimental — mapeamento análogo)*
-4. **RESULTADOS — os resultados da tese são os resultados da simulação** *(conteúdo consolidado + figuras próprias — Ciclo 4)*
-5. **COMPONENTES E CONTINUIDADE** *(M1–M5 reenquadrados; seleção de parceiro como método)*
-5. **ACHADOS, IMPACTOS E ÁREAS CORRELATAS; PRÓXIMAS ABORDAGENS** (5.1 achados/impactos · 5.2 correlatas · 5.3 declaração mandatória)
-6. **DISCUSSÃO** (6.1 promessas/limites · 6.2 significa/não-significa)
-7. **CONCLUSÕES POR OBJETIVO** (OE1–OE5 · H1–H3 · síntese)
-REFERÊNCIAS · APÊNDICES (inventário de artefatos)
+**NOTA À LEITURA** — Sobre o termo Etrização ························ pré-textual
 
-## LISTA DE SIGLAS
+1. **INTRODUÇÃO** — Problema · Justificativa · Questões Q1-Q3 · Objetivos (Geral + OE1-OE5) · Hipóteses H1-H3 · Estrutura
+2. **FUNDAMENTAÇÃO** — Gargalo terapêutico (6 falhas registry-bound) · Métodos antecipatórios e in-silico trials · Posicionamento da etrização · Síntese
+3. **METODOLOGIA** — O método nomeado: etrização computacional P0-P6 · Formulação matemática (ADR, freeS, θ, relógio, estimador) · Base de Validade (linhagem) · Tese em forma experimental (mapeamento análogo)
+4. **RESULTADOS** — Resultados [SIM] da simulação realizada · Figuras · Componentes (estimador, freeze dormant, loop, seleção como método, infraestrutura)
+5. **ACHADOS, IMPACTOS E ÁREAS CORRELATAS; PRÓXIMAS ABORDAGENS** — Achados · Impactos por camada · Áreas correlatas · Declaração mandatória (base simulada + lab necessário + dados humanos = passo à frente)
+6. **DISCUSSÃO** — Promessas e limites · O que os resultados significam e não significam
+7. **CONCLUSÕES POR OBJETIVO** — OE1-OE5 alcançados · Hipóteses H1-H3 · Síntese final
 
-ETRIZAÇÃO — neologismo composicional: estado ontológico de conhecimento simulado com dados reais, ainda não validado empiricamente, capaz de fundamentar pesquisa futura · ETRIZAÇÃO — o estado de conhecimento simulado-baseado-em-dados-reais, potencialmente-realizável · etrização — etrização computacional · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · κ — força de capping · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · WB — western blot · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade
-
----
+REFERÊNCIAS (38 fontes ABNT + concordância 54 claims→refs) · APÊNDICE A — Inventário de artefatos
 
 # CAPÍTULO 1 — INTRODUÇÃO
 
