@@ -1,4 +1,4 @@
-# PARAMETRIZAÇÃO COMPUTACIONAL PARA CONTINUIDADE DE PESQUISA EM DOENÇAS PRIÔNICAS: O MÉTODO ACP APLICADO À PLATAFORMA TERAPÊUTICA PrP-V127
+# ETRIZAÇÃO COMPUTACIONAL PARA CONTINUIDADE DE PESQUISA EM DOENÇAS PRIÔNICAS: O MÉTODO ACP APLICADO À PLATAFORMA TERAPÊUTICA PrP-V127
 ## Parte 2 da Tese — Continuidade Metodológica Realizada
 
 ---
@@ -18,6 +18,15 @@
 > ## NOTA À LEITURA — SOBRE O TERMO *ETRIZAÇÃO*
 >
 > Este documento introduz o termo **etrização** como neologismo científico composicional intencional. O radical *etr-* evoca, por extração morfológica deliberada (não derivação etimológica), a evolução *essere→estre→être* da raiz indo-europeia \*es- ('ser') — o **potencial de vir a ser** — e o *atrium* latino — a **antecâmara** entre o virtual e o real. **Etrização** nomeia o estado do conhecimento que esta tese produz e entrega: um sistema operacionalizado computacionalmente a partir de dados reais publicados, estruturalmente robusto e preditivamente informativo, **ainda não validado empiricamente** — e por isso mesmo capaz de fundamentar as pesquisas subsequentes que o atualizarão. Como o 'átomo' nomeou antes da prova um objeto que fundou ciência, 'etrização' nomeia o processo que produz objetos-conceito operacionais na saúde. O método que a produz, com seus passos e garantias, é a ACP (Cap. 3); a operação técnica central é a parametrização com proveniência (§3.2). Cinco critérios distinguem uma etrização de mera simulação — cadeia de dados explícita, transposição justificada, incerteza quantificada, escopo delimitado, transição condicionada — **todos cumpridos e auditáveis nesta tese**. E, como mandato: toda a simulação aqui se alimenta exclusivamente de fatos e dados amplamente divulgados na literatura publicada [claim:C054] [evidence:E009, E010, E007, E031, E032, E033].
+
+
+> ### NOTA À LEITURA — SOBRE O TERMO ETRIZAÇÃO
+>
+> Este documento introduz o termo **etrização** como neologismo científico composicional intencional. O radical *etr-* evoca, por extração morfológica deliberada (não derivação etimológica), a evolução *essere→estre→être* da raiz indo-europeia **\*es-** ('ser') — o **potencial de vir a ser** — e o *atrium* latino — a **antecâmara** entre o virtual e o real. **Etrização** nomeia o estado do conhecimento que esta tese produz e entrega: um sistema operacionalizado computacionalmente a partir de dados reais publicados, estruturalmente robusto e preditivamente informativo, **ainda não validado empiricamente** — e por isso mesmo capaz de fundamentar as pesquisas subsequentes que o atualizarão.
+>
+> Como o 'átomo' nomeou, antes da prova, um objeto que fundou ciência, 'etrização' nomeia o processo que produz objetos-conceito operacionais na saúde. O **método** que a produz, com seus passos e garantias, é a **ETRIZAÇÃO — neologismo: o estado de conhecimento simulado-baseado-em-dados-reais, potencialmente-realizável · ACP — Antecipação Computacional Parametrizada** (Cap. 3); a **operação técnica** central é a **parametrização com proveniência** (§3.2). Cinco critérios distinguem uma etrização de mera simulação — cadeia de dados explícita, transposição justificada, incerteza quantificada, escopo delimitado, transição condicionada — **todos cumpridos e auditáveis nesta tese**.
+>
+> **Nota da autora (mandato):** toda a simulação aqui se alimenta exclusivamente de fatos e dados amplamente divulgados na literatura — cinética murina publicada, dados de organoide humano, parâmetros de transporte humano in-vivo — com parametrização referenciada em fatos e dados publicados. Nenhum dado foi inventado.
 
 ## RESUMO
 
@@ -43,7 +52,7 @@ REFERÊNCIAS · APÊNDICES (inventário de artefatos)
 
 ## LISTA DE SIGLAS
 
-ETRIZAÇÃO — neologismo composicional: estado ontológico de conhecimento simulado com dados reais, ainda não validado empiricamente, capaz de fundamentar pesquisa futura · ACP — Antecipação Computacional Parametrizada · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · κ — força de capping · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · WB — western blot · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade
+ETRIZAÇÃO — neologismo composicional: estado ontológico de conhecimento simulado com dados reais, ainda não validado empiricamente, capaz de fundamentar pesquisa futura · ETRIZAÇÃO — neologismo: o estado de conhecimento simulado-baseado-em-dados-reais, potencialmente-realizável · ACP — Antecipação Computacional Parametrizada · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · κ — força de capping · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · WB — western blot · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade
 
 ---
 
@@ -70,10 +79,10 @@ Três razões. (i) **Epistêmica**: simulação parametrizada com dados reais pu
 
 ### 1.4 Objetivos
 
-**Geral.** Formalizar, demonstrar e documentar a ETRIZAÇÃO — neologismo composicional: estado ontológico de conhecimento simulado com dados reais, ainda não validado empiricamente, capaz de fundamentar pesquisa futura · ACP — Antecipação Computacional Parametrizada — como método de continuidade de pesquisa por simulação, realizando a Parte 2 da tese sobre os achados da Parte 1: previsibilidade e antecipação de informação para decisão de pesquisa (o que medir, onde, em que dose, antes de gastar recurso).
+**Geral.** Formalizar, demonstrar e documentar a ETRIZAÇÃO — neologismo composicional: estado ontológico de conhecimento simulado com dados reais, ainda não validado empiricamente, capaz de fundamentar pesquisa futura · ETRIZAÇÃO — neologismo: o estado de conhecimento simulado-baseado-em-dados-reais, potencialmente-realizável · ACP — Antecipação Computacional Parametrizada — como método de continuidade de pesquisa por simulação, realizando a Parte 2 da tese sobre os achados da Parte 1: previsibilidade e antecipação de informação para decisão de pesquisa (o que medir, onde, em que dose, antes de gastar recurso).
 
 **Específicos.**
-- **OE1** — Nomear e formalizar a ACP com passos P0–P6 e garantias por passo [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
+- **OE1** — Nomear e formalizar a ACP com passos P0–P6 e garantias por passo; nomear o produto como **etrização** [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 - **OE2** — Estabelecer a Base de Validade: tríade declarada + linhagem completa dos dados (Cap. 3) [claim:C046] [evidence:E032, E033].
 - **OE3** — Entregar os resultados da tese como os achados [SIM] realizados: limiar, regras, sensibilidade, probabilístico, estimador [claim:C038] [evidence:E032] [claim:C051] [evidence:E032, E033] [claim:C052] [evidence:E032, E033].
 - **OE4** — Documentar a continuidade futura como método replicável (loop de re-parametrização; seleção de parceiro SLR-análogo; freeze dormant) sem executá-la [claim:C053] [evidence:E033].
@@ -128,7 +137,9 @@ O campo oferece mecanismo validado em quatro níveis [1][3][4][5], plataforma de
 
 # CAPÍTULO 3 — METODOLOGIA
 
-### 3.1 O método nomeado: ETRIZAÇÃO — neologismo composicional: estado ontológico de conhecimento simulado com dados reais, ainda não validado empiricamente, capaz de fundamentar pesquisa futura · ACP — Antecipação Computacional Parametrizada (*Parameterized Computational Anticipation*)
+### 3.1 O método nomeado: ACP — Antecipação Computacional Parametrizada (*Parameterized Computational Anticipation*)
+
+**Arquitetura de três camadas:** **etrização** é o estado/produto ontológico — o que esta tese entrega e rotula; **ACP** é o método que produz etrizações com garantias (P0–P6); **parametrização** é a operação técnica central do passo P1 (proveniência por parâmetro, §3.2). As três palavras coexistem sem sinonímia: a receita não é o bolo, mas o bolo só existe pela receita.
 
 **Arquitetura terminológica de três camadas:** **etrização** é o estado/produto ontológico que esta tese entrega (o que ela É — no título); **ACP** é o método que produz etrizações com garantias P0–P6; e **parametrização** é a operação técnica P1 dentro da ACP (§3.2). Três palavras, três camadas, zero conflito.
 
@@ -297,7 +308,7 @@ Os resultados [SIM] significam: (i) existe um limiar adimensional (θ\*=0,333) a
 
 **Hipóteses.** H1 corroborada no nível documental (o mapeamento análogo §3.4 permite leitura por examinador experimental; a banca decidirá em grau superior). H2 corroborada pelas predições travadas desde o release v1.0 e pela colheita que as refinou sem movê-las [claim:C051] [evidence:E032, E033]. H3 corroborada pelo posicionamento estrutural vs in-silico trials (Cap. 2 §2.3).
 
-**Síntese final.** A tese está realizada nos termos declarados: pesquisa continuada por simulação parametrizada sobre dados reais, com prognósticos travados antes de qualquer medição e continuidade futura documentada como método. Se dados reais vierem a ser análogos aos simulados, os passos seguintes já estão avançados (P6) — antecipação bancada, nunca pendente [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
+**Síntese final.** Esta tese é uma **etrização** — realizada, rotulada e auditável: o método ACP produziu-a com garantias (P0–P6), a partir exclusivamente de dados reais publicados, e a entrega como prognóstico falseável pronto para ser confrontado quando (e se) o dado real chegar. A tese está realizada nos termos declarados: pesquisa continuada por simulação parametrizada sobre dados reais, com prognósticos travados antes de qualquer medição e continuidade futura documentada como método. Se dados reais vierem a ser análogos aos simulados, os passos seguintes já estão avançados (P6) — antecipação bancada, nunca pendente [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
 # APÊNDICE A — Inventário dos artefatos da Parte 2 (verificável em disco)
 
