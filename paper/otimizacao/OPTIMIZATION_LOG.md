@@ -26,3 +26,9 @@ Executado no commit deste ciclo (hook A2–A8 bloqueante). Resultado registrado 
 
 ### Fix (2026-08-29 03:1x)
 - CSV batch2 havia sido truncado por vírgula extra no campo query (C-B2-007) quebrou o reescritor no commit anterior; reescrito íntegro (16 linhas, assert de integridade) e re-dedupe aplicado. Erro registrado — mesma classe não deve repetir (campos sempre sem vírgula livre ou quotados).
+
+## Batch 3 (2026-08-29 04:24) — executado NA WORKTREE EXECUTOR
+- Layout novo: alterações do executor em /root/DeepScientist/quests/003-executor (branch `executor`, deriva de otimizacao-pqms-batch1); checkout 003 volta a main (locked, limpa).
+- 14 candidatos: epidemiologia de elite (Crane 2024 JAMA Neurol; Watson 2021 Nat Rev Neurol), estruturas cryo-EM (Manka 2022 NatCommun 187cit / Manka 2023 / Wang 2021 SciAdv E196K / Lee 2024 / EMDB EMD-0931), regulatório MIDD (Madabushi 2022 235cit; FDA M15 guidance; FDA MIDD program; Sheng 2025).
+- FDA M15 + Madabushi = âncora regulatória formal para §4.3 (geometria regulatória) — fortalece P4.4/P2.2.
+- DALYs GBD: número direto AINDA não retornado (busca dedicada no batch 4 — "IHME GBD results prion"); TODO mantido sem fabricação.
