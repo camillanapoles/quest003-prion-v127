@@ -41,3 +41,9 @@ Executado no commit deste ciclo (hook A2–A8 bloqueante). Resultado registrado 
 ## Ciclo 5 (2026-08-29 ~17h) — worktree executor
 - Batch 5: 8 candidatos (Cummings 2025 NatCommun 78cit; Zheng 2025; Kakoti 2022; Ramasubbu 2024 QSP; Joshi 2023; Bhat 2025 52cit; Lakhan 2025).
 - Camada 2 do claim-a-claim: verify_doi_exact.py (DOI crossref + PMID/PMCID eutils) — resolve os 11 DIVERGE do fuzzy; títulos EXATOS capturados para o merge (títulos parafraseados no CSV serão substituídos pelos exatos na incorporação).
+
+## Ciclo de débitos (2026-08-29 ~17h30) — gate discipline (mandato: continuidade by gate event)
+- D-03 FECHADO: binding_draft_claim_a_claim.csv (49 vínculos fonte→destino/claim rascunhados).
+- D-02 FECHADO: verification_status_consolidado.csv (fuzzy+exato+esearch em um só registro).
+- D-01 BLOCKED-TECH: browser do dispositivo sem permissão overlay (2 tentativas falharam); VizHub exige extração interativa. Desbloqueio: (a) autora habilita "exibir sobre outros apps" p/ o app do agente → eu extraio; (b) autora extrai manualmente (VizHub: Cause=Prion diseases; Measure=DALYs; Location=Global; Age=All ages; Year=2021 → valor+IC) e informa; (c) CSV exportado do VizHub anexado.
+- REGRA ATIVA: batch 6 suspenso até D-01 resolvido (ou reclassificado pela autora como dispensável p/ P2.1).
