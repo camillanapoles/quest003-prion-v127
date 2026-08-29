@@ -32,3 +32,8 @@ Executado no commit deste ciclo (hook A2–A8 bloqueante). Resultado registrado 
 - 14 candidatos: epidemiologia de elite (Crane 2024 JAMA Neurol; Watson 2021 Nat Rev Neurol), estruturas cryo-EM (Manka 2022 NatCommun 187cit / Manka 2023 / Wang 2021 SciAdv E196K / Lee 2024 / EMDB EMD-0931), regulatório MIDD (Madabushi 2022 235cit; FDA M15 guidance; FDA MIDD program; Sheng 2025).
 - FDA M15 + Madabushi = âncora regulatória formal para §4.3 (geometria regulatória) — fortalece P4.4/P2.2.
 - DALYs GBD: número direto AINDA não retornado (busca dedicada no batch 4 — "IHME GBD results prion"); TODO mantido sem fabricação.
+
+## Batch 4 (2026-08-29 16:39) — worktree executor
+- 12 candidatos: fontes-de-dados GBD (GHDx/VizHub/capstone Lancet), falhas terapêuticas clássicas (quinacrine Ghaemmaghami 2009; Teruya 2017; anle138b+IND24 Shim 2022; cepa resistente Beauchemin 2021; PRN100 Minikel 2024), open-science (Dudda 2025; Petersen 2022; RSOS 2025 reprodutor computacional).
+- DALY prion: confirmado que exige VizHub interativo — anexo P2.1 atualizado com MÉTODO de extração (sem fabricação).
+- NOVO: verify_crossref.py — verificação automática de metadados por título (api.crossref.org) → verification_report.csv (camada 1 do claim-a-claim).

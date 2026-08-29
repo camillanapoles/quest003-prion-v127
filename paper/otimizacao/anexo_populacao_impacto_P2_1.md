@@ -10,7 +10,7 @@
 - Subpopulações: esporádica (85–95% dos casos investigados — Health Infobase Canada, C-B2-003) / genética (P102L, E200K, D178N) / iatrogênica / variante.
 
 ## 2. Carga de doença (DALYs) — método, não resultado
-- {{TODO:P2.1-DALY:fonte direta ainda não retornada — buscar IHME GBD 2021 causa "prion diseases" no batch 3; incidência acima já é citável}}
+- DALYs prion: **extração por consulta interativa obrigatória** no VizHub GBD Results (C-B4-002), métrica DALYs, causa "prion diseases" — registrar valor + ano GBD + data-de-validade. Número não existe em página estática (batches 3 e 4 confirmaram) — NÃO fabricar.
 - Registrar ano do GBD usado (data-de-validade, coerente com Cap.5.1 da Parte 2).
 
 ## 3. Critério mensurável de mudança de prática (pós-gate de organoides)
