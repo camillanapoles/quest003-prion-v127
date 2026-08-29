@@ -54,6 +54,11 @@
 
 REFERÊNCIAS (38 fontes ABNT + concordância 54 claims→refs) · APÊNDICE A — Inventário de artefatos
 
+
+## LISTA DE SIGLAS
+
+ETRIZAÇÃO/etrização computacional — o método nomeado desta tese (neologismo composicional; en: Computational Etrization) · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · κ — força de capping · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · WB — western blot · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade · ADR — advecção–difusão–reação · ECS — espaço extracelular
+
 # CAPÍTULO 1 — INTRODUÇÃO
 
 > ## PRODUTO FINAL — ESTA É A TESE (declaração de abertura)
@@ -127,7 +132,7 @@ A agregação do publicado (meta-análise/revisão sistemática), a derivação 
 
 A etrização ocupa o espaço complementar: simula **a continuação da pesquisa**, distinta por quatro diferenciais estruturais — (i) prognóstico travado por release **antes** da medição (anti-hindsight como requisito, não virtude); (ii) simulação rotulada em toda saída (tiers); (iii) P6: dado real análogo ⇒ antecipação **bancada**; (iv) P5: pesquisa derivada imediata como produto de primeira classe. A herança metodológica é explícita: a tese emerge da própria pesquisa (Parte 1) e **herda sua lógica e suas claims** — corroborando-as e ampliando com o que somar (fontes complementares em verificação).
 
-### 2.5 Fundamento epistemológico: a etrização como operação ontológica
+### 2.4 Fundamento epistemológico: a etrização como operação ontológica
 
 A etrização não é apenas um nome — é uma **tese epistemológica** implícita: a de que a simulação computacional baseada em dados reais publicados constitui uma forma **legítima e autônoma de produção de conhecimento**, distinta tanto da hipótese (que especula sem executar) quanto do experimento (que mede mas é caro, lento e às vezes eticamente impossível). Como a física teórica produz conhecimento válido antes do teste experimental, a etrização produz **prognóstico quantitativo validável** antes do laboratório.
 
@@ -135,7 +140,7 @@ A etrização não é apenas um nome — é uma **tese epistemológica** implíc
 
 **O que a etrização acrescenta à filosofia da ciência da saúde:** a saúde não tem, na sua taxonomia metodológica, uma categoria para o conhecimento potencial-verificável. A hierarquia de evidência salta de hipótese para experimento; os frameworks existentes (in-silico trials, QSP, PBPK) descrevem **métodos**, não **estados ontológicos do conhecimento**. A etrização preenche essa lacuna: nomeia o estado do que a saúde já produz (simulações preditivas com dados reais) mas não reconhecia como forma própria de conhecimento. Ao nomeá-lo, **o legitima** — e ao legitimá-lo com critérios (5 requisitos da §3.1), o disciplinariza.
 
-### 2.4 Síntese
+### 2.5 Síntese
 
 O campo oferece mecanismo validado em quatro níveis [1][3][4][5], plataforma de âncora humana [7][8], parâmetros de transporte in vivo [10], cinética aberta [9] e um registro de fracassos que calibra honestamente o prior [33–38] — e a família de métodos oferece os instrumentos. O que faltava — e esta tese fornece — é o método nomeado que converte esse acervo em continuidade.
 
