@@ -37,3 +37,7 @@ Executado no commit deste ciclo (hook A2–A8 bloqueante). Resultado registrado 
 - 12 candidatos: fontes-de-dados GBD (GHDx/VizHub/capstone Lancet), falhas terapêuticas clássicas (quinacrine Ghaemmaghami 2009; Teruya 2017; anle138b+IND24 Shim 2022; cepa resistente Beauchemin 2021; PRN100 Minikel 2024), open-science (Dudda 2025; Petersen 2022; RSOS 2025 reprodutor computacional).
 - DALY prion: confirmado que exige VizHub interativo — anexo P2.1 atualizado com MÉTODO de extração (sem fabricação).
 - NOVO: verify_crossref.py — verificação automática de metadados por título (api.crossref.org) → verification_report.csv (camada 1 do claim-a-claim).
+
+## Ciclo 5 (2026-08-29 ~17h) — worktree executor
+- Batch 5: 8 candidatos (Cummings 2025 NatCommun 78cit; Zheng 2025; Kakoti 2022; Ramasubbu 2024 QSP; Joshi 2023; Bhat 2025 52cit; Lakhan 2025).
+- Camada 2 do claim-a-claim: verify_doi_exact.py (DOI crossref + PMID/PMCID eutils) — resolve os 11 DIVERGE do fuzzy; títulos EXATOS capturados para o merge (títulos parafraseados no CSV serão substituídos pelos exatos na incorporação).
