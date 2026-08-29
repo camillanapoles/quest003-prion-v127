@@ -120,6 +120,8 @@ A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o 
 
 # CAPÍTULO 2 — FUNDAMENTAÇÃO
 
+Este capítulo situa a tese no contexto científico: primeiro o problema biomédico que a motiva (o gargalo terapêutico priônico), depois a família de métodos à qual ela se junta (os métodos antecipatórios e in-silico trials), e finalmente o posicionamento único que a etrização ocupa nesse panorama.
+
 ### 2.1 Doenças priônicas: o gargalo terapêutico que motiva a continuidade
 
 As doenças priônicas humanas são neurodegenerativas, transmissíveis e universalmente fatais; a forma esporádica (sCJD) mata em meses. A base molecular do programa — a variante G127V selecionada pela epidemia de kuru [6], a resistência completa do homozigoto V127 [1], a ressalva do heterozigoto (infectável por vCJD) [1], o efeito dominante-negativo dose-dependente [1][3][5] e sua persistência em trans sem âncora GPI [3] com prova-de-conceito AAV in vivo [4] — constitui o núcleo validado em quatro níveis (população→camundongo→cultura→gene-terapia). O gargalo histórico éterapêutico, não mecanístico: **seis candidatos clínicos fracassaram sem modelo quantitativo de entrega** — quinacrina [35], doxiciclina [36], pentosan-polissulfato intraventricular [37], flupirtina [38], PRN100 [34] e minociclina [33] (com o ensaio retraído [21] excluído por regra) — todos agora **registry-bound** (concordância completa no fim deste documento). A plataforma organoide humana [7][8] fornece as âncoras que humanizam o relógio da simulação; a cinética murina publicada com código aberto [9] e o transporte intersticial humano in vivo [10] completam a base paramétrica.
@@ -132,7 +134,35 @@ A agregação do publicado (meta-análise/revisão sistemática), a derivação 
 
 A etrização ocupa o espaço complementar: simula **a continuação da pesquisa**, distinta por quatro diferenciais estruturais — (i) prognóstico travado por release **antes** da medição (anti-hindsight como requisito, não virtude); (ii) simulação rotulada em toda saída (tiers); (iii) P6: dado real análogo ⇒ antecipação **bancada**; (iv) P5: pesquisa derivada imediata como produto de primeira classe. A herança metodológica é explícita: a tese emerge da própria pesquisa (Parte 1) e **herda sua lógica e suas claims** — corroborando-as e ampliando com o que somar (fontes complementares em verificação).
 
-### 2.4 Fundamento epistemológico: a etrização como operação ontológica
+### 2.4 Fundamento epistemológico
+
+```
+ANALOGIA DO ÁTOMO: COMO UMA PALAVRA FUNDA CIÊNCIA
+═════════════════════════════════════════════════
+
+  Demócrito (~400 a.C.)              │  Esta tese (2026)
+  ──────────────────────────         │  ──────────────────────────
+  Propôs "átomos" = indivisível      │  Propõe "etrização" = vir-a-ser computacional
+  SEM evidência experimental         │  SEM validação laboratorial
+  Coerência lógica + poder           │  Coerência matemática + dados reais
+  explicativo                        │  publicados
+       │                             │       │
+       ↓ 2.400 anos                  │       ↓ (começa agora)
+       │                             │       │
+  Dalton (1803): evidência           │  Dado humano futuro: se análogo,
+  Rutherford (1911): modelo          │  antecipação já está BANCADA (P6)
+  Bohr (1913): refinamento           │
+  Quarks (1964): "indivisível"       │  E se NÃO for análogo?
+  estava ERRADO — mas a palavra      │  → recalibra o que informa;
+  fundou 2.400 anos de pesquisa      │    predição anterior preservada
+  que transformou a civilização      │    como âncora
+                                      │
+
+  → O paralelo não é com o átomo-como-objeto
+  → É com o átomo-como-PALAVRA que tornou pesquisável o invisível
+  → Etrização torna pesquisável o ainda-não-medido
+```
+: a etrização como operação ontológica
 
 A etrização não é apenas um nome — é uma **tese epistemológica** implícita: a de que a simulação computacional baseada em dados reais publicados constitui uma forma **legítima e autônoma de produção de conhecimento**, distinta tanto da hipótese (que especula sem executar) quanto do experimento (que mede mas é caro, lento e às vezes eticamente impossível). Como a física teórica produz conhecimento válido antes do teste experimental, a etrização produz **prognóstico quantitativo validável** antes do laboratório.
 
@@ -147,6 +177,57 @@ O campo oferece mecanismo validado em quatro níveis [1][3][4][5], plataforma de
 ---
 
 # CAPÍTULO 3 — METODOLOGIA
+
+Este capítulo define o método da tese: a etrização computacional, seus passos formais P0–P6, suas equações com proveniência de cada parâmetro, sua Base de Validade (mandatória) e o mapeamento análogo que permite à tese ser lida com o mesmo rigor documental de uma tese experimental.
+
+### 3.0 Diagrama do pipeline (P0-P6)
+
+```
+PIPELINE DA ETRIZAÇÃO COMPUTACIONAL (P0-P6)
+════════════════════════════════════════════
+
+    ┌─────────────────────────────────────────────────────────┐
+    │  P0: IDENTIFICAÇÃO                                       │
+    │  SLR auditada de dados publicados validados             │
+    │  → base E-registrada com linhagem completa               │
+    └─────────────────────┬───────────────────────────────────┘
+                          ↓
+    ┌─────────────────────────────────────────────────────────┐
+    │  P1: PARAMETRIZAÇÃO                                      │
+    │  Derivação física/estatística com proveniência            │
+    │  → modelos parametrizados (cada número amarra a fonte)  │
+    └─────────────────────┬───────────────────────────────────┘
+                          ↓
+    ┌─────────────────────────────────────────────────────────┐
+    │  P2: EXECUÇÃO                                            │
+    │  Motores determinísticos auto-testados                   │
+    │  → runs arquivados {SIM} (reprodução entre ambientes)   │
+    └─────────────────────┬───────────────────────────────────┘
+                          ↓
+    ┌─────────────────────────────────────────────────────────┐
+    │  P3: COLHEITA                                             │
+    │  Critérios pré-declarados (veredito sem meta móvel)      │
+    │  → resultados {SIM} + margens                            │
+    └─────────────────────┬───────────────────────────────────┘
+                          ↓
+    ┌─────────────────────────────────────────────────────────┐
+    │  P4: PROGNÓSTICO                                          │
+    │  Predições travadas por release ANTES da medição        │
+    │  → limiares / tabela-decisão (âncora anti-hindsight)     │
+    └─────────────────────┬───────────────────────────────────┘
+                          ↓
+    ┌─────────────────────────────────────────────────────────┐
+    │  P5: PESQUISA DERIVADA                                    │
+    │  Novas perguntas prosseguem IMEDIATAMENTE                │
+    │  → geração, não espera (portas abertas)                  │
+    └─────────────────────┬───────────────────────────────────┘
+                          ↓ (opcional, se dados reais chegarem)
+    ┌─────────────────────────────────────────────────────────┐
+    │  P6: CONFRONTO                                            │
+    │  Dados reais análogos? → passos seguintes JÁ AVANÇADOS  │
+    │  (antecipação BANCADA, nunca pendente de validação)     │
+    └─────────────────────────────────────────────────────────┘
+```
 
 ### 3.1 O método nomeado: etrização computacional (*Computational Etrization*)
 
@@ -207,7 +288,29 @@ freeS(r) = (1 + κ·c_V127(r))⁻² ;  c_V127(r) ∝ exp(−r/ℓ), ℓ=3,59 mm 
 **Por que isto é ciência com referências sólidas:** toda célula da linhagem amarra a fonte peer-reviewed ou ao run arquivado com hash; nenhum número vive fora do registro (51 claims · 38 fontes · 48 N-fatos · 4 validadores em zero); o código é aberto e o guardião audita máquina-a-máquina — a cadeia **quem→espécie→cruzamento→código→parâmetro→resultado** é verificável de ponta a ponta, exatamente como um "métodos" experimental exige, só que executada em ambiente computacional e declarada com a mesma disciplina.
 
 
-### 3.4 A tese em forma experimental — o mapeamento análogo (diretriz da autora, 28/08)
+### 3.4 A tese em forma experimental
+
+```
+MAPEAMENTO ANÁLOGO: TESE EXPERIMENTAL ↔ TESE ETRIZADA
+═══════════════════════════════════════════════════════
+
+  TESE EXPERIMENTAL (com pessoas)     │  ESTA TESE (etrização)
+  ────────────────────────────────    │  ────────────────────────────
+  Participantes recrutados            │  Fontes publicadas (38 E-registradas)
+  Critérios de inclusão/exclusão      │  SLR auditada (query bank pré-registrada)
+  Consentimento/aprovação ética       │  Proveniência aberta (identifier confirmado)
+  Instrumentos de medição calibrados  │  Código auto-testado (massa 100%, ℓ err 0,5%)
+  Protocolo experimental executado   │  P1 parametrização + P2 execução determinística
+  Eventos/dados coletados             │  Runs arquivados {SIM} (reprodução 2 ambientes)
+  Prontuário/documentação clínica     │  Registro da tese (54 claims, 48 N-fatos)
+  Análise estatística pré-especificada│  P3 colheita + estimador θ_obs calibrado
+  Consequências/implicações           │  P4 prognóstico + P5 derivada + P6 antecipação
+  Auditoria/supervisão                │  Guardião-2 (4 dimensões de revisão hostil)
+
+  → Basta trocar: pessoa→fonte, instrumento→código, coleta→run
+  → A forma documental é IDÊNTICA; a base é simulação computacional
+```
+ — o mapeamento análogo (diretriz da autora, 28/08)
 
 Esta é **uma tese igual em forma à tese experimental** — com "sujeito", instrumentos, coleta, documentos e implicações documentados como um protocolo com pessoas documenta seus participantes. A diferença é uma só: **em vez de pessoas, o sujeito da pesquisa é o conjunto papers + fontes + código + simulação** — e cada elemento é documentado exatamente como o seria numa tese de laboratório. O dado produzido permanece rotulado [SIM] (a semântica dos tiers não muda; muda quem desempenha cada papel):
 
@@ -227,6 +330,8 @@ Esta é **uma tese igual em forma à tese experimental** — com "sujeito", inst
 *Um examinador que sabe ler tese experimental sabe ler esta: basta trocar "pessoa" por "fonte", "instrumento" por "código", "coleta" por "run" — a forma documental é idêntica; a base é simulação computacional.*
 
 # CAPÍTULO 4 — RESULTADOS
+
+Este capítulo apresenta os resultados da tese — que são os próprios achados da simulação já realizada: limiar de contenção, regras de design, sensibilidade discriminadora, estimador calibrado, tabela-decisão, e os cinco componentes metodológicos que sustentam a continuidade.
 
 ### 4.1 Os resultados da tese são os resultados da simulação já realizada
 
@@ -274,6 +379,8 @@ O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Par
 
 # CAPÍTULO 5 — ACHADOS, IMPACTOS E ÁREAS CORRELATAS; PRÓXIMAS ABORDAGENS
 
+Este capítulo responde à pergunta "e daí?": consolida os achados, mapeia os impactos em camadas, identifica as áreas correlatas onde o mesmo método é aplicável, e declara — mandatoriamente — o que vem a seguir.
+
 ### 5.1 Achados e impactos
 
 **Achados [SIM] consolidados:** o limiar adimensional θ\*=0,333 (contenção acima dele, monotônica à quase-extinção) [claim:C038] [evidence:E032]; três regras de design quantitativas (anel 8–12 mm; malha ≥5×r_p; redose ≤7 d) [claim:C033] [evidence:E030]; a predição discriminadora (a dose-resposta do braço A6 distingue a unidade inibitória molecular) [claim:C051] [evidence:E032, E033]; o estimador θ_obs calibrado na fronteira de decisão [claim:C052] [evidence:E032, E033]; e a tabela-decisão derivada (biomassa como coordenada informativa; raio saturado).
@@ -284,6 +391,17 @@ O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Par
 
 O método da etrização aplica-se onde houver (a) base de dados publicados e validados, (b) motor determinístico auditável e (c) decisão de pesquisa sob incerteza: farmacologia de doenças raras (priorização de dose/rota antes do primeiro animal); oncologia — triagem de combinações (ordenação de candidatos antes do ensaio); doenças neurodegenerativas prion-like (o caso direto); toxicologia/regulação (in-silico first, na linha dos frameworks regulatórios emergentes); e qualquer programa que precise decidir *o que medir, onde e em que dose* antes de gastar recurso — a função-objetivo da própria etrização.
 
+### 5.2-bis. Replicabilidade demonstrada: como aplicar a AD/PD
+
+**Exemplo concreto de replicação para Alzheimer/Parkinson:**
+1. **P0-identificação**: SLR de dados publicados de propagação de Aβ/α-sinucleína (Braak staging; ensaios de seeding RT-QuIC);
+2. **P1-parametrização**: modelo de difusão de agregados ao longo de vias neurais (parâmetros de transporte análogos ao WS-7);
+3. **P2-execução**: simulação de intervenção (anticorpo anti-agregante com campo secretor análogo ao V127ΔGPI);
+4. **P4-prognóstico**: limiar de contenção θ* para cada proteína — travado antes de qualquer dado;
+5. **P5-derivada**: agenda de pesquisa sobre posicionamento de infusão e dose — gerada da simulação.
+
+**Limitação declarada**: para Aβ/α-synucleína, NÃO existe variante protetora natural selecionada pela evolução (como o V127 do kuru). O agente terapêutico teria de ser engenheirado (anticorpo, variante travada, degradação direcionada) — uma incerteza adicional de existência, não apenas de engenharia. O cálculo (P0-P5) transfere; o agente, não.
+
 ### 5.3 Próximas abordagens (declaração mandatória conforme metodologia)
 
 **Este trabalho foi realizado com base simulada.** Faz-se **necessário o laboratório experimental e testes humanos para validação** — a simulação não substitui nem substituirá essa etapa (§3.3). Contudo, **assim que dados humanos forem encontrados — independentemente dos valores que exibam — eles podem ser parametrizados contra os valores aqui obtidos** (loop de re-parametrização, Cap. metodologia), o que **já representa um passo à frente na pesquisa**: dado análogo confirma a antecipação (passos seguintes já avançados, P6); dado divergente recalibra exatamente o que informa, com a predição anterior preservada como âncora — em ambos os casos, conhecimento novo bancado [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
@@ -293,6 +411,8 @@ O método da etrização aplica-se onde houver (a) base de dados publicados e va
 *(adendo filosófico REALIZADO: a reflexão etrização/átomo da autora — registrada no corpus externo e integrada via Nota à Leitura, §3.1 nome-do-método, Cap. 5.3 declaração mandatória e Cap. 7 síntese — É o adendo; commit 83bbf51)*
 
 # CAPÍTULO 6 — DISCUSSÃO
+
+Este capítulo pesa os resultados: o que significam, o que não significam, e como se posicionam entre a promessa e o limite.
 
 
 ### 6.1 Promessas e limites desta Parte 2
