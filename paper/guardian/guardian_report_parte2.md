@@ -1,6 +1,6 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 12 (BLOCKED=0, AMEND=0, NOTE=12)
+**Rodadas executadas:** 3 · **Achados:** 11 (BLOCKED=0, AMEND=0, NOTE=11)
 
 ## Gate
 
@@ -27,10 +27,6 @@
 ### [NOTE] R1-PREPRINT — manifest
 - **Problema:** 2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.
 - **Exigência:** Rotular no texto (ex.: bioRxiv preprint).
-
-### [NOTE] R3-TODO-ADENDO-FILOSOFICO — todo-registry
-- **Problema:** TODO aberto registrado: ADENDO-FILOSOFICO.
-- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
 
 ### [NOTE] R3-TODO-BIORXIV-ADDENDUM — todo-registry
 - **Problema:** TODO aberto registrado: BIORXIV-ADDENDUM.

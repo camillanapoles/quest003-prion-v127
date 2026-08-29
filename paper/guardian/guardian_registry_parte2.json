@@ -1,6 +1,6 @@
 {
   "round": 3,
-  "n_findings": 12,
+  "n_findings": 11,
   "gate_pass": true,
   "findings": [
     {
@@ -37,13 +37,6 @@
       "where": "manifest",
       "issue": "2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.",
       "demand": "Rotular no texto (ex.: bioRxiv preprint)."
-    },
-    {
-      "id": "R3-TODO-ADENDO-FILOSOFICO",
-      "severity": "NOTE",
-      "where": "todo-registry",
-      "issue": "TODO aberto registrado: ADENDO-FILOSOFICO.",
-      "demand": "Resolver e remover o marcador (o relatório lista todos a cada gate)."
     },
     {
       "id": "R3-TODO-BIORXIV-ADDENDUM",
