@@ -315,6 +315,10 @@ Os resultados [SIM] significam: (i) existe um limiar adimensional (θ\*=0,333) a
 
 **Síntese final.** Esta tese é uma **etrização** — realizada, rotulada e auditável: o método da etrização produziu-a com garantias (P0–P6), a partir exclusivamente de dados reais publicados, e a entrega como prognóstico falseável pronto para ser confrontado quando (e se) o dado real chegar. A tese está realizada nos termos declarados: pesquisa continuada por simulação parametrizada sobre dados reais, com prognósticos travados antes de qualquer medição e continuidade futura documentada como método. Se dados reais vierem a ser análogos aos simulados, os passos seguintes já estão avançados (P6) — antecipação bancada, nunca pendente [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
+
+
+**Fecho epistemológico.** Esta tese não apenas demonstra a etrização — ela **legitima uma nova forma de fazer ciência na saúde**. A questão filosófica que a motivou é simples: *o que uma pesquisadora pode legítimamente produzir quando a doença mata em meses, o laboratório custa fortunas, e os dados publicados por milhares de pesquisadores estão disponíveis?* A resposta desta tese: **prognóstico quantitativo, falseável e disciplinado por critérios** — com nome (etrização), método (P0-P6), garantias (5 requisitos) e honestidade sobre o que é e o que não é. Como o átomo tornou pesquisável o invisível, a etrização torna pesquisável o ainda-não-medido.
+
 # APÊNDICE A — Inventário dos artefatos da Parte 2 (verificável em disco)
 
 | Artefato | O que é | Estado |
