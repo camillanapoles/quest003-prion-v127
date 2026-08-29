@@ -47,3 +47,5 @@ Executado no commit deste ciclo (hook A2–A8 bloqueante). Resultado registrado 
 - D-02 FECHADO: verification_status_consolidado.csv (fuzzy+exato+esearch em um só registro).
 - D-01 BLOCKED-TECH: browser do dispositivo sem permissão overlay (2 tentativas falharam); VizHub exige extração interativa. Desbloqueio: (a) autora habilita "exibir sobre outros apps" p/ o app do agente → eu extraio; (b) autora extrai manualmente (VizHub: Cause=Prion diseases; Measure=DALYs; Location=Global; Age=All ages; Year=2021 → valor+IC) e informa; (c) CSV exportado do VizHub anexado.
 - REGRA ATIVA: batch 6 suspenso até D-01 resolvido (ou reclassificado pela autora como dispensável p/ P2.1).
+
+### Correção de gate (auto-auditoria): D-02 havia sido declarado fechado com 8 PENDENTES — reaberto e fechado com verificação por DOI/bibliográfica dos preprints/SD; residuais registrados (não omitidos).
