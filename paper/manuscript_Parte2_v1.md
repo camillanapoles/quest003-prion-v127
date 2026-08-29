@@ -408,10 +408,10 @@ Este capítulo responde à pergunta "e daí?": consolida os achados, mapeia os i
 
 ### 5.1-bis. O achado único inovador: cura + restauração
 **O achado único inovador — dupla potencialidade terapêutica:**
-1. **Cura da doença priônica**: contenção do espalhamento de PrP^Sc pelo mecanismo dominante-negativo V127 — impedir a propagação é interromper a cascata neurodegenerativa;
-2. **Restauração neurológica**: evidência da Parte 1 [E012 — Williams 2023] demonstra que NPCs integram e **restauram parâmetros eletrofisiológicos** em organoides CJD mesmo com príon ativo — o componente celular não apenas contém, mas **resgata função** na penumbra. A plataforma V127 é a única abordagem antipriônica com este duplo potencial (conter + restaurar).
+1. **Cura da doença priônica**: contenção do espalhamento de PrP^Sc pelo mecanismo dominante-negativo V127 [claim:C003] [evidence:E001, E003, E005] [claim:C005] [evidence:E003] — impedir a propagação é interromper a cascata neurodegenerativa;
+2. **Restauração neurológica**: evidência da Parte 1 demonstra que NPCs integram e **restauram parâmetros eletrofisiológicos** em organoides CJD mesmo com príon ativo [claim:C016] [evidence:E012] — o componente celular não apenas contém, mas **resgata função** na penumbra. A plataforma V127 é a única abordagem antipriônica com este duplo potencial (conter + restaurar).
 
-**Ressalva mandatória**: estes achados **não podem ser aplicados em humanos** apesar do potencial demonstrado — faz-se necessário, para uso humano, o teste e a validação com dados experimentais da Parte 1 (pré-tese) executados em laboratório. A tese entrega o prognóstico; a aplicação exige o G0-wet.
+**Ressalva mandatória** [claim:C046] [evidence:E032, E033]: estes achados **não podem ser aplicados em humanos** apesar do potencial demonstrado — faz-se necessário, para uso humano, o teste e a validação com dados experimentais da Parte 1 (pré-tese) executados em laboratório. A tese entrega o prognóstico; a aplicação exige o G0-wet.
 
 ### 5.2 Áreas correlatas com a mesma usabilidade
 
@@ -597,3 +597,132 @@ Os resultados [SIM] significam: (i) existe um limiar adimensional (θ\*=0,333) a
 *Parte 2 [SEM ANO] — o resultado define; as fases são estimativas. Toda cifra deste manuscrito vem de JSON arquivado ou do registro E (regra: nunca digitar valor). Gated: guardian R0–R3, 0 BLOCKED exigido.*
 ---
 *Parte 2 [SEM ANO] — o resultado define; as fases são estimativas. Toda cifra vem de JSON arquivado ou do registro E (regra: nunca digitar valor). Gated: guardian R0–R3 perfil part2, 0 BLOCKED exigido. PT é o mestre; EN companion: manuscript_Parte2_v1_EN.md.*
+
+
+# APÊNDICE B — MAPA DA LÓGICA COMPLETA (de onde veio cada informação e como se conecta)
+
+## B.1 Fluxo de informação: da literatura à conclusão
+
+```
+CAMADA 0: FONTE PRIMÁRIA (papers publicados)
+═══════════════════════════════════════════════════
+  Asante 2015 [E001]     Mead 2009 [E002]     Groveman 2019 [E007]
+  Nature, peer-reviewed   NEJM, peer-reviewed   Acta Neuropathol, peer-reviewed
+  "V127 resiste a príons" "G127V seleção kuru"  "Organoides infectam com sCJD"
+         │                       │                       │
+         ▼                       ▼                       ▼
+CAMADA 1: VERIFICAÇÃO (auditoria de fonte)
+═══════════════════════════════════════════════════
+  Cada fonte foi ABERTA (URL/DOI confirmado)
+  Identificadores verificados → E-registry
+  Status: verified (quem abriu, quando, como)
+         │
+         ▼
+CAMADA 2: CLAIM REGISTRY (afirmações extraídas)
+═══════════════════════════════════════════════════
+  C001: "V127/V127 resiste completamente"      [E001]
+  C003: "DN dose-dependente"                   [E001,E003,E005]
+  C005: "anchorless trans DN"                  [E003]
+  C010: "âncoras de relógio: 25-28/35/169 dpi" [E007]
+  C011: "títulos MV2 vs MV1 @169dpi"           [E007]
+         │
+         ▼
+CAMADA 3: PARÂMETROS (números com proveniência)
+═══════════════════════════════════════════════════
+  α=0.20, λ=1.8     ← Thorne & Nicholson 2006 [E010] (in-vivo, humano)
+  D₀=1.25e-10 m²/s  ← Stokes-Einstein (R_h≈2.5nm, ~30kDa)
+  D_eff=3.86e-11    ← D₀/λ² (derivado)
+  k_eff=1e-6–1e-5   ← Masel 1999 [E011] (polimerização nucleada)
+  t_dupl=12.1 d     ← 134d/log₂(2130) [E007] (derivado de Groveman)
+  1 unidade=144 d   ← t_dupl/t_dupl_sim [E032] (derivado)
+         │
+         ▼
+CAMADA 4: MODELO MATEMÁTICO (equações com parâmetros)
+═══════════════════════════════════════════════════
+  ∂(αc)/∂t = ∇·(D_eff∇c) − ∇·(vc) + S(x) − k_eff·c
+  → solver WS-7 (volumes finitos, 192², auto-testado)
+
+  freeS(r) = (1+κ·c_V127(r))⁻²
+  → modelo WS-9 (campo-médio, 96², humanizado)
+
+  θ ≡ (1+κ·c_pico)⁻¹
+  → definição formal (a fração de replicação que resta)
+         │
+         ▼
+CAMADA 5: EXECUÇÃO (runs arquivados e reproduzidos)
+═══════════════════════════════════════════════════
+  WS-7 self-tests: massa=100%, Thiele=0.5% ✓
+  WS-9 T1/T2/T3: todos PASS ✓
+  Reprodução: executado em 2 ambientes independentes
+  → resultados idênticos (hash confirmado)
+         │
+         ▼
+CAMADA 6: RESULTADOS [SIM]
+═══════════════════════════════════════════════════
+  θ*=0.333          ← do sweep κ (limiar de contenção)
+  Regras 1-3        ← do solver WS-7 (anel/malha/redose)
+  Discriminadora    ← do sweep expoente (C50 insensível)
+  Estimador θ_obs   ← da calibração sim-a-sim
+         │
+         ▼
+CAMADA 7: PROGNÓSTICO TRAVADO
+═══════════════════════════════════════════════════
+  Release v1.0 (timestamp): "θ<0.33 ⇒ contenção"
+  → ANTES de qualquer dado experimental
+  → ANTI-HINDSIGHT por construção
+         │
+         ▼
+CAMADA 8: CONCLUSÕES DA TESE
+═══════════════════════════════════════════════════
+  A tese entrega: método (etrização P0-P6) + prognóstico (θ*, regras)
+  + dupla potencialidade (cura + restauração [C016])
+  + ressalva (não aplicar em humanos sem validação experimental)
+```
+
+## B.2 Decisões-chave: por que cada escolha foi feita
+
+| Decisão | Alternativa considerada | Por que esta foi escolhida |
+|---|---|---|
+| V127 como agente | ASO (reduzir PrP) | DN preserva PrP nativo (função sináptica); ASO depleta |
+| Anchorless (sem GPI) | V127 de membrana | Gatdula 2026: funciona em trans; contém vizinhas; é difusível |
+| Modelo determinístico | Manter Gillespie estocástico | Mean-field permite sweep sistemático; estocástico é barulhento |
+| Reescala global de tempo | Re-ajustar cada taxa individualmente | Só um grau de liberdade calibrável (relógio de Groveman); re-ajustar 6+ taxas seria sobreajuste |
+| freeS quadrático | freeS linear | Assumimos conversão de 2 participantes; a alternativa é TESTÁVEL (predição discriminadora) |
+| θ como limiar | R (raio) como limiar | θ é adimensional (comparável entre subtipos); R satura |
+| P(G0)=36.6% | P(G0)=62% estrutural | Duas lentes mantidas separadas: a empírica (36.6%) é conservadora; a estrutural (62%) é arquivada sem mescla |
+
+## B.3 Rejeições documentadas (o que NÃO funcionou e por quê)
+
+| O que foi rejeitado | Por quê | Onde está |
+|---|---|---|
+| v1.1-IDW (estimador interpolado) | PIOROU a fronteira de decisão (bias −0.037, direção anti-conservadora) | part2_theta_obs_v11.json |
+| SVZ como fábrica central | Nicho humano quiescente + replica príon (refutação dupla) | R-1 no canon |
+| Bialélico como suficiente | Heterozigoto é infectável por vCJD | R-2 no canon |
+| Ensaio retraído (minociclina/FK506) | Retraído em 2020; ainda circulava como evidência | Excluído por regra |
+| NSC→micróglia via transdiferenciação | Ginhoux 2010: linhagem impossível | Corrigido → co-enxerto iMG |
+
+## B.4 Glossário contextual (todo termo técnico definido onde aparece)
+
+| Termo | Definição na tese | Primeira aparição |
+|---|---|---|
+| etrização | método de continuar pesquisa por simulação com dados reais [C054] | Nota à Leitura |
+| θ | fração de replicação remanescente no pico secretor (1+κc)⁻¹ | §3.2 |
+| κ | força de capping (capacidade do V127ΔGPI de bloquear conversão) | §3.2 |
+| G0-sim | gate computacional executado e aprovado (T1/T2/T3) | §1.7 |
+| G0-wet | gate de organoide especificado mas não executado (dormant) | §4.3 |
+| tier [SIM] | dado produzido por simulação parametrizada | toda saída |
+| tier [ORGANOID] | dado de laboratório com organoide (inexistente ainda) | §5.3 |
+| DN | dominante-negativo: V127 bloqueia conversão de PrP normal | Cap.2 |
+| θ* | limiar de contenção: acima dele a frente é contida (0.333) | §4.1 |
+| freeS | fração de substrato livre após capping: (1+κc)⁻² | §3.2 |
+
+## B.5 Prejulgando objeções da banca
+
+| Objeção provável | Resposta que está na tese |
+|---|---|
+| "Você não tem dados experimentais" | Esta é uma tese de METODOLOGIA com achados de simulação auditada; a descoberta biológica virá do G0-wet; a tese entrega método + prognóstico travado + dupla potencialidade declarada com ressalva |
+| "A simulação não substitui o laboratório" | Correto — e a tese DECLARA isto na Base de Validade (§3.3): "não substitui; estimula P&D ágil" |
+| "Como sei que os números são reais?" | Cada número tem fonte E-ID com hash; cada fonte foi aberta e verificada; a reprodução em 2 ambientes confirmou os valores; a tabela de concordância claims→refs (no fim) permite auditoria linha por linha |
+| "Por que confiar no θ*=0.333?" | É uma PREDIÇÃO, não uma descoberta; foi travada antes de qualquer dado; o estimador θ_obs está calibrado para testá-la; o modelo tem 3 frentes de falseabilidade (θ, C50, dose-resposta) |
+| "Isto é filosofia, não ciência" | É metodologia com 38 fontes verificadas, 54 claims com hash, 48 fatos numéricos, equações com proveniência, simulação reproduzida, revisão hostil de máquina, e pré-registro timestampado |
+| "Como se aplica a Alzheimer?" | §5.2-bis: exemplo concreto P0→P5; MAS: para Aβ não existe variante protetora natural (V127 era do kuru); o agente teria de ser engenheirado — incerteza adicional declarada |
