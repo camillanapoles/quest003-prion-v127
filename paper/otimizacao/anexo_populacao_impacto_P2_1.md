@@ -1,27 +1,23 @@
-# ANEXO (rascunho v2) — População e Impacto Clínico [P2.1]
+# ANEXO (rascunho) — População e Impacto Clínico [P2.1]
 
-> Plano de otimização PQMS, item 2. **Rascunho para OK expresso da autora.**
-> v2 (2026-08-29, batch 2): números de incidência/escala AGORA COM FONTE (candidatos `batch2_ref_candidates.csv`).
-> Regra anti-fabricação mantida: DALYs específicos não retornaram nas buscas — seguem como TODO apontando a fonte a consultar.
+> Plano de otimização PQMS, item 2. **Rascunho para OK expresso da autora** (regra do guardião: aplicação exige OK).
+> Regra anti-fabricação: todos os números abaixo citam o candidato de fonte do batch 2 — merge formal ao registro exige verificação claim-a-claim.
 
-## 1. População-alvo (com fontes)
-- **Incidência global: 1–2 casos por milhão por ano** — corroborado por 4 fontes independentes:
-  - CDC (EUA): "about 1–2 cases per million annually" [C-B2-005]
-  - Revisão abrangente Noor 2024 [C-B2-003]
-  - EuroCJD, vigilância prospectiva de 25 anos (Europa): 1–2/milhão pessoa-ano; sCJD = 85% dos casos [C-B2-002]
-  - Chen 2016: 1–1,5/milhão; 85–90% esporádica [C-B2-013]; Coreia 0,54/milhão documenta subnotificação [C-B2-012]
-- **Escala absoluta (série histórica)**: 27.872 doenças priônicas / 24.623 sCJD reportadas em 34 países — atlas epidemiológico global, Gao 2024 [C-B2-001]
-- Tradução prática: ~500 casos novos/ano nos EUA (CJD Foundation, fact sheet 2021) *(usar como fonte secundária de divulgação, não acadêmica principal)*
-- Subpopulação brasileira E200K-BR: consolidar do dossiê existente `paper/e200k_br_dossier.md` (não duplicar).
+## 1. População-alvo (batch 2 — fontes estagiadas em `evidence_workspace/candidates/batch2_ref_candidates.csv`)
+- Incidência mundial de doença de Creutzfeldt–Jakob: **1–2 casos por milhão de habitantes/ano** (CDC Classic CJD — C-B2-004; CJD Foundation Fact Sheet 2021 — C-B2-005). EUA: ~500–600 casos/ano (CDC). Tendência de alta 2007–2020: 1,05→1,47/milhão, 5.882 casos EUA, predomínio >70 anos (Neurology Today — C-B2-006; Nishimura 2020, Japão — C-B2-002).
+- Casos globais reportados: **27.872 PrD (24.623 sCJD) em 34 países** — atlas epidemiológico global atualizado (Gao LP 2024, PMC11208307 — C-B2-001).
+- Brasil (E200K-BR já documentado em `paper/e200k_br_dossier.md`): consolidar números do dossiê existente (não duplicar).
+- Subpopulações: esporádica (85–95% dos casos investigados — Health Infobase Canada, C-B2-003) / genética (P102L, E200K, D178N) / iatrogênica / variante.
 
-## 2. Carga de doença
-- Carga assistencial e atraso diagnóstico: Kutrieb 2025 [C-B2-004] — em estudo de 2012 citado, apenas 18% de 97 pacientes receberam diagnóstico inicial correto (docimento do custo humano do atraso).
-- **DALYs (GBD):** {{TODO:P2.1-DALY:consultar IHME GBD 2021 — causa "prion diseases"; registrar valor + ano do GBD (data-de-validade). NÃO publicar sem fonte.}}
+## 2. Carga de doença (DALYs) — método, não resultado
+- {{TODO:P2.1-DALY:fonte direta ainda não retornada — buscar IHME GBD 2021 causa "prion diseases" no batch 3; incidência acima já é citável}}
+- Registrar ano do GBD usado (data-de-validade, coerente com Cap.5.1 da Parte 2).
 
-## 3. Argumento de população-alvo para o critério
-- Indicador nominal da rubrica (≥100.000 afetados) **não é atingível em doença ultra-rara** — o argumento correto (documentável com [C-B2-001..005]) é: letalidade ~100% + ausência de terapia aprovada + sobrediagnóstico/subnotificação (Coreia 0,54 vs 1–2) ⇒ **cada caso evitado/retardado tem utilidade clínica máxima**, e a plataforma in-silico barateia o screen de candidatos terapêuticos para toda a classe.
+## 3. Critério mensurável de mudança de prática (pós-gate de organoides)
+- Definir 1 métrica primária de prática (ex.: tempo de triagem in-silico vs. custo por candidato pré-clínico) e o limiar que caracterizaria "adoção" — ancorado em C040 (US$100–150k / 10 meses).
 
-## 4. Critério mensurável de mudança de prática (pós-gate)
-- Métrica primária: custo/tempo por candidato terapêutico triado antes de wet-lab — ancorado em C040 (US$100–150k / 10 meses) vs. custo histórico de programas pré-clínicos priônicos fracassados (lições: [C-B2-007 anle138b negativo], [C-B2-010 revisão de fracassos]).
+## 4. Fontes batch 1 aplicáveis desde já
+- Registro do competidor-complemento ASO: NCT06153966 (ION717 — C-B1-007).
+- **Novo competidor relevante (batch 2):** trial **PRiSM** — PRP-targeting siRNA do Broad Institute em recrutamento (C-B2-008) — atualiza o panorama competitivo do EN §4 (complementaridade V127 vs. estratégias de PrP-lowering).
 
-**Ao fechar §2 (DALYs) + OK da autora:** re-derivação textual de P2.1 no ciclo de re-score (expectativa: banda leve-alta; nota alvo 9,3–9,5).
+**Ao concluir 2 com fonte GBD + OK da autora:** Nota P2.1 → 9,5 (recálculo textual-first no ciclo seguinte do avaliador).
