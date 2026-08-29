@@ -70,7 +70,7 @@ python3 experiments/ws_9_v5_sweeps_gha.py --phase S1|S2
 3. **AST (verificar)**: fechamento obrigatório do ciclo com verificação — `python3 experiments/ast_check.py` (6/6) ou o gate específico da superfície tocada. Ciclo sem AST não está fechado.
 
 ## §5 · MAPA DE ARTEFATOS PARTE 2
-manifesto: `paper/manuscript_Parte2_v1.md` (PT mestre) · gate: `paper/guardian/guardian.py --profile part2` + `guardian_registry_parte2.json`/`guardian_report_parte2.md` · resultados: `experiments/part2_results/` (theta_obs v1/pooled/v11 + derived_summary + partner_log) · scripts: `experiments/part2_theta_obs_*.py` · método-docs: `G0_EXECUTION_FREEZE_CHECKLIST.md` (dormant) · `REPARAM_LOOP.md` · `PARTNER_SELECTION_PROTOCOL.md` v2.1 · registro compartilhado: `paper/evidence_workspace/` (54 claims · 38 fontes · 48 N-fatos) · divergências audit: `AUDIT_NOTES.md` §part2.
+manifesto: `paper/manuscript_Parte2_v1.md` (PT mestre) · gate: `paper/guardian/guardian.py --profile part2` + `guardian_registry_parte2.json`/`guardian_report_parte2.md` · resultados: `experiments/part2_results/` (theta_obs v1/pooled/v11 + derived_summary + partner_log) · scripts: `experiments/part2_theta_obs_*.py` · docs de câmara/fundamentação: paper/ADENDO_FILOSOFICO_CAMARA.md (agente não lê até DEVOLVIDO) · paper/ERITRIZACAO.md (fundamentação do neologismo etrização — reflexão→consulta; aplicação exige OK da autora) · método-docs: `G0_EXECUTION_FREEZE_CHECKLIST.md` (dormant) · `REPARAM_LOOP.md` · `PARTNER_SELECTION_PROTOCOL.md` v2.1 · registro compartilhado: `paper/evidence_workspace/` (54 claims · 38 fontes · 48 N-fatos) · divergências audit: `AUDIT_NOTES.md` §part2.
 
 ## §6 · PROTOCOLO /RECAP (fim de sessão Parte 2)
 Mesmo formato do guardian.md §6 (FEITO/ESTADO/PRÓXIMO/ÂNCORA), anexado AQUI.
