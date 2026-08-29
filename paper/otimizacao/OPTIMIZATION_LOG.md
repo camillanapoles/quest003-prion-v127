@@ -23,3 +23,6 @@ Executado no commit deste ciclo (hook A2–A8 bloqueante). Resultado registrado 
 - 16 candidatos estagiados (epidemiologia Gao-2024/CDC/tendências; terapia Liu-2024/PRiSM-siRNA/immunotherapy; epistemologia in-silico VVUQ/foresight). 4 com metadados incompletos sinalizados (completar na verificação).
 - `anexo_populacao_impacto_P2_1.md` ATUALIZADO com incidências citadas (1–2/milhão/ano; 27.872 PrD/34 países; tendência 1,05→1,47 EUA) + novo competidor PRiSM-siRNA anotado.
 - DALYs: pendente GBD (batch 3). Anexos seguem aguardando OK da autora.
+
+### Fix (2026-08-29 03:1x)
+- CSV batch2 havia sido truncado por vírgula extra no campo query (C-B2-007) quebrou o reescritor no commit anterior; reescrito íntegro (16 linhas, assert de integridade) e re-dedupe aplicado. Erro registrado — mesma classe não deve repetir (campos sempre sem vírgula livre ou quotados).
