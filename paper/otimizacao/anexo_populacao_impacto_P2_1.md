@@ -1,22 +1,27 @@
-# ANEXO (rascunho) — População e Impacto Clínico [P2.1]
+# ANEXO (rascunho v2) — População e Impacto Clínico [P2.1]
 
-> Plano de otimização PQMS, item 2. **Rascunho para OK expresso da autora** (regra do guardião: aplicação exige OK).
-> Regra anti-fabricação: TODOS os números abaixo são campos a preencher com fonte citada do batch 2 — nenhum valor foi inventado.
+> Plano de otimização PQMS, item 2. **Rascunho para OK expresso da autora.**
+> v2 (2026-08-29, batch 2): números de incidência/escala AGORA COM FONTE (candidatos `batch2_ref_candidates.csv`).
+> Regra anti-fabricação mantida: DALYs específicos não retornaram nas buscas — seguem como TODO apontando a fonte a consultar.
 
-## 1. População-alvo (a quantificar no batch 2)
-- Incidência mundial de doença de Creutzfeldt–Jakob: {{TODO:P2.1-INCIDENCIA:buscar valor + fonte (OMS/GBD/surveillance EUROCJD)}}
-- Prevalência global estimada: {{TODO:P2.1-PREVALENCIA:fonte}}
-- Brasil (E200K-BR já documentado no dossiê `paper/e200k_br_dossier.md`): consolidar números do dossiê existente (não duplicar).
-- Subpopulações: esporádica / genética (P102L, E200K, D178N) / iatrogênica / variante.
+## 1. População-alvo (com fontes)
+- **Incidência global: 1–2 casos por milhão por ano** — corroborado por 4 fontes independentes:
+  - CDC (EUA): "about 1–2 cases per million annually" [C-B2-005]
+  - Revisão abrangente Noor 2024 [C-B2-003]
+  - EuroCJD, vigilância prospectiva de 25 anos (Europa): 1–2/milhão pessoa-ano; sCJD = 85% dos casos [C-B2-002]
+  - Chen 2016: 1–1,5/milhão; 85–90% esporádica [C-B2-013]; Coreia 0,54/milhão documenta subnotificação [C-B2-012]
+- **Escala absoluta (série histórica)**: 27.872 doenças priônicas / 24.623 sCJD reportadas em 34 países — atlas epidemiológico global, Gao 2024 [C-B2-001]
+- Tradução prática: ~500 casos novos/ano nos EUA (CJD Foundation, fact sheet 2021) *(usar como fonte secundária de divulgação, não acadêmica principal)*
+- Subpopulação brasileira E200K-BR: consolidar do dossiê existente `paper/e200k_br_dossier.md` (não duplicar).
 
-## 2. Carga de doença (DALYs) — método, não resultado
-- Buscar: IHME Global Burden of Disease 2021, causa "prion diseases" — DALYs globais e por 100k.
--Registrar ano do GBD usado (data-de-validade, coerente com Cap.5.1 da Parte 2).
+## 2. Carga de doença
+- Carga assistencial e atraso diagnóstico: Kutrieb 2025 [C-B2-004] — em estudo de 2012 citado, apenas 18% de 97 pacientes receberam diagnóstico inicial correto (docimento do custo humano do atraso).
+- **DALYs (GBD):** {{TODO:P2.1-DALY:consultar IHME GBD 2021 — causa "prion diseases"; registrar valor + ano do GBD (data-de-validade). NÃO publicar sem fonte.}}
 
-## 3. Critério mensurável de mudança de prática (pós-gate de organoides)
-- Definir 1 métrica primária de prática (ex.: tempo de triagem in-silico vs. custo por candidato pré-clínico) e o limiar que caracterizaria "adoção" — ancorado em C040 (US$100–150k / 10 meses).
+## 3. Argumento de população-alvo para o critério
+- Indicador nominal da rubrica (≥100.000 afetados) **não é atingível em doença ultra-rara** — o argumento correto (documentável com [C-B2-001..005]) é: letalidade ~100% + ausência de terapia aprovada + sobrediagnóstico/subnotificação (Coreia 0,54 vs 1–2) ⇒ **cada caso evitado/retardado tem utilidade clínica máxima**, e a plataforma in-silico barateia o screen de candidatos terapêuticos para toda a classe.
 
-## 4. Fontes batch 1 aplicáveis desde já
-- Registro do competidor-complemento: NCT06153966 (ION717, `candidates/batch1_ref_candidates.csv` C-B1-007) — ritmo de pipeline para calibrar expectativa de adoção.
+## 4. Critério mensurável de mudança de prática (pós-gate)
+- Métrica primária: custo/tempo por candidato terapêutico triado antes de wet-lab — ancorado em C040 (US$100–150k / 10 meses) vs. custo histórico de programas pré-clínicos priônicos fracassados (lições: [C-B2-007 anle138b negativo], [C-B2-010 revisão de fracassos]).
 
-**Ao concluir 1–3 com fontes:**Nota P2.1 → 9,5 (recalculo no ciclo seguinte do avaliador).
+**Ao fechar §2 (DALYs) + OK da autora:** re-derivação textual de P2.1 no ciclo de re-score (expectativa: banda leve-alta; nota alvo 9,3–9,5).
