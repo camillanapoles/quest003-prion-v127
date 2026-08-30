@@ -9,9 +9,11 @@
 - Brasil (E200K-BR já documentado em `paper/e200k_br_dossier.md`): consolidar números do dossiê existente (não duplicar).
 - Subpopulações: esporádica (85–95% dos casos investigados — Health Infobase Canada, C-B2-003) / genética (P102L, E200K, D178N) / iatrogênica / variante.
 
-## 2. Carga de doença (DALYs) — método, não resultado
-- DALYs prion: **extração por consulta interativa obrigatória** no VizHub GBD Results (C-B4-002), métrica DALYs, causa "prion diseases" — registrar valor + ano GBD + data-de-validade. Número não existe em página estática (batches 3 e 4 confirmaram) — NÃO fabricar.
-- Registrar ano do GBD usado (data-de-validade, coerente com Cap.5.1 da Parte 2).
+## 2. Carga de doença (DALYs) — AUSÊNCIA DOCUMENTADA COMO DADO CIENTÍFICO [decisão B da autora, 29/08]
+O DALY priônico **não é publicado em nenhuma fonte estática** — comprovado por 5 vias independentes (buscas dedicadas ×3; catálogo OWID sem a causa; atlas global PrD Gao-2024 com 0 menções a DALY; capstone GBD-2021 inacessível estaticamente; varredura full-text EuropePMC 229 docs). A literatura afirma textualmente: *"global burden estimates are currently lacking"* (PMC12672555, 2025).
+**Leitura para a tese:** doença fatal rara invisível às métricas de carga — evidência adicional do gap que a plataforma ataca (reforça P2.1 e o fecho epistemológico).
+**Proxies citáveis (já no anexo):** incidência 1–2/milhão/ano (CDC/CJD-Foundation/Gao-2024); letalidade ~100% e curso ~1 ano → carga dominada por YLL; tendência crescente EUA 1,05→1,47/milhão (Crane 2024).
+{{D-08-REFORCO: extrair o valor absoluto (VizHub GBD-2023: Causa=Doenças priônicas; Medida=DALYs; Global; Todas-idades; 2023) quando ferramenta/browser estável — adendo opcional, não bloqueante}}
 
 ## 3. Critério mensurável de mudança de prática (pós-gate de organoides)
 - Definir 1 métrica primária de prática (ex.: tempo de triagem in-silico vs. custo por candidato pré-clínico) e o limiar que caracterizaria "adoção" — ancorado em C040 (US$100–150k / 10 meses).

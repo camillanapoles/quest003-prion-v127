@@ -1,0 +1,21 @@
+cand_id,source_type,title,authors,year,identifiers,locator,provenance_query,provenance_url,status,note
+C-B6-001,journal_article,PrP turnover in vivo and the time to effect of prion disease therapeutics,Corridon et al.,2026,PLoSPathog-2026-corridon,PLOS Pathogens,gap-mapper A1,quest003-gap-mapper,VERIFYING,VALIDA k_eff (half-life 5-6d) — ELEVAR ao E-registry (acao 4 do gap-mapper)
+C-B6-002,journal_article,Similar Turnover and Shedding of Cellular PrP in Mice and Sheep,Parizek et al.,2001,JBC-2001,J Biol Chem,gap-mapper A2,quest003-gap-mapper,VERIFYING,116 cit; half-life 6h cultura (contradicao RESOLVIDA)
+C-B6-003,journal_article,Global analysis of protein degradation in prion infected cells,Hutti et al.,2020,PMC-hutti,PMC,gap-mapper A3,quest003-gap-mapper,VERIFYING,degradacao 0.70/d
+C-B6-004,journal_article,(review) PrP turnover and therapeutics,Thellung et al.,2022,Frontiers-2022,Frontiers,gap-mapper A4,quest003-gap-mapper,VERIFYING,27 cit; PRE-2021? nao - 2022
+C-B6-005,journal_article,Interaction between Human Prion Protein and Amyloid-beta Oligomers,Chen et al.,2010,JBC-2010,J Biol Chem,gap-mapper B1,quest003-gap-mapper,VERIFYING,363 cit; Kd=71nM VALIDA kappa
+C-B6-006,journal_article,Kd Cu2+ binding PrP (sítio distinto),Lin et al.,2015,SciRep-2015,Scientific Reports,gap-mapper B2,quest003-gap-mapper,VERIFYING,completar titulo exato no merge
+C-B6-007,journal_article,The G127V variant interferes with dimer formation in vitro but not in cellulo,Sangeetham et al.,2021,SciRep-2021,Scientific Reports,gap-mapper B3,quest003-gap-mapper,VERIFYING,contradicao RESOLVIDA (GPI vs anchorless)
+C-B6-008,journal_article,Trans-Dominant Inhibition of Prion Propagation In Vitro Is Not Mediated by Accessory Cofactor,Geoghegan et al.,2009,PLoSPathog-2009,PLOS Pathogens,gap-mapper C2,quest003-gap-mapper,VERIFYING,75 cit; VALIDA forma funcional DN
+C-B6-009,thesis,The G126V Mutation Hinders Nucleation,Sabareesan et al.,2017,UTSW-2017,UT Southwestern,gap-mapper C4,quest003-gap-mapper,VERIFYING,28 cit; VALIDA ordem kappa (~5x)
+C-B6-010,journal_article,(review) Cerebral organoids and prion subtypes,Walters et al.,2022,PMC-walters,PMC,gap-mapper D1,quest003-gap-mapper,VERIFYING,MM1 nao propaga -> MV2 e pior caso
+C-B6-011,journal_article,sCJD propagation robust scalable cell model (EKV V129),Groveman et al.,2025,NatCommun-2025,Nature Communications,gap-mapper D2,quest003-gap-mapper,VERIFYING,<17% sensibilidade; INFORMA
+C-B6-012,journal_article,EKV cells propagate sCJD stably,Nihat et al.,2026,PNAS-2026,PNAS,gap-mapper D3,quest003-gap-mapper,VERIFYING,INFORMA
+C-B6-013,journal_article,Diffusion dominates over bulk flow in neuropil (brain ECS),Holter et al.,2017,PNAS-2017,PNAS,gap-mapper E1,quest003-gap-mapper,VERIFYING,324 cit; VALIDA WS-7 transporte
+C-B6-014,journal_article,Diffusion in ECS approx local 2D,Hrabe et al.,2004,BiophysJ-2004,Biophys J,gap-mapper E2,quest003-gap-mapper,VERIFYING,200 cit; VALIDA
+C-B6-015,journal_article,Brain ECS structure/diffusion (Chen P),Chen P et al.,2021,NatCommun-2021,Nature Communications,gap-mapper E3,quest003-gap-mapper,VERIFYING,28 cit; completar titulo exato
+C-B6-016,journal_article,Species barrier permeable (PMCA),Castilla et al.,2008,Cell-2008,Cell,gap-mapper F1,quest003-gap-mapper,VERIFYING,249 cit; INFORMA c/ cautela
+C-B6-017,journal_article,Serial passage adaptation prions,Bocharova et al.,2023,PMC-bocharova,PMC,gap-mapper F2,quest003-gap-mapper,VERIFYING,INFORMA
+C-B6-018,journal_article,Molecular switch inter-species prion transmission,Sigurdson et al.,2010,SciRep-or-PLOS-2010,verificar veiculo,gap-mapper F3,quest003-gap-mapper,VERIFYING,184 cit; INFORMA
+C-B6-019,journal_article,Innate microglia in human cerebral organoids,Ormel et al.,2018,CellReports-2018,Cell Reports,gap-mapper G1,quest003-gap-mapper,VERIFYING,697 cit; GAP REAL (microglia) — limitacao honesta do gate
+C-B6-020,journal_article,Organoid cellular composition 2024,Mateos-Martinez et al.,2024,Frontiers-2024,Frontiers,gap-mapper G2,quest003-gap-mapper,VERIFYING,completar titulo exato

@@ -49,3 +49,7 @@ Executado no commit deste ciclo (hook A2–A8 bloqueante). Resultado registrado 
 - REGRA ATIVA: batch 6 suspenso até D-01 resolvido (ou reclassificado pela autora como dispensável p/ P2.1).
 
 ### Correção de gate (auto-auditoria): D-02 havia sido declarado fechado com 8 PENDENTES — reaberto e fechado com verificação por DOI/bibliográfica dos preprints/SD; residuais registrados (não omitidos).
+
+## Ciclo 6 (2026-08-30 ~02h) — worktree executor · gate events
+- **D-01 FECHADO via opção B (autora)**: anexo P2.1 §2 reescrito — ausência de DALY priônico em fontes estáticas como DADO científico (5 provas + citação PMC12672555) + proxies citáveis. **D-08 ABERTO (reforço opcional, não-bloqueante)**: extração VizHub do valor absoluto quando ferramenta estável.
+- **Batch 6 = colheita GAP_MAPPER_V2_EXHAUSTIVE** (quest-irmão 003-gap-mapper): 20 fontes novas com BINDING analítico pronto (matriz: 8 VALIDA independentes; 2 contradições resolvidas; 1 GAP REAL honesto — Ormel micróglia). Ação ALTA do gap-mapper registrada p/ merge: elevar Corridon 2026 ao E-registry.
