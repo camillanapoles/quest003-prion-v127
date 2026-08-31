@@ -41,7 +41,7 @@ jobs:
       - name: Pre-process markdown
         run: python3 scripts/pandoc_safe.py paper/manuscript_Parte2_v1.md /tmp/p2_safe.md
 
-      - name: Generate PDF (xelatex — Unicode nativo: θ/×/≥/sobrescritos)
+      - name: Generate PDF (xelatex — Unicode nativo θ/×/≥/sobrescritos)
         run: |
           pandoc /tmp/p2_safe.md -f markdown -t latex -s \
             --metadata title="ETRIZAÇÃO COMPUTACIONAL EM DOENÇAS PRIÔNICAS" \
