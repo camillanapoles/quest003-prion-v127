@@ -36,22 +36,23 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install deps
-        run: sudo apt-get update -qq && sudo apt-get install -y -qq pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-xetex
 
       - name: Pre-process markdown
         run: python3 scripts/pandoc_safe.py paper/manuscript_Parte2_v1.md /tmp/p2_safe.md
 
-      - name: Generate PDF
+      - name: Generate PDF (xelatex — Unicode nativo: θ/×/≥/sobrescritos)
         run: |
           pandoc /tmp/p2_safe.md -f markdown -t latex -s \
             --metadata title="ETRIZAÇÃO COMPUTACIONAL EM DOENÇAS PRIÔNICAS" \
             --metadata author="Camilla N." \
             -V geometry=margin=2.5cm -V fontsize=10pt --toc \
+            -V pdf-engine=xelatex \
             -o /tmp/parte2.tex
           cd /tmp
-          pdflatex -interaction=nonstopmode parte2.tex > /dev/null 2>&1 || true
-          pdflatex -interaction=nonstopmode parte2.tex > /dev/null 2>&1 || true
-          test -f parte2.pdf
+          xelatex -interaction=nonstopmode parte2.tex > /tmp/x1.log 2>&1 || true
+          xelatex -interaction=nonstopmode parte2.tex > /tmp/x2.log 2>&1 || true
+          test -f parte2.pdf || { echo '✗ xelatex não gerou o PDF — últimos erros:'; grep -A2 '^!' /tmp/x2.log | tail -20; exit 1; }
 
       - name: Version PDF
         run: |
