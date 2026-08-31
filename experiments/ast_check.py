@@ -4,11 +4,25 @@ Um comando = estado de garantia inteiro. Saída: tabela PASS/FAIL + veredito.
 Componentes: A1 solver WS-7 (massa/Thiele) · A2 gate parte 1 · A3 gate parte 2 ·
 A4 validate_manifest (38 fontes) · A5 contagem de registro · A6 drift de artefatos-chave."""
 import subprocess, sys, os, json, csv
-FAST = "--fast" in sys.argv  # pula A1 (solver ~3min); releases usam 8/8 completo
+FAST = "--fast" in sys.argv  # pula A1 (solver ~3min); releases usam 9/9 completo
 
 R = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 G = os.path.join(R, "paper", "guardian")
-S = "/workspace/projects/scientific-agent-skills/skills/scientific-writing/scripts"
+
+def _skill_scripts():
+    """Scripts da skill scientific-writing — ordem: env > repo-local > original > ~/.agents."""
+    cands = []
+    if os.environ.get("SCIENTIFIC_SKILLS_SCRIPTS"):
+        cands.append(os.environ["SCIENTIFIC_SKILLS_SCRIPTS"])
+    cands += [os.path.join(R, "scripts", "validators"),
+              "/workspace/projects/scientific-agent-skills/skills/scientific-writing/scripts",
+              os.path.expanduser("~/.agents/skills/scientific-agent-skills/skills/scientific-writing/scripts")]
+    for c in cands:
+        if os.path.isdir(c):
+            return c
+    return cands[-1]
+
+S = _skill_scripts()
 results = []
 
 def run(name, fn):
@@ -92,6 +106,13 @@ def a8_references():
 
 run("A7 check_consistency (bateria)", a7_consistency)
 run("A8 check_references (bateria)", a8_references)
+
+def a9_pendencias():
+    p = subprocess.run([sys.executable, os.path.join(R, "scripts", "pendencias_check.py")],
+                       capture_output=True, text=True, timeout=120)
+    line = [l for l in (p.stdout + p.stderr).splitlines() if l.startswith(("RESUMO", "VEREDITO"))]
+    return (p.returncode == 0), (" · ".join(line) if line else (p.stdout or p.stderr)[-120:])
+run("A9 pendências (garantista)", a9_pendencias)
 
 print("═" * 62)
 print("AST — ASSERTION SELF-TEST CONSOLIDADO (Parte 1 + Parte 2)")

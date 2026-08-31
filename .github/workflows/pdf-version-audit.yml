@@ -1,0 +1,65 @@
+name: PDF Version + Audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - "paper/manuscript_Parte2_v1.md"
+      - "paper/evidence_workspace/**"
+      - "experiments/**"
+      - "scripts/**"
+      - "PENDENCIAS.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ast-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Gate de qualidade AST A2-A9 (bloqueante — criação só sob teste)
+        run: |
+          python3 experiments/ast_check.py --fast 2>&1 | tee ast_gate.log
+          grep -q "AST VERDE" ast_gate.log || { echo "✗ PDF BLOQUEADO: AST não-VERDE"; exit 1; }
+
+  version-pdf:
+    needs: ast-gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install deps
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended
+
+      - name: Pre-process markdown
+        run: python3 scripts/pandoc_safe.py paper/manuscript_Parte2_v1.md /tmp/p2_safe.md
+
+      - name: Generate PDF
+        run: |
+          pandoc /tmp/p2_safe.md -f markdown -t latex -s \
+            --metadata title="ETRIZAÇÃO COMPUTACIONAL EM DOENÇAS PRIÔNICAS" \
+            --metadata author="Camilla N." \
+            -V geometry=margin=2.5cm -V fontsize=10pt --toc \
+            -o /tmp/parte2.tex
+          cd /tmp
+          pdflatex -interaction=nonstopmode parte2.tex > /dev/null 2>&1 || true
+          pdflatex -interaction=nonstopmode parte2.tex > /dev/null 2>&1 || true
+          test -f parte2.pdf
+
+      - name: Version PDF
+        run: |
+          TS=$(date -u +%Y%m%d-%H%M%S)
+          mkdir -p paper/pdf
+          cp /tmp/parte2.pdf "paper/pdf/manuscript_Parte2_${TS}.pdf"
+          git config user.name "ci-audit-bot"
+          git config user.email "ci-audit-bot@users.noreply.github.com"
+          git add paper/pdf
+          git commit -m "ci: PDF versionado ${TS} (criado sob gate AST VERDE)" || echo "nada a versionar"
+          git push

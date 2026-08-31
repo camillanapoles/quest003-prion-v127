@@ -1,0 +1,36 @@
+name: AST Quality Gate
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ast:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: AST bateria A2-A9 (gate bloqueante — zero-débito)
+        run: |
+          python3 experiments/ast_check.py --fast 2>&1 | tee ast_gate.log
+          grep -q "AST VERDE" ast_gate.log || { echo "✗ GATE: AST não-VERDE — falha de qualidade bloqueante"; exit 1; }
+      - name: Relatório de pendências (sempre)
+        if: always()
+        run: |
+          {
+            echo "# AST Quality Gate — $(date -u '+%Y-%m-%d %H:%M UTC')"
+            echo
+            echo "## Ledger de pendências (A9)"
+            echo '```'
+            python3 scripts/pendencias_check.py || true
+            echo '```'
+          } > ast_report.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ast-report
+          path: ast_report.md

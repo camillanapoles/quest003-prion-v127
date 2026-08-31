@@ -432,3 +432,14 @@ PRÓXIMO: (autora) PARTE2-V2-VALIDACAO + entrada-do-posicionamento-C-na-v6 (junt
 
 
 /RECAP 2026-08-28 (merge) — PR #2 MERGED em main@a01f8c2: **TESE COMPLETA EM DUAS PARTES** (P1=v5/release v3.0; P2=v6=ACP com PRODUTO FINAL + validação expressa da autora registrada). Gates 0/0 · AST 6/6 · fila agente vazia · restam: BIORXIV (autora) + GATEF (lab, dormant)
+
+/RECAP-RETRO 2026-08-29→30 (reconstruído do git em 30/08 — não-contemporâneo; fecha P-004)
+FEITO (29/08 main): RENAME ACP→ETRIZAÇÃO (validação expressa da autora) · documento de tese enriquecido (Cap.1-2, Apêndice B mapa-da-lógica, §5.1-bis achado único+argumento filosófico) · VALIDAÇÃO INTEGRAL 38/38 (6 dimensões × skills scientific-*) · concordância plano-vs-entrega 44/44 · PDF FINAL 170KB · ADENDO-FILOSOFICO resolvido por integração
+FEITO (29-30/08 branches): executor batches 1-6 + verificação CrossRef + D-01/D-02/D-03 fechados · gap-mapper v1/v2 (4 parâmetros validados por literatura independente) + ACTION_PLAN_CROSS_SPECIES (diretriz da autora) · otimizacao FULL.tex 1506L + TESE-FICHA-TEMPLATE
+ESTADO à época: gates 0/0 (hook bloqueante ativo) · registro 54/38/48 · main 9ad4428
+
+/RECAP 2026-08-30 — Sessão AUDITORIA+GARANTISTA (local+remoto)
+FEITO: captura total de auditorias locais (AST/gates/TODO-registry/worktrees) e remotas (API: branches/PRs/tags/releases/CI=0-runs) → AUDIT_CAPTURE_2026-08-30.md (9 divergências validadas D1-D9) · PENDENCIAS.md ledger mestre (22 itens; 18 abertos; 0 agente-planejada sem {{DEFER}}) · scripts/pendencias_check.py = A9 embutido no ast_check.py + pre-commit (planejada-sem-defer bloqueia commit; evidência-ausente bloqueia; drift de marcador bloqueia) · portabilidade skills corrigida (env>repo-local>/workspace>~/.agents) → AST 8/8 VERDE neste ambiente · higiene: 3 marcadores obsoletos removidos (ETRIZACAO-APLICAR/PUBMED-DIRECT/Q3-Q5-EXEC) · RECAP-RETRO anexado acima
+ESTADO: gates P1+P2 0/0 · AST 8/8 (A2-A9) · ledger: 5 agente-deferidas (P-001 sweep-taxas, P-002 xspecies-θ, P-015 cost-decomp, P-018 batch6, P-019 fixfig1-decisão) · 3 não-mergeadas (executor/gap-mapper/otimizacao) · git local INOPERANTE (objetos placeholder; fetch falha em pack — D9) — trabalho em working tree; commit/push via API GitHub (cred store existe) ou ambiente original
+PRÓXIMO: (agente) P-001 sweep composição taxas ±50% → JSON→N-fatos→gate · depois P-002 xspecies | (autora) P-007 BIORXIV · P-008 TESE-FICHA · P-009 OK anexos→merge P-020 · P-010 kit RML | (executor/lab) P-012/13/14 · GATEF dormant
+ÂNCORA: remoto main@9ad4428 + working tree local 30/08 (sem commit local — D9) · tags v1.0/v3.0/v6.0 · predições travadas v1.0
