@@ -5,12 +5,12 @@
 **Taxonomia de STATUS:** PLANEJADA · EM_EXECUCAO · EXECUTADA_NAO_MERGADA · FECHADA · DORMANT · BLOQUEADA_EXTERNA · AGUARDANDO_AUTORA · AGUARDANDO_LAB · AGUARDANDO_EXECUTOR
 **DONO:** AGENTE · AUTORA · LAB · EXECUTOR (sessão executora externa à de ledger)
 
-<!-- LEDGER-RESUMO total=22 abertas=18 planejadas_agente=5 fechadas=3 dormant=1 -->
+<!-- LEDGER-RESUMO total=26 abertas=22 planejadas_agente=9 fechadas=3 dormant=1 -->
 
 | ID | TODOID | PENDÊNCIA | DONO | STATUS | EVIDÊNCIA/ARTEFATO | ORIGEM |
 |---|---|---|---|---|---|---|
 | P-001 | - | Sweep de composição de taxas ±50% (fragmentação/autocatálise/nucleação) — fecha GAP-1 do gap-mapper {{DEFER:exige fase nova no harness ws_9_v5_sweeps + arquivamento JSON conforme REPARAM_LOOP; próxima sessão de execução}} | AGENTE | PLANEJADA | ../003-gap-mapper/analysis/GAP_MAPPER_REPORT.md | gap-mapper GAP-1 |
-| P-002 | - | Teste de invariância de θ* entre espécies (camundongo/hamster/rato/humano/bank vole; cenários A/B/C) {{DEFER:exige parametrização por espécie (dados já coletados no ACTION_PLAN) + script determinístico novo; após P-001}} | AGENTE | PLANEJADA | ../003-gap-mapper/analysis/ACTION_PLAN_CROSS_SPECIES.md | diretriz da autora 30/08 |
+| P-002 | - | Teste de invariância de θ* entre espécies — guarda-chuva da PARTE 3, decomposto em P-023..P-026 (plano travado) {{DEFER:sequência P-001→Fase 0 sync branch→P-023..26; ver paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md}} | AGENTE | PLANEJADA | paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md | diretriz da autora 30/08 · ACTION_PLAN branch gap-mapper |
 | P-003 | - | Verificação claim-a-claim dos 88 candidatos (batches 1–6) + 49 bindings → elevação E-registry 38→≥150 fontes + re-target AST A5/A8 | AGENTE | EM_EXECUCAO | ../003-executor/paper/evidence_workspace/candidates/verification_status_consolidado.csv | otimizacao P1.1 / OPTIMIZATION_LOG |
 | P-004 | - | /RECAPs das sessões 29–30/08 (ausentes nos runbooks — regra 10) reconstruídos e anexados | AGENTE | FECHADA | guardian.md | AUDIT_CAPTURE §D5 |
 | P-005 | - | Marcadores obsoletos removidos (resolver=remover): ETRIZACAO-APLICAR, PUBMED-DIRECT, Q3-Q5-EXEC | AGENTE | FECHADA | paper/ERITRIZACAO.md | AUDIT_CAPTURE §D6 |
@@ -31,6 +31,10 @@
 | P-020 | - | Branch otimizacao-pqms-batch1: manuscript_Parte2_FULL.tex (1506 L) + TESE-FICHA-TEMPLATE + anexos P2.1/P2.2 — trabalho pronto, merge pendente de OK da autora (P-009) | AGENTE | EXECUTADA_NAO_MERGADA | branch:otimizacao-pqms-batch1 @bd95dc9 (remoto GitHub) | compare API main...otimizacao |
 | P-021 | - | Branch executor (+10 commits): candidatos verificados, D-01/D-02/D-03 fechados, bindings rascunhados — merge condicionado a P-003 (claim-a-claim) | AGENTE | EXECUTADA_NAO_MERGADA | branch:executor @a3e2a37 (remoto GitHub) | compare API main...executor |
 | P-022 | - | Branch gap-mapper (+3 commits): GAP_MAPPER v1/v2 + ACTION_PLAN_CROSS_SPECIES — merge condicionado a P-001/P-002 (elevação a claims com binding) | AGENTE | EXECUTADA_NAO_MERGADA | branch:gap-mapper @e7a2976 (remoto GitHub) | compare API main...gap-mapper |
+| P-023 | - | Fase 1 P3: extração de parâmetros por espécie (K_autocat/K_frag/K_nucl/k_clear/[PrP^C]₀) com proveniência + elevação Corridon 2026→E039+ {{DEFER:após P-001 e Fase 0 (sync gap-mapper←main); skill paper-lookup+scientific-writing}} | AGENTE | PLANEJADA | ../003-gap-mapper/analysis/ACTION_PLAN_CROSS_SPECIES.md | PLAN_PARTE3 §3 F1 |
+| P-024 | - | Fase 2 P3: ws_9_multispecies.py (motor v4 intocado, parity C0 embutido, κ-sweep {1.5,2,3,4,8}, relógio por espécie normalizado) → JSONs por espécie {{DEFER:requer P-023 concluído; skills TDD+code-review+uncertainty}} | AGENTE | PLANEJADA | paper/guardian/SKILL_SCOUT_S3_RATECOMPOSITION.md | PLAN_PARTE3 §3 F2 |
+| P-025 | - | Fase 3 P3: θ* por espécie + IC + decomposição de sensibilidade + figuras auditáveis dos JSONs {{DEFER:requer P-024; skills visualization+statistical-analysis}} | AGENTE | PLANEJADA | paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md | PLAN_PARTE3 §3 F3 |
+| P-026 | - | Fase 4 P3: síntese pelos Cenários A/B/C travados + N-fatos/canon/claims + gates + PR gap-mapper→main + /RECAP {{DEFER:requer P-025; veredito pelo critério pré-registrado, nunca pelo desejo}} | AGENTE | PLANEJADA | paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md | PLAN_PARTE3 §3 F4 |
 
 ## Mapeamento por skill scientific-\* (como cada pendência é garantida)
 

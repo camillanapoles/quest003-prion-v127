@@ -1,7 +1,7 @@
 name: AST Quality Gate
 on:
   push:
-    branches: [main]
+    branches: [main, gap-mapper, executor, otimizacao-pqms-batch1]
   pull_request:
     branches: [main]
   workflow_dispatch:
