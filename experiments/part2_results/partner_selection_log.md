@@ -2,7 +2,7 @@
 > **NATUREZA (diretriz da autora):** demonstração de EXECUTABILIDADE do método — prova que o protocolo roda e produz rastreio auditável. **NÃO é uma seleção**: nenhuma ordem de contato é decisão da tese; as ordens abaixo são SAÍDAS DO MÉTODO ilustrativas para o futuro executor.
 ## v0.2 · 2026-08-27 (+ Q3-Q5 executadas) · executor: agente (guardian-gated) · registro por commit (PROSPERO-análogo)
 
-**Nota de execução (honestidade):** Q1 e Q2 foram executadas via **meta-busca web** (proxy das strings PubMed registradas) — a execução direta no PubMed fica como pendência de conformidade plena ({{TODO:PUBMED-DIRECT:rodar Q1-Q2 no PubMed interface e anexar contagens}}). Q3-Q5 pendentes. Resultados abaixo com data e URL.
+**Nota de execução (honestidade):** Q1 e Q2 foram executadas via **meta-busca web** (proxy das strings PubMed registradas); a conformidade plena via PubMed **RESOLVIDA 29/08** (E-utilities, strings-as-registered: Q1=23/Q2=2; JSONs `q{1,2}.json` arquivados — ver §4). Q3-Q5 pendentes. Resultados abaixo com data e URL.
 
 ## 1. Identificação (Q1, Q2 · 2026-08-27)
 
@@ -42,7 +42,7 @@
 1. O método ordena: se executado, contato 1º = RML-NIH (maior score verificável) — kit operacional existe (anexo fora da tese).
 2. **Contato 2º: Calgary** — kit a personalizar com JCI 2026 (novo no mapa; atualizar E-registry? JCI 2026 = candidato a E039 **se** usado como evidência; por ora, registro no log apenas).
 3. UTHealth → lista técnica (assay readout); Nihat → watchlist; USP → verificação I1 documental no primeiro contato.
-4. {{TODO:Q3-Q5-EXEC:executar queries restantes + PubMed direto}}; {{TODO:PUBMED-DIRECT:conformidade plena das contagens}}.
+4. Q3–Q5 restantes (supersede `Q3-Q5-EXEC`/`PUBMED-DIRECT`, ambos resolvidos 29/08): {{TODO:Q3Q5-OFFICIAL:rodar Q3-Q5 em fonte oficial quando o executor for executar}}.
 
 ## 5. Diagrama (regenerado do log — v0.1)
 ```

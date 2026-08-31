@@ -1,6 +1,6 @@
 # ETRIZAÇÃO — Câmara de Fundamentação do Termo (reflexão → consulta)
 ## PLAN_DOC · 28/08/2026 · corpus: conversa da autora (anexo, com assistente externo) + esta tese
-**Natureza:** documento A PARTE para reflexão profunda do tema; após a fundamentação, serve **apenas como consulta**. A aplicação na tese exige **OK expresso da autora** ao plano (§6). {{TODO:ETRIZACAO-APLICAR:aplicar encaixe (título v2 + pré-introdução + pontos) somente com OK da autora; grafia recomendada 'etrização' (o corpus inteiro usa etr-/etrização; 'eritrização' evocaria eritrócito) — confirmar}}
+**Natureza:** documento A PARTE para reflexão profunda do tema; após a fundamentação, serve **apenas como consulta**. ~~Aplicação pendente de OK da autora~~ **APLICADO E VALIDADO 29/08** (validação expressa da autora registrada nos commits `fa91835`→`c0b4cf5`: título v2 'ETRIZAÇÃO COMPUTACIONAL...' + pré-introdução + pontos; grafia 'etrização' confirmada pelo corpus).
 
 ---
 
