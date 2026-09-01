@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "tier": "[SIM] · design-bands (não medição)",
+    "created": "2026-09-01",
+    "method": "P023_PARAMETRIZATION_ANALYSIS.md (proveniência NCBI verificada em experiments/xspecies/papers_batch*.txt)",
+    "band_rule": "banda≠ponto por E-S3-02 (identificabilidade); edges de banda = escolhas de design declaradas, mapeadas de claims ordinais citados",
+    "motor_contract": "Kt_scale é o único parâmetro espécie-dependente que governa contenção e relógio (S3, E-S3-03); demais classes herdadas como razões murinas DECLARADAS",
+    "nota_E039": "E039 (Corridon 2026, pmid:42189860) elevada ao registro — âncora half-life universal com caveat PrP-humano-em-fundo-murino"
+  },
+  "mouse": {
+    "group": "A_ponto",
+    "Kt_scale": {"lo": 1.0, "central": 1.0, "hi": 1.0, "ref": "pmid:39717079 (kernel murino, E009-família)"},
+    "clock_days_per_simunit": 144.02,
+    "clock_ref": "E007 (âncoras Groveman, humanizado)",
+    "half_life_days": {"central": 5.5, "range": [4.8, 6.4], "ref": "pmid:42189860 (E039)"},
+    "D_eff_ref": "Thorne 2006 (valores atuais do motor)",
+    "expression_flag": null
+  },
+  "human": {
+    "group": "B_banda_herdada",
+    "Kt_scale": {"lo": 0.5, "central": 1.0, "hi": 2.0, "ref": "envelope S3 (E-S3-02: taxas relativas humanas não publicadas; herança murina como banda explícita)"},
+    "clock_days_per_simunit": 144.02,
+    "clock_ref": "E007",
+    "half_life_days": {"central": 5.5, "range": [4.8, 6.4], "ref": "pmid:42189860 (caveat: PrP humano em fundo murino)"},
+    "expression_flag": null
+  },
+  "hamster": {
+    "group": "C_banda_extrativa",
+    "Kt_scale": {"lo": 1.5, "central": 2.0, "hi": 4.0, "ordinal": "rápida", "band_rule": "263K incubação dias-semanas vs meses murinos ⇒ ≥2× central; hi=4 cobre extremo da banda ordinal",
+      "ref": "pmid:19193264 (263K multi-espécime) + pmid:7553876 (barreira hamster↔mouse via chimeras)"},
+    "clock_anchor": {"type": "incubation_band", "value": "dias-semanas (263K)", "ref": "pmid:19193264"},
+    "expression_flag": null,
+    "predicao_pre_registrada": "Kt_hamster >= 2x murino ⇒ contenção κ=2 falha no braço hamster (P-024; anti-hindsight: comparar ao release, nunca retreinar)"
+  },
+  "vole": {
+    "group": "C_banda_extrativa",
+    "Kt_scale": {"lo": 1.0, "central": 1.5, "hi": 3.0, "ordinal": "alta p/ estirmes humanas", "ref": "pmid:39255320 (aceitador universal) + pmid:27259989 (produtos PMCA cross-species)"},
+    "clock_anchor": {"type": "transmission_band", "ref": "pmid:39255320"},
+    "expression_flag": "I109 → doença espontânea sob superexpressão (pmid:41559809): [PrP^C]0 modula — braço de sensibilidade de expressão recomendado",
+    "key_residues": {"h129_homolog": "M (computado: prnp_key_positions.json)"}
+  },
+  "rat": {
+    "group": "D_controle",
+    "Kt_scale": null,
+    "note": "outlier NEGATIVO: resistente à maioria das estirmes de scrapie com 96,5% identidade ao mouse (computado: prnp_identity_matrix.json) — barreira de entrada ≠ taxa lenta; NÃO parametrizar como taxa≈0; usar como controle de não-identificabilidade do preditor global"
+  },
+  "yeast": {
+    "group": "D_ortogonal",
+    "scope": "valida apenas a forma funcional do termo freeS/DN-trans (pmid:23746351 — DN depende de definição estrutural); sem Damköhler (sem GPI/difusão extracelular)"
+  }
+}

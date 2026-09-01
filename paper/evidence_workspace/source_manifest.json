@@ -887,6 +887,33 @@
     "verified_by": "accountability agents (consortium); human-supervised",
     "verified_on": "2026-08-27"
    }
+  },
+  {
+   "evidence_id": "E039",
+   "source_type": "journal_article",
+   "title": "PrP turnover in vivo and the time to effect of prion disease therapeutics.",
+   "authors": [
+    "Corridon TL",
+    "O'Moore J",
+    "Seerley A",
+    "Sprague DA",
+    "Lian Y",
+    "Laversenne V",
+    "Noble B",
+    "Kamath NG"
+   ],
+   "year": 2026,
+   "identifiers": {
+    "pmid": "42189860"
+   },
+   "locator": "pmid:42189860",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agente (esummary E-utilities 01/09; meta em experiments/xspecies/corridon_meta.txt); human-supervised pendente",
+    "verified_on": "2026-09-01"
+   }
   }
  ]
 }

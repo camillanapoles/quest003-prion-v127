@@ -1,0 +1,3 @@
+title: PrP turnover in vivo and the time to effect of prion disease therapeutics.
+journal: PLoS Pathog 2026 May
+authors: ['Corridon TL', "O'Moore J", 'Seerley A', 'Sprague DA', 'Lian Y', 'Laversenne V', 'Noble B', 'Kamath NG']
