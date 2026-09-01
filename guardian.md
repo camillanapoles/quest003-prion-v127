@@ -532,3 +532,9 @@ FEITO: **M3.1 (a primeira dose calculada) nasceu sob garantista** — avaliaçã
 ESTADO: main CI-verde · branches: m31-dose@33f2e9f (U1-U2+plano) · writing-v2-test@67298b2 (stages 1-6) · registro 58/56/59 · PaperSpine 4/12 gates
 PRÓXIMO (NOVA SESSÃO): seguir M31_SESSAO2_PLANO §2 (U5→U6→U7→paper-spine 6→8→12) · (autora) pendências fixas idem (BIORXIV/TESE-FICHA/P-009/kit-RML/P-019/beta)
 ÂNCORA: m31-dose@33f2e9f · writing-v2-test@67298b2 · predições v1.0 intocadas · a banda é o achado até G0-A6
+
+/RECAP 2026-09-01 ~22:00 — ADOÇÃO WRITING-V2 (decisão da autora: "merge B-vencedor + A-vencedores")
+FEITO: métrica-2 do protocolo EXECUTADA pelo agente — guardian R0-R3 perfil-part2 na tese unificada: 1ª rodada FAIL 21-BLOCKED/30-AMEND (classe contrato-de-tag: over-tagging de assumptions κ↔µM; canon ausente) → correção 1 iteração → **PASS 0/0** (mesmo patamar do A; relatório guardian_report_unified_test.md) · avaliação A-vs-B entregue (matriz 10 critérios: B 6 · A 2 · empate 1; os 2 de A portáveis) · **DECISÃO DA AUTORA: adotar merge** → executado: Cap.7 camada-clínica-alfa INTEGRAL do A portada (+ adições B: dose-A6 na pergunta-4, Fig.5 na rota-10min) · EN companion da edição unificada (novo-conteúdo íntegro; Partes 1-2 EN referenciadas; paridade tags) · merge main→braço resolvido (paper_rewriting_output=braço; ledger união) · **PR#7 MERGED @6194190 + tag writing-v2-adopted** · P-029 FECHADA (adoção) · AST 9/9 no main (ratchet 60/58/65) + CI AST dispatchado
+ESTADO: main = tese unificada ADOTADA (B-espinhaço + A-campos) · registro 60/58/65 · co-edição ABNT intacta · predições v1.0 intocadas · P-029/P-030 FECHADAS
+PRÓXIMO: (autora) ficha TESE-FICHA P-009 + leitura da edição unificada (paper/pdf/tese_unificada_*.pdf) + pendências fixas (BIORXIV/kit-RML/P-019/beta) · (agente) recorte-artigo do achado da banda p/ periódico quando autora abrir
+ÂNCORA: main@6194190 · tag writing-v2-adopted · PR#7 · guardian_report_unified_test.md
