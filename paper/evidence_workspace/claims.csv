@@ -53,3 +53,6 @@ C051,3.4,result,072b752b80716b64ebdc337584e1b5211e952290a05b4ed4501c50a74c07132c
 C052,2,method,c1259f326b4c4b8e1debefc8731d18a0720b12c43af296f10eca53131eab89e1,E032;E033,verified,low,exploratory
 C053,5,method,7f904fba14f97409670d755f2fddd590542fe7f1d11d301a1d2a80d5f3a167ca,E033,verified,low,exploratory
 C054,1-met,method,9562e935e90b292bfa4f1ddd0e1f78120248c8d7d92eb0231c8996ae3892d33c,E009;E010;E031;E032;E033;E007,verified,low,confirmatory
+C055,4.7,result,3859572b62d8f5421bd7b42c9d79f2ec17ee496409ea12003d82e1e590eda72f,E032,verified,low,confirmatory
+C056,4.7,result,eae2355b9af9b30039a47ffee3dffcf2f1a689853a6648d6f5eaea5da85a3b25,E032,verified,low,confirmatory
+C057,4.7,result,7c21c1e38d273fee7cd2782e0ccf1ecd3ccc513b17a35dc506c601cd16c93d08,E032,verified,low,confirmatory

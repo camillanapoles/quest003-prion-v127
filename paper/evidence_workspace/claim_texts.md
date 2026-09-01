@@ -65,3 +65,11 @@
   - *RENAME 28/08 (autora): ACP→etrização — mesmo método, nome definitivo da autora; hash regenerado*
   - *RENOMEAÇÃO (28/08, diretiva da autora): ACP → Etrização — mesmo método, novo nome; ACP preservado como nome histórico entre parênteses*
 **C054** (1-met,method) [E009;E010;E031;E032;E033;E007]: Etrização computacional (em inglês: Computational Etrization; anteriormente denominada Parameterized Computational Anticipation/ACP): o método nomeado de pesquisa para continuar pesquisa por simulação nos dias atuais, compreendendo P0 identificação de dados publicados validados, P1 parametrização com proveniência declarada, P2 execução determinística auditável, P3 colheita sob critérios pré-declarados, P4 prognóstico travado antes de qualquer medição, P5 pesquisa derivada prosseguindo imediatamente de valores razoáveis simulados, e P6 confronto opcional onde resultados reais análogos significam passos subsequentes já avançados — antecipação bancada, nunca pendente de validação
+- **C055** (4.7,result) [E032]: Cross-species computational probing under pre-registered operational definitions returns scenario B: central-band theta-star spans 0.333-0.400 across mouse human hamster and vole (ratio 1.20 - approximately conserved) with monotonic degradation at kinetic extremes where Kt=4 requires kappa=8 (theta-star=0.111)
+  - *Tese v2 (branch tese-v2-parte3, 01/09): achados PARTE 3 integrados à tese.*
+
+- **C056** (4.7,result) [E032]: Theta-star is evaluation-horizon dependent: the same Kt=2 kappa=2 arm is contained under own-free-growth matching (0.659 mm) and fixed-calendar t=5 (0.859 mm) but escapes under generation-matched-to-treated-base (censored at 2.83 mm) - every theta-star citation must declare its horizon and the locked v1.0 prediction uses the S3 definition
+  - *Tese v2 (branch tese-v2-parte3, 01/09): achados PARTE 3 integrados à tese.*
+
+- **C057** (4.7,result) [E032]: Required containment kappa scales with host kinetic scale Kt (1 to 1.5, 2 to 2, 3 to 3, 4 to 8 - superlinear beyond 2x) yielding a titration rule: containment dose must be titrated to host kinetics rather than fixed universally
+  - *Tese v2 (branch tese-v2-parte3, 01/09): achados PARTE 3 integrados à tese.*

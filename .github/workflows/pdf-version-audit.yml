@@ -46,7 +46,7 @@ jobs:
           pandoc /tmp/p2_safe.md -f markdown -t latex -s \
             --metadata title="ETRIZAÇÃO COMPUTACIONAL EM DOENÇAS PRIÔNICAS" \
             --metadata author="Camilla N." \
-            -V geometry=margin=2.5cm -V fontsize=10pt --toc \
+            -V geometry=margin=2.5cm -V fontsize=10pt \
             -V pdf-engine=xelatex \
             -o /tmp/parte2.tex
           cd /tmp
