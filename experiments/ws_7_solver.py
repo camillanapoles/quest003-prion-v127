@@ -20,7 +20,10 @@ LAM=1.8           # tortuosidade p/ macromolécula ~30kDa (Thorne 2006: 1.6-2.0)
 D0=1.25e-10       # D livre Stokes-Einstein, R_h≈2.5nm, 30kDa [m²/s]
 DEFF=D0/LAM**2    # ≈3.9e-11 m²/s
 PD='/usr/share/fonts/truetype/dejavu/'
-def F(sz,b=False): return ImageFont.truetype(PD+('DejaVuSans-Bold.ttf' if b else 'DejaVuSans.ttf'),int(sz))
+def F(sz,b=False):
+    # portável: no CI (ubuntu) usa DejaVu; em hosts sem o path (Termux) cai na fonte default do PIL
+    try: return ImageFont.truetype(PD+('DejaVuSans-Bold.ttf' if b else 'DejaVuSans.ttf'),int(sz))
+    except OSError: return ImageFont.load_default()
 
 # ---------- A) 1D radial analítico: raio de proteção (Thiele/penetração) ----------
 # Estado estacionário esférico com consumo de 1ª ordem k: c(r)=c0·exp(-r/ℓ)/r, ℓ=sqrt(D/k)

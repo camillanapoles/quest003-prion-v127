@@ -1,13 +1,13 @@
 {
   "round": 3,
-  "n_findings": 10,
+  "n_findings": 12,
   "gate_pass": true,
   "findings": [
     {
       "id": "R0-UNUSED",
       "severity": "NOTE",
       "where": "../manuscript_EN_v5.md",
-      "issue": "Claims registradas mas não citadas no manuscrito: C052, C053, C054.",
+      "issue": "Claims registradas mas não citadas no manuscrito: C052, C053, C054, C058, C059, C060.",
       "demand": "Confirmar que são intencional (claims de outline/suplemento)."
     },
     {
@@ -15,6 +15,20 @@
       "severity": "AMEND",
       "where": "../manuscript_EN_v5.md",
       "issue": "N-fato N050 (s3_max_dev_pct_all_arms_Rnorm_vs_base (extremo N_x2 saturado)=245.3 percent) aparece no texto sem marker de rastreabilidade próximo.",
+      "demand": "Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número."
+    },
+    {
+      "id": "R0-NBIND-N060",
+      "severity": "AMEND",
+      "where": "../manuscript_EN_v5.md",
+      "issue": "N-fato N060 (m31_mw_prp_mature_kda=22.83 kDa) aparece no texto sem marker de rastreabilidade próximo.",
+      "demand": "Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número."
+    },
+    {
+      "id": "R0-NBIND-N063",
+      "severity": "AMEND",
+      "where": "../manuscript_EN_v5.md",
+      "issue": "N-fato N063 (m31_band_ratio_mean_x=52.6 ratio) aparece no texto sem marker de rastreabilidade próximo.",
       "demand": "Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número."
     },
     {
@@ -35,7 +49,7 @@
       "id": "R1-BATTERY-result",
       "severity": "NOTE",
       "where": "claims",
-      "issue": "Bateria hostil aplicada a 10 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C032, C033, C034, C035, C036, C037, C038, C039, C042, C051)",
+      "issue": "Bateria hostil aplicada a 13 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C032, C033, C034, C035, C036, C037, C038, C039, C042, C051, C055, C056, C057)",
       "demand": "Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação."
     },
     {
