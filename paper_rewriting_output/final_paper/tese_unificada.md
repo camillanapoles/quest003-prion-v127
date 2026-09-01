@@ -176,3 +176,72 @@ Oito braços pré-registrados (incluindo PPS como controle positivo publicado e 
 ## 4.5 Custo-cotação
 
 A tabela suplementar S1 (custo por braço, cotações de mercado arquivadas) está no Apêndice E — o desenho é especificado ao ponto de orçamento, sem executar compra.
+
+---
+
+# CAPÍTULO 5 — MÉTODOS: A ETRIZAÇÃO FORMALIZADA
+
+## 5.1 O método nomeado: etrização computacional, passos P0–P6
+
+A **parametrização** (operação técnica do P1) é o núcleo operacional; a **tese etrizada** é o produto [claim:C054] [evidence:E009, E010, E007, E031, E032, E033]. Declaração de eixo retórico (obrigatória): tudo aqui **é simulação, e é dito que é**; não se promete aplicar nem validar — antes: **se dados reais exibirem resultados análogos aos simulados, os passos seguintes já terão sido dados** (antecipação bancada, não pendente).
+
+| Passo | Nome | Entrada | Procedimento | Saída | Garantia |
+|---|---|---|---|---|---|
+| P0 | identificação | pergunta focal | SLR auditada de dados publicados validados | base E-registrada (58 fontes) | linhagem completa (§5.3) |
+| P1 | parametrização | base E-registrada | derivação física/estatística com proveniência por parâmetro | modelos parametrizados | cada número amarra a fonte |
+| P2 | execução | modelos | motores determinísticos, código aberto, self-tests | runs arquivados [SIM] | reprodução entre ambientes |
+| P3 | colheita | runs | critérios de aceitação pré-declarados | resultados [SIM] + margens | veredito sem meta móvel |
+| P4 | prognóstico | resultados | predições travadas por release antes de qualquer medição | limiares/tabela-decisão | âncora anti-hindsight |
+| P5 | pesquisa derivada | valores razoáveis | novas perguntas derivam imediatamente | agenda derivada [SIM] | geração, não espera |
+| P6 | confronto (opcional) | dados reais futuros, se análogos | comparação à âncora travada (nunca retreino) | passos seguintes já avançados | antecipação bancada |
+
+**Posição na família:** a etrização é irmã da meta-análise (agrega o publicado), da modelagem física (deriva comportamento) e dos in-silico trials (executa cenários) — e distingue-se por **travar prognósticos antes da medição e declarar a simulação como simulação em cada saída** (tiers [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] [claim:C047] [evidence:E032, E033]).
+
+## 5.2 Formulação matemática com proveniência
+
+*Em linguagem clínica: as equações abaixo são o "rastreio farmacocinético" da proteína no cérebro — para onde difunde, quanto dura, quão forte compete com o príon. Se você entende isso e as Figuras 4–5, a matemática é opcional: ela formaliza o que já foi dito em palavras — cada equação carrega a citação de onde veio cada parâmetro.*
+
+**Transporte (ADR) em meio poroso heterogêneo** (volumes finitos 2D 192², Euler explícito):
+
+∂(αc)/∂t = ∇·(D_eff∇c) − ∇·(vc) + S(x) − k_eff·c
+
+com α=0,20 e λ=1,8 medidos in-vivo [claim:C014] [evidence:E010]; D_eff=D₀/λ²=3,86×10⁻¹¹ m²/s (D₀=1,25×10⁻¹⁰ m²/s, Stokes–Einstein, R_h≈2,5 nm) [claim:C014] [evidence:E030]; k_eff varrido 10⁻⁶–10⁻⁵ s⁻¹ ancorado à polimerização nucleada [claim:C015] [evidence:E011]; fluxo intersticial por Darcy; cistos espongiformes κ×50. Auto-testes: conservação de massa 100,0%; erro de Thiele 0,5% (ℓ=3,59 mm) [claim:C032] [evidence:E030].
+
+**Capping dominante-negativo e o limiar θ** (termo próprio): freeS(r) = (1 + κ·c_V127(r))⁻²; c_V127(r) ∝ exp(−r/ℓ); **θ ≡ (1 + κ·c_pico)⁻¹ ∈ (0,1]** — fração de atividade máxima de replicação no pico secretor; contenção quando a frente assintótica cai <50% do baseline (T3) [claim:C033] [evidence:E030]. A forma quadrática reflete conversão de dois participantes; a alternativa de primeira potência é falseável pela dose-resposta do braço A6 [claim:C051] [evidence:E032, E033].
+
+**Relógio humanizado** (âncoras de organoide [evidence:E007]): duplicação ≈12,1 d; 1 unidade-simulação = 144 d [claim:C037] [evidence:E032, E007].
+
+**Estimador θ_obs**: features (raio R, log-razão de biomassa); κ̂ vizinho-mais-próximo na grade κ∈{1,5–8}; θ̂=1/(1+κ̂); regime por braço (mediana, n=8, IC bootstrap 90%). Veredito pré-declarado: ADEQUADO na fronteira de decisão (cobertura 3/3; bias −0,008 em κ=2); v1.1 interpolada testada e rejeitada [claim:C052] [evidence:E032, E033].
+
+## 5.3 Base de Validade (MANDATÓRIA)
+
+**Declaração tríade:** (i) esta tese é **baseada em simulação computacional e NÃO SUBSTITUI a validação de laboratório** — o laboratório é essencial; (ii) a continuidade provém dos prognósticos: se o G0-wet equivaler ao simulado, a antecipação já estará bancada; (iii) o rigor experimental é **convertido para o ambiente computacional**: cada dado com linhagem completa (quem→espécie→cruzamento→código→parâmetro→resultado).
+
+| Dado | Primário | Espécie/sistema | Cruzamento independente | Código | Parametrização humana | Resultado [SIM] |
+|---|---|---|---|---|---|---|
+| Cinética de replicação | Fornara/Igel 2024 (aberto) [E009] | camundongo | Masel 1999 [E011] | kernel portado [claim:C013] | relógio às âncoras humanas | θ\*=0,333 [C038] |
+| Relógio/amplitude humanos | Groveman 2019 [E007] | organoide sCJD | Groveman 2021 [E008]; subtipos 2023 | regressão 12,1 d; 144 d/unid [claim:C037] | direto | predição θ<0,33 [C040] |
+| Transporte intersticial | Thorne & Nicholson 2006 [E010] | humano in-vivo | Stokes–Einstein | solver ADR auto-testado [claim:C032] | direto | regras 1–3 [C033-C035] |
+| Agente V127 anchorless | Asante 2015 [E001] · Gatdula 2026 [E003] · Zerbes 2026 [E004] | população→camundongo→cultura→AAV | quatro níveis independentes | termo freeS | dose↔κ em banda (§4.3) | contenção κ=2 [C038] |
+| Âncora κ↔µM (banda) | Chen 2010 SPR [E057] + âncora ilustrativa P1 §2.2 | humano (Aβ42-PrP; PROXY declarado) | — | cadeia dimensional M3.1 [E058] | direto | banda A6 0,0–2,6 µg [C058-C060] |
+| Prior de falhas clínicas | Geschwind 2013 · Haïk 2014 · Newman 2014 · Otto 2004 · Mead 2022 · Cheng 2015 [E034-E038, E022] | humano | registry-bound | Beta–Binomial WS-8 [claim:C036] | direto | P=5%/30–45% |
+| Sensibilidade estrutural | (este programa) | in-silico | motor reproduzido 2× (hash+valor) | sweeps S1-S3 + estimador | — | predição discriminadora [C051] |
+
+**Por que isto é ciência com referências sólidas:** toda célula amarra fonte peer-reviewed ou run arquivado com hash; nenhum número vive fora do registro (**60 claims · 58 fontes · 65 N-fatos · 4 validadores em zero · AST 9/9**); a cadeia é verificável de ponta a ponta, como um "métodos" experimental exige.
+
+## 5.4 A tese em forma experimental (mapeamento análogo)
+
+| Tese experimental (com pessoas) | Esta tese (etrização) |
+|---|---|
+| Participantes recrutados | Fontes publicadas (58 E-registradas) |
+| Critérios de inclusão/exclusão | SLR auditada (query bank pré-registrada) |
+| Consentimento/aprovação ética | Proveniência aberta (identifier confirmado) |
+| Instrumentos calibrados | Código auto-testado (massa 100%; ℓ 0,5%) |
+| Protocolo executado | P1 parametrização + P2 execução determinística |
+| Dados coletados | Runs arquivados [SIM] (reprodução 2 ambientes) |
+| Prontuário | Registro da tese (60 claims · 65 N-fatos · pendências estruturadas) |
+| Análise pré-especificada | P3 colheita + estimador θ_obs calibrado |
+| Implicações relatadas | P4 prognóstico + P5 derivada + P6 antecipação |
+| Auditoria/supervisão | Guardião (4 dimensões de revisão hostil) |
+
+*Um examinador que sabe ler tese experimental sabe ler esta: basta trocar "pessoa"→"fonte", "instrumento"→"código", "coleta"→"run" — a forma documental é idêntica; a base é simulação computacional.* (Hipótese H1, testável: a auditoria trocando apenas os termos do mapeamento não perde a tese.)
