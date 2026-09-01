@@ -61,6 +61,10 @@ ETRIZAÇÃO/etrização computacional — o método nomeado desta tese (neologis
 
 ## NOTA DE LEITURA PARA CLÍNICOS — pré-abordagem dos temas antes da penetração técnica
 
+> ⚠️ **PROGNÓSTICO [SIM] — NÃO É CONSELHO MÉDICO.** Documentação de desenho de pesquisa sob simulação parametrizada; nenhum uso humano sem os gates [ORGANOID]→[MOUSE]→regulatório; nada aqui orienta conduta, dose ou seleção de paciente. Verificação: autora responsável + guardião de máquina (gates 0-BLOCKED).
+
+**Por que abrir estas páginas: doenças priônicas são 100% fatais e não têm hoje nenhuma terapia modificadora aprovada — e este trabalho traz o primeiro cálculo quantitativo de dose-e-entrega de um candidato, com predições travadas antes de qualquer medição.**
+
 **O que esta tese é, em cinco perguntas que qualquer médico faria:**
 
 1. **Que doença?** Doenças priônicas (DCJ esporádica/genética): rapidamente progressivas, 100% fatais, sem terapia modificadora aprovada — seis candidatos já faliram em clínica.
@@ -70,6 +74,22 @@ ETRIZAÇÃO/etrização computacional — o método nomeado desta tese (neologis
 5. **Que promessa NÃO faz?** Não promete cura, aplicação humana, nem substitui laboratório: o prognóstico é entregue como conhecimento falseável; o uso humano exige o gate organoide (G0-wet) e além.
 
 **Como ler os símbolos sem perder o fio:** θ\* = *"quanto da conversão sobrevive à dose no pior dia do anel"* (⅓ ≈ contém; ⅑ ≈ quase extingue); κ = *a dose*; Kt = *a velocidade inerente da doença*. Cada capítulo técnico abre com um parágrafo **"Em linguagem clínica"** antes da formulação — quem quiser pular a matemática não perde o argumento.
+
+### Resumo em 1 página — rota de leitura de 10 minutos
+
+**Rota:** (1) esta NOTA (3 min) → (2) **Figura 4** §4.7 — a dose-limiar por espécie (2 min) → (3) **§6.2** "o que os resultados significam e o que não significam" (3 min) → (4) **Cap. 7** conclusões por objetivo (2 min).
+
+**A mensagem inteira em três frases:** (i) a variante G127V, achada pela evolução no kuru, pode travar a replicação do príon por competição (dominante-negativo) sem silenciar a proteína nativa; (ii) a simulação parametrizada com dados publicados entrega regras quantitativas de dose-e-posicionamento (anel 8–12 mm · redose ≤7 d · limiar θ\*≈⅓) com predições travadas ANTES de qualquer medição — e a sondagem multi-espécie deste trabalho mostra o limiar aproximadamente conservado entre espécies (Cenário B), com dose exigida crescente na razão da velocidade da doença; (iii) nada disto é aplicável a humanos antes do gate organoide (G0-wet) — a não-promessa é parte do método, não um enfeite.
+
+### Acompanpanhamento previsto no desenho [SIM] (documentação de desenho — NÃO conduta clínica)
+
+| O que o desenho prevê medir | Quando (previsto no desenho) | Instrumento declarado | Por quê |
+|---|---|---|---|
+| θ\_obs (resposta à contenção in situ) | readouts 90–120 d (organoide) | perfis radiais WB/IHC c/ leitura cega | critério de resposta pré-registrado (θ\_obs<0,33) |
+| Manutenção da cobertura secretora | redose ≤ 7 d (regra 3) | gradiente proximal/distal | trough ≥30–56% do pico [SIM] |
+| Triagem pré-sintomática (população-âncora E200K) | — | RT-QuIC + NfL | precedentes tofersen/nusinersen (endpoint biomarcador) |
+
+*Serviços de neurologia interessados em auditar ou viabilizar o próximo gate encontram o pacote completo em `paper/G0_UNLOCK_DOSSIER.md` + `paper/lab_outreach_package.md` (nenhuma promessa de retorno terapêutico).*(frente-beta: público-alvo clínico-geral vs. especialista — decisão da autora)
 
 # CAPÍTULO 1 — INTRODUÇÃO
 
