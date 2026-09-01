@@ -5,7 +5,7 @@
 **Taxonomia de STATUS:** PLANEJADA · EM_EXECUCAO · EXECUTADA_NAO_MERGADA · FECHADA · DORMANT · BLOQUEADA_EXTERNA · AGUARDANDO_AUTORA · AGUARDANDO_LAB · AGUARDANDO_EXECUTOR
 **DONO:** AGENTE · AUTORA · LAB · EXECUTOR (sessão executora externa à de ledger)
 
-<!-- LEDGER-RESUMO total=26 abertas=13 planejadas_agente=3 fechadas=12 dormant=1 -->
+<!-- LEDGER-RESUMO total=26 abertas=12 planejadas_agente=2 fechadas=13 dormant=1 -->
 
 | ID | TODOID | PENDÊNCIA | DONO | STATUS | EVIDÊNCIA/ARTEFATO | ORIGEM |
 |---|---|---|---|---|---|---|
@@ -23,7 +23,7 @@
 | P-012 | Q3Q5-OFFICIAL | Rodar Q3–Q5 do protocolo de parceiro em fonte oficial (CTG API/agenda pública) | EXECUTOR | AGUARDANDO_EXECUTOR | experiments/part2_results/partner_selection_log.md | partner_log v0.2 |
 | P-013 | IDENTIFY-ORGANOID-DONOR-LAB | Identificar grupo da palestra CJDF-2026 (agenda pública) — potencial 3º elegível | EXECUTOR | AGUARDANDO_EXECUTOR | experiments/part2_results/partner_selection_log.md | partner_log §4 |
 | P-014 | PARTNER-RUN | Executar fluxo identificados→triagem→pontuação→contato sequencial (kits prontos; envio é ação humana) | EXECUTOR | PLANEJADA | paper/lab_outreach_package.md | F10 checklist |
-| P-015 | COST-DECOMP | Decompor US$100–150k em tabela suplementar (limitação 15; manuscritos EN+PT gated) {{DEFER:tabela suplementar exige edição gated + paridade PT/EN + re-gate; opcional por design}} | AGENTE | PLANEJADA | paper/manuscript_EN_v5.md | TODO-registry |
+| P-015 | COST-DECOMP | Tabela suplementar S1 (10 direcionadores, quantidades com fonte, preços só via cotação assinada) nos manuscritos EN+PT — paridade de tags; TODO removido; limitação 15 reescrita honestamente; gate P1 PASS (AMEND=1 fantasma N050 documentado) | AGENTE | FECHADA | paper/manuscript_EN_v5.md | TODO-registry + guardian E-19 |
 | P-016 | - | D-08: extração VizHub GBD do valor absoluto de DALYs priônicos (ferramenta interativa instável; reforço opcional, não-bloqueante — D-01 já fechado via opção B) | AGENTE | BLOQUEADA_EXTERNA | ../003-executor/paper/otimizacao/OPTIMIZATION_LOG.md | executor D-08 |
 | P-017 | SEARCHLOG-FULL | Queries exatas das ~90 buscas não reconstituíveis retroativamente — limitação DECLARADA no manuscrito; logs futuros no momento da busca | AGENTE | DORMANT | paper/manuscript_PT_v5.md | TODO-registry |
 | P-018 | - | Continuação da elevação (meta-150 da tese-FULL) {{DEFER:pool restante (14 fuzzy + 16 URL) exige identifier resolvível (regra); meta-≥150 pertence à tese-otimização condicionada a P-009 da autora; piso atual travado em 56 fontes pelo ratchet A5}} | AGENTE | PLANEJADA | experiments/xspecies/p003_pool.json | AUDIT §P-003 |

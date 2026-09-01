@@ -1,12 +1,16 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 10 (BLOCKED=0, AMEND=0, NOTE=10)
+**Rodadas executadas:** 3 · **Achados:** 10 (BLOCKED=0, AMEND=1, NOTE=9)
 
 ## Gate
 
 **PASS — zero BLOCKED.** O manuscrito resiste à rodada recursiva; recomendação ao editor: aceitável como preprint com auditoria pública.
 
 ---
+
+### [AMEND] R0-NBIND-N050 — ../manuscript_EN_v5.md
+- **Problema:** N-fato N050 (s3_max_dev_pct_all_arms_Rnorm_vs_base (extremo N_x2 saturado)=245.3 percent) aparece no texto sem marker de rastreabilidade próximo.
+- **Exigência:** Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número.
 
 ### [NOTE] R0-UNUSED — ../manuscript_EN_v5.md
 - **Problema:** Claims registradas mas não citadas no manuscrito: C052, C053, C054.
@@ -25,15 +29,11 @@
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-PREPRINT — manifest
-- **Problema:** 2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.
+- **Problema:** 3 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.
 - **Exigência:** Rotular no texto (ex.: bioRxiv preprint).
 
 ### [NOTE] R3-TODO-BIORXIV-ADDENDUM — todo-registry
 - **Problema:** TODO aberto registrado: BIORXIV-ADDENDUM.
-- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
-
-### [NOTE] R3-TODO-COST-DECOMP — todo-registry
-- **Problema:** TODO aberto registrado: COST-DECOMP.
 - **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
 
 ### [NOTE] R3-TODO-EMAIL-GROVEMAN — todo-registry
