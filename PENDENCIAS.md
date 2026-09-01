@@ -5,7 +5,7 @@
 **Taxonomia de STATUS:** PLANEJADA · EM_EXECUCAO · EXECUTADA_NAO_MERGADA · FECHADA · DORMANT · BLOQUEADA_EXTERNA · AGUARDANDO_AUTORA · AGUARDANDO_LAB · AGUARDANDO_EXECUTOR
 **DONO:** AGENTE · AUTORA · LAB · EXECUTOR (sessão executora externa à de ledger)
 
-<!-- LEDGER-RESUMO total=26 abertas=14 planejadas_agente=3 fechadas=11 dormant=1 -->
+<!-- LEDGER-RESUMO total=26 abertas=13 planejadas_agente=3 fechadas=12 dormant=1 -->
 
 | ID | TODOID | PENDÊNCIA | DONO | STATUS | EVIDÊNCIA/ARTEFATO | ORIGEM |
 |---|---|---|---|---|---|---|
@@ -26,10 +26,10 @@
 | P-015 | COST-DECOMP | Decompor US$100–150k em tabela suplementar (limitação 15; manuscritos EN+PT gated) {{DEFER:tabela suplementar exige edição gated + paridade PT/EN + re-gate; opcional por design}} | AGENTE | PLANEJADA | paper/manuscript_EN_v5.md | TODO-registry |
 | P-016 | - | D-08: extração VizHub GBD do valor absoluto de DALYs priônicos (ferramenta interativa instável; reforço opcional, não-bloqueante — D-01 já fechado via opção B) | AGENTE | BLOQUEADA_EXTERNA | ../003-executor/paper/otimizacao/OPTIMIZATION_LOG.md | executor D-08 |
 | P-017 | SEARCHLOG-FULL | Queries exatas das ~90 buscas não reconstituíveis retroativamente — limitação DECLARADA no manuscrito; logs futuros no momento da busca | AGENTE | DORMANT | paper/manuscript_PT_v5.md | TODO-registry |
-| P-018 | - | Batch 6+ do programa de otimização (meta ≥150 refs únicas, ≥60% 2021+; regra de suspensão por D-01 liberada — D-01 fechado) {{DEFER:continuação de P-003 na mesma linha claim-a-claim; depois re-rodar AST A5/A8 majorado}} | AGENTE | PLANEJADA | ../003-executor/paper/evidence_workspace/candidates/batch5_ref_candidates.csv | OPTIMIZATION_LOG |
+| P-018 | - | Continuação da elevação (meta-150 da tese-FULL) {{DEFER:pool restante (14 fuzzy + 16 URL) exige identifier resolvível (regra); meta-≥150 pertence à tese-otimização condicionada a P-009 da autora; piso atual travado em 56 fontes pelo ratchet A5}} | AGENTE | PLANEJADA | experiments/xspecies/p003_pool.json | AUDIT §P-003 |
 | P-019 | - | Decisão sobre branch fix/fig1-parte1 (stale, 70 commits atrás; figs archify existem só lá) {{DEFER:rebase-ou-descartar é decisão da autora; fig1 em main já regenerada do grafo v3.2}} | AGENTE | PLANEJADA | ../quest003-fixfig1/paper/latex/figs/archify/fig1.svg | AUDIT_CAPTURE §D4 |
 | P-020 | - | Branch otimizacao-pqms-batch1: manuscript_Parte2_FULL.tex (1506 L) + TESE-FICHA-TEMPLATE + anexos P2.1/P2.2 — trabalho pronto, merge pendente de OK da autora (P-009) | AGENTE | EXECUTADA_NAO_MERGADA | branch:otimizacao-pqms-batch1 @bd95dc9 (remoto GitHub) | compare API main...otimizacao |
-| P-021 | - | Branch executor (+10 commits) — **MERGE PENDENTE de PR** (verificação P-003 FECHADA; candidatos/pool/JSONs viajam no merge) | AGENTE | EM_EXECUCAO | experiments/xspecies/p003_pool.json | PR em criação |
+| P-021 | - | Branch executor — **FECHADA: PR#4 MERGED @d263761** (ast ✓; candidatos/otimizacao docs no main) | AGENTE | FECHADA | paper/guardian/PARTE3_SINTESE.md | PR #4 |
 | P-022 | - | Branch gap-mapper — **MERGEADO via PR#3** (661e77e; CI ast ✓✓; GAP_MAPPER+ACTION_PLAN no main) | AGENTE | FECHADA | paper/guardian/PARTE3_SINTESE.md | PR #3 |
 | P-023 | - | Fase 1 P3 — **FECHADA**: species_params.json (grupos A-D; banda+fonte por parâmetro; predição hamster pré-registrada no JSON) + análise de parametrização (identidade global fraca / correlação local loop β2-α2 + contextual expressão) + **E039 Corridon elevada** (39 fontes, validadores 0/0) | AGENTE | FECHADA | experiments/xspecies/species_params.json | P023_PARAMETRIZATION_ANALYSIS.md |
 | P-024 | - | Fase 2 P3 — **FECHADA**: GHA matrix 4/4 success (run 33470363167; C0 exato/job; defs pré-registradas aplicadas) | AGENTE | FECHADA | experiments/xspecies/p024_mouse.json | COMPUTE_EVAL §2 |
