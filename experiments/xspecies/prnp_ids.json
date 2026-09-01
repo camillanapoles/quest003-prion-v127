@@ -1,0 +1,22 @@
+{
+ "human": {
+  "org": "Homo sapiens",
+  "ids": []
+ },
+ "mouse": {
+  "org": "Mus musculus",
+  "ids": []
+ },
+ "hamster": {
+  "org": "Mesocricetus auratus",
+  "ids": []
+ },
+ "vole": {
+  "org": "Myodes glareolus",
+  "ids": []
+ },
+ "rat": {
+  "org": "Rattus norvegicus",
+  "ids": []
+ }
+}

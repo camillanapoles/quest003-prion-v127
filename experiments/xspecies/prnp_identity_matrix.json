@@ -1,0 +1,152 @@
+{
+ "human": {
+  "mouse": {
+   "identity_pct": 89.0,
+   "matches": 227,
+   "aln_len": 255,
+   "score": 1295.0,
+   "gaps": 3
+  },
+  "hamster": {
+   "identity_pct": 89.4,
+   "matches": 227,
+   "aln_len": 254,
+   "score": 1308.0,
+   "gaps": 1
+  },
+  "vole": {
+   "identity_pct": 89.0,
+   "matches": 227,
+   "aln_len": 255,
+   "score": 1310.0,
+   "gaps": 2
+  },
+  "rat": {
+   "identity_pct": 89.4,
+   "matches": 227,
+   "aln_len": 254,
+   "score": 1301.0,
+   "gaps": 1
+  }
+ },
+ "mouse": {
+  "human": {
+   "identity_pct": 89.0,
+   "matches": 227,
+   "aln_len": 255,
+   "score": 1295.0,
+   "gaps": 3
+  },
+  "hamster": {
+   "identity_pct": 93.7,
+   "matches": 239,
+   "aln_len": 255,
+   "score": 1357.0,
+   "gaps": 2
+  },
+  "vole": {
+   "identity_pct": 94.1,
+   "matches": 240,
+   "aln_len": 255,
+   "score": 1363.0,
+   "gaps": 1
+  },
+  "rat": {
+   "identity_pct": 96.5,
+   "matches": 246,
+   "aln_len": 255,
+   "score": 1373.0,
+   "gaps": 2
+  }
+ },
+ "hamster": {
+  "human": {
+   "identity_pct": 89.4,
+   "matches": 227,
+   "aln_len": 254,
+   "score": 1308.0,
+   "gaps": 1
+  },
+  "mouse": {
+   "identity_pct": 93.7,
+   "matches": 239,
+   "aln_len": 255,
+   "score": 1357.0,
+   "gaps": 2
+  },
+  "vole": {
+   "identity_pct": 94.9,
+   "matches": 242,
+   "aln_len": 255,
+   "score": 1384.0,
+   "gaps": 1
+  },
+  "rat": {
+   "identity_pct": 94.1,
+   "matches": 239,
+   "aln_len": 254,
+   "score": 1370.0,
+   "gaps": 0
+  }
+ },
+ "vole": {
+  "human": {
+   "identity_pct": 89.0,
+   "matches": 227,
+   "aln_len": 255,
+   "score": 1310.0,
+   "gaps": 2
+  },
+  "mouse": {
+   "identity_pct": 94.1,
+   "matches": 240,
+   "aln_len": 255,
+   "score": 1363.0,
+   "gaps": 1
+  },
+  "hamster": {
+   "identity_pct": 94.9,
+   "matches": 242,
+   "aln_len": 255,
+   "score": 1384.0,
+   "gaps": 1
+  },
+  "rat": {
+   "identity_pct": 94.9,
+   "matches": 242,
+   "aln_len": 255,
+   "score": 1366.0,
+   "gaps": 1
+  }
+ },
+ "rat": {
+  "human": {
+   "identity_pct": 89.4,
+   "matches": 227,
+   "aln_len": 254,
+   "score": 1301.0,
+   "gaps": 1
+  },
+  "mouse": {
+   "identity_pct": 96.5,
+   "matches": 246,
+   "aln_len": 255,
+   "score": 1373.0,
+   "gaps": 2
+  },
+  "hamster": {
+   "identity_pct": 94.1,
+   "matches": 239,
+   "aln_len": 254,
+   "score": 1370.0,
+   "gaps": 0
+  },
+  "vole": {
+   "identity_pct": 94.9,
+   "matches": 242,
+   "aln_len": 255,
+   "score": 1366.0,
+   "gaps": 1
+  }
+ }
+}

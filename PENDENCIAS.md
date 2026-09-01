@@ -5,7 +5,7 @@
 **Taxonomia de STATUS:** PLANEJADA · EM_EXECUCAO · EXECUTADA_NAO_MERGADA · FECHADA · DORMANT · BLOQUEADA_EXTERNA · AGUARDANDO_AUTORA · AGUARDANDO_LAB · AGUARDANDO_EXECUTOR
 **DONO:** AGENTE · AUTORA · LAB · EXECUTOR (sessão executora externa à de ledger)
 
-<!-- LEDGER-RESUMO total=26 abertas=21 planejadas_agente=8 fechadas=4 dormant=1 -->
+<!-- LEDGER-RESUMO total=26 abertas=21 planejadas_agente=7 fechadas=4 dormant=1 -->
 
 | ID | TODOID | PENDÊNCIA | DONO | STATUS | EVIDÊNCIA/ARTEFATO | ORIGEM |
 |---|---|---|---|---|---|---|
@@ -31,7 +31,7 @@
 | P-020 | - | Branch otimizacao-pqms-batch1: manuscript_Parte2_FULL.tex (1506 L) + TESE-FICHA-TEMPLATE + anexos P2.1/P2.2 — trabalho pronto, merge pendente de OK da autora (P-009) | AGENTE | EXECUTADA_NAO_MERGADA | branch:otimizacao-pqms-batch1 @bd95dc9 (remoto GitHub) | compare API main...otimizacao |
 | P-021 | - | Branch executor (+10 commits): candidatos verificados, D-01/D-02/D-03 fechados, bindings rascunhados — merge condicionado a P-003 (claim-a-claim) | AGENTE | EXECUTADA_NAO_MERGADA | branch:executor @a3e2a37 (remoto GitHub) | compare API main...executor |
 | P-022 | - | Branch gap-mapper (+3 commits): GAP_MAPPER v1/v2 + ACTION_PLAN_CROSS_SPECIES — merge condicionado a P-001/P-002 (elevação a claims com binding) | AGENTE | EXECUTADA_NAO_MERGADA | branch:gap-mapper @e7a2976 (remoto GitHub) | compare API main...gap-mapper |
-| P-023 | - | Fase 1 P3: extração de parâmetros por espécie (K_autocat/K_frag/K_nucl/k_clear/[PrP^C]₀) com proveniência + elevação Corridon 2026→E039+ {{DEFER:após P-001 e Fase 0 (sync gap-mapper←main); skill paper-lookup+scientific-writing}} | AGENTE | PLANEJADA | ../003-gap-mapper/analysis/ACTION_PLAN_CROSS_SPECIES.md | PLAN_PARTE3 §3 F1 |
+| P-023 | - | Fase 1 P3: extração de parâmetros por espécie com proveniência (+elevação Corridon→E039+) — **EM CURSO: sequências PrP 5 espécies verificadas/alinhadas (biopython BLOSUM62); identidade global=fraca (mouse↔rato 96,5% opostos), correlação LOCAL loop β2-α2 + CONTEXTUAL (expressão/ensaio); grupos A-D definidos** {{DEFER:fechamento = species_params.json com banda+fonte por parâmetro; depois P-024}} | AGENTE | EM_EXECUCAO | experiments/xspecies/ | P023_PARAMETRIZATION_ANALYSIS.md |
 | P-024 | - | Fase 2 P3: ws_9_multispecies.py (motor v4 intocado, parity C0 embutido, κ-sweep {1.5,2,3,4,8}, relógio por espécie normalizado) → JSONs por espécie {{DEFER:requer P-023 concluído; skills TDD+code-review+uncertainty}} | AGENTE | PLANEJADA | paper/guardian/SKILL_SCOUT_S3_RATECOMPOSITION.md | PLAN_PARTE3 §3 F2 |
 | P-025 | - | Fase 3 P3: θ* por espécie + IC + decomposição de sensibilidade + figuras auditáveis dos JSONs {{DEFER:requer P-024; skills visualization+statistical-analysis}} | AGENTE | PLANEJADA | paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md | PLAN_PARTE3 §3 F3 |
 | P-026 | - | Fase 4 P3: síntese pelos Cenários A/B/C travados + N-fatos/canon/claims + gates + PR gap-mapper→main + /RECAP {{DEFER:requer P-025; veredito pelo critério pré-registrado, nunca pelo desejo}} | AGENTE | PLANEJADA | paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md | PLAN_PARTE3 §3 F4 |

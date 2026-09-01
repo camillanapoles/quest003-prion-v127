@@ -1,0 +1,18 @@
+{
+ "mouse": {
+  "h127_homolog": "G",
+  "h129_homolog": "M"
+ },
+ "hamster": {
+  "h127_homolog": "G",
+  "h129_homolog": "M"
+ },
+ "vole": {
+  "h127_homolog": "G",
+  "h129_homolog": "M"
+ },
+ "rat": {
+  "h127_homolog": "G",
+  "h129_homolog": "M"
+ }
+}

@@ -1,0 +1,8 @@
+26061765 | 2015 | Nature | A naturally occurring variant of the human prion protein completely prevent
+18775309 | 2008 | Cell | Crossing the species barrier by PrP(Sc) replication in vitro generates uniq
+18769716 | 2008 | PLoS Pathog | Accelerated high fidelity prion amplification within and across prion speci
+42189860 | 2026 | PLoS Pathog | PrP turnover in vivo and the time to effect of prion disease therapeutics.
+39717079 | 2024 | iScience | The dynamics of prion spreading is governed by the interplay between the no
+39800229 | 2025 | Neurobiol Dis | The brain interactome of a permissive prion replication substrate.
+39255320 | 2024 | PLoS Pathog | The molecular determinants of a universal prion acceptor.
+36511154 | 2023 | J Neurochem | A single protective polymorphism in the prion protein blocks cross-species 
