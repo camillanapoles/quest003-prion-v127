@@ -288,13 +288,70 @@ REFERÊNCIAS (56 fontes do registro, geradas do manifest) · APÊNDICE A
 
 ETRIZAÇÃO/etrização computacional --- o método nomeado desta tese
 (neologismo composicional; en: Computational Etrization) · θ --- fração
-de replicação remanescente no pico secretor, θ≡(1+κ·c\_pico)⁻¹ · κ ---
-força de capping · G0-sim/G0-wet --- gates computacional/organoide ·
-T1/T2/T3 --- níveis de aceitação ·
+de replicação remanescente no pico secretor, θ≡(1+κ·c\_pico)⁻¹ ·
+\textbf{θ*} --- θ no limiar de contenção (a menor dose que ancora o
+anel; adimensional; predição travada v1.0: 0,333) · \textbf{θ\_obs} ---
+estimador que mede o análogo de θ* num gradiente (simulado hoje;
+organoide amanhã) · \textbf{κ} --- força de capping (a ``dose'' do
+agente; âncora κ↔µM ilustrativa via Kd --- não é estimativa de secreção
+medida; fechada pelo braço A6) · \textbf{Kt} --- classe de taxas de
+autocatálise/templating (a única que governa contenção e relógio ---
+F-43) · \textbf{Damköhler} --- razão
+velocidade-de-reação/velocidade-de-difusão (acopla θ* ao transporte) ·
+\textbf{PrP\^{}C / PrP\^{}Sc} --- proteína prion celular / forma scrapie
+(misfolded, infecciosa) · G0-sim/G0-wet --- gates
+computacional/organoide · T1/T2/T3 --- níveis de aceitação ·
 {[}SIM{]}/{[}ORGANOID{]}/{[}MOUSE{]}/{[}HUMAN{]} --- tiers de dado · SLR
 --- revisão sistemática de literatura · WB --- western blot · PPS ---
 pentosan-polissulfato · CrI --- intervalo de credibilidade · ADR ---
-advecção--difusão--reação · ECS --- espaço extracelular
+advecção--difusão--reação · ECS --- espaço extracelular · RT-QuIC ---
+ensaio de sementeamento in vitro (diagnóstico) · DN ---
+dominante-negativo
+
+\hypertarget{nota-de-leitura-para-cluxednicos-pruxe9-abordagem-dos-temas-antes-da-penetrauxe7uxe3o-tuxe9cnica}{%
+\section{NOTA DE LEITURA PARA CLÍNICOS --- pré-abordagem dos temas antes
+da penetração
+técnica}\label{nota-de-leitura-para-cluxednicos-pruxe9-abordagem-dos-temas-antes-da-penetrauxe7uxe3o-tuxe9cnica}}
+
+\textbf{O que esta tese é, em cinco perguntas que qualquer médico
+faria:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Que doença?} Doenças priônicas (DCJ esporádica/genética):
+  rapidamente progressivas, 100\% fatais, sem terapia modificadora
+  aprovada --- seis candidatos já faliram em clínica.
+\item
+  \textbf{Que ideia?} Usar a variante PrP-G127V --- selecionada pela
+  evolução (kuru) por proteger portadores --- como agente
+  \textbf{dominante-negativo}: uma proteína que compete com o príon e
+  trava sua replicação sem silenciar o PrP nativo (ao contrário dos ASOs
+  em ensaio clínico).
+\item
+  \textbf{Que evidência?} Nenhuma medição nova em pacientes: a tese
+  opera por \textbf{simulação parametrizada com dados reais publicados}
+  (``etrização'') --- cada número vem de fonte rastreável; predições
+  ficam travadas ANTES de qualquer medição futura (anti-hindsight).
+\item
+  \textbf{Que resultado prático?} Três regras de dosagem/posicionamento
+  quantitativas (anel de depósitos 8--12 mm; redose ≤7 dias; limiar
+  θ*≈⅓) + a sondagem multi-espécie deste trabalho: o limiar é
+  \textbf{aproximadamente conservado} entre espécies (Cenário B), mas a
+  dose exigida sobe com a velocidade da doença --- regra de titulação.
+\item
+  \textbf{Que promessa NÃO faz?} Não promete cura, aplicação humana, nem
+  substitui laboratório: o prognóstico é entregue como conhecimento
+  falseável; o uso humano exige o gate organoide (G0-wet) e além.
+\end{enumerate}
+
+\textbf{Como ler os símbolos sem perder o fio:} θ* = \emph{``quanto da
+conversão sobrevive à dose no pior dia do anel''} (⅓ ≈ contém; ⅑ ≈ quase
+extingue); κ = \emph{a dose}; Kt = \emph{a velocidade inerente da
+doença}. Cada capítulo técnico abre com um parágrafo \textbf{``Em
+linguagem clínica''} antes da formulação --- quem quiser pular a
+matemática não perde o argumento.
 
 \hypertarget{capuxedtulo-1-introduuxe7uxe3o}{%
 \chapter{CAPÍTULO 1 ---
@@ -871,6 +928,14 @@ E032, E033, E007{]}.
 herdadas ESCRITAS nesta
 tese)}\label{formulauxe7uxe3o-matemuxe1tica-com-proveniuxeancia-equauxe7uxf5es-herdadas-escritas-nesta-tese}}
 
+\emph{Em linguagem clínica: as equações abaixo são o ``rastreio
+farmacocinético'' da proteína terapêutica no cérebro --- para onde ela
+difunde, quanto dura (meia-vida \textasciitilde5 dias), e quão forte
+compete com o príon (a fração θ). Se você entende o parágrafo anterior e
+a Figura 4, a matemática é opcional: ela formaliza o que já foi dito em
+palavras --- cada equação carrega a citação de onde veio cada
+parâmetro.}
+
 \textbf{Transporte (ADR) em meio poroso heterogêneo} (volumes finitos 2D
 192², Euler explícito):
 
@@ -1119,6 +1184,14 @@ commitados --- regra: valor só de dado):
   ↔ θ\_obs ↔ R ↔ razão de biomassa ↔ margem vs baseline
   (\texttt{experiments/part2\_results/part2\_derived\_summary.json};
   §4.1) {[}claim:C052{]} {[}evidence:E032, E033{]}.
+\item
+  \textbf{Figura 4} --- θ* por espécie nos pontos de banda de cinética
+  (Kt): banda central Cenário B sombreada (0,333--0,400); extremos
+  degradam (hamster 4× ⇒ κ=8; × = escape) --- gerada dos JSONs p024\_*
+  por script commitado
+  (\texttt{paper/latex/figs/fig4\_theta\_species.png};
+  \texttt{experiments/xspecies/make\_fig4\_thetaspecies.py})
+  {[}claim:C055{]} {[}evidence:E032{]}.
 \end{itemize}
 
 Em vez de laboratório ou teste humano, \textbf{o que valida e compõe a
@@ -1281,6 +1354,15 @@ documentado --- índice-mestre no KNOWLEDGE\_CANON.md.
 \subsection{4.7 Validação multi-espécie de θ* (PARTE 3 --- execução
 completa da diretriz da
 autora)}\label{validauxe7uxe3o-multi-espuxe9cie-de-ux3b8-parte-3-execuuxe7uxe3o-completa-da-diretriz-da-autora}}
+
+\emph{Em linguagem clínica: perguntamos se a ``dose'' que contém o príon
+num rato serviria num hamster, num humano, num vole --- espécies cujas
+doenças priônicas correm em velocidades muito diferentes. A resposta
+(Cenário B): no meio da faixa de velocidade, a dose-limiar é
+praticamente a mesma (θ* 0,333--0,400); nos extremos rápidos exige-se
+mais dose, de forma previsível (regra de titulação) --- e o número só é
+comparável quando se declara por quanto tempo se observa (horizonte).
+Ver Figura 4.}
 
 A maior limitação declarada da transferência murino→humano (Cap. 2;
 limitação 9 da Parte 1) foi convertida em programa executado: o sweep de
