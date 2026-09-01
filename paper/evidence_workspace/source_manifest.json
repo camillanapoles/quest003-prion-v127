@@ -914,6 +914,365 @@
     "verified_by": "agente (esummary E-utilities 01/09; meta em experiments/xspecies/corridon_meta.txt); human-supervised pendente",
     "verified_on": "2026-09-01"
    }
+  },
+  {
+   "evidence_id": "E040",
+   "source_type": "journal_article",
+   "title": "New implications for prion diseases therapy and prophylaxis",
+   "authors": [
+    "Liu F",
+    "Lü W",
+    "Liu L"
+   ],
+   "year": 2024,
+   "identifiers": {
+    "pmid": "38500676"
+   },
+   "locator": "pmid:38500676",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agente P-003: esummary+title-overlap 1.00 (p003_mycheck.json); base executor CONFIRMADO",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E041",
+   "source_type": "journal_article",
+   "title": "From in silico prediction to experimental validation: Identification of drugs and novel synergistic combinations that inhibit growth of inflammatory breast cancer cells",
+   "authors": [
+    "Salim EA",
+    "Ji X",
+    "Tarpley M",
+    "Dixon MS",
+    "Zheng W",
+    "Scott JE"
+   ],
+   "year": 2025,
+   "identifiers": {
+    "pmid": "41427337"
+   },
+   "locator": "pmid:41427337",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agente P-003: esummary+title-overlap 1.00 (p003_mycheck.json); base executor CONFIRMADO",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E042",
+   "source_type": "journal_article",
+   "title": "A structural basis for prion strain diversity",
+   "authors": [
+    "Manka SW",
+    "Wenborn A",
+    "Betts J",
+    "Joiner S",
+    "Saibil HR",
+    "Collinge J"
+   ],
+   "year": 2023,
+   "identifiers": {
+    "pmid": "36646960"
+   },
+   "locator": "pmid:36646960",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agente P-003: esummary+title-overlap 1.00 (p003_mycheck.json); base executor CONFIRMADO",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E043",
+   "source_type": "journal_article",
+   "title": "Review: Role of Model-Informed Drug Development Approaches in the Lifecycle of Drug Development and Regulatory Decision-Making",
+   "authors": [
+    "Madabushi R",
+    "Seo P",
+    "Zhao L",
+    "Tegenge M",
+    "Zhu H"
+   ],
+   "year": 2022,
+   "identifiers": {
+    "pmid": "35552984"
+   },
+   "locator": "pmid:35552984",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agente P-003: esummary+title-overlap 1.00 (p003_mycheck.json); base executor CONFIRMADO",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E044",
+   "source_type": "journal_article",
+   "title": "Insights from Therapeutic Studies for PrP Prion Disease",
+   "authors": [
+    "Teruya K",
+    "Doh-Ura K"
+   ],
+   "year": 2017,
+   "identifiers": {
+    "pmid": "27836910"
+   },
+   "locator": "pmid:27836910",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agente P-003: esummary+title-overlap 1.00 (p003_mycheck.json); base executor CONFIRMADO",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E045",
+   "source_type": "journal_article",
+   "title": "The convergence of pharmacometrics and quantitative systems pharmacology in pharmaceutical research and development",
+   "authors": [
+    "Joshi A",
+    "Ramanujan S",
+    "Jin JY"
+   ],
+   "year": 2023,
+   "identifiers": {
+    "pmid": "36638898"
+   },
+   "locator": "pmid:36638898",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agente P-003: esummary+title-overlap 0.80 (p003_mycheck.json); base executor CONFIRMADO",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E046",
+   "source_type": "journal_article",
+   "title": "In Silico Research Is Rewriting the Rules of Drug Development: Is It the End of Human Trials?",
+   "authors": [
+    "Lakhan SE"
+   ],
+   "year": 2025,
+   "identifiers": {
+    "pmid": "40364863"
+   },
+   "locator": "pmid:40364863",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agente P-003: esummary+title-overlap 1.00 (p003_mycheck.json); base executor CONFIRMADO",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E047",
+   "source_type": "journal_article",
+   "title": "Nationwide trend analysis of incidence and mortality of CJD (Japao)",
+   "authors": [
+    "Nishimura Y et al."
+   ],
+   "year": 2020,
+   "identifiers": {
+    "doi": "10.1038/s41598-020-72519-0"
+   },
+   "locator": "doi:10.1038/s41598-020-72519-0",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E048",
+   "source_type": "journal_article",
+   "title": "From In Silico Hypothesis to Validation: Role of Real-World Data (drug repurposing PD)",
+   "authors": [
+    "Galuszewski M et al."
+   ],
+   "year": 2026,
+   "identifiers": {
+    "doi": "10.3390/jcm15072801"
+   },
+   "locator": "doi:10.3390/jcm15072801",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E049",
+   "source_type": "preprint",
+   "title": "A Meta-Synthetic Taxonomy of Foresight Methodologies",
+   "authors": [
+    "(autores nao retornados)"
+   ],
+   "year": null,
+   "identifiers": {
+    "doi": "10.2139/ssrn.5352605"
+   },
+   "locator": "doi:10.2139/ssrn.5352605",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E050",
+   "source_type": "journal_article",
+   "title": "2.7 A cryo-EM structure of ex vivo RML prion fibrils",
+   "authors": [
+    "Manka SW et al."
+   ],
+   "year": 2022,
+   "identifiers": {
+    "doi": "10.1038/s41467-022-30457-7"
+   },
+   "locator": "doi:10.1038/s41467-022-30457-7",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E051",
+   "source_type": "journal_article",
+   "title": "Genetic prion disease mutation E196K cryo-EM fibril structure",
+   "authors": [
+    "Wang LQ et al."
+   ],
+   "year": 2021,
+   "identifiers": {
+    "doi": "10.1126/sciadv.abg9676"
+   },
+   "locator": "doi:10.1126/sciadv.abg9676",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E052",
+   "source_type": "journal_article",
+   "title": "Drug repurposing for Alzheimer's disease and other neurodegenerative disorders",
+   "authors": [
+    "Cummings JL et al."
+   ],
+   "year": 2025,
+   "identifiers": {
+    "doi": "10.1038/s41467-025-56690-4"
+   },
+   "locator": "doi:10.1038/s41467-025-56690-4",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E053",
+   "source_type": "journal_article",
+   "title": "Translational Informatics Driven Drug Repositioning for Neurodegenerative Diseases",
+   "authors": [
+    "Zheng X et al."
+   ],
+   "year": 2025,
+   "identifiers": {
+    "doi": "10.2174/011570159x327908241121062335"
+   },
+   "locator": "doi:10.2174/011570159x327908241121062335",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E054",
+   "source_type": "journal_article",
+   "title": "Therapeutic drug repositioning with special emphasis on neurodegenerative diseases",
+   "authors": [
+    "Kakoti BB et al."
+   ],
+   "year": 2022,
+   "identifiers": {
+    "doi": "10.3389/fphar.2022.1007315"
+   },
+   "locator": "doi:10.3389/fphar.2022.1007315",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E055",
+   "source_type": "journal_article",
+   "title": "Target Trial Emulation for Drug Repurposing in Neurodegenerative Disease",
+   "authors": [
+    "(autores nao retornados)"
+   ],
+   "year": null,
+   "identifiers": {
+    "doi": "10.1212/WN9.0000000000000112"
+   },
+   "locator": "doi:10.1212/WN9.0000000000000112",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E056",
+   "source_type": "journal_article",
+   "title": "Applying quantitative and systems pharmacology to drug development",
+   "authors": [
+    "Ramasubbu MK et al."
+   ],
+   "year": 2024,
+   "identifiers": {
+    "doi": "10.4103/ijp.ijp_644_23"
+   },
+   "locator": "doi:10.4103/ijp.ijp_644_23",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
+    "verified_on": "2026-09-01"
+   }
   }
  ]
 }

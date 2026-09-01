@@ -5,13 +5,13 @@
 **Taxonomia de STATUS:** PLANEJADA · EM_EXECUCAO · EXECUTADA_NAO_MERGADA · FECHADA · DORMANT · BLOQUEADA_EXTERNA · AGUARDANDO_AUTORA · AGUARDANDO_LAB · AGUARDANDO_EXECUTOR
 **DONO:** AGENTE · AUTORA · LAB · EXECUTOR (sessão executora externa à de ledger)
 
-<!-- LEDGER-RESUMO total=26 abertas=15 planejadas_agente=3 fechadas=10 dormant=1 -->
+<!-- LEDGER-RESUMO total=26 abertas=14 planejadas_agente=3 fechadas=11 dormant=1 -->
 
 | ID | TODOID | PENDÊNCIA | DONO | STATUS | EVIDÊNCIA/ARTEFATO | ORIGEM |
 |---|---|---|---|---|---|---|
 | P-001 | - | Sweep de composição de taxas ±50% — **EXECUTADO (cloud GHA run 33459375823; veredito C2 GAP-1 MATERIAL; F-43/N049-054)** | AGENTE | FECHADA | experiments/ws_9_results/ws_9_v5_sweeps_S3.json | gap-mapper GAP-1 · SKILL_SCOUT_S3 |
 | P-002 | - | Teste de invariância de θ* entre espécies — guarda-chuva da PARTE 3 — **FECHADA: Cenário B** (θ\* central 0,333-0,400, razão 1,20; regra κ↔Kt; horizon-defs; PR#3 merged 661e77e) | AGENTE | FECHADA | paper/guardian/PARTE3_SINTESE.md | F-44 · run 33470363167 |
-| P-003 | - | Verificação claim-a-claim dos 88 candidatos (batches 1–6) + 49 bindings → elevação E-registry 38→≥150 fontes + re-target AST A5/A8 | AGENTE | EM_EXECUCAO | ../003-executor/paper/evidence_workspace/candidates/verification_status_consolidado.csv | otimizacao P1.1 / OPTIMIZATION_LOG |
+| P-003 | - | Verificação claim-a-claim + elevação — **FECHADA**: 7 PMID-verificados independentes (overlap 0,8-1,0, 0 mismatch) + 10 DOI-exatos (crossref-executor) → **E-registry 39→56 fontes (E040-E056)**, validadores 0/0 · pool remanescente documentado | AGENTE | FECHADA | experiments/xspecies/p003_mycheck.json | AUDIT §P-003 |
 | P-004 | - | /RECAPs das sessões 29–30/08 (ausentes nos runbooks — regra 10) reconstruídos e anexados | AGENTE | FECHADA | guardian.md | AUDIT_CAPTURE §D5 |
 | P-005 | - | Marcadores obsoletos removidos (resolver=remover): ETRIZACAO-APLICAR, PUBMED-DIRECT, Q3-Q5-EXEC | AGENTE | FECHADA | paper/ERITRIZACAO.md | AUDIT_CAPTURE §D6 |
 | P-006 | - | Gancho garantista de pendências instalado: ledger + A9 + portabilidade skills no AST | AGENTE | FECHADA | scripts/pendencias_check.py | mandato da autora 30/08 |
@@ -29,7 +29,7 @@
 | P-018 | - | Batch 6+ do programa de otimização (meta ≥150 refs únicas, ≥60% 2021+; regra de suspensão por D-01 liberada — D-01 fechado) {{DEFER:continuação de P-003 na mesma linha claim-a-claim; depois re-rodar AST A5/A8 majorado}} | AGENTE | PLANEJADA | ../003-executor/paper/evidence_workspace/candidates/batch5_ref_candidates.csv | OPTIMIZATION_LOG |
 | P-019 | - | Decisão sobre branch fix/fig1-parte1 (stale, 70 commits atrás; figs archify existem só lá) {{DEFER:rebase-ou-descartar é decisão da autora; fig1 em main já regenerada do grafo v3.2}} | AGENTE | PLANEJADA | ../quest003-fixfig1/paper/latex/figs/archify/fig1.svg | AUDIT_CAPTURE §D4 |
 | P-020 | - | Branch otimizacao-pqms-batch1: manuscript_Parte2_FULL.tex (1506 L) + TESE-FICHA-TEMPLATE + anexos P2.1/P2.2 — trabalho pronto, merge pendente de OK da autora (P-009) | AGENTE | EXECUTADA_NAO_MERGADA | branch:otimizacao-pqms-batch1 @bd95dc9 (remoto GitHub) | compare API main...otimizacao |
-| P-021 | - | Branch executor (+10 commits): candidatos verificados, D-01/D-02/D-03 fechados, bindings rascunhados — merge condicionado a P-003 (claim-a-claim) | AGENTE | EXECUTADA_NAO_MERGADA | branch:executor @a3e2a37 (remoto GitHub) | compare API main...executor |
+| P-021 | - | Branch executor (+10 commits) — **MERGE PENDENTE de PR** (verificação P-003 FECHADA; candidatos/pool/JSONs viajam no merge) | AGENTE | EM_EXECUCAO | experiments/xspecies/p003_pool.json | PR em criação |
 | P-022 | - | Branch gap-mapper — **MERGEADO via PR#3** (661e77e; CI ast ✓✓; GAP_MAPPER+ACTION_PLAN no main) | AGENTE | FECHADA | paper/guardian/PARTE3_SINTESE.md | PR #3 |
 | P-023 | - | Fase 1 P3 — **FECHADA**: species_params.json (grupos A-D; banda+fonte por parâmetro; predição hamster pré-registrada no JSON) + análise de parametrização (identidade global fraca / correlação local loop β2-α2 + contextual expressão) + **E039 Corridon elevada** (39 fontes, validadores 0/0) | AGENTE | FECHADA | experiments/xspecies/species_params.json | P023_PARAMETRIZATION_ANALYSIS.md |
 | P-024 | - | Fase 2 P3 — **FECHADA**: GHA matrix 4/4 success (run 33470363167; C0 exato/job; defs pré-registradas aplicadas) | AGENTE | FECHADA | experiments/xspecies/p024_mouse.json | COMPUTE_EVAL §2 |
