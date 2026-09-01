@@ -11,3 +11,12 @@ Três frutos esperados: (i) contribuição original explícita; (ii) trabalho co
 
 ## Padrão 4 — Estilo do próprio campo prion (Nature/Cell-class)
 Figura-1 conceitual; afirmações quantitativas com IC; preprint-declaração transparente. **Nota de limite:** exemplares externos ensinam ESTRUTURA/RETÓRICA apenas (regra PaperSpine); dados do programa são a única autoridade de conteúdo.
+
+## Padrão 5 — ABNT NBR 14724 (exemplar institucional da co-edição)
+Pré-textuais completos (ficha/catalogação/sumário/siglas), apêndices antes de anexos, referências em bloco final ordenado. **Aprendizado:** a edição unificada herda a disciplina pré-textual (nota-à-leitura como pré-textual) sem abandonar a estrutura publication-grade — coexistência documentada no config como decisão de coluna-única.
+
+## Padrão 6 — ANTI-exemplar: a prática de citação que o programa corrigiu
+O campo citou um ensaio RETRAÍDO (minociclina/FK506) como evidência por anos; o programa o excluiu por regra e registrou a correção [claim:C024]. **Aprendizado aplicado:** o banco de citações carrega status de verificação por entrada; fontes complementares ficam snippet-level marcadas até abertura completa — a desconfiança estruturada é parte do estilo.
+
+## Padrão 7 — JHU iii "reconhecimento dos limites com plano de pesquisa futura"
+A reorganização das 15+ limitações por CLASSE (transferência/horizonte/fontes/estrutura/execução/localização) com o gate que fecha cada uma é a materialização literal deste critério de avaliação — a seção de limitações vira mapa de pesquisa futura, não confissão.
