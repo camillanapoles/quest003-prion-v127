@@ -61,6 +61,7 @@ jobs:
           cp /tmp/parte2.pdf "paper/pdf/manuscript_Parte2_${TS}.pdf"
           git config user.name "ci-audit-bot"
           git config user.email "ci-audit-bot@users.noreply.github.com"
+          git fetch --depth=3 origin main && git rebase origin/main || true
           git add paper/pdf
           git commit -m "ci: PDF versionado ${TS} (criado sob gate AST VERDE)" || echo "nada a versionar"
           git push
