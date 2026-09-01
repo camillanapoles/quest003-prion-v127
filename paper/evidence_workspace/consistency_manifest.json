@@ -757,6 +757,76 @@
    "evidence_ids": [
     "E032"
    ]
+  },
+  {
+   "fact_id": "N055",
+   "concept": "p024_theta_star_mouse_selfmatched_def",
+   "section": "2",
+   "value": 0.4,
+   "unit": "theta",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N056",
+   "concept": "p024_theta_star_hamster_hi_kt4_kmin8",
+   "section": "2",
+   "value": 0.111,
+   "unit": "theta",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N057",
+   "concept": "p024_theta_star_vole_hi_kt3_kmin3",
+   "section": "2",
+   "value": 0.25,
+   "unit": "theta",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N058",
+   "concept": "p024_theta_central_ratio_maxmin_species",
+   "section": "2",
+   "value": 1.2,
+   "unit": "ratio",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N059",
+   "concept": "p024_hamster_pred_R_mm_kt2_kappa2_selfmatched",
+   "section": "2",
+   "value": 0.659,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
   }
  ],
  "methods": [
