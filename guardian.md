@@ -544,3 +544,11 @@ FEITO: **S1-S5 conversão integral** dos manifestos do A-mestre para a tese unif
 ESTADO: main@ddf7443+ · tese unificada COMPLETA em edição A+ · registro 60/58/65 · predições v1.0 intocadas
 PRÓXIMO: (autora) leitura do PDF A+ (aberto pelo A10) + TESE-FICHA (P-009) · (agente) EN companion das seções portadas S1-S4 quando autora pedir; recorte-artigo
 ÂNCORA: main@ddf7443 · tese_unificada_20260901-230918.pdf · build_aplus_tex.py
+
+/RECAP 2026-09-01 ~23:58 — VALIDAÇÃO FRACTAL (pedido da autora): 9 classes de erro achadas e fixadas
+FEITO: bateria-adversarial em 5 escalas (PDF/tex/md/registro/EN) → achados: **(1)** renumeração de 33 subseções desalinhadas aos 13 caps (colisão 2.x/3.x resolvida; todas §refs com header correspondente) · **(2)** bug-cascata do remap S1 (Cap.3→Cap.7→Cap.13): corrigido no bloco Introdução/Fundamentação · **(3)** diagrama §7.0 jamais inserido (replace-silencioso S2) → inserido em forma A+ (fluxo-em-setas + pointer §7.1) · **(4)** ASCII-art B.1 (CAMADAS 0-8) e analogia-do-átomo em box-chars (tofu no PDF; equação presa em verbatim) → reescritos em markdown/tabela/math display (0 box-chars no arquivo) · **(5)** tags compostas/ranges ([claim:C055, C057]/[C058–C060]) vazavam literais → builder aceita qualquer forma → \audit · **(6)** [claim:N060-fato] malformada → removida · **(7)** e57/e58 nunca citadas → [57]/[58] no corpo §6.3 (58/58 bibitems citados) · **(8)** EN companion com numeração pré-13-caps → renumerado · **(9)** figs PNG não-commitadas (docx local sem figuras) → CI agora commita (padrão fig1-3) + race bot-commit CI→CI resolvida (pull-rebase pré-push)
+VERIFICAÇÃO-PDF (pdftotext/pdfinfo): 0 tag-literal · 0 math-cru · 0 tofu · §7.0/§6.3/tabela-átomo renderizados · 69 págs · 4 imagens · [57] resolvendo
+GATES: latex_guard 0-erros · guardian 0/0 · validadores SW 0/0 · AST 10/10 · CI unified-build VERDE (PDF 20260901-235409 com figs commitadas)
+ESTADO: main@c6e2bf7+ · edição A+ fractalmente limpa
+PRÓXIMO: (autora) leitura (A10 abriu o PDF novo) + TESE-FICHA · (agente) sob-demanda: EN companion das seções portadas; recorte-artigo
+ÂNCORA: tese_unificada_20260901-235409.pdf · commit-fix-fractal 94b792a
