@@ -5,7 +5,7 @@
 **Taxonomia de STATUS:** PLANEJADA · EM_EXECUCAO · EXECUTADA_NAO_MERGADA · FECHADA · DORMANT · BLOQUEADA_EXTERNA · AGUARDANDO_AUTORA · AGUARDANDO_LAB · AGUARDANDO_EXECUTOR
 **DONO:** AGENTE · AUTORA · LAB · EXECUTOR (sessão executora externa à de ledger)
 
-<!-- LEDGER-RESUMO total=29 abertas=13 planejadas_agente=3 fechadas=15 dormant=1 -->
+<!-- LEDGER-RESUMO total=30 abertas=14 planejadas_agente=4 fechadas=15 dormant=1 -->
 
 | ID | TODOID | PENDÊNCIA | DONO | STATUS | EVIDÊNCIA/ARTEFATO | ORIGEM |
 |---|---|---|---|---|---|---|
@@ -30,6 +30,7 @@
 | P-019 | - | Decisão sobre branch fix/fig1-parte1 (stale, 70 commits atrás; figs archify existem só lá) {{DEFER:rebase-ou-descartar é decisão da autora; fig1 em main já regenerada do grafo v3.2}} | AGENTE | PLANEJADA | ../quest003-fixfig1/paper/latex/figs/archify/fig1.svg | AUDIT_CAPTURE §D4 |
 | P-027 | - | **tese-v2-parte3**: PARTE 3 integrada à tese (PR#5 merged 01ef9b4: §4.7+claims C055-057+SUMÁRIO+refs 56+tabela-M+limitação 9 EN+PT) + correções estruturais (duplo índice morto) + **pipeline ABNT NBR 14724** (tese_v2_ABNT.pdf 171KB sob CI, e6c052f) | AGENTE | FECHADA | paper/latex/tese_v2_ABNT.pdf | PR #5 + workflow tese-abnt |
 | P-028 | - | **Edição ALFA clínica (tag tese-v2.1-alfa)**: camada pedagógica p/ qualquer médico (NOTA DE LEITURA 5-perguntas + openers §3.2/§4.7 + siglas completas) + **Figura 4 auditável** (script→CI matplotlib) + **AVALIACAO_ALFA** (scholar-evaluation: 7 critérios c/ evidência; qualitativo-primero; limitação schema-máq documentada) · gates P2 0/0 (após rótulo κ↔µM) · CI 3×verde (race bot-commits corrigido) | AGENTE | FECHADA | paper/guardian/AVALIACAO_ALFA.md | tag tese-v2.1-alfa |
+| P-030 | - | **M3.1 sessão-2 (handoff pronto)**: U5 Fig.5 + U6 claims C058+ via **scientific-writing/AST** (ordem-da-autora) → retomar paper-spine (6-writing→8→12) → PR m31→writing-v2/B4 → A-vs-B {{DEFER:nova sessão; plano em experiments/m31/M31_SESSAO2_PLANO.md (branch m31-dose @33f2e9f)}} | AGENTE | PLANEJADA | experiments/m31/M31_SESSAO2_PLANO.md | m31-dose branch |
 | P-029 | - | **Writing-system-v2 (mandato da autora: ISOLADO)**: branch `writing-v2-test` + protocolo A-vs-B (âncora §4.7+NOTA; métricas pré-declaradas; gates sem isenção; decisão=autora) {{DEFER:BLOQUEADO em definição: QUAL é o novo sistema (nome/fonte/metodologia) — autora especifica}} | AGENTE | PLANEJADA | paper/guardian/WRITING_V2_PROTOCOLO.md | mandato 01/09 |
 | P-020 | - | Branch otimizacao-pqms-batch1: manuscript_Parte2_FULL.tex (1506 L) + TESE-FICHA-TEMPLATE + anexos P2.1/P2.2 — trabalho pronto, merge pendente de OK da autora (P-009) | AGENTE | EXECUTADA_NAO_MERGADA | branch:otimizacao-pqms-batch1 @bd95dc9 (remoto GitHub) | compare API main...otimizacao |
 | P-021 | - | Branch executor — **FECHADA: PR#4 MERGED @d263761** (ast ✓; candidatos/otimizacao docs no main) | AGENTE | FECHADA | paper/guardian/PARTE3_SINTESE.md | PR #4 |
