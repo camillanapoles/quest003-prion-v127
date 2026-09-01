@@ -65,4 +65,5 @@ jobs:
             paper_rewriting_output/final_paper/paper.docx paper/latex/figs/fig4_theta_species.png \
             paper/latex/figs/fig5_dose_ladder.png "paper/pdf/tese_unificada_${STAMP}.pdf" || true
           git commit -m "ci: tese unificada build ${STAMP} (figs auditáveis + main.tex + PDF + docx — braço-B)" || echo "nada"
-          git push
+          git pull --rebase --autostash -q origin main || true
+          git push || (git pull --rebase -q origin main && git push)
