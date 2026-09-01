@@ -73,3 +73,14 @@
 
 - **C057** (4.7,result) [E032]: Required containment kappa scales with host kinetic scale Kt (1 to 1.5, 2 to 2, 3 to 3, 4 to 8 - superlinear beyond 2x) yielding a titration rule: containment dose must be titrated to host kinetics rather than fixed universally
   - *Tese v2 (branch tese-v2-parte3, 01/09): achados PARTE 3 integrados à tese.*
+
+
+- **C058** (M3.1,result) [E057;E058;E032;E010;E030;E019]: A6 recombinant-protein dose band for the human Kt rung: kappa_req 2 corresponds to a peak-concentration band of 0.14-2.0 µM, converting to 0.0-2.6 µg of V127ΔGPI per deposit (protein MW 22.83 kDa computed from our own P04156 mature sequence, residues 23-231), with redose interval at most 7 days - a simulation-tier planning band, not a prescription
+  - *M3.1 sessão-2 (branch m31-dose, 01/09): cadeia U1+U2 pré-registrada → registro probatório; integrará a tese no B4 (U7).*
+
+- **C059** (M3.1,result) [E058;E032]: The dose ladder scales with host kinetic band: the per-deposit band rises monotonically with kappa_req - 0.0-1.9 µg at kappa 1.5 (Kt 1), 0.0-2.6 at kappa 2 (Kt 2), 0.1-3.9 at kappa 3 (Kt 3) and 0.2-10.3 at kappa 8 (declared worst case covering Kt 4) - so the containment dose must be titrated to the host Kt band rather than fixed universally
+  - *M3.1 sessão-2 (branch m31-dose, 01/09): cadeia U1+U2 pré-registrada → registro probatório; integrará a tese no B4 (U7).*
+
+- **C060** (M3.1,result) [E057;E058;E010;E030]: The band width is about 53x at every rung because kappa_req cancels in the hi-to-lo ratio: 14x from the Kd proxy band (71 nM apparent Abeta42-oligomer-PrP Kd to the 1 µM declared illustrative anchor) times 3.7x from the deposit-halo volume band (radius 4-6 mm; ECS fraction 0.15-0.25) - the width itself is the finding: the A6 dose remains band-valued until arm G0-A6 closes the kappa-to-µM link
+  - *M3.1 sessão-2 (branch m31-dose, 01/09): cadeia U1+U2 pré-registrada → registro probatório; integrará a tese no B4 (U7).*
+

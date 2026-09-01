@@ -1,6 +1,6 @@
 # GUARDIAN REPORT — paper v5 (hostile recursive reviewer)
 
-**Rodadas executadas:** 3 · **Achados:** 10 (BLOCKED=0, AMEND=0, NOTE=10)
+**Rodadas executadas:** 3 · **Achados:** 12 (BLOCKED=0, AMEND=3, NOTE=9)
 
 ## Gate
 
@@ -8,8 +8,20 @@
 
 ---
 
+### [AMEND] R0-NBIND-N050 — ../manuscript_EN_v5.md
+- **Problema:** N-fato N050 (s3_max_dev_pct_all_arms_Rnorm_vs_base (extremo N_x2 saturado)=245.3 percent) aparece no texto sem marker de rastreabilidade próximo.
+- **Exigência:** Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número.
+
+### [AMEND] R0-NBIND-N060 — ../manuscript_EN_v5.md
+- **Problema:** N-fato N060 (m31_mw_prp_mature_kda=22.83 kDa) aparece no texto sem marker de rastreabilidade próximo.
+- **Exigência:** Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número.
+
+### [AMEND] R0-NBIND-N063 — ../manuscript_EN_v5.md
+- **Problema:** N-fato N063 (m31_band_ratio_mean_x=52.6 ratio) aparece no texto sem marker de rastreabilidade próximo.
+- **Exigência:** Colocar [claim:Cxxx][evidence:Exxx] junto ao número ou remover o número.
+
 ### [NOTE] R0-UNUSED — ../manuscript_EN_v5.md
-- **Problema:** Claims registradas mas não citadas no manuscrito: C052, C053, C054.
+- **Problema:** Claims registradas mas não citadas no manuscrito: C052, C053, C054, C058, C059, C060.
 - **Exigência:** Confirmar que são intencional (claims de outline/suplemento).
 
 ### [NOTE] R1-BATTERY-factual — claims
@@ -21,19 +33,15 @@
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-BATTERY-result — claims
-- **Problema:** Bateria hostil aplicada a 10 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C032, C033, C034, C035, C036, C037, C038, C039, C042, C051)
+- **Problema:** Bateria hostil aplicada a 13 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C032, C033, C034, C035, C036, C037, C038, C039, C042, C051, C055, C056, C057)
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-PREPRINT — manifest
-- **Problema:** 2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.
+- **Problema:** 3 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.
 - **Exigência:** Rotular no texto (ex.: bioRxiv preprint).
 
 ### [NOTE] R3-TODO-BIORXIV-ADDENDUM — todo-registry
 - **Problema:** TODO aberto registrado: BIORXIV-ADDENDUM.
-- **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
-
-### [NOTE] R3-TODO-COST-DECOMP — todo-registry
-- **Problema:** TODO aberto registrado: COST-DECOMP.
 - **Exigência:** Resolver e remover o marcador (o relatório lista todos a cada gate).
 
 ### [NOTE] R3-TODO-EMAIL-GROVEMAN — todo-registry

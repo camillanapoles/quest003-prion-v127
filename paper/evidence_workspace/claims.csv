@@ -56,3 +56,6 @@ C054,1-met,method,9562e935e90b292bfa4f1ddd0e1f78120248c8d7d92eb0231c8996ae3892d3
 C055,4.7,result,3859572b62d8f5421bd7b42c9d79f2ec17ee496409ea12003d82e1e590eda72f,E032,verified,low,confirmatory
 C056,4.7,result,eae2355b9af9b30039a47ffee3dffcf2f1a689853a6648d6f5eaea5da85a3b25,E032,verified,low,confirmatory
 C057,4.7,result,7c21c1e38d273fee7cd2782e0ccf1ecd3ccc513b17a35dc506c601cd16c93d08,E032,verified,low,confirmatory
+C058,M3.1,result,ffa93ac8428cc1ff83de291d266a1534f6405dcd0ffa43f072936ed564a5db22,E057;E058;E032;E010;E030;E019,verified,high,confirmatory
+C059,M3.1,result,8565e89584067cd6d0de9ef4d47db1673efa130f5851e62c40597edeae13f30c,E058;E032,verified,moderate,confirmatory
+C060,M3.1,result,2e69eaf29ed35fc46a94ba19ac5b64af0d4c3c3a99359a914ec35db8064b7147,E057;E058;E010;E030,verified,moderate,confirmatory

@@ -1273,6 +1273,50 @@
     "verified_by": "executor crossref-doi (OPTIMIZATION_LOG D-02/D-03); agente: schema+dedupe (sem PMID — DOI-locator)",
     "verified_on": "2026-09-01"
    }
+  },
+  {
+   "evidence_id": "E057",
+   "source_type": "journal_article",
+   "title": "Interaction between human prion protein and amyloid-beta (Abeta) oligomers: role of N-terminal residues",
+   "authors": [
+    "Chen, Sen",
+    "Yadav, Shrishail P",
+    "Surewicz, Witold K"
+   ],
+   "year": 2010,
+   "identifiers": {
+    "doi": "10.1074/jbc.M110.145516",
+    "pmid": "20576610",
+    "pmcid": "PMC2924066"
+   },
+   "locator": "pmid:20576610 (full text PMC2924066 aberto e conferido: Kd aparente = 71 nM, SPR, Aβ42-oligômero↔huPrP — PROXY declarada para κ↔µM)",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agent session M3.1-2 (P-030); human-supervised",
+    "verified_on": "2026-09-01"
+   }
+  },
+  {
+   "evidence_id": "E058",
+   "source_type": "software",
+   "title": "M3.1: dose-chain kappa_req→µM→µg/deposit with GUM Type-B band + PrP MW from own P04156 sequences (this program)",
+   "authors": [
+    "Open Prion & Molecular Engineering, Consortium"
+   ],
+   "year": 2026,
+   "identifiers": {
+    "url": "https://github.com/camillanapoles/quest003-prion-v127"
+   },
+   "locator": "experiments/m31/m31_u1u2.json (+ u1_u2_dimensional_mw.py; U1+U2 pré-registrados em m31_protocolo_garantista.md)",
+   "confidentiality": "public",
+   "verification": {
+    "status": "verified",
+    "source_opened": true,
+    "verified_by": "agent session M3.1-2 (P-030); human-supervised",
+    "verified_on": "2026-09-01"
+   }
   }
  ]
 }
