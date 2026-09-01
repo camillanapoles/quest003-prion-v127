@@ -1,0 +1,55 @@
+{
+ "baseline": {
+  "final_R_mm": 2.828,
+  "days_per_simunit": 144.02,
+  "T1_pass": true,
+  "t_double_sim": 0.08414987342668573
+ },
+ "p1": {
+  "BASE": {
+   "R_sim5_mm": 0.819,
+   "t_double_sim": 1.208715935396471,
+   "wall_s": 225.4
+  },
+  "N_x0.5": {
+   "R_sim5_mm": 0.791,
+   "t_double_sim": 2.54249374235322,
+   "wall_s": 229.6
+  },
+  "N_x2": {
+   "R_sim5_mm": 0.884,
+   "t_double_sim": 0.5948433017372776,
+   "wall_s": 226.5
+  },
+  "C_Kt_x0.5": {
+   "R_sim5_mm": 0.801,
+   "t_double_sim": 2.4100559259191203,
+   "wall_s": 229.1
+  },
+  "C_Kt_x2": {
+   "R_sim5_mm": 0.859,
+   "t_double_sim": 0.639337228757426,
+   "wall_s": 223.9
+  },
+  "C_Kr_x0.5": {
+   "R_sim5_mm": 0.819,
+   "t_double_sim": 1.2324683571034383,
+   "wall_s": 222.6
+  },
+  "C_Kr_x2": {
+   "R_sim5_mm": 0.819,
+   "t_double_sim": 1.1996256137095649,
+   "wall_s": 234.6
+  },
+  "C_Kc_x0.5": {
+   "R_sim5_mm": 0.809,
+   "t_double_sim": 1.274801793276311,
+   "wall_s": 245.2
+  },
+  "C_Kc_x2": {
+   "R_sim5_mm": 0.83,
+   "t_double_sim": 1.1632137913935388,
+   "wall_s": 219.7
+  }
+ }
+}

@@ -102,7 +102,7 @@ t_double_h=growth_window/doublings
 SEED_MV2=130.0; SEED_MV1=130.0/126.0
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('--phase',choices=['S1','S2'],required=True)
+    ap=argparse.ArgumentParser(); ap.add_argument('--phase',choices=['S1','S2','S3'],required=True)
     a=ap.parse_args()
     os.makedirs('out',exist_ok=True)
     res={'motor':'v5 sweeps sobre v4 humano (C0 exato + fs_exp param)',
@@ -129,7 +129,7 @@ def main():
         res['S3_same_mass']={'k4_seed_MV2mass_R_mm':res['S1_exponent']['2']['k4'],
                              'k4_seed_MV1like_R_mm_v4ref':0.69,
                              'conclusion':'no kernel v4 subtipo ≡ seed_mass; hierarquia MV2>MV1 é seed-mass-driven POR CONSTRUÇÃO — cinética subtipo-específica está fora do escopo do port (limitação 12 formalmente demonstrada)'}
-    else:
+    elif a.phase=='S2':
         res['S2_C50']={}
         for c50 in (20.0,100.0,200.0):  # C50=50 vem de S1 exp2 k2
             res['S2_C50'][str(int(c50))]={
@@ -137,6 +137,59 @@ def main():
                                         tag=f'c{int(c50)}k{k}',progress=True)['final_R_mm'],3)
                 for k in (2,)}
             print(f"  C50={int(c50)}: {res['S2_C50'][str(int(c50))]}",flush=True)
+    if a.phase=='S3':
+        # P-001 (SKILL_SCOUT_S3 §3): composição de taxas ±50% — motor v4 EXATO intocado;
+        # apenas parametrização (Kt/Kr/Kc escalados como classes, razões intra-classe preservadas).
+        # Métricas: R_sim5 (t_lim=5) E R_norm (clock-matched: mesmo nº de duplicações do BASE).
+        KT0,KR0,KC0=(10.0,5.0),(50.0,10.0),(10.0,50.0)
+        def sc(v,f): return (v[0]*f,v[1]*f)
+        arms={'BASE':(KT0,KR0,KC0),
+              'N_x0.5':(sc(KT0,.5),sc(KR0,.5),sc(KC0,.5)),
+              'N_x2':(sc(KT0,2),sc(KR0,2),sc(KC0,2)),
+              'C_Kt_x0.5':(sc(KT0,.5),KR0,KC0),'C_Kt_x2':(sc(KT0,2),KR0,KC0),
+              'C_Kr_x0.5':(KT0,sc(KR0,.5),KC0),'C_Kr_x2':(KT0,sc(KR0,2),KC0),
+              'C_Kc_x0.5':(KT0,KR0,sc(KC0,.5)),'C_Kc_x2':(KT0,KR0,sc(KC0,2)),
+              'J_KtKr_x2':(sc(KT0,2),sc(KR0,2),KC0),
+              'J_KtKr_x0.5':(sc(KT0,.5),sc(KR0,.5),KC0)}
+        def ktrun(kt,kr,kc,tl,seed,tagm):
+            return simulate(kcap=2.0,seed_mass=seed,Kt=kt,Kr=kr,Kc=kc,
+                            t_lim=tl,tag=tagm,progress=True)
+        res['S3_rate_composition']={}
+        p1={}
+        for name in arms:
+            kt,kr,kc=arms[name]
+            r=ktrun(kt,kr,kc,5.0,SEED_MV2,name.replace('.','_'))
+            p1[name]={'R_sim5_mm':round(r['final_R_mm'],3),
+                      't_double_sim':r['t_double_sim'],'wall_s':r['wall_s']}
+            rr=r['final_R_mm']; t2=r['t_double_sim']
+            print('  %s: R=%.3f t2=%s'%(name,rr,t2),flush=True)
+        b=p1['BASE']['t_double_sim']
+        for name in arms:
+            entry=dict(p1[name])
+            if name=='BASE':
+                entry['R_norm_mm']=entry['R_sim5_mm']; entry['t_lim_used']=5.0
+            else:
+                t2=p1[name]['t_double_sim']
+                tl=5.0 if (not t2) else min(10.0,max(2.5,5.0*b/t2))
+                kt,kr,kc=arms[name]
+                r=ktrun(kt,kr,kc,tl,SEED_MV2,name.replace('.','_')+'_m')
+                entry['R_norm_mm']=round(r['final_R_mm'],3); entry['t_lim_used']=round(tl,3)
+                rn=r['final_R_mm']
+                print('  %s matched(t=%.2f): R=%.3f'%(name,tl,rn),flush=True)
+            res['S3_rate_composition'][name]=entry
+        # H: hierarquia seed-mass no braço extremo (C3)
+        rbc=res['S3_rate_composition']['BASE']['R_norm_mm']
+        ext=max(res['S3_rate_composition'],
+                key=lambda n: abs(res['S3_rate_composition'][n]['R_norm_mm']-rbc))
+        kt,kr,kc=arms[ext]
+        t2=res['S3_rate_composition'][ext]['t_double_sim']
+        tl=5.0 if (not t2) else min(10.0,max(2.5,5.0*b/t2))
+        rH2=ktrun(kt,kr,kc,tl,SEED_MV2,'H_MV2'); rH1=ktrun(kt,kr,kc,tl,SEED_MV1,'H_MV1')
+        R2=rH2['final_R_mm']; R1=rH1['final_R_mm']
+        res['S3_hierarchy']={'extreme_arm':ext,'t_lim_used':round(tl,3),
+                             'R_MV2mass_mm':round(R2,3),'R_MV1mass_mm':round(R1,3),
+                             'hierarchy_preserved':bool(R2>R1)}
+        print('  H[%s]: MV2=%.3f MV1=%.3f preservada=%s'%(ext,R2,R1,R2>R1),flush=True)
     res['wall_total_s']=round(time.time()-t0,1)
     out=f'out/ws_9_v5_sweeps_{a.phase}.json'
     json.dump(res,open(out,'w'),indent=1)

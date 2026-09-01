@@ -1,0 +1,52 @@
+name: S3 Sweep (P-001 rate composition)
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  s3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Deps
+        run: pip install -q numpy
+
+      - name: Restore checkpoint (artifact de run anterior, se houver)
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: s3-checkpoint
+          path: out/
+
+      - name: Seed do checkpoint local (se não veio artifact)
+        run: |
+          if [ ! -f out/s3_partial.json ] && [ -f experiments/ws_9_results/s3_partial_seed.json ]; then
+            mkdir -p out && cp experiments/ws_9_results/s3_partial_seed.json out/s3_partial.json
+            echo "seed restaurado (p1 $(python3 -c "import json;print(len(json.load(open('out/s3_partial.json')).get('p1',{})))") braços)"
+          fi
+
+      - name: S3 driver (motor v4 exato; resumível por checkpoint)
+        run: python3 experiments/s3_driver.py
+
+      - name: Versionar resultado [SIM] (JSON determinístico)
+        run: |
+          cp out/ws_9_v5_sweeps_S3.json experiments/ws_9_results/ws_9_v5_sweeps_S3.json
+          cp out/s3_partial.json experiments/ws_9_results/s3_partial_seed.json
+          git config user.name "ci-garantista"
+          git config user.email "camillanapoles@users.noreply.github.com"
+          git add experiments/ws_9_results/ws_9_v5_sweeps_S3.json experiments/ws_9_results/s3_partial_seed.json
+          git commit -m "s3(P-001): sweep composição taxas concluído no cloud — JSON determinístico [SIM] (C0 paridade checada no run)" || echo "nada a versionar"
+          git push
+
+      - name: Upload checkpoint (p/ retomada em re-dispatch)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: s3-checkpoint
+          path: out/s3_partial.json
