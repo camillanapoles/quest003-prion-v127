@@ -21,11 +21,11 @@
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-BATTERY-result — claims
-- **Problema:** Bateria hostil aplicada a 9 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C032, C033, C034, C035, C036, C037, C038, C039, C051)
+- **Problema:** Bateria hostil aplicada a 12 claims result: Pre-registrado ou post-hoc? (rotular explicitamente) | Baseline e critério de comparação definidos? | Incerteza/IC reportado? (IDs: C032, C033, C034, C035, C036, C037, C038, C039, C051, C055, C056, C057)
 - **Exigência:** Cada pergunta deve ter resposta no texto/manifesto; sem resposta → limitação.
 
 ### [NOTE] R1-PREPRINT — manifest
-- **Problema:** 2 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.
+- **Problema:** 3 fonte(s) preprint no manifest — o texto deve rotular status de revisão onde forem centrais.
 - **Exigência:** Rotular no texto (ex.: bioRxiv preprint).
 
 ### [NOTE] R3-TODO-BIORXIV-ADDENDUM — todo-registry
