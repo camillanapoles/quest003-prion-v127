@@ -827,6 +827,93 @@
    "evidence_ids": [
     "E032"
    ]
+  },
+  {
+   "fact_id": "N060",
+   "concept": "m31_mw_prp_mature_kda",
+   "section": "M3.1",
+   "value": 22.83,
+   "unit": "kDa",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E058"
+   ]
+  },
+  {
+   "fact_id": "N061",
+   "concept": "m31_a6_ug_per_deposit_kt2_hi",
+   "section": "M3.1",
+   "value": 2.6,
+   "unit": "µg/deposit",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E058",
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N062",
+   "concept": "m31_a6_ug_per_deposit_kt4_worst_hi",
+   "section": "M3.1",
+   "value": 10.3,
+   "unit": "µg/deposit",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E058",
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N063",
+   "concept": "m31_band_ratio_mean_x",
+   "section": "M3.1",
+   "value": 52.6,
+   "unit": "ratio",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E058"
+   ]
+  },
+  {
+   "fact_id": "N064",
+   "concept": "m31_redose_interval_max_d",
+   "section": "M3.1",
+   "value": 7,
+   "unit": "d",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E030",
+    "E019"
+   ]
+  },
+  {
+   "fact_id": "N065",
+   "concept": "m31_kd_apparent_proxy_lo_um",
+   "section": "M3.1",
+   "value": 0.071,
+   "unit": "µM",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E057"
+   ]
   }
  ],
  "methods": [

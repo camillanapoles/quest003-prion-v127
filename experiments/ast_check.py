@@ -64,7 +64,7 @@ def a5_registro():
     rows = list(csv.DictReader(open(os.path.join(R, "paper", "evidence_workspace", "claims.csv"))))
     n = len(json.load(open(os.path.join(R, "paper", "evidence_workspace", "source_manifest.json")))["sources"])
     nf = len(json.load(open(os.path.join(R, "paper", "evidence_workspace", "consistency_manifest.json")))["numeric_facts"])
-    expect = (54, 56, 59)  # ratchet 01/09: piso elevado após P-003 (56 fontes) e P-025 (59 N-fatos)
+    expect = (60, 58, 65)  # ratchet 01/09 s2: piso elevado após M3.1/U6 (E057 Chen+E058 cômputo; C058-C060; N060-N065)
     got = (len(rows), n, nf)
     return got == expect or got >= expect, f"claims={len(rows)} fontes={n} N-fatos={nf} (esperado ≥ {expect})"
 

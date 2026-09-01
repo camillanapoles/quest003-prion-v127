@@ -27,6 +27,9 @@ jobs:
       - name: Figura 4 (auditável — matplotlib dos JSONs p024; Termux não compila matplotlib)
         run: python3 experiments/xspecies/make_fig4_thetaspecies.py && test -f paper/latex/figs/fig4_theta_species.png
 
+      - name: Figura 5 (auditável — escada de dose A6 do m31_u1u2.json; M3.1 U5)
+        run: python3 experiments/m31/make_fig5_doseladder.py && test -f paper/latex/figs/fig5_dose_ladder.png
+
       - name: Pré-processa (sanitização mínima)
         run: python3 scripts/pandoc_safe.py paper/manuscript_Parte2_v1.md /tmp/tese_safe.md
 

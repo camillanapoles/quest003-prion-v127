@@ -1,0 +1,80 @@
+name: Unified Thesis Build (PaperSpine braço-B)
+
+on:
+  push:
+    branches: [writing-v2-test]
+    paths: ["paper_rewriting_output/final_paper/**", "experiments/m31/**", "experiments/xspecies/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deps (pandoc + xetex + matplotlib)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq pandoc texlive-latex-base texlive-latex-recommended \
+            texlive-fonts-recommended texlive-xetex
+          pip install -q numpy matplotlib
+
+      - name: Figuras auditáveis (Fig.4 + Fig.5 — leem SÓ JSONs do registro)
+        run: |
+          python3 experiments/xspecies/make_fig4_thetaspecies.py
+          python3 experiments/m31/make_fig5_doseladder.py
+          test -f paper/latex/figs/fig4_theta_species.png
+          test -f paper/latex/figs/fig5_dose_ladder.png
+
+      - name: main.tex (regenerado deterministicamente do md; marcadores {{TODO:}} em forma display-safe — md-mestre intacto)
+        run: |
+          python3 - << 'PY'
+          import re, pathlib
+          md = open('paper_rewriting_output/final_paper/tese_unificada.md').read()
+          safe = re.sub(r"\{\{TODO:([^:}]+):[^}]*\}\}", r"〔a preencher pela autora: \1〕", md)
+          pathlib.Path('/tmp/tese_unificada_safe.md').write_text(safe, encoding='utf-8')
+          PY
+          pandoc /tmp/tese_unificada_safe.md -f markdown -t latex -s \
+            -H paper_rewriting_output/final_paper/preamble_unified.tex \
+            -V documentclass=article -V fontsize=12pt -V papersize=a4 \
+            -M title="Etrização Computacional em Doenças Priônicas: Aplicada à Plataforma Terapêutica PrP-V127" \
+            -M subtitle="Tese unificada — edição de publicação (coluna única)" \
+            -M author="Camilla N." \
+            -o paper_rewriting_output/final_paper/main.tex
+
+      - name: PDF (xelatex ×2, cwd=final_paper para os caminhos ../.. das figuras)
+        run: |
+          cd paper_rewriting_output/final_paper
+          xelatex -interaction=nonstopmode main.tex || true
+          xelatex -interaction=nonstopmode main.tex || true
+          test -f main.pdf && echo "PDF ok ($(pdfinfo main.pdf 2>/dev/null | grep Pages || echo páginas-geradas))" 
+          cp main.pdf paper.pdf
+
+      - name: Word (com figuras embutidas + política tipográfica)
+        run: |
+          pandoc paper_rewriting_output/final_paper/tese_unificada.md -o paper_rewriting_output/final_paper/paper.docx
+          python3 scripts/fix_docx_fonts.py paper_rewriting_output/final_paper/paper.docx
+
+      - name: Sanidade dos artefatos
+        run: |
+          test -f paper_rewriting_output/final_paper/main.pdf
+          test -f paper_rewriting_output/final_paper/paper.docx
+          ls -la paper_rewriting_output/final_paper/
+
+      - name: Commit artefatos versionados
+        run: |
+          git config user.name "ci-build"
+          git config user.email "ci@quest003.local"
+          STAMP=$(date +%Y%m%d-%H%M%S)
+          mkdir -p paper/pdf
+          cp paper_rewriting_output/final_paper/paper.pdf "paper/pdf/tese_unificada_${STAMP}.pdf"
+          git add paper_rewriting_output/final_paper/main.tex paper_rewriting_output/final_paper/paper.pdf \
+            paper_rewriting_output/final_paper/paper.docx "paper/pdf/tese_unificada_${STAMP}.pdf" || true
+          git commit -m "ci: tese unificada build ${STAMP} (figs auditáveis + main.tex + PDF + docx — braço-B)" || echo "nada"
+          git push
