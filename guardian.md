@@ -18,7 +18,7 @@ cd paper/guardian && python3 guardian.py --round 3 --md ../manuscript_EN_v5.md \
   --manifest ../evidence_workspace/source_manifest.json \
   --consistency ../evidence_workspace/consistency_manifest.json \
   --registry guardian_registry_v5_final.json --report guardian_report_v5.md
-# AST EXECUTÁVEL c/ bateria embutida (8/8, incl. check_consistency — nunca mais fora do fluxo): python3 experiments/ast_check.py
+# AST EXECUTÁVEL c/ bateria embutida (10/10 — A10 ergonomia-da-autora abre o PDF da tese p/ leitura ao fechar o ciclo; só Termux local, CI pula): python3 experiments/ast_check.py
 # Validadores oficiais (skill scientific-writing): S=/workspace/projects/scientific-agent-skills/skills/scientific-writing/scripts
 python3 $S/validate_manifest.py source_manifest.json --kind source --require-verified
 python3 $S/audit_claims.py ../manuscript_EN_v5.md claims.csv source_manifest.json   # e PT

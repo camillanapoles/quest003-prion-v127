@@ -2,7 +2,8 @@
 """AST — Assertion Self-Test consolidado da tese (Parte 1 + Parte 2).
 Um comando = estado de garantia inteiro. Saída: tabela PASS/FAIL + veredito.
 Componentes: A1 solver WS-7 (massa/Thiele) · A2 gate parte 1 · A3 gate parte 2 ·
-A4 validate_manifest (38 fontes) · A5 contagem de registro · A6 drift de artefatos-chave."""
+A4 validate_manifest (38 fontes) · A5 contagem de registro · A6 drift de artefatos-chave ·
+A10 ergonomia-da-autora: abre o PDF da tese p/ leitura ao fechar o ciclo (só Termux local)."""
 import subprocess, sys, os, json, csv
 FAST = "--fast" in sys.argv  # pula A1 (solver ~3min); releases usam 9/9 completo
 
@@ -113,6 +114,50 @@ def a9_pendencias():
     line = [l for l in (p.stdout + p.stderr).splitlines() if l.startswith(("RESUMO", "VEREDITO"))]
     return (p.returncode == 0), (" · ".join(line) if line else (p.stdout or p.stderr)[-120:])
 run("A9 pendências (garantista)", a9_pendencias)
+
+def a10_abrir_pdf():
+    """A10 — ergonomia-da-autora (01/09, pedido registrado): abrir o PDF da tese para
+    leitura ao fechar o ciclo AST. Somente host local Termux; CI pula (não há tela).
+    Best-effort: NUNCA derruba o veredito (é leitura, não garantia)."""
+    env = os.environ
+    is_termux = "com.termux" in env.get("PREFIX", "") or "TERMUX_VERSION" in env
+    if not is_termux:
+        return True, "skip (CI/host sem tela — ergonomia só no Termux da autora)"
+    import glob, re as _re
+    # 1. best-effort: trazer PDF recém-gerado pelo CI (unified-thesis-build comita em origin)
+    note = ""
+    try:
+        subprocess.run(["git", "fetch", "origin", "--quiet"], cwd=R, timeout=30,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        out = subprocess.run(["git", "ls-tree", "-r", "origin/main", "--name-only"],
+                             cwd=R, capture_output=True, text=True, timeout=30).stdout
+        remote = sorted(l.strip() for l in out.splitlines() if "tese_unificada_" in l and l.strip().endswith(".pdf"))
+        local = sorted(glob.glob(os.path.join(R, "paper", "pdf", "tese_unificada_*.pdf")))
+        have = {os.path.basename(p) for p in local}
+        for rp in remote:
+            if os.path.basename(rp) not in have:
+                blob = subprocess.run(["git", "show", f"origin/main:{rp}"], cwd=R, timeout=60,
+                                       stdout=subprocess.PIPE)
+                dst = os.path.join(R, rp)
+                if blob.returncode == 0 and blob.stdout:
+                    open(dst, "wb").write(blob.stdout); note += f"baixou {os.path.basename(rp)}; "
+    except Exception as e:
+        note += f"(fetch best-effort: {type(e).__name__}) "
+    # 2. abrir o mais recente (stamp AAAAMMDD-HHMMSS)
+    pdfs = glob.glob(os.path.join(R, "paper", "pdf", "tese_unificada_*.pdf"))
+    if not pdfs:
+        return True, note + "nenhum PDF local (rode o CI unified-thesis-build p/ gerar)"
+    latest = max(pdfs, key=lambda p: _re.findall(r"(\d{8}-\d{6})", p) or [""])
+    for opener in (["termux-open"], ["xdg-open"]):
+        try:
+            subprocess.Popen(opener + [latest], stdout=subprocess.DEVNULL,
+                             stderr=subprocess.DEVNULL)
+            return True, note + f"aberto p/ leitura: {os.path.basename(latest)}"
+        except FileNotFoundError:
+            continue
+    return True, note + f"PDF em {latest} (sem termux-open/xdg-open)"
+
+run("A10 abrir-PDF (ergonomia autora)", a10_abrir_pdf)
 
 print("═" * 62)
 print("AST — ASSERTION SELF-TEST CONSOLIDADO (Parte 1 + Parte 2)")
