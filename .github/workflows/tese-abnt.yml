@@ -55,6 +55,7 @@ jobs:
         run: |
           git config user.name "ci-garantista"
           git config user.email "camillanapoles@users.noreply.github.com"
+          git fetch --depth=3 origin main && git rebase origin/main || true
           git add paper/latex/tese_v2_ABNT.pdf paper/latex/tese_v2_ABNT.tex
           git commit -m "ci(abnt): tese v2 PDF NBR 14724 (12pt/1,5/margens 3-2cm/Sumário único) — sob gate AST" || echo nada
           git push
