@@ -1,0 +1,49 @@
+cand_id,fonte_confirmada,destino_na_tese,claim_ancora_proposta,status
+C-B3-004,Manka 2022 Nat Commun,Parte2 Cap.2 fundamentacao estrutural (2.1) + P1.1,fundamenta mecanismo de polimerizacao por templating em resolucao atomic,BINDING_RASCUNHADO
+C-B3-005,Manka 2023,Parte2 2.1 + P1.1,diversidade estrutural de cepas sustenta abordagem por simulacao multi-parametro,BINDING_RASCUNHADO
+C-B3-007,Wang 2021 Sci Adv,Parte2 2.1 + P1.1 + dossie E200K-BR,mutacao genetica gera fibrila amiloide distinta - paralelo estrutural dafamilia E200K,BINDING_RASCUNHADO
+C-B3-008,Lee 2024 JMB,Parte2 Cap.2,cluster cargas N-terminal na nucleacao,BINDING_RASCUNHADO
+C-B3-010,EMD-0931,dados primarios citados em 2.1,deposito estrutural publico,BINDING_RASCUNHADO
+C-B2-001,Gao 2024,ANEXO P2.1 + Cap.1 justificativa,27872 PrD em 34 paises dimensiona o alvo,BINDING_RASCUNHADO
+C-B3-001,Crane 2024 JAMA Neurol,ANEXO P2.1,tendencia EUA 1.05-1.47/milhao 2007-2020,BINDING_RASCUNHADO
+C-B3-002,Watson 2021 Nat Rev Neurol,ANEXO P2.1 + Cap.6,vigencia de vigilancia internacional,BINDING_RASCUNHADO
+C-B3-003,Chen 2016,ANEXO P2.1,classico 1-2/milhao,BINDING_RASCUNHADO
+C-B2-004,CDC,ANEXO P2.1,1-2/milhao/ano,BINDING_RASCUNHADO
+C-B2-005,CJD Foundation 2021,ANEXO P2.1,formas geneticas 10-15%,BINDING_RASCUNHADO
+C-B2-003,Canada dashboard,ANEXO P2.1,sCJD 85-95%,BINDING_RASCUNHADO
+C-B1-007,NCT06153966,EN 4 competitivo + ANEXO P2.2,trial ION717 aberto (3 doses),BINDING_RASCUNHADO
+C-B1-008,Minikel 2026 cureffi,EN 4 + P2.2,reativacao trial mar-2026,BINDING_RASCUNHADO
+C-B2-008,Broad PRiSM,EN 4 + P2.2,novo competidor siRNA,BINDING_RASCUNHADO
+C-B2-007,Liu F 2024,Parte2 2.1 gargalo terapeutico,panorama terapias/profilaxia,BINDING_RASCUNHADO
+C-B4-004,Teruya 2017,Parte2 2.1,historico de tentativas,BINDING_RASCUNHADO
+C-B4-005,Ghaemmaghami 2009,Parte2 2.1,quinacrine gera prions resistentes,BINDING_RASCUNHADO
+C-B4-006,Shim 2022,Parte2 2.1,combinacao IND24+anle138b falha,BINDING_RASCUNHADO
+C-B4-007,Beauchemin 2021,Parte2 2.1 + M3,regimens alternados reduzem resistencia,BINDING_RASCUNHADO
+C-B4-008,anle138b preprint 2022,Parte2 2.1,ensaio pre-clinico prion genetico,BINDING_RASCUNHADO
+C-B4-009,Minikel 2024 PRN100,Parte2 2.1,falha PRN100 e licoes,BINDING_RASCUNHADO
+C-B3-012,FDA M15,Parte1 4.3 geometria regulatoria,framework MIDD reconhecido por agencia,BINDING_RASCUNHADO
+C-B3-011,Madabushi 2022,Parte1 4.3,papel MIDD no ciclo regulatorio,BINDING_RASCUNHADO
+C-B3-014,Sheng 2025,Parte1 4.3,fit-for-purpose modeling,BINDING_RASCUNHADO
+C-B3-013,FDA MIDD program,Parte1 4.3,programa de reunioes emparelhadas,BINDING_RASCUNHADO
+C-B1-003,Cortes-Rios 2025,Parte2 2.2 familia + P1.2,workflow ISCT formaliza instancia da etrizacao,BINDING_RASCUNHADO
+C-B1-004,Chen B 2026,Parte2 2.2,review sistematico ISCT,BINDING_RASCUNHADO
+C-B1-005,Go 2024,Parte2 2.2,QSP para desenho de estudos,BINDING_RASCUNHADO
+C-B1-006,Verma 2022,Parte2 2.2,QSP model-informed,BINDING_RASCUNHADO
+C-B5-005,Ramasubbu 2024,Parte2 2.2,QSP aplicado,BINDING_RASCUNHADO
+C-B5-006,Joshi 2023,Parte2 2.2,convergencia farmacometria-QSP,BINDING_RASCUNHADO
+C-B2-011,Salim 2025,Parte2 2.5 validacao predicao-in-silico,validacao experimental de predicoes,BINDING_RASCUNHADO
+C-B2-012,Hankittichai 2026,Parte2 2.5,predicao in-silico a validacao celular,BINDING_RASCUNHADO
+C-B2-013,Galuszewski 2026,Parte2 2.5,hypothesis-to-validation com RW data,BINDING_RASCUNHADO
+C-B4-012,RSOS 2025,Parte2 2.5 + P3.4,variabilidade do reprodutor computacional,BINDING_RASCUNHADO
+C-B5-007,Bhat 2025,Parte2 2.5 + Cap.6,vies/overfitting em ML,BINDING_RASCUNHADO
+C-B5-008,Lakhan 2025,Parte2 2.5,in-silico reescrevendo desenvolvimento,BINDING_RASCUNHADO
+C-B4-010,Dudda 2025,Parte1 2.5 pre-registro + P3.5,intervencoes open-science,BINDING_RASCUNHADO
+C-B4-011,Petersen 2022,Parte1 2.5,pre-registro em desenhos long.,BINDING_RASCUNHADO
+C-B2-015,SSRN 2025,Parte2 2.3 posicionamento,taxonomia de foresight,BINDING_RASCUNHADO
+C-B5-001,Cummings 2025,Parte2 5.2 areas correlatas,repurposing NDD,BINDING_RASCUNHADO
+C-B5-002,Zheng 2025,Parte2 5.2,repositioning informatica,BINDING_RASCUNHADO
+C-B5-003,Kakoti 2022,Parte2 5.2,repositioning neuro,BINDING_RASCUNHADO
+C-B5-004,TTE Neurol,Parte2 5.2,emulacao de ensaio,BINDING_RASCUNHADO
+C-B4-001,GHDx GBD2021,ANEXO P2.2? NAO - P2.1 DALY,fonte-de-dados burden,BINDING_RASCUNHADO
+C-B4-002,VizHub,ANEXO P2.1 DALY (D-01),extracao interativa dalys prion,BINDING_RASCUNHADO
+C-B4-003,GBD capstone 2020,ANEXO P2.1,metodologia DALY,BINDING_RASCUNHADO
