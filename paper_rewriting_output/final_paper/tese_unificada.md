@@ -245,3 +245,167 @@ com α=0,20 e λ=1,8 medidos in-vivo [claim:C014] [evidence:E010]; D_eff=D₀/λ
 | Auditoria/supervisão | Guardião (4 dimensões de revisão hostil) |
 
 *Um examinador que sabe ler tese experimental sabe ler esta: basta trocar "pessoa"→"fonte", "instrumento"→"código", "coleta"→"run" — a forma documental é idêntica; a base é simulação computacional.* (Hipótese H1, testável: a auditoria trocando apenas os termos do mapeamento não perde a tese.)
+
+---
+
+# CAPÍTULO 6 — RESULTADOS COMO VALIDAÇÃO
+
+*Cada seção de resultados valida uma promessa declarada da tese; nenhum resultado é métrica órfã.*
+
+| Promessa (contribuição) | Resultado que a valida | Registro |
+|---|---|---|
+| Existe um limiar de contenção quantitativo | θ\*=0,333 travado v1.0; R 2,83→0,82 mm em κ=2; monotônico à quase-extinção | [claim:C038] [evidence:E032] |
+| O desenho é quantitativo (dose-e-posicionamento) | regras 1–3 (anel 8–12 mm; malha ≥5×r_p; redose ≤7 d) | [claim:C033, C034, C035] |
+| O método é robusto a parâmetros não-medidos | sweeps S1/S2 (C50 insensível 10×); S3 (só Kt move contenção/relógio, Kr/Kc ≤3%) | [claim:C051] · F-43 |
+| O limiar transfere entre espécies | Cenário B: θ\* 0,333–0,400 centrais (razão 1,20); refutação do hamster reportada como está | [claim:C055, C056] |
+| A dose generaliza por cinética | regra de titulação κ_req↔Kt (1→1,5·2→2·3→3·4→8) | [claim:C057] |
+| A dose é calculável em massa com incerteza honesta | banda A6 0,0–2,6 µg/depósito (humano); largura ≈53× decomposta (14× Kd-proxy × 3,7× V-halo) | [claim:C058–C060] [evidence:E057, E058] |
+| O instrumento de confronto funciona | θ_obs ADEQUADO na fronteira (bias −0,008); v1.1 rejeitada | [claim:C052] |
+| A decisão é possível sem dado novo | tabela-decisão derivada (κ↔θ_obs↔R↔biomassa); biomassa = coordenada informativa | [claim:C052] |
+
+---
+
+# CAPÍTULO 7 — CAMADA CLÍNICA
+
+> ⚠️ **PROGNÓSTICO [SIM] — NÃO É CONSELHO MÉDICO.** Documentação de desenho de pesquisa sob simulação parametrizada; nenhum uso humano sem os gates [ORGANOID]→[MOUSE]→regulatório; nada aqui orienta conduta, dose ou seleção de paciente.
+
+**Por que abrir estas páginas: doenças priônicas são 100% fatais e não têm hoje nenhuma terapia modificadora aprovada — e este trabalho traz o primeiro cálculo quantitativo de dose-e-entrega de um candidato, com predições travadas antes de qualquer medição.**
+
+**O que esta tese é, em cinco perguntas que qualquer médico faria:** (1) **Que doença?** DCJ esporádica/genética: rapidamente progressivas, 100% fatais, seis candidatos já faliram. (2) **Que ideia?** A variante PrP-G127V — selecionada pela evolução (kuru) — como agente dominante-negativo: compete com o príon e trava a replicação sem silenciar o PrP nativo. (3) **Que evidência?** Nenhuma medição nova em pacientes: simulação parametrizada com dados reais publicados (etrização); predições travadas ANTES de qualquer medição. (4) **Que resultado prático?** Três regras quantitativas (anel 8–12 mm; redose ≤7 d; limiar θ\*≈⅓) + a sondagem multi-espécie (limiar aproximadamente conservado; dose titulada à velocidade da doença) + **a primeira dose calculada do braço A6: banda de 0,0–2,6 µg de proteína por depósito no degrau humano (pior caso 0,2–10,3), com a largura da banda explicitando o que o ensaio organoide fecha**. (5) **Que promessa NÃO faz?** Não promete cura, aplicação humana, nem substitui laboratório.
+
+**Como ler os símbolos sem perder o fio:** θ\* = "quanto da conversão sobrevive à dose no pior dia do anel" (⅓ ≈ contém); κ = a dose; Kt = a velocidade inerente da doença. Cada capítulo técnico abre com "Em linguagem clínica".
+
+**Rota de leitura de 10 minutos:** (1) esta NOTA (3 min) → (2) **Figura 4** (dose-limiar por espécie; 2 min) → (3) **Figura 5** (escada de dose com a banda; 2 min) → (4) §8 "o que significam e o que não significam" (2 min) → (5) Cap. 9 conclusões (1 min).
+
+**Acompanhamento previsto no desenho [SIM] (documentação de desenho — NÃO conduta clínica):** θ_obs em readouts 90–120 d (perfis radiais WB/IHC com leitura cega; critério θ_obs<0,33 pré-registrado); manutenção da cobertura secretora com redose ≤7 d (gradiente proximal/distal; trough ≥30–56% [SIM]); triagem pré-sintomática na população-âncora E200K (RT-QuIC + NfL; precedentes tofersen/nusinersen). Serviços de neurologia interessados em auditar ou viabilizar o próximo gate encontram o pacote em `paper/G0_UNLOCK_DOSSIER.md` + `paper/lab_outreach_package.md`.
+
+---
+
+# CAPÍTULO 8 — LIMITAÇÕES COMO FRUTO (cada limite com o que o fecha)
+
+*Reconhecer os limites com plano de pesquisa futura — cada limitação abaixo tem o gate/ensaio que a converte em conhecimento.*
+
+**Classe de transferência (o dado é de outra espécie/sistema):**
+1. Cinética murina → humano: fechada em estrutura pelo Cenário B + relógio humanizado; fechada em medida pelo G0-wet [ORGANOID].
+2. Âncora κ↔µM é proxy (Kd de Aβ42-oligômero↔PrP [E057], não V127↔PrP^Sc): **a banda de dose inteira (largura ≈53×) quantifica este limite** [claim:C060] — fechada pelo braço A6 (dose conhecida).
+3. Sem dado [ORGANOID]+ medido: G0-wet especificado (F1–F10; GATE-F).
+
+**Classe de horizonte (o número depende da janela de observação):**
+4. θ\* é dependente de horizonte (3 definições; Kt=2/κ=2 contém sob duas, escapa sob a terceira): toda citação declara a def; a predição v1.0 usa S3 [claim:C056] — fechada pela definição operacional no protocolo G0.
+
+**Classe de estrutura-modelo:**
+5. Escapes saturam no canto do grid (2,83 mm): raio nesses braços é limite inferior — grade maior pré-declarada como refinamento.
+6. Espécie reduz-se à banda Kt (por construção): a disseminação das bandas É a pergunta multi-espécie; refinamento por parâmetros por-espécie além de Kt é pesquisa derivada.
+7. Forma funcional do capping (quadrática vs primeira potência) não discriminada: falseável pela dose-resposta do A6 [claim:C051].
+
+**Classe de fontes monitoradas:**
+8. Preprints/ensaios em andamento (PRN100 extension; AAV-PrP) monitorados no registro; elevação a E-ID só após abertura e verificação.
+9. Ensaio retraído excluído por regra (minociclina) [claim:C024] — a correção de citações recorrentes do campo é subproduto auditável.
+
+**Classe de execução:**
+10. Single-rater nos pesos do protocolo de parceiro (co-rating pré-declarado como pendência); PubMed-direto pendente como conformidade do piloto.
+
+**Classe de localização:**
+11. População-âncora E200K-Brasil: a rota compassiva depende de DSMB, equidade de acesso e comunicação responsável — especificada, não prometida.
+
+---
+
+# CAPÍTULO 9 — CONCLUSÕES POR OBJETIVO
+
+**OE1 (nomear e formalizar a etrização) — alcançado.** P0–P6 com garantias por passo; nota à banca (Cap. 1) diferencia o termo de IST e meta-análise [claim:C054].
+
+**OE2 (Base de Validade) — alcançado.** Tríade + linhagem completa (agora 7 linhas, incluindo a âncora κ↔µM em banda) [claim:C046].
+
+**OE3 (resultados como achados [SIM]) — alcançado.** Limiar; regras 1–3; sensibilidade discriminadora; probabilístico; estimador na fronteira; tabela-decisão; validação multi-espécie; **e a primeira dose calculada com incerteza propagada** — a banda A6 (0,0–2,6 µg/depósito no degrau humano; largura ≈53× = o que G0-A6 fecha) converte a regra de dose da Parte 3 em prognóstico de massa [claim:C038, C051, C052, C055–C057, C058–C060].
+
+**OE4 (continuidade documentada como método) — alcançado.** Loop anti-hindsight; seleção de parceiro SLR-análogo (método, não seleção); freeze dormente [claim:C053].
+
+**OE5 (revisão hostil + validação expressa) — alcançado.** R0–R3 dois perfis 0 BLOCKED; AST 9/9; registro 60 claims · 58 fontes · 65 N-fatos.
+
+**Hipóteses.** H1 corroborada no nível documental (mapeamento análogo §5.4). H2 corroborada pelas predições travadas v1.0 e refutações reportadas como estão (hamster; v1.1 do estimador). H3 corroborada pelo posicionamento estrutural (Cap. 1.2; Cap. 2-fundamentação da Parte 2).
+
+**Síntese final.** Esta tese é uma **etrização** — realizada, rotulada e auditável. O método produziu-a a partir exclusivamente de dados reais publicados e a entrega como prognóstico falseável: limiar, regras, escada de dose em banda, e o ensaio que fecha cada banda especificado. **Fecho epistemológico:** o que uma pesquisadora pode legítimamente produzir quando a doença mata em meses, o laboratório custa fortunas e os dados publicados estão disponíveis? **Prognóstico quantitativo, falseável e disciplinado por critérios** — com nome (etrização), método (P0–P6), garantias (5 requisitos) e honestidade sobre o que é e o que não é. Como o átomo tornou pesquisável o invisível, a etrização torna pesquisável o ainda-não-medido.
+
+---
+
+# REFERÊNCIAS (58 fontes do registro)
+
+[1] ASANTE, E.A. et al. A naturally occurring variant of the human prion protein completely prevents prion disease. 2015. doi:10.1038/nature14510.
+[2] MEAD, S. et al. A novel protective prion protein variant that colocalizes with kuru exposure. 2009. doi:10.1056/NEJMoa0809716.
+[3] GATDULA, J.R. et al. Leveraging the dominant-negative effect of the kuru-protective G127V prion protein variant as a novel therapeutic. 2026. PMID 41757113.
+[4] ZERBES, T. et al. A self-complementary recombinant adeno-associated virus vector coding for an anchorless prion protein carrying. 2026.
+[5] HOSSZU, L.P. et al. Structural effects of the highly protective V127 polymorphism on human prion protein. 2020. doi:10.1038/s42003-020-01126-6.
+[6] ZHENG, Z. et al. Structural basis for the complete resistance of the human prion protein mutant G127V to prion disease. 2018. doi:10.1038/s41598-018-31394-6.
+[7] GROVEMAN, B.R. et al. Sporadic Creutzfeldt-Jakob disease prion infection of human cerebral organoids. 2019. doi:10.1186/s40478-019-0742-2.
+[8] GROVEMAN, B.R. et al. Human cerebral organoids as a therapeutic drug screening model for Creutzfeldt-Jakob disease. 2021. doi:10.1038/s41598-021-84689-6.
+[9] FORNARA, B. et al. The dynamics of prion spreading is governed by the interplay between the non-linearities of tissue response and. 2024. PMID 39717079.
+[10] THORNE, R.G. et al. In vivo diffusion analysis with quantum dots and dextrans predicts extracellular space and tortuosity in brain. 2006. doi:10.1073/pnas.0509425103.
+[11] MASEL, J. et al. Quantifying the kinetic parameters of prion replication. 1999. doi:10.1016/S0301-4622(99)00004-3.
+[12] WILLIAMS, K. et al. Neural cell engraftment therapy for sporadic Creutzfeldt-Jakob disease restores neuroelectrophysiological para. 2023. doi:10.1186/s13287-023-03591-2.
+[13] RELANO-GINES, A. et al. Prion replication occurs in endogenous adult neural stem cells and alters their neuronal fate. 2013. doi:10.1371/journal.ppat.1003485.
+[14] GINHOUX, F. et al. Fate mapping analysis reveals that hematopoietic cells of yolk-sac origin give rise to microglia. 2010. doi:10.1126/science.1194637.
+[15] SORRELLS, S.F. et al. Human hippocampal neurogenesis drops sharply in children to undetectable levels in adults. 2018. doi:10.1038/s41586-018-0336-4.
+[16] ABUD, E.M. et al. iPSC-derived human microglia-like cells to study neurological diseases. 2017. PMID 28426964.
+[17] HAN, X. et al. Generation of hypoimmunogenic human pluripotent stem cells. 2019. doi:10.1073/pnas.1902566116.
+[18] HU, X. et al. Hypoimmune induced pluripotent stem cells survive long-term in fully immunocompetent allogeneic rhesus macaque. 2024. doi:10.1038/s41587-023-01784-x.
+[19] XUE, Y. et al. Lipid nanoparticles enhance mRNA delivery to the central nervous system upon intrathecal injection. 2025. PMID 40317512.
+[20] LIANG, Y. et al. The survival of engrafted neural stem cells within hyaluronic acid hydrogels. 2013. PMID 23623429.
+[21] SHAH, S.Z. et al. Early minocycline and late FK506 treatment improves survival... in prion-infected hamsters (RETRACTED). 2017. doi:10.1007/s13311-020-00909-3.
+[22] CHENG, S. et al. Minocycline reduces neuroinflammation but does not improve survival in prion-infected mice. 2015. doi:10.1038/srep10535.
+[23] GENTILE, J.E. et al. Evidence that minocycline treatment confounds neurofilament light chain biomarker interpretation. 2024.
+[24] SMID, J. et al. Creutzfeldt-Jakob disease associated with a missense mutation at codon 200 of the prion protein gene in Brazil. 2007.
+[25] STOPSCHINSKI, B.E. et al. Prion-like mechanisms in neurodegenerative disease. 2017. doi:10.1016/S1474-4422(17)30370-6.
+[26] JUCKER, M. et al. Propagation and spread of pathogenic protein assemblies in neurodegenerative diseases. 2018. doi:10.1038/s41586-018-0344-4.
+[27] FDA. FDA grants accelerated approval of tofersen for SOD1-ALS. 2023.
+[28] FDA. FDA approval of nusinersen (Spinraza) — regulatory record. 2016.
+[29] BENGTSSON, S. et al. Clinical trial of stem-cell derived dopaminergic progenitor transplantation in Parkinson's disease. 2026.
+[30] OPEN PRION & MOLECULAR ENGINEERING, CONSORTIUM. WS-7: ADR transport solver — self-tested design rules (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127.
+[31] OPEN PRION & MOLECULAR ENGINEERING, CONSORTIUM. WS-8: hierarchical Bayesian calibration over structural analogues (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127.
+[32] OPEN PRION & MOLECULAR ENGINEERING, CONSORTIUM. WS-9: humanized in-silico infection model with V127 capping (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127.
+[33] OPEN PRION & MOLECULAR ENGINEERING, CONSORTIUM. Quest 003 repository — timestamped pre-registrations and audit trail. 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127.
+[34] GESCHWIND, M.D. et al. Quinacrine treatment trial for sporadic Creutzfeldt-Jakob disease. 2013. PMID 24122181.
+[35] HAIK, S. et al. Doxycycline in Creutzfeldt-Jakob disease: a phase 2 trial. 2014. PMID 24411709.
+[36] NEWMAN, P.K. et al. Postmortem findings in a case of variant CJD treated with intraventricular pentosan polysulfate. 2014. PMID 24554103.
+[37] OTTO, M. et al. Efficacy of flupirtine on cognitive function in patients with CJD. 2004. doi:10.1212/01.WNL.0000113764.35026.ef.
+[38] MEAD, S. et al. Prion protein monoclonal antibody (PRN100) therapy for Creutzfeldt-Jakob disease. 2022. PMID 35305340.
+[39] CORRIDLON, T.L. et al. PrP turnover in vivo and the time to effect of prion disease therapeutics. 2026. PMID 42189860.
+[40] L, F. et al. New implications for prion diseases therapy and prophylaxis. 2024. PMID 38500676.
+[41] S, E.A. et al. From in silico prediction to experimental validation: drugs and novel synergistic combinations. 2025. PMID 41427337.
+[42] M, S.W. et al. A structural basis for prion strain diversity. 2023. PMID 36646960.
+[43] M, R. et al. Review: Role of Model-Informed Drug Development Approaches. 2022. PMID 35552984.
+[44] T, K. et al. Insights from Therapeutic Studies for PrP Prion Disease. 2017. PMID 27836910.
+[45] J, A. et al. The convergence of pharmacometrics and quantitative systems pharmacology. 2023. PMID 36638898.
+[46] L, S.E. et al. In Silico Research Is Rewriting the Rules of Drug Development. 2025. PMID 40364863.
+[47] N, Y. et al. Nationwide trend analysis of incidence and mortality of CJD (Japão). 2020. doi:10.1038/s41598-020-72519-0.
+[48] G, M. et al. From In Silico Hypothesis to Validation: Role of Real-World Data. 2026. doi:10.3390/jcm15072801.
+[49] A Meta-Synthetic Taxonomy of Foresight Methodologies. doi:10.2139/ssrn.5352605.
+[50] M, S. et al. A cryo-EM structure of ex vivo RML prion fibrils. 2022. doi:10.1038/s41467-022-30457-7.
+[51] WANG, L.Q. et al. Genetic prion disease mutation E196K cryo-EM fibril structure. 2021. doi:10.1126/sciadv.abg9676.
+[52] CUMMINGS, J.L. et al. Drug repurposing for Alzheimer's disease and other neurodegenerative disorders. 2025. doi:10.1038/s41467-025-56690-4.
+[53] ZHENG, X. et al. Translational Informatics Driven Drug Repositioning for Neurodegenerative Diseases. 2025. doi:10.2174/011570159x327908241121062335.
+[54] KAKOTI, B.B. et al. Therapeutic drug repositioning with special emphasis on neurodegenerative diseases. 2022. doi:10.3389/fphar.2022.1007315.
+[55] Target Trial Emulation for Drug Repurposing in Neurodegenerative Disease. doi:10.1212/WN9.0000000000000112.
+[56] RAMASUBBU, M.K. et al. Applying quantitative and systems pharmacology to drug development. 2024. doi:10.4103/ijp.ijp_644_23.
+[57] CHEN, S.; YADAV, S.P.; SUREWICZ, W.K. Interaction between human prion protein and amyloid-beta (Aβ) oligomers: role of N-terminal residues. Journal of Biological Chemistry, 2010. doi:10.1074/jbc.M110.145516. PMID 20576610. *(Kd aparente 71 nM por SPR — proxy declarado da âncora κ↔µM; texto integral conferido.)*
+[58] OPEN PRION & MOLECULAR ENGINEERING, CONSORTIUM. M3.1: dose-chain κ_req→µM→µg/deposit with GUM Type-B band + PrP MW from own sequences (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127. *(JSON: `experiments/m31/m31_u1u2.json`.)*
+
+### Fontes complementares (verificação completa pendente — snippet-level)
+- CORTÉS-RÍOS, J. et al. A step-by-step workflow for performing in silico clinical trials. 2025. PMCID PMC12706418. *(abertura completa pendente antes de registro E)*
+- An open source statistical web application for validation of in-silico trials and virtual cohorts. 2025. doi:10.1038/s41598-025-99720-3.
+
+---
+
+# APÊNDICES
+
+- **A — Inventário dos artefatos** (verificável em disco; `paper/evidence_workspace/` + `experiments/`).
+- **B — Mapa da lógica completa** (fluxo da informação; decisões-chave; rejeições documentadas; glossário contextual; objeções da banca prejulgadas).
+- **C — SAP completo do G0-wet** (Welch/Holm; cegamento; kill-switches; F1–F10; GATE-F).
+- **D — Tabela-decisão derivada** (κ↔θ_obs↔frente↔biomassa↔margem; `part2_derived_summary.json`).
+- **E — Custo-cotação S1** (por braço; cotações arquivadas).
+- **F — Linhagem da Base de Validade** (a tabela §5.3 com hashes e paths).
+
+*Os apêndices A–F existem no registro; a edição unificada os incorpora por referência ao repositório (auditável em disco) para não duplicar artefatos gated.*
+
+---
+
+*Edição unificada [SEM ANO] — o resultado define; as fases são estimativas. Toda cifra vem de JSON arquivado ou do registro E (regra: nunca digitar valor). Gated: guardian R0–R3, 0 BLOCKED exigido; AST 9/9.*
