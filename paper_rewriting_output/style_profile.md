@@ -1,0 +1,3 @@
+# Style Profile — edição unificada (PT-BR, publicação-grade)
+
+**Registro:** acadêmico-formal PT-BR; preciso, sem jargão desnecessário; camada clínica preservada (openers + NOTA DE LEITURA). **Estrutura:** contribuição-primero (PaperSpine V4) sobre espinhaço de tese (pré-textuais→Cap.1-7→anexos ABNT). **Coluna:** ÚNICA (justificativa no config: JHU/Harvard single; ABNT NBR 14724; equações/tabelas largas). **Citações:** numéricas [n] consistentes (já ABNT no registro; unificar numeração crescente). **Figuras:** auditáveis-dos-JSONs (Fig.1-4 + dashboard-derivadas se contribuírem). **Tom:** não-promessa explícita; tiers; incerteza dita (IC/crédito). **Proibições:** placeholder, inflação, dado sem fonte, promessa clínica.
