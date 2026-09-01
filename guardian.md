@@ -503,3 +503,9 @@ FEITO: **P-015 COST-DECOMP fechado** — Tabela Suplementar S1 nos manuscritos E
 ESTADO: **13/26 fechadas · fila agente VAZIA** (restam 2 deferidas: P-018 identifiers + P-019 decisão-autora) · tudo o mais aguarda autora (P-007/8/9/10), lab (P-011), executor-externo (P-012/13/14) · registro 54/56/59 com piso ratcheted
 PRÓXIMO: (autora) BIORXIV · TESE-FICHA · OK-anexos→merge otimizacao (PR#5 pronto p/ criar) · kit RML · decisão fixfig1 | (lab) GATEF dormant | registro contínuo via A9/CI
 ÂNCORA: main@f3e9ba7 · tese 3 partes + S1 suplementar · predições v1.0 intocadas
+
+/RECAP 2026-09-01 ~11:30 — TESE v2: PARTE 3 INTEGRADA + REMEDIAÇÃO ESTRUTURAL + PIPELINE ABNT (P-027)
+FEITO: **PR#5 tese-v2-parte3 MERGED @01ef9b4** — §4.7 validação multi-espécie na tese com claims C055-C057 (hashes norma skill) + binding N055-059 · achados integrados em 5.1/6.2/OE3/H2 · **limitação 9 da Parte 1 emendada EN+PT (achados presentes nas DUAS partes)** · SUMÁRIO atual (§4.7+Apêndice B+56 fontes) · duplo-índice MORTO (--toc CI removido; SUMÁRIO manual=fonte) · tabela-M reordenada+condensada · refs [39]-[56] ABNT do manifest · auditoria audit\_claims: 0 issues novos (4 não-pareados PRÉ-EXISTENTES C032/C046; divergências documentadas decálogo #8) · **PIPELINE ABNT NBR 14724** (preamble 3-2cm/12pt/1,5/recuo-1,25/nº-pág-sup-dir + workflow tese-abnt; **tese\_v2\_ABNT.pdf 171KB SUCCESS @e6c052f** — Sumário único ✓ · §4.7 ✓ · C055×5 ✓) · YAML-trap do dois-pontos pegou 2× (fixado; lição registrada)
+ESTADO: gates P2 0/0 · P1 0-BLOCKED · AST 8/8 · CI: ast✓+abnt✓ · ledger 27 itens (14 fechadas) · registro 58 claims/56 fontes/59 N-fatos
+PRÓXIMO: (autora) validação visual do PDF ABNT + ficha catalográfica no corpo (template pronto) + BIORXIV/TESE-FICHA/P-009/kit-RML · (agente) nada na fila — 2 deferidas (P-018 identifiers · P-019 decisão)
+ÂNCORA: main@e6c052f · PRs #3/#4/#5 merged · tese = 3 partes + §4.7 + S1 + ABNT-PDF sob CI

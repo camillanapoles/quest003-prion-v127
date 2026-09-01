@@ -5,7 +5,7 @@
 **Taxonomia de STATUS:** PLANEJADA · EM_EXECUCAO · EXECUTADA_NAO_MERGADA · FECHADA · DORMANT · BLOQUEADA_EXTERNA · AGUARDANDO_AUTORA · AGUARDANDO_LAB · AGUARDANDO_EXECUTOR
 **DONO:** AGENTE · AUTORA · LAB · EXECUTOR (sessão executora externa à de ledger)
 
-<!-- LEDGER-RESUMO total=26 abertas=12 planejadas_agente=2 fechadas=13 dormant=1 -->
+<!-- LEDGER-RESUMO total=27 abertas=12 planejadas_agente=2 fechadas=14 dormant=1 -->
 
 | ID | TODOID | PENDÊNCIA | DONO | STATUS | EVIDÊNCIA/ARTEFATO | ORIGEM |
 |---|---|---|---|---|---|---|
@@ -28,6 +28,7 @@
 | P-017 | SEARCHLOG-FULL | Queries exatas das ~90 buscas não reconstituíveis retroativamente — limitação DECLARADA no manuscrito; logs futuros no momento da busca | AGENTE | DORMANT | paper/manuscript_PT_v5.md | TODO-registry |
 | P-018 | - | Continuação da elevação (meta-150 da tese-FULL) {{DEFER:pool restante (14 fuzzy + 16 URL) exige identifier resolvível (regra); meta-≥150 pertence à tese-otimização condicionada a P-009 da autora; piso atual travado em 56 fontes pelo ratchet A5}} | AGENTE | PLANEJADA | experiments/xspecies/p003_pool.json | AUDIT §P-003 |
 | P-019 | - | Decisão sobre branch fix/fig1-parte1 (stale, 70 commits atrás; figs archify existem só lá) {{DEFER:rebase-ou-descartar é decisão da autora; fig1 em main já regenerada do grafo v3.2}} | AGENTE | PLANEJADA | ../quest003-fixfig1/paper/latex/figs/archify/fig1.svg | AUDIT_CAPTURE §D4 |
+| P-027 | - | **tese-v2-parte3**: PARTE 3 integrada à tese (PR#5 merged 01ef9b4: §4.7+claims C055-057+SUMÁRIO+refs 56+tabela-M+limitação 9 EN+PT) + correções estruturais (duplo índice morto) + **pipeline ABNT NBR 14724** (tese_v2_ABNT.pdf 171KB sob CI, e6c052f) | AGENTE | FECHADA | paper/latex/tese_v2_ABNT.pdf | PR #5 + workflow tese-abnt |
 | P-020 | - | Branch otimizacao-pqms-batch1: manuscript_Parte2_FULL.tex (1506 L) + TESE-FICHA-TEMPLATE + anexos P2.1/P2.2 — trabalho pronto, merge pendente de OK da autora (P-009) | AGENTE | EXECUTADA_NAO_MERGADA | branch:otimizacao-pqms-batch1 @bd95dc9 (remoto GitHub) | compare API main...otimizacao |
 | P-021 | - | Branch executor — **FECHADA: PR#4 MERGED @d263761** (ast ✓; candidatos/otimizacao docs no main) | AGENTE | FECHADA | paper/guardian/PARTE3_SINTESE.md | PR #4 |
 | P-022 | - | Branch gap-mapper — **MERGEADO via PR#3** (661e77e; CI ast ✓✓; GAP_MAPPER+ACTION_PLAN no main) | AGENTE | FECHADA | paper/guardian/PARTE3_SINTESE.md | PR #3 |
