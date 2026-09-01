@@ -32,21 +32,8 @@ jobs:
           test -f paper/latex/figs/fig4_theta_species.png
           test -f paper/latex/figs/fig5_dose_ladder.png
 
-      - name: main.tex (regenerado deterministicamente do md; marcadores {{TODO:}} em forma display-safe — md-mestre intacto)
-        run: |
-          python3 - << 'PY'
-          import re, pathlib
-          md = open('paper_rewriting_output/final_paper/tese_unificada.md').read()
-          safe = re.sub(r"\{\{TODO:([^:}]+):[^}]*\}\}", r"〔a preencher pela autora: \1〕", md)
-          pathlib.Path('/tmp/tese_unificada_safe.md').write_text(safe, encoding='utf-8')
-          PY
-          pandoc /tmp/tese_unificada_safe.md -f markdown -t latex -s \
-            -H paper_rewriting_output/final_paper/preamble_unified.tex \
-            -V documentclass=article -V fontsize=12pt -V papersize=a4 \
-            -M title="Etrização Computacional em Doenças Priônicas: Aplicada à Plataforma Terapêutica PrP-V127" \
-            -M subtitle="Tese unificada — edição de publicação (coluna única)" \
-            -M author="Camilla N." \
-            -o paper_rewriting_output/final_paper/main.tex
+      - name: main.tex EDIÇÃO A+ (builder determinístico: md-mestre → pandoc → \cite/thebibliography/audit-macro)
+        run: python3 scripts/build_aplus_tex.py
 
       - name: PDF (xelatex ×2, cwd=final_paper para os caminhos ../.. das figuras)
         run: |
