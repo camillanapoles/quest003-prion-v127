@@ -497,3 +497,9 @@ FEITO: **P-003 FECHADO** — verificação claim-a-claim INDEPENDENTE do agente 
 ESTADO: AST 8/8 (A5 ratcheted) · ledger 26 itens (**12 fechadas** · 13 abertas · 3 agente-deferidas) · registro **54 claims · 56 fontes · 59 N-fatos** · branches: executor/gap-mapper MERGED; restam otimizacao (condicionada P-009) e fix/fig1 (P-019, decisão da autora) · CI verde contínuo
 PRÓXIMO (topológico): **P-015 COST-DECOMP** (única agente-acionável restante: tabela suplementar EN+PT gated + paridade + re-gate + PDFs) · P-018 segue deferido (identifiers) · P-019/externas aguardam autora/lab
 ÂNCORA: main@d263761+ · PRs #3/#4 merged · piso A5=54/56/59 travado no código
+
+/RECAP 2026-09-01 ~09:00 — P-015 FECHADO: FILA DO AGENTE VAZIA
+FEITO: **P-015 COST-DECOMP fechado** — Tabela Suplementar S1 nos manuscritos EN+PT (10 direcionadores; quantidades com fonte protocolar; preços deliberadamente ausentes — só via cotação datada/assinada pelo parceiro; regra preço-como-identificador preservada) · TODO COST-DECOMP removido das 2 superfícies (resolver=remover; A9: 8 marcadores vivos) · limitação 15 reescrita honestamente ('decomposed structurally, prices pending quotation') · paridade de tags EN=PT · gate P1: findings=10 BLOCKED=0 **AMEND=1 (só o fantasma N050 documentado)** · R2-ASSUM: 4 flags novos da tabela κ↔µM → rotulados ilustrativos → 0 · AST 8/8 · CI verde @f3e9ba7
+ESTADO: **13/26 fechadas · fila agente VAZIA** (restam 2 deferidas: P-018 identifiers + P-019 decisão-autora) · tudo o mais aguarda autora (P-007/8/9/10), lab (P-011), executor-externo (P-012/13/14) · registro 54/56/59 com piso ratcheted
+PRÓXIMO: (autora) BIORXIV · TESE-FICHA · OK-anexos→merge otimizacao (PR#5 pronto p/ criar) · kit RML · decisão fixfig1 | (lab) GATEF dormant | registro contínuo via A9/CI
+ÂNCORA: main@f3e9ba7 · tese 3 partes + S1 suplementar · predições v1.0 intocadas
