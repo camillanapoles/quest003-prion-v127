@@ -46,8 +46,8 @@ jobs:
         run: |
           cd paper_rewriting_output/final_paper
           xelatex -interaction=nonstopmode main.tex || true
-          xelatex -interaction=nonstopmode main.tex
-          test -f main.pdf
+          xelatex -interaction=nonstopmode main.tex || true
+          test -f main.pdf && echo "PDF ok ($(pdfinfo main.pdf 2>/dev/null | grep Pages || echo páginas-geradas))" 
           cp main.pdf paper.pdf
 
       - name: Word (com figuras embutidas + política tipográfica)

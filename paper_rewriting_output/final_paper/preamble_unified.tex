@@ -20,3 +20,12 @@
 \fancyhead[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
 \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+% Glifos ausentes em TeX Gyre Termes (κ↔Kt etc.) — declarados explicitamente:
+\usepackage{newunicodechar}
+\newunicodechar{↔}{\ensuremath{\leftrightarrow}}
+\newunicodechar{∂}{\ensuremath{\partial}}
+\newunicodechar{∇}{\ensuremath{\nabla}}
+\newunicodechar{✅}{\ensuremath{\checkmark}}
+\newunicodechar{⚠}{\textbf{!}}
+\newunicodechar{️}{} % variation selector (U+FE0F) — engolido
+\setlength{\headheight}{15pt}
