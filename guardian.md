@@ -485,3 +485,9 @@ FEITO: **P-023** species_params.json (grupos A-D, banda+fonte; predição hamste
 ESTADO: AST 8/8 · gates 0-BLOCKED · registro 54 claims/39 fontes/59 N-fatos · ledger 26 itens (7 fechadas) · CI verde contínuo (1 episódio vermelho por drift meu — corrigido e documentado; hook provou-se contra o operador)
 PRÓXIMO: **P-026** — síntese PARTE 3 (Cenário B + regra de dose + horizon-dependence) → gates finais → PR gap-mapper→main (merge com PLAN_PARTE3/P023-25 docs) → /RECAP de fechamento da Parte 3
 ÂNCORA: main@9b669be+ · run 33470363167 · JSONs p024\_{mouse,human,hamster,vole} · θ\*/*=0,333 v1.0 intocada (comparada sob defs declaradas)
+
+/RECAP 2026-09-01 ~06:40 — **PARTE 3 FINDA: PR#3 MERGED (661e77e) — tese em TRÊS partes completas**
+FEITO: THETA_STAR_EXPLAINED.md (θ\* documentado p/ banca: intuição → definição → 5 funções → o que NÃO é → linhagem v1.0→F-44) · PARTE3_SINTESE.md (veredicto formal Cenário B + integração programática + invariantes) · gates finais AST 8/8 · **PR #3 gap-mapper→main criado→CI ast ✓✓→MERGED** (autorização da autora: guardar→validar→merge) · ledger: **P-002/P-022/P-026 FECHADAS** (10 fechadas; 3 agente-planejadas restantes: P-015 COST-DECOMP · P-018 batch6 · P-019 fixfig1 — todas com DEFER)
+ESTADO: registro 54 claims · 39 fontes (E039) · 59 N-fatos · canon 44 achados (F-43/F-44) · CI verde contínuo · branches ativas remanescentes: executor (merge condicionado a verificação claim-a-claim P-003) e otimizacao (condicionado a OK da autora P-009) · predições v1.0 intocadas
+PRÓXIMO: (autora) P-007 BIORXIV · P-008 TESE-FICHA · P-009 OK-anexos→merge otimizacao · P-010 kit RML | (agente, se GO) P-003 verificação claim-a-claim dos 88 candidatos→merge executor · P-015/18/19 deferidas | G0-wet permanece o gate biológico
+ÂNCORA: main@661e77e (merge PR#3) · releases v1.0/v3.0/v6.0 · arco completo: auditoria→scout→cloud-matrix→harvest determinístico→síntese→merge — a etrização da PARTE 3 documentada ponta-a-ponta
