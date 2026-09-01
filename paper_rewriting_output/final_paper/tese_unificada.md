@@ -24,7 +24,7 @@
 
 ## RESUMO
 
-**Introdução.** Doenças priônicas são 100% fatais e seis candidatos clínicos fracassaram sem modelo quantitativo de entrega. A Parte 1 construiu, por auditoria sistemática, física de transporte, calibração bayesiana e simulação humanizada, uma plataforma de contenção terapêutica (PrP-V127) com limiar adimensional θ\*=0,333 — executada, aprovada e reproduzida em dois ambientes computacionais. **Objetivo.** Esta tese unificada formaliza e realiza a continuidade: (i) nomeia e formaliza o método que a sustenta — a etrização computacional, passos P0–P6; (ii) estabelece a Base de Validade com linhagem completa de cada dado; (iii) declara a tese em forma experimental análoga; (iv) entrega os resultados como os achados [SIM] executados — agora incluindo a validação multi-espécie de θ\* (Parte 3) e a primeira dose calculada do braço discriminador A6 com incerteza propagada; e (v) documenta, como método replicável, a seleção futura de parceiros sem executá-la. **Método.** Etrização P0–P6 sobre base E-registrada (58 fontes verificadas), motores determinísticos auto-testados (conservação de massa 100%; erro de Thiele 0,5%), colheita sob critérios pré-declarados, prognósticos travados por release antes de qualquer medição, estimador θ_obs calibrado por simulação, guardião recursivo R0–R3 em dois perfis de superfície, cadeia dimensional de dose κ→µM→µg/depósito em banda GUM Tipo-B com critérios de aceitação pré-registrados. **Resultados.** Limiar θ\*=0,333 [claim:C038] [evidence:E032]; três regras de design; Cenário B multi-espécie (θ\* 0,333–0,400 centrais; razão 1,20) com regra de titulação κ↔Kt [claim:C055, C057] [evidence:E032]; banda de dose A6 no degrau humano: 0,0–2,6 µg de V127ΔGPI por depósito (pior caso κ=8: 0,2–10,3 µg; redose ≤7 d; MW 22,83 kDa das sequências próprias) — a largura da banda ≈53× é o achado, dominada pelo proxy de Kd, até o braço G0-A6 fechá-la [claim:C058–C060] [evidence:E057, E058]; registro de 60 claims, 58 fontes, 65 fatos numéricos com validação por máquina. **Conclusão.** A tese está realizada — **e é uma etrização**: entregue, rotulada, auditável — nos termos da etrização: continuar pesquisa por simulação parametrizada sem substituir o laboratório — se dados reais futuros forem análogos aos simulados, os passos seguintes já estarão avançados (antecipação bancada).
+**Introdução.** Doenças priônicas são 100% fatais e seis candidatos clínicos fracassaram sem modelo quantitativo de entrega. A Parte 1 construiu, por auditoria sistemática, física de transporte, calibração bayesiana e simulação humanizada, uma plataforma de contenção terapêutica (PrP-V127) com limiar adimensional θ\*=0,333 — executada, aprovada e reproduzida em dois ambientes computacionais. **Objetivo.** Esta tese unificada formaliza e realiza a continuidade: (i) nomeia e formaliza o método que a sustenta — a etrização computacional, passos P0–P6; (ii) estabelece a Base de Validade com linhagem completa de cada dado; (iii) declara a tese em forma experimental análoga; (iv) entrega os resultados como os achados [SIM] executados — agora incluindo a validação multi-espécie de θ\* (Parte 3) e a primeira dose calculada do braço discriminador A6 com incerteza propagada; e (v) documenta, como método replicável, a seleção futura de parceiros sem executá-la. **Método.** Etrização P0–P6 sobre base E-registrada (58 fontes verificadas), motores determinísticos auto-testados (conservação de massa 100%; erro de Thiele 0,5%), colheita sob critérios pré-declarados, prognósticos travados por release antes de qualquer medição, estimador θ_obs calibrado por simulação, guardião recursivo R0–R3 em dois perfis de superfície, cadeia dimensional de dose κ→µM→µg/depósito em banda GUM Tipo-B (âncora ilustrativa, fechada pelo braço A6) com critérios de aceitação pré-registrados. **Resultados.** Limiar θ\*=0,333 [claim:C038] [evidence:E032]; três regras de design; Cenário B multi-espécie (θ\* 0,333–0,400 centrais; razão 1,20) com regra de titulação κ↔Kt [claim:C055, C057] [evidence:E032]; banda de dose A6 no degrau humano: 0,0–2,6 µg de V127ΔGPI por depósito (pior caso κ=8: 0,2–10,3 µg; redose ≤7 d; MW 22,83 kDa das sequências próprias) — a largura da banda ≈53× é o achado, dominada pelo proxy de Kd, até o braço G0-A6 fechá-la [claim:C058–C060] [evidence:E057, E058]; registro de 60 claims, 58 fontes, 65 fatos numéricos com validação por máquina. **Conclusão.** A tese está realizada — **e é uma etrização**: entregue, rotulada, auditável — nos termos da etrização: continuar pesquisa por simulação parametrizada sem substituir o laboratório — se dados reais futuros forem análogos aos simulados, os passos seguintes já estarão avançados (antecipação bancada).
 
 **Palavras-chave:** etrização; príons; simulação computacional; etrização computacional; PrP-V127; doença de Creutzfeldt-Jakob; metodologia de pesquisa; in-silico; dose-band.
 
@@ -50,7 +50,7 @@ REFERÊNCIAS (58 fontes do registro) · APÊNDICES A–F (inventário · mapa da
 
 ## LISTA DE SIGLAS
 
-ETRIZAÇÃO/etrização computacional — o método nomeado desta tese (neologismo composicional; en: Computational Etrization) · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · **θ\*** — θ no limiar de contenção (predição travada v1.0: 0,333) · **θ_obs** — estimador que mede o análogo de θ\* num gradiente · **κ** — força de capping (a "dose" do agente; âncora κ↔µM em banda GUM via Kd aparente — fechada pelo braço A6) · **κ_req** — κ requerido para contenção numa banda-Kt dada (regra de titulação) · **Kt** — classe de taxas de autocatálise/templating (a única que governa contenção e relógio — F-43) · **banda-Kt** — faixa de cinética do hospedeiro (humano: {0,5·1·2}) · **MW** — massa molecular (PrP maduro humano: 22,83 kDa, computada das sequências próprias) · **Damköhler** — razão velocidade-de-reação/velocidade-de-difusão · **PrP^C / PrP^Sc** — proteína prion celular / forma scrapie · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade · ADR — advecção–difusão–reação · ECS — espaço extracelular · RT-QuIC — ensaio de sementeamento in vitro · DN — dominante-negativo · GUM — Guia para a Expressão da Incerteza de Medição (Tipo-B: incerteza avaliada por julgamento/fonte, não por estatística de repetições)
+ETRIZAÇÃO/etrização computacional — o método nomeado desta tese (neologismo composicional; en: Computational Etrization) · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · **θ\*** — θ no limiar de contenção (predição travada v1.0: 0,333) · **θ_obs** — estimador que mede o análogo de θ\* num gradiente · **κ** — força de capping (a "dose" do agente; âncora κ↔µM em banda GUM via Kd aparente — âncora ilustrativa, fechada pelo braço A6) · **κ_req** — κ requerido para contenção numa banda-Kt dada (regra de titulação) · **Kt** — classe de taxas de autocatálise/templating (a única que governa contenção e relógio — F-43) · **banda-Kt** — faixa de cinética do hospedeiro (humano: {0,5·1·2}) · **MW** — massa molecular (PrP maduro humano: 22,83 kDa, computada das sequências próprias) · **Damköhler** — razão velocidade-de-reação/velocidade-de-difusão · **PrP^C / PrP^Sc** — proteína prion celular / forma scrapie · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade · ADR — advecção–difusão–reação · ECS — espaço extracelular · RT-QuIC — ensaio de sementeamento in vitro · DN — dominante-negativo · GUM — Guia para a Expressão da Incerteza de Medição (Tipo-B: incerteza avaliada por julgamento/fonte, não por estatística de repetições)
 
 ---
 
@@ -144,13 +144,13 @@ O solver de transporte (advecção–difusão–reação em meio poroso heterog�
 
 A contenção exige θ = (1+κ·c_pico)⁻¹ ≤ **θ\*=0,333** (predição travada no release v1.0 de 26/08; comparada, nunca retreinada) [claim:C038] [evidence:E032]. A validação multi-espécie (Cap. 3) legitimou a dose κ=2 do desenho original **dentro da banda humana herdada** (κ_min=2,0 em Kt=2) e a estendeu além dela pela regra de titulação κ_req↔Kt [claim:C057] [evidence:E032] — com a ressalva de horizonte sempre citada (§3.4) [claim:C056] [evidence:E032].
 
-Restava o elo que a Parte 1 declarara ilustrativo: **quanto vale κ em massa?** Este capítulo o fecha como **banda** — com critérios de aceitação pré-registrados antes de qualquer computação (protocolo garantista: toda célula da cadeia com unidade+fonte; banda sempre ≥2 extremos; a largura da banda dominada pelo elo κ↔µM é resultado válido e esperado; saída de planejamento, jamais prescrição).
+Restava o elo que a Parte 1 declarara ilustrativo: **quanto vale κ em massa?** Este capítulo o fecha como **banda** — com critérios de aceitação pré-registrados antes de qualquer computação (protocolo garantista: toda célula da cadeia com unidade+fonte; banda sempre ≥2 extremos; a largura da banda dominada pelo elo κ↔µM (assumido ilustrativo) é resultado válido e esperado; saída de planejamento, jamais prescrição).
 
 ## 4.3 A primeira dose calculada: banda de dose do braço A6 [SIM-planejamento]
 
-**Cadeia dimensional (todas as células com unidade+fonte; JSON canônico `experiments/m31/m31_u1u2.json`):** κ_req (regra de titulação, C057) → concentração no pico do depósito c = κ_req × Kd (banda Kd aparente **0,071–1,0 µM**: piso = 71 nM medido por SPR para oligômeros de Aβ42 ligando PrP humano [evidence:E057] — proxy declarado, pois V127↔PrP^Sc não tem Kd medido; teto = âncora ilustrativa 1 µM da Parte 1 §2.2) → quantidade por depósito n = c × V_halo (V = cilindro r×h com r₁₀%=4–6 mm [evidence:E030], fração ECS 0,15–0,25 [evidence:E010], casca 2 mm declarada Tipo-B) → massa = n × MW (**22,83 kDa**, computada das nossas próprias sequências P04156 — resíduos 23–231, forma madura; V127 é variante de mesma massa, Δ=+14 Da) [evidence:E058].
+**Cadeia dimensional (todas as células com unidade+fonte; JSON canônico `experiments/m31/m31_u1u2.json`):** κ_req (regra de titulação) → concentração no pico do depósito c = κ_req × Kd → quantidade por depósito n = c × V_halo → massa = n × MW. A banda do Kd aparente é **0,071–1,0 µM** *(illustrative assumption; closed by arm A6)*: o piso, 71 nM, é o Kd medido por SPR para oligômeros de Aβ42 ligando PrP humano — **proxy declarado**, pois o par V127↔PrP^Sc não tem Kd medido; o teto, 1 µM, é a âncora ilustrativa da Parte 1 §2.2 *(não é estimativa de secreção medida)*. O volume do halo é um cilindro r×h com r₁₀%=4–6 mm e fração ECS 0,15–0,25 (casca de 2 mm declarada Tipo-B). A massa molecular é **22,83 kDa**, computada das nossas próprias sequências P04156 (resíduos 23–231, forma madura; V127 é variante de mesma massa, Δ=+14 Da). Fontes da cadeia: Kd-piso [evidence:E057] · V-halo [evidence:E030] · ECS [evidence:E010] · MW [evidence:E058] · titulação [evidence:E032].
 
-**Escada de dose por banda-Kt do hospedeiro:**
+**Escada de dose por banda-Kt do hospedeiro** (banda sob âncora ilustrativa; fechada pelo braço A6):**
 
 | Banda-Kt | κ_req | c no pico (µM) | µg V127ΔGPI/depósito | Redose |
 |---|---|---|---|---|
@@ -161,13 +161,13 @@ Restava o elo que a Parte 1 declarara ilustrativo: **quanto vale κ em massa?** 
 
 No degrau humano, a dose de A6 é **0,0–2,6 µg de V127ΔGPI por depósito** (redose ≤7 d; regra 3) [claim:C058] [evidence:E057, E058, E032, E010, E030, E019]; a escada sobe monotonicamente com κ_req até o pior caso declarado κ=8 (que cobre Kt=4): 0,2–10,3 µg/depósito [claim:C059] [evidence:E058, E032].
 
-**A largura da banda é o achado.** A razão pior/otimista é ≈**53× em todos os degraus** — constante porque κ_req cancela na razão: ela decompõe-se em **14× do proxy de Kd** (71 nM → 1 µM) × **3,7× do volume do halo** (4–6 mm; ECS 0,15–0,25) [claim:C060] [evidence:E057, E058, E010, E030]. Isto não é defeito do cálculo: é a **quantificação honesta do que o ensaio G0-A6 fecha** — o braço de proteína recombinante a dose conhecida converte a âncora κ↔µM de ilustrativa em medida, colapsando a banda em ponto. Até lá, a dose existe como banda, e a banda é planejamento [SIM]: prognóstico calculado, **não prescrição**.
+**A largura da banda é o achado.** A razão pior/otimista é ≈**53× em todos os degraus** — constante porque κ_req cancela na razão: ela decompõe-se em **14× do proxy de Kd** (71 nM → 1 µM; assumido ilustrativo) × **3,7× do volume do halo** (4–6 mm; ECS 0,15–0,25) [claim:C060] [evidence:E057, E058, E010, E030]. Isto não é defeito do cálculo: é a **quantificação honesta do que o ensaio G0-A6 fecha** — o braço de proteína recombinante a dose conhecida converte a âncora κ↔µM de ilustrativa em medida, colapsando a banda em ponto. Até lá, a dose existe como banda, e a banda é planejamento [SIM]: prognóstico calculado, **não prescrição**.
 
 ![Figura 5 — Escada de dose A6: banda GUM µg/depósito por banda-Kt](../../paper/latex/figs/fig5_dose_ladder.png)
 
 *Figura 5 (auditável: `experiments/m31/make_fig5_doseladder.py` lê somente `m31_u1u2.json`; regenerável no CI). Barras = banda [otimista, pior-caso]; hachura = pior caso declarado κ=8 (C057); faixa azul = banda humana Kt {0,5–2}; largura ≈53× constante (κ cancela) — a largura É o achado até G0-A6. Tier [SIM]-planejamento no título da figura.*
 
-**Por que A6 é o vetor-primário da dose:** por vetor, a unidade de dose difere (A5 = células+secretor; A7 = µg de mRNA); apenas A6 (proteína recombinante) tem **dose conhecível de saída** — é o braço discriminador que fecha κ↔µM e testa a forma funcional do capping (primeira potência vs quadrática, travada na colheita [SIM] da Parte 1) [claim:C051] [evidence:E032, E033]. A5 e A7 herdam a cadeia como derivadas.
+**Por que A6 é o vetor-primário da dose:** por vetor, a unidade de dose difere (A5 = células+secretor; A7 = µg de mRNA); apenas A6 (proteína recombinante) tem **dose conhecível de saída**. É o braço discriminador: fecha o elo κ↔µM *(illustrative assumption; closed by arm A6)* e testa a forma funcional do capping (primeira potência vs quadrática, travada na colheita [SIM] da Parte 1) [claim:C051] [evidence:E032, E033]. A5 e A7 herdam a cadeia como derivadas.
 
 ## 4.4 O ensaio que fecha a banda: G0-wet especificado
 
@@ -183,7 +183,7 @@ A tabela suplementar S1 (custo por braço, cotações de mercado arquivadas) est
 
 ## 5.1 O método nomeado: etrização computacional, passos P0–P6
 
-A **parametrização** (operação técnica do P1) é o núcleo operacional; a **tese etrizada** é o produto [claim:C054] [evidence:E009, E010, E007, E031, E032, E033]. Declaração de eixo retórico (obrigatória): tudo aqui **é simulação, e é dito que é**; não se promete aplicar nem validar — antes: **se dados reais exibirem resultados análogos aos simulados, os passos seguintes já terão sido dados** (antecipação bancada, não pendente).
+**Inovação metodológica declarada:** avaliação computacional como método antecipatório — previsibilidade e antecipação de informação para decisão de pesquisa (o que medir, onde, em que dose, antes de gastar recurso). A **parametrização** (operação técnica do P1) é o núcleo operacional; a **tese etrizada** é o produto [claim:C054] [evidence:E009, E010, E007, E031, E032, E033]. Declaração de eixo retórico (obrigatória): tudo aqui **é simulação, e é dito que é**; não se promete aplicar nem validar — antes: **se dados reais exibirem resultados análogos aos simulados, os passos seguintes já terão sido dados** (antecipação bancada, não pendente).
 
 | Passo | Nome | Entrada | Procedimento | Saída | Garantia |
 |---|---|---|---|---|---|
@@ -287,7 +287,7 @@ com α=0,20 e λ=1,8 medidos in-vivo [claim:C014] [evidence:E010]; D_eff=D₀/λ
 
 **Classe de transferência (o dado é de outra espécie/sistema):**
 1. Cinética murina → humano: fechada em estrutura pelo Cenário B + relógio humanizado; fechada em medida pelo G0-wet [ORGANOID].
-2. Âncora κ↔µM é proxy (Kd de Aβ42-oligômero↔PrP [E057], não V127↔PrP^Sc): **a banda de dose inteira (largura ≈53×) quantifica este limite** [claim:C060] — fechada pelo braço A6 (dose conhecida).
+2. Âncora κ↔µM é proxy *(illustrative assumption; closed by arm A6)*: o Kd usado é do par Aβ42-oligômero↔PrP, não do par V127↔PrP^Sc [evidence:E057]. **A banda de dose inteira (largura ≈53×) quantifica este limite** [claim:C060] — fechada pelo braço A6 (dose conhecida).
 3. Sem dado [ORGANOID]+ medido: G0-wet especificado (F1–F10; GATE-F).
 
 **Classe de horizonte (o número depende da janela de observação):**
@@ -314,7 +314,7 @@ com α=0,20 e λ=1,8 medidos in-vivo [claim:C014] [evidence:E010]; D_eff=D₀/λ
 
 **OE1 (nomear e formalizar a etrização) — alcançado.** P0–P6 com garantias por passo; nota à banca (Cap. 1) diferencia o termo de IST e meta-análise [claim:C054].
 
-**OE2 (Base de Validade) — alcançado.** Tríade + linhagem completa (agora 7 linhas, incluindo a âncora κ↔µM em banda) [claim:C046].
+**OE2 (Base de Validade) — alcançado.** Tríade + linhagem completa — agora 7 linhas, incluindo a linha da âncora de conversão κ-concentração *(illustrative assumption; closed by arm A6)* em banda [claim:C046].
 
 **OE3 (resultados como achados [SIM]) — alcançado.** Limiar; regras 1–3; sensibilidade discriminadora; probabilístico; estimador na fronteira; tabela-decisão; validação multi-espécie; **e a primeira dose calculada com incerteza propagada** — a banda A6 (0,0–2,6 µg/depósito no degrau humano; largura ≈53× = o que G0-A6 fecha) converte a regra de dose da Parte 3 em prognóstico de massa [claim:C038, C051, C052, C055–C057, C058–C060].
 
@@ -329,6 +329,8 @@ com α=0,20 e λ=1,8 medidos in-vivo [claim:C014] [evidence:E010]; D_eff=D₀/λ
 ---
 
 # REFERÊNCIAS (58 fontes do registro)
+
+*(Entradas [30]–[33] e [58] são artefatos deste programa; menções a µM em títulos referem-se à âncora ilustrativa — fechada pelo braço A6.)*
 
 [1] ASANTE, E.A. et al. A naturally occurring variant of the human prion protein completely prevents prion disease. 2015. doi:10.1038/nature14510.
 [2] MEAD, S. et al. A novel protective prion protein variant that colocalizes with kuru exposure. 2009. doi:10.1056/NEJMoa0809716.
@@ -386,7 +388,7 @@ com α=0,20 e λ=1,8 medidos in-vivo [claim:C014] [evidence:E010]; D_eff=D₀/λ
 [54] KAKOTI, B.B. et al. Therapeutic drug repositioning with special emphasis on neurodegenerative diseases. 2022. doi:10.3389/fphar.2022.1007315.
 [55] Target Trial Emulation for Drug Repurposing in Neurodegenerative Disease. doi:10.1212/WN9.0000000000000112.
 [56] RAMASUBBU, M.K. et al. Applying quantitative and systems pharmacology to drug development. 2024. doi:10.4103/ijp.ijp_644_23.
-[57] CHEN, S.; YADAV, S.P.; SUREWICZ, W.K. Interaction between human prion protein and amyloid-beta (Aβ) oligomers: role of N-terminal residues. Journal of Biological Chemistry, 2010. doi:10.1074/jbc.M110.145516. PMID 20576610. *(Kd aparente 71 nM por SPR — proxy declarado da âncora κ↔µM; texto integral conferido.)*
+[57] CHEN, S.; YADAV, S.P.; SUREWICZ, W.K. Interaction between human prion protein and amyloid-beta (Aβ) oligomers: role of N-terminal residues. Journal of Biological Chemistry, 2010. doi:10.1074/jbc.M110.145516. PMID 20576610. *(Kd aparente 71 nM por SPR — proxy declarado da âncora ilustrativa κ↔µM; texto integral conferido.)*
 [58] OPEN PRION & MOLECULAR ENGINEERING, CONSORTIUM. M3.1: dose-chain κ_req→µM→µg/deposit with GUM Type-B band + PrP MW from own sequences (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127. *(JSON: `experiments/m31/m31_u1u2.json`.)*
 
 ### Fontes complementares (verificação completa pendente — snippet-level)
@@ -404,7 +406,7 @@ com α=0,20 e λ=1,8 medidos in-vivo [claim:C014] [evidence:E010]; D_eff=D₀/λ
 - **E — Custo-cotação S1** (por braço; cotações arquivadas).
 - **F — Linhagem da Base de Validade** (a tabela §5.3 com hashes e paths).
 
-*Os apêndices A–F existem no registro; a edição unificada os incorpora por referência ao repositório (auditável em disco) para não duplicar artefatos gated.*
+*Os apêndices A–F existem no registro; a edição unificada os incorpora por referência ao repositório (auditável em disco) para não duplicar artefatos gated. O índice-mestre de achados→evidência→impacto→falsificador é o `KNOWLEDGE_CANON.md` (F-01..F-44): nenhum achado desta tese publica sem linha no canon — a concordância é auditável em `paper/evidence_workspace/`.*
 
 ---
 
