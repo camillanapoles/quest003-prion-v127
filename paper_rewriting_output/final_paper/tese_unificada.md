@@ -265,19 +265,37 @@ com α=0,20 e λ=1,8 medidos in-vivo [claim:C014] [evidence:E010]; D_eff=D₀/λ
 
 ---
 
-# CAPÍTULO 7 — CAMADA CLÍNICA
+# CAPÍTULO 7 — CAMADA CLÍNICA — pré-abordagem dos temas antes da penetração técnica
 
-> ⚠️ **PROGNÓSTICO [SIM] — NÃO É CONSELHO MÉDICO.** Documentação de desenho de pesquisa sob simulação parametrizada; nenhum uso humano sem os gates [ORGANOID]→[MOUSE]→regulatório; nada aqui orienta conduta, dose ou seleção de paciente.
+> ⚠️ **PROGNÓSTICO [SIM] — NÃO É CONSELHO MÉDICO.** Documentação de desenho de pesquisa sob simulação parametrizada; nenhum uso humano sem os gates [ORGANOID]→[MOUSE]→regulatório; nada aqui orienta conduta, dose ou seleção de paciente. Verificação: autora responsável + guardião de máquina (gates 0-BLOCKED).
 
 **Por que abrir estas páginas: doenças priônicas são 100% fatais e não têm hoje nenhuma terapia modificadora aprovada — e este trabalho traz o primeiro cálculo quantitativo de dose-e-entrega de um candidato, com predições travadas antes de qualquer medição.**
 
-**O que esta tese é, em cinco perguntas que qualquer médico faria:** (1) **Que doença?** DCJ esporádica/genética: rapidamente progressivas, 100% fatais, seis candidatos já faliram. (2) **Que ideia?** A variante PrP-G127V — selecionada pela evolução (kuru) — como agente dominante-negativo: compete com o príon e trava a replicação sem silenciar o PrP nativo. (3) **Que evidência?** Nenhuma medição nova em pacientes: simulação parametrizada com dados reais publicados (etrização); predições travadas ANTES de qualquer medição. (4) **Que resultado prático?** Três regras quantitativas (anel 8–12 mm; redose ≤7 d; limiar θ\*≈⅓) + a sondagem multi-espécie (limiar aproximadamente conservado; dose titulada à velocidade da doença) + **a primeira dose calculada do braço A6: banda de 0,0–2,6 µg de proteína por depósito no degrau humano (pior caso 0,2–10,3), com a largura da banda explicitando o que o ensaio organoide fecha**. (5) **Que promessa NÃO faz?** Não promete cura, aplicação humana, nem substitui laboratório.
+**O que esta tese é, em cinco perguntas que qualquer médico faria:**
 
-**Como ler os símbolos sem perder o fio:** θ\* = "quanto da conversão sobrevive à dose no pior dia do anel" (⅓ ≈ contém); κ = a dose; Kt = a velocidade inerente da doença. Cada capítulo técnico abre com "Em linguagem clínica".
+1. **Que doença?** Doenças priônicas (DCJ esporádica/genética): rapidamente progressivas, 100% fatais, sem terapia modificadora aprovada — seis candidatos já faliram em clínica.
+2. **Que ideia?** Usar a variante PrP-G127V — selecionada pela evolução (kuru) por proteger portadores — como agente **dominante-negativo**: uma proteína que compete com o príon e trava sua replicação sem silenciar o PrP nativo (ao contrário dos ASOs em ensaio clínico).
+3. **Que evidência?** Nenhuma medição nova em pacientes: a tese opera por **simulação parametrizada com dados reais publicados** ("etrização") — cada número vem de fonte rastreável; predições ficam travadas ANTES de qualquer medição futura (anti-hindsight).
+4. **Que resultado prático?** Três regras de dosagem/posicionamento quantitativas (anel de depósitos 8–12 mm; redose ≤7 dias; limiar θ\*≈⅓) + a sondagem multi-espécie: o limiar é **aproximadamente conservado** entre espécies (Cenário B), mas a dose exigida sobe com a velocidade da doença — regra de titulação — e, agora, **a primeira dose calculada do braço A6: banda de 0,0–2,6 µg de proteína por depósito no degrau humano (pior caso 0,2–10,3), com a largura da banda explicitando exatamente o que o ensaio organoide fecha**.
+5. **Que promessa NÃO faz?** Não promete cura, aplicação humana, nem substitui laboratório: o prognóstico é entregue como conhecimento falseável; o uso humano exige o gate organoide (G0-wet) e além.
 
-**Rota de leitura de 10 minutos:** (1) esta NOTA (3 min) → (2) **Figura 4** (dose-limiar por espécie; 2 min) → (3) **Figura 5** (escada de dose com a banda; 2 min) → (4) §8 "o que significam e o que não significam" (2 min) → (5) Cap. 9 conclusões (1 min).
+**Como ler os símbolos sem perder o fio:** θ\* = *"quanto da conversão sobrevive à dose no pior dia do anel"* (⅓ ≈ contém; ⅑ ≈ quase extingue); κ = *a dose*; Kt = *a velocidade inerente da doença*. Cada capítulo técnico abre com um parágrafo **"Em linguagem clínica"** antes da formulação — quem quiser pular a matemática não perde o argumento.
 
-**Acompanhamento previsto no desenho [SIM] (documentação de desenho — NÃO conduta clínica):** θ_obs em readouts 90–120 d (perfis radiais WB/IHC com leitura cega; critério θ_obs<0,33 pré-registrado); manutenção da cobertura secretora com redose ≤7 d (gradiente proximal/distal; trough ≥30–56% [SIM]); triagem pré-sintomática na população-âncora E200K (RT-QuIC + NfL; precedentes tofersen/nusinersen). Serviços de neurologia interessados em auditar ou viabilizar o próximo gate encontram o pacote em `paper/G0_UNLOCK_DOSSIER.md` + `paper/lab_outreach_package.md`.
+### Resumo em 1 página — rota de leitura de 10 minutos
+
+**Rota:** (1) este capítulo (3 min) → (2) **Figura 4** — a dose-limiar por espécie (2 min) → (3) **Figura 5** — a escada de dose com a banda do braço A6 (2 min) → (4) Cap. 8 "o que os resultados significam e o que não significam" (2 min) → (5) Cap. 9 conclusões por objetivo (1 min).
+
+**A mensagem inteira em três frases:** (i) a variante G127V, achada pela evolução no kuru, pode travar a replicação do príon por competição (dominante-negativo) sem silenciar a proteína nativa; (ii) a simulação parametrizada com dados publicados entrega regras quantitativas de dose-e-posicionamento (anel 8–12 mm · redose ≤7 d · limiar θ\*≈⅓ · banda A6 0,0–2,6 µg/depósito) com predições travadas ANTES de qualquer medição — o limiar aproximadamente conservado entre espécies (Cenário B), dose titulada à velocidade da doença; (iii) nada disto é aplicável a humanos antes do gate organoide (G0-wet) — a não-promessa é parte do método, não um enfeite.
+
+### Acompanhamento previsto no desenho [SIM] (documentação de desenho — NÃO conduta clínica)
+
+| O que o desenho prevê medir | Quando (previsto no desenho) | Instrumento declarado | Por quê |
+|---|---|---|---|
+| θ_obs (resposta à contenção in situ) | readouts 90–120 d (organoide) | perfis radiais WB/IHC c/ leitura cega | critério de resposta pré-registrado (θ_obs<0,33) |
+| Manutenção da cobertura secretora | redose ≤ 7 d (regra 3) | gradiente proximal/distal | trough ≥30–56% do pico [SIM] |
+| Triagem pré-sintomática (população-âncora E200K) | — | RT-QuIC + NfL | precedentes tofersen/nusinersen (endpoint biomarcador) |
+
+*Serviços de neurologia interessados em auditar ou viabilizar o próximo gate encontram o pacote completo em `paper/G0_UNLOCK_DOSSIER.md` + `paper/lab_outreach_package.md` (nenhuma promessa de retorno terapêutico).*
 
 ---
 
