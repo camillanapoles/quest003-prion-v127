@@ -5,7 +5,7 @@
 **Taxonomia de STATUS:** PLANEJADA · EM_EXECUCAO · EXECUTADA_NAO_MERGADA · FECHADA · DORMANT · BLOQUEADA_EXTERNA · AGUARDANDO_AUTORA · AGUARDANDO_LAB · AGUARDANDO_EXECUTOR
 **DONO:** AGENTE · AUTORA · LAB · EXECUTOR (sessão executora externa à de ledger)
 
-<!-- LEDGER-RESUMO total=26 abertas=20 planejadas_agente=6 fechadas=5 dormant=1 -->
+<!-- LEDGER-RESUMO total=26 abertas=20 planejadas_agente=7 fechadas=5 dormant=1 -->
 
 | ID | TODOID | PENDÊNCIA | DONO | STATUS | EVIDÊNCIA/ARTEFATO | ORIGEM |
 |---|---|---|---|---|---|---|
