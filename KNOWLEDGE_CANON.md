@@ -55,6 +55,7 @@
 | F-29 | Cistos κ×50 canalizam fluxo (limitação honesta) | C-sec6·E030 | ⊕lim | D | poroelastografia de paciente | — |
 | F-30 | **G0-sim EXECUTADO e PASSADO (T1/T2/T3)** — gate computacional vigente | C044,C046·E032 | ⊕ | M,R | — | sweeps + θ_obs estimator |
 | F-39 | Colheita de sensibilidade [SIM] executada: exp=2 reproduz v4 exato; C50 10x insensivel; exp=1: k=2 NAO contem (contencao->k=4) = prediciao discriminadora p/ A6; same-mass: subtipo=e seed-mass (hierarquia por construcao) | C051-E032,E033 | + | D,P,M | dose-resposta A6 falsifica forma | congelar no checklist A6 |
+| F-43 | **S3 composição de taxas [SIM] (P-001, cloud GHA): GAP-1 MATERIAL (C2)** — paridade-gerações: Kt×2 e uniforme×2 ROMPEM contenção κ=2 (escape ≥2,83mm = saturação do domínio, limite inferior); Kr/Kc ±50% insensíveis (±1-3%); paridade-calendário (t=5) tudo contém (0,79-0,88mm) ⇒ contenção depende da razão reação/difusão (Damköhler), não só de θ*; hierarquia seed-mass preservada no extremo (C3) | C051·E032 + N049-N054 | + | D,P,M | θ* por espécie real (P-002 prioridade-1): hamster (taxas rápidas) precisa de regra de dose | PARTE 3 Fases 1-4 |
 
 ## ZOOM 4 — PROGRAMA/TRADUÇÃO
 

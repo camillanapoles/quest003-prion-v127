@@ -38,6 +38,7 @@ jobs:
         run: |
           cp out/ws_9_v5_sweeps_S3.json experiments/ws_9_results/ws_9_v5_sweeps_S3.json
           cp out/s3_partial.json experiments/ws_9_results/s3_partial_seed.json
+          git fetch --depth=3 origin main && git rebase origin/main || true
           git config user.name "ci-garantista"
           git config user.email "camillanapoles@users.noreply.github.com"
           git add experiments/ws_9_results/ws_9_v5_sweeps_S3.json experiments/ws_9_results/s3_partial_seed.json

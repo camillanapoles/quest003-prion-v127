@@ -455,3 +455,21 @@ FEITO: leitura INTEGRAL do worktree gap-mapper (branch próprio @e7a2976: GAP_MA
 ESTADO: main avança com PARTE 3 documentada antes de executada (anti-hindsight) · CI: gates por branch ativos · P-001 (S3 sweep) segue primeiro da fila
 PRÓXIMO: (agente) P-001 S3 → Fase 0 sync gap-mapper←main → P-023..26 | (autora) P-007/8/9/10 idem | retorno: runs CI + artifacts ast-report
 ÂNCORA: este commit + branch gap-mapper @e7a2976 (fonte) · PLAN_PARTE3 é o contrato de execução · predições v1.0 intocadas
+
+/RECAP-ADD 2026-08-31 (noite) — CHECKPOINT DE RETORNO CLOUD (sessão interrompível de propósito)
+CONTEXTO: **P-001 S3 rodando NO CLOUD** (GHA run 33459375823 · workflow `s3-sweep.yml` · seed 9/11 p1 commitado · driver resumível via artifact `s3-checkpoint`). Fase 0 OK (gap-mapper@edd2361 sincronizado; hooks por branch ATIVOS). Harvester pronto (`experiments/s3_harvest.py`). Dados p1 até agora: BASE 0.819 · N±50% 0.791/0.884 · C_Kt 0.801/0.859 · C_Kr 0.819/0.819 · C_Kc_x0.5 0.809 — TUDO na banda 0.79-0.88mm (sinal forte de C1-insensível, aguardando p2 clock-matched p/ veredito).
+ATIVIDADE AO RETORNAR (ordem exata):
+1. run concluída? → pull main → `experiments/ws_9_results/ws_9_v5_sweeps_S3.json` (bot-commit). [timeout/falha → re-dispatch s3-sweep (retoma do artifact); API edge-404 → usar `/actions/runs?per_page`]
+2. `python3 experiments/s3_harvest.py` → veredito C0-C3 + N049-N054 no consistency_manifest
+3. canon F-43 (ZOOM 3, binding C051·E032) · AUDIT_NOTES §S3 (reprodução incidental S2: c20k2=0.819 no log local)
+4. ledger: P-001→FECHADA (evid. JSON) · P-002 re-prioridade pelo veredito (C1→confirmação barata; C2→prioridade-1)
+5. /RECAP final + push (~/q3ci main) → AST 8/8 + CI verde
+6. PRÓXIMO DA FILA: **P-023** (extração params/espécie c/ proveniência — Fase 1 da PARTE 3)
+COMPUTE-MATRIX (decisões cloud — travadas): **GHA** = via ATUAL p/ sweeps [SIM] (billing OK p/ jobs leves; script desenhado p/ GHA) · **CF Workers** = REJEITADO p/ o motor (port V8/Pyodide quebraria contrato motor-EXATO/paridade C0 + limites CPU 30s-5min) — tokens DISPONÍVEIS `~/.cloudflare/{token,mesh-token}` p/ papéis futuros de ORQUESTRAÇÃO/agendamento (não compute) · **GPU** (Modal/RunPod) = SÓ p/ motor v6 pós-REPARAM (§4) com parity-gate PRÓPRIO — predições travadas v1.0 JAMAIS rodam em motor portado; chave GPU NÃO existe no projeto → solicitar à autora SE/QUANDO aprovado
+ÂNCORA: main@fc78e58 · run 33459375823 · seed 9/11 no repo · predições v1.0
+
+/RECAP 2026-09-01 ~02:00 — P-001 S3 EXECUTADO E FECHADO (ciclo cloud completo)
+FEITO: **P-001 CONCLUÍDO em computação híbrida local+cloud** (9/11 p1 local c/ checkpoint-resume anti-phantom-killer; 2 p1+10 p2 clock-matched+2 H no GHA run 33459375823; artifact 9783045928; finalize local instantâneo) → `experiments/ws_9_results/ws_9_v5_sweeps_S3.json` · **VEREDITO C2: GAP-1 MATERIAL** (critérios pré-registrados do SKILL_SCOUT_S3 aplicados sem renegociação): C0 paridade EXATA cross-ambiente (2.828/144.02) · paridade-gerações: Kt×2 e uniforme×2 ROMPEM κ=2 (escape saturado no domínio ≥2,83mm = limite inferior) · Kr/Kc ±50% insensíveis (±1-3%) · paridade-calendário: tudo contém (0,79-0,88mm) ⇒ **contenção depende da razão reação/difusão (Damköhler), não só de θ*** · C3 hierarquia seed-mass preservada no extremo (MV2 2.828 > MV1 1.144) · N049-N054 no consistency_manifest (54 N-fatos) · canon F-43 · AUDIT_NOTES §S3 (incl. falso-positivo documentado R0-NBIND-N050: zero ocorrências de 245.3 em 6 superfícies) · reprodução incidental S2 (c20k2=0.819) · ledger P-001→FECHADA · **P-002→PRIORIDADE-1** · workflow s3-sweep fixado (fetch+rebase antes do push) · AST 8/8 VERDE
+ESTADO: gates P1 0-BLOCKED (1 AMEND falso-positivo documentado) · P2 0/0 · registro 54/38/54 · ledger 26 itens (4 fechadas) · CI verde (AST+PDF) · checkpoint RETORNO-CLOUD superado
+PRÓXIMO: **P-023** (Fase 1 PARTE 3: extração params/espécie com proveniência — hamster primeiro: Telling 1995 + Castilla 2008; elevar Corridon 2026→E039) → P-024 runner multi-species → Cenários A/B/C
+ÂNCORA: este push + run 33459375823 + artifact 9783045928 · θ/*=0,333 v1.0 COMPARADO jamais retreinado · predições v1.0

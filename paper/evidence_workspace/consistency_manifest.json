@@ -673,6 +673,90 @@
    "evidence_ids": [
     "E032"
    ]
+  },
+  {
+   "fact_id": "N049",
+   "concept": "s3_base_k2_containment_R_mm",
+   "section": "2",
+   "value": 0.819,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N050",
+   "concept": "s3_max_dev_pct_all_arms_Rnorm_vs_base (extremo N_x2 saturado)",
+   "section": "2",
+   "value": 245.3,
+   "unit": "percent",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N051",
+   "concept": "s3_extreme_arm_R_norm_mm",
+   "section": "2",
+   "value": 2.828,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N052",
+   "concept": "s3_hierarchy_MV2mass_R_mm",
+   "section": "2",
+   "value": 2.828,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N053",
+   "concept": "s3_hierarchy_MV1mass_R_mm",
+   "section": "2",
+   "value": 1.144,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
+  },
+  {
+   "fact_id": "N054",
+   "concept": "s3_null_arms_spread_mm",
+   "section": "2",
+   "value": 2.191,
+   "unit": "mm",
+   "numerator": null,
+   "denominator": null,
+   "sample_size": null,
+   "analysis_set": "program-level",
+   "evidence_ids": [
+    "E032"
+   ]
   }
  ],
  "methods": [

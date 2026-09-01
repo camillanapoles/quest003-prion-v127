@@ -1,0 +1,105 @@
+{
+ "motor": "v5 sweeps sobre v4 humano (C0 exato + fs_exp param) \u2014 S3 via s3_driver (checkpoint)",
+ "phase": "S3",
+ "wall_total_s": 0.0,
+ "anchors": {
+  "clear_dpi": 25.5,
+  "first_denovo_dpi": 35,
+  "final_dpi": 169,
+  "titer_MV2": 213000.0,
+  "titer_MV1": 1690.0,
+  "WB_MV2_only": true
+ },
+ "baseline": {
+  "final_R_mm": 2.828,
+  "days_per_simunit": 144.02,
+  "T1_pass": true,
+  "t_double_sim": 0.08414987342668573
+ },
+ "S3_rate_composition": {
+  "BASE": {
+   "R_sim5_mm": 0.819,
+   "t_double_sim": 1.208715935396471,
+   "wall_s": 225.4,
+   "R_norm_mm": 0.819,
+   "t_lim_used": 5.0
+  },
+  "N_x0.5": {
+   "R_sim5_mm": 0.791,
+   "t_double_sim": 2.54249374235322,
+   "wall_s": 229.6,
+   "R_norm_mm": 0.637,
+   "t_lim_used": 2.5
+  },
+  "N_x2": {
+   "R_sim5_mm": 0.884,
+   "t_double_sim": 0.5948433017372776,
+   "wall_s": 226.5,
+   "R_norm_mm": 2.828,
+   "t_lim_used": 10.0
+  },
+  "C_Kt_x0.5": {
+   "R_sim5_mm": 0.801,
+   "t_double_sim": 2.4100559259191203,
+   "wall_s": 229.1,
+   "R_norm_mm": 0.647,
+   "t_lim_used": 2.508
+  },
+  "C_Kt_x2": {
+   "R_sim5_mm": 0.859,
+   "t_double_sim": 0.639337228757426,
+   "wall_s": 223.9,
+   "R_norm_mm": 2.828,
+   "t_lim_used": 9.453
+  },
+  "C_Kr_x0.5": {
+   "R_sim5_mm": 0.819,
+   "t_double_sim": 1.2324683571034383,
+   "wall_s": 222.6,
+   "R_norm_mm": 0.809,
+   "t_lim_used": 4.904
+  },
+  "C_Kr_x2": {
+   "R_sim5_mm": 0.819,
+   "t_double_sim": 1.1996256137095649,
+   "wall_s": 234.6,
+   "R_norm_mm": 0.83,
+   "t_lim_used": 5.038
+  },
+  "C_Kc_x0.5": {
+   "R_sim5_mm": 0.809,
+   "t_double_sim": 1.274801793276311,
+   "wall_s": 245.2,
+   "R_norm_mm": 0.801,
+   "t_lim_used": 4.741
+  },
+  "C_Kc_x2": {
+   "R_sim5_mm": 0.83,
+   "t_double_sim": 1.1632137913935388,
+   "wall_s": 219.7,
+   "R_norm_mm": 0.843,
+   "t_lim_used": 5.196
+  },
+  "J_KtKr_x2": {
+   "R_sim5_mm": 0.859,
+   "t_double_sim": 0.6230058309630764,
+   "wall_s": 72.1,
+   "R_norm_mm": 2.828,
+   "t_lim_used": 9.701
+  },
+  "J_KtKr_x0.5": {
+   "R_sim5_mm": 0.796,
+   "t_double_sim": 2.4361506211095603,
+   "wall_s": 72.3,
+   "R_norm_mm": 0.637,
+   "t_lim_used": 2.5
+  }
+ },
+ "S3_hierarchy": {
+  "extreme_arm": "N_x2",
+  "t_lim_used": 10.0,
+  "R_MV2mass_mm": 2.828,
+  "R_MV1mass_mm": 1.144,
+  "hierarchy_preserved": true
+ }
+}

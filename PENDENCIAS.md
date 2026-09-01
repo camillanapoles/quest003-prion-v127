@@ -5,12 +5,12 @@
 **Taxonomia de STATUS:** PLANEJADA · EM_EXECUCAO · EXECUTADA_NAO_MERGADA · FECHADA · DORMANT · BLOQUEADA_EXTERNA · AGUARDANDO_AUTORA · AGUARDANDO_LAB · AGUARDANDO_EXECUTOR
 **DONO:** AGENTE · AUTORA · LAB · EXECUTOR (sessão executora externa à de ledger)
 
-<!-- LEDGER-RESUMO total=26 abertas=22 planejadas_agente=9 fechadas=3 dormant=1 -->
+<!-- LEDGER-RESUMO total=26 abertas=21 planejadas_agente=8 fechadas=4 dormant=1 -->
 
 | ID | TODOID | PENDÊNCIA | DONO | STATUS | EVIDÊNCIA/ARTEFATO | ORIGEM |
 |---|---|---|---|---|---|---|
-| P-001 | - | Sweep de composição de taxas ±50% (fragmentação/autocatálise/nucleação) — fecha GAP-1 do gap-mapper {{DEFER:exige fase nova no harness ws_9_v5_sweeps + arquivamento JSON conforme REPARAM_LOOP; próxima sessão de execução}} | AGENTE | PLANEJADA | ../003-gap-mapper/analysis/GAP_MAPPER_REPORT.md | gap-mapper GAP-1 |
-| P-002 | - | Teste de invariância de θ* entre espécies — guarda-chuva da PARTE 3, decomposto em P-023..P-026 (plano travado) {{DEFER:sequência P-001→Fase 0 sync branch→P-023..26; ver paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md}} | AGENTE | PLANEJADA | paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md | diretriz da autora 30/08 · ACTION_PLAN branch gap-mapper |
+| P-001 | - | Sweep de composição de taxas ±50% — **EXECUTADO (cloud GHA run 33459375823; veredito C2 GAP-1 MATERIAL; F-43/N049-054)** | AGENTE | FECHADA | experiments/ws_9_results/ws_9_v5_sweeps_S3.json | gap-mapper GAP-1 · SKILL_SCOUT_S3 |
+| P-002 | - | Teste de invariância de θ* entre espécies — guarda-chuva da PARTE 3, decomposto em P-023..P-026. **PRIORIDADE-1 (S3/C2: contenção é sensível à escala de taxas — só dado multi-espécie real resolve)** {{DEFER:Fase 0 OK (gap-mapper@edd2361); sequência P-023→26; ver paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md}} | AGENTE | PLANEJADA | paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md | diretriz da autora 30/08 · F-43 |
 | P-003 | - | Verificação claim-a-claim dos 88 candidatos (batches 1–6) + 49 bindings → elevação E-registry 38→≥150 fontes + re-target AST A5/A8 | AGENTE | EM_EXECUCAO | ../003-executor/paper/evidence_workspace/candidates/verification_status_consolidado.csv | otimizacao P1.1 / OPTIMIZATION_LOG |
 | P-004 | - | /RECAPs das sessões 29–30/08 (ausentes nos runbooks — regra 10) reconstruídos e anexados | AGENTE | FECHADA | guardian.md | AUDIT_CAPTURE §D5 |
 | P-005 | - | Marcadores obsoletos removidos (resolver=remover): ETRIZACAO-APLICAR, PUBMED-DIRECT, Q3-Q5-EXEC | AGENTE | FECHADA | paper/ERITRIZACAO.md | AUDIT_CAPTURE §D6 |
