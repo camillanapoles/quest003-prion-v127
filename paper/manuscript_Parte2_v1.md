@@ -57,7 +57,19 @@ REFERÊNCIAS (56 fontes do registro, geradas do manifest) · APÊNDICE A — Inv
 
 ## LISTA DE SIGLAS
 
-ETRIZAÇÃO/etrização computacional — o método nomeado desta tese (neologismo composicional; en: Computational Etrization) · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · κ — força de capping · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · WB — western blot · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade · ADR — advecção–difusão–reação · ECS — espaço extracelular
+ETRIZAÇÃO/etrização computacional — o método nomeado desta tese (neologismo composicional; en: Computational Etrization) · θ — fração de replicação remanescente no pico secretor, θ≡(1+κ·c_pico)⁻¹ · **θ\*** — θ no limiar de contenção (a menor dose que ancora o anel; adimensional; predição travada v1.0: 0,333) · **θ_obs** — estimador que mede o análogo de θ\* num gradiente (simulado hoje; organoide amanhã) · **κ** — força de capping (a "dose" do agente; κ↔µM via Kd) · **Kt** — classe de taxas de autocatálise/templating (a única que governa contenção e relógio — F-43) · **Damköhler** — razão velocidade-de-reação/velocidade-de-difusão (acopla θ\* ao transporte) · **PrP^C / PrP^Sc** — proteína prion celular / forma scrapie (misfolded, infecciosa) · G0-sim/G0-wet — gates computacional/organoide · T1/T2/T3 — níveis de aceitação · [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] — tiers de dado · SLR — revisão sistemática de literatura · WB — western blot · PPS — pentosan-polissulfato · CrI — intervalo de credibilidade · ADR — advecção–difusão–reação · ECS — espaço extracelular · RT-QuIC — ensaio de sementeamento in vitro (diagnóstico) · DN — dominante-negativo
+
+## NOTA DE LEITURA PARA CLÍNICOS — pré-abordagem dos temas antes da penetração técnica
+
+**O que esta tese é, em cinco perguntas que qualquer médico faria:**
+
+1. **Que doença?** Doenças priônicas (DCJ esporádica/genética): rapidamente progressivas, 100% fatais, sem terapia modificadora aprovada — seis candidatos já faliram em clínica.
+2. **Que ideia?** Usar a variante PrP-G127V — selecionada pela evolução (kuru) por proteger portadores — como agente **dominante-negativo**: uma proteína que compete com o príon e trava sua replicação sem silenciar o PrP nativo (ao contrário dos ASOs em ensaio clínico).
+3. **Que evidência?** Nenhuma medição nova em pacientes: a tese opera por **simulação parametrizada com dados reais publicados** ("etrização") — cada número vem de fonte rastreável; predições ficam travadas ANTES de qualquer medição futura (anti-hindsight).
+4. **Que resultado prático?** Três regras de dosagem/posicionamento quantitativas (anel de depósitos 8–12 mm; redose ≤7 dias; limiar θ\*≈⅓) + a sondagem multi-espécie deste trabalho: o limiar é **aproximadamente conservado** entre espécies (Cenário B), mas a dose exigida sobe com a velocidade da doença — regra de titulação.
+5. **Que promessa NÃO faz?** Não promete cura, aplicação humana, nem substitui laboratório: o prognóstico é entregue como conhecimento falseável; o uso humano exige o gate organoide (G0-wet) e além.
+
+**Como ler os símbolos sem perder o fio:** θ\* = *"quanto da conversão sobrevive à dose no pior dia do anel"* (⅓ ≈ contém; ⅑ ≈ quase extingue); κ = *a dose*; Kt = *a velocidade inerente da doença*. Cada capítulo técnico abre com um parágrafo **"Em linguagem clínica"** antes da formulação — quem quiser pular a matemática não perde o argumento.
 
 # CAPÍTULO 1 — INTRODUÇÃO
 
@@ -292,6 +304,8 @@ O que a Parte 2 formaliza **é um novo método de pesquisa**: nos dias atuais, �
 
 ### 3.2 Formulação matemática com proveniência (equações herdadas ESCRITAS nesta tese)
 
+*Em linguagem clínica: as equações abaixo são o "rastreio farmacocinético" da proteína terapêutica no cérebro — para onde ela difunde, quanto dura (meia-vida ~5 dias), e quão forte compete com o príon (a fração θ). Se você entende o parágrafo anterior e a Figura 4, a matemática é opcional: ela formaliza o que já foi dito em palavras — cada equação carrega a citação de onde veio cada parâmetro.*
+
 **Transporte (ADR) em meio poroso heterogêneo** (volumes finitos 2D 192², Euler explícito):
 
 ∂(αc)/∂t = ∇·(D_eff∇c) − ∇·(vc) + S(x) − k_eff·c
@@ -378,6 +392,7 @@ Este capítulo apresenta os resultados da tese — que são os próprios achados
 - **Figura 1** — Resposta de contenção: raio assintótico R vs κ com os tiers T2/T3 anotados (`paper/latex/figs/fig2_theta_response.png`) [claim:C038] [evidence:E032].
 - **Figura 2** — Consistência emergente de subtipos MV2>MV1 (painéis frente contida + âncoras de semente 126×, entrada sem ajuste) (`paper/latex/figs/fig3_subtypes.png`) [claim:C039] [evidence:E032, E007].
 - **Figura 3 (tabela-decisão)** — derivada sem nova simulação: κ ↔ θ_obs ↔ R ↔ razão de biomassa ↔ margem vs baseline (`experiments/part2_results/part2_derived_summary.json`; §4.1) [claim:C052] [evidence:E032, E033].
+- **Figura 4** — θ\* por espécie nos pontos de banda de cinética (Kt): banda central Cenário B sombreada (0,333–0,400); extremos degradam (hamster 4× ⇒ κ=8; × = escape) — gerada dos JSONs p024\_* por script commitado (`paper/latex/figs/fig4_theta_species.png`; `experiments/xspecies/make_fig4_thetaspecies.py`) [claim:C055] [evidence:E032].
 
 
 Em vez de laboratório ou teste humano, **o que valida e compõe a tese neste estágio é o conjunto computacional executado** — completo, arquivado e reproduzido: (i) limiar de contenção θ\*=0,333 com relógio humanizado [claim:C038] [evidence:E032]; (ii) três regras de design falseáveis [claim:C033] [evidence:E030] [claim:C034] [evidence:E030, E020] [claim:C035] [evidence:E030, E019]; (iii) colheita de sensibilidade com predição discriminadora (C₅₀ 10× insensível; forma funcional falseável por dose-resposta) [claim:C051] [evidence:E032, E033]; (iv) quadro probabilístico de duas lentes com prior registry-bound [claim:C036] [evidence:E031]; (v) estimador θ_obs calibrado no regime declarado [claim:C052] [evidence:E032, E033]; (vi) reprodução independente em dois ambientes (hash + valor-a-valor); e (vii) a **tabela-decisão derivada** (κ↔θ_obs↔frente↔biomassa↔margem) extraída sem nova simulação — que mostra a margem de raio saturando cedo (70,2% já em κ=1,5) e confirma a **razão de biomassa como coordenada informativa** (48→1,25), com θ\*=0,333 como variável-de-decisão pré-registrada [claim:C052] [evidence:E032, E033]. De cada valor razoável aqui, **pesquisa derivada já pode prosseguir** — portas abertas.
@@ -416,6 +431,8 @@ Replicabilidade posterior: qualquer pesquisador re-executa as strings, re-tria, 
 O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Parte 2 tem contrato próprio de gate (mesmo registro de pendências estruturado, baterias e binding de números citados; sem herdar os padrões literais da Parte 1), e a **Base de Validade (§1-bis) é check BLOCKED permanente** neste perfil. Toda superfície de manuscrito é gated por revisão hostil recursiva (R0 drift estrutural · R1 checklist+baterias · R2 recursão de emendas · R3 interrogação epistêmica + registro {{TODO:id:desc}}); o decálogo vivo (tiers de dado · locked-stays-locked · ilustrativo≠evidência · paridade · anti-hindsight · fim-de-sessão=/RECAP) está no guardian.md com comandos copy-paste — a continuidade não depende de memória de quem continua, e sim de método documentado — índice-mestre no KNOWLEDGE_CANON.md.
 
 ### 4.7 Validação multi-espécie de θ\* (PARTE 3 — execução completa da diretriz da autora)
+
+*Em linguagem clínica: perguntamos se a "dose" que contém o príon num rato serviria num hamster, num humano, num vole — espécies cujas doenças priônicas correm em velocidades muito diferentes. A resposta (Cenário B): no meio da faixa de velocidade, a dose-limiar é praticamente a mesma (θ\* 0,333–0,400); nos extremos rápidos exige-se mais dose, de forma previsível (regra de titulação) — e o número só é comparável quando se declara por quanto tempo se observa (horizonte). Ver Figura 4.*
 
 A maior limitação declarada da transferência murino→humano (Cap. 2; limitação 9 da Parte 1) foi convertida em programa executado: o sweep de composição de taxas (S3) identificou que **apenas a classe Kt (autocatálise/templating) governa contenção e relógio** (Kr/Kc ±50% mudam o raio ≤3%); seguiram-se a parametrização por espécie em bandas com proveniência (sequências PrP verificadas na NCBI; matriz de identidade BLOSUM62; correlação cinética localizada no loop β2-α2 e no nível de expressão — não na identidade global) e a execução multi-espécie em matrix computacional com definições operacionais pré-registradas antes de qualquer execução.
 

@@ -17,11 +17,15 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deps (pandoc + xetex + fontes)
+      - name: Deps (pandoc + xetex + fontes + matplotlib)
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq pandoc texlive-latex-base texlive-latex-recommended \
             texlive-fonts-recommended texlive-xetex
+          pip install -q numpy matplotlib
+
+      - name: Figura 4 (auditável — matplotlib dos JSONs p024; Termux não compila matplotlib)
+        run: python3 experiments/xspecies/make_fig4_thetaspecies.py && test -f paper/latex/figs/fig4_theta_species.png
 
       - name: Pré-processa (sanitização mínima)
         run: python3 scripts/pandoc_safe.py paper/manuscript_Parte2_v1.md /tmp/tese_safe.md
