@@ -62,6 +62,7 @@ jobs:
           mkdir -p paper/pdf
           cp paper_rewriting_output/final_paper/paper.pdf "paper/pdf/tese_unificada_${STAMP}.pdf"
           git add paper_rewriting_output/final_paper/main.tex paper_rewriting_output/final_paper/paper.pdf \
-            paper_rewriting_output/final_paper/paper.docx "paper/pdf/tese_unificada_${STAMP}.pdf" || true
+            paper_rewriting_output/final_paper/paper.docx paper/latex/figs/fig4_theta_species.png \
+            paper/latex/figs/fig5_dose_ladder.png "paper/pdf/tese_unificada_${STAMP}.pdf" || true
           git commit -m "ci: tese unificada build ${STAMP} (figs auditáveis + main.tex + PDF + docx — braço-B)" || echo "nada"
           git push

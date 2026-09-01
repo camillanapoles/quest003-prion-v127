@@ -30,10 +30,10 @@ def common(text):
     text = re.sub(r"\{\{TODO:([^:}]+):[^}]*\}\}", r"〔a preencher pela autora: \1〕", text)
     # tags-da-casa → macro de auditoria: [claim:Cxxx] [evidence:E1, E2] → \audit{Cxxx}{E1,E2}
     def audit(m):
-        tag = "C" + m.group(1)
+        tag = m.group(1)
         ev = m.group(2) or ""
         return "\\audit{%s}{%s}" % (tag, ev)
-    text = re.sub(r"\[claim:C(\d+)\](?:\s*\[evidence:([^\]]+)\])?", audit, text)
+    text = re.sub(r"\[claim:([^\]]+)\](?:\s*\[evidence:([^\]]+)\])?", audit, text)
     text = re.sub(r"\[evidence:([^\]]+)\]", lambda m: "\\audit{E}{%s}" % m.group(1), text)
     # citações numéricas literais → \cite{eN} (regra hard: nunca colchete morto)
     text = re.sub(r"\[(\d{1,2})\]", lambda m: r"\cite{e%s}" % m.group(1), text)

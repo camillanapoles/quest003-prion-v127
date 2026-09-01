@@ -7,10 +7,6 @@
 **AUTORA:** Camilla N. *(correspondente)*
 
 > 🔖 **FICHA ACADÊMICA — A PREENCHER PELA AUTORA APÓS LEITURA** {{TODO:TESE-FICHA:programa/área/orientadora/coorientadora — preencher após leitura}}
-> **PROGRAMA DE PÓS-GRADUAÇÃO:** ══════════════════════════════
-> **ÁREA DE CONCENTRAÇÃO:** ══════════════════════════════
-> **ORIENTADORA:** ══════════════════════════════
-> **COORIENTADORA:** ══════════════════════════════
 **DOCUMENTO:** Tese unificada (companion validado da Parte 1, release v3.0; Parte 3 integrada) · 2026-09-01
 **NATUREZA:** tese baseada em simulação computacional — G0 validado por simulação; dados reais de pesquisa em ambiente simulado; forma experimental análoga (Cap. Métodos, "mapeamento análogo")
 
@@ -87,44 +83,44 @@ As três camadas semânticas do radical *etr-* são declaradas como **consonânc
 
 **Por que [SEM ANO]:** a tese lida com **prognósticos obtidos de dados simulados**. Simulação opera, por natureza, em tempo futuro — independe do ano em que se esteja: a referência a ano não tem impacto sobre a tese, pois as predições são do tipo "o que acontece se", não "quando acontece". Por isso o horizonte temporal é declarado vazio por construção, e as durações de fase que porventura apareçam são apenas estimativas de planejamento, nunca promessas.
 
-### 1.1 Problema
+### 2.1 Problema
 
 A pesquisa translacional em doenças raras fatais paralisa-se num dilema: sem dado clínico não há financiamento; sem previsão quantitativa, o dado clínico é desperdiçado. Nos príons, esse dilema produziu seis fracassos clínicos sequenciais sem modelo de entrega que os orientasse. A Parte 1 resolveu a metade quantitativa (cálculo de contenção com limiar travado); resta o problema da **continuidade**: como uma tese avança **hoje**, com método, quando a validação de laboratório é essencial mas não é pré-requisito para produzir conhecimento?
 
-### 1.2 Justificativa
+### 2.2 Justificativa
 
 Três razões. (i) **Epistêmica**: simulação parametrizada com dados reais publicados é prognóstico — opera em tempo futuro e não depende de ano; interrompê-la à espera de confirmação reduziria a produção de conhecimento (como a física teórica não esperou testar cada predição). (ii) **Ética/econômica**: cada experimento wet-lab desperdiçado em príon custa meses e recursos escassos; decidir *o que medir, onde e em que dose antes de gastar* é responsabilidade metodológica. (iii) **Metodológica**: as ferramentas (revisão sistemática auditável, código aberto, bayesiana hierárquica, pré-registro) hoje permitem rigor documental equivalente ao experimental — faltava formalizá-lo como método com nome e passos.
 
-### 1.3 Questões de pesquisa
+### 2.3 Questões de pesquisa
 
 - **Q1.** É possível formalizar um método de continuidade de pesquisa por simulação computacional com o mesmo rigor documental de uma tese experimental?
 - **Q2.** Esse método, aplicado ao caso V127, produz resultados próprios (não meros planos) com validade declarada e linhagem completa?
 - **Q3.** Como tal método se posiciona e se diferencia da família existente de métodos antecipatórios (meta-análise, in-silico trials)?
 
-### 1.4 Objetivos
+### 2.4 Objetivos
 
 **Geral.** Formalizar, demonstrar e documentar a ETRIZAÇÃO — neologismo composicional: estado ontológico de conhecimento simulado com dados reais, ainda não validado empiricamente, capaz de fundamentar pesquisa futura · ETRIZAÇÃO — o estado de conhecimento simulado-baseado-em-dados-reais, potencialmente-realizável · etrização — etrização computacional — como método de continuidade de pesquisa por simulação, realizando a Parte 2 da tese sobre os achados da Parte 1: previsibilidade e antecipação de informação para decisão de pesquisa (o que medir, onde, em que dose, antes de gastar recurso).
 
 **Específicos.**
 - **OE1** — Nomear e formalizar a etrização com passos P0–P6 e garantias por passo; nomear o produto como **etrização** [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
-- **OE2** — Estabelecer a Base de Validade: tríade declarada + linhagem completa dos dados (Cap. 13) [claim:C046] [evidence:E032, E033].
+- **OE2** — Estabelecer a Base de Validade: tríade declarada + linhagem completa dos dados (Cap. 7) [claim:C046] [evidence:E032, E033].
 - **OE3** — Entregar os resultados da tese como os achados [SIM] realizados: limiar, regras, sensibilidade, probabilístico, estimador [claim:C038] [evidence:E032] [claim:C051] [evidence:E032, E033] [claim:C052] [evidence:E032, E033].
 - **OE4** — Documentar a continuidade futura como método replicável (loop de re-parametrização; seleção de parceiro SLR-análogo; freeze dormant) sem executá-la [claim:C053] [evidence:E033].
 - **OE5** — Submeter o conjunto a revisão hostil de máquina (guardião R0–R3, dois perfis) e validação expressa da autora.
 
-### 1.5 Hipóteses
+### 2.5 Hipóteses
 
 - **H1 (metodológica).** A etrização é formalizável com rigor documental equivalente ao experimental — *predição discriminadora*: um examinador de tese experimental consegue auditá-la trocando apenas os termos do mapeamento análogo (§ Cap. 13) sem perdê-la.
 - **H2 (de caso).** A aplicação etrização ao caso V127 gera resultados próprios falsificáveis independentes de medição — *predições travadas desde o release v1.0*: θ<0,33 ⇒ contenção; C50 insensível 10×; dose-resposta do braço A6 distingue a forma funcional do capping [claim:C051] [evidence:E032, E033].
 - **H3 (de posicionamento).** A etrização ocupa espaço estrutural distinto dos in-silico trials (que simulam o ensaio): prognóstico travado antes da medição; simulação rotulada; antecipação bancada; pesquisa derivada imediata.
 
-### 1.6 Estrutura do documento
+### 2.6 Estrutura do documento
 
 Cap. 2 fundamentação (Ciclo 2) · Cap. 13 metodologia (etrização; Base de Validade; mapeamento análogo) · Cap. 8 resultados [SIM] · Cap. 9 componentes e continuidade · Cap. 10 discussão e conclusões por objetivo (Ciclo 4) · Referências completas (Ciclo 2) · Apêndices.
 
 ---
 
-### 1.7 Componentes M1–M5 (tabela validada pela autora) e natureza do escopo
+### 2.7 Componentes M1–M5 (tabela validada pela autora) e natureza do escopo
 
 A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o seu fundamento é a **base validada in-silico**: conforme aclamado antecipadamente, lidamos com dados simulados; o gate computacional G0-sim **executado, aprovado e reproduzido** [claim:C046] [evidence:E032, E009, E007, E033] É a validação da tese neste estágio. Isto não prende a pesquisa — ao contrário, a liberta para derivar novas pesquisas de cada valor razoável já obtido, sem aguardar cenários de confirmação. A tabela abaixo reenquadra os componentes M1–M5 **sob essa compreensão** (coluna direita) e **aguarda validação expressa da autora**:
 
@@ -145,7 +141,7 @@ A Parte 2 é a **tese de continuidade** na arquitetura declarada (C049) — e o 
 
 Este capítulo situa a tese no contexto científico: primeiro o problema biomédico que a motiva (o gargalo terapêutico priônico), depois a família de métodos à qual ela se junta (os métodos antecipatórios e in-silico trials), e finalmente o posicionamento único que a etrização ocupa nesse panorama.
 
-### 2.1 Doenças priônicas: o gargalo terapêutico que motiva a continuidade
+### 3.1 Doenças priônicas: o gargalo terapêutico que motiva a continuidade
 
 As doenças priônicas humanas são neurodegenerativas, transmissíveis e universalmente fatais; a forma esporádica (sCJD) mata em meses. A base molecular do programa — a variante G127V selecionada pela epidemia de kuru [6], a resistência completa do homozigoto V127 [1], a ressalva do heterozigoto (infectável por vCJD) [1], o efeito dominante-negativo dose-dependente [1][3][5] e sua persistência em trans sem âncora GPI [3] com prova-de-conceito AAV in vivo [4] — constitui o núcleo validado em quatro níveis (população→camundongo→cultura→gene-terapia). O gargalo histórico éterapêutico, não mecanístico: **seis candidatos clínicos fracassaram sem modelo quantitativo de entrega** — quinacrina [35], doxiciclina [36], pentosan-polissulfato intraventricular [37], flupirtina [38], PRN100 [34] e minociclina [33] (com o ensaio retraído [21] excluído por regra) — todos agora **registry-bound** (concordância completa no fim deste documento). A plataforma organoide humana [7][8] fornece as âncoras que humanizam o relógio da simulação; a cinética murina publicada com código aberto [9] e o transporte intersticial humano in vivo [10] completam a base paramétrica.
 [39] TL, C. et al. PrP turnover in vivo and the time to effect of prion disease therapeutics. 2026. PMID 42189860.
@@ -168,70 +164,35 @@ As doenças priônicas humanas são neurodegenerativas, transmissíveis e univer
 [56] AL., R. M. e. et al. Applying quantitative and systems pharmacology to drug development. 2024. doi:10.4103/ijp.ijp_644_23
 
 
-### 2.2 A família dos métodos antecipatórios e os in-silico trials
+### 3.2 A família dos métodos antecipatórios e os in-silico trials
 
 A agregação do publicado (meta-análise/revisão sistemática), a derivação física (modelagem de transporte) e a execução de cenários (in-silico trials) formam a família de métodos que decidem sob incerteza antes do dado. Os in-silico trials consolidaram-se como campo — com workflows formais (CORTÉS-RÍOS et al., 2025, PMCID PMC12706418; verificação completa pendente) e ferramentas abertas de validação de coortes virtuais (doi:10.1038/s41598-025-99720-3) — e simulam **o ensaio**: pacientes virtuais, desenho, vias regulatórias.
 
-### 2.3 Posicionamento da etrização (corroborando H3)
+### 3.3 Posicionamento da etrização (corroborando H3)
 
 A etrização ocupa o espaço complementar: simula **a continuação da pesquisa**, distinta por quatro diferenciais estruturais — (i) prognóstico travado por release **antes** da medição (anti-hindsight como requisito, não virtude); (ii) simulação rotulada em toda saída (tiers); (iii) P6: dado real análogo ⇒ antecipação **bancada**; (iv) P5: pesquisa derivada imediata como produto de primeira classe. A herança metodológica é explícita: a tese emerge da própria pesquisa (Parte 1) e **herda sua lógica e suas claims** — corroborando-as e ampliando com o que somar (fontes complementares em verificação).
 
-### 2.4 Fundamento epistemológico
+### 3.4 Fundamento epistemológico
 
-```
-ANALOGIA DO ÁTOMO: COMO UMA PALAVRA FUNDA CIÊNCIA
-═════════════════════════════════════════════════
-
-  Demócrito (~400 a.C.)              │  Esta tese (2026)
-  ──────────────────────────         │  ──────────────────────────
-  Propôs "átomos" = indivisível      │  Propõe "etrização" = vir-a-ser computacional
-  SEM evidência experimental         │  SEM validação laboratorial
-  Coerência lógica + poder           │  Coerência matemática + dados reais
-  explicativo                        │  publicados
-       │                             │       │
-       ↓ 2.400 anos                  │       ↓ (começa agora)
-       │                             │       │
-  Dalton (1803): evidência           │  Dado humano futuro: se análogo,
-  Rutherford (1911): modelo          │  antecipação já está BANCADA (P6)
-  Bohr (1913): refinamento           │
-  Quarks (1964): "indivisível"       │  E se NÃO for análogo?
-  estava ERRADO — mas a palavra      │  → recalibra o que informa;
-  fundou 2.400 anos de pesquisa      │    predição anterior preservada
-  que transformou a civilização      │    como âncora
-                                      │
-
-  → O paralelo não é com o átomo-como-objeto
-  → É com o átomo-como-PALAVRA que tornou pesquisável o invisível
-  → Etrização torna pesquisável o ainda-não-medido
-
-  Einstein (1915): Relatividade     │
-    Geral predita buracos negros    │
-    SEM observação direta           │
-    → 2019: primeira foto (EHT)     │
-    → 104 anos de predição válida   │
-                                     │
-  Lemaître (1927): Big Bang        │
-    Modelo teórico de dados         │
-    indiretos (redshift)            │
-    → 1965: CMB confirma            │
-    → 38 anos de predição válida    │
-                                     │
-  → TODAS estas teses foram válidas
-  → como TESES, ANTES da confirmação
-  → Etrização segue o MESMO padrão
-```
+| Demócrito (~400 a.C.) | Esta tese (2026) |
+|---|---|
+| Propôs "átomos" = indivisível | Propõe "etrização" = vir-a-ser computacional |
+| SEM evidência experimental | SEM validação laboratorial |
+| Coerência lógica + poder explicativo | Coerência matemática + dados reais publicados |
+| ↓ 2.400 anos | ↓ (começa agora) |
+| Dalton (1803): evidência · Rutherford (1911): modelo · Bohr (1913): refinamento · Quarks (1964): "indivisível" estava ERRADO — mas a palavra fundou 2.400 anos de pesquisa que transformou a civilização | Dado humano futuro: se análogo, antecipação já está BANCADA (P6). E se NÃO for análogo? → recalibra o que informa; predição anterior preservada como âncora |
 : a etrização como operação ontológica
 
 A etrização não é apenas um nome — é uma **tese epistemológica** implícita: a de que a simulação computacional baseada em dados reais publicados constitui uma forma **legítima e autônoma de produção de conhecimento**, distinta tanto da hipótese (que especula sem executar) quanto do experimento (que mede mas é caro, lento e às vezes eticamente impossível). Como a física teórica produz conhecimento válido antes do teste experimental, a etrização produz **prognóstico quantitativo validável** antes do laboratório.
 
 **A analogia do átomo, formalizada:** quando Demócrito propôs o *átomos* (indivisível), não havia evidência experimental — havia coerência lógica e poder explicativo. A palavra existiu 2.400 anos antes da prova, e **fundou ramos de pesquisa** que eventualmente a validaram (e a corrigiram: o átomo é divisível). Da mesma forma, a etrização nomeia o processo de produzir conhecimento que **ainda não foi medido, mas cuja estrutura lógica e base de dados são suficientes para fundamentar decisão de pesquisa**. O paralelo não é com o átomo como objeto — é com o átomo como **palavra que tornou pesquisável o inpesquisável**.
 
-**O que a etrização acrescenta à filosofia da ciência da saúde:** a saúde não tem, na sua taxonomia metodológica, uma categoria para o conhecimento potencial-verificável. A hierarquia de evidência salta de hipótese para experimento; os frameworks existentes (in-silico trials, QSP, PBPK) descrevem **métodos**, não **estados ontológicos do conhecimento**. A etrização preenche essa lacuna: nomeia o estado do que a saúde já produz (simulações preditivas com dados reais) mas não reconhecia como forma própria de conhecimento. Ao nomeá-lo, **o legitima** — e ao legitimá-lo com critérios (5 requisitos da §3.1), o disciplinariza.
+**O que a etrização acrescenta à filosofia da ciência da saúde:** a saúde não tem, na sua taxonomia metodológica, uma categoria para o conhecimento potencial-verificável. A hierarquia de evidência salta de hipótese para experimento; os frameworks existentes (in-silico trials, QSP, PBPK) descrevem **métodos**, não **estados ontológicos do conhecimento**. A etrização preenche essa lacuna: nomeia o estado do que a saúde já produz (simulações preditivas com dados reais) mas não reconhecia como forma própria de conhecimento. Ao nomeá-lo, **o legitima** — e ao legitimá-lo com critérios (5 requisitos da §5.1), o disciplinariza.
 
 **Por que esta tese não pode ser impedida de existir como tese:**
 Uma tese de doutorado que (i) apresenta dados — ainda que de simulação, são baseados em dados reais de pesquisa publicada; (ii) demonstra achados — com método auditável, pré-registrado, reproduzido; e (iii) gera aplicabilidade — prognósticos quantitativos e falsificáveis com potencial terapêutico — **é uma tese legítima por definição**, independente de validação experimental imediata. Isto não é retórica: é o MESMO critério que valida a tese do átomo (proposto 2.400 anos antes da prova, com menos dados do que esta tese tem), a tese da evolução humana (construída de fósseis fragmentários, sem observação direta), e a tese do Big Bang (modelo teórico de dados indiretos, inicialmente não testável). Em cada caso, a comunidade científica reconheceu que **dados + método + aplicabilidade = tese válida**, mesmo antes da confirmação experimental. Esta tese segue exatamente esse padrão — com a vantagem de ter mais dados auditados, método mais rigoroso, e maior potencial de impacto do que qualquer daqueles exemplos tinham em sua concepção.
 
-### 2.5 Síntese
+### 3.5 Síntese
 
 O campo oferece mecanismo validado em quatro níveis [1][3][4][5], plataforma de âncora humana [7][8], parâmetros de transporte in vivo [10], cinética aberta [9] e um registro de fracassos que calibra honestamente o prior [33–38] — e a família de métodos oferece os instrumentos. O que faltava — e esta tese fornece — é o método nomeado que converte esse acervo em continuidade.
 
@@ -243,22 +204,22 @@ O campo oferece mecanismo validado em quatro níveis [1][3][4][5], plataforma de
 
 *Função: estabelecer, em uma página auditável, que o fundamento (Parte 3) e a aplicação (Partes 1–2) assentam nos MESMOS dados reais — e declarar a cronologia honesta que o anti-hindsight exige.*
 
-## 2.1 A mesma base sob os dois módulos
+## 4.1 A mesma base sob os dois módulos
 
-O fundamento multi-espécie (Cap. 3) e o desenho terapêutico (Cap. 4) partilham, sem exceção: o **kernel murino publicado** [evidence:E009] (Igel/Fornara 2024, código aberto, portado com paridade C0 exata); as **âncoras de relógio humano** [evidence:E007] (Groveman 2019: organoide, eclipse 25–28 dpi, produção de-novo 35 dpi, títulos MV2/MV1); o **motor humanizado auto-testado** [evidence:E032] (WS-9: 1 unidade-simulação = 144 dias; tempo de duplicação humano 12,1 dias); os **parâmetros de transporte humano in-vivo** [evidence:E010] (Thorne & Nicholson 2006: α=0,20; λ=1,8); as **sequências PrP próprias verificadas na NCBI** (P04156 e ortólogos; matriz BLOSUM62; P023) — das quais se computou a massa molecular usada na dose (22,83 kDa [claim:N060-fato] [evidence:E058]).
+O fundamento multi-espécie (Cap. 3) e o desenho terapêutico (Cap. 4) partilham, sem exceção: o **kernel murino publicado** [evidence:E009] (Igel/Fornara 2024, código aberto, portado com paridade C0 exata); as **âncoras de relógio humano** [evidence:E007] (Groveman 2019: organoide, eclipse 25–28 dpi, produção de-novo 35 dpi, títulos MV2/MV1); o **motor humanizado auto-testado** [evidence:E032] (WS-9: 1 unidade-simulação = 144 dias; tempo de duplicação humano 12,1 dias); os **parâmetros de transporte humano in-vivo** [evidence:E010] (Thorne & Nicholson 2006: α=0,20; λ=1,8); as **sequências PrP próprias verificadas na NCBI** (P04156 e ortólogos; matriz BLOSUM62; P023) — das quais se computou a massa molecular usada na dose (22,83 kDa [evidence:E058]).
 
-## 2.2 Cronologia honesta (o examinador hostil perguntaria — respondemos antes)
+## 4.2 Cronologia honesta (o examinador hostil perguntaria — respondemos antes)
 
 O desenho terapêutico (regras 1–3, θ\*=0,333, anel 8–12 mm) **nasceu ANTES** da validação multi-espécie (Parte 1, 24–27/08; predições travadas no release **v1.0 de 26/08**). A Parte 3 (30/08–01/09) **não gerou o desenho** — ela **fundamenta a transferência do desenho e estende sua regra de dose**. A formulação correta:
 
 > O desenho e a validação multi-espécie **compartilham a mesma base de dados reais**. A validação demonstra que a quantidade central do desenho — θ\* — **sobrevive à troca de espécie** (Cenário B: 0,333–0,400 nas bandas centrais [claim:C055] [evidence:E032]) e **deriva a regra de titulação κ_req↔Kt que generaliza a dose** para cinéticas diferentes [claim:C057] [evidence:E032]. Logo: a validação é a **camada de validade-de-transferência e generalização-de-dose** do desenho — a aplicação "emerge" do fundamento no sentido lógico-pedagógico, com a precedência histórica declarada (predições travadas ANTES: anti-hindsight preservado e exibido como força).
 
-## 2.3 Tabela de validação (todos os números dos JSONs do registro)
+## 4.3 Tabela de validação (todos os números dos JSONs do registro)
 
 | Verificação | Valor (registro) | Confronto | Veredito |
 |---|---|---|---|
 | θ\*=0,333 (v1.0) ∈ banda central multi-espécie? | Cenário B = **0,333–0,400** (camundongo/humano/hamster/vole) | o limiar travado é o **piso exato** da banda [claim:C055] | ✅ consistente |
-| A dose do desenho (κ=2) contém o humano? | humano: κ_min=1,5 (Kt≤1) e **κ_min=2,0 (Kt=2)** | κ=2 = κ_min na banda-hi herdada | ✅ contém até Kt≈2 (ressalva de horizonte, §3.4) |
+| A dose do desenho (κ=2) contém o humano? | humano: κ_min=1,5 (Kt≤1) e **κ_min=2,0 (Kt=2)** | κ=2 = κ_min na banda-hi herdada | ✅ contém até Kt≈2 (ressalva de horizonte, §5.4) |
 | A titulação estende a dose? | κ_req: Kt 1→1,5 · 2→2 · 3→3 · **4→8** (superlinear) | o desenho fixava κ=2; a titulação ajusta por cinética [claim:C057] | ✅ generalização genuína |
 | A decomposição de sensibilidade sustenta a base? | só Kt move contenção e relógio (Kr/Kc ≤3%) | a parametrização por espécie reduz-se a Kt — validade da simplificação (F-43) | ✅ |
 | Predição pré-registrada do hamster | REFUTADA sob a definição P-024 (0,659 mm em κ=2/Kt=2) | reportada como está; horizonte declarado em toda citação [claim:C056] | ✅ honestidade exibida |
@@ -269,19 +230,19 @@ O desenho terapêutico (regras 1–3, θ\*=0,333, anel 8–12 mm) **nasceu ANTES
 
 *Em linguagem clínica: perguntamos se a "dose" que contém o príon num rato serviria num hamster, num humano, num vole — espécies cujas doenças priônicas correm em velocidades muito diferentes. A resposta (Cenário B): no meio da faixa de velocidade, a dose-limiar é praticamente a mesma (θ\* 0,333–0,400); nos extremos rápidos exige-se mais dose, de forma previsível (regra de titulação) — e o número só é comparável quando se declara por quanto tempo se observa (horizonte). Ver Figura 4.*
 
-## 3.1 Do sweep de composição à parametrização por espécie
+## 5.1 Do sweep de composição à parametrização por espécie
 
 A maior limitação declarada da transferência murino→humano foi convertida em programa executado: o sweep de composição de taxas identificou que **apenas a classe Kt (autocatálise/templating) governa contenção e relógio** (Kr/Kc ±50% mudam o raio ≤3%) — seguindo-se a parametrização por espécie em bandas com proveniência (sequências PrP verificadas na NCBI; matriz de identidade BLOSUM62; correlação cinética localizada no loop β2-α2 e no nível de expressão — não na identidade global) e a execução multi-espécie em matrix computacional com definições operacionais pré-registradas antes de qualquer execução.
 
-## 3.2 Cenário B [SIM]
+## 5.2 Cenário B [SIM]
 
 θ\* central varia **0,333–0,400** entre camundongo, humano, hamster e vole (razão 1,20 ≤ 2× — *aproximadamente conservado*), com degradação monotônica nos extremos de cinética: Kt=4 exige κ=8 (θ\*=0,111) [claim:C055] [evidence:E032].
 
-## 3.3 Regra de titulação emergente
+## 5.3 Regra de titulação emergente
 
 κ requerido escala com a cinética do hospedeiro (**1→1,5 · 2→2 · 3→3 · 4→8** — superlinear além de 2×): a dose de contenção deve ser **titulada à cinética, não fixada universalmente** [claim:C057] [evidence:E032]. Esta regra é a que o capítulo seguinte converte em massa calculável.
 
-## 3.4 Dependência de horizonte (a única assimetria real)
+## 5.4 Dependência de horizonte (a única assimetria real)
 
 O mesmo braço Kt=2/κ=2 **contém** sob duas definições de pareamento (crescimento-próprio; calendário fixo t=5) e **escapa** sob a terceira (gerações casadas ao base tratado, censurado em 2,83 mm) — toda citação de θ\* deve declarar o horizonte; a predição travada v1.0 usa a definição S3 [claim:C056] [evidence:E032]. A predição pré-registrada do hamster foi **refutada sob a definição P-024** (0,659 mm em κ=2/Kt=2) e reportada como está — anti-hindsight mantido.
 
@@ -295,7 +256,7 @@ O mesmo braço Kt=2/κ=2 **contém** sob duas definições de pareamento (cresci
 
 *Em linguagem clínica: com o fundamento validado (Cap. 3), o desenho se completa — onde depositar (anel 8–12 mm), com que malha, a que intervalo (≤7 d), e agora: **quanta proteína por depósito**, como banda calculada com a incerteza declarada — não como número único. A dose permanece prognóstico [SIM] até o ensaio G0; o que este capítulo entrega é o prognóstico quantitativo do braço discriminador A6.*
 
-## 4.1 Transporte: três regras falseáveis [SIM]
+## 6.1 Transporte: três regras falseáveis [SIM]
 
 O solver de transporte (advecção–difusão–reação em meio poroso heterogêneo; α=0,20 e λ=1,8 in-vivo [claim:C014] [evidence:E010]; D_eff=3,86×10⁻¹¹ m²/s [claim:C015] [evidence:E011, E030]; auto-testado: conservação de massa 100,0%, erro de Thiele 0,5% [claim:C032] [evidence:E030]) produz as três regras de design:
 
@@ -303,15 +264,15 @@ O solver de transporte (advecção–difusão–reação em meio poroso heterog�
 2. **Malha do veículo**: hidrogel com malha ξ≥5× o raio da proteína (HA 1–2% p/p passa; >5% sequestra) [claim:C034] [evidence:E030, E020];
 3. **Redose**: intervalo **≤7 dias** para mRNA/LNP (trough ≥30–56%; meia-vida de PrP 4,8–6,4 d [evidence:E039]) [claim:C035] [evidence:E030, E019].
 
-## 4.2 O limiar travado e a dose legitimada pela banda
+## 6.2 O limiar travado e a dose legitimada pela banda
 
-A contenção exige θ = (1+κ·c_pico)⁻¹ ≤ **θ\*=0,333** (predição travada no release v1.0 de 26/08; comparada, nunca retreinada) [claim:C038] [evidence:E032]. A validação multi-espécie (Cap. 3) legitimou a dose κ=2 do desenho original **dentro da banda humana herdada** (κ_min=2,0 em Kt=2) e a estendeu além dela pela regra de titulação κ_req↔Kt [claim:C057] [evidence:E032] — com a ressalva de horizonte sempre citada (§3.4) [claim:C056] [evidence:E032].
+A contenção exige θ = (1+κ·c_pico)⁻¹ ≤ **θ\*=0,333** (predição travada no release v1.0 de 26/08; comparada, nunca retreinada) [claim:C038] [evidence:E032]. A validação multi-espécie (Cap. 3) legitimou a dose κ=2 do desenho original **dentro da banda humana herdada** (κ_min=2,0 em Kt=2) e a estendeu além dela pela regra de titulação κ_req↔Kt [claim:C057] [evidence:E032] — com a ressalva de horizonte sempre citada (§5.4) [claim:C056] [evidence:E032].
 
 Restava o elo que a Parte 1 declarara ilustrativo: **quanto vale κ em massa?** Este capítulo o fecha como **banda** — com critérios de aceitação pré-registrados antes de qualquer computação (protocolo garantista: toda célula da cadeia com unidade+fonte; banda sempre ≥2 extremos; a largura da banda dominada pelo elo κ↔µM (assumido ilustrativo) é resultado válido e esperado; saída de planejamento, jamais prescrição).
 
-## 4.3 A primeira dose calculada: banda de dose do braço A6 [SIM-planejamento]
+## 6.3 A primeira dose calculada: banda de dose do braço A6 [SIM-planejamento]
 
-**Cadeia dimensional (todas as células com unidade+fonte; JSON canônico `experiments/m31/m31_u1u2.json`):** κ_req (regra de titulação) → concentração no pico do depósito c = κ_req × Kd → quantidade por depósito n = c × V_halo → massa = n × MW. A banda do Kd aparente é **0,071–1,0 µM** *(illustrative assumption; closed by arm A6)*: o piso, 71 nM, é o Kd medido por SPR para oligômeros de Aβ42 ligando PrP humano — **proxy declarado**, pois o par V127↔PrP^Sc não tem Kd medido; o teto, 1 µM, é a âncora ilustrativa da Parte 1 §2.2 *(não é estimativa de secreção medida)*. O volume do halo é um cilindro r×h com r₁₀%=4–6 mm e fração ECS 0,15–0,25 (casca de 2 mm declarada Tipo-B). A massa molecular é **22,83 kDa**, computada das nossas próprias sequências P04156 (resíduos 23–231, forma madura; V127 é variante de mesma massa, Δ=+14 Da). Fontes da cadeia: Kd-piso [evidence:E057] · V-halo [evidence:E030] · ECS [evidence:E010] · MW [evidence:E058] · titulação [evidence:E032].
+**Cadeia dimensional (todas as células com unidade+fonte; JSON canônico `experiments/m31/m31_u1u2.json` [58]):** κ_req (regra de titulação) → concentração no pico do depósito c = κ_req × Kd → quantidade por depósito n = c × V_halo → massa = n × MW. A banda do Kd aparente é **0,071–1,0 µM** *(illustrative assumption; closed by arm A6)*: o piso, 71 nM, é o Kd medido por SPR para oligômeros de Aβ42 ligando PrP humano [57] — **proxy declarado**, pois o par V127↔PrP^Sc não tem Kd medido; o teto, 1 µM, é a âncora ilustrativa da Parte 1 §2.2 *(não é estimativa de secreção medida)*. O volume do halo é um cilindro r×h com r₁₀%=4–6 mm e fração ECS 0,15–0,25 (casca de 2 mm declarada Tipo-B). A massa molecular é **22,83 kDa**, computada das nossas próprias sequências P04156 (resíduos 23–231, forma madura; V127 é variante de mesma massa, Δ=+14 Da). Fontes da cadeia: Kd-piso [evidence:E057] · V-halo [evidence:E030] · ECS [evidence:E010] · MW [evidence:E058] · titulação [evidence:E032].
 
 **Escada de dose por banda-Kt do hospedeiro** (banda sob âncora ilustrativa; fechada pelo braço A6):**
 
@@ -332,11 +293,11 @@ No degrau humano, a dose de A6 é **0,0–2,6 µg de V127ΔGPI por depósito** (
 
 **Por que A6 é o vetor-primário da dose:** por vetor, a unidade de dose difere (A5 = células+secretor; A7 = µg de mRNA); apenas A6 (proteína recombinante) tem **dose conhecível de saída**. É o braço discriminador: fecha o elo κ↔µM *(illustrative assumption; closed by arm A6)* e testa a forma funcional do capping (primeira potência vs quadrática, travada na colheita [SIM] da Parte 1) [claim:C051] [evidence:E032, E033]. A5 e A7 herdam a cadeia como derivadas.
 
-## 4.4 O ensaio que fecha a banda: G0-wet especificado
+## 6.4 O ensaio que fecha a banda: G0-wet especificado
 
 Oito braços pré-registrados (incluindo PPS como controle positivo publicado e braço LNP-mRNA), com plano estatístico cego (Welch/Holm α=0,05; 5 comparações; n=8→12; poder ~80% para Δ≥50%), cegamento do scorer, randomização estratificada por lote, kill-switches por braço + critério de morte programática, contrato de dado [ORGANOID] bancada→estimador (exclusões publicadas nunca editadas), e o loop de re-parametrização que recalibra **exatamente o que o dado informa** [claim:C046, C051, C052, C053]. Os dez itens de freeze F1–F10 com GATE-F de liberação estão no Apêndice C; a especificação integral no registro.
 
-## 4.5 Custo-cotação
+## 6.5 Custo-cotação
 
 A tabela suplementar S1 (custo por braço, cotações de mercado arquivadas) está no Apêndice E — o desenho é especificado ao ponto de orçamento, sem executar compra.
 
@@ -344,7 +305,13 @@ A tabela suplementar S1 (custo por braço, cotações de mercado arquivadas) est
 
 # CAPÍTULO 7 — MÉTODOS: A ETRIZAÇÃO FORMALIZADA
 
-## 5.1 O método nomeado: etrização computacional, passos P0–P6
+### 7.0 Pipeline do método (P0–P6)
+
+**Fluxo:** **P0** identificação (SLR auditada → base E-registrada com linhagem) → **P1** parametrização (derivação com proveniência por parâmetro) → **P2** execução (motores determinísticos auto-testados → runs arquivados [SIM]) → **P3** colheita (critérios pré-declarados → veredito sem meta móvel) → **P4** prognóstico (predições travadas por release ANTES da medição → âncora anti-hindsight) → **P5** pesquisa derivada (novas perguntas prosseguem imediatamente) → **P6** confronto opcional (dado real análogo ⇒ antecipação bancada).
+
+*Tabela completa com entradas/saídas/garantias por passo: §7.1.*
+
+## 7.1 O método nomeado: etrização computacional, passos P0–P6
 
 **Inovação metodológica declarada:** avaliação computacional como método antecipatório — previsibilidade e antecipação de informação para decisão de pesquisa (o que medir, onde, em que dose, antes de gastar recurso). A **parametrização** (operação técnica do P1) é o núcleo operacional; a **tese etrizada** é o produto [claim:C054] [evidence:E009, E010, E007, E031, E032, E033]. Declaração de eixo retórico (obrigatória): tudo aqui **é simulação, e é dito que é**; não se promete aplicar nem validar — antes: **se dados reais exibirem resultados análogos aos simulados, os passos seguintes já terão sido dados** (antecipação bancada, não pendente).
 
@@ -360,7 +327,7 @@ A tabela suplementar S1 (custo por braço, cotações de mercado arquivadas) est
 
 **Posição na família:** a etrização é irmã da meta-análise (agrega o publicado), da modelagem física (deriva comportamento) e dos in-silico trials (executa cenários) — e distingue-se por **travar prognósticos antes da medição e declarar a simulação como simulação em cada saída** (tiers [SIM]/[ORGANOID]/[MOUSE]/[HUMAN] [claim:C047] [evidence:E032, E033]).
 
-## 5.2 Formulação matemática com proveniência
+## 7.2 Formulação matemática com proveniência
 
 *Em linguagem clínica: as equações abaixo são o "rastreio farmacocinético" da proteína no cérebro — para onde difunde, quanto dura, quão forte compete com o príon. Se você entende isso e as Figuras 4–5, a matemática é opcional: ela formaliza o que já foi dito em palavras — cada equação carrega a citação de onde veio cada parâmetro.*
 
@@ -380,7 +347,7 @@ $$\mathrm{freeS}(r) = \left(1 + \kappa\, c_{\mathrm{V127}}(r)\right)^{-2}, \qqua
 
 **Estimador θ_obs**: features (raio R, log-razão de biomassa); κ̂ vizinho-mais-próximo na grade κ∈{1,5–8}; θ̂=1/(1+κ̂); regime por braço (mediana, n=8, IC bootstrap 90%). Veredito pré-declarado: ADEQUADO na fronteira de decisão (cobertura 3/3; bias −0,008 em κ=2); v1.1 interpolada testada e rejeitada [claim:C052] [evidence:E032, E033].
 
-## 5.3 Base de Validade (MANDATÓRIA)
+## 7.3 Base de Validade (MANDATÓRIA)
 
 **Declaração tríade:** (i) esta tese é **baseada em simulação computacional e NÃO SUBSTITUI a validação de laboratório** — o laboratório é essencial; (ii) a continuidade provém dos prognósticos: se o G0-wet equivaler ao simulado, a antecipação já estará bancada; (iii) o rigor experimental é **convertido para o ambiente computacional**: cada dado com linhagem completa (quem→espécie→cruzamento→código→parâmetro→resultado).
 
@@ -390,13 +357,13 @@ $$\mathrm{freeS}(r) = \left(1 + \kappa\, c_{\mathrm{V127}}(r)\right)^{-2}, \qqua
 | Relógio/amplitude humanos | Groveman 2019 [E007] | organoide sCJD | Groveman 2021 [E008]; subtipos 2023 | regressão 12,1 d; 144 d/unid [claim:C037] | direto | predição θ<0,33 [C040] |
 | Transporte intersticial | Thorne & Nicholson 2006 [E010] | humano in-vivo | Stokes–Einstein | solver ADR auto-testado [claim:C032] | direto | regras 1–3 [C033-C035] |
 | Agente V127 anchorless | Asante 2015 [E001] · Gatdula 2026 [E003] · Zerbes 2026 [E004] | população→camundongo→cultura→AAV | quatro níveis independentes | termo freeS | dose↔κ em banda (§6.3) | contenção κ=2 [C038] |
-| Âncora κ↔µM (banda) | Chen 2010 SPR [E057] + âncora ilustrativa P1 §2.2 | humano (Aβ42-PrP; PROXY declarado) | — | cadeia dimensional M3.1 [E058] | direto | banda A6 0,0–2,6 µg [C058-C060] |
+| Âncora κ↔µM (banda) | Chen 2010 SPR [E057] + âncora ilustrativa P1 §4.2 | humano (Aβ42-PrP; PROXY declarado) | — | cadeia dimensional M3.1 [E058] | direto | banda A6 0,0–2,6 µg [C058-C060] |
 | Prior de falhas clínicas | Geschwind 2013 · Haïk 2014 · Newman 2014 · Otto 2004 · Mead 2022 · Cheng 2015 [E034-E038, E022] | humano | registry-bound | Beta–Binomial WS-8 [claim:C036] | direto | P=5%/30–45% |
 | Sensibilidade estrutural | (este programa) | in-silico | motor reproduzido 2× (hash+valor) | sweeps S1-S3 + estimador | — | predição discriminadora [C051] |
 
 **Por que isto é ciência com referências sólidas:** toda célula amarra fonte peer-reviewed ou run arquivado com hash; nenhum número vive fora do registro (**60 claims · 58 fontes · 65 N-fatos · 4 validadores em zero · AST 9/9**); a cadeia é verificável de ponta a ponta, como um "métodos" experimental exige.
 
-## 5.4 A tese em forma experimental (mapeamento análogo)
+## 7.4 A tese em forma experimental (mapeamento análogo)
 
 | Tese experimental (com pessoas) | Esta tese (etrização) |
 |---|---|
@@ -437,7 +404,7 @@ $$\mathrm{freeS}(r) = \left(1 + \kappa\, c_{\mathrm{V127}}(r)\right)^{-2}, \qqua
 
 - **Figura 1** — Resposta de contenção: raio assintótico R vs κ com os tiers T2/T3 anotados (`paper/latex/figs/fig2_theta_response.png`) [claim:C038] [evidence:E032].
 - **Figura 2** — Consistência emergente de subtipos MV2>MV1 (painéis frente contida + âncoras de semente 126×, entrada sem ajuste) (`paper/latex/figs/fig3_subtypes.png`) [claim:C039] [evidence:E032, E007].
-- **Figura 3 (tabela-decisão)** — derivada sem nova simulação: κ ↔ θ_obs ↔ R ↔ razão de biomassa ↔ margem vs baseline (`experiments/part2_results/part2_derived_summary.json`; §4.1) [claim:C052] [evidence:E032, E033].
+- **Figura 3 (tabela-decisão)** — derivada sem nova simulação: κ ↔ θ_obs ↔ R ↔ razão de biomassa ↔ margem vs baseline (`experiments/part2_results/part2_derived_summary.json`; §6.1) [claim:C052] [evidence:E032, E033].
 - **Figura 4** — θ\* por espécie nos pontos de banda de cinética (Kt): banda central Cenário B sombreada (0,333–0,400); extremos degradam (hamster 4× ⇒ κ=8; × = escape) — gerada dos JSONs p024\_* por script commitado (`paper/latex/figs/fig4_theta_species.png`; `experiments/xspecies/make_fig4_thetaspecies.py`) [claim:C055] [evidence:E032].
 
 
@@ -482,7 +449,7 @@ O guardião opera com **perfis de superfície** (`--profile part1|part2`): a Par
 
 Este capítulo responde à pergunta "e daí?": consolida os achados, mapeia os impactos em camadas, identifica as áreas correlatas onde o mesmo método é aplicável, e declara — mandatoriamente — o que vem a seguir.
 
-### 5.1 Achados e impactos
+### 9.1 Achados e impactos
 
 **Achados [SIM] consolidados:** o limiar adimensional θ\*=0,333 (contenção acima dele, monotônica à quase-extinção) [claim:C038] [evidence:E032]; três regras de design quantitativas (anel 8–12 mm; malha ≥5×r_p; redose ≤7 d) [claim:C033] [evidence:E030]; a predição discriminadora (a dose-resposta do braço A6 distingue a unidade inibitória molecular) [claim:C051] [evidence:E032, E033]; o estimador θ_obs calibrado na fronteira de decisão [claim:C052] [evidence:E032, E033]; a tabela-decisão derivada (biomassa como coordenada informativa; raio saturado); e a validação multi-espécie (Cenário B + regra de titulação κ↔Kt + dependência de horizonte) [claim:C055] [evidence:E032] [claim:C056] [evidence:E032] [claim:C057] [evidence:E032].
 
@@ -495,7 +462,7 @@ Este capítulo responde à pergunta "e daí?": consolida os achados, mapeia os i
 
 **Ressalva mandatória** [claim:C046] [evidence:E032, E033]: estes achados **não podem ser aplicados em humanos** apesar do potencial demonstrado — faz-se necessário, para uso humano, o teste e a validação com dados experimentais da Parte 1 (pré-tese) executados em laboratório. A tese entrega o prognóstico; a aplicação exige o G0-wet.
 
-### 5.2 Áreas correlatas com a mesma usabilidade
+### 9.2 Áreas correlatas com a mesma usabilidade
 
 O método da etrização aplica-se onde houver (a) base de dados publicados e validados, (b) motor determinístico auditável e (c) decisão de pesquisa sob incerteza: farmacologia de doenças raras (priorização de dose/rota antes do primeiro animal); oncologia — triagem de combinações (ordenação de candidatos antes do ensaio); doenças neurodegenerativas prion-like (o caso direto); toxicologia/regulação (in-silico first, na linha dos frameworks regulatórios emergentes); e qualquer programa que precise decidir *o que medir, onde e em que dose* antes de gastar recurso — a função-objetivo da própria etrização.
 
@@ -510,7 +477,7 @@ O método da etrização aplica-se onde houver (a) base de dados publicados e va
 
 **Limitação declarada**: para Aβ/α-synucleína, NÃO existe variante protetora natural selecionada pela evolução (como o V127 do kuru). O agente terapêutico teria de ser engenheirado (anticorpo, variante travada, degradação direcionada) — uma incerteza adicional de existência, não apenas de engenharia. O cálculo (P0-P5) transfere; o agente, não.
 
-### 5.3 Próximas abordagens (declaração mandatória conforme metodologia)
+### 9.3 Próximas abordagens (declaração mandatória conforme metodologia)
 
 **Este trabalho foi realizado com base simulada.** Faz-se **necessário o laboratório experimental e testes humanos para validação** — a simulação não substitui nem substituirá essa etapa (§7.3). Contudo, **assim que dados humanos forem encontrados — independentemente dos valores que exibam — eles podem ser parametrizados contra os valores aqui obtidos** (loop de re-parametrização, Cap. metodologia), o que **já representa um passo à frente na pesquisa**: dado análogo confirma a antecipação (passos seguintes já avançados, P6); dado divergente recalibra exatamente o que informa, com a predição anterior preservada como âncora — em ambos os casos, conhecimento novo bancado [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
@@ -525,11 +492,11 @@ O método da etrização aplica-se onde houver (a) base de dados publicados e va
 Este capítulo pesa os resultados: o que significam, o que não significam, e como se posicionam entre a promessa e o limite.
 
 
-### 6.1 Promessas e limites desta Parte 2
+### 10.1 Promessas e limites desta Parte 2
 
 Promete: a etrização como método completo, replicável e em parte já demonstrado (M1 executado; M4 piloto) — continuar pesquisa por simulação hoje, como a física, sem parar à espera de cada confirmação. E declara: os resultados daqui **são de simulação e assim permanecem rotulados**; a aplicação/validação em ambiente real não é prometida nesta Parte — se dados reais futuros forem análogos aos simulados, **os passos seguintes já estão avançados** (P6) [claim:C054] [evidence:E009, E010, E031, E032, E033, E007]. **Não promete**: seleção de parceiro (execução externa), dado [ORGANOID]+ (não existe ainda — e é rotulado como tal), nem qualquer claim clínica (escada de tiers: nenhum degrau empresta a autoridade do seguinte). Limites declarados: pesos e scores são julgamento estruturado single-rater; a calibração do estimador é na grade atual (refinamento futuro = grade mais fina, pré-declarado); PubMed-direto e identificação R8 pendem como conformidade do piloto.
 
-### 6.2 Discussão: o que os resultados significam e o que não significam
+### 10.2 Discussão: o que os resultados significam e o que não significam
 
 Os resultados [SIM] significam: (i) existe um limiar adimensional (θ\*=0,333) acima do qual o modelo contém a frente — quantidade comparável entre subtipos e, agora sondada computacionalmente entre espécies (Cenário B: aproximadamente conservada nas bandas centrais, com regra de titulação e declaração obrigatória de horizonte) [claim:C038] [evidence:E032] [claim:C055] [evidence:E032] [claim:C056] [evidence:E032]; (ii) o design é quantitativo (anel 8–12 mm; malha ≥5×; redose ≤7 d) — nenhum candidato anterior o teve [claim:C033] [evidence:E030]; (iii) o método é falseável em três frentes pré-registradas (θ medido; C50 invariância; dose-resposta do A6 discriminando a forma funcional) [claim:C051] [evidence:E032, E033]. Não significam: contenção em tecido humano medido (isso é [ORGANOID]+, inexistente); eficácia clínica; nem substituição do laboratório (§7.3). A contribuição de maior alcance é a demonstração de que a própria continuidade da pesquisa pode ser metodologicamente rigorosa sem parar à espera de confirmação — a etrização executada de ponta a ponta com revisão hostil de máquina e validação expressa da autora [claim:C054] [evidence:E009, E010, E031, E032, E033, E007].
 
@@ -775,81 +742,26 @@ Os resultados [SIM] significam: (i) existe um limiar adimensional (θ\*=0,333) a
 
 ## B.1 Fluxo de informação: da literatura à conclusão
 
-```
-CAMADA 0: FONTE PRIMÁRIA (papers publicados)
-═══════════════════════════════════════════════════
-  Asante 2015 [E001]     Mead 2009 [E002]     Groveman 2019 [E007]
-  Nature, peer-reviewed   NEJM, peer-reviewed   Acta Neuropathol, peer-reviewed
-  "V127 resiste a príons" "G127V seleção kuru"  "Organoides infectam com sCJD"
-         │                       │                       │
-         ▼                       ▼                       ▼
-CAMADA 1: VERIFICAÇÃO (auditoria de fonte)
-═══════════════════════════════════════════════════
-  Cada fonte foi ABERTA (URL/DOI confirmado)
-  Identificadores verificados → E-registry
-  Status: verified (quem abriu, quando, como)
-         │
-         ▼
-CAMADA 2: CLAIM REGISTRY (afirmações extraídas)
-═══════════════════════════════════════════════════
-  C001: "V127/V127 resiste completamente"      [E001]
-  C003: "DN dose-dependente"                   [E001,E003,E005]
-  C005: "anchorless trans DN"                  [E003]
-  C010: "âncoras de relógio: 25-28/35/169 dpi" [E007]
-  C011: "títulos MV2 vs MV1 @169dpi"           [E007]
-         │
-         ▼
-CAMADA 3: PARÂMETROS (números com proveniência)
-═══════════════════════════════════════════════════
-  α=0.20, λ=1.8     ← Thorne & Nicholson 2006 [E010] (in-vivo, humano)
-  D₀=1.25e-10 m²/s  ← Stokes-Einstein (R_h≈2.5nm, ~30kDa)
-  D_eff=3.86e-11    ← D₀/λ² (derivado)
-  k_eff=1e-6–1e-5   ← Masel 1999 [E011] (polimerização nucleada)
-  t_dupl=12.1 d     ← 134d/log₂(2130) [E007] (derivado de Groveman)
-  1 unidade=144 d   ← t_dupl/t_dupl_sim [E032] (derivado)
-         │
-         ▼
-CAMADA 4: MODELO MATEMÁTICO (equações com parâmetros)
-═══════════════════════════════════════════════════
-  $$\frac{\partial(\alpha c)}{\partial t} = \nabla\!\cdot\!(D_{\mathrm{eff}}\,\nabla c) \;-\; \nabla\!\cdot\!(\mathbf{v}\,c) \;+\; S(\mathbf{x}) \;-\; k_{\mathrm{eff}}\,c$$
-  → solver WS-7 (volumes finitos, 192², auto-testado)
+**CAMADA 0 — Fonte primária (papers publicados):** Asante 2015 [E001] (Nature, "V127 resiste a príons") · Mead 2009 [E002] (NEJM, "G127V seleção kuru") · Groveman 2019 [E007] (Acta Neuropathol, "Organoides infectam com sCJD") — peer-reviewed.
 
-  freeS(r) = (1+κ·c_V127(r))⁻²
-  → modelo WS-9 (campo-médio, 96², humanizado)
+→ **CAMADA 1 — Verificação (auditoria de fonte):** cada fonte foi ABERTA (URL/DOI confirmado); identificadores verificados → E-registry; status *verified* (quem abriu, quando, como).
 
-  θ ≡ (1+κ·c_pico)⁻¹
-  → definição formal (a fração de replicação que resta)
-         │
-         ▼
-CAMADA 5: EXECUÇÃO (runs arquivados e reproduzidos)
-═══════════════════════════════════════════════════
-  WS-7 self-tests: massa=100%, Thiele=0.5% ✓
-  WS-9 T1/T2/T3: todos PASS ✓
-  Reprodução: executado em 2 ambientes independentes
-  → resultados idênticos (hash confirmado)
-         │
-         ▼
-CAMADA 6: RESULTADOS [SIM]
-═══════════════════════════════════════════════════
-  θ*=0.333          ← do sweep κ (limiar de contenção)
-  Regras 1-3        ← do solver WS-7 (anel/malha/redose)
-  Discriminadora    ← do sweep expoente (C50 insensível)
-  Estimador θ_obs   ← da calibração sim-a-sim
-         │
-         ▼
-CAMADA 7: PROGNÓSTICO TRAVADO
-═══════════════════════════════════════════════════
-  Release v1.0 (timestamp): "θ<0.33 ⇒ contenção"
-  → ANTES de qualquer dado experimental
-  → ANTI-HINDSIGHT por construção
-         │
-         ▼
-CAMADA 8: CONCLUSÕES DA TESE
-═══════════════════════════════════════════════════
-  A tese entrega: método (etrização P0-P6) + prognóstico (θ*, regras)
-  + dupla potencialidade (cura + restauração [C016])
-  + ressalva (não aplicar em humanos sem validação experimental)
-```
+→ **CAMADA 2 — Claim registry (afirmações extraídas):** C001 "V127/V127 resiste completamente" [E001] · C003 "DN dose-dependente" [E001,E003,E005] · C005 "anchorless trans DN" [E003] · C010 "âncoras de relógio 25-28/35/169 dpi" [E007] · C011 "títulos MV2 vs MV1 @169dpi" [E007].
+
+→ **CAMADA 3 — Parâmetros (números com proveniência):** α=0,20 e λ=1,8 ← Thorne & Nicholson 2006 [E010] (in-vivo, humano) · D₀=1,25×10⁻¹⁰ m²/s ← Stokes-Einstein (R_h≈2,5 nm, ~30 kDa) · D_eff=3,86×10⁻¹¹ ← D₀/λ² (derivado) · k_eff=10⁻⁶–10⁻⁵ ← Masel 1999 [E011] · t_dupl=12,1 d ← 134d/log₂(2130) [E007] · 1 unidade=144 d ← t_dupl/t_dupl_sim [E032].
+
+→ **CAMADA 4 — Modelo matemático (equações com parâmetros):**
+
+$$\frac{\partial(\alpha c)}{\partial t} = \nabla\!\cdot\!(D_{\mathrm{eff}}\,\nabla c) \;-\; \nabla\!\cdot\!(\mathbf{v}\,c) \;+\; S(\mathbf{x}) \;-\; k_{\mathrm{eff}}\,c$$
+
+→ solver WS-7 (volumes finitos, 192², auto-testado) · freeS(r)=(1+κ·c_V127(r))⁻² → modelo WS-9 (campo-médio, 96², humanizado) · θ≡(1+κ·c_pico)⁻¹ → definição formal (a fração de replicação que resta).
+→ **CAMADA 5 — Execução [SIM]:** sweeps (S1/S2/S3), grade κ, calibração do estimador; runs arquivados com hash; reprodução em 2 ambientes.
+
+→ **CAMADA 6 — Colheita com critérios pré-declarados:** veredito ADEQUADO na fronteira; refutações reportadas (hamster; v1.1).
+
+→ **CAMADA 7 — Prognósticos travados por release:** θ\*=0,333 (v1.0); regras 1-3; banda A6 (C058-C060).
+
+→ **CAMADA 8 — Conclusões da tese:** método (etrização P0-P6) + prognóstico (θ\*, regras) + dupla potencialidade (cura + restauração [C016]) + ressalva (não aplicar em humanos sem validação experimental).
 
 ## B.2 Decisões-chave: por que cada escolha foi feita
 
@@ -880,12 +792,12 @@ CAMADA 8: CONCLUSÕES DA TESE
 | etrização | método de continuar pesquisa por simulação com dados reais [C054] | Nota à Leitura |
 | θ | fração de replicação remanescente no pico secretor (1+κc)⁻¹ | §7.2 |
 | κ | força de capping (capacidade do V127ΔGPI de bloquear conversão) | §7.2 |
-| G0-sim | gate computacional executado e aprovado (T1/T2/T3) | §1.7 |
-| G0-wet | gate de organoide especificado mas não executado (dormant) | §4.3 |
+| G0-sim | gate computacional executado e aprovado (T1/T2/T3) | §2.7 |
+| G0-wet | gate de organoide especificado mas não executado (dormant) | §6.3 |
 | tier [SIM] | dado produzido por simulação parametrizada | toda saída |
-| tier [ORGANOID] | dado de laboratório com organoide (inexistente ainda) | §5.3 |
+| tier [ORGANOID] | dado de laboratório com organoide (inexistente ainda) | §9.3 |
 | DN | dominante-negativo: V127 bloqueia conversão de PrP normal | Cap.2 |
-| θ* | limiar de contenção: acima dele a frente é contida (0.333) | §4.1 |
+| θ* | limiar de contenção: acima dele a frente é contida (0.333) | §6.1 |
 | freeS | fração de substrato livre após capping: (1+κc)⁻² | §7.2 |
 
 ## B.5 Prejulgando objeções da banca
@@ -893,7 +805,7 @@ CAMADA 8: CONCLUSÕES DA TESE
 | Objeção provável | Resposta que está na tese |
 |---|---|
 | "Você não tem dados experimentais" | Esta é uma tese de METODOLOGIA com achados de simulação auditada; a descoberta biológica virá do G0-wet; a tese entrega método + prognóstico travado + dupla potencialidade declarada com ressalva |
-| "A simulação não substitui o laboratório" | Correto — e a tese DECLARA isto na Base de Validade (§3.3): "não substitui; estimula P&D ágil" |
+| "A simulação não substitui o laboratório" | Correto — e a tese DECLARA isto na Base de Validade (§5.3): "não substitui; estimula P&D ágil" |
 | "Como sei que os números são reais?" | Cada número tem fonte E-ID com hash; cada fonte foi aberta e verificada; a reprodução em 2 ambientes confirmou os valores; a tabela de concordância claims→refs (no fim) permite auditoria linha por linha |
 | "Por que confiar no θ*=0.333?" | É uma PREDIÇÃO, não uma descoberta; foi travada antes de qualquer dado; o estimador θ_obs está calibrado para testá-la; o modelo tem 3 frentes de falseabilidade (θ, C50, dose-resposta) |
 | "Isto é filosofia, não ciência" | É metodologia com 38 fontes verificadas, 54 claims com hash, 48 fatos numéricos, equações com proveniência, simulação reproduzida, revisão hostil de máquina, e pré-registro timestampado |

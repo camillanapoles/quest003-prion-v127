@@ -1,6 +1,6 @@
 # COMPUTATIONAL ETRIZATION IN PRION DISEASES: APPLIED TO THE PrP-V127 THERAPEUTIC PLATFORM
 
-**Unified thesis — EN companion** (Parte 1 body: `manuscript_EN_v5.md` · Parte 2 body: `manuscript_Parte2_v1_EN.md` · this file mirrors the NEW unified-edition content: preamble, board note, shared-data chapter, the M3.1 dose section, reorganized limitations, conclusions. Claim-tags are exact-parity with the PT master; the registry (`claims.csv`) is natively EN.)
+**Unified thesis — EN companion** (chapter numbers follow the 13-chapter unified master; Parte 1 body: `manuscript_EN_v5.md` · Parte 2 body: `manuscript_Parte2_v1_EN.md` · this file mirrors the NEW unified-edition content: preamble, board note, shared-data chapter, the M3.1 dose section, reorganized limitations, conclusions. Claim-tags are exact-parity with the PT master; the registry (`claims.csv`) is natively EN.)
 
 ---
 
@@ -58,7 +58,7 @@ The therapeutic design (rules 1–3, θ\*=0.333, 8–12 mm ring) **was born BEFO
 
 ---
 
-# CHAPTER 4.3 (EN) — THE FIRST CALCULATED DOSE: A6 DOSE BAND [SIM-planning]
+# CHAPTER 6.3 (EN) — THE FIRST CALCULATED DOSE: A6 DOSE BAND [SIM-planning]
 
 **Dimensional chain (every cell with unit+source; canonical JSON `experiments/m31/m31_u1u2.json`):** κ_req (titration rule) → peak-deposit concentration c = κ_req × Kd → per-deposit amount n = c × V_halo → mass = n × MW. The apparent-Kd band is **0.071–1.0 µM** *(illustrative assumption; closed by arm A6)*: the floor, 71 nM, is the SPR-measured Kd for Aβ42 oligomers binding human PrP — **declared proxy**, since the V127↔PrP^Sc pair has no measured Kd; the ceiling, 1 µM, is Part 1 §2.2's illustrative anchor *(not a measured secretion estimate)*. The halo volume is a cylinder r×h with r₁₀%=4–6 mm and ECS fraction 0.15–0.25 (2 mm shell declared Type-B). The molecular weight is **22.83 kDa**, computed from our own P04156 sequences (residues 23–231, mature form; V127 is a same-mass variant, Δ=+14 Da). Chain sources: Kd-floor [evidence:E057] · V-halo [evidence:E030] · ECS [evidence:E010] · MW [evidence:E058] · titration [evidence:E032].
 
@@ -83,11 +83,11 @@ At the human rung the A6 dose is **0.0–2.6 µg V127ΔGPI per deposit** (redose
 
 ---
 
-# CHAPTER 8 (EN, reorganized) — LIMITATIONS AS FRUIT
+# CHAPTER 12 (EN, reorganized) — LIMITATIONS AS FRUIT
 
-Full English limitation list (15 items): see `manuscript_EN_v5.md` §Limitations — reorganized here by class, each with the gate that closes it: transfer (murine→human closed structurally by Scenario B, in measure by G0-wet; κ↔µM proxy **quantified by the ≈53× band** [claim:C060], closed by arm A6) · horizon (θ\* horizon-dependent; definition declared at every citation [claim:C056]) · model-structure (grid-corner escapes = lower bound, finer grid pre-declared; species reduces to Kt band; capping functional form falsifiable by A6 [claim:C051]) · monitored sources (preprints; retracted trial excluded by rule [claim:C024]) · execution (single-rater partner weights; co-rating pre-declared) · localization (E200K-Brazil compassionate route specified, not promised).
+Full English limitation list (15 items): full list: `manuscript_EN_v5.md` §Limitations; chapter mapping per the 13-chapter PT master — reorganized here by class, each with the gate that closes it: transfer (murine→human closed structurally by Scenario B, in measure by G0-wet; κ↔µM proxy **quantified by the ≈53× band** [claim:C060], closed by arm A6) · horizon (θ\* horizon-dependent; definition declared at every citation [claim:C056]) · model-structure (grid-corner escapes = lower bound, finer grid pre-declared; species reduces to Kt band; capping functional form falsifiable by A6 [claim:C051]) · monitored sources (preprints; retracted trial excluded by rule [claim:C024]) · execution (single-rater partner weights; co-rating pre-declared) · localization (E200K-Brazil compassionate route specified, not promised).
 
-# CHAPTER 9 (EN) — CONCLUSIONS BY OBJECTIVE
+# CHAPTER 13 (EN) — CONCLUSIONS BY OBJECTIVE
 
 **OE1** (name and formalize etrization) — achieved: P0–P6 with per-step guarantees; board note differentiates from IST and meta-analysis [claim:C054]. **OE2** (Validity Base) — achieved: triad + full lineage (now 7 lines, including the κ-concentration anchor band) [claim:C046]. **OE3** (results as [SIM] findings) — achieved: threshold; rules 1–3; discriminating sensitivity; probabilistic frame; boundary-calibrated estimator; derived decision-table; multi-species validation; **and the first calculated dose with propagated uncertainty** — the A6 band (0.0–2.6 µg/deposit at the human rung; width ≈53× = what G0-A6 closes) converts Part 3's dose rule into a mass prognosis [claim:C038, C051, C052, C055–C060]. **OE4** (continuity documented as method) — achieved [claim:C053]. **OE5** (hostile review + expressed validation) — achieved: R0–R3 two profiles 0 BLOCKED; AST 9/9; registry 60 claims · 58 sources · 65 numeric facts.
 
