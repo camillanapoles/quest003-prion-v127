@@ -1,0 +1,62 @@
+name: Tese ABNT Build
+on:
+  push:
+    branches: [main]
+    paths: ["paper/manuscript_Parte2_v1.md"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  abnt:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Deps (pandoc + xetex + fontes)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq pandoc texlive-latex-base texlive-latex-recommended \
+            texlive-fonts-recommended texlive-xetex
+
+      - name: Pré-processa (sanitização mínima)
+        run: python3 scripts/pandoc_safe.py paper/manuscript_Parte2_v1.md /tmp/tese_safe.md
+
+      - name: Gera .tex (ABNT NBR 14724 · 12pt · report · Times-like · sem --toc, SUMÁRIO manual é a fonte)
+        run: |
+          pandoc /tmp/tese_safe.md -f markdown -t latex -s \
+            -V documentclass=report -V fontsize=12pt \
+            -V mainfont="TeX Gyre Termes" \
+            -V geometry="a4paper" \
+            -H paper/latex/abnt_preamble.tex \
+            --metadata title="ETRIZAÇÃO COMPUTACIONAL EM DOENÇAS PRIÔNICAS" \
+            --metadata author="Camilla N." \
+            -o /tmp/tese_abnt.tex
+          cp /tmp/tese_abnt.tex paper/latex/tese_v2_ABNT.tex
+
+      - name: Compila (xelatex ×2 — Unicode nativo θ/×/≥)
+        run: |
+          cd /tmp && cp $GITHUB_WORKSPACE/paper/latex/tese_v2_ABNT.tex .
+          xelatex -interaction=nonstopmode tese_v2_ABNT.tex > /tmp/x1.log 2>&1 || true
+          xelatex -interaction=nonstopmode tese_v2_ABNT.tex > /tmp/x2.log 2>&1 || true
+          test -f tese_v2_ABNT.pdf || { echo '✗ erros xelatex:'; grep -A2 '^!' /tmp/x2.log | tail -25; exit 1; }
+          cp tese_v2_ABNT.pdf $GITHUB_WORKSPACE/paper/latex/tese_v2_ABNT.pdf
+          echo "páginas: $(pdfinfo tese_v2_ABNT.pdf 2>/dev/null | grep Pages || echo '?')"
+
+      - name: Versiona PDF ABNT [SIM-edição]
+        run: |
+          git config user.name "ci-garantista"
+          git config user.email "camillanapoles@users.noreply.github.com"
+          git add paper/latex/tese_v2_ABNT.pdf paper/latex/tese_v2_ABNT.tex
+          git commit -m "ci(abnt): tese v2 PDF NBR 14724 (12pt/1,5/margens 3-2cm/Sumário único) — sob gate AST" || echo nada
+          git push
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tese-abnt-pdf
+          path: paper/latex/tese_v2_ABNT.pdf

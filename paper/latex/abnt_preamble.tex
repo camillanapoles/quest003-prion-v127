@@ -1,0 +1,29 @@
+% ── ABNT NBR 14724 preamble — tese v2 (Quest 003) ─────────────────
+% Uso: pandoc md → tex -H abnt_preamble.tex (xelatex, 12pt, report)
+% Margens ABNT: esq/sup 3cm · dir/inf 2cm · A4 · espaçamento 1,5
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[a4paper, left=3cm, top=3cm, right=2cm, bottom=2cm, headheight=1cm]{geometry}
+% Numeração de página: canto superior direito (ABNT NBR 6024)
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO]{\thepage}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+% Capítulos: maiúsculas, centralizados (ABNT NBR 6024)
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\bfseries\centering\MakeUppercase}{\thechapter}{0.5em}{}
+\titlespacing*{\chapter}{0pt}{0pt}{1.5cm}
+\titleformat{\section}{\bfseries\MakeUppercase}{\thesection}{0.5em}{}
+% Parágrafos: recuo 1,25 cm, sem espaço entre (ABNT)
+\usepackage{indentfirst}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+% Citações longas: recuo 4 cm (ABNT NBR 10520)
+\usepackage{quoting}
+\quotingsetup{leftmargin=4cm, rightmargin=0cm, fontsize=\small}
+% Tabelas: fonte menor, legenda acima (ABNT NBR 6026)
+\usepackage{caption}
+\captionsetup[table]{font=small, position=top, labelformat=simple}
+\captionsetup[figure]{font=small, position=bottom}
