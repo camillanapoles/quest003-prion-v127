@@ -1,0 +1,55 @@
+{
+ "meta": {
+  "tier": "[SIM]",
+  "species": "mouse",
+  "group": "A_ponto",
+  "band": [
+   1.0
+  ],
+  "kappas": [
+   1.5,
+   2.0,
+   3.0,
+   4.0,
+   8.0
+  ],
+  "defs": "escape>=2.80 flag \u00b7 kmin=menor k com R_norm<=0.90mm sem escape \u00b7 theta=1/(1+kmin)",
+  "c0": {
+   "final_R_mm": 2.828,
+   "T1": true,
+   "pass": true
+  },
+  "wall_total_s": 682.4
+ },
+ "rows": [
+  {
+   "Kt_scale": 1.0,
+   "kappa_min": 1.5,
+   "theta_star": 0.4,
+   "R_by_kappa": {
+    "1.5": 0.659,
+    "2.0": 0.647,
+    "3.0": 0.637,
+    "4.0": 0.637,
+    "8.0": 0.607
+   },
+   "escape_by_kappa": {
+    "1.5": false,
+    "2.0": false,
+    "3.0": false,
+    "4.0": false,
+    "8.0": false
+   }
+  }
+ ],
+ "summary": {
+  "theta_star_values": [
+   0.4
+  ],
+  "theta_range": [
+   0.4,
+   0.4
+  ],
+  "theta_mouse_ref": 0.333
+ }
+}
