@@ -34,3 +34,13 @@ scholar-evaluation (rúbrica alfa + critério fidelidade-evidencial) sobre §-â
 
 ## 5. Estado dos gates (evidência)
 AST 9/9 local + CI AST Quality Gate SUCCESS (writing-v2-test) · validadores registro 0/0 · V4 3× PASS · latex_guard 0 erros · word_guard PASS (exceto TODO legítimo) · integrity_audit ALL CLEAN · CI build unificado: PDF+docx versionados.
+
+---
+
+## ATUALIZAÇÃO (pós-rodada, 01/09 ~21:40): métrica-2 EXECUTADA pelo agente — B passou
+
+O gate guardian R0-R3 perfil-part2 foi rodado NA tese unificada (metric §4 do protocolo, "sem isenção"):
+- **1ª rodada: FAIL 21 BLOCKED / 30 AMEND** — todas de classe contrato-de-tag (B over-taggeava assumptions κ↔µM como se fossem medida; canon não referenciado)
+- **Correção em 1 iteração** (dialeto-da-casa) → **PASS 0 BLOCKED / 0 AMEND** — mesmo patamar contratual do A (relatório: paper/guardian/guardian_report_unified_test.md)
+- B agora detém: gate 0/0 ✓ · AST 9/9 @ ratchet 60/58/65 ✓ · validadores 0/0 ✓ · V4 3×PASS ✓ · CI superconjunto ✓
+- **O veredito do agente passa a ser: ADOTAR B** (ver matriz e justificativa na conversa com a autora; métrica-3 leitura-cega permanece dela)
