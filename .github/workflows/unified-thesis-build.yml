@@ -32,7 +32,7 @@ jobs:
           test -f paper/latex/figs/fig4_theta_species.png
           test -f paper/latex/figs/fig5_dose_ladder.png
 
-      - name: main.tex EDIÇÃO A+ (builder determinístico: md-mestre → pandoc → \cite/thebibliography/audit-macro)
+      - name: "main.tex EDIÇÃO A+ (builder determinístico — md-mestre → pandoc → citações/audit-macro)"
         run: python3 scripts/build_aplus_tex.py
 
       - name: PDF (xelatex ×2, cwd=final_paper para os caminhos ../.. das figuras)
