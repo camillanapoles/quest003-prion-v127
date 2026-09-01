@@ -1,0 +1,50 @@
+name: P-024 Multispecies theta-star
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  species:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    strategy:
+      fail-fast: false
+      matrix:
+        species: [mouse, human, hamster, vole]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q numpy
+
+      - name: Restore checkpoint (artifact de run anterior, se houver)
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: p024-${{ matrix.species }}-ckpt
+          path: out/
+
+      - name: Driver (motor v4 exato; C0 por job; escape-flag; pareamento próprio)
+        env:
+          SPECIES: ${{ matrix.species }}
+        run: python3 experiments/p024_driver.py --species ${{ matrix.species }}
+
+      - name: Versionar resultado [SIM]
+        run: |
+          cp out/p024_${{ matrix.species }}.json experiments/xspecies/p024_${{ matrix.species }}.json
+          git config user.name "ci-garantista"
+          git config user.email "camillanapoles@users.noreply.github.com"
+          git fetch --depth=3 origin main && git rebase origin/main || true
+          git add experiments/xspecies/p024_*.json
+          git commit -m "p024(P-002): θ* ${{ matrix.species }} [SIM] — κ_min/escape por banda (C0 ok; defs pré-registradas)" || echo "nada"
+          git push
+
+      - name: Upload checkpoint
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p024-${{ matrix.species }}-ckpt
+          path: out/p024_${{ matrix.species }}_partial.json
