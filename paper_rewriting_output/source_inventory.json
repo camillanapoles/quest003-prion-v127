@@ -1,0 +1,4573 @@
+[
+  {
+    "path": ".codex/prompts/.deepscientist-prompt-sync.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 272
+  },
+  {
+    "path": ".codex/prompts/benchstore/system.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 1891
+  },
+  {
+    "path": ".codex/prompts/connectors/lingzhu.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 2551
+  },
+  {
+    "path": ".codex/prompts/connectors/qq.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 12976
+  },
+  {
+    "path": ".codex/prompts/connectors/weixin.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 20216
+  },
+  {
+    "path": ".codex/prompts/contracts/admin_ops.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3806
+  },
+  {
+    "path": ".codex/prompts/contracts/admin_ops_knowledge.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 9461
+  },
+  {
+    "path": ".codex/prompts/contracts/shared_interaction.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 5687
+  },
+  {
+    "path": ".codex/prompts/start_setup/system.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 25078
+  },
+  {
+    "path": ".codex/prompts/system.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 96653
+  },
+  {
+    "path": ".codex/prompts/system_copilot.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 8347
+  },
+  {
+    "path": ".ds/agent_status.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 208
+  },
+  {
+    "path": ".ds/artifact_projection.lock",
+    "extension": ".lock",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 0
+  },
+  {
+    "path": ".ds/bash_exec/summary.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 169
+  },
+  {
+    "path": ".ds/cache/artifact_projection.v2.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 320
+  },
+  {
+    "path": ".ds/lab_canvas_state.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 162
+  },
+  {
+    "path": ".ds/research_state.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 598
+  },
+  {
+    "path": ".ds/runtime_state.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 917
+  },
+  {
+    "path": ".ds/user_message_queue.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 79
+  },
+  {
+    "path": ".git/COMMIT_EDITMSG",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 548
+  },
+  {
+    "path": ".git/FETCH_HEAD",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 865
+  },
+  {
+    "path": ".git/HEAD",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 32
+  },
+  {
+    "path": ".git/ORIG_HEAD",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/config",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 508
+  },
+  {
+    "path": ".git/description",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 73
+  },
+  {
+    "path": ".git/hooks/applypatch-msg.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 509
+  },
+  {
+    "path": ".git/hooks/commit-msg.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2003
+  },
+  {
+    "path": ".git/hooks/fsmonitor-watchman.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 4638
+  },
+  {
+    "path": ".git/hooks/post-update.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 220
+  },
+  {
+    "path": ".git/hooks/pre-applypatch.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 455
+  },
+  {
+    "path": ".git/hooks/pre-commit.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1680
+  },
+  {
+    "path": ".git/hooks/pre-merge-commit.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 447
+  },
+  {
+    "path": ".git/hooks/pre-push.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1405
+  },
+  {
+    "path": ".git/hooks/pre-rebase.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 4929
+  },
+  {
+    "path": ".git/hooks/pre-receive.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 575
+  },
+  {
+    "path": ".git/hooks/prepare-commit-msg.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1523
+  },
+  {
+    "path": ".git/hooks/push-to-checkout.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2814
+  },
+  {
+    "path": ".git/hooks/sendemail-validate.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2339
+  },
+  {
+    "path": ".git/hooks/update.sample",
+    "extension": ".sample",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 3681
+  },
+  {
+    "path": ".git/index",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 43460
+  },
+  {
+    "path": ".git/info/exclude",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 240
+  },
+  {
+    "path": ".git/info/refs",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 190
+  },
+  {
+    "path": ".git/logs/HEAD",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 24913
+  },
+  {
+    "path": ".git/logs/refs/heads/m31-dose",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2899
+  },
+  {
+    "path": ".git/logs/refs/heads/main",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 13373
+  },
+  {
+    "path": ".git/logs/refs/heads/tese-v2-parte3",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 692
+  },
+  {
+    "path": ".git/logs/refs/heads/writing-v2-test",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1786
+  },
+  {
+    "path": ".git/logs/refs/remotes/origin/HEAD",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 139
+  },
+  {
+    "path": ".git/logs/refs/remotes/origin/main",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 6877
+  },
+  {
+    "path": ".git/logs/refs/remotes/origin/writing-v2-test",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 133
+  },
+  {
+    "path": ".git/objects/00/0c232b5614eb7a65a035c37fd04761431ea040",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 540
+  },
+  {
+    "path": ".git/objects/00/3dc4e68073cef1030effb59b6c5b39cbd6f6c3",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1103
+  },
+  {
+    "path": ".git/objects/00/9d8f4b06de926bc700abe2fd45913681268a53",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2225
+  },
+  {
+    "path": ".git/objects/00/e7499682d25bded5da90925cc913e7df3eab30",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 60
+  },
+  {
+    "path": ".git/objects/01/6e1569234f78b445079ab8d555715df11fb6f5",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/02/7871390bd2fac769d9a35b30712fa19e7c5e1d",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 385
+  },
+  {
+    "path": ".git/objects/03/b88a842493bfd4803271292039d52a42945f02",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 570
+  },
+  {
+    "path": ".git/objects/04/33815dcd0f09d14fd287b6ea0b6abed5270f6c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 39256
+  },
+  {
+    "path": ".git/objects/05/47efb0b1dbe22031870117757b95c96c02dd5b",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2058
+  },
+  {
+    "path": ".git/objects/05/a1f1b1006cb1486095c247e8666a5e88550ae2",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 599
+  },
+  {
+    "path": ".git/objects/07/3a9dc415af1cc08b25489455bf36b320669bad",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2770
+  },
+  {
+    "path": ".git/objects/0b/2d75a56a643387145a1318dc7596f5945e3238",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 260
+  },
+  {
+    "path": ".git/objects/0c/99e536f5550b5cfd59c206e670e025f327ba88",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 379
+  },
+  {
+    "path": ".git/objects/0d/17f34a290ceb77f7d4c5f897e5f414d82ec7a8",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 331
+  },
+  {
+    "path": ".git/objects/0e/80e0b89412acb4cc7d87fa5d4bfc4b8b139695",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 545
+  },
+  {
+    "path": ".git/objects/0e/c1cc56fb21e7f602be4e6537305dd6d6f25f98",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 620
+  },
+  {
+    "path": ".git/objects/11/6732c7b835aac96c4b2906087ab57b60e57c3a",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1339
+  },
+  {
+    "path": ".git/objects/12/55be77a3efd4c2f9b869bf9a487ae85e601c42",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1254
+  },
+  {
+    "path": ".git/objects/14/0520e16814b25ce8ee03ffde487767e72d453c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 463
+  },
+  {
+    "path": ".git/objects/15/87a4f1d19b1bc90d498596abdd7b60638015af",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 177005
+  },
+  {
+    "path": ".git/objects/19/8d768138455b065fbb8a1cfd0c167639a0c9e2",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1124
+  },
+  {
+    "path": ".git/objects/1a/3b5ad4781cbd8ffb8276c5faf99105c7c51604",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2289
+  },
+  {
+    "path": ".git/objects/1a/832970a18e58fb0a3061bcd6d1403bfa2fb516",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2619
+  },
+  {
+    "path": ".git/objects/1b/84fe2660cddcf644c80aa17b447ddac889b574",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1338
+  },
+  {
+    "path": ".git/objects/1b/caf619406c19db92e54671404488e4caa10e2e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1143
+  },
+  {
+    "path": ".git/objects/1b/e68a4b445b902661f2edf505a017f864737f0e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1143
+  },
+  {
+    "path": ".git/objects/1e/6066f83c372a713f894fa8145c5939489d95ca",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 579
+  },
+  {
+    "path": ".git/objects/20/89b19c63146c33d22d41d894a6afd3c24c2436",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 4561
+  },
+  {
+    "path": ".git/objects/20/990b81bb8353c31a1db13a247250ab45120ec9",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 39292
+  },
+  {
+    "path": ".git/objects/22/71ab44d078f921080fb8dc007eaed08e1ff949",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 167908
+  },
+  {
+    "path": ".git/objects/23/29049a6c9e7cddf46e3c79c482d4e6be7a3ef4",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 422
+  },
+  {
+    "path": ".git/objects/23/c8aa22bbbe24b4c9416c4ae8f3a74ba2e22686",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/25/7cdcc23247ce0c795803e72d8c9667a5b16950",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 5212
+  },
+  {
+    "path": ".git/objects/28/a6e17b24d402b0668bda5728a2e74edf1168ad",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1327
+  },
+  {
+    "path": ".git/objects/29/c9a09b7b7bf192d8f1816cec6b7d55399f7796",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1143
+  },
+  {
+    "path": ".git/objects/2a/1871ffd663be53e9620731578fc6c7f1af3484",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 51
+  },
+  {
+    "path": ".git/objects/2e/3c0832a01807d6b7a89dabd93717aa884281ef",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 8226
+  },
+  {
+    "path": ".git/objects/2e/d9d5090e9c8489427f16f1cf9b42211cee4913",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/32/867a9a22e8b06bb2b488bf6c2e2ce13f6eff17",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/33/04addfd3b1af05b1f16a0dae9061047031d217",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 212
+  },
+  {
+    "path": ".git/objects/33/f2e9f6b59f2b254b54673ea346272ad82b76d1",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 365
+  },
+  {
+    "path": ".git/objects/35/312fb4d62918b40603d498a9fd272b436264a2",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/35/368cdde4cc1fcfa74a6e6a0908d93fbb28b917",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/39/2430e2fb4e78ffcf619f15bccc0d55b4cd470f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 889
+  },
+  {
+    "path": ".git/objects/39/59abd4de57c235d337cef5ba888c01e008f85b",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1338
+  },
+  {
+    "path": ".git/objects/39/ab735df6ceb30fe793723e1acd147ebdba799c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1532
+  },
+  {
+    "path": ".git/objects/3a/11bb42d5b5017656bf6ed72d41058767365262",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/3c/45e97562964dad910dbe2f6f267a40192a5ba9",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1309
+  },
+  {
+    "path": ".git/objects/3d/9147c13413929bccf4ff443102ed2845aebc98",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 620
+  },
+  {
+    "path": ".git/objects/41/41df35dc068e02c4124439754568b470093e6e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 51
+  },
+  {
+    "path": ".git/objects/41/a16d6f9a2d80b9341ef059e3e8aeab830fb5df",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1162
+  },
+  {
+    "path": ".git/objects/43/3f3b53263ec2cab01a77698d46348d453e5010",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1337
+  },
+  {
+    "path": ".git/objects/43/6752cddb540b7a1cf6a27b8a3686ce72d3c7bf",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 312
+  },
+  {
+    "path": ".git/objects/44/e9d486bc0455b79411f5141b76aaa9c3d8d48a",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1173
+  },
+  {
+    "path": ".git/objects/46/2bcb5ea58c70c111393ff85250491139f9e072",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 16027
+  },
+  {
+    "path": ".git/objects/4a/a3e8e92975d370ef1c474cd5c61d7800dcb30c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/4b/461192e824e65fdb57df127689a3d7763b9930",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 726
+  },
+  {
+    "path": ".git/objects/4d/28a5f00f97cdd7a325928dfd5338657e16778d",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/4d/ceb3610531af751d0b741556478c798752acdd",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 47691
+  },
+  {
+    "path": ".git/objects/4e/131fc1764dbab699e9c3c53c66d799cda5264e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1161
+  },
+  {
+    "path": ".git/objects/4e/9e8471d8f5203e13c23149aadaa447204be736",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 153
+  },
+  {
+    "path": ".git/objects/4f/86857f53bf320d3f7e00090760083cd9b729d0",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 225
+  },
+  {
+    "path": ".git/objects/50/0e24851e073ddd96b4d95f55fef6edaed4d0e9",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 30869
+  },
+  {
+    "path": ".git/objects/51/52d31233ee9c2da1509c070ce3075b3d1494e1",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 931
+  },
+  {
+    "path": ".git/objects/52/972404622d486f27fd706c183737992fa5ebe4",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1189
+  },
+  {
+    "path": ".git/objects/55/05f006af85dd27bdbbaceee7c7575cd079466e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1339
+  },
+  {
+    "path": ".git/objects/56/296d71e7c58993f8cdb0d45db76bc671b6dd8d",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1116
+  },
+  {
+    "path": ".git/objects/56/55301af15438df20d156cb4317533389c4b562",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 625
+  },
+  {
+    "path": ".git/objects/57/bfcef923d47b3399d9b01f37884f06daf92f81",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1336
+  },
+  {
+    "path": ".git/objects/58/da330765c226cac34281d1665646074b13f089",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 322
+  },
+  {
+    "path": ".git/objects/5a/f21bd289be887d988e8dcbf4bad226e72cec29",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 52
+  },
+  {
+    "path": ".git/objects/5e/faff5061ab5d1fc78475db389c2632ae1bdd6b",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1338
+  },
+  {
+    "path": ".git/objects/62/8a0c6c472539e3a7b1e410fa3bbc24878c4b5f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/63/814e07f9354cc93b32c7ee05e5ddd31a273787",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2430
+  },
+  {
+    "path": ".git/objects/63/941ddd189db12d83b61ee58af61826ce298c38",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/64/8bbd83300e68a0fdfd885184ea9c6fe05810ce",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 279
+  },
+  {
+    "path": ".git/objects/67/298b281f33cc3db68226873903473b834cc434",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 339
+  },
+  {
+    "path": ".git/objects/67/e06ae13f598538979d9a6512e49938e8af7f6f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 405
+  },
+  {
+    "path": ".git/objects/67/ea9b7550f4ebcb2c5e273ed54e8b08e76ab5d7",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1106
+  },
+  {
+    "path": ".git/objects/68/027599719bf28ec5d1dc56f7597f58a63ac8b3",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1404
+  },
+  {
+    "path": ".git/objects/68/8143ed32b4d77e43d2ee3cf3ecedd8a5fa1577",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 215
+  },
+  {
+    "path": ".git/objects/69/2f7150041d52dac43c2fe017901b2cdcec32ca",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 279
+  },
+  {
+    "path": ".git/objects/6a/2eb3283ce124d5eb1a418bbb3f742c8cc87b80",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 261
+  },
+  {
+    "path": ".git/objects/6e/6f89c56896202a073fc9d4bb65a478f5bffa85",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 230
+  },
+  {
+    "path": ".git/objects/6f/1dea24532e8891ed514083fa6a3894bb5d40a7",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1339
+  },
+  {
+    "path": ".git/objects/70/451efb9c174988aded707427ffd81a1d959a06",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 393
+  },
+  {
+    "path": ".git/objects/71/6b01cc40082c62630035dcd46f1d3f668850d2",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1181
+  },
+  {
+    "path": ".git/objects/72/05fd8183745e531350f39b7712fa4615399c24",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/73/8cd529f7ac781851ef86c579722663e67d1145",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 51
+  },
+  {
+    "path": ".git/objects/75/8618c71362f8838487cb49bd9a3b8180dc534c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 215
+  },
+  {
+    "path": ".git/objects/77/2ca4935a0e03b6f6a09c9f0f93ed3b2c082600",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1339
+  },
+  {
+    "path": ".git/objects/77/93c3f72f6ecd4bf7d87089d3a30df277acbbdd",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1097
+  },
+  {
+    "path": ".git/objects/77/ba5a102cc86f9b506923654a25973eeb163bed",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 621
+  },
+  {
+    "path": ".git/objects/78/508b67eaa36e5bf342f6cf96383ec06731f3b0",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 214
+  },
+  {
+    "path": ".git/objects/78/5fa7d8ffd49b1e1ba55c462903a4d52266aecd",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1110
+  },
+  {
+    "path": ".git/objects/78/ecf2482d57b73ed54d02ce6f8076d0ace09ab7",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1338
+  },
+  {
+    "path": ".git/objects/79/773b084840ae3e942b0ead16a5ee70b6616daa",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 463
+  },
+  {
+    "path": ".git/objects/79/d3c99b2def4b5679b57347220ea7ecf36dca48",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 51
+  },
+  {
+    "path": ".git/objects/7b/5636e299eebb50eae80eef150a5fe6f98d527e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2060
+  },
+  {
+    "path": ".git/objects/7d/85eb68e94ddc87cb0a73987f29a6ebbc388e34",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/81/64ec0948c11db4f2df7829fc8e512f2ce2ab3f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/81/faf2baff858bbb90009e37a12caa7c08c9bd89",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/82/8e1a4a2ac17ea587c8de39cbc840a4f826832f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 7410
+  },
+  {
+    "path": ".git/objects/82/a334c79dc5012deb0904585dd63f510004dc4b",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1195
+  },
+  {
+    "path": ".git/objects/83/9aeaa6794d851c9e78d6f1d8ea78937db542dc",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 421
+  },
+  {
+    "path": ".git/objects/83/b90d773e6f77f7e62421b1add50669e87bd5e3",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 215
+  },
+  {
+    "path": ".git/objects/84/32d173e464c90562ae5c10c8698d75005ab41b",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1405
+  },
+  {
+    "path": ".git/objects/84/42547ef50060b7c109bd1782b1f78e1bd7e8d7",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 215
+  },
+  {
+    "path": ".git/objects/89/2c330184b9edd8ca45195f5e3b509f5b841c8c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 44305
+  },
+  {
+    "path": ".git/objects/89/85916a52a4b37bd15fe281533538456f388fe1",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 931
+  },
+  {
+    "path": ".git/objects/8a/1850218f1d3a10b286b99fdefaa9ba68f22b4a",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 5035
+  },
+  {
+    "path": ".git/objects/8c/85f768fc0b1ea476741ec1ed212834d9367b93",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 72
+  },
+  {
+    "path": ".git/objects/8c/c3d1679aa9cbd13b20673b862c298e1774f120",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1338
+  },
+  {
+    "path": ".git/objects/8d/209e80617b846ba79fda3cb7d4d86387018b8f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 638
+  },
+  {
+    "path": ".git/objects/8e/232b6894d66c305b6fd81c0a1c83dfa4eb9791",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 993
+  },
+  {
+    "path": ".git/objects/8f/c5e624e8a22bebfcc81761696d722563449b7a",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 3258
+  },
+  {
+    "path": ".git/objects/90/1fa6085ad6bf99b9a407e15ef7200b6108690c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 264
+  },
+  {
+    "path": ".git/objects/92/493ddbf8957e6c858d20ecfd2ff3c67e671d11",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 932
+  },
+  {
+    "path": ".git/objects/92/c70abcc9855faf1f47ba55ad84e6f29b7f4d9e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1390
+  },
+  {
+    "path": ".git/objects/92/e3d936016b77bf460f1b2b6781b4108fa6fd6c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 250
+  },
+  {
+    "path": ".git/objects/93/057f09f18decd905c723c107002ce42562019e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1045
+  },
+  {
+    "path": ".git/objects/93/7a5b664a84e0399456f21acedb96a6374c7106",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 892
+  },
+  {
+    "path": ".git/objects/94/54b8fa7cb5f24b7c1c4d711e4a5665b8a10756",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1342
+  },
+  {
+    "path": ".git/objects/95/ee2bb5727436d4ccd9cf251826c72771b4b5b7",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 559
+  },
+  {
+    "path": ".git/objects/96/7300e73f311a0916b6fb64e599939b0087e9a5",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/98/e7c026df49118a1266cbb3146dc591424b467e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 543
+  },
+  {
+    "path": ".git/objects/9c/2f9dc7fcdd2a83918c577fb654c208b4241cf1",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 7598
+  },
+  {
+    "path": ".git/objects/9c/dfb99921edc76a2992d67101ac963cc3f84aa4",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 346
+  },
+  {
+    "path": ".git/objects/9f/8038a27df92991e9155654e4a915618c7e07e6",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 40482
+  },
+  {
+    "path": ".git/objects/a0/979896243bbe98581daded3e3676760b2eabcd",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1942
+  },
+  {
+    "path": ".git/objects/a3/56eca72b73a632d1e0dc046607d5df2d14d139",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2638
+  },
+  {
+    "path": ".git/objects/a4/7144d4b78e091d8e3e6b6fd910e704a75d1b35",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 174015
+  },
+  {
+    "path": ".git/objects/a4/d2a51a6258daaa76af0e664e5ee223a182e0fa",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1203
+  },
+  {
+    "path": ".git/objects/a4/d46bac225b50e5b4e52cf72c5e15d111a209c6",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1202
+  },
+  {
+    "path": ".git/objects/a6/b932d67692445668956883b1853fa35dc37f0a",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 8320
+  },
+  {
+    "path": ".git/objects/a6/d49beb3647b38b54e91da3869669e9234b2775",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/a6/de4d1117316845b18d1894c4a1ca27f1dfe35e",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1338
+  },
+  {
+    "path": ".git/objects/a6/e19c770ef3800d52492f4c168d58f9fe27c4b1",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 33490
+  },
+  {
+    "path": ".git/objects/a7/98c57cba33997c1df5ea37eee2e6fb9048bf9f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 478
+  },
+  {
+    "path": ".git/objects/aa/08359b71f52ecec5b254be87c66b232241ae83",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/ab/5c37952d713b0c7ee9445e1acdac42e28be0c0",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/ad/841ebf1bcf5ab0813001233a1e1c23bf26c353",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/ad/e2c9145ed5eb958e75938a069f83a46dd1ccd1",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 931
+  },
+  {
+    "path": ".git/objects/ae/1930a0f5e8588ada0d9d63bc8a4433000a7d63",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1339
+  },
+  {
+    "path": ".git/objects/b0/8de39947e66594ee113e5143d1837a64a4faf6",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 213
+  },
+  {
+    "path": ".git/objects/b1/81e51b348516c6b3770118710a3f3c199d05c2",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 46290
+  },
+  {
+    "path": ".git/objects/b4/ba403792a393bed8da61f64d1fc57562115465",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 748
+  },
+  {
+    "path": ".git/objects/b5/288e8c069e48986b01c6d3e7d76e1a236732f2",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 293
+  },
+  {
+    "path": ".git/objects/b5/47c535110ae4acff500a0674158418bd036e84",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1339
+  },
+  {
+    "path": ".git/objects/b5/b0fdf4b2ef4d0ed51cae34fa3ec9c9da9c9c64",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 170338
+  },
+  {
+    "path": ".git/objects/b6/15008e763b39acc7b00cbb6afdbcb4cbf20694",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": ".git/objects/b6/e7048ef2e664d70343f4f2ba2730423b9d540f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 201
+  },
+  {
+    "path": ".git/objects/b7/5aafe7d3a54d106d1bb2c99dec136fd040797b",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1338
+  },
+  {
+    "path": ".git/objects/b7/cf418a49fae7b679f43cb1ab99879bde040db4",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 966
+  },
+  {
+    "path": ".git/objects/b7/efcdaa23cc66b284a3d18fae1d7ca72e668956",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1142
+  },
+  {
+    "path": ".git/objects/b8/ec8f2d567cd3e0026a2d71e13558325986de72",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1834
+  },
+  {
+    "path": ".git/objects/b9/4194f530e2a27c784c99264b7e57c1bd6d244f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 449
+  },
+  {
+    "path": ".git/objects/b9/aa72a468f6291bdb0454319468a8167f8a7a8c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 4839
+  },
+  {
+    "path": ".git/objects/b9/cd3c7b2c17c1c95a112bf5643b9d1724d834eb",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 215
+  },
+  {
+    "path": ".git/objects/ba/1e4082d740816193ddc04b11bab928aafc0fab",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 177008
+  },
+  {
+    "path": ".git/objects/bb/6f23c9697e280cd6f9a2ed4685d68fb108f083",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 330
+  },
+  {
+    "path": ".git/objects/bb/feeb4a9475169c5fcae1c66257546a706eb32a",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 214
+  },
+  {
+    "path": ".git/objects/bd/d35e8e197ea82186af8d1b18efa5c56728cc86",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 213
+  },
+  {
+    "path": ".git/objects/bd/e0531a3264eccdfbf9ecd0e7bc6bbb0bc2522c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 250
+  },
+  {
+    "path": ".git/objects/be/8d1914b7889403e46f55886437f84ff0955473",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 931
+  },
+  {
+    "path": ".git/objects/be/9804b961ba9808833196072449edec67e71b80",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 441
+  },
+  {
+    "path": ".git/objects/bf/b458cede84257c5bc8287c9124e5f9d3ff9118",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 164821
+  },
+  {
+    "path": ".git/objects/bf/fed9236c4be0248db9f1b470743cf7c9f162a4",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 238
+  },
+  {
+    "path": ".git/objects/c0/ea2ec071ca626fa980f7c9b14e0dc7da41f6da",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 941
+  },
+  {
+    "path": ".git/objects/c2/e802d87286e63365fda6281f473650d6b86635",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 932
+  },
+  {
+    "path": ".git/objects/c3/1678ea21b65a2a3474c9c948a7e7fbd4fb6c25",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/ca/de137d0963745b9f32b4245092438393b35b19",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1337
+  },
+  {
+    "path": ".git/objects/cb/00ec1fef8059d4d11e4d02bbeb57edafc15264",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 931
+  },
+  {
+    "path": ".git/objects/cb/33f231d107599144e02d649eca143d21d9755a",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 620
+  },
+  {
+    "path": ".git/objects/cd/b0d83581509a49b4fe3fe1db9f99683f7d91e1",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 892
+  },
+  {
+    "path": ".git/objects/cd/d80395638a99688edcdb5d641b95ee3aaf6c3d",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 351
+  },
+  {
+    "path": ".git/objects/ce/467caa080cc49aef1a40b18e9b0c92efe38b72",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 510
+  },
+  {
+    "path": ".git/objects/cf/fa5572a7fd83c364f504f8e92d402f975371fb",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 393
+  },
+  {
+    "path": ".git/objects/d1/bd8e1bdbf99a341f306abf364a5b912f9c0f2b",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 213
+  },
+  {
+    "path": ".git/objects/d2/34a7cffd79d9974e96ed7e1fd8ec2390dbbf45",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 4071
+  },
+  {
+    "path": ".git/objects/d2/9d9cdda24c1f7654f86305be3f5d349084b4be",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 931
+  },
+  {
+    "path": ".git/objects/d2/b99ae5ed9fc4d8c9f1acdbac6e7c28a00719e5",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 194
+  },
+  {
+    "path": ".git/objects/d4/e699c10c4dd9ba8aa3a995f6853c5716e099eb",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 4391
+  },
+  {
+    "path": ".git/objects/d7/c1e424809e25ac62fce6bdbc69c5df083a67f5",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 458
+  },
+  {
+    "path": ".git/objects/d8/ff44da6a5f154399449c8d6cdb5cf682a548bf",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 181689
+  },
+  {
+    "path": ".git/objects/d9/44f6f17061881171bfae4994d02989bd0aa720",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 177009
+  },
+  {
+    "path": ".git/objects/db/ce3fa83c609948f28a242ac1ca2eb381ef3ccd",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 368
+  },
+  {
+    "path": ".git/objects/dc/98a3d0a0c3c8bc7c145970139b794eefb1896f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 459
+  },
+  {
+    "path": ".git/objects/dc/e9c646504be393d500d618f7fe316c37694158",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1144
+  },
+  {
+    "path": ".git/objects/dd/42fa11471e46a225a106aeaa3c48c21f5d272c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 890
+  },
+  {
+    "path": ".git/objects/df/1cbc088a8fa1963751f4101ab9a975b5f1996f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 170326
+  },
+  {
+    "path": ".git/objects/e0/81a023cd8f94b5ca2cfeaf4d2fd2df3aa8327c",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1380
+  },
+  {
+    "path": ".git/objects/e6/c052f0841ea718f63a6fb35489f355fd80d638",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 252
+  },
+  {
+    "path": ".git/objects/e7/c4edb6fa39969a3cb15f7837bd8c1afb5997ba",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 421
+  },
+  {
+    "path": ".git/objects/e9/f76487c62a4ec89b4eaea67523ab3a2ed809fb",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 480
+  },
+  {
+    "path": ".git/objects/eb/52041afbd399bd6e683174ee2bd27d4b3c1303",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 621
+  },
+  {
+    "path": ".git/objects/eb/60b0330b63b4a14c6490b9974ce93727120eb0",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1338
+  },
+  {
+    "path": ".git/objects/ec/e6df909a14d940dae3ee201c9c32d72f31dcaf",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 535
+  },
+  {
+    "path": ".git/objects/ee/5f7cdf7f61ec45d1f1692f202fd305c52dbd2b",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 3480
+  },
+  {
+    "path": ".git/objects/ee/67b6c84caf3b53307d65a190e1061614974f29",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 31692
+  },
+  {
+    "path": ".git/objects/ee/f23b9fcde04a96fab321cc5f770c4ae330168f",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 32555
+  },
+  {
+    "path": ".git/objects/ef/b8db1c069975ccd7b5d57b83cdea6b25d6402d",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1344
+  },
+  {
+    "path": ".git/objects/f5/c30e1e7c37b02cab6f0d06391438082f914921",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1338
+  },
+  {
+    "path": ".git/objects/f8/1a83598a64b4ed11cbdf24d8645ce343bbe31a",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 931
+  },
+  {
+    "path": ".git/objects/fa/fffdcd6dcb70f72c0ab02b1be151975477a228",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 977
+  },
+  {
+    "path": ".git/objects/fd/724c9a385da8de18a49ea2521cc377ddd81541",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 4833
+  },
+  {
+    "path": ".git/objects/fd/94f229b676a2964535f2c9dbc6ad85088d3ba5",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 294
+  },
+  {
+    "path": ".git/objects/info/packs",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 160
+  },
+  {
+    "path": ".git/objects/pack/multi-pack-index",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 51920
+  },
+  {
+    "path": ".git/objects/pack/pack-7eb130ff7c0b2442b733bd6d8f45f9bf23ec9cc9.idx",
+    "extension": ".idx",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 14904
+  },
+  {
+    "path": ".git/objects/pack/pack-7eb130ff7c0b2442b733bd6d8f45f9bf23ec9cc9.pack",
+    "extension": ".pack",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 1800126
+  },
+  {
+    "path": ".git/objects/pack/pack-7eb130ff7c0b2442b733bd6d8f45f9bf23ec9cc9.rev",
+    "extension": ".rev",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2028
+  },
+  {
+    "path": ".git/objects/pack/pack-d407b250cb3a280ea36e9702707e86083d339d67.idx",
+    "extension": ".idx",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 36744
+  },
+  {
+    "path": ".git/objects/pack/pack-d407b250cb3a280ea36e9702707e86083d339d67.pack",
+    "extension": ".pack",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2079949
+  },
+  {
+    "path": ".git/objects/pack/pack-d407b250cb3a280ea36e9702707e86083d339d67.rev",
+    "extension": ".rev",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 5148
+  },
+  {
+    "path": ".git/objects/pack/pack-de7266475792b0622dcd3b5b82883ec8cba6c376.idx",
+    "extension": ".idx",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 2220
+  },
+  {
+    "path": ".git/objects/pack/pack-de7266475792b0622dcd3b5b82883ec8cba6c376.pack",
+    "extension": ".pack",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 457955
+  },
+  {
+    "path": ".git/objects/pack/pack-de7266475792b0622dcd3b5b82883ec8cba6c376.rev",
+    "extension": ".rev",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 216
+  },
+  {
+    "path": ".git/packed-refs",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 112
+  },
+  {
+    "path": ".git/refs/heads/m31-dose",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/heads/main",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/heads/tese-v2-parte3",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/heads/writing-v2-test",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/remotes/origin/HEAD",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 30
+  },
+  {
+    "path": ".git/refs/remotes/origin/main",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/remotes/origin/writing-v2-test",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/tags/tese-v2.1-alfa",
+    "extension": ".1-alfa",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/tags/v1.0",
+    "extension": ".0",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/tags/v2.6",
+    "extension": ".6",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/tags/v2.7",
+    "extension": ".7",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/tags/v3.0",
+    "extension": ".0",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/refs/tags/v6.0",
+    "extension": ".0",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".git/shallow",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41
+  },
+  {
+    "path": ".github/workflows/ast-quality-gate.yml",
+    "extension": ".yml",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1113
+  },
+  {
+    "path": ".github/workflows/p024-multispecies.yml",
+    "extension": ".yml",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1661
+  },
+  {
+    "path": ".github/workflows/pdf-version-audit.yml",
+    "extension": ".yml",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2472
+  },
+  {
+    "path": ".github/workflows/s3-sweep.yml",
+    "extension": ".yml",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2052
+  },
+  {
+    "path": ".github/workflows/tese-abnt.yml",
+    "extension": ".yml",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3018
+  },
+  {
+    "path": ".gitignore",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 79
+  },
+  {
+    "path": "AUDIT_CAPTURE_2026-08-30.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 5752
+  },
+  {
+    "path": "KNOWLEDGE_CANON.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 12105
+  },
+  {
+    "path": "PENDENCIAS.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 10006
+  },
+  {
+    "path": "PLAN_2027.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 6294
+  },
+  {
+    "path": "README.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3216
+  },
+  {
+    "path": "SUMMARY.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 40
+  },
+  {
+    "path": "THESIS_ROADMAP.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 7606
+  },
+  {
+    "path": "THESIS_ROADMAP.md.bak",
+    "extension": ".bak",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 6588
+  },
+  {
+    "path": "THESIS_ROADMAP_2028.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 328
+  },
+  {
+    "path": "analysis/ACTION_PLAN_CROSS_SPECIES.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 7463
+  },
+  {
+    "path": "analysis/GAP_MAPPER_REPORT.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 4173
+  },
+  {
+    "path": "analysis/GAP_MAPPER_V2_EXHAUSTIVE.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 16402
+  },
+  {
+    "path": "analysis/analogy_map.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 4279
+  },
+  {
+    "path": "analysis/bayes_analogia.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 4748
+  },
+  {
+    "path": "analysis/fractal_review.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "research",
+    "size_bytes": 8036
+  },
+  {
+    "path": "analysis/g0_probability_model.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2366
+  },
+  {
+    "path": "analysis/g0_probability_model.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 4530
+  },
+  {
+    "path": "analysis/probability_reassessment.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 2716
+  },
+  {
+    "path": "analysis/review_verdicts.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "research",
+    "size_bytes": 9008
+  },
+  {
+    "path": "analysis/solution_branches.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 5007
+  },
+  {
+    "path": "artifacts/dashboard/README.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 2041
+  },
+  {
+    "path": "artifacts/dashboard/WS9_ANIM.ipynb",
+    "extension": ".ipynb",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 11171
+  },
+  {
+    "path": "artifacts/dashboard/WS9_v4_HUMAN.ipynb",
+    "extension": ".ipynb",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 13091
+  },
+  {
+    "path": "artifacts/dashboard/data.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 53983
+  },
+  {
+    "path": "artifacts/dashboard/estado_atual.html",
+    "extension": ".html",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 28336
+  },
+  {
+    "path": "artifacts/dashboard/gen_estado.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 9915
+  },
+  {
+    "path": "artifacts/dashboard/graphify/2026-08-25/.graphify_analysis.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3039
+  },
+  {
+    "path": "artifacts/dashboard/graphify/2026-08-25/.graphify_labels.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 455
+  },
+  {
+    "path": "artifacts/dashboard/graphify/2026-08-25/GRAPH_REPORT.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 4959
+  },
+  {
+    "path": "artifacts/dashboard/graphify/2026-08-25/graph.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 39099
+  },
+  {
+    "path": "artifacts/dashboard/graphify/GRAPH_REPORT.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 4959
+  },
+  {
+    "path": "artifacts/dashboard/graphify/graph.html",
+    "extension": ".html",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 41520
+  },
+  {
+    "path": "artifacts/dashboard/graphify/graph.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 39099
+  },
+  {
+    "path": "artifacts/dashboard/index.html",
+    "extension": ".html",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 33566
+  },
+  {
+    "path": "artifacts/dashboard/preprint_v4_EN.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "material",
+    "size_bytes": 111892
+  },
+  {
+    "path": "artifacts/dashboard/preprint_v4_PT.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "material",
+    "size_bytes": 112473
+  },
+  {
+    "path": "artifacts/dashboard/server.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 527
+  },
+  {
+    "path": "artifacts/dashboard/snapshots/graph_completo.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 50170
+  },
+  {
+    "path": "artifacts/dashboard/snapshots/graph_historia.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 17666
+  },
+  {
+    "path": "artifacts/dashboard/snapshots/render_snapshots.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 5826
+  },
+  {
+    "path": "artifacts/dashboard/snapshots/scientific_map.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 37136
+  },
+  {
+    "path": "artifacts/dashboard/snapshots/ws9_curva_resposta.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 77349
+  },
+  {
+    "path": "artifacts/dashboard/snapshots/ws9_v4_human_fig.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 61724
+  },
+  {
+    "path": "artifacts/graphs/git-graph.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 56
+  },
+  {
+    "path": "artifacts/graphs/git-graph.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 3501
+  },
+  {
+    "path": "artifacts/graphs/git-graph.svg",
+    "extension": ".svg",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 351
+  },
+  {
+    "path": "brief.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 297
+  },
+  {
+    "path": "experiments/G0_EXECUTION_FREEZE_CHECKLIST.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3906
+  },
+  {
+    "path": "experiments/PARTNER_SELECTION_PROTOCOL.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "method",
+    "size_bytes": 9667
+  },
+  {
+    "path": "experiments/REPARAM_LOOP.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 2125
+  },
+  {
+    "path": "experiments/ast_check.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 6826
+  },
+  {
+    "path": "experiments/bayes_results/bayes_success.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3869
+  },
+  {
+    "path": "experiments/bayes_results/sensitivity_sweep.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 860
+  },
+  {
+    "path": "experiments/bayes_success_model.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 6823
+  },
+  {
+    "path": "experiments/cost_decomposition.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 2842
+  },
+  {
+    "path": "experiments/g0_protocol.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "method",
+    "size_bytes": 6992
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/.DS_Store",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 8196
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Axon Spreading/.DS_Store",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 6148
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Axon Spreading/AS_Init.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 2935
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Axon Spreading/AS_Run.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 3188
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Axon Spreading/Params.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 189
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Axon Spreading/Simul.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 884
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Axon Spreading/gifmaker.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 1457
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Axon Spreading/structvar.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 358
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Co-propagation/.DS_Store",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 6148
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Co-propagation/CP_Init.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 2261
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Co-propagation/CP_Run.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 3376
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Co-propagation/Params.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 146
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Co-propagation/Simul.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 1013
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Co-propagation/gifmaker.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 1444
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Co-propagation/structvar.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 358
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Neuron Bed/.DS_Store",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 6148
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Neuron Bed/NB_Init.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 2104
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Neuron Bed/NB_Run.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 3151
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Neuron Bed/Params.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 109
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Neuron Bed/Simul.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 749
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Neuron Bed/gifmaker.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 1304
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/Neuron Bed/structvar.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 358
+  },
+  {
+    "path": "experiments/igel2024_code/Code Papier/README.txt",
+    "extension": ".txt",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 7864
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/._.DS_Store",
+    "extension": ".ds_store",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/._Axon Spreading",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 220
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/._Co-propagation",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 220
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/._Neuron Bed",
+    "extension": "",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 220
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/._README.txt",
+    "extension": ".txt",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 752
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Axon Spreading/._.DS_Store",
+    "extension": ".ds_store",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Axon Spreading/._AS_Init.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 176
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Axon Spreading/._AS_Run.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 176
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Axon Spreading/._Params.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 484
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Axon Spreading/._Simul.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 176
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Axon Spreading/._gifmaker.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Axon Spreading/._structvar.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Co-propagation/._.DS_Store",
+    "extension": ".ds_store",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Co-propagation/._CP_Init.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 176
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Co-propagation/._CP_Run.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Co-propagation/._Params.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 327
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Co-propagation/._Simul.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 176
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Co-propagation/._gifmaker.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Co-propagation/._structvar.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Neuron Bed/._.DS_Store",
+    "extension": ".ds_store",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Neuron Bed/._NB_Init.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Neuron Bed/._NB_Run.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Neuron Bed/._Params.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 484
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Neuron Bed/._Simul.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Neuron Bed/._gifmaker.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/igel2024_code/__MACOSX/Code Papier/Neuron Bed/._structvar.m",
+    "extension": ".m",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 120
+  },
+  {
+    "path": "experiments/m31/M31_SESSAO2_PLANO.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3537
+  },
+  {
+    "path": "experiments/m31/m31_protocolo_garantista.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "method",
+    "size_bytes": 4971
+  },
+  {
+    "path": "experiments/m31/m31_u1u2.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2684
+  },
+  {
+    "path": "experiments/m31/make_fig5_doseladder.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 4419
+  },
+  {
+    "path": "experiments/m31/u1_u2_dimensional_mw.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 3663
+  },
+  {
+    "path": "experiments/m31/u6_register_claims.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 7540
+  },
+  {
+    "path": "experiments/p024_driver.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 6100
+  },
+  {
+    "path": "experiments/part2_results/nf_notes_sidecar.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 854
+  },
+  {
+    "path": "experiments/part2_results/part2_derived_summary.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1462
+  },
+  {
+    "path": "experiments/part2_results/part2_theta_obs_pooled.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1677
+  },
+  {
+    "path": "experiments/part2_results/part2_theta_obs_v1.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1737
+  },
+  {
+    "path": "experiments/part2_results/part2_theta_obs_v11.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 909
+  },
+  {
+    "path": "experiments/part2_results/partner_selection_log.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 7393
+  },
+  {
+    "path": "experiments/part2_results/q1.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 250
+  },
+  {
+    "path": "experiments/part2_results/q2.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 236
+  },
+  {
+    "path": "experiments/part2_theta_obs_pooled.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 4278
+  },
+  {
+    "path": "experiments/part2_theta_obs_v1.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 5117
+  },
+  {
+    "path": "experiments/part2_theta_obs_v11.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 2383
+  },
+  {
+    "path": "experiments/partner_selection/RUNBOOK.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 4057
+  },
+  {
+    "path": "experiments/partner_selection/candidates_v1.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1318
+  },
+  {
+    "path": "experiments/partner_selection/contacts_log.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 61
+  },
+  {
+    "path": "experiments/partner_selection/decision_log.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 170
+  },
+  {
+    "path": "experiments/s3_driver.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 4764
+  },
+  {
+    "path": "experiments/s3_harvest.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 4081
+  },
+  {
+    "path": "experiments/sensitivity_sweep.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 2493
+  },
+  {
+    "path": "experiments/ws_10_spec.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 10645
+  },
+  {
+    "path": "experiments/ws_7_results/ws7_steady_field.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 18636
+  },
+  {
+    "path": "experiments/ws_7_results/ws7_thiele_chart.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 9182
+  },
+  {
+    "path": "experiments/ws_7_results/ws7_v2_panel.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 20517
+  },
+  {
+    "path": "experiments/ws_7_results/ws_7_results.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "result",
+    "size_bytes": 1357
+  },
+  {
+    "path": "experiments/ws_7_results/ws_7_v2.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1111
+  },
+  {
+    "path": "experiments/ws_7_solver.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 8982
+  },
+  {
+    "path": "experiments/ws_7_transport.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 13931
+  },
+  {
+    "path": "experiments/ws_7_v2_wave.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 5492
+  },
+  {
+    "path": "experiments/ws_8_bayes.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 5747
+  },
+  {
+    "path": "experiments/ws_8_local.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 4842
+  },
+  {
+    "path": "experiments/ws_8_results/run_local.log",
+    "extension": ".log",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 42
+  },
+  {
+    "path": "experiments/ws_9_port.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 6255
+  },
+  {
+    "path": "experiments/ws_9_results/run.log",
+    "extension": ".log",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 969
+  },
+  {
+    "path": "experiments/ws_9_results/s3_partial_seed.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1858
+  },
+  {
+    "path": "experiments/ws_9_results/ws_9_insilico.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1428
+  },
+  {
+    "path": "experiments/ws_9_results/ws_9_v4_human.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 688
+  },
+  {
+    "path": "experiments/ws_9_results/ws_9_v4_human.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 61724
+  },
+  {
+    "path": "experiments/ws_9_results/ws_9_v5_sweeps_S1.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 839
+  },
+  {
+    "path": "experiments/ws_9_results/ws_9_v5_sweeps_S1_authors_rerun.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 839
+  },
+  {
+    "path": "experiments/ws_9_results/ws_9_v5_sweeps_S2.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 460
+  },
+  {
+    "path": "experiments/ws_9_results/ws_9_v5_sweeps_S3.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2222
+  },
+  {
+    "path": "experiments/ws_9_run.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 5174
+  },
+  {
+    "path": "experiments/ws_9_v5_sweeps.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 2149
+  },
+  {
+    "path": "experiments/ws_9_v5_sweeps_gha.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 10821
+  },
+  {
+    "path": "experiments/xspecies/corridon_meta.txt",
+    "extension": ".txt",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 227
+  },
+  {
+    "path": "experiments/xspecies/make_fig4_thetaspecies.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 2833
+  },
+  {
+    "path": "experiments/xspecies/p003_esum.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 38368
+  },
+  {
+    "path": "experiments/xspecies/p003_mycheck.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 6433
+  },
+  {
+    "path": "experiments/xspecies/p003_pool.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 13965
+  },
+  {
+    "path": "experiments/xspecies/p024_hamster.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1460
+  },
+  {
+    "path": "experiments/xspecies/p024_human.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1454
+  },
+  {
+    "path": "experiments/xspecies/p024_mouse.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 800
+  },
+  {
+    "path": "experiments/xspecies/p024_vole.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1451
+  },
+  {
+    "path": "experiments/xspecies/papers_batch1.txt",
+    "extension": ".txt",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 823
+  },
+  {
+    "path": "experiments/xspecies/papers_batch2.txt",
+    "extension": ".txt",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 629
+  },
+  {
+    "path": "experiments/xspecies/papers_batch3.txt",
+    "extension": ".txt",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 842
+  },
+  {
+    "path": "experiments/xspecies/prnp_identity_matrix.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2352
+  },
+  {
+    "path": "experiments/xspecies/prnp_ids.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 283
+  },
+  {
+    "path": "experiments/xspecies/prnp_key_positions.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 245
+  },
+  {
+    "path": "experiments/xspecies/prnp_region_analysis.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 773
+  },
+  {
+    "path": "experiments/xspecies/prnp_sequences.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2112
+  },
+  {
+    "path": "experiments/xspecies/species_params.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3347
+  },
+  {
+    "path": "guardian.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 74175
+  },
+  {
+    "path": "guardian2.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 12332
+  },
+  {
+    "path": "literature/evidence_table.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "result",
+    "size_bytes": 14316
+  },
+  {
+    "path": "literature/refs_audit.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 5857
+  },
+  {
+    "path": "literature/search_log.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3556
+  },
+  {
+    "path": "memory/knowledge/active-user-requirements.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "requirement",
+    "size_bytes": 504
+  },
+  {
+    "path": "out/part2_theta_obs_pooled.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1677
+  },
+  {
+    "path": "paper/ADENDO_FILOSOFICO_CAMARA.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 1708
+  },
+  {
+    "path": "paper/CHECKLIST_ENTREGA.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 5534
+  },
+  {
+    "path": "paper/ERITRIZACAO.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 12027
+  },
+  {
+    "path": "paper/G0_UNLOCK_DOSSIER.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 4646
+  },
+  {
+    "path": "paper/archive/README.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 440
+  },
+  {
+    "path": "paper/archive/build_preprint_full.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 8881
+  },
+  {
+    "path": "paper/archive/preprint_texts.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 27585
+  },
+  {
+    "path": "paper/archive/preprint_texts_pt.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 28683
+  },
+  {
+    "path": "paper/archive/preprint_v3_quest003.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "material",
+    "size_bytes": 20387
+  },
+  {
+    "path": "paper/archive/preprint_v4_EN.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "material",
+    "size_bytes": 111892
+  },
+  {
+    "path": "paper/archive/preprint_v4_PT.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "material",
+    "size_bytes": 112473
+  },
+  {
+    "path": "paper/audiencias_explicacao.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 11658
+  },
+  {
+    "path": "paper/build_pdf.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 21420
+  },
+  {
+    "path": "paper/build_preprint_full.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 8881
+  },
+  {
+    "path": "paper/conversa_tio_mindmap.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 8488
+  },
+  {
+    "path": "paper/draft-workspace/authorship.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1239
+  },
+  {
+    "path": "paper/draft-workspace/claims.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 6274
+  },
+  {
+    "path": "paper/draft-workspace/consistency_manifest.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 891
+  },
+  {
+    "path": "paper/draft-workspace/etl_report.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 416
+  },
+  {
+    "path": "paper/draft-workspace/manuscript.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 7902
+  },
+  {
+    "path": "paper/draft-workspace/manuscript_manifest.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "draft",
+    "size_bytes": 1009
+  },
+  {
+    "path": "paper/draft-workspace/registry_summary.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 83
+  },
+  {
+    "path": "paper/draft-workspace/reporting_coverage.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 189
+  },
+  {
+    "path": "paper/draft-workspace/source_manifest.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 7787
+  },
+  {
+    "path": "paper/e200k_br_dossier.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 4682
+  },
+  {
+    "path": "paper/etl_to_manuscript.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "draft",
+    "size_bytes": 8154
+  },
+  {
+    "path": "paper/evidence_workspace/AUDIT_NOTES.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 10261
+  },
+  {
+    "path": "paper/evidence_workspace/authorship.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2407
+  },
+  {
+    "path": "paper/evidence_workspace/build_annotated.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 4073
+  },
+  {
+    "path": "paper/evidence_workspace/build_evidence_record.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 15746
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/batch1_ref_candidates.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3385
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/batch2_ref_candidates.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 4137
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/batch3_ref_candidates.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3674
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/batch4_ref_candidates.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3452
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/batch5_ref_candidates.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2212
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/batch6_ref_candidates.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 4064
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/binding_draft_claim_a_claim.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "draft",
+    "size_bytes": 4467
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/verification_report.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 5353
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/verification_report_v2.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1728
+  },
+  {
+    "path": "paper/evidence_workspace/candidates/verification_status_consolidado.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 5076
+  },
+  {
+    "path": "paper/evidence_workspace/claim_texts.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 16418
+  },
+  {
+    "path": "paper/evidence_workspace/claims.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 7556
+  },
+  {
+    "path": "paper/evidence_workspace/consistency_manifest.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 19916
+  },
+  {
+    "path": "paper/evidence_workspace/manifest_extras.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 4949
+  },
+  {
+    "path": "paper/evidence_workspace/manuscript.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 1979
+  },
+  {
+    "path": "paper/evidence_workspace/manuscript_annotated.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 22535
+  },
+  {
+    "path": "paper/evidence_workspace/manuscript_audit_outline.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 5211
+  },
+  {
+    "path": "paper/evidence_workspace/manuscript_manifest.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "draft",
+    "size_bytes": 1030
+  },
+  {
+    "path": "paper/evidence_workspace/rebuild_canonical.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 12923
+  },
+  {
+    "path": "paper/evidence_workspace/rebuild_consistency.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 3848
+  },
+  {
+    "path": "paper/evidence_workspace/reporting_coverage.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 2176
+  },
+  {
+    "path": "paper/evidence_workspace/source_manifest.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 37991
+  },
+  {
+    "path": "paper/guardian/AVALIACAO_ALFA.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 4590
+  },
+  {
+    "path": "paper/guardian/COMPUTE_EVAL.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 2668
+  },
+  {
+    "path": "paper/guardian/CONSELHO_ALFA_VALIDACAO.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 9661
+  },
+  {
+    "path": "paper/guardian/GUARDIAN_THESIS_QUALIFICATION.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 8983
+  },
+  {
+    "path": "paper/guardian/P023_PARAMETRIZATION_ANALYSIS.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 8969
+  },
+  {
+    "path": "paper/guardian/P025_ANALYSIS.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3468
+  },
+  {
+    "path": "paper/guardian/PARTE3_SINTESE.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3542
+  },
+  {
+    "path": "paper/guardian/PLAN_PARTE3_CROSS_SPECIES.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 10483
+  },
+  {
+    "path": "paper/guardian/S3_DATA_AUDIT_CRITICA.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 9561
+  },
+  {
+    "path": "paper/guardian/SKILL_SCOUT_PARTE2.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3789
+  },
+  {
+    "path": "paper/guardian/SKILL_SCOUT_S3_RATECOMPOSITION.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 7724
+  },
+  {
+    "path": "paper/guardian/THETA_STAR_EXPLAINED.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 5436
+  },
+  {
+    "path": "paper/guardian/WRITING_V2_PROTOCOLO.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "method",
+    "size_bytes": 1694
+  },
+  {
+    "path": "paper/guardian/capture_48h_audit.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3805
+  },
+  {
+    "path": "paper/guardian/guardian.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 29448
+  },
+  {
+    "path": "paper/guardian/guardian_holistic_review.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "research",
+    "size_bytes": 45060
+  },
+  {
+    "path": "paper/guardian/guardian_registry_parte2.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3698
+  },
+  {
+    "path": "paper/guardian/guardian_registry_parte2_EN.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3433
+  },
+  {
+    "path": "paper/guardian/guardian_registry_parte2_report.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3278
+  },
+  {
+    "path": "paper/guardian/guardian_registry_r0.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3412
+  },
+  {
+    "path": "paper/guardian/guardian_registry_thesis_qual.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 3156
+  },
+  {
+    "path": "paper/guardian/guardian_registry_v5_final.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 4234
+  },
+  {
+    "path": "paper/guardian/guardian_registry_v5_final_report.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3755
+  },
+  {
+    "path": "paper/guardian/guardian_registry_v5_r2.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 9812
+  },
+  {
+    "path": "paper/guardian/guardian_registry_v5_r3.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 12203
+  },
+  {
+    "path": "paper/guardian/guardian_report_parte2.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3260
+  },
+  {
+    "path": "paper/guardian/guardian_report_parte2_EN.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3071
+  },
+  {
+    "path": "paper/guardian/guardian_report_r0.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3049
+  },
+  {
+    "path": "paper/guardian/guardian_report_thesis_qual_baseline.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 2851
+  },
+  {
+    "path": "paper/guardian/guardian_report_v5.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3186
+  },
+  {
+    "path": "paper/guardian/guardian_report_v5_epistemic.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 16401
+  },
+  {
+    "path": "paper/guardian/guardian_report_v5_r3.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 10159
+  },
+  {
+    "path": "paper/guardian/guardian_runbook_mirror.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 53438
+  },
+  {
+    "path": "paper/hostile_review_v4.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "research",
+    "size_bytes": 5498
+  },
+  {
+    "path": "paper/lab_outreach_package.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 6562
+  },
+  {
+    "path": "paper/latex/_trace_appendix.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "material",
+    "size_bytes": 694
+  },
+  {
+    "path": "paper/latex/abnt_preamble.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "material",
+    "size_bytes": 1305
+  },
+  {
+    "path": "paper/latex/figs/fig1_scientific_map.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 37136
+  },
+  {
+    "path": "paper/latex/figs/fig2_theta_response.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 98888
+  },
+  {
+    "path": "paper/latex/figs/fig3_subtypes.png",
+    "extension": ".png",
+    "file_type": "image",
+    "role_hint": "material",
+    "size_bytes": 139609
+  },
+  {
+    "path": "paper/latex/figs/fig5_dose_ladder_data.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 991
+  },
+  {
+    "path": "paper/latex/figs/make_figs_v5.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 4021
+  },
+  {
+    "path": "paper/latex/manuscript_Parte2_FINAL.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 170024
+  },
+  {
+    "path": "paper/latex/manuscript_Parte2_FINAL.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "draft",
+    "size_bytes": 104143
+  },
+  {
+    "path": "paper/latex/manuscript_Parte2_FULL.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 144994
+  },
+  {
+    "path": "paper/latex/manuscript_Parte2_FULL.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "draft",
+    "size_bytes": 79391
+  },
+  {
+    "path": "paper/latex/manuscript_Parte2_v1.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 59064
+  },
+  {
+    "path": "paper/latex/manuscript_Parte2_v1.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "draft",
+    "size_bytes": 6345
+  },
+  {
+    "path": "paper/latex/manuscript_Parte2_v1_EN.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 58914
+  },
+  {
+    "path": "paper/latex/manuscript_Parte2_v1_EN.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "draft",
+    "size_bytes": 7436
+  },
+  {
+    "path": "paper/latex/manuscript_v41.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "draft",
+    "size_bytes": 16887
+  },
+  {
+    "path": "paper/latex/manuscript_v42_EN.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 122529
+  },
+  {
+    "path": "paper/latex/manuscript_v42_EN.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "draft",
+    "size_bytes": 15888
+  },
+  {
+    "path": "paper/latex/manuscript_v5_EN.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 358480
+  },
+  {
+    "path": "paper/latex/manuscript_v5_EN.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "draft",
+    "size_bytes": 28585
+  },
+  {
+    "path": "paper/latex/manuscript_v5_PT.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 360463
+  },
+  {
+    "path": "paper/latex/manuscript_v5_PT.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "draft",
+    "size_bytes": 29243
+  },
+  {
+    "path": "paper/latex/tese_v2_ABNT.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "material",
+    "size_bytes": 185809
+  },
+  {
+    "path": "paper/latex/tese_v2_ABNT.tex",
+    "extension": ".tex",
+    "file_type": "latex",
+    "role_hint": "material",
+    "size_bytes": 120322
+  },
+  {
+    "path": "paper/manuscript_EN_v4.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 21879
+  },
+  {
+    "path": "paper/manuscript_EN_v5.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 57047
+  },
+  {
+    "path": "paper/manuscript_PT_v4.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 22078
+  },
+  {
+    "path": "paper/manuscript_PT_v5.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 52049
+  },
+  {
+    "path": "paper/manuscript_Parte2_v1.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 96121
+  },
+  {
+    "path": "paper/manuscript_Parte2_v1_EN.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 13624
+  },
+  {
+    "path": "paper/otimizacao/OPTIMIZATION_LOG.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 6025
+  },
+  {
+    "path": "paper/otimizacao/TESE-FICHA-TEMPLATE.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "requirement",
+    "size_bytes": 1258
+  },
+  {
+    "path": "paper/otimizacao/anexo_populacao_impacto_P2_1.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3143
+  },
+  {
+    "path": "paper/otimizacao/anexo_roadmap_translacional_P2_2.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 1535
+  },
+  {
+    "path": "paper/outreach_email_1_groveman.txt",
+    "extension": ".txt",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3736
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260831-072054.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167974
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260831-080933.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167977
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-013734.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167973
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-021802.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167978
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-041330.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167972
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-042148.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167971
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-043635.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167985
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-052702.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167974
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-054127.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167978
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-055400.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167985
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-060024.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167975
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-074135.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167453
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-075701.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 167448
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-162651.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 172948
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-163439.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 172956
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-165107.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 179862
+  },
+  {
+    "path": "paper/pdf/manuscript_Parte2_20260901-172652.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "draft",
+    "size_bytes": 179863
+  },
+  {
+    "path": "paper/positioning_whitepaper.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 3708
+  },
+  {
+    "path": "paper/prearticle_review.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "research",
+    "size_bytes": 14160
+  },
+  {
+    "path": "paper/preprint_texts.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 27585
+  },
+  {
+    "path": "paper/preprint_texts_pt.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 28683
+  },
+  {
+    "path": "paper/preprint_v3_quest003.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "material",
+    "size_bytes": 20387
+  },
+  {
+    "path": "paper/preprint_v4_EN.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "material",
+    "size_bytes": 111892
+  },
+  {
+    "path": "paper/preprint_v4_PT.pdf",
+    "extension": ".pdf",
+    "file_type": "pdf",
+    "role_hint": "material",
+    "size_bytes": 112473
+  },
+  {
+    "path": "paper/review_rounds.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "research",
+    "size_bytes": 2306
+  },
+  {
+    "path": "paper/roteiro_telefone.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 9091
+  },
+  {
+    "path": "paper/scientific_map.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 5016
+  },
+  {
+    "path": "paper/sw_workspace/authorship.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1710
+  },
+  {
+    "path": "paper/sw_workspace/claims.csv",
+    "extension": ".csv",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1434
+  },
+  {
+    "path": "paper/sw_workspace/consistency_manifest.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 1798
+  },
+  {
+    "path": "paper/sw_workspace/manuscript.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 1979
+  },
+  {
+    "path": "paper/sw_workspace/manuscript_manifest.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "draft",
+    "size_bytes": 993
+  },
+  {
+    "path": "paper/sw_workspace/reporting_coverage.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 602
+  },
+  {
+    "path": "paper/sw_workspace/source_manifest.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 7080
+  },
+  {
+    "path": "paper_rewriting_output/citation_support_bank.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 31396
+  },
+  {
+    "path": "paper_rewriting_output/confirmed_motivation.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 916
+  },
+  {
+    "path": "paper_rewriting_output/exemplar_learning_dossier.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 1635
+  },
+  {
+    "path": "paper_rewriting_output/m31_protocolo_garantista.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "method",
+    "size_bytes": 4971
+  },
+  {
+    "path": "paper_rewriting_output/m3_to_m2_validation.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3321
+  },
+  {
+    "path": "paper_rewriting_output/motivation_options_after_research.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 1973
+  },
+  {
+    "path": "paper_rewriting_output/paper_spine_config.json",
+    "extension": ".json",
+    "file_type": "data",
+    "role_hint": "draft",
+    "size_bytes": 2067
+  },
+  {
+    "path": "paper_rewriting_output/paper_spine_config.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "draft",
+    "size_bytes": 2233
+  },
+  {
+    "path": "paper_rewriting_output/reference_materials/source_index.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 8993
+  },
+  {
+    "path": "paper_rewriting_output/research_dossier.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 2188
+  },
+  {
+    "path": "paper_rewriting_output/section_blueprints.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3739
+  },
+  {
+    "path": "paper_rewriting_output/sota_gap_map.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 1132
+  },
+  {
+    "path": "paper_rewriting_output/source_map.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 1421
+  },
+  {
+    "path": "paper_rewriting_output/style_profile.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 764
+  },
+  {
+    "path": "paper_rewriting_output/writing_rationale_matrix.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 3338
+  },
+  {
+    "path": "plan.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 2564
+  },
+  {
+    "path": "quest.yaml",
+    "extension": ".yaml",
+    "file_type": "data",
+    "role_hint": "material",
+    "size_bytes": 472
+  },
+  {
+    "path": "scripts/ci_audit.sh",
+    "extension": ".sh",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 1935
+  },
+  {
+    "path": "scripts/pandoc_safe.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 800
+  },
+  {
+    "path": "scripts/pendencias_check.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 5586
+  },
+  {
+    "path": "scripts/validators/__pycache__/_common.cpython-314.pyc",
+    "extension": ".pyc",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 16264
+  },
+  {
+    "path": "scripts/validators/__pycache__/validate_manifest.cpython-314.pyc",
+    "extension": ".pyc",
+    "file_type": "other",
+    "role_hint": "material",
+    "size_bytes": 15910
+  },
+  {
+    "path": "scripts/validators/_common.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 7670
+  },
+  {
+    "path": "scripts/validators/audit_claims.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 8834
+  },
+  {
+    "path": "scripts/validators/check_consistency.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 14209
+  },
+  {
+    "path": "scripts/validators/check_references.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "research",
+    "size_bytes": 7075
+  },
+  {
+    "path": "scripts/validators/validate_manifest.py",
+    "extension": ".py",
+    "file_type": "code",
+    "role_hint": "material",
+    "size_bytes": 14514
+  },
+  {
+    "path": "status.md",
+    "extension": ".md",
+    "file_type": "word_text",
+    "role_hint": "material",
+    "size_bytes": 62
+  }
+]

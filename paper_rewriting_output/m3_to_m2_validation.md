@@ -21,3 +21,14 @@
 
 ## 4 · Consequência estrutural (implementada nos blueprints)
 **Nota introdutória (M1):** nomenclatura + diferenciação da etrização (à banca) → **Cap. fundamento (M3):** a invariância de θ\* e a regra de titulação (dos JSONs) → **Cap. aplicação (M2):** o desenho emerge — dose κ=2 legitimada na banda, titulada além dela — com a tabela de validação §2 acima incorporada e a cronologia anti-hindsight declarada.
+
+## 5 · M3.1 — a regra de dose de M3 ganha expressão de massa (sessão 01/09, PR #6)
+
+| Verificação | Valor M3.1 (m31_u1u2.json) | Confronto com M2/M3 | Veredito |
+|---|---|---|---|
+| A cadeia dimensional κ→massa fecha COM incerteza? | κ_req→µM (banda Kd 0,071-1,0; E057+âncora §2.2)→nmol (V-halo E030/E010)→µg (MW 22,83 kDa próprio, E058) — toda célula com unidade+fonte | elo que faltava declarado no protocolo garantista (U1, pré-registrado) | ✅ fecha em banda (critério de aceitação a) |
+| A dose de M2 (κ=2) tem massa calculável? | banda humana Kt2: **0,0-2,6 µg/depósito**; redose ≤7 d (E030,E019) | a "dose κ=2" de M2 vira prognóstico quantitativo; pior caso κ=8: 0,2-10,3 µg | ✅ C058 |
+| A titulação de M3 (C057) escala a massa? | escada monotônica 1,9→2,6→3,9→10,3 µg (κ 1,5→8) | M3 fundamenta e M3.1 expressa em massa a MESMA regra | ✅ C059 |
+| Onde mora a incerteza? | largura ≈53× constante (κ cancela: 14× Kd-proxy × 3,7× V-halo) | a largura é o ACHADO: dose fica banda-larga até G0-A6 fechar κ↔µM (critério c) | ✅ C060 |
+
+**Nota de tier:** M3.1 inteiro é [SIM]-planejamento (prognóstico calculado; NÃO prescrição) — a não-promessa permanece a regra; a Figura 5 carrega o tier no título.
