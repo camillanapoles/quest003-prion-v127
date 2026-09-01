@@ -1,0 +1,24 @@
+{
+  "workflow": "build_from_materials",
+  "scene": "journal",
+  "tier": "pro",
+  "output_language": "en",
+  "target_name": "Unified doctoral thesis (Parte 1 + Parte 2 self-contained) — publication-grade PDF per Johns Hopkins CCE / Harvard dissertation research standards",
+  "materials_dir": ".",
+  "draft_path": "paper/manuscript_Parte2_v1.md",
+  "user_motivation": "Converter todos os resultados/documentos do programa na MELHOR tese autocontida em um único PDF de publicação (padrão Harvard / Johns Hopkins Medicine research thesis), com LaTeX, estilo justificado com base e referência (coluna única vs dupla), preservando a continuidade de produção e os invariantes do projeto",
+  "official_urls": ["https://publichealth.jhu.edu/center-for-clinical-trials-and-evidence-synthesis/research"],
+  "special_requirements": [
+    "PRIMARY LANGUAGE PT-BR (output_language=en governa apenas tooling; documento final em português brasileiro)",
+    "CO-EDITION: ABNT NBR 14724 pipeline existing (paper/latex/tese_v2_ABNT.pdf) remains the institutional edition; PaperSpine builds the publication-grade unified edition",
+    "COLUMN JUSTIFICATION REQUIRED with basis+reference: single-column chosen for thesis standard (doctoral dissertations JHU/Harvard are single-column; ABNT NBR 14724 A4 single; equations/tables readability at 3/2cm margins; double-column is journal print-space optimization — Nature/NEJM class)",
+    "PROJECT INVARIANTS ABOVE ALL: locked v1.0 predictions compared-never-rewritten; claims sha256-binding + evidence registry (58 claims/56 sources/59 N-fatos); tiers [SIM]/[ORGANOID]/[MOUSE]/[HUMAN]; no fabrication (aligned with PaperSpine core rule); guardian gates still apply to gated surfaces",
+    "PaperSpine = INCREMENT to the project (braço B isolated on branch writing-v2-test); adoption only after A-vs-B evaluation per WRITING_V2_PROTOCOLO.md"
+  ],
+  "word_output": "docx",
+  "translation_package": "none",
+  "reference_mode": "local_first",
+  "reference_paths": ["."],
+  "citation_target_count": 56,
+  "humanize_tier": "none"
+}
