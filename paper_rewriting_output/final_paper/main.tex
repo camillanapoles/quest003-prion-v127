@@ -1,13 +1,12 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
+%
 \documentclass[
   12pt,
   a4paper,
 ]{article}
-\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -38,10 +37,8 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
+\usepackage{xcolor}
 \usepackage{longtable,booktabs,array}
-\usepackage{caption}
-\captionsetup[table]{skip=6pt}
-\newcounter{none} % for unnumbered tables
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
 \usepackage{etoolbox}
@@ -53,22 +50,21 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\newsavebox\pandoc@box
-\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
-  \sbox\pandoc@box{#1}%
-  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
-  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
-  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
-  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
-  \else\usebox{\pandoc@box}%
-  \fi%
-}
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 % Set default figure placement to htbp
+\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 % Edição unificada de publicação — coluna única justificada (teses JHU/Harvard são single-column;
 % ABNT NBR 14724 A4 single; equações/tabelas legíveis a margens 3/2cm; two-column é otimização
 % de espaço de periódico — classe Nature/NEJM. Co-edição ABNT preservada em paper/latex/tese_v2_ABNT.pdf.)
@@ -91,13 +87,21 @@
 \fancyhead[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.3pt}
 \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
-\usepackage{bookmark}
+% Glifos ausentes em TeX Gyre Termes (κ↔Kt etc.) — declarados explicitamente:
+\usepackage{newunicodechar}
+\newunicodechar{↔}{\ensuremath{\leftrightarrow}}
+\newunicodechar{∂}{\ensuremath{\partial}}
+\newunicodechar{∇}{\ensuremath{\nabla}}
+\newunicodechar{✅}{\ensuremath{\checkmark}}
+\newunicodechar{⚠}{\textbf{!}}
+\newunicodechar{️}{} % variation selector (U+FE0F) — engolido
+\setlength{\headheight}{15pt}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
-% fallback for those not using the hyperref driver hyperxmp:
-\makeatletter
-\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
-\makeatother
 \hypersetup{
   pdftitle={Etrização Computacional em Doenças Priônicas: Aplicada à Plataforma Terapêutica PrP-V127},
   pdfauthor={Camilla N.},
@@ -119,9 +123,10 @@ Plataforma Terapêutica PrP-V127}
 \begin{document}
 \maketitle
 
+\hypertarget{etrizauxe7uxe3o-computacional-em-doenuxe7as-priuxf4nicas-aplicada-uxe0-plataforma-terapuxeautica-prp-v127}{%
 \section{ETRIZAÇÃO COMPUTACIONAL EM DOENÇAS PRIÔNICAS: APLICADA À
 PLATAFORMA TERAPÊUTICA
-PrP-V127}\label{etrizauxe7uxe3o-computacional-em-doenuxe7as-priuxf4nicas-aplicada-uxe0-plataforma-terapuxeautica-prp-v127}
+PrP-V127}\label{etrizauxe7uxe3o-computacional-em-doenuxe7as-priuxf4nicas-aplicada-uxe0-plataforma-terapuxeautica-prp-v127}}
 
 \textbf{Tese unificada --- Parte 1 + Parte 2 + Parte 3 autocontidas} ·
 edição de publicação (coluna única justificada) · co-edição
@@ -150,9 +155,9 @@ análogo'')
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \begin{quote}
-\mbox{}%
+\hypertarget{nota-uxe0-leitura-sobre-o-termo-etrizauxe7uxe3o}{%
 \subsection{\texorpdfstring{NOTA À LEITURA --- SOBRE O TERMO
-\emph{ETRIZAÇÃO}}{NOTA À LEITURA --- SOBRE O TERMO ETRIZAÇÃO}}\label{nota-uxe0-leitura-sobre-o-termo-etrizauxe7uxe3o}
+\emph{ETRIZAÇÃO}}{NOTA À LEITURA --- SOBRE O TERMO ETRIZAÇÃO}}\label{nota-uxe0-leitura-sobre-o-termo-etrizauxe7uxe3o}}
 
 Este documento introduz o termo \textbf{etrização} como neologismo
 científico composicional intencional. O radical \emph{etr-} evoca, por
@@ -191,7 +196,8 @@ simulação \textbf{não substitui} o laboratório: o caminho obrigatório
 até a sociedade está declarado no capítulo de continuidade.
 \end{quote}
 
-\subsection{RESUMO}\label{resumo}
+\hypertarget{resumo}{%
+\subsection{RESUMO}\label{resumo}}
 
 \textbf{Introdução.} Doenças priônicas são 100\% fatais e seis
 candidatos clínicos fracassaram sem modelo quantitativo de entrega. A
@@ -233,14 +239,16 @@ passos seguintes já estarão avançados (antecipação bancada).
 etrização computacional; PrP-V127; doença de Creutzfeldt-Jakob;
 metodologia de pesquisa; in-silico; dose-band.
 
-\subsection{ABSTRACT}\label{abstract}
+\hypertarget{abstract}{%
+\subsection{ABSTRACT}\label{abstract}}
 
 \emph{(companion EN --- \texttt{manuscript\_Parte2\_v1\_EN.md};
 keywords: prions; computational simulation; Computational Etrization;
 PrP-V127; Creutzfeldt-Jakob disease; research methodology; in-silico;
 dose band.)}
 
-\subsection{SUMÁRIO}\label{sumuxe1rio}
+\hypertarget{sumuxe1rio}{%
+\subsection{SUMÁRIO}\label{sumuxe1rio}}
 
 \textbf{NOTA À LEITURA} --- Sobre o termo Etrização
 ························ pré-textual
@@ -279,7 +287,8 @@ dose band.)}
 REFERÊNCIAS (58 fontes do registro) · APÊNDICES A--F (inventário · mapa
 da lógica · SAP · tabela-decisão · custo · linhagem)
 
-\subsection{LISTA DE SIGLAS}\label{lista-de-siglas}
+\hypertarget{lista-de-siglas}{%
+\subsection{LISTA DE SIGLAS}\label{lista-de-siglas}}
 
 ETRIZAÇÃO/etrização computacional --- o método nomeado desta tese
 (neologismo composicional; en: Computational Etrization) · θ --- fração
@@ -307,15 +316,17 @@ não por estatística de repetições)
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{capuxedtulo-1-nota-introdutuxf3ria-uxe0-banca}{%
 \section{CAPÍTULO 1 --- NOTA INTRODUTÓRIA À
-BANCA}\label{capuxedtulo-1-nota-introdutuxf3ria-uxe0-banca}
+BANCA}\label{capuxedtulo-1-nota-introdutuxf3ria-uxe0-banca}}
 
 \emph{Função: responder ``por que `etrização', e o que a diferencia?''
 sem exigir a leitura integral da tese. A nota à leitura (pré-textual)
 definiu o termo; aqui se diferencia o método do que já existe.}
 
+\hypertarget{o-que-a-palavra-uxe9-e-o-que-nomeia-que-nada-mais-nomeia}{%
 \subsection{1.1 O que a palavra é --- e o que nomeia que nada mais
-nomeia}\label{o-que-a-palavra-uxe9-e-o-que-nomeia-que-nada-mais-nomeia}
+nomeia}\label{o-que-a-palavra-uxe9-e-o-que-nomeia-que-nada-mais-nomeia}}
 
 A definição operacional está travada no registro {[}claim:C054{]}
 {[}evidence:E009, E010, E007, E031, E032, E033{]}: \textbf{etrização
@@ -351,8 +362,9 @@ rotas \emph{atrium→etr-} e \emph{es-→etr-} são poéticas/interpretativas;
 a intencionalidade declarada é o que sustenta (precedente:
 \emph{software}, \emph{byte}, \emph{quark}).
 
+\hypertarget{diferenciauxe7uxe3o-estrutural-o-que-a-banca-deve-testar}{%
 \subsection{1.2 Diferenciação estrutural (o que a banca deve
-testar)}\label{diferenciauxe7uxe3o-estrutural-o-que-a-banca-deve-testar}
+testar)}\label{diferenciauxe7uxe3o-estrutural-o-que-a-banca-deve-testar}}
 
 \textbf{Contra os in-silico trials (IST):} estes \textbf{simulam o
 ensaio} --- reproduzem em máquina o desenho de um experimento clínico
@@ -382,15 +394,17 @@ hash; guardião R0--R3; AST 9/9).
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{capuxedtulo-2-base-comum-de-dados-a-ponte-entre-fundamento-e-aplicauxe7uxe3o}{%
 \section{CAPÍTULO 2 --- BASE COMUM DE DADOS (a ponte entre fundamento e
-aplicação)}\label{capuxedtulo-2-base-comum-de-dados-a-ponte-entre-fundamento-e-aplicauxe7uxe3o}
+aplicação)}\label{capuxedtulo-2-base-comum-de-dados-a-ponte-entre-fundamento-e-aplicauxe7uxe3o}}
 
 \emph{Função: estabelecer, em uma página auditável, que o fundamento
 (Parte 3) e a aplicação (Partes 1--2) assentam nos MESMOS dados reais
 --- e declarar a cronologia honesta que o anti-hindsight exige.}
 
+\hypertarget{a-mesma-base-sob-os-dois-muxf3dulos}{%
 \subsection{2.1 A mesma base sob os dois
-módulos}\label{a-mesma-base-sob-os-dois-muxf3dulos}
+módulos}\label{a-mesma-base-sob-os-dois-muxf3dulos}}
 
 O fundamento multi-espécie (Cap. 3) e o desenho terapêutico (Cap. 4)
 partilham, sem exceção: o \textbf{kernel murino publicado}
@@ -406,9 +420,10 @@ NCBI} (P04156 e ortólogos; matriz BLOSUM62; P023) --- das quais se
 computou a massa molecular usada na dose (22,83 kDa
 {[}claim:N060-fato{]} {[}evidence:E058{]}).
 
+\hypertarget{cronologia-honesta-o-examinador-hostil-perguntaria-respondemos-antes}{%
 \subsection{2.2 Cronologia honesta (o examinador hostil perguntaria ---
 respondemos
-antes)}\label{cronologia-honesta-o-examinador-hostil-perguntaria-respondemos-antes}
+antes)}\label{cronologia-honesta-o-examinador-hostil-perguntaria-respondemos-antes}}
 
 O desenho terapêutico (regras 1--3, θ*=0,333, anel 8--12 mm)
 \textbf{nasceu ANTES} da validação multi-espécie (Parte 1, 24--27/08;
@@ -431,15 +446,15 @@ declarada (predições travadas ANTES: anti-hindsight preservado e exibido
 como força).
 \end{quote}
 
+\hypertarget{tabela-de-validauxe7uxe3o-todos-os-nuxfameros-dos-jsons-do-registro}{%
 \subsection{2.3 Tabela de validação (todos os números dos JSONs do
-registro)}\label{tabela-de-validauxe7uxe3o-todos-os-nuxfameros-dos-jsons-do-registro}
+registro)}\label{tabela-de-validauxe7uxe3o-todos-os-nuxfameros-dos-jsons-do-registro}}
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Verificação
@@ -471,12 +486,12 @@ Predição pré-registrada do hamster & REFUTADA sob a definição P-024
 (0,659 mm em κ=2/Kt=2) & reportada como está; horizonte declarado em
 toda citação {[}claim:C056{]} & ✅ honestidade exibida \\
 \end{longtable}
-}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{capuxedtulo-3-fundamento-a-inariuxe2ncia-de-ux3b8-validauxe7uxe3o-multi-espuxe9cie}{%
 \section{CAPÍTULO 3 --- FUNDAMENTO: A INARIÂNCIA DE θ* (validação
-multi-espécie)}\label{capuxedtulo-3-fundamento-a-inariuxe2ncia-de-ux3b8-validauxe7uxe3o-multi-espuxe9cie}
+multi-espécie)}\label{capuxedtulo-3-fundamento-a-inariuxe2ncia-de-ux3b8-validauxe7uxe3o-multi-espuxe9cie}}
 
 \emph{Em linguagem clínica: perguntamos se a ``dose'' que contém o príon
 num rato serviria num hamster, num humano, num vole --- espécies cujas
@@ -487,8 +502,9 @@ mais dose, de forma previsível (regra de titulação) --- e o número só é
 comparável quando se declara por quanto tempo se observa (horizonte).
 Ver Figura 4.}
 
+\hypertarget{do-sweep-de-composiuxe7uxe3o-uxe0-parametrizauxe7uxe3o-por-espuxe9cie}{%
 \subsection{3.1 Do sweep de composição à parametrização por
-espécie}\label{do-sweep-de-composiuxe7uxe3o-uxe0-parametrizauxe7uxe3o-por-espuxe9cie}
+espécie}\label{do-sweep-de-composiuxe7uxe3o-uxe0-parametrizauxe7uxe3o-por-espuxe9cie}}
 
 A maior limitação declarada da transferência murino→humano foi
 convertida em programa executado: o sweep de composição de taxas
@@ -501,15 +517,17 @@ não na identidade global) e a execução multi-espécie em matrix
 computacional com definições operacionais pré-registradas antes de
 qualquer execução.
 
-\subsection{3.2 Cenário B {[}SIM{]}}\label{cenuxe1rio-b-sim}
+\hypertarget{cenuxe1rio-b-sim}{%
+\subsection{3.2 Cenário B {[}SIM{]}}\label{cenuxe1rio-b-sim}}
 
 θ* central varia \textbf{0,333--0,400} entre camundongo, humano, hamster
 e vole (razão 1,20 ≤ 2× --- \emph{aproximadamente conservado}), com
 degradação monotônica nos extremos de cinética: Kt=4 exige κ=8
 (θ*=0,111) {[}claim:C055{]} {[}evidence:E032{]}.
 
+\hypertarget{regra-de-titulauxe7uxe3o-emergente}{%
 \subsection{3.3 Regra de titulação
-emergente}\label{regra-de-titulauxe7uxe3o-emergente}
+emergente}\label{regra-de-titulauxe7uxe3o-emergente}}
 
 κ requerido escala com a cinética do hospedeiro (\textbf{1→1,5 · 2→2 ·
 3→3 · 4→8} --- superlinear além de 2×): a dose de contenção deve ser
@@ -517,8 +535,9 @@ emergente}\label{regra-de-titulauxe7uxe3o-emergente}
 {[}evidence:E032{]}. Esta regra é a que o capítulo seguinte converte em
 massa calculável.
 
+\hypertarget{dependuxeancia-de-horizonte-a-uxfanica-assimetria-real}{%
 \subsection{3.4 Dependência de horizonte (a única assimetria
-real)}\label{dependuxeancia-de-horizonte-a-uxfanica-assimetria-real}
+real)}\label{dependuxeancia-de-horizonte-a-uxfanica-assimetria-real}}
 
 O mesmo braço Kt=2/κ=2 \textbf{contém} sob duas definições de pareamento
 (crescimento-próprio; calendário fixo t=5) e \textbf{escapa} sob a
@@ -530,7 +549,7 @@ pré-registrada do hamster foi \textbf{refutada sob a definição P-024}
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Figura 4 --- θ* por espécie nas bandas de cinética}]{../../paper/latex/figs/fig4_theta_species.png}}
+\includegraphics{../../paper/latex/figs/fig4_theta_species.png}
 \caption{Figura 4 --- θ* por espécie nas bandas de cinética}
 \end{figure}
 
@@ -543,8 +562,9 @@ N055--N059; canon F-43/F-44; JSONs
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{capuxedtulo-4-aplicauxe7uxe3o-o-desenho-terapuxeautico-emerge}{%
 \section{CAPÍTULO 4 --- APLICAÇÃO: O DESENHO TERAPÊUTICO
-EMERGE}\label{capuxedtulo-4-aplicauxe7uxe3o-o-desenho-terapuxeautico-emerge}
+EMERGE}\label{capuxedtulo-4-aplicauxe7uxe3o-o-desenho-terapuxeautico-emerge}}
 
 \emph{Em linguagem clínica: com o fundamento validado (Cap. 3), o
 desenho se completa --- onde depositar (anel 8--12 mm), com que malha, a
@@ -554,8 +574,9 @@ como banda calculada com a incerteza declarada --- não como número
 este capítulo entrega é o prognóstico quantitativo do braço
 discriminador A6.}
 
+\hypertarget{transporte-truxeas-regras-falseuxe1veis-sim}{%
 \subsection{4.1 Transporte: três regras falseáveis
-{[}SIM{]}}\label{transporte-truxeas-regras-falseuxe1veis-sim}
+{[}SIM{]}}\label{transporte-truxeas-regras-falseuxe1veis-sim}}
 
 O solver de transporte (advecção--difusão--reação em meio poroso
 heterogêneo; α=0,20 e λ=1,8 in-vivo {[}claim:C014{]}
@@ -581,8 +602,9 @@ três regras de design:
   {[}claim:C035{]} {[}evidence:E030, E019{]}.
 \end{enumerate}
 
+\hypertarget{o-limiar-travado-e-a-dose-legitimada-pela-banda}{%
 \subsection{4.2 O limiar travado e a dose legitimada pela
-banda}\label{o-limiar-travado-e-a-dose-legitimada-pela-banda}
+banda}\label{o-limiar-travado-e-a-dose-legitimada-pela-banda}}
 
 A contenção exige θ = (1+κ·c\_pico)⁻¹ ≤ \textbf{θ*=0,333} (predição
 travada no release v1.0 de 26/08; comparada, nunca retreinada)
@@ -600,8 +622,9 @@ garantista: toda célula da cadeia com unidade+fonte; banda sempre ≥2
 extremos; a largura da banda dominada pelo elo κ↔µM é resultado válido e
 esperado; saída de planejamento, jamais prescrição).
 
+\hypertarget{a-primeira-dose-calculada-banda-de-dose-do-brauxe7o-a6-sim-planejamento}{%
 \subsection{4.3 A primeira dose calculada: banda de dose do braço A6
-{[}SIM-planejamento{]}}\label{a-primeira-dose-calculada-banda-de-dose-do-brauxe7o-a6-sim-planejamento}
+{[}SIM-planejamento{]}}\label{a-primeira-dose-calculada-banda-de-dose-do-brauxe7o-a6-sim-planejamento}}
 
 \textbf{Cadeia dimensional (todas as células com unidade+fonte; JSON
 canônico \texttt{experiments/m31/m31\_u1u2.json}):} κ\_req (regra de
@@ -618,13 +641,12 @@ massa, Δ=+14 Da) {[}evidence:E058{]}.
 
 \textbf{Escada de dose por banda-Kt do hospedeiro:}
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Banda-Kt
@@ -647,7 +669,6 @@ Kt 1 & 1,5 & 0,11--1,5 & 0,0--1,9 & ≤7 d \\
 Kt 3 & 3 & 0,21--3,0 & 0,1--3,9 & ≤7 d \\
 Kt 4 (pior caso declarado) & 8 & 0,57--8,0 & 0,2--10,3 & ≤7 d \\
 \end{longtable}
-}
 
 No degrau humano, a dose de A6 é \textbf{0,0--2,6 µg de V127ΔGPI por
 depósito} (redose ≤7 d; regra 3) {[}claim:C058{]} {[}evidence:E057,
@@ -668,7 +689,7 @@ ponto. Até lá, a dose existe como banda, e a banda é planejamento
 
 \begin{figure}
 \centering
-\pandocbounded{\includegraphics[keepaspectratio,alt={Figura 5 --- Escada de dose A6: banda GUM µg/depósito por banda-Kt}]{../../paper/latex/figs/fig5_dose_ladder.png}}
+\includegraphics{../../paper/latex/figs/fig5_dose_ladder.png}
 \caption{Figura 5 --- Escada de dose A6: banda GUM µg/depósito por
 banda-Kt}
 \end{figure}
@@ -689,8 +710,9 @@ braço discriminador que fecha κ↔µM e testa a forma funcional do capping
 1) {[}claim:C051{]} {[}evidence:E032, E033{]}. A5 e A7 herdam a cadeia
 como derivadas.
 
+\hypertarget{o-ensaio-que-fecha-a-banda-g0-wet-especificado}{%
 \subsection{4.4 O ensaio que fecha a banda: G0-wet
-especificado}\label{o-ensaio-que-fecha-a-banda-g0-wet-especificado}
+especificado}\label{o-ensaio-que-fecha-a-banda-g0-wet-especificado}}
 
 Oito braços pré-registrados (incluindo PPS como controle positivo
 publicado e braço LNP-mRNA), com plano estatístico cego (Welch/Holm
@@ -703,7 +725,8 @@ dado informa} {[}claim:C046, C051, C052, C053{]}. Os dez itens de freeze
 F1--F10 com GATE-F de liberação estão no Apêndice C; a especificação
 integral no registro.
 
-\subsection{4.5 Custo-cotação}\label{custo-cotauxe7uxe3o}
+\hypertarget{custo-cotauxe7uxe3o}{%
+\subsection{4.5 Custo-cotação}\label{custo-cotauxe7uxe3o}}
 
 A tabela suplementar S1 (custo por braço, cotações de mercado
 arquivadas) está no Apêndice E --- o desenho é especificado ao ponto de
@@ -711,11 +734,13 @@ orçamento, sem executar compra.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{capuxedtulo-5-muxe9todos-a-etrizauxe7uxe3o-formalizada}{%
 \section{CAPÍTULO 5 --- MÉTODOS: A ETRIZAÇÃO
-FORMALIZADA}\label{capuxedtulo-5-muxe9todos-a-etrizauxe7uxe3o-formalizada}
+FORMALIZADA}\label{capuxedtulo-5-muxe9todos-a-etrizauxe7uxe3o-formalizada}}
 
+\hypertarget{o-muxe9todo-nomeado-etrizauxe7uxe3o-computacional-passos-p0p6}{%
 \subsection{5.1 O método nomeado: etrização computacional, passos
-P0--P6}\label{o-muxe9todo-nomeado-etrizauxe7uxe3o-computacional-passos-p0p6}
+P0--P6}\label{o-muxe9todo-nomeado-etrizauxe7uxe3o-computacional-passos-p0p6}}
 
 A \textbf{parametrização} (operação técnica do P1) é o núcleo
 operacional; a \textbf{tese etrizada} é o produto {[}claim:C054{]}
@@ -725,14 +750,13 @@ não se promete aplicar nem validar --- antes: \textbf{se dados reais
 exibirem resultados análogos aos simulados, os passos seguintes já terão
 sido dados} (antecipação bancada, não pendente).
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Passo
@@ -768,7 +792,6 @@ P6 & confronto (opcional) & dados reais futuros, se análogos &
 comparação à âncora travada (nunca retreino) & passos seguintes já
 avançados & antecipação bancada \\
 \end{longtable}
-}
 
 \textbf{Posição na família:} a etrização é irmã da meta-análise (agrega
 o publicado), da modelagem física (deriva comportamento) e dos in-silico
@@ -777,8 +800,9 @@ prognósticos antes da medição e declarar a simulação como simulação em
 cada saída} (tiers {[}SIM{]}/{[}ORGANOID{]}/{[}MOUSE{]}/{[}HUMAN{]}
 {[}claim:C047{]} {[}evidence:E032, E033{]}).
 
+\hypertarget{formulauxe7uxe3o-matemuxe1tica-com-proveniuxeancia}{%
 \subsection{5.2 Formulação matemática com
-proveniência}\label{formulauxe7uxe3o-matemuxe1tica-com-proveniuxeancia}
+proveniência}\label{formulauxe7uxe3o-matemuxe1tica-com-proveniuxeancia}}
 
 \emph{Em linguagem clínica: as equações abaixo são o ``rastreio
 farmacocinético'' da proteína no cérebro --- para onde difunde, quanto
@@ -820,8 +844,9 @@ fronteira de decisão (cobertura 3/3; bias −0,008 em κ=2); v1.1
 interpolada testada e rejeitada {[}claim:C052{]} {[}evidence:E032,
 E033{]}.
 
+\hypertarget{base-de-validade-mandatuxf3ria}{%
 \subsection{5.3 Base de Validade
-(MANDATÓRIA)}\label{base-de-validade-mandatuxf3ria}
+(MANDATÓRIA)}\label{base-de-validade-mandatuxf3ria}}
 
 \textbf{Declaração tríade:} (i) esta tese é \textbf{baseada em simulação
 computacional e NÃO SUBSTITUI a validação de laboratório} --- o
@@ -831,15 +856,14 @@ rigor experimental é \textbf{convertido para o ambiente computacional}:
 cada dado com linhagem completa
 (quem→espécie→cruzamento→código→parâmetro→resultado).
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Dado
@@ -884,7 +908,6 @@ Sensibilidade estrutural & (este programa) & in-silico & motor
 reproduzido 2× (hash+valor) & sweeps S1-S3 + estimador & --- & predição
 discriminadora {[}C051{]} \\
 \end{longtable}
-}
 
 \textbf{Por que isto é ciência com referências sólidas:} toda célula
 amarra fonte peer-reviewed ou run arquivado com hash; nenhum número vive
@@ -892,13 +915,13 @@ fora do registro (\textbf{60 claims · 58 fontes · 65 N-fatos · 4
 validadores em zero · AST 9/9}); a cadeia é verificável de ponta a
 ponta, como um ``métodos'' experimental exige.
 
+\hypertarget{a-tese-em-forma-experimental-mapeamento-anuxe1logo}{%
 \subsection{5.4 A tese em forma experimental (mapeamento
-análogo)}\label{a-tese-em-forma-experimental-mapeamento-anuxe1logo}
+análogo)}\label{a-tese-em-forma-experimental-mapeamento-anuxe1logo}}
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Tese experimental (com pessoas)
@@ -923,7 +946,6 @@ Análise pré-especificada & P3 colheita + estimador θ\_obs calibrado \\
 Implicações relatadas & P4 prognóstico + P5 derivada + P6 antecipação \\
 Auditoria/supervisão & Guardião (4 dimensões de revisão hostil) \\
 \end{longtable}
-}
 
 \emph{Um examinador que sabe ler tese experimental sabe ler esta: basta
 trocar ``pessoa''→``fonte'', ``instrumento''→``código'',
@@ -933,17 +955,17 @@ termos do mapeamento não perde a tese.)
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{capuxedtulo-6-resultados-como-validauxe7uxe3o}{%
 \section{CAPÍTULO 6 --- RESULTADOS COMO
-VALIDAÇÃO}\label{capuxedtulo-6-resultados-como-validauxe7uxe3o}
+VALIDAÇÃO}\label{capuxedtulo-6-resultados-como-validauxe7uxe3o}}
 
 \emph{Cada seção de resultados valida uma promessa declarada da tese;
 nenhum resultado é métrica órfã.}
 
-{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Promessa (contribuição)
@@ -978,12 +1000,12 @@ A decisão é possível sem dado novo & tabela-decisão derivada
 (κ↔θ\_obs↔R↔biomassa); biomassa = coordenada informativa &
 {[}claim:C052{]} \\
 \end{longtable}
-}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{capuxedtulo-7-camada-cluxednica}{%
 \section{CAPÍTULO 7 --- CAMADA
-CLÍNICA}\label{capuxedtulo-7-camada-cluxednica}
+CLÍNICA}\label{capuxedtulo-7-camada-cluxednica}}
 
 \begin{quote}
 ⚠️ \textbf{PROGNÓSTICO {[}SIM{]} --- NÃO É CONSELHO MÉDICO.}
@@ -1037,8 +1059,9 @@ viabilizar o próximo gate encontram o pacote em
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{capuxedtulo-8-limitauxe7uxf5es-como-fruto-cada-limite-com-o-que-o-fecha}{%
 \section{CAPÍTULO 8 --- LIMITAÇÕES COMO FRUTO (cada limite com o que o
-fecha)}\label{capuxedtulo-8-limitauxe7uxf5es-como-fruto-cada-limite-com-o-que-o-fecha}
+fecha)}\label{capuxedtulo-8-limitauxe7uxf5es-como-fruto-cada-limite-com-o-que-o-fecha}}
 
 \emph{Reconhecer os limites com plano de pesquisa futura --- cada
 limitação abaixo tem o gate/ensaio que a converte em conhecimento.}
@@ -1081,8 +1104,9 @@ responsável --- especificada, não prometida.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{capuxedtulo-9-conclusuxf5es-por-objetivo}{%
 \section{CAPÍTULO 9 --- CONCLUSÕES POR
-OBJETIVO}\label{capuxedtulo-9-conclusuxf5es-por-objetivo}
+OBJETIVO}\label{capuxedtulo-9-conclusuxf5es-por-objetivo}}
 
 \textbf{OE1 (nomear e formalizar a etrização) --- alcançado.} P0--P6 com
 garantias por passo; nota à banca (Cap. 1) diferencia o termo de IST e
@@ -1128,8 +1152,9 @@ ainda-não-medido.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{referuxeancias-58-fontes-do-registro}{%
 \section{REFERÊNCIAS (58 fontes do
-registro)}\label{referuxeancias-58-fontes-do-registro}
+registro)}\label{referuxeancias-58-fontes-do-registro}}
 
 {[}1{]} ASANTE, E.A. et al.~A naturally occurring variant of the human
 prion protein completely prevents prion disease. 2015.
@@ -1259,8 +1284,9 @@ Type-B band + PrP MW from own sequences (this program). 2026. Disponível
 em: https://github.com/camillanapoles/quest003-prion-v127. \emph{(JSON:
 \texttt{experiments/m31/m31\_u1u2.json}.)}
 
+\hypertarget{fontes-complementares-verificauxe7uxe3o-completa-pendente-snippet-level}{%
 \subsubsection{Fontes complementares (verificação completa pendente ---
-snippet-level)}\label{fontes-complementares-verificauxe7uxe3o-completa-pendente-snippet-level}
+snippet-level)}\label{fontes-complementares-verificauxe7uxe3o-completa-pendente-snippet-level}}
 
 \begin{itemize}
 \tightlist
@@ -1275,7 +1301,8 @@ snippet-level)}\label{fontes-complementares-verificauxe7uxe3o-completa-pendente-
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{APÊNDICES}\label{apuxeandices}
+\hypertarget{apuxeandices}{%
+\section{APÊNDICES}\label{apuxeandices}}
 
 \begin{itemize}
 \tightlist
