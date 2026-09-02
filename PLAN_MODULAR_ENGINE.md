@@ -62,7 +62,37 @@ REGISTRO PROBATÓRIO (canônico, intocável)          TESE (texto canônico)
 
 ---
 
-## 3 · TODOLIST (fases com gates)
+## 3.5 · Camada de TEXTO — produção escrita sob o skill `scientific-writing`
+
+**Sim: o skill `scientific-writing` é o GOVERNANTE da produção de texto** (docs+dados → prosa da tese). E a integração é nativa: o registro probatório do repo JÁ segue a convenção exata do skill (E-IDs em `source_manifest.json`, C-IDs com sha256 em `claims.csv`, N/M/R em `consistency_manifest.json`, tags `[claim:Cxxx] [evidence:Exxx]`).
+
+**Duas modalidades de texto no engine:**
+- **Modo A — Conservação:** texto canônico existente (`tese_unificada.md`, já validado adversarialmente) → blocos **byte-preserving**, zero LLM.
+- **Modo B — Produção:** texto NOVO/revisto (seções novas, reescrita, EN companion) via workflow do skill: *evidence-outline → draft sem acrescentar fatos → gates determinísticos → aprovação humana*. O agente-escritor transforma outline-de-evidência em prosa; **nunca** inventa citação/valor/método (regra no-fabrication do skill).
+
+**Categorização OBRIGATÓRIA de todo bloco de texto (campos mandatórios do modelo `Block`):**
+
+| Campo | Valores / Fonte da categoria |
+|---|---|
+| `block_type` | paragraph · math · table · figure · list · quote · heading |
+| `function` | motivation · method · result · interpretation · limitation · transition · clinical-opener · nota-banca (alinhado à matriz R0–R9) |
+| `claim_ids` | `[Cxxx]` — obrigatório em bloco factual |
+| `evidence_ids` | `[Exxx]` — obrigatório onde há claim |
+| `nfact_ids`/`number_lineage` | `[Nxxx]` + arquivo JSON→chave — obrigatório em bloco numérico |
+| `tier` | `[SIM]` · `[SIM]-planejamento` · `[ORGANOID]` · `—` |
+| `uncertainty` | not_applicable · low · moderate · high |
+| `status` | draft → revised → validated → **author_approved** (só humana) |
+| `blueprint` | B0–B9 (section_blueprints) |
+
+Os specs de estilo que hoje são prosa (`style_profile.md`, `writing_rationale_matrix.md`) viram **metadados aplicados por gate**: decimais PT-BR vs EN, openers clínicos, proibições ativas ("promissor", promessa clínica), negação-de-segurança tripla, banda como par lo–hi.
+
+**Gates do skill wired no CI do engine** (scripts locais, determinísticos, sem rede): `audit_claims.py` · `check_consistency.py` · `lint_manuscript.py` · `validate_manifest.py` · `check_references.py`.
+
+**Divisão de papéis:** skill = governança do processo · agente-LLM = redator supervisionado (outline→prosa) · engine = armazém+render · **autora = único aprovador** (`author_approved` nunca é setado por máquina).
+
+---
+
+## 4 · TODOLIST (fases com gates)
 
 - [ ] **F0 — Setup** (0,5 dia)
   - [ ] Instalar deps: `fastapi uvicorn sqlmodel markdown-it-py typer` (venv local)
@@ -76,6 +106,11 @@ REGISTRO PROBATÓRIO (canônico, intocável)          TESE (texto canônico)
   - [ ] Parser MD → blocos tipados com ids estáveis (`cap07/sec7.2/blk0014`)
   - [ ] Vinculação: tags `[claim:]` → Claim; `§` → Section; figuras → Figure
   - [ ] Gate: round-trip MD → DB → MD == original (byte diff só em whitespace tolerado)
+- [ ] **F2.5 — Camada de escrita (Modo B)** (1 dia)
+  - [ ] Estender `Block` com os campos mandatórios de categorização (§3.5) + validador de schema
+  - [ ] Backfill: blocos do Modo A recebem categorias inferidas das tags/posição (function/blueprint/tier)
+  - [ ] Roteiro de produção Modo B: evidence-outline por seção → draft → `lint_manuscript` + `audit_claims` → fila de aprovação (`status=author_approved`)
+  - [ ] Gate de estilo: decimais, openers clínicos, proibições ativas, tier em toda saída de dose
 - [ ] **F3 — Ingest dos JSONs experimentais** (0,5–1 dia)
   - [ ] ws_7/ws_9/xspecies/m31/bayes/part2 → NumberValue com lineage (arquivo→chave)
   - [ ] Gate: todos os números citados nas tabelas da tese (§4.3) batem com o registro
