@@ -94,14 +94,14 @@ Os specs de estilo que hoje são prosa (`style_profile.md`, `writing_rationale_m
 
 ## 4 · TODOLIST (fases com gates)
 
-- [ ] **F0 — Setup** (0,5 dia)
-  - [ ] Instalar deps: `fastapi uvicorn sqlmodel markdown-it-py typer` (venv local)
-  - [ ] Remover braço-LaTeX do CI (`.github/workflows/unified-thesis-build.yml` → vira `thesis-build.yml` MD-only; LaTeX vira job opcional pós-render)
-  - [ ] Commit inicial do scaffold `thesis_engine/`
-- [ ] **F1 — Modelos OO + ingest do registro** (1 dia)
-  - [ ] `models.py`: Source, Claim, NFact, NumberValue(+lineage), Figure, Chapter, Section, Block, CrossRef
-  - [ ] Ingest: claims.csv + claim_texts.md · source_manifest.json · consistency_manifest.json
-  - [ ] Gate: 60 claims / 58 fontes / 65 N-fatos carregados, sha256 conferido
+- [x] **F0 — Setup** ✓ (commit ecd05ab)
+  - [x] Deps: venv `.venv/` — pydantic-core 2.48 compilado (rust + `ANDROID_API_LEVEL=36`,Termux) · fastapi 0.141 · sqlmodel 0.0.42 · pydantic 2.13 · markdown-it-py · typer · pytest · requirements.txt
+  - [x] CI: `unified-thesis-build.yml` → `thesis-build.yml` (MD-only: gates pytest + figs; LaTeX/DOCX = job `workflow_dispatch` p/ F6; histórico preservado em `main`)
+  - [x] Scaffold `thesis_engine/` + `tests/`
+- [x] **F1 — Modelos OO + ingest do registro** ✓ (commit ecd05ab)
+  - [x] `models.py`: Source · Claim · NFact · MethodFact · ResultFact (listas em Column(JSON))
+  - [x] Ingest: claims.csv + claim_texts.md · source_manifest.json · consistency_manifest.json (`ingest/registro.py`); `norm.py` = cópia exata da normalização sha256
+  - [x] Gate: 60 claims / 58 fontes / 65 N-fatos / 4 métodos / 5 resultados · sha256 de TODAS conferido · integridade evidence→source · rebuild idempotente — **5/5 testes VERDE**
 - [ ] **F2 — Parser da tese → blocos** (1–1,5 dia)
   - [ ] Parser MD → blocos tipados com ids estáveis (`cap07/sec7.2/blk0014`)
   - [ ] Vinculação: tags `[claim:]` → Claim; `§` → Section; figuras → Figure
