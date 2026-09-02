@@ -94,6 +94,10 @@ Os specs de estilo que hoje são prosa (`style_profile.md`, `writing_rationale_m
 
 ## 4 · TODOLIST (fases com gates)
 
+> **Registro vivo de posição: STATE_HANDOFF.md** (memória persistente — ler primeiro ao retomar).
+> **Invariantes acima dos gates:** CI verde ≠ tese pronta (kernel do programa) · `author_approved` só humana.
+> **⚠️ F6 LaTeX: CHECKPOINT HUMANO OBRIGATÓRIO** — apresentar à autora DURANTE a fase (pedido expresso 02/09).
+
 - [x] **F0 — Setup** ✓ (commit ecd05ab)
   - [x] Deps: venv `.venv/` — pydantic-core 2.48 compilado (rust + `ANDROID_API_LEVEL=36`,Termux) · fastapi 0.141 · sqlmodel 0.0.42 · pydantic 2.13 · markdown-it-py · typer · pytest · requirements.txt
   - [x] CI: `unified-thesis-build.yml` → `thesis-build.yml` (MD-only: gates pytest + figs; LaTeX/DOCX = job `workflow_dispatch` p/ F6; histórico preservado em `main`)
