@@ -83,7 +83,7 @@ def gate_objetivo(db_path: str, key: str) -> dict:
                 faltando_secoes.append(want)
         else:
             keywords_total += 1
-            tokens = [w for w in _norm(topico).split() if len(w) > 5]
+            tokens = [w for w in re.split(r"[^a-z0-9]+", _norm(topico)) if len(w) > 5]
             if not tokens or any(t in _norm(body) for t in tokens):
                 keywords_ok += 1
     elementos_faltando = []

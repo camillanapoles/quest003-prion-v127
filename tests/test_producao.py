@@ -32,14 +32,16 @@ def test_ordem_topologica(loaded):
 
 
 def test_canonico_hard_zero_yellow_real(loaded):
-    """Calibração: canônico adversarialmente validado → HARD=0; YELLOW=agenda hostil real."""
+    """Pós-emenda v1 (T1): HARD=0; YELLOW=4 decisões documentadas (fila respondida)."""
     r = check_producao(loaded)
     assert r["ok"] is True and not r["hard"]
-    assert 10 <= len(r["yellow"]) <= 25  # 17 no retro-run
+    assert 3 <= len(r["yellow"]) <= 8  # 4 pós-emenda: TESE-FICHA · forward §8 · C040 · TODO-c08
     joined = " ".join(r["yellow"])
-    # achados REAIS esperados (termos sem definição + templates + forward-ref)
-    for termo in ("AD", "SAP", "DSMB", "TODO"):
-        assert termo in joined, f"achado real esperado ausente: {termo}"
+    for achado in ("TODO", "C040", "forward-ref"):
+        assert achado in joined, f"decisão esperada ausente: {achado}"
+    # os 13 termos foram EMENDADOS na LISTA DE SIGLAS (v1) — não podem mais flaggear
+    for resolvido in ("AD", "SAP", "DSMB", "PBPK", "IDW"):
+        assert f"termo novo sem definição prévia: {resolvido}" not in joined
 
 
 def test_cumulativo_revalida_producao_ate_o_momento(loaded):
@@ -72,11 +74,11 @@ def test_gate_detecta_secao_fantasma(loaded):
 
 def test_fila_hostil_auto_populada(loaded):
     rev = ingest_revisoes(loaded)
-    assert rev["total"] >= 15
+    assert rev["total"] >= 4  # pós-emenda v1: 4 decisões (13 termos já emendados no canônico)
     with Session(create_db(loaded)) as s:
         itens = s.exec(select(RevisaoHostil)).all()
-    assert all(i.status == "aberto" for i in itens)
-    assert any(i.cap_key == "c00" and "AD" in i.achado for i in itens)
+    assert any(i.cap_key == "c00" and "TODO" in i.achado for i in itens)
+    assert any("C040" in i.achado for i in itens)
     # idempotente: re-sincronizar não duplica
     rev2 = ingest_revisoes(loaded)
     assert rev2["novos"] == 0 and rev2["total"] == rev["total"]
