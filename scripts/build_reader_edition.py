@@ -28,6 +28,7 @@ if "## B.5 Prejulgando objeções" in md:
 front_nota = md[md.index("> ## NOTA À LEITURA"):md.index("\n## RESUMO")]
 front_resumo = md[md.index("## RESUMO"):md.index("\n## ABSTRACT")]
 front_siglas = md[md.index("## LISTA DE SIGLAS"):md.index("\n---\n\n# CAPÍTULO 1")]
+concord = md[md.index("### Concordância claims"):md.index("\n# APÊNDICE B")] if "### Concordância claims" in md else ""
 
 # ── 2. LIMPEZA DE LEITURA ──
 def reader(text):
@@ -41,7 +42,9 @@ def reader(text):
     text = re.sub(r"§(\d+\.\d+(?:-bis)?)", r"seção \1", text)
     # 2d. citações numéricas → \cite{eN} (regra hard: nunca colchete morto)
     text = re.sub(r"\[(\d{1,2})\]", lambda m: "\\cite{e%s}" % m.group(1), text)
-    # 2e. TODO da casa → display-safe
+    # 2e. tokens [Exxx] soltos → removidos no corpo de leitura (provenance = concordância)
+    text = re.sub(r"\s*\[E\d{1,3}\]", "", text)
+    # 2f. TODO da casa → display-safe
     text = re.sub(r"\{\{TODO:([^:}]+):[^}]*\}\}", r"〔a preencher pela autora: \1〕", text)
     return text
 
@@ -58,7 +61,8 @@ def pandoc(text):
     return subprocess.run(["pandoc", "-f", "markdown", "-t", "latex", "--top-level-division=chapter"],
                           input=text.encode(), capture_output=True, check=True).stdout.decode()
 
-tex_nota, tex_resumo, tex_siglas, tex_body, tex_b5 = map(pandoc, (front_nota, front_resumo, front_siglas, body, apB5))
+tex_nota, tex_resumo, tex_siglas, tex_body, tex_b5, tex_conc = map(pandoc,
+    (front_nota, front_resumo, front_siglas, body, apB5, reader(concord) if False else concord))
 for tex in (tex_body,):
     pass
 # floats [htbp] (lambda: replacement literal — \b de "\begin" não pode passar pelo motor de escapes)
@@ -80,7 +84,7 @@ main = r"""% ══════════════════════�
 % Numeração: só LaTeX · zero tags no corpo · provenance no apêndice.
 % ══════════════════════════════════════════════════════════════════
 \documentclass[12pt,a4paper,oneside]{report}
-\usepackage{polyglossia}\setmainlanguage{brazil}\setmainfont{TeX Gyre Termes}
+\usepackage{polyglossia}\setmainlanguage{portuguese}\setmainfont{TeX Gyre Termes}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
 \usepackage{amsmath,amssymb,graphicx,booktabs,longtable,microtype}
 \usepackage{array,calc,xcolor}
@@ -115,6 +119,9 @@ pdfauthor={Camilla N.}]{hyperref}
 \end{thebibliography}
 \appendix
 """ + tex_b5 + r"""
+
+% ── Apêndice final: concordância claims→referências (a provenance do texto lido) ──
+""" + tex_conc + r"""
 \end{document}
 """
 OUT.write_text(main, encoding="utf-8")
