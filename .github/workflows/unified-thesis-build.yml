@@ -18,11 +18,13 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deps (pandoc + xetex + matplotlib)
+      - name: Deps (pandoc + xetex + matplotlib — à prova de espelho travado)
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq pandoc texlive-latex-base texlive-latex-recommended \
-            texlive-fonts-recommended texlive-xetex
+          sudo apt-get -o Acquire::Retries=5 -o Acquire::http::Timeout=25 -o Acquire::https::Timeout=25 update -qq
+          timeout 420 sudo apt-get -o Acquire::Retries=5 -o Acquire::http::Timeout=25 install -y -qq \
+            pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-xetex \
+            || (sudo apt-get -o Acquire::Retries=5 update -qq && timeout 420 sudo apt-get install -y -qq \
+            pandoc texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-xetex)
           pip install -q numpy matplotlib
 
       - name: Figuras auditáveis (Fig.4 + Fig.5 — leem SÓ JSONs do registro)
