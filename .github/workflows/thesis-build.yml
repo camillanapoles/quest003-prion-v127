@@ -1,0 +1,53 @@
+name: Thesis Build (engine MD — LaTeX é derivado opcional)
+
+on:
+  push:
+    branches: [tese-modular-md]
+    paths:
+      - "thesis_engine/**"
+      - "tests/**"
+      - "requirements.txt"
+      - "paper/evidence_workspace/**"
+      - "paper_rewriting_output/final_paper/tese_unificada.md"
+      - "experiments/xspecies/**"
+      - "experiments/m31/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Deps engine
+        run: pip install -q -r requirements.txt
+
+      - name: Gates do registro probatório (ingest + sha256 + integridade)
+        run: python -m pytest tests/ -q
+
+      - name: Figuras auditáveis (Fig.4 + Fig.5 — leem SÓ JSONs do registro)
+        run: |
+          pip install -q numpy matplotlib
+          python3 experiments/xspecies/make_fig4_thetaspecies.py
+          python3 experiments/m31/make_fig5_doseladder.py
+          test -f paper/latex/figs/fig4_theta_species.png
+          test -f paper/latex/figs/fig5_dose_ladder.png
+
+  # LaTeX/DOCX/PDF são SAÍDAS DERIVADAS: render determinístico do engine (F6).
+  # Nunca mais editados à mão; rodar sob demanda quando o render existir.
+  latex-derivado:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Placeholder — ativado em F6 (render blocos→tex→PDF)
+        run: echo "F6 não implementada ainda; main.tex histórico está preservado no git (branch main)."
