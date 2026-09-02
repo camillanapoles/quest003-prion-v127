@@ -36,7 +36,7 @@ plano:     PLAN_MODULAR_ENGINE.md  ·  este arquivo = posição viva
 | **HP-Cap produção+hostil** | ✅ | 3266ba0 | gates objetivo/coesao/gaps cumulativos · fila RevisaoHostil · 17 itens reais |
 | **T1 elaboração hostil** | ✅ | d4f59de | 13 termos emendados na LISTA (round-trip ok) + 4 decisões respondidas — YELLOW 17→4, fila 0 abertos |
 | **T2/G6 âncoras §6.3** | ✅ | 06644fa | check_sec63: 8 âncoras dose↔m31 (0,0–2,6·0,2/10,3·MW 22,83·halo 4/6·κ=8) · 6 gates no check |
-| **F6 LaTeX derivado** | 🔒 **CHECKPOINT HUMANO OBRIGATÓRIO** | — | ⚠️ **a autora pediu retorno explícito DURANTE o LaTeX** — parar e apresentar antes de concluir |
+| **F6 LaTeX 3 variantes (núcleo)** | ✅ checkpoint | 5ab5cab | abnt·prova·kappa determinísticas (byte-idêntico) · CI latex ativado · **F6.1 pendente: markdown inline (163 `**` sem textbf) + validar PDFs do artifact** |
 | F7 gates no CI | ⏳ | — | scripts scientific-writing wired (audit_claims/lint/check_consistency) |
 | F8 docs finais | ⏳ | — | README engine · plano de documentação executado |
 
@@ -97,6 +97,8 @@ plano:     PLAN_MODULAR_ENGINE.md  ·  este arquivo = posição viva
 - [x] ~~Elaborar os 17 itens da fila hostil~~ ✓ T1 (d4f59de): 13 emendados + 4 respondidos
 - [x] ~~F5.5-resto G6~~ ✓ T2 (06644fa): check_sec63 + 6 gates
 - [ ] **F6**: LaTeX derivado do grafo único — **STOP: apresentar à autora DURANTE a fase (checkpoint pedido expressamente)**
+- [x] ~~F6 núcleo~~ ✓ (5ab5cab): 3 variantes determinísticas + CI latex-derivado (run 33695547611)
+- [ ] **F6.1**: markdown inline → LaTeX (**bold**→textbf · *itálico*→textit · `código`→texttt) · conferir PDFs do artifact CI · ajustar gerador onde quebrar (nunca o .tex)
 - [ ] **F7**: scripts scientific-writing no CI (audit_claims·lint_manuscript·check_consistency) + integrity_report.json como artefato
 - [ ] **F8**: README do engine · plano de documentação (uso da API, Modo B, rollback)
 
