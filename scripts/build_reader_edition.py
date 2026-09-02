@@ -39,7 +39,9 @@ def reader(text):
     text = re.sub(r"\s*\[evidence:[^\]]+\]", "", text)
     # 2c. refs a seções: "§N.M" → "\S N.M" (bate com auto-numeração LaTeX)
     text = re.sub(r"§(\d+\.\d+(?:-bis)?)", r"seção \1", text)
-    # 2d. TODO da casa → display-safe
+    # 2d. citações numéricas → \cite{eN} (regra hard: nunca colchete morto)
+    text = re.sub(r"\[(\d{1,2})\]", lambda m: "\\cite{e%s}" % m.group(1), text)
+    # 2e. TODO da casa → display-safe
     text = re.sub(r"\{\{TODO:([^:}]+):[^}]*\}\}", r"〔a preencher pela autora: \1〕", text)
     return text
 
@@ -106,6 +108,7 @@ pdfauthor={Camilla N.}]{hyperref}
 \listoftables
 """ + tex_siglas + r"""
 """ + tex_body + r"""
+\nocite{*}
 \begin{thebibliography}{99}\setlength{\itemsep}{1pt}
 """ + "\n".join(bib) + r"""
 \end{thebibliography}
