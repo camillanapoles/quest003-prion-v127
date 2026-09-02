@@ -80,13 +80,13 @@ main = r"""% ══════════════════════�
 % Numeração: só LaTeX · zero tags no corpo · provenance no apêndice.
 % ══════════════════════════════════════════════════════════════════
 \documentclass[12pt,a4paper,oneside]{report}
-\usepackage[brazil]{babel}\usepackage{fontspec}\setmainfont{TeX Gyre Termes}
+\usepackage{polyglossia}\setmainlanguage{brazil}\setmainfont{TeX Gyre Termes}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
 \usepackage{amsmath,amssymb,graphicx,booktabs,longtable,microtype}
 \usepackage{array,calc,xcolor}
 \providecommand{\tightlist}{\setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}}
 \usepackage{caption}\captionsetup{font=small,labelfont=bf,skip=6pt}
-\usepackage[htbp]{float}
+\usepackage{float}
 \usepackage{fancyhdr}\pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\small\itshape Etrização computacional em doenças priônicas}
 \fancyhead[R]{\small\thepage}\renewcommand{\headrulewidth}{0.3pt}\setlength{\headheight}{15pt}
@@ -110,7 +110,6 @@ pdfauthor={Camilla N.}]{hyperref}
 \listoftables
 """ + tex_siglas + r"""
 """ + tex_body + r"""
-\nocite{*}
 \begin{thebibliography}{99}\setlength{\itemsep}{1pt}
 """ + "\n".join(bib) + r"""
 \end{thebibliography}
