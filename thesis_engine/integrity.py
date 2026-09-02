@@ -6,6 +6,8 @@ check_sec43: reconciliação JSONs do registro ↔ tabela §4.3 da tese.
     2. a forma PT-BR aparece no bloco-tabela canônico de §4.3.
   Falha (ValueError) se qualquer âncora sumir ou divergir — mata número digitado.
 """
+import re
+
 from sqlmodel import Session, select
 
 from thesis_engine.db import create_db
@@ -60,3 +62,79 @@ def check_sec43(db_path: str) -> dict:
     if problemas:
         raise ValueError("gate §4.3 FALHOU:\n  - " + "\n  - ".join(problemas))
     return {"ok": True, "ancoras": ancoras, "table_block": table.block_id}
+
+
+# ============ F2.5 — gates de estilo (style_profile.md, calibrados no canônico) ============
+
+_PROIBIDAS = ("promissor", "futuros estudos")
+_DOI = re.compile(r"10\.\d{4,}/\S+")
+_VERSAO = re.compile(r"\bv\d+\.\d+\b")
+_SREF = re.compile(r"§\s?\d+(?:\.\d+)?")
+_MILHAR = re.compile(r"\b\d{1,2}\.\d{3}(?=\s|anos|\b)")
+_PAREN_REF = re.compile(r"\(\d+\.\d+[^)]*\)")
+_DECIMAL = re.compile(r"\b(\d+)\.(\d+)\b")
+
+
+def _section_like(m: re.Match) -> bool:
+    """2.7/9.3/1.2 = ref de seção em prosa (tese tem 13 capítulos: N.M com N≤13, M de 1 dígito)."""
+    left, right = m.group(1), m.group(2)
+    return len(right) == 1 and 1 <= int(left) <= 13
+
+
+def check_style(db_path: str) -> dict:
+    """G1 proibições · G2 openers clínicos ≥3 · G3 tier na seção com dose µg · G4 decimais PT-BR."""
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        blocks = s.exec(select(Block)).all()
+
+    problemas: list[str] = []
+    proib: list[tuple[str, str]] = []
+    for b in blocks:
+        low = b.content.lower()
+        for w in _PROIBIDAS:
+            if w in low:
+                proib.append((b.block_id, w))
+    if proib:
+        problemas.append(f"proibições ativas: {proib}")
+
+    openers = [b for b in blocks if b.function == "clinical-opener"]
+    if len(openers) < 3:
+        problemas.append(f"openers clínicos < 3 (achados {len(openers)}) — convenção quebrada")
+
+    # G3: saída de dose no B4 (aplicação — onde a dose é PRODUZIDA) exige tier na
+    # seção (padrão da autora: tier no título — §6.3 [SIM-planejamento]). Menções
+    # narrativas em outros blueprints são referências, não saída de dose.
+    _DOSE_SIG = re.compile(r"µg\s+(?:de\s+)?V127|\d+(?:[,.]\d+)?\s*[–-]?\s*\d*(?:[,.]\d+)?\s*µg")
+    key_of = lambda b: b.sec_id or b.chap_id or "?"
+    dose_secs = {
+        key_of(b) for b in blocks if b.blueprint == "B4" and _DOSE_SIG.search(b.content)
+    }
+    tiers_by_sec: dict[str, set] = {}
+    for b in blocks:
+        k = key_of(b)
+        if k in dose_secs:
+            tiers_by_sec.setdefault(k, set()).update(b.tiers)
+    for sec, tiers in tiers_by_sec.items():
+        if not tiers:
+            problemas.append(f"seção {sec} tem saída de dose (µg) sem tier em nenhum bloco")
+
+    for b in blocks:
+        if b.block_type != "paragraph":
+            continue
+        txt = _DOI.sub("", b.content)
+        txt = _VERSAO.sub("", txt)
+        txt = _SREF.sub("", txt)
+        txt = _MILHAR.sub("", txt)
+        txt = _PAREN_REF.sub("", txt)
+        hits = [m.group(0) for m in _DECIMAL.finditer(txt) if not _section_like(m)]
+        if hits:
+            problemas.append(f"{b.block_id}: decimal com ponto em prosa PT-BR: {hits}")
+
+    if problemas:
+        raise ValueError("gate de estilo FALHOU:\n  - " + "\n  - ".join(problemas))
+    return {
+        "ok": True,
+        "clinical_openers": len(openers),
+        "proibicoes": len(proib),
+        "secoes_com_dose": len(tiers_by_sec),
+    }

@@ -25,7 +25,12 @@ TESE_MD = REPO / "paper_rewriting_output" / "final_paper" / "tese_unificada.md"
 
 _HEADING = re.compile(r"^(#{1,6}) (.+)$")
 _LIST = re.compile(r"^(?:- |\* |\d+\. )")
-_TIER_ORDER = (re.compile(r"\[SIM\]-planejamento"), re.compile(r"\[SIM\]"), re.compile(r"\[ORGANOID\]"))
+_TIER_ORDER = (
+    (re.compile(r"\[SIM\]-planejamento"), "SIM-planejamento"),
+    (re.compile(r"\[SIM-planejamento\]"), "SIM-planejamento"),
+    (re.compile(r"\[SIM\]"), "SIM"),
+    (re.compile(r"\[ORGANOID\]"), "ORGANOID"),
+)
 _CLAIM_TAG = re.compile(r"\[claim:([^\]]+)\]")
 _EVID_TAG = re.compile(r"\[evidence:([^\]]+)\]")
 _SREF = re.compile(r"§\s?([0-9A-B][0-9]*(?:\.[0-9]+)?(?:-bis)?)")
@@ -54,8 +59,7 @@ def _extract_meta(content: str) -> dict:
         claims.extend(_expand_claims(m.group(1)))
     evid = [e.strip() for m in _EVID_TAG.finditer(content) for e in m.group(1).split(",") if e.strip()]
     tiers = []
-    tier_names = ("SIM-planejamento", "SIM", "ORGANOID")
-    for pat, name in zip(_TIER_ORDER, tier_names):
+    for pat, name in _TIER_ORDER:
         if pat.search(content) and name not in tiers:
             tiers.append(name)
     return {
@@ -214,6 +218,9 @@ def ingest_tese(db_path: str, md_path: str = str(TESE_MD)) -> dict[str, int]:
             )
         for obj in (*chapters, *sections, *blocks):
             s.add(obj)
+        from thesis_engine.categorize import apply_categorization
+
+        apply_categorization(s, blocks, chapters)  # F2.5: backfill §3.5 (metadata only)
         s.commit()
         return {
             "chapters": len(chapters),
