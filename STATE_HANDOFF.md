@@ -32,7 +32,8 @@ plano:     PLAN_MODULAR_ENGINE.md  ·  este arquivo = posição viva
 | F4 API+CLI guardados | ✅ | a8c40b6 | CRUD Modo B · registro read-only · author_approved só humana |
 | F5 render modular | ✅ | d30324e | 17 caps+SUMARIO · partição exata · check_bindings |
 | débitos R1-R3 pinados | ✅ | e2828e0 | regressões permanentes (colisão·tier·G3) |
-| **F5.5 coerência global** | ⏳ PRÓXIMA | — | G5-lite + **G6-extendido (âncoras §6.3 + fatos-canon F-43/F-44/H-P3)** + G7 arco R0-R9 |
+| **F5.7 grafo+plano global** | ✅ | 46aaddc | graphify→SQL (884/1145) · PLANO_GLOBAL_DA_TESE.md como dado OO · gate G7 |
+| **F5.5 coerência (resto)** | ⏳ PRÓXIMA | — | G6: âncoras §6.3 (cadeia m31) · G5-lite terminologia mecânica (G7 já entregue na F5.7) |
 | **F6 LaTeX derivado** | 🔒 **CHECKPOINT HUMANO OBRIGATÓRIO** | — | ⚠️ **a autora pediu retorno explícito DURANTE o LaTeX** — parar e apresentar antes de concluir |
 | F7 gates no CI | ⏳ | — | scripts scientific-writing wired (audit_claims/lint/check_consistency) |
 | F8 docs finais | ⏳ | — | README engine · plano de documentação executado |
@@ -91,10 +92,12 @@ plano:     PLAN_MODULAR_ENGINE.md  ·  este arquivo = posição viva
 
 ## 7 · Fila imediata (task-queue persistente)
 
-- [ ] **F5.5**: G5-lite (Kt-contínuo=0 ✓ já; "0,333" sem θ* → relatório) · G6-extendido (§6.3 m31-chain + **canon F-43/F-44/H-P3 como âncoras nomeadas** — fecha F1) · G7 (cobertura R0-R9 por capítulo) + kernel F2 no PLAN
+- [ ] **F5.5-resto**: G6 âncoras numéricas §6.3 (tabela de dose ↔ m31_u1u2 chain) · G5-lite (Kt contínuo já 0; relatório de contexto θ*/0,333)
 - [ ] **F6**: LaTeX derivado do grafo único — **STOP: apresentar à autora DURANTE a fase (checkpoint pedido expressamente)**
 - [ ] **F7**: scripts scientific-writing no CI (audit_claims·lint_manuscript·check_consistency) + integrity_report.json como artefato
 - [ ] **F8**: README do engine · plano de documentação (uso da API, Modo B, rollback)
+
+**Feito na F5.7 (46aaddc):** G7 entregue como `check_plano` (congruência plano↔tese + fontes resolvem: claims/figuras/JSONs/canon-tokens/comunidades) · grafo no SQL (`/graph?community=&q=`) · PLANO_GLOBAL_DA_TESE.md (329 linhas) single-source `plano_data.py`
 
 ## 8 · Invariantes (acima de qualquer skill/gate)
 
