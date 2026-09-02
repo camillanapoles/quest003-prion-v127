@@ -62,6 +62,51 @@ class NFact(SQLModel, table=True):
     evidence_ids: list[str] = Field(default_factory=list, sa_column=Column(JSON))
 
 
+class Chapter(SQLModel, table=True):
+    """Container nível-1 (título, CAPÍTULO 1–13, REFERÊNCIAS, APÊNDICES)."""
+
+    chap_id: str = Field(primary_key=True)  # c00, c01, ...
+    order_idx: int
+    title: str
+    level: int = 1
+
+
+class Section(SQLModel, table=True):
+    """Seção nível-2/3 sob um capítulo (label numerado ou None)."""
+
+    sec_id: str = Field(primary_key=True)  # c01s00, ...
+    chap_id: str = Field(foreign_key="chapter.chap_id")
+    order_idx: int
+    level: int  # 2 ou 3
+    label: Optional[str] = None  # "7.1", "5.1-bis", "B.1", None p/ não-numeradas
+    title: str
+
+
+class Block(SQLModel, table=True):
+    """Bloco tipado — partição verbatim do MD canônico (Modo A: conservação).
+
+    content cobre o arquivo inteiro contiguamente: render = ''.join(contents em seq).
+    Categorização §3.5: function/blueprint preenchidos em F2.5; status='canonico'
+    para texto preservado (Modo A) — 'draft/revised/validated/author_approved' no Modo B.
+    """
+
+    block_id: str = Field(primary_key=True)  # B0001... (determinístico por posição)
+    seq: int
+    block_type: str  # heading|paragraph|math|table|figure|list|quote|hr|blank
+    chap_id: Optional[str] = Field(default=None, foreign_key="chapter.chap_id")
+    sec_id: Optional[str] = Field(default=None, foreign_key="section.sec_id")
+    content: str  # verbatim, inclui \n final
+    heading_level: Optional[int] = None
+    heading_text: Optional[str] = None
+    claim_ids: list[str] = Field(default_factory=list, sa_column=Column(JSON))
+    evidence_ids: list[str] = Field(default_factory=list, sa_column=Column(JSON))
+    cross_refs: list[str] = Field(default_factory=list, sa_column=Column(JSON))
+    tiers: list[str] = Field(default_factory=list, sa_column=Column(JSON))
+    status: str = "canonico"
+    function: Optional[str] = None  # F2.5 (motivation/method/result/...)
+    blueprint: Optional[str] = None  # F2.5 (B0–B9)
+
+
 class MethodFact(SQLModel, table=True):
     """Método M001–M004 (consistency_manifest.json)."""
 
