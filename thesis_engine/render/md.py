@@ -10,7 +10,10 @@ from thesis_engine.models import Block
 
 
 def render_md(db_path: str) -> str:
+    """Render canônico: apenas blocos status='canonico' (drafts Modo B ficam de fora)."""
     engine = create_db(db_path)
     with Session(engine) as s:
-        blocks = s.exec(select(Block).order_by(Block.seq)).all()
+        blocks = s.exec(
+            select(Block).where(Block.status == "canonico").order_by(Block.seq)
+        ).all()
     return "".join(b.content for b in blocks)

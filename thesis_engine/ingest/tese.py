@@ -53,7 +53,8 @@ def _expand_claims(inner: str) -> list[str]:
     return out
 
 
-def _extract_meta(content: str) -> dict:
+def extract_meta(content: str) -> dict:
+    """Extrai claim/evidence/tier/§ref de um conteúdo (usado no parse E na escrita F4)."""
     claims: list[str] = []
     for m in _CLAIM_TAG.finditer(content):
         claims.extend(_expand_claims(m.group(1)))
@@ -144,7 +145,7 @@ def parse_blocks(md_text: str) -> list[dict]:
         end = i + n
         if end < len(lines):
             raw += "\n"
-        meta = {} if btype in ("blank",) else _extract_meta(raw)
+        meta = {} if btype in ("blank",) else extract_meta(raw)
         d = {"block_type": btype, "content": raw, **meta}
         if btype == "heading":
             m = _HEADING.match(lines[i])
