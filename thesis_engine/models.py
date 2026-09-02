@@ -159,6 +159,22 @@ class PlanChapter(SQLModel, table=True):
     simplificar: str = ""
 
 
+class RevisaoHostil(SQLModel, table=True):
+    """Fila do revisor hostil (persona: gênio da área, coordenador de revista).
+
+    Itens YELLOW dos gates de produção + questionamentos do próprio revisor.
+    Cada item EXIGE elaboração (critical thinking) ou emenda antes de fechar.
+    """
+
+    item_id: str = Field(primary_key=True)  # H0001…
+    cap_key: str
+    tipo: str  # objetivo|coesao|gaps|hostil
+    achado: str
+    status: str = "aberto"  # aberto→respondido|emendado
+    resposta: Optional[str] = None
+    respondido_por: Optional[str] = None
+
+
 class MethodFact(SQLModel, table=True):
     """Método M001–M004 (consistency_manifest.json)."""
 

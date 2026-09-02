@@ -35,9 +35,31 @@ def plano(db: str = _DEFAULT_DB, out: str = str(REPO / "PLANO_GLOBAL_DA_TESE.md"
 
 
 @app.command()
+def producao(db: str = _DEFAULT_DB):
+    """HP-Cap: revisão cumulativa por capítulo (ordem topológica) + fila hostil."""
+    from thesis_engine.ingest.revisoes import ingest_revisoes
+    from thesis_engine.producao import assert_producao_ok, check_producao
+
+    r = check_producao(db)
+    for chap in r["relatorio"]:
+        marks = {g: ("✓" if v["ok"] else "✗") for g, v in chap["gates"].items()}
+        typer.echo(
+            f"{chap['cap']}: objetivo={marks['objetivo']} coesao={marks['coesao']} "
+            f"gaps={marks['gaps']} → {'OK' if chap['ok'] else 'DÉBITO'}"
+        )
+    gate = assert_producao_ok(db)  # HARD=0 exigido
+    rev = ingest_revisoes(db)
+    typer.echo(
+        f"HARD=0 ✓ · YELLOW={len(r['yellow'])} → fila hostil: {rev['total']} itens "
+        f"({rev['novos']} novos) — protocolo: HOSTILE_REVIEW_PROTOCOL.md"
+    )
+
+
+@app.command()
 def check(db: str = _DEFAULT_DB):
-    """Roda TODOS os gates (§4.3 + estilo + bindings + plano). Exit 1 se falhar."""
+    """Roda TODOS os gates (§4.3 + estilo + bindings + plano + produção). Exit 1 se falhar."""
     from thesis_engine.integrity import check_bindings, check_plano, check_sec43, check_style
+    from thesis_engine.producao import assert_producao_ok
 
     ok = True
     for name, fn in (
@@ -45,6 +67,7 @@ def check(db: str = _DEFAULT_DB):
         ("estilo", check_style),
         ("bindings", check_bindings),
         ("plano", check_plano),
+        ("producao", assert_producao_ok),
     ):
         try:
             r = fn(db)

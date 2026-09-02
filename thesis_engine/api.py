@@ -299,6 +299,48 @@ def create_app(db_path: str) -> FastAPI:
             rows = [n for n in rows if q.lower() in n.label.lower() or q.lower() in n.source_file.lower()]
         return rows[:limit]
 
+    # ---------------- HP-Cap: produção + fila hostil ----------------
+    @app.get("/producao")
+    def producao(upto: Optional[str] = None):
+        from thesis_engine.producao import check_producao
+
+        return check_producao(app.state.db_path, upto_key=upto)
+
+    @app.get("/revisoes")
+    def revisoes(cap_key: Optional[str] = None, status: Optional[str] = None):
+        from thesis_engine.models import RevisaoHostil
+
+        with sess() as s:
+            rows = s.exec(select(RevisaoHostil)).all()
+        if cap_key:
+            rows = [r for r in rows if r.cap_key == cap_key]
+        if status:
+            rows = [r for r in rows if r.status == status]
+        return rows
+
+    class RespostaIn(BaseModel):
+        resposta: str
+        respondido_por: str  # quem elabora (critical thinking) — humana fecha definitivo
+        emenda: bool = False  # True → status emendado
+
+    @app.post("/revisoes/{item_id}/responder")
+    def responder(item_id: str, body: RespostaIn):
+        from thesis_engine.models import RevisaoHostil
+
+        with sess() as s:
+            item = s.get(RevisaoHostil, item_id)
+            if not item:
+                raise HTTPException(404)
+            if item.status != "aberto":
+                raise HTTPException(409, f"item já {item.status}")
+            item.resposta = body.resposta
+            item.respondido_por = body.respondido_por
+            item.status = "emendado" if body.emenda else "respondido"
+            s.add(item)
+            s.commit()
+            s.refresh(item)
+            return item
+
     # ---------------- gates + render ----------------
     @app.get("/integrity")
     def integrity():
