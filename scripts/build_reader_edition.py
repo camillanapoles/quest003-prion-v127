@@ -80,9 +80,11 @@ main = r"""% ══════════════════════�
 % Numeração: só LaTeX · zero tags no corpo · provenance no apêndice.
 % ══════════════════════════════════════════════════════════════════
 \documentclass[12pt,a4paper,oneside]{report}
-\usepackage{polyglossia}\setmainlanguage{brazil}\setmainfont{TeX Gyre Termes}
+\usepackage[brazil]{babel}\usepackage{fontspec}\setmainfont{TeX Gyre Termes}
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=2cm]{geometry}
 \usepackage{amsmath,amssymb,graphicx,booktabs,longtable,microtype}
+\usepackage{array,calc,xcolor}
+\providecommand{\tightlist}{\setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}}
 \usepackage{caption}\captionsetup{font=small,labelfont=bf,skip=6pt}
 \usepackage[htbp]{float}
 \usepackage{fancyhdr}\pagestyle{fancy}\fancyhf{}
@@ -93,7 +95,7 @@ main = r"""% ══════════════════════�
 \usepackage{newunicodechar}
 \newunicodechar{↔}{\ensuremath{\leftrightarrow}}\newunicodechar{∂}{\ensuremath{\partial}}
 \newunicodechar{∇}{\ensuremath{\nabla}}\newunicodechar{✅}{\ensuremath{\checkmark}}
-\newunicodechar{⚠}{\textbf{!}}\newunicodechar{️}{}\newunicodechar{〔}{}\newunicodechar{〕}{}
+\newunicodechar{⚠}{\textbf{!}}\newunicodechar{⁻}{\ensuremath{^{-}}}\newunicodechar{⇒}{\ensuremath{\Rightarrow}}\newunicodechar{→}{\ensuremath{\to}}\newunicodechar{↦}{\ensuremath{\mapsto}}\newunicodechar{∝}{\ensuremath{\propto}}\newunicodechar{≈}{\ensuremath{\approx}}\newunicodechar{≡}{\ensuremath{\equiv}}\newunicodechar{∴}{\therefore}\newunicodechar{️}{}\newunicodechar{〔}{}\newunicodechar{〕}{}
 \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue,
 pdftitle={Etrização Computacional em Doenças Priônicas: Aplicada à Plataforma Terapêutica PrP-V127},
 pdfauthor={Camilla N.}]{hyperref}

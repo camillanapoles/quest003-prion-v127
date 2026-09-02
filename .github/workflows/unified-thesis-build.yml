@@ -34,8 +34,8 @@ jobs:
           test -f paper/latex/figs/fig4_theta_species.png
           test -f paper/latex/figs/fig5_dose_ladder.png
 
-      - name: "main.tex EDIÇÃO A+ (builder determinístico — md-mestre → pandoc → citações/audit-macro)"
-        run: python3 scripts/build_aplus_tex.py
+      - name: "main.tex EDIÇÃO DE LEITURA (builder — mestre-gated → livro: zero tags, numeração só-LaTeX)"
+        run: python3 scripts/build_reader_edition.py
 
       - name: PDF (xelatex ×2, cwd=final_paper para os caminhos ../.. das figuras)
         run: |
