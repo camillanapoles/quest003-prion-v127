@@ -32,6 +32,7 @@ concord = md[md.index("### Concordância claims"):md.index("\n# APÊNDICE B")] i
 
 # ── 2. LIMPEZA DE LEITURA ──
 def reader(text):
+    text = re.sub(r"^> ##+ (.+)$", r"> **\1**", text, flags=re.M)
     # 2a. títulos sem número (LaTeX numera)
     text = re.sub(r"^# CAPÍTULO \d+ — ", "# ", text, flags=re.M)
     text = re.sub(r"^#{2,3} \d+\.\d+(?:-bis)?\s+", "", text, flags=re.M)  # remove "## N.M " do título
@@ -77,6 +78,14 @@ def _gfx(m):
     return "\\includegraphics[" + opts + "]{"
 tex_body = re.sub(r"\\includegraphics(?:\[([^\]]*)\])?\{", _gfx, tex_body)
 
+def front_chapters(tex):
+    for t in ("NOTA À LEITURA", "LISTA DE SIGLAS"):
+        tex = tex.replace(f"\\chapter{{{t}}}", f"\\chapter*{{{t}}}\\addcontentsline{{toc}}{{chapter}}{{{t}}}")
+    return tex
+tex_nota, tex_siglas = front_chapters(tex_nota), front_chapters(tex_siglas)
+# captions sem número LaTeX (nomes canônicos Figura 4/5 preservados)
+tex_body = re.sub(r"\\caption\{", lambda m: "\\caption*{", tex_body)
+
 main = r"""% ══════════════════════════════════════════════════════════════════
 % ETRIZAÇÃO COMPUTACIONAL EM DOENÇAS PRIÔNICAS — EDIÇÃO DE LEITURA
 % Gerado por scripts/build_reader_edition.py a partir do mestre-gated
@@ -105,6 +114,7 @@ pdftitle={Etrização Computacional em Doenças Priônicas: Aplicada à Platafor
 pdfauthor={Camilla N.}]{hyperref}
 \title{Etrização Computacional em Doenças Priônicas:\\Aplicada à Plataforma Terapêutica PrP-V127}
 \author{Camilla N.}\date{2026}
+\addto\captionsportuguese{\renewcommand{\contentsname}{Sumário}}
 \begin{document}
 \maketitle
 """ + tex_resumo.replace("\\chapter{RESUMO}", "\\chapter*{Resumo}").replace("\\section{RESUMO}", "\\chapter*{Resumo}") + r"""
