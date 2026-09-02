@@ -148,6 +148,51 @@ def check_style(db_path: str) -> dict:
     }
 
 
+# ============ F5.5/T2 — gate G6: escada de dose §6.3 ↔ cadeia m31 ============
+
+_ANCORA63: tuple[tuple[str, str, str, float, str], ...] = (
+    ("dose-humana-lo", "m31_u1u2", "chain.Kt2.ug_per_deposit[0]", 0.0, "0,0"),
+    ("dose-humana-hi", "m31_u1u2", "chain.Kt2.ug_per_deposit[1]", 2.6, "2,6"),
+    ("dose-pior-lo-Kt4", "m31_u1u2", "chain.Kt4.ug_per_deposit[0]", 0.2, "0,2"),
+    ("dose-pior-hi-Kt4", "m31_u1u2", "chain.Kt4.ug_per_deposit[1]", 10.3, "10,3"),
+    ("mw-nosso-dado", "m31_u1u2", "u2_mw.mw_kDa", 22.83, "22,83"),
+    ("halo-lo", "m31_u1u2", "u1_vhalo.r_mm[0]", 4.0, "4"),
+    ("halo-hi", "m31_u1u2", "u1_vhalo.r_mm[1]", 6.0, "6"),
+    ("kreq-Kt4-superlinear", "m31_u1u2", "chain.Kt4.kappa_req", 8.0, "8"),
+)
+
+
+def check_sec63(db_path: str) -> dict:
+    """Toda cifra da escada de dose §6.3 vem do m31_u1u2.json (banda GUM por el).
+    PT-BR conferida no capítulo c06 inteiro (tabela §6.3 + prosse — tier no heading)."""
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        cap06 = s.exec(select(Block).where(Block.chap_id == "c06")).all()
+        if not cap06:
+            raise ValueError("capítulo 6 ausente do grafo")
+        content = "\n".join(b.content for b in cap06)
+        tabela = [b for b in cap06 if b.block_type == "table" and (b.sec_id or "").startswith("c06s02")]
+        if not tabela:
+            raise ValueError("tabela da escada de dose ausente em §6.3")
+
+    problemas: list[str] = []
+    ancoras: list[dict] = []
+    for label, stem, path, expected, ptbr in _ANCORA63:
+        try:
+            got = get_value(db_path, stem, path)
+        except KeyError as e:
+            problemas.append(f"{label}: ausente no registro ({e})")
+            continue
+        if abs(got - expected) > 1e-9:
+            problemas.append(f"{label}: registro={got} ≠ esperado={expected}")
+        if ptbr not in content:
+            problemas.append(f"{label}: forma PT-BR {ptbr!r} ausente do cap. 6")
+        ancoras.append({"label": label, "path": path, "valor": got, "ptbr": ptbr})
+    if problemas:
+        raise ValueError("gate §6.3 FALHOU:\n  - " + "\n  - ".join(problemas))
+    return {"ok": True, "ancoras": ancoras, "capitulo": "c06"}
+
+
 # ============ F5 — integração total do grafo (refs/FKs/bindings) ============
 
 _CAP_NUM = re.compile(r"CAPÍTULO (\d+)")

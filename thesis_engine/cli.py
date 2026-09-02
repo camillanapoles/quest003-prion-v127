@@ -58,12 +58,19 @@ def producao(db: str = _DEFAULT_DB):
 @app.command()
 def check(db: str = _DEFAULT_DB):
     """Roda TODOS os gates (§4.3 + estilo + bindings + plano + produção). Exit 1 se falhar."""
-    from thesis_engine.integrity import check_bindings, check_plano, check_sec43, check_style
+    from thesis_engine.integrity import (
+        check_bindings,
+        check_plano,
+        check_sec43,
+        check_sec63,
+        check_style,
+    )
     from thesis_engine.producao import assert_producao_ok
 
     ok = True
     for name, fn in (
         ("sec43", check_sec43),
+        ("sec63", check_sec63),
         ("estilo", check_style),
         ("bindings", check_bindings),
         ("plano", check_plano),
