@@ -79,8 +79,10 @@ def _gfx(m):
 tex_body = re.sub(r"\\includegraphics(?:\[([^\]]*)\])?\{", _gfx, tex_body)
 
 def front_chapters(tex):
-    for t in ("NOTA À LEITURA", "LISTA DE SIGLAS"):
-        tex = tex.replace(f"\\chapter{{{t}}}", f"\\chapter*{{{t}}}\\addcontentsline{{toc}}{{chapter}}{{{t}}}")
+    import re as _re
+    for t in ("NOTA À LEITURA", "LISTA DE SIGLAS", "NOTA DE LEITURA"):
+        tex = _re.sub(r"\\(?:chapter|section)\{" + t + r"\}",
+                      lambda m, t=t: "\\chapter*{" + t + "}\\addcontentsline{toc}{chapter}{" + t + "}", tex)
     return tex
 tex_nota, tex_siglas = front_chapters(tex_nota), front_chapters(tex_siglas)
 # captions sem número LaTeX (nomes canônicos Figura 4/5 preservados)

@@ -29,8 +29,7 @@ pdfauthor={Camilla N.}]{hyperref}
 \addto\captionsportuguese{\renewcommand{\contentsname}{Sumário}}
 \begin{document}
 \maketitle
-\hypertarget{resumo}{%
-\chapter*{Resumo}\label{resumo}}
+\chapter*{Resumo}\label{resumo}
 
 \textbf{Introdução.} Doenças priônicas são 100\% fatais e seis
 candidatos clínicos fracassaram sem modelo quantitativo de entrega. A
@@ -113,8 +112,7 @@ até a sociedade está declarado no Cap. 9 (próximas abordagens).
 \tableofcontents
 \listoffigures
 \listoftables
-\hypertarget{lista-de-siglas}{%
-\section{LISTA DE SIGLAS}\label{lista-de-siglas}}
+\chapter*{LISTA DE SIGLAS}\addcontentsline{toc}{chapter}{LISTA DE SIGLAS}\label{lista-de-siglas}
 
 ETRIZAÇÃO/etrização computacional --- o método nomeado desta tese
 (neologismo composicional; en: Computational Etrization) · θ --- fração
@@ -140,9 +138,8 @@ vitro · DN --- dominante-negativo · GUM --- Guia para a Expressão da
 Incerteza de Medição (Tipo-B: incerteza avaliada por julgamento/fonte,
 não por estatística de repetições)
 
-\hypertarget{nota-introdutuxf3ria-uxe0-banca}{%
 \chapter{NOTA INTRODUTÓRIA À
-BANCA}\label{nota-introdutuxf3ria-uxe0-banca}}
+BANCA}\label{nota-introdutuxf3ria-uxe0-banca}
 
 \emph{Função: responder ``por que `etrização', e o que a diferencia?''
 sem exigir a leitura integral da tese. A nota à leitura (pré-textual)
@@ -213,8 +210,7 @@ hash; guardião R0--R3; AST 9/9).
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{introduuxe7uxe3o}{%
-\chapter{INTRODUÇÃO}\label{introduuxe7uxe3o}}
+\chapter{INTRODUÇÃO}\label{introduuxe7uxe3o}
 
 \begin{quote}
 \textbf{PRODUTO FINAL --- ESTA É A TESE (declaração de abertura)}
@@ -350,12 +346,13 @@ já obtido, sem aguardar cenários de confirmação. A tabela abaixo
 reenquadra os componentes M1--M5 \textbf{sob essa compreensão} (coluna
 direita) e \textbf{aguarda validação expressa da autora}:
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \#
@@ -390,6 +387,7 @@ PARTNER\_SELECTION\_PROTOCOL v2.1 + log v0.2 \\
 M5 & Infraestrutura (guardião + runbook) & continuidade por método, não
 por memória & operante & guardian.py + guardian.md \\
 \end{longtable}
+}
 
 \begin{quote}
 \textbf{✓ VALIDAÇÃO EXPRESSA DA AUTORA --- REGISTRADA (28/08, no commit
@@ -401,8 +399,7 @@ definitivas.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{fundamentauxe7uxe3o}{%
-\chapter{FUNDAMENTAÇÃO}\label{fundamentauxe7uxe3o}}
+\chapter{FUNDAMENTAÇÃO}\label{fundamentauxe7uxe3o}
 
 Este capítulo situa a tese no contexto científico: primeiro o problema
 biomédico que a motiva (o gargalo terapêutico priônico), depois a
@@ -497,8 +494,8 @@ verificação).
 Fundamento epistemológico
 
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \caption*{a etrização como operação ontológica}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
@@ -595,9 +592,8 @@ nomeado que converte esse acervo em continuidade.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{base-comum-de-dados-a-ponte-entre-fundamento-e-aplicauxe7uxe3o}{%
 \chapter{BASE COMUM DE DADOS (a ponte entre fundamento e
-aplicação)}\label{base-comum-de-dados-a-ponte-entre-fundamento-e-aplicauxe7uxe3o}}
+aplicação)}\label{base-comum-de-dados-a-ponte-entre-fundamento-e-aplicauxe7uxe3o}
 
 \emph{Função: estabelecer, em uma página auditável, que o fundamento
 (Parte 3) e a aplicação (Partes 1--2) assentam nos MESMOS dados reais
@@ -642,11 +638,12 @@ como força).
 
 Tabela de validação (todos os números dos JSONs do registro)
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Verificação
@@ -677,12 +674,12 @@ Predição pré-registrada do hamster & REFUTADA sob a definição P-024
 (0,659 mm em κ=2/Kt=2) & reportada como está; horizonte declarado em
 toda citação & ✅ honestidade exibida \\
 \end{longtable}
+}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{fundamento-a-inariuxe2ncia-de-ux3b8-validauxe7uxe3o-multi-espuxe9cie}{%
 \chapter{FUNDAMENTO: A INARIÂNCIA DE θ* (validação
-multi-espécie)}\label{fundamento-a-inariuxe2ncia-de-ux3b8-validauxe7uxe3o-multi-espuxe9cie}}
+multi-espécie)}\label{fundamento-a-inariuxe2ncia-de-ux3b8-validauxe7uxe3o-multi-espuxe9cie}
 
 \emph{Em linguagem clínica: perguntamos se a ``dose'' que contém o príon
 num rato serviria num hamster, num humano, num vole --- espécies cujas
@@ -732,7 +729,7 @@ reportada como está --- anti-hindsight mantido.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{../../paper/latex/figs/fig4_theta_species.png}
+\pandocbounded{\includegraphics[width=0.9\textwidth,keepaspectratio]{../../paper/latex/figs/fig4_theta_species.png}}
 \caption*{Figura 4 --- θ* por espécie nas bandas de cinética}
 \end{figure}
 
@@ -745,9 +742,8 @@ N055--N059; canon F-43/F-44; JSONs
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{aplicauxe7uxe3o-o-desenho-terapuxeautico-emerge}{%
 \chapter{APLICAÇÃO: O DESENHO TERAPÊUTICO
-EMERGE}\label{aplicauxe7uxe3o-o-desenho-terapuxeautico-emerge}}
+EMERGE}\label{aplicauxe7uxe3o-o-desenho-terapuxeautico-emerge}
 
 \emph{Em linguagem clínica: com o fundamento validado (Cap. 3), o
 desenho se completa --- onde depositar (anel 8--12 mm), com que malha, a
@@ -816,12 +812,13 @@ Da). Fontes da cadeia: Kd-piso · V-halo · ECS · MW · titulação.
 \textbf{Escada de dose por banda-Kt do hospedeiro} (banda sob âncora
 ilustrativa; fechada pelo braço A6):**
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Banda-Kt
@@ -844,6 +841,7 @@ Kt 1 & 1,5 & 0,11--1,5 & 0,0--1,9 & ≤7 d \\
 Kt 3 & 3 & 0,21--3,0 & 0,1--3,9 & ≤7 d \\
 Kt 4 (pior caso declarado) & 8 & 0,57--8,0 & 0,2--10,3 & ≤7 d \\
 \end{longtable}
+}
 
 No degrau humano, a dose de A6 é \textbf{0,0--2,6 µg de V127ΔGPI por
 depósito} (redose ≤7 d; regra 3); a escada sobe monotonicamente com
@@ -863,7 +861,7 @@ prescrição}.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.9\textwidth]{../../paper/latex/figs/fig5_dose_ladder.png}
+\pandocbounded{\includegraphics[width=0.9\textwidth,keepaspectratio]{../../paper/latex/figs/fig5_dose_ladder.png}}
 \caption*{Figura 5 --- Escada de dose A6: banda GUM µg/depósito por
 banda-Kt}
 \end{figure}
@@ -904,9 +902,8 @@ orçamento, sem executar compra.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{muxe9todos-a-etrizauxe7uxe3o-formalizada}{%
 \chapter{MÉTODOS: A ETRIZAÇÃO
-FORMALIZADA}\label{muxe9todos-a-etrizauxe7uxe3o-formalizada}}
+FORMALIZADA}\label{muxe9todos-a-etrizauxe7uxe3o-formalizada}
 
 Pipeline do método (P0--P6)
 
@@ -935,13 +932,14 @@ eixo retórico (obrigatória): tudo aqui \textbf{é simulação, e é dito que
 exibirem resultados análogos aos simulados, os passos seguintes já terão
 sido dados} (antecipação bancada, não pendente).
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1667}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Passo
@@ -978,6 +976,7 @@ P6 & confronto (opcional) & dados reais futuros, se análogos &
 comparação à âncora travada (nunca retreino) & passos seguintes já
 avançados & antecipação bancada \\
 \end{longtable}
+}
 
 \textbf{Posição na família:} a etrização é irmã da meta-análise (agrega
 o publicado), da modelagem física (deriva comportamento) e dos in-silico
@@ -1034,14 +1033,15 @@ rigor experimental é \textbf{convertido para o ambiente computacional}:
 cada dado com linhagem completa
 (quem→espécie→cruzamento→código→parâmetro→resultado).
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1429}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1429}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Dado
@@ -1084,6 +1084,7 @@ Sensibilidade estrutural & (este programa) & in-silico & motor
 reproduzido 2× (hash+valor) & sweeps S1-S3 + estimador & --- & predição
 discriminadora {[}C051{]} \\
 \end{longtable}
+}
 
 \textbf{Por que isto é ciência com referências sólidas:} toda célula
 amarra fonte peer-reviewed ou run arquivado com hash; nenhum número vive
@@ -1093,9 +1094,10 @@ ponta, como um ``métodos'' experimental exige.
 
 A tese em forma experimental (mapeamento análogo)
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Tese experimental (com pessoas)
@@ -1120,6 +1122,7 @@ Análise pré-especificada & P3 colheita + estimador θ\_obs calibrado \\
 Implicações relatadas & P4 prognóstico + P5 derivada + P6 antecipação \\
 Auditoria/supervisão & Guardião (4 dimensões de revisão hostil) \\
 \end{longtable}
+}
 
 \emph{Um examinador que sabe ler tese experimental sabe ler esta: basta
 trocar ``pessoa''→``fonte'', ``instrumento''→``código'',
@@ -1129,17 +1132,17 @@ termos do mapeamento não perde a tese.)
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{resultados-como-validauxe7uxe3o-componentes-m1m5}{%
 \chapter{RESULTADOS COMO VALIDAÇÃO (+ componentes
-M1--M5)}\label{resultados-como-validauxe7uxe3o-componentes-m1m5}}
+M1--M5)}\label{resultados-como-validauxe7uxe3o-componentes-m1m5}
 
 \emph{Cada seção de resultados valida uma promessa declarada da tese;
 nenhum resultado é métrica órfã.}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Promessa (contribuição)
@@ -1171,6 +1174,7 @@ O instrumento de confronto funciona & θ\_obs ADEQUADO na fronteira (bias
 A decisão é possível sem dado novo & tabela-decisão derivada
 (κ↔θ\_obs↔R↔biomassa); biomassa = coordenada informativa & \\
 \end{longtable}
+}
 
 Os resultados da tese são os resultados da simulação já realizada
 
@@ -1339,9 +1343,8 @@ documentado --- índice-mestre no KNOWLEDGE\_CANON.md.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{achados-impactos-e-uxe1reas-correlatas-pruxf3ximas-abordagens}{%
 \chapter{ACHADOS, IMPACTOS E ÁREAS CORRELATAS; PRÓXIMAS
-ABORDAGENS}\label{achados-impactos-e-uxe1reas-correlatas-pruxf3ximas-abordagens}}
+ABORDAGENS}\label{achados-impactos-e-uxe1reas-correlatas-pruxf3ximas-abordagens}
 
 Este capítulo responde à pergunta ``e daí?'': consolida os achados,
 mapeia os impactos em camadas, identifica as áreas correlatas onde o
@@ -1374,9 +1377,8 @@ quantitativo simulado-com-dados-reais como forma autônoma e disciplinada
 de saber (não promessa, não hipótese --- \textbf{conhecimento
 potencial-verificável com data de validade declarada}).
 
-\hypertarget{bis.-o-achado-uxfanico-inovador-cura-restaurauxe7uxe3o}{%
 \subsection{5.1-bis. O achado único inovador: cura +
-restauração}\label{bis.-o-achado-uxfanico-inovador-cura-restaurauxe7uxe3o}}
+restauração}\label{bis.-o-achado-uxfanico-inovador-cura-restaurauxe7uxe3o}
 
 \textbf{O achado único inovador --- dupla potencialidade terapêutica:}
 1. \textbf{Cura da doença priônica}: contenção do espalhamento de
@@ -1408,9 +1410,8 @@ qualquer programa que precise decidir \emph{o que medir, onde e em que
 dose} antes de gastar recurso --- a função-objetivo da própria
 etrização.
 
-\hypertarget{bis.-replicabilidade-demonstrada-como-aplicar-a-adpd}{%
 \subsection{5.2-bis. Replicabilidade demonstrada: como aplicar a
-AD/PD}\label{bis.-replicabilidade-demonstrada-como-aplicar-a-adpd}}
+AD/PD}\label{bis.-replicabilidade-demonstrada-como-aplicar-a-adpd}
 
 \textbf{Exemplo concreto de replicação para Alzheimer/Parkinson:} 1.
 \textbf{P0-identificação}: SLR de dados publicados de propagação de
@@ -1465,8 +1466,7 @@ guardião atesta.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{discussuxe3o}{%
-\chapter{DISCUSSÃO}\label{discussuxe3o}}
+\chapter{DISCUSSÃO}\label{discussuxe3o}
 
 Este capítulo pesa os resultados: o que significam, o que não
 significam, e como se posicionam entre a promessa e o limite.
@@ -1508,9 +1508,8 @@ validação expressa da autora.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{camada-cluxednica-pruxe9-abordagem-dos-temas-antes-da-penetrauxe7uxe3o-tuxe9cnica}{%
 \chapter{CAMADA CLÍNICA --- pré-abordagem dos temas antes da penetração
-técnica}\label{camada-cluxednica-pruxe9-abordagem-dos-temas-antes-da-penetrauxe7uxe3o-tuxe9cnica}}
+técnica}\label{camada-cluxednica-pruxe9-abordagem-dos-temas-antes-da-penetrauxe7uxe3o-tuxe9cnica}
 
 \begin{quote}
 ⚠️ \textbf{PROGNÓSTICO {[}SIM{]} --- NÃO É CONSELHO MÉDICO.}
@@ -1568,9 +1567,8 @@ doença}. Cada capítulo técnico abre com um parágrafo \textbf{``Em
 linguagem clínica''} antes da formulação --- quem quiser pular a
 matemática não perde o argumento.
 
-\hypertarget{resumo-em-1-puxe1gina-rota-de-leitura-de-10-minutos}{%
 \subsection{Resumo em 1 página --- rota de leitura de 10
-minutos}\label{resumo-em-1-puxe1gina-rota-de-leitura-de-10-minutos}}
+minutos}\label{resumo-em-1-puxe1gina-rota-de-leitura-de-10-minutos}
 
 \textbf{Rota:} (1) este capítulo (3 min) → (2) \textbf{Figura 4} --- a
 dose-limiar por espécie (2 min) → (3) \textbf{Figura 5} --- a escada de
@@ -1589,16 +1587,16 @@ B), dose titulada à velocidade da doença; (iii) nada disto é aplicável a
 humanos antes do gate organoide (G0-wet) --- a não-promessa é parte do
 método, não um enfeite.
 
-\hypertarget{acompanhamento-previsto-no-desenho-sim-documentauxe7uxe3o-de-desenho-nuxe3o-conduta-cluxednica}{%
 \subsection{Acompanhamento previsto no desenho {[}SIM{]} (documentação
 de desenho --- NÃO conduta
-clínica)}\label{acompanhamento-previsto-no-desenho-sim-documentauxe7uxe3o-de-desenho-nuxe3o-conduta-cluxednica}}
+clínica)}\label{acompanhamento-previsto-no-desenho-sim-documentauxe7uxe3o-de-desenho-nuxe3o-conduta-cluxednica}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 O que o desenho prevê medir
@@ -1621,6 +1619,7 @@ proximal/distal & trough ≥30--56\% do pico {[}SIM{]} \\
 Triagem pré-sintomática (população-âncora E200K) & --- & RT-QuIC + NfL &
 precedentes tofersen/nusinersen (endpoint biomarcador) \\
 \end{longtable}
+}
 
 \emph{Serviços de neurologia interessados em auditar ou viabilizar o
 próximo gate encontram o pacote completo em
@@ -1630,9 +1629,8 @@ terapêutico).}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{limitauxe7uxf5es-como-fruto-cada-limite-com-o-que-o-fecha}{%
 \chapter{LIMITAÇÕES COMO FRUTO (cada limite com o que o
-fecha)}\label{limitauxe7uxf5es-como-fruto-cada-limite-com-o-que-o-fecha}}
+fecha)}\label{limitauxe7uxf5es-como-fruto-cada-limite-com-o-que-o-fecha}
 
 \emph{Reconhecer os limites com plano de pesquisa futura --- cada
 limitação abaixo tem o gate/ensaio que a converte em conhecimento.}
@@ -1675,8 +1673,7 @@ responsável --- especificada, não prometida.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{conclusuxf5es-por-objetivo}{%
-\chapter{CONCLUSÕES POR OBJETIVO}\label{conclusuxf5es-por-objetivo}}
+\chapter{CONCLUSÕES POR OBJETIVO}\label{conclusuxf5es-por-objetivo}
 
 \textbf{OE1 (nomear e formalizar a etrização) --- alcançado.} P0--P6 com
 garantias por passo; nota à banca (Cap. 1) diferencia o termo de IST e
@@ -1784,13 +1781,13 @@ ainda-não-medido.
 \bibitem{e58} OPEN PRION \& MOLECULAR ENGINEERING, CONSORTIUM. M3.1: dose-chain κ\_req→µM→µg/deposit with GUM Type-B band + PrP MW from own sequences (this program). 2026. Disponível em: https://github.com/camillanapoles/quest003-prion-v127. *(JSON: `experiments/m31/m31\_u1u2.json`.)*
 \end{thebibliography}
 \appendix
-\hypertarget{b.5-prejulgando-objeuxe7uxf5es-da-banca}{%
 \section{B.5 Prejulgando objeções da
-banca}\label{b.5-prejulgando-objeuxe7uxf5es-da-banca}}
+banca}\label{b.5-prejulgando-objeuxe7uxf5es-da-banca}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Objeção provável
@@ -1824,18 +1821,19 @@ pré-registro timestampado \\
 MAS: para Aβ não existe variante protetora natural (V127 era do kuru); o
 agente teria de ser engenheirado --- incerteza adicional declarada \\
 \end{longtable}
+}
 
 
 % ── Apêndice final: concordância claims→referências (a provenance do texto lido) ──
-\hypertarget{concorduxe2ncia-claims-referuxeancias-ruxe9gua-da-autora-claim-sem-referuxeancia-uxe9-inaceituxe1vel}{%
 \subsection{Concordância claims → referências (régua da autora: claim
 sem referência é
-inaceitável)}\label{concorduxe2ncia-claims-referuxeancias-ruxe9gua-da-autora-claim-sem-referuxeancia-uxe9-inaceituxe1vel}}
+inaceitável)}\label{concorduxe2ncia-claims-referuxeancias-ruxe9gua-da-autora-claim-sem-referuxeancia-uxe9-inaceituxe1vel}
 
+{\def\LTcaptype{none} % do not increment counter
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Claim
@@ -1906,13 +1904,13 @@ C053 & E033 & {[}33{]} \\
 C054 & E009, E010, E031, E032, E033, E007 & {[}9{]}, {[}10{]}, {[}31{]},
 {[}32{]}, {[}33{]}, {[}7{]} \\
 \end{longtable}
+}
 
-\hypertarget{parte-2-sem-ano-o-resultado-define-as-fases-suxe3o-estimativas.-toda-cifra-deste-manuscrito-vem-de-json-arquivado-ou-do-registro-e-regra-nunca-digitar-valor.-gated-guardian-r0r3-0-blocked-exigido.}{%
 \section{\texorpdfstring{\emph{Parte 2 {[}SEM ANO{]} --- o resultado
 define; as fases são estimativas. Toda cifra deste manuscrito vem de
 JSON arquivado ou do registro E (regra: nunca digitar valor). Gated:
 guardian R0--R3, 0 BLOCKED
-exigido.}}{Parte 2 {[}SEM ANO{]} --- o resultado define; as fases são estimativas. Toda cifra deste manuscrito vem de JSON arquivado ou do registro E (regra: nunca digitar valor). Gated: guardian R0--R3, 0 BLOCKED exigido.}}\label{parte-2-sem-ano-o-resultado-define-as-fases-suxe3o-estimativas.-toda-cifra-deste-manuscrito-vem-de-json-arquivado-ou-do-registro-e-regra-nunca-digitar-valor.-gated-guardian-r0r3-0-blocked-exigido.}}
+exigido.}}{Parte 2 {[}SEM ANO{]} --- o resultado define; as fases são estimativas. Toda cifra deste manuscrito vem de JSON arquivado ou do registro E (regra: nunca digitar valor). Gated: guardian R0--R3, 0 BLOCKED exigido.}}\label{parte-2-sem-ano-o-resultado-define-as-fases-suxe3o-estimativas.-toda-cifra-deste-manuscrito-vem-de-json-arquivado-ou-do-registro-e-regra-nunca-digitar-valor.-gated-guardian-r0r3-0-blocked-exigido.}
 
 \emph{Parte 2 {[}SEM ANO{]} --- o resultado define; as fases são
 estimativas. Toda cifra vem de JSON arquivado ou do registro E (regra:
