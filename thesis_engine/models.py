@@ -107,6 +107,20 @@ class Block(SQLModel, table=True):
     blueprint: Optional[str] = None  # F2.5 (B0–B9)
 
 
+class NumberValue(SQLModel, table=True):
+    """Número com lineage: arquivo JSON do registro → caminho pontuado → valor.
+
+    Convenção de caminho: chaves de dict com pontos/caracteres não-ident → aspas
+    (`rows[1].R_by_kappa["2.0"]`); índices de lista → `[i]`.
+    """
+
+    value_id: str = Field(primary_key=True)  # V0001... determinístico por ordem
+    source_file: str  # experiments/xspecies/p024_human.json
+    json_path: str  # summary.theta_range[0]
+    raw: str  # repr exato do JSON
+    value_float: Optional[float] = None
+
+
 class MethodFact(SQLModel, table=True):
     """Método M001–M004 (consistency_manifest.json)."""
 

@@ -1,0 +1,8 @@
+#!/data/data/com.termux/files/usr/bin/sh
+# GATE GUARDIAN local — nenhuma escrita entra sem os gates VERDE
+echo "[gate-guardian] rodando pytest (registro+tese+experimentos)…"
+if [ -x .venv/bin/python ]; then PY=.venv/bin/python; else PY=python3; fi
+$PY -m pytest tests/ -q || {
+  echo "[gate-guardian] BLOQUEADO: gates falharam. Corrija antes do commit."
+  exit 1
+}
