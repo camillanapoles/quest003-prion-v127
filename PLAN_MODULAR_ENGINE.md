@@ -119,9 +119,9 @@ Os specs de estilo que hoje são prosa (`style_profile.md`, `writing_rationale_m
   - [x] FastAPI `create_app()`: listagens/queries (blocos por sec/chap/type/claim/blueprint · numbervalue por stem+path) — **registro READ-ONLY** (405 em escrita)
   - [x] Escrita Modo B guardada: POST→draft · PATCH só não-canonico (409) · status com transições + `approver` humana obrigatória p/ author_approved · claims fantasma → 422
   - [x] `/integrity` (JSON ok:false em débito) · `/render/md` (só canônicos) · CLI `ingest · check · build · serve` — smoke: gates VERDE · build==canônico (diff vazio) — 35/35 VERDE
-- [ ] **F5 — Render MD modular** (0,5–1 dia)
-  - [ ] Saída canônica: `build/tese/` (1 arquivo por capítulo + índice) E `tese_unificada.md` single-file
-  - [ ] Blocos 100% integrados: toda ref resolvida no grafo
+- [x] **F5 — Render MD modular** ✓ (commit d30324e)
+  - [x] `build/tese/`: 17 arquivos de capítulo + `SUMARIO.md` integrado (links · seções · blocos · claims · tiers) E single-file — partição EXATA (concat == single, byte a byte)
+  - [x] Gate `check_bindings`: grafo 100% integrado (FKs · claims⊆registro · evidências⊆fontes · §refs resolvem com legado documentado) — 41/41 VERDE
 - [ ] **F6 — Render LaTeX derivado** (1 dia)
   - [ ] Gerador determinístico blocos→`.tex` (ABNT/unified-thesis class existente como alvo)
   - [ ] Zero edição manual; se erro → corrige gerador. DOCX via pandoc (opcional)
