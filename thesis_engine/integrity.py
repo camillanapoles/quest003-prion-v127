@@ -11,8 +11,16 @@ import re
 from sqlmodel import Session, select
 
 from thesis_engine.db import create_db
-from thesis_engine.ingest.experiments import get_value
-from thesis_engine.models import Block, Chapter, Claim, Section, Source
+from thesis_engine.ingest.experiments import REGISTRY_JSONS, get_value
+from thesis_engine.models import (
+    Block,
+    Chapter,
+    Claim,
+    GraphNode,
+    PlanChapter,
+    Section,
+    Source,
+)
 
 # (label, file_stem, json_path, valor_esperado, fragmento PT-BR na tabela §4.3)
 _ANCORA43: tuple[tuple[str, str, str, float, str], ...] = (
@@ -197,4 +205,78 @@ def check_bindings(db_path: str) -> dict:
         "ok": True,
         "refs": {"resolved": sorted(resolved), "legacy": sorted(legacy), "dangling": []},
         "claims_citadas": len({c for b in blocks for c in b.claim_ids}),
+    }
+
+
+# ============ F5.7 — gate G7: plano global ↔ tese realizada ============
+
+# Figuras do braço-paper, pré-existentes à tese (figure_asset_map.md) — não cobardas
+_LEGACY_FIGS = frozenset({"Fig.1", "Fig.2", "Fig.3"})
+_CANON_TOKENS = ("F-43", "F-44", "H-P3", "THETA_STAR")
+
+
+def check_plano(db_path: str) -> dict:
+    """Congruência plano↔realizado: 17↔17 capítulos · ordem contínua · toda fonte
+    do plano resolve (claims⊆registro · figuras na tese · JSONs do registro ·
+    tokens-canon no grafo · comunidades citadas existem)."""
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        plan = s.exec(select(PlanChapter)).all()
+        chapters = s.exec(select(Chapter)).all()
+        blocks = s.exec(select(Block)).all()
+        claim_ids = set(s.exec(select(Claim.claim_id)).all())
+        graph_nodes = s.exec(select(GraphNode)).all()
+
+    problemas: list[str] = []
+    plan_keys = {p.chap_key for p in plan}
+    chap_keys = {c.chap_id for c in chapters}
+    if plan_keys != chap_keys:
+        problemas.append(
+            f"plan↔capítulos divergem: só-no-plano={sorted(plan_keys - chap_keys)} "
+            f"só-na-tese={sorted(chap_keys - plan_keys)}"
+        )
+    ordens = sorted(p.ordem for p in plan)
+    if ordens != list(range(len(plan))):
+        problemas.append(f"ordem do plano não é contínua 0..{len(plan) - 1}: {ordens}")
+
+    body = "\n".join(b.content for b in blocks)
+    graph_text = " ".join(f"{n.label} {n.source_file} {n.community_name}" for n in graph_nodes)
+    communities = {n.community_name for n in graph_nodes if n.community_name}
+
+    for p in plan:
+        for f in p.fontes:
+            tipo, ref = f.get("tipo", ""), f.get("ref", "")
+            if tipo == "claim":
+                for cid in re.findall(r"C\d{3}", ref):
+                    if cid not in claim_ids:
+                        problemas.append(f"{p.chap_key}: plano cita claim sem registro {cid}")
+            elif tipo == "figura":
+                for fig in re.findall(r"Fig\.\d", ref):
+                    if fig in _LEGACY_FIGS:
+                        continue
+                    n = fig.split(".")[1]
+                    if f"Figura {n}" not in body:
+                        problemas.append(f"{p.chap_key}: plano cita {fig} ausente da tese")
+            elif tipo == "json":
+                for jf in re.findall(r"[\w]+(?:_\{[^}]*\})?\.json", ref):
+                    stem = jf.split("{")[0].replace(".json", "")
+                    if not any(stem in src for src in REGISTRY_JSONS):
+                        problemas.append(f"{p.chap_key}: plano cita JSON fora do registro {stem}")
+            elif tipo == "canon":
+                if graph_nodes:
+                    for tok in (t for t in _CANON_TOKENS if t in ref):
+                        if tok not in graph_text:
+                            problemas.append(f"{p.chap_key}: token-canon {tok} ausente do grafo")
+            elif tipo == "grafo":
+                m = re.search(r"comunidade\s+'([^']+)'", ref)
+                if m and m.group(1) not in communities:
+                    problemas.append(f"{p.chap_key}: comunidade inexistente {m.group(1)!r}")
+
+    if problemas:
+        raise ValueError("gate do PLANO FALHOU:\n  - " + "\n  - ".join(problemas))
+    return {
+        "ok": True,
+        "capitulos": len(plan),
+        "fontes_validadas": sum(len(p.fontes) for p in plan),
+        "comunidades_citadas": len(communities),
     }

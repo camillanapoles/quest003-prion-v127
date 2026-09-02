@@ -11,6 +11,8 @@ from fastapi.testclient import TestClient
 
 from thesis_engine.api import create_app
 from thesis_engine.ingest.experiments import ingest_experiments
+from thesis_engine.ingest.graphify import ingest_graphify
+from thesis_engine.ingest.plano import ingest_plano
 from thesis_engine.ingest.registro import ingest_registro
 from thesis_engine.ingest.tese import ingest_tese
 
@@ -23,6 +25,8 @@ def client(tmp_path_factory):
     ingest_registro(db_path=db_path)
     ingest_tese(db_path=db_path)
     ingest_experiments(db_path=db_path)
+    ingest_graphify(db_path=db_path)
+    ingest_plano(db_path=db_path)
     return TestClient(create_app(db_path))
 
 
@@ -143,6 +147,12 @@ def test_integrity_endpoint(client):
     assert r.status_code == 200
     body = r.json()
     assert body["ok"] is True and body["sec43"]["ok"] and body["style"]["ok"]
+    assert body["plano"]["ok"]  # G7 no endpoint
+    # grafo consultável pela API
+    r = client.get("/graph", params={"q": "THETA_STAR"})
+    assert r.status_code == 200 and r.json()
+    r = client.get("/plano")
+    assert len(r.json()) == 17
 
 
 def test_render_md_canonico_exclui_drafts(client):

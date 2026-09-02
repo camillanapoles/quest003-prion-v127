@@ -11,29 +11,40 @@ REPO = Path(__file__).resolve().parents[1]
 
 @app.command()
 def ingest(db: str = _DEFAULT_DB):
-    """Rebuild completo: registro F1 + tese F2/F2.5 + experimentos F3 → SQLite."""
+    """Rebuild completo: registro F1 + tese F2/F2.5 + experimentos F3 + grafo + plano."""
     from thesis_engine.ingest.experiments import ingest_experiments
+    from thesis_engine.ingest.graphify import ingest_graphify
+    from thesis_engine.ingest.plano import ingest_plano
     from thesis_engine.ingest.registro import ingest_registro
     from thesis_engine.ingest.tese import ingest_tese
 
-    c1 = ingest_registro(db_path=db)
-    c2 = ingest_tese(db_path=db)
-    c3 = ingest_experiments(db_path=db)
-    typer.echo(f"registro: {c1}")
-    typer.echo(f"tese:     {c2}")
-    typer.echo(f"dados:    {c3}")
+    typer.echo(f"registro: {ingest_registro(db_path=db)}")
+    typer.echo(f"tese:     {ingest_tese(db_path=db)}")
+    typer.echo(f"dados:    {ingest_experiments(db_path=db)}")
+    typer.echo(f"grafo:    {ingest_graphify(db_path=db)}")
+    typer.echo(f"plano:    {ingest_plano(db_path=db)}")
+
+
+@app.command()
+def plano(db: str = _DEFAULT_DB, out: str = str(REPO / "PLANO_GLOBAL_DA_TESE.md")):
+    """Injeta o plano global no DB e renderiza PLANO_GLOBAL_DA_TESE.md."""
+    from thesis_engine.ingest.plano import ingest_plano, render_plano_md
+
+    typer.echo(ingest_plano(db_path=db))
+    typer.echo(f"plano MD → {render_plano_md(out)}")
 
 
 @app.command()
 def check(db: str = _DEFAULT_DB):
-    """Roda TODOS os gates (§4.3 + estilo + bindings). Exit 1 se qualquer falhar."""
-    from thesis_engine.integrity import check_bindings, check_sec43, check_style
+    """Roda TODOS os gates (§4.3 + estilo + bindings + plano). Exit 1 se falhar."""
+    from thesis_engine.integrity import check_bindings, check_plano, check_sec43, check_style
 
     ok = True
     for name, fn in (
         ("sec43", check_sec43),
         ("estilo", check_style),
         ("bindings", check_bindings),
+        ("plano", check_plano),
     ):
         try:
             r = fn(db)

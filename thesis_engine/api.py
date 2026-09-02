@@ -16,14 +16,16 @@ from sqlmodel import Session, func, select
 from thesis_engine.categorize import validate_block_write
 from thesis_engine.db import create_db
 from thesis_engine.ingest.tese import extract_meta
-from thesis_engine.integrity import check_sec43, check_style
+from thesis_engine.integrity import check_plano, check_sec43, check_style
 from thesis_engine.models import (
     Block,
     Chapter,
     Claim,
+    GraphNode,
     MethodFact,
     NFact,
     NumberValue,
+    PlanChapter,
     ResultFact,
     Section,
     Source,
@@ -280,11 +282,32 @@ def create_app(db_path: str) -> FastAPI:
             s.refresh(b)
             return b
 
+    # ---------------- plano global + grafo ----------------
+    @app.get("/plano")
+    def plano():
+        with sess() as s:
+            return s.exec(select(PlanChapter).order_by(PlanChapter.ordem)).all()
+
+    @app.get("/graph")
+    def graph(community: Optional[str] = None, q: Optional[str] = None, limit: int = 50):
+        """Consulta o grafo dos 3 worktrees (canon/guardian/knowledge)."""
+        with sess() as s:
+            rows = s.exec(select(GraphNode)).all()
+        if community:
+            rows = [n for n in rows if community.lower() in n.community_name.lower()]
+        if q:
+            rows = [n for n in rows if q.lower() in n.label.lower() or q.lower() in n.source_file.lower()]
+        return rows[:limit]
+
     # ---------------- gates + render ----------------
     @app.get("/integrity")
     def integrity():
-        out = {"ok": True, "sec43": None, "style": None}
-        for name, fn in (("sec43", check_sec43), ("style", check_style)):
+        out = {"ok": True, "sec43": None, "style": None, "plano": None}
+        for name, fn in (
+            ("sec43", check_sec43),
+            ("style", check_style),
+            ("plano", check_plano),
+        ):
             try:
                 out[name] = fn(app.state.db_path)
             except ValueError as e:

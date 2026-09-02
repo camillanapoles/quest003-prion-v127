@@ -121,6 +121,44 @@ class NumberValue(SQLModel, table=True):
     value_float: Optional[float] = None
 
 
+class GraphNode(SQLModel, table=True):
+    """Nó do grafo graphify dos 3 worktrees (canon/guardian/knowledge) — F5.7."""
+
+    node_id: str = Field(primary_key=True)
+    label: str
+    community_id: str = ""
+    community_name: str = ""
+    file_type: str = ""
+    source_file: str = ""
+    source_location: Optional[str] = None
+    origin: str = ""  # ast|extracted|inferred
+    is_callable: bool = False
+
+
+class GraphEdge(SQLModel, table=True):
+    edge_id: str = Field(primary_key=True)  # hash determinístico source|rel|target
+    source_id: str
+    target_id: str
+    relation: str
+    origin: str
+    confidence: float = 0.0
+    source_file: str = ""
+
+
+class PlanChapter(SQLModel, table=True):
+    """Plano global da tese por capítulo (plano_data.py → SQL; single-source OO)."""
+
+    chap_key: str = Field(primary_key=True)  # c00..c16 == Chapter.chap_id
+    ordem: int
+    funcao: str
+    objetivo: str
+    fontes: list[dict] = Field(default_factory=list, sa_column=Column(JSON))
+    topicos: list[str] = Field(default_factory=list, sa_column=Column(JSON))
+    elementos: list[str] = Field(default_factory=list, sa_column=Column(JSON))
+    complicado: str = ""
+    simplificar: str = ""
+
+
 class MethodFact(SQLModel, table=True):
     """Método M001–M004 (consistency_manifest.json)."""
 
