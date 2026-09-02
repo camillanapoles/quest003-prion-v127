@@ -26,11 +26,15 @@ def ingest(db: str = _DEFAULT_DB):
 
 @app.command()
 def check(db: str = _DEFAULT_DB):
-    """Roda TODOS os gates (§4.3 + estilo). Exit 1 se qualquer um falhar."""
-    from thesis_engine.integrity import check_sec43, check_style
+    """Roda TODOS os gates (§4.3 + estilo + bindings). Exit 1 se qualquer falhar."""
+    from thesis_engine.integrity import check_bindings, check_sec43, check_style
 
     ok = True
-    for name, fn in (("sec43", check_sec43), ("estilo", check_style)):
+    for name, fn in (
+        ("sec43", check_sec43),
+        ("estilo", check_style),
+        ("bindings", check_bindings),
+    ):
         try:
             r = fn(db)
             typer.echo(f"[gate:{name}] VERDE — {r}")
@@ -41,14 +45,24 @@ def check(db: str = _DEFAULT_DB):
 
 
 @app.command()
-def build(db: str = _DEFAULT_DB, out: str = str(REPO / "build" / "tese_unificada.md")):
-    """Renderiza o MD canônico (bloco status=canonico, na ordem) → arquivo."""
+def build(
+    db: str = _DEFAULT_DB,
+    out: str = str(REPO / "build" / "tese_unificada.md"),
+    modular_dir: str = str(REPO / "build" / "tese"),
+):
+    """Renderiza o MD canônico: single-file + modular (1 arquivo/capítulo + SUMARIO)."""
     from thesis_engine.render.md import render_md
+    from thesis_engine.render.modular import render_modular
 
     text = render_md(db)
     Path(out).parent.mkdir(parents=True, exist_ok=True)
     Path(out).write_text(text, encoding="utf-8")
     typer.echo(f"render canônico → {out} ({len(text)} chars)")
+    report = render_modular(db, modular_dir)
+    typer.echo(
+        f"render modular  → {modular_dir} ({report['chapters']} caps · "
+        f"{report['files']} arquivos · {report['total_claims']} claims citadas)"
+    )
 
 
 @app.command()

@@ -12,7 +12,7 @@ from sqlmodel import Session, select
 
 from thesis_engine.db import create_db
 from thesis_engine.ingest.experiments import get_value
-from thesis_engine.models import Block, Section
+from thesis_engine.models import Block, Chapter, Claim, Section, Source
 
 # (label, file_stem, json_path, valor_esperado, fragmento PT-BR na tabela §4.3)
 _ANCORA43: tuple[tuple[str, str, str, float, str], ...] = (
@@ -137,4 +137,64 @@ def check_style(db_path: str) -> dict:
         "clinical_openers": len(openers),
         "proibicoes": len(proib),
         "secoes_com_dose": len(tiers_by_sec),
+    }
+
+
+# ============ F5 — integração total do grafo (refs/FKs/bindings) ============
+
+_CAP_NUM = re.compile(r"CAPÍTULO (\d+)")
+# Refs-legadas ao braço-paper (paper/manuscript), validadas EXPRESSAMENTE pela
+# autora em 28/08 no merge do PR #2 (linha 136 do canônico). Não são quebras.
+_LEGACY_REFS = frozenset({"1-bis", "2-bis"})
+
+
+def check_bindings(db_path: str) -> dict:
+    """Blocos 100% integrados: FKs válidas · claims ⊆ registro · evidências ⊆ fontes
+    · toda §ref resolve (label de seção ∪ nº de capítulo ∪ legado documentado)."""
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        blocks = s.exec(select(Block)).all()
+        chapters = s.exec(select(Chapter)).all()
+        sections = s.exec(select(Section)).all()
+        claim_ids = set(s.exec(select(Claim.claim_id)).all())
+        source_ids = set(s.exec(select(Source.evidence_id)).all())
+
+    problemas: list[str] = []
+    chap_ids = {c.chap_id for c in chapters}
+    sec_ids = {x.sec_id for x in sections}
+    for b in blocks:
+        if b.chap_id and b.chap_id not in chap_ids:
+            problemas.append(f"{b.block_id}: chap_id inválido {b.chap_id!r}")
+        if b.sec_id and b.sec_id not in sec_ids:
+            problemas.append(f"{b.block_id}: sec_id inválido {b.sec_id!r}")
+        ghosts = set(b.claim_ids) - claim_ids
+        if ghosts:
+            problemas.append(f"{b.block_id}: claims sem registro {sorted(ghosts)}")
+        ev_ghosts = set(b.evidence_ids) - source_ids
+        if ev_ghosts:
+            problemas.append(f"{b.block_id}: evidências sem fonte {sorted(ev_ghosts)}")
+
+    labels = {x.label for x in sections if x.label}
+    chap_nums = {m.group(1) for c in chapters if (m := _CAP_NUM.search(c.title))}
+    resolved: set[str] = set()
+    legacy: set[str] = set()
+    dangling: list[str] = []
+    for b in blocks:
+        for r in b.cross_refs:
+            ref = r.rstrip(".")
+            if ref in _LEGACY_REFS:
+                legacy.add(ref)
+            elif ref in labels or ref in chap_nums:
+                resolved.add(ref)
+            else:
+                dangling.append(f"{b.block_id}:§{ref}")
+    if dangling:
+        problemas.append(f"§refs penduradas (sem header correspondente): {sorted(dangling)}")
+
+    if problemas:
+        raise ValueError("gate de bindings FALHOU:\n  - " + "\n  - ".join(problemas))
+    return {
+        "ok": True,
+        "refs": {"resolved": sorted(resolved), "legacy": sorted(legacy), "dangling": []},
+        "claims_citadas": len({c for b in blocks for c in b.claim_ids}),
     }
