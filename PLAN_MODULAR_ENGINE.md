@@ -106,11 +106,11 @@ Os specs de estilo que hoje são prosa (`style_profile.md`, `writing_rationale_m
   - [x] Parser MD → blocos tipados com ids estáveis (`B0001…`, posição-determinísticos) — 524 blocos
   - [x] Vinculação: tags `[claim:]` (3 formatos, range expandida) → Claim · `§` → cross_refs · figuras → Figure-blocks · tiers
   - [x] Gate: round-trip MD → DB → MD == original byte a byte ✓ (12/12 VERDE; tese cita 27 claims distintas inline, todas ⊆ registro)
-- [ ] **F2.5 — Camada de escrita (Modo B)** (1 dia)
-  - [ ] Estender `Block` com os campos mandatórios de categorização (§3.5) + validador de schema
-  - [ ] Backfill: blocos do Modo A recebem categorias inferidas das tags/posição (function/blueprint/tier)
-  - [ ] Roteiro de produção Modo B: evidence-outline por seção → draft → `lint_manuscript` + `audit_claims` → fila de aprovação (`status=author_approved`)
-  - [ ] Gate de estilo: decimais, openers clínicos, proibições ativas, tier em toda saída de dose
+- [x] **F2.5 — Camada de escrita (Modo B)** ✓ (commit 5fcb542)
+  - [x] `Block` com campos mandatórios §3.5 + `categorize.py`: ENUMs canônicos, blueprint cap→B0–B9, inferência de function (100% cobertura) — aplicada no ingest
+  - [x] Backfill Modo A: automático no `ingest_tese` (só metadata; round-trip intacto)
+  - [x] Write-guard Modo B: function/blueprint obrigatórios, transições para frente, **author_approved só humano** (chamado pelo CRUD em F4)
+  - [x] Gate de estilo `check_style`: proibições · openers ≥3 · tier-na-seção-B4-com-dose · decimais PT-BR — calibrado no canônico + anti-regressão — 24/24 VERDE
 - [x] **F3 — Ingest dos JSONs experimentais** ✓ (commit 828a88d)
   - [x] 9 JSONs curados do registro → NumberValue com lineage (arquivo→caminho→valor, flatten recursivo)
   - [x] Gate: 12 âncoras da tabela §4.3 reconciliadas JSON↔tese (incl. teste anti-tamper: número editado à mão → build FALHA) — 18/18 VERDE
