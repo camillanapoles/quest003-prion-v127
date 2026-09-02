@@ -552,3 +552,11 @@ GATES: latex_guard 0-erros · guardian 0/0 · validadores SW 0/0 · AST 10/10 ·
 ESTADO: main@c6e2bf7+ · edição A+ fractalmente limpa
 PRÓXIMO: (autora) leitura (A10 abriu o PDF novo) + TESE-FICHA · (agente) sob-demanda: EN companion das seções portadas; recorte-artigo
 ÂNCORA: tese_unificada_20260901-235409.pdf · commit-fix-fractal 94b792a
+
+/RECAP 2026-09-02 ~03:10 — CAMPANHA latex-rescue (pedido da autora: skills p/ continuidade assertiva) — ZERO erros LaTeX
+FEITO: auditoria dos logs-CI que o '|| true' escondia → **3 ondas de fix (latex-rescue, padrões 80+)**: onda-1: babel-brazil inexistente no texlive-CI → polyglossia; [htbp] como opção de float inválido; \nocite{*} DENTRO de thebibliography (=missing-\item) · onda-2: \real/array-arg (faltava array+calc); \tightlist; polyglossia variant-brazilian no replay-.aux (50 erros-recuperáveis → \setmainlanguage{portuguese}) · onda-3: '> ## header-em-blockquote' = \subsection-em-quote (missing-\item ×2) → negrito; front-matter 0.x → \chapter*+TOC; captions 'Figura N' literal sobre numeração LaTeX → \caption*; contentsname→Sumário (ABNT; pt dava 'Conteúdo')
+PRODUTO (tese_unificada_20260902-030359.pdf, 44 págs): **0 erros LaTeX no CI** · 0 dupla-numeração (13+36→0) · 0 tags C·E (81→0) · 0 [Exxx] no corpo (14→0; provenance=apêndice concordância) · 0 seções-0.x · Sumário/LOF/LOT ABNT · 43→44 págs coesas
+INFRA: edição-de-leitura consolidada como O produto (build_reader_edition.py determinístico do mestre-gated; mestre intacto p/ guardian/AST) · CI blindado (apt-retries; pull-rebase anti-race; figs commitadas)
+ESTADO: main@3b38108+ · AST 10/10 · registro 60/58/65 · predições v1.0 intocadas
+PRÓXIMO: (autora) leitura do PDF final (A10) + TESE-FICHA (P-009) · (agente sob-demanda) latex-polish (revisão de estilo PT); latex-fmt se alvo-venue; recorte-artigo
+ÂNCORA: tese_unificada_20260902-030359.pdf · commits latex-rescue 0a43f44→3b38108
