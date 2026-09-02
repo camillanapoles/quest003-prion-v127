@@ -102,10 +102,10 @@ Os specs de estilo que hoje são prosa (`style_profile.md`, `writing_rationale_m
   - [x] `models.py`: Source · Claim · NFact · MethodFact · ResultFact (listas em Column(JSON))
   - [x] Ingest: claims.csv + claim_texts.md · source_manifest.json · consistency_manifest.json (`ingest/registro.py`); `norm.py` = cópia exata da normalização sha256
   - [x] Gate: 60 claims / 58 fontes / 65 N-fatos / 4 métodos / 5 resultados · sha256 de TODAS conferido · integridade evidence→source · rebuild idempotente — **5/5 testes VERDE**
-- [ ] **F2 — Parser da tese → blocos** (1–1,5 dia)
-  - [ ] Parser MD → blocos tipados com ids estáveis (`cap07/sec7.2/blk0014`)
-  - [ ] Vinculação: tags `[claim:]` → Claim; `§` → Section; figuras → Figure
-  - [ ] Gate: round-trip MD → DB → MD == original (byte diff só em whitespace tolerado)
+- [x] **F2 — Parser da tese → blocos** ✓ (commit 55f53c3)
+  - [x] Parser MD → blocos tipados com ids estáveis (`B0001…`, posição-determinísticos) — 524 blocos
+  - [x] Vinculação: tags `[claim:]` (3 formatos, range expandida) → Claim · `§` → cross_refs · figuras → Figure-blocks · tiers
+  - [x] Gate: round-trip MD → DB → MD == original byte a byte ✓ (12/12 VERDE; tese cita 27 claims distintas inline, todas ⊆ registro)
 - [ ] **F2.5 — Camada de escrita (Modo B)** (1 dia)
   - [ ] Estender `Block` com os campos mandatórios de categorização (§3.5) + validador de schema
   - [ ] Backfill: blocos do Modo A recebem categorias inferidas das tags/posição (function/blueprint/tier)
