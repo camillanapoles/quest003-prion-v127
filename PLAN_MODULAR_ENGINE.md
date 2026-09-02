@@ -111,9 +111,10 @@ Os specs de estilo que hoje são prosa (`style_profile.md`, `writing_rationale_m
   - [ ] Backfill: blocos do Modo A recebem categorias inferidas das tags/posição (function/blueprint/tier)
   - [ ] Roteiro de produção Modo B: evidence-outline por seção → draft → `lint_manuscript` + `audit_claims` → fila de aprovação (`status=author_approved`)
   - [ ] Gate de estilo: decimais, openers clínicos, proibições ativas, tier em toda saída de dose
-- [ ] **F3 — Ingest dos JSONs experimentais** (0,5–1 dia)
-  - [ ] ws_7/ws_9/xspecies/m31/bayes/part2 → NumberValue com lineage (arquivo→chave)
-  - [ ] Gate: todos os números citados nas tabelas da tese (§4.3) batem com o registro
+- [x] **F3 — Ingest dos JSONs experimentais** ✓ (commit 828a88d)
+  - [x] 9 JSONs curados do registro → NumberValue com lineage (arquivo→caminho→valor, flatten recursivo)
+  - [x] Gate: 12 âncoras da tabela §4.3 reconciliadas JSON↔tese (incl. teste anti-tamper: número editado à mão → build FALHA) — 18/18 VERDE
+  - [x] Gate-guardian local: `.githooks/pre-commit` (pytest obrigatório) · CI GitHub ativo: `Thesis Build` success (29s)
 - [ ] **F4 — CRUD + queries + API** (1 dia)
   - [ ] CRUD completo por entidade + queries de integridade
   - [ ] FastAPI: `/chapters /sections /blocks /claims /sources /nfacts /figures /integrity /render/{md|latex}`
