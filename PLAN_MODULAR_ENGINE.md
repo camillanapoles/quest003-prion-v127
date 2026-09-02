@@ -115,10 +115,10 @@ Os specs de estilo que hoje são prosa (`style_profile.md`, `writing_rationale_m
   - [x] 9 JSONs curados do registro → NumberValue com lineage (arquivo→caminho→valor, flatten recursivo)
   - [x] Gate: 12 âncoras da tabela §4.3 reconciliadas JSON↔tese (incl. teste anti-tamper: número editado à mão → build FALHA) — 18/18 VERDE
   - [x] Gate-guardian local: `.githooks/pre-commit` (pytest obrigatório) · CI GitHub ativo: `Thesis Build` success (29s)
-- [ ] **F4 — CRUD + queries + API** (1 dia)
-  - [ ] CRUD completo por entidade + queries de integridade
-  - [ ] FastAPI: `/chapters /sections /blocks /claims /sources /nfacts /figures /integrity /render/{md|latex}`
-  - [ ] CLI: `ingest · check · build · serve`
+- [x] **F4 — CRUD + queries + API** ✓ (commit a8c40b6)
+  - [x] FastAPI `create_app()`: listagens/queries (blocos por sec/chap/type/claim/blueprint · numbervalue por stem+path) — **registro READ-ONLY** (405 em escrita)
+  - [x] Escrita Modo B guardada: POST→draft · PATCH só não-canonico (409) · status com transições + `approver` humana obrigatória p/ author_approved · claims fantasma → 422
+  - [x] `/integrity` (JSON ok:false em débito) · `/render/md` (só canônicos) · CLI `ingest · check · build · serve` — smoke: gates VERDE · build==canônico (diff vazio) — 35/35 VERDE
 - [ ] **F5 — Render MD modular** (0,5–1 dia)
   - [ ] Saída canônica: `build/tese/` (1 arquivo por capítulo + índice) E `tese_unificada.md` single-file
   - [ ] Blocos 100% integrados: toda ref resolvida no grafo

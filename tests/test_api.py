@@ -84,7 +84,6 @@ def test_post_block_modo_b_validado(client):
     # claim inexistente no registro → 422 (régua: claim sem registro é inaceitável)
     ghost = dict(payload, content="cita [claim:C999] inexistente\n")
     assert client.post("/blocks", json=ghost).status_code == 422
-    return body["block_id"]
 
 
 def test_canonico_imutavel_e_draft_editavel(client):
