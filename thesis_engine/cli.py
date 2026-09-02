@@ -35,6 +35,17 @@ def plano(db: str = _DEFAULT_DB, out: str = str(REPO / "PLANO_GLOBAL_DA_TESE.md"
 
 
 @app.command()
+def latex(db: str = _DEFAULT_DB, out_dir: str = str(REPO / "build" / "latex")):
+    """F6: gera as 3 variantes .tex (abnt · prova · kappa) — determinísticas do grafo."""
+    from thesis_engine.render.latex import render_latex_all
+
+    paths = render_latex_all(db, out_dir)
+    for fmt, p in paths.items():
+        typer.echo(f"{fmt:6s} → {p}")
+    typer.echo(".tex é descartável: bug LaTeX = bug do GERADOR (nunca editar à mão)")
+
+
+@app.command()
 def producao(db: str = _DEFAULT_DB):
     """HP-Cap: revisão cumulativa por capítulo (ordem topológica) + fila hostil."""
     from thesis_engine.ingest.revisoes import ingest_revisoes

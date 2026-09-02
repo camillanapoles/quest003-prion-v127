@@ -361,4 +361,15 @@ def create_app(db_path: str) -> FastAPI:
     def render_md_endpoint():
         return Response(content=render_md(app.state.db_path), media_type="text/markdown")
 
+    @app.get("/render/latex")
+    def render_latex_endpoint(fmt: str = "abnt"):
+        from thesis_engine.render.latex import render_latex
+
+        if fmt not in ("abnt", "prova", "kappa"):
+            raise HTTPException(422, "fmt ∈ {abnt, prova, kappa}")
+        return Response(
+            content=render_latex(app.state.db_path, fmt),
+            media_type="application/x-tex",
+        )
+
     return app
