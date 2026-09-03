@@ -58,7 +58,7 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended \
             texlive-fonts-recommended texlive-xetex texlive-latex-extra \
-            abntex2 poppler-utils
+            poppler-utils
           python3 experiments/xspecies/make_fig4_thetaspecies.py
           python3 experiments/m31/make_fig5_doseladder.py
       - name: Ingest + gates + 3 variantes .tex
@@ -68,6 +68,7 @@ jobs:
           python -m thesis_engine.cli latex
       - name: Compilar (xelatex ×2 por variante — informativo)
         run: |
+          cp data/latex/*.cls data/latex/*.sty build/latex/abnt/  # abntex2 vendorado (não existe no apt do 24.04)
           cd build/latex
           for f in abnt prova kappa; do
             (cd $f && xelatex -interaction=nonstopmode main.tex || true \

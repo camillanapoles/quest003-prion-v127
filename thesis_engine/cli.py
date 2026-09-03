@@ -58,6 +58,48 @@ def revisoes(db: str = _DEFAULT_DB, out: str = str(REPO / "data" / "revisoes_hos
 
 
 @app.command()
+def status(db: str = _DEFAULT_DB):
+    """PAINEL: mostra TUDO num comando — onde está cada mandato do sistema."""
+    import json
+    from pathlib import Path
+
+    from sqlmodel import Session, func, select
+
+    from thesis_engine.db import create_db
+    from thesis_engine import models as M
+    from thesis_engine.plano_data import ORDEM_LOGICA
+    from thesis_engine.producao import check_producao
+
+    typer.echo("── 1·ORDEM TOPOLOGICA (produção incremental) ──")
+    typer.echo("   " + " → ".join(k for k, _, _ in ORDEM_LOGICA))
+    typer.echo("── 2·PLANO GLOBAL ──")
+    typer.echo("   thesis_engine/plano_data.py → SQL(planchapter) → PLANO_GLOBAL_DA_TESE.md · gate: check_plano")
+    typer.echo("── 3·GATES TRIPLOS HP-Cap (objetivo·coesão·gaps, cumulativo) ──")
+    r = check_producao(db)
+    for c in r["relatorio"]:
+        mark = "✓" if c["ok"] else "✗"
+        typer.echo(f"   {c['cap']}: {mark}  (HARD acumulado: {len(r['hard'])} · YELLOW: {len(r['yellow'])})")
+        break  # resumo 1 linha; detalhe: pi producao
+    typer.echo(f"   HARD={len(r['hard'])} · YELLOW={len(r['yellow'])} → detalhe: python -m thesis_engine.cli producao")
+    typer.echo("── 4·REVISOR HOSTIL (persona + mandatos) ──")
+    typer.echo("   HOSTILE_REVIEW_PROTOCOL.md (persona fixada) · fila: data/revisoes_hostis.json")
+    src = Path(__file__).resolve().parents[1] / "data" / "revisoes_hostis.json"
+    if src.exists():
+        for it in json.loads(src.read_text(encoding="utf-8")):
+            mark = "OK" if it["status"] != "aberto" else "⚠ ABERTO"
+            typer.echo(f"   {it['item_id']} [{it['cap_key']}] {mark}: {it['achado'][:60]}")
+    typer.echo("── 5·CONTEÚDO DO GRAFO ──")
+    with Session(create_db(db)) as s:
+        for t in ("Claim", "Source", "Block", "NumberValue", "GraphNode", "PlanChapter"):
+            n = s.exec(select(func.count()).select_from(getattr(M, t))).one()
+            typer.echo(f"   {t:13s}: {n}")
+    typer.echo("── 6·ARQUIVOS-CHAVE ──")
+    for f in ("STATE_HANDOFF.md", "PLAN_MODULAR_ENGINE.md", "PLANO_GLOBAL_DA_TESE.md", "HOSTILE_REVIEW_PROTOCOL.md", "PADRAO_F6_ESTILO.md"):
+        p = Path(__file__).resolve().parents[1] / f
+        typer.echo(f"   {'✓' if p.exists() else '✗'} {f}")
+
+
+@app.command()
 def producao(db: str = _DEFAULT_DB):
     """HP-Cap: revisão cumulativa por capítulo (ordem topológica) + fila hostil."""
     from thesis_engine.ingest.revisoes import ingest_revisoes
