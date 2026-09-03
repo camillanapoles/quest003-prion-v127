@@ -6,3 +6,8 @@ $PY -m pytest tests/ -q || {
   echo "[gate-guardian] BLOQUEADO: gates falharam. Corrija antes do commit."
   exit 1
 }
+# gates de produção no DB real (além dos testes)
+$PY -m thesis_engine.cli check >/dev/null 2>&1 || {
+  echo "[gate-guardian] BLOQUEADO: cli check (6 gates) falhou no DB de produção."
+  exit 1
+}

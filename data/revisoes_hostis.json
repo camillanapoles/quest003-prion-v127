@@ -1,0 +1,38 @@
+[
+ {
+  "item_id": "H0001",
+  "cap_key": "c00",
+  "tipo": "hostil-yellow",
+  "achado": "{{TODO}} template a preencher: {{TODO:TESE-FICHA:programa/área/orientadora/coorientadora — ",
+  "status": "respondido",
+  "resposta": "Ficha acadêmica: preenchimento EXCLUSIVO da autora (kernel).",
+  "respondido_por": "agente (T1, critical thinking)"
+ },
+ {
+  "item_id": "H0002",
+  "cap_key": "c02",
+  "tipo": "hostil-yellow",
+  "achado": "forward-ref (promessa): §8",
+  "status": "respondido",
+  "resposta": "Promessa legítima: §2.7 anuncia M1–M5, §8 cumpre (contribution-first).",
+  "respondido_por": "agente (T1, critical thinking)"
+ },
+ {
+  "item_id": "H0003",
+  "cap_key": "c06",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C040",
+  "status": "respondido",
+  "resposta": "Realizada em §7.2 (tag curta [C040]) + concordância Apêndice A; tag completa é do braço-paper.",
+  "respondido_por": "agente (T1, critical thinking)"
+ },
+ {
+  "item_id": "H0004",
+  "cap_key": "c08",
+  "tipo": "hostil-yellow",
+  "achado": "{{TODO}} template a preencher: {{TODO:id:desc}}",
+  "status": "respondido",
+  "resposta": "Menção documental ao mecanismo do guardião (§8.6) — não é pendência da tese.",
+  "respondido_por": "agente (T1, critical thinking)"
+ }
+]

@@ -16,6 +16,7 @@ def ingest(db: str = _DEFAULT_DB):
     from thesis_engine.ingest.graphify import ingest_graphify
     from thesis_engine.ingest.plano import ingest_plano
     from thesis_engine.ingest.registro import ingest_registro
+    from thesis_engine.ingest.revisoes import ingest_revisoes
     from thesis_engine.ingest.tese import ingest_tese
 
     typer.echo(f"registro: {ingest_registro(db_path=db)}")
@@ -23,6 +24,7 @@ def ingest(db: str = _DEFAULT_DB):
     typer.echo(f"dados:    {ingest_experiments(db_path=db)}")
     typer.echo(f"grafo:    {ingest_graphify(db_path=db)}")
     typer.echo(f"plano:    {ingest_plano(db_path=db)}")
+    typer.echo(f"revisões: {ingest_revisoes(db_path=db)}  # restaura respostas do git")
 
 
 @app.command()
@@ -43,6 +45,16 @@ def latex(db: str = _DEFAULT_DB, out_dir: str = str(REPO / "build" / "latex")):
     for fmt, p in paths.items():
         typer.echo(f"{fmt:6s} → {p}")
     typer.echo(".tex é descartável: bug LaTeX = bug do GERADOR (nunca editar à mão)")
+
+
+@app.command()
+def revisoes(db: str = _DEFAULT_DB, out: str = str(REPO / "data" / "revisoes_hostis.json")):
+    """Sincroniza a fila hostil e EXPORTA respostas para o git (feedback = arquivo)."""
+    from thesis_engine.ingest.revisoes import export_revisoes, ingest_revisoes
+
+    rev = ingest_revisoes(db_path=db)
+    n = export_revisoes(db, out)
+    typer.echo(f"fila: {rev['total']} itens · exportados {n} → {out} (commitar junto)")
 
 
 @app.command()
