@@ -1,0 +1,92 @@
+[
+ {
+  "item_id": "H0001",
+  "cap_key": "c00",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/3 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0002",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "Paráfrase de claim travada: \"antecipação de bancada, nunca pendência\" ≠ verbatim de C054 (sha256) — risco de drift da definição operacional",
+  "status": "emendado",
+  "resposta": "EMENDA: citação verbatim entre aspas — \"antecipação bancada, nunca pendente de validação\" — marcada como palavras do registro. Paráfrase substituída.",
+  "respondido_por": "revisor-hostil (persona) + emenda aplicada"
+ },
+ {
+  "item_id": "H0003",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "Número \"vinte e quatro séculos\" sem lineage (nenhum N-fato/E-ID) — régua da autora: número nunca digitado",
+  "status": "emendado",
+  "resposta": "EMENDA: qualitativo (\"muitos séculos antes de qualquer evidência experimental\"). Se a autora quiser o número, registra N-fato no registro primeiro.",
+  "respondido_por": "revisor-hostil (persona) + emenda aplicada"
+ },
+ {
+  "item_id": "H0004",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "Tabela de contraste: de onde vêm os 5 critérios? (elemento do plano pede \"3-colunas\")",
+  "status": "respondido",
+  "resposta": "3-colunas do plano = os 3 MÉTODOS comparados (IST/meta/etrização) ✓. Os critérios derivam dos passos de C054 (P4 prognóstico travado · P5 deriva-para-frente · P6 confronto) + tópicos do plano c01. Fundamentado, não inventado.",
+  "respondido_por": "revisor-hostil (persona), critical thinking"
+ },
+ {
+  "item_id": "H0005",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "C006 e C027 no brief mas não citadas — seleção arbitrária de evidência?",
+  "status": "emendado",
+  "resposta": "EMENDA C006: vinculada ao parágrafo da plataforma (resistência autossustentada fortalece a base). C027 (kindreds E200K brasileiros) realoca-se à fundamentação (c03), onde tem peso argumentativo — decisão de colocação, não omissão.",
+  "respondido_por": "revisor-hostil (persona) + emenda aplicada"
+ },
+ {
+  "item_id": "H0006",
+  "cap_key": "c02",
+  "tipo": "hostil-yellow",
+  "achado": "termo novo sem definição prévia: DCJ",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0007",
+  "cap_key": "c02",
+  "tipo": "hostil-yellow",
+  "achado": "termo novo sem definição prévia: SIM",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0008",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "OE1-OE4 e H1-H3: constam do registro probatório ou são invenção desta introdução?",
+  "status": "respondido",
+  "resposta": "Derivados do plano global (planchapter c13/c05/c06) e ancorados em claims: OE3↔C052/C055, OE4↔C040, H2↔cadeia m31 (§6.3 gates), H3↔C054 diferenciação. A formulação verbal é nova (branch zero); o CONTRATO é o do registro.",
+  "respondido_por": "persona+critical-thinking"
+ },
+ {
+  "item_id": "H0009",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "Tabela M1-M5: \"validada pela autora em 28/08\" — onde isto vive verificável?",
+  "status": "respondido",
+  "resposta": "Registro do guardião do programa (linha do merge PR#2, 28/08): re-matrícula M1→resultado/M2→dormant/M4→método — nó presente no grafo (comunidade Guardian Integrity & Audit Chain). A tese cita; a fonte é auditável no repo.",
+  "respondido_por": "persona+critical-thinking"
+ },
+ {
+  "item_id": "H0010",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "C022 (LNP 29,6%) tem incerteza HIGH no registro — por que usá-la na justificativa sem ecoar a incerteza?",
+  "status": "emendado",
+  "resposta": "EMENDA: o texto já diz \"com incerteza declarada\" e evita o número (fica \"fração relevante\"); incerteza high ecoada. Números com lineage ficam nos caps 5-6 sob gates.",
+  "respondido_por": "persona+emenda"
+ }
+]

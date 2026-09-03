@@ -151,6 +151,8 @@ def gate_coesao(db_path: str, key: str) -> dict:
         and len(t) <= 5
         and t.rstrip("-") not in siglas_c00  # SLR- ≡ SLR (quebra de hífen)
         and t.rstrip("-") not in _ALLOWLIST
+        and f"({t})" not in body_atual  # definido NO capítulo: "expansão (ACRÔNIMO)"
+        and f"[{t}]:" not in body_atual  # ou tag-de-tier definida: "[SIM]: simulação…"
         and t not in body_anteriores  # já apareceu antes (contexto estabelecido)
     )
     forward_refs = sorted(

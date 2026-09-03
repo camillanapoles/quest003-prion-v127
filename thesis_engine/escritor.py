@@ -182,10 +182,33 @@ def plano_blueprint(key: str) -> str:
     return blueprint_for_chapter(V2_TITLES.get(key, ""))
 
 
+def save_brief(db_path: str, key: str, out_dir: str = None) -> str:
+    """Salva o brief do capítulo em escrita-zero/briefs/ (folder único de saídas)."""
+    b = brief_capitulo(db_path, key)
+    out = Path(out_dir or (REPO / "escrita-zero" / "briefs"))
+    out.mkdir(parents=True, exist_ok=True)
+    L = [f"# BRIEF {b['cap']} — {b['titulo']}", "",
+         f"**Objetivo:** {b['objetivo']}", f"**Função no arco:** {b['funcao']}", "",
+         f"**Tópicos:** {' · '.join(b['topicos'])}", "",
+         f"**Elementos:** {' · '.join(b['elementos'])}",
+         f"**Complicado:** {b['complicado']}", f"**Simplificar:** {b['simplificar']}", "",
+         "## Claims do capítulo (do registro)", ""]
+    for c in b["claims"]:
+        L.append(f"- **{c['id']}** ({c['incerteza']}): {c['texto']}")
+        L.append(f"  ← {', '.join(e[:70] for e in c['evidencias'])}")
+    if b["amostra_numeros"]:
+        L += ["", "## Números âncora (lineage)", ""]
+        for a in b["amostra_numeros"]:
+            L.append(f"- `{a['fonte'].split('/')[-1]}::{a['path']}` = {a['valor']}")
+    p = out / f"{key}_brief.md"
+    p.write_text("\n".join(L) + "\n", encoding="utf-8")
+    return str(p)
+
+
 def render_v2(db_path: str, out_dir: str = None) -> dict:
-    """Render do ramo v2: DRAFTS são o produto (aguardam aprovação capítulo a capítulo)."""
+    """Render do ramo v2: DRAFTS são o produto — FOLDER ÚNICO escrita-zero/render."""
     engine = create_db(db_path)
-    out = Path(out_dir or (REPO / "build" / "tese-v2"))
+    out = Path(out_dir or (REPO / "escrita-zero" / "render"))
     out.mkdir(parents=True, exist_ok=True)
     with Session(engine) as s:
         chapters = s.exec(select(Chapter).order_by(Chapter.order_idx)).all()
