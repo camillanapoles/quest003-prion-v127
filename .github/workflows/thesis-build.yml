@@ -57,7 +57,8 @@ jobs:
           pip install -q -r requirements.txt numpy matplotlib
           sudo apt-get update -qq
           sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended \
-            texlive-fonts-recommended texlive-xetex texlive-latex-extra
+            texlive-fonts-recommended texlive-xetex texlive-latex-extra \
+            abntex2 poppler-utils
           python3 experiments/xspecies/make_fig4_thetaspecies.py
           python3 experiments/m31/make_fig5_doseladder.py
       - name: Ingest + gates + 3 variantes .tex
