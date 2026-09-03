@@ -9,14 +9,17 @@ from thesis_engine.models import RevisaoHostil
 from thesis_engine.producao import check_producao
 
 
-def ingest_revisoes(db_path: str) -> dict[str, int]:
+def ingest_revisoes(
+    db_path: str, upto_key: str | None = None, restore_from: str | None = "default"
+) -> dict[str, int]:
     """Sincroniza a fila hostil com os achados atuais dos gates (idempotente por achado).
-    Após sincronizar, RESTAURA respostas do arquivo versionado (se existir) —
-    feedback persiste em git (regra GAN), não em DB local."""
+    upto_key: revisão CUMULATIVA até um capítulo (branch escrita-zero: só o escrito).
+    restore_from: 'default' → data/revisoes_hostis.json (produção canônica) ·
+    caminho alternativo (ex.: revisoes_hostis_v2.json) · None → não restaura."""
     import json
     from pathlib import Path
 
-    r = check_producao(db_path)
+    r = check_producao(db_path, upto_key=upto_key)
     engine = create_db(db_path)
     with Session(engine) as s:
         existentes = {(x.cap_key, x.achado) for x in s.exec(select(RevisaoHostil)).all()}
@@ -35,9 +38,12 @@ def ingest_revisoes(db_path: str) -> dict[str, int]:
             n += 1
         s.commit()
         total = len(s.exec(select(RevisaoHostil)).all())
-    # restaura respostas do arquivo versionado (data/revisoes_hostis.json)
-    src = Path(__file__).resolve().parents[2] / "data" / "revisoes_hostis.json"
-    if src.exists():
+    # restaura respostas do arquivo versionado — POR produção (canônica × v2)
+    if restore_from == "default":
+        src = Path(__file__).resolve().parents[2] / "data" / "revisoes_hostis.json"
+    else:
+        src = Path(restore_from) if restore_from else None
+    if src and src.exists():
         load_revisoes(db_path, str(src))
     return {"novos": n, "total": total}
 
@@ -62,7 +68,8 @@ def export_revisoes(db_path: str, out: str) -> int:
 
 
 def load_revisoes(db_path: str, src: str) -> int:
-    """Upsert do arquivo versionado → DB (respostas persistem entre rebuilds)."""
+    """Upsert do arquivo versionado → DB (respostas persistem entre rebuilds).
+    IDs do arquivo NÃO são confiados: colisão aloca próximo H#### livre."""
     import json
     from pathlib import Path
 
@@ -71,11 +78,24 @@ def load_revisoes(db_path: str, src: str) -> int:
     restaurados = 0
     with Session(engine) as s:
         by_achado = {x.achado: x for x in s.exec(select(RevisaoHostil)).all()}
+        used_ids = {x.item_id for x in s.exec(select(RevisaoHostil)).all()}
+
+        def _next_id() -> str:
+            n = len(used_ids) + 1
+            while f"H{n:04d}" in used_ids:
+                n += 1
+            nid = f"H{n:04d}"
+            used_ids.add(nid)
+            return nid
+
         for r in rows:
             alvo = by_achado.get(r["achado"])
             if alvo is None:
                 alvo = RevisaoHostil(
-                    item_id=r["item_id"], cap_key=r["cap_key"], tipo=r.get("tipo", "hostil"), achado=r["achado"]
+                    item_id=_next_id(),
+                    cap_key=r["cap_key"],
+                    tipo=r.get("tipo", "hostil"),
+                    achado=r["achado"],
                 )
                 s.add(alvo)
             elif r.get("status") and r["status"] != "aberto" and alvo.status == "aberto":
