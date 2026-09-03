@@ -182,6 +182,10 @@ def gate_gaps(db_path: str, key: str) -> dict:
     body = "\n".join(b.content for b in chap_blocks)
     tpl_todos = _TPL_TODO.findall(body)  # fichas/mecanismos documentados → fila hostil
     placeholders = _PLACEHOLDER.findall(body)
+    # marcador ** não-pareado no próprio bloco = markdown malformado no canônico
+    nao_pareados = [
+        b.block_id for b in chap_blocks if b.content.count("**") % 2 == 1
+    ]
     claims_planejadas = {
         c for f in plan.fontes if f.get("tipo") == "claim" for c in re.findall(r"C\d{3}", f["ref"])
     }
@@ -202,7 +206,8 @@ def gate_gaps(db_path: str, key: str) -> dict:
         + [
             f"claim planejada p/ o capítulo realizada em outro (ou tag curta): {c}"
             for c in em_outro_lugar
-        ],
+        ]
+        + [f"marcador ** não-pareado no bloco {bid} (markdown malformado)" for bid in nao_pareados],
     }
 
 

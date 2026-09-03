@@ -26,6 +26,20 @@ def _esc(text: str) -> str:
     return "".join(out).replace("~", r"\textasciitilde{}").replace("^", r"\textasciicircum{}")
 
 
+_BOLD = re.compile(r"\*\*(.+?)\*\*", re.S)
+_ITALIC = re.compile(r"(?<!\*)\*([^*\n]+?)\*(?!\*)")
+_CODE = re.compile(r"`([^`\n]+)`")
+
+
+def _inline_md(tex: str) -> str:
+    """F6.1: markdown inline → LaTeX (após escape; math/tags já protegidos)."""
+    tex = tex.replace(r"\*", "*")  # θ\* do MD vira asterisco literal (não \\*)
+    tex = _CODE.sub(lambda m: r"\texttt{" + m.group(1) + "}", tex)
+    tex = _BOLD.sub(lambda m: r"\textbf{" + m.group(1) + "}", tex)
+    tex = _ITALIC.sub(lambda m: r"\textit{" + m.group(1) + "}", tex)
+    return tex
+
+
 def _inline(text: str, audit: bool) -> str:
     """Escapa texto preservando math $$ e convertendo tags de auditoria."""
     math_parts: list[str] = []
@@ -44,7 +58,7 @@ def _inline(text: str, audit: bool) -> str:
         t = _EVID.sub(lambda m: r"\textsuperscript{[" + m.group(1) + "]}", t)
     for i, mp in enumerate(math_parts):
         t = t.replace(f"\x00MATH{i}\x00", f"${_esc_math(mp)}$")
-    return t
+    return _inline_md(t)
 
 
 def _esc_math(m: str) -> str:
@@ -80,6 +94,9 @@ def _figure_latex(content: str) -> str:
     if not m:
         return _inline(content.strip(), True) + "\n"
     alt, path = m.group(1), m.group(2)
+    # canônico é relativo a final_paper/ (../../paper/…) — saída vive em
+    # build/latex/<fmt>/ ⇒ 3 níveis até a raiz do repo
+    path = path.replace("../../paper/", "../../../paper/")
     return (
         "\\begin{figure}[htbp]\n\\centering\n"
         f"\\includegraphics[width=0.92\\linewidth]{{{path}}}\n"
@@ -128,10 +145,16 @@ def _blocks_to_body(blocks: list[Block], h1: str, h2: str, h3: str, audit: bool)
 
 # ---------------- contratos ----------------
 
+_PREAMBLE_XELATEX = (
+    "\\usepackage{fontspec}\n"  # unicode PT-BR/Grego no corpo (θ·κ·µ·×) sob xelatex
+)
+
+
 def _preamble_abnt() -> str:
     return (
         "\\documentclass[12pt,a4paper,twoside]{abntex2}\n"
-        "\\usepackage{graphicx,booktabs,longtable}\n"
+        + _PREAMBLE_XELATEX
+        + "\\usepackage{graphicx,booktabs,longtable}\n"
         "\\usepackage[brazil]{babel}\n"
         "\\newcommand{\\audit}[1]{\\textsuperscript{[cl:#1]}}\n"
         "\\newcommand{\\evref}[1]{\\textsuperscript{[ev:#1]}}\n"
@@ -143,7 +166,8 @@ def _preamble_abnt() -> str:
 def _preamble_prova() -> str:
     return (
         "\\documentclass[11pt,oneside]{memoir}\n"
-        "\\usepackage[brazil]{babel}\n"
+        + _PREAMBLE_XELATEX
+        + "\\usepackage[brazil]{babel}\n"
         "\\usepackage{graphicx,booktabs}\n"
         "\\pagestyle{ruled}\n"
         "\\begin{document}\n"
@@ -153,7 +177,8 @@ def _preamble_prova() -> str:
 def _preamble_kappa() -> str:
     return (
         "\\documentclass[11pt,a4paper]{article}\n"
-        "\\usepackage[brazil]{babel}\n"
+        + _PREAMBLE_XELATEX
+        + "\\usepackage[brazil]{babel}\n"
         "\\usepackage{graphicx,booktabs,appendix}\n"
         "\\newcommand{\\audit}[1]{\\textsuperscript{[cl:#1]}}\n"
         "\\newcommand{\\evref}[1]{\\textsuperscript{[ev:#1]}}\n"

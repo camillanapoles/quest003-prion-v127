@@ -21,6 +21,23 @@ def loaded(tmp_path_factory):
 
 
 @pytest.mark.parametrize("fmt", ["abnt", "prova", "kappa"])
+def test_f61_markdown_inline_convertido(loaded, fmt):
+    """F6.1: **x**→\\textbf · *x*→\\textit · `x`→\\texttt · θ\\*→asterisco literal."""
+    tex = render_latex(loaded, fmt)
+    assert "\\textbf{" in tex, "negrito não convertido"
+    assert "\n**" not in tex and " **" not in tex, "marcador ** residual"
+    assert "\\textit{" in tex and "\\texttt{" in tex
+    # θ\* do canônico vira asterisco LaTeX válido (não o \\* = discretionary break)
+    assert "\\\\*" not in tex
+
+
+def test_f61_bold_de_conteudo_real(loaded):
+    tex = render_latex(loaded, "abnt")
+    # 'a largura da banda é o achado' estava em **bold** no canônico
+    assert "\\textbf{A largura da banda é o achado" in tex
+
+
+@pytest.mark.parametrize("fmt", ["abnt", "prova", "kappa"])
 def test_determinismo_byte_a_byte(loaded, fmt):
     """MESMA entrada → .tex IDÊNTICO (gate central da F6)."""
     assert render_latex(loaded, fmt) == render_latex(loaded, fmt)
