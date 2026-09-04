@@ -191,6 +191,42 @@ class AcaoDevedora(SQLModel, table=True):
     evidencia: Optional[str] = None  # block_id/arquivo quando executada
 
 
+class StyleRule(SQLModel, table=True):
+    """Regra de estilo COMO DADO (não mais hardcoded em Python). O gate consulta AQUI.
+    Tipo 'llm_ban' = termo banido · 'pt_ban' = proibição PT · 'mandate' = obrigação."""
+
+    rule_id: str = Field(primary_key=True)  # SR0001…
+    tipo: str  # llm_ban | pt_ban | mandate
+    valor: str  # o termo ou regra
+    descricao: str = ""
+    origem: str = "bootstrap"  # quem criou
+
+
+class ReviewQuestion(SQLModel, table=True):
+    """As 7 perguntas do revisor hostil COMO DADOS (não mais texto em markdown)."""
+
+    question_id: str = Field(primary_key=True)  # RQ-a…RQ-g
+    letra: str  # a…g
+    pergunta: str
+    criterio_verificacao: str  # como o gate/hostil verifica
+
+
+class WritingCycle(SQLModel, table=True):
+    """Máquina de estados do ciclo de escrita (o AST como DADO, não documento).
+
+    brief→drafting→guard→gates→hostile→emenda→(loop)→approved→rendered→committed
+    Transições SÓ pela API — nunca manualmente.
+    """
+
+    cycle_id: str = Field(primary_key=True)  # CY-c01-001
+    cap_key: str
+    estado: str = "brief"  # brief|drafting|guard|gates|hostile|emenda|approved|rendered|committed
+    rodada: int = 1
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    bloqueio_motivo: Optional[str] = None  # se estado=blocked, por quê
+
+
 class MethodFact(SQLModel, table=True):
     """Método M001–M004 (consistency_manifest.json)."""
 

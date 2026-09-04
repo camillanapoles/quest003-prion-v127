@@ -10,6 +10,7 @@ Regras:
 from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Response
+from datetime import datetime
 from pydantic import BaseModel
 from sqlmodel import Session, func, select
 
@@ -281,6 +282,113 @@ def create_app(db_path: str) -> FastAPI:
             s.commit()
             s.refresh(b)
             return b
+
+    # ---------------- WRITING CYCLE (API-driven, não mais documento-driven) ----------------
+    from thesis_engine.models import ReviewQuestion, StyleRule, WritingCycle
+
+    @app.get("/cycle/questions")
+    def cycle_questions():
+        """As 7 perguntas do revisor hostil — DO BANCO (não de markdown)."""
+        with sess() as s:
+            return s.exec(select(ReviewQuestion).order_by(ReviewQuestion.letra)).all()
+
+    @app.get("/cycle/style-rules")
+    def cycle_style_rules():
+        """Regras de estilo — DO BANCO (não de hardcode Python)."""
+        with sess() as s:
+            return s.exec(select(StyleRule).order_by(StyleRule.rule_id)).all()
+
+    @app.post("/cycle/{cap_key}/start")
+    def cycle_start(cap_key: str):
+        """Inicia o ciclo de escrita de um capítulo → retorna BRIEF + cria WritingCycle."""
+        from thesis_engine.escritor import brief_capitulo
+
+        brief = brief_capitulo(app.state.db_path, cap_key)
+        with sess() as s:
+            existing = s.exec(
+                select(WritingCycle).where(WritingCycle.cap_key == cap_key)
+            ).first()
+            if existing:
+                return {
+                    "cycle": existing,
+                    "brief": brief,
+                    "message": "ciclo já existe — use /submit ou /status",
+                }
+            cycle = WritingCycle(
+                cycle_id=f"CY-{cap_key}-{datetime.now():%H%M%S}",
+                cap_key=cap_key,
+                estado="brief",
+                created_at=str(datetime.now()),
+            )
+            s.add(cycle)
+            s.commit()
+            s.refresh(cycle)
+        return {"cycle": cycle, "brief": brief}
+
+    @app.post("/cycle/{cap_key}/submit")
+    def cycle_submit(cap_key: str, body: dict):
+        """Submete rascunho → guarda no DB → roda guard → transiciona para 'hostile'."""
+        from thesis_engine.escritor import reingest_capitulo
+
+        markdown = body.get("markdown", "")
+        if not markdown:
+            raise HTTPException(422, "markdown obrigatório")
+        try:
+            r = reingest_capitulo(app.state.db_path, cap_key, markdown)
+        except ValueError as e:
+            raise HTTPException(422, str(e))
+        with sess() as s:
+            cycle = s.exec(
+                select(WritingCycle).where(WritingCycle.cap_key == cap_key)
+            ).first()
+            if cycle:
+                cycle.estado = "hostile"
+                cycle.updated_at = str(datetime.now())
+                s.add(cycle)
+                s.commit()
+        return {"ingested": r, "estado": "hostile"}
+
+    @app.get("/cycle/{cap_key}/status")
+    def cycle_status(cap_key: str):
+        """Estado completo: ciclo + gates + hostil + ações + style rules aplicáveis."""
+        from thesis_engine.escritor import hostil_aprova
+
+        with sess() as s:
+            cycle = s.exec(
+                select(WritingCycle).where(WritingCycle.cap_key == cap_key)
+            ).first()
+            if not cycle:
+                raise HTTPException(404, f"ciclo de {cap_key} não iniciado — use /start")
+        aprov = hostil_aprova(app.state.db_path, cap_key)
+        return {"cycle": cycle, "aprovacao": aprov}
+
+    @app.post("/cycle/{cap_key}/approve")
+    def cycle_approve(cap_key: str, body: dict):
+        """Tenta aprovar — só se TODAS as condições verdes. Caso contrário, bloqueia com motivo."""
+        from thesis_engine.escritor import hostil_aprova
+
+        r = hostil_aprova(app.state.db_path, cap_key)
+        if not r["aprova"]:
+            motivos = []
+            if r["abertos"]:
+                motivos.append(f"itens hostis abertos: {r['abertos']}")
+            if not all(r["gates"].values()):
+                motivos.append(f"gates vermelhos: {[g for g, v in r['gates'].items() if not v]}")
+            if r["acoes_pendentes_no_local"]:
+                motivos.append(f"ações pendentes: {r['acoes_pendentes_no_local']}")
+            if not r["hostil_falou"]:
+                motivos.append("hostil nunca questionou a prosa deste capítulo")
+            raise HTTPException(409, "APROVAÇÃO BLOQUEADA: " + "; ".join(motivos))
+        with sess() as s:
+            cycle = s.exec(
+                select(WritingCycle).where(WritingCycle.cap_key == cap_key)
+            ).first()
+            if cycle:
+                cycle.estado = "approved"
+                cycle.updated_at = str(datetime.now())
+                s.add(cycle)
+                s.commit()
+        return {"aprovado": True, "cycle": cycle}
 
     # ---------------- plano global + grafo ----------------
     @app.get("/plano")

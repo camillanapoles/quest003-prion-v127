@@ -264,12 +264,8 @@ def reingest_capitulo(db_path: str, key: str, markdown: str) -> dict:
 
 
 def bootstrap_v2(db_path: str = V2_DB, archive: bool = True) -> dict:
-    """BOOTSTRAP DO RECOMEÇO (resscrita em sessão nova, backend mantido):
-    1. ARQUIVA a rodada anterior (rascunhos+render+fila+ações → escrita-zero/arquivo/)
-    2. CRIA DB NOVO do zero (setup_v2 — zero texto canônico)
-    3. SEMEIA ações-mestra (promessas estruturais que atravessam rodadas)
-    4. Verifica estrutura+gates do estado nascente
-    """
+    """BOOTSTRAP DO RECOMEÇO: arquiva → DB novo → semeia ações + REGRAS DE ESTILO +
+    PERGUNTAS DO REVISOR (tudo como DADO OO, não documento)."""
     import json
     import shutil
     from datetime import datetime
@@ -286,23 +282,66 @@ def bootstrap_v2(db_path: str = V2_DB, archive: bool = True) -> dict:
                 shutil.copy2(base / f, dest / f)
         if (Path(REPO) / "rascunhos").exists():
             shutil.copytree(Path(REPO) / "rascunhos", dest / "rascunhos", dirs_exist_ok=True)
-    setup = setup_v2(db_path)  # DB NOVO — zero texto
-    # ações-mestra (promessas estruturais, independem da rodada)
+    setup = setup_v2(db_path)
+
+    # ---- semeia AÇÕES-mestra ----
     semeadas = [
         registrar_acao(db_path, "SEED", "c15",
-            "Anexo: folhas de pré-registro + versão do motor/solver com datas impressas (evidência in-document da precedência exp1→exp2 e da inalterança)"),
+            "Anexo: folhas de pré-registro + versão do motor/solver com datas impressas"),
         registrar_acao(db_path, "SEED", "c00",
-            "LISTA DE SIGLAS consolidada da escrita + FICHA ACADÊMICA (ficha: EXCLUSIVA da autora)"),
+            "LISTA DE SIGLAS consolidada + FICHA ACADÊMICA (ficha: EXCLUSIVA da autora)"),
         registrar_acao(db_path, "SEED", "c03",
-            "Citar C027 (kindreds E200K brasileiros) na fundamentação; elemento visual do mapa de camadas se a autora optar"),
+            "Citar C027 (kindreds E200K); mapa visual de camadas se a autora optar"),
         registrar_acao(db_path, "SEED", "plano",
             "Refinar mapeamento section-do-registro→caps-v2 no brief"),
     ]
-    from sqlmodel import Session, select, func
 
-    from thesis_engine.models import AcaoDevedora, Block, Chapter, Claim
+    # ---- semeia REGRAS DE ESTILO (StyleRule) — substitui _TERMONS_LLM hardcoded ----
+    from thesis_engine.models import StyleRule
+
+    _LLM_TERMS = [
+        "verbatim", "delve", "furthermore", "moreover", "notably", "salient",
+        "comprehensive", "multifaceted", "nuanced", "paradigm shift", "holistic",
+        "it is worth noting", "in essence", "crucially", "pivotal", "landscape",
+        "tapestry", "testament to", "underscores", "leverage", "robust framework",
+        "seamlessly", "delineate", "elucidate", "underscore", "unprecedented",
+        "myriad", "plethora", "instrumental in", "in conjunction with",
+        "aforementioned", "henceforth", "whilst", "amongst", "notwithstanding",
+    ]
+    _PT_BANS = ["promissor", "futuros estudos"]
 
     engine = create_db(db_path)
+    n_rules = 0
+    with Session(engine) as s:
+        for i, term in enumerate(_LLM_TERMS + _PT_BANS, 1):
+            tipo = "llm_ban" if term in _LLM_TERMS else "pt_ban"
+            s.add(StyleRule(rule_id=f"SR{i:04d}", tipo=tipo, valor=term,
+                          descricao=f"{'Termo LLM' if tipo == 'llm_ban' else 'Proibição PT'}: {term}",
+                          origem="bootstrap"))
+            n_rules += 1
+        s.commit()
+
+    # ---- semeia PERGUNTAS DO REVISOR (ReviewQuestion) ----
+    from thesis_engine.models import ReviewQuestion
+
+    _QUESTIONS = [
+        ("a", "A afirmação é factual e verificável no documento?", "claim tem E-ID · número tem lineage"),
+        ("b", "A ligação premissa→conclusão é válida?", "sem salto lógico · sem petição de princípio"),
+        ("c", "Há confundidores ou vieses não declarados?", "alternativas consideradas · incerteza dita"),
+        ("d", "O número tem lineage?", "cifra via [claim:] ou NumberValue"),
+        ("e", "O termo está definido antes do uso?", "LISTA DE SIGLAS ou 1ª ocorrência"),
+        ("f", "A cronologia alegada tem prova no papel?", "folhas de registro no anexo · datas impressas"),
+        ("g", "SOA HUMANO? (não SOA DE MÁQUINA?)", "sem termos LLM · linguagem de doutoranda brasileira"),
+    ]
+    with Session(engine) as s:
+        for letra, pergunta, criterio in _QUESTIONS:
+            s.add(ReviewQuestion(question_id=f"RQ-{letra}", letra=letra,
+                               pergunta=pergunta, criterio_verificacao=criterio))
+        s.commit()
+
+    from sqlmodel import func
+    from thesis_engine.models import AcaoDevedora, Block, Chapter, Claim
+
     with Session(engine) as s:
         estado = {
             "setup": setup,
@@ -310,6 +349,8 @@ def bootstrap_v2(db_path: str = V2_DB, archive: bool = True) -> dict:
             "chapters": s.exec(select(func.count()).select_from(Chapter)).one(),
             "claims": s.exec(select(func.count()).select_from(Claim)).one(),
             "acoes_semeadas": len(s.exec(select(AcaoDevedora)).all()),
+            "style_rules": s.exec(select(func.count()).select_from(StyleRule)).one(),
+            "review_questions": s.exec(select(func.count()).select_from(ReviewQuestion)).one(),
         }
     return estado
 
