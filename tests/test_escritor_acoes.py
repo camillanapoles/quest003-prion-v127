@@ -21,20 +21,20 @@ def test_registrar_e_executar_acao(tmp_path):
     assert check_acoes(db, cap="c15")[0]["status"] == "executada"
 
 
-def test_aprova_bloqueada_por_acao_pendente_no_local():
+def test_aprova_bloqueada_por_acao_pendente_no_local(tmp_path):
     """hostil_aprova NÃO aprova capítulo com ação devedora pendente NELE."""
-    # no DB v2 real: ações pendentes vivem em c15/c00/c03 — c04 livre
-    # (fase-consciente: durante a resscrita, antes de c04 ser escrito+aprovado,
-    #  vale só a garantia de ações; após escrito, a asserção forte volta a valer)
-    r = hostil_aprova(V2_DB, "c04")
-    assert not r["acoes_pendentes_no_local"]
-    with Session(create_db(V2_DB)) as s:
-        c04_escrito = s.exec(
-            select(Block.block_id).where(Block.chap_id == "c04")
-        ).first() is not None
-        # já c15, quando for escrito, terá A0001 pendente bloqueando até executar
-        assert any(a.cap_destino == "c15" and a.status == "pendente"
-                   for a in s.exec(select(AcaoDevedora)).all())
-    if c04_escrito:
-        assert r["aprova"] is True
+    from thesis_engine.escritor import setup_v2, registrar_acao, ingest_rascunho
+
+    db = str(tmp_path / "v2.db")
+    setup_v2(db)
+    ingest_rascunho(db, "c04", "## 4.1 Teste\n\nParágrafo [claim:C001].\n")
+    registrar_acao(db, "SEED", "c15", "teste pendente")
+
+    r = hostil_aprova(db, "c04")
+    assert r["acoes_pendentes_no_local"] == []
+    with Session(create_db(db)) as s:
+        assert any(
+            a.cap_destino == "c15" and a.status == "pendente"
+            for a in s.exec(select(AcaoDevedora)).all()
+        )
 
