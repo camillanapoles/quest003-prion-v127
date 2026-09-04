@@ -390,6 +390,57 @@ def create_app(db_path: str) -> FastAPI:
                 s.commit()
         return {"aprovado": True, "cycle": cycle}
 
+    @app.post("/cycle/{cap_key}/render")
+    def cycle_render(cap_key: str):
+        """Render SÓ após aprovação — transiciona WritingCycle para 'rendered'."""
+        from thesis_engine.escritor import render_v2
+
+        with sess() as s:
+            cycle = s.exec(
+                select(WritingCycle).where(WritingCycle.cap_key == cap_key)
+            ).first()
+            if not cycle:
+                raise HTTPException(404, f"ciclo de {cap_key} não iniciado")
+            if cycle.estado not in ("approved", "rendered"):
+                raise HTTPException(
+                    409,
+                    f"estado={cycle.estado} — render exige 'approved' (use /approve primeiro)",
+                )
+        out = render_v2(app.state.db_path, only_approved=True)
+        with sess() as s:
+            cycle.estado = "rendered"
+            cycle.updated_at = str(datetime.now())
+            s.add(cycle)
+            s.commit()
+        return {"render": out, "estado": "rendered"}
+
+    @app.post("/cycle/{cap_key}/report")
+    def cycle_report(cap_key: str):
+        """Gera relatório do capítulo (gates + hostil + ações) — do DB, não manual."""
+        from thesis_engine.escritor import check_acoes, hostil_aprova
+
+        with sess() as s:
+            cycle = s.exec(
+                select(WritingCycle).where(WritingCycle.cap_key == cap_key)
+            ).first()
+            revisoes = [
+                r for r in s.exec(select(RevisaoHostil)).all() if r.cap_key == cap_key
+            ]
+        aprov = hostil_aprova(app.state.db_path, cap_key)
+        acoes = check_acoes(app.state.db_path, cap=cap_key)
+        return {
+            "cap": cap_key,
+            "cycle": cycle,
+            "gates": aprov["gates"],
+            "hostil_falou": aprov["hostil_falou"],
+            "aprovado": aprov["aprova"],
+            "revisoes": [
+                {"id": r.item_id, "status": r.status, "achado": r.achado[:80], "resposta": (r.resposta or "—")[:80]}
+                for r in revisoes
+            ],
+            "acoes_no_local": acoes,
+        }
+
     # ---------------- plano global + grafo ----------------
     @app.get("/plano")
     def plano():

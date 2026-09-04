@@ -384,14 +384,23 @@ def save_brief(db_path: str, key: str, out_dir: str = None) -> str:
     return str(p)
 
 
-def render_v2(db_path: str, out_dir: str = None) -> dict:
-    """Render do ramo v2: DRAFTS são o produto — FOLDER ÚNICO escrita-zero/render."""
+def render_v2(db_path: str, out_dir: str = None, only_approved: bool = True) -> dict:
+    """Render do ramo v2 — SÓ capítulos APROVADOS (WritingCycle.estado='approved').
+    Se only_approved=False, renderiza tudo (modo debug/arquivo)."""
     engine = create_db(db_path)
     out = Path(out_dir or (REPO / "escrita-zero" / "render"))
     out.mkdir(parents=True, exist_ok=True)
     with Session(engine) as s:
         chapters = s.exec(select(Chapter).order_by(Chapter.order_idx)).all()
         blocks = s.exec(select(Block).order_by(Block.seq)).all()
+        if only_approved:
+            from thesis_engine.models import WritingCycle
+            approved_caps = {
+                c.cap_key
+                for c in s.exec(select(WritingCycle)).all()
+                if c.estado in ("approved", "rendered", "committed")
+            }
+            blocks = [b for b in blocks if b.chap_id in approved_caps]
     by = {}
     for b in blocks:
         by.setdefault(b.chap_id, []).append(b)
