@@ -88,5 +88,41 @@
   "status": "emendado",
   "resposta": "EMENDA: o texto já diz \"com incerteza declarada\" e evita o número (fica \"fração relevante\"); incerteza high ecoada. Números com lineage ficam nos caps 5-6 sob gates.",
   "respondido_por": "persona+emenda"
+ },
+ {
+  "item_id": "H0011",
+  "cap_key": "c01",
+  "tipo": "hostil-yellow",
+  "achado": "termo novo sem definição prévia: GPI",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0012",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "Brief trouxe claims de DESENHO/RESULTADO (C033-C051) mapeadas pelo registro à seção 3.2 do braço-paper — desalinhamento registro↔arquitetura v2: como decidiu o que usar?",
+  "status": "respondido",
+  "resposta": "O campo section do registro espelha o MANUSCRITO-paper, não a tese v2. Decisão de escritor: c03 usa só claims de LITERATURA (C001-C023); desenho/resultado ficam nos lares temáticos (c05/c06/c08). Registrado como refinamento pendente do mapeamento (task futura: mapa section→cap-v2).",
+  "respondido_por": "persona+critical-thinking"
+ },
+ {
+  "item_id": "H0013",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "\"Mapa em camadas\" prometido como elemento (plano) — entregou camadas como parágrafos bold; onde está o elemento visual?",
+  "status": "emendado",
+  "resposta": "EMENDA aceita como débito visual: as 4 camadas estão estruturadas e rotuladas (Camada 1-4); a figura/mapa próprio (equivalente Fig.1 do braço-paper, legado) depende de gerador de figura determinística — entra como tarefa do folder único (escrita-zero/figuras/) quando a autora pedir. Prosa estruturada garante a função narrativa agora.",
+  "respondido_por": "persona+emenda-débito"
+ },
+ {
+  "item_id": "H0014",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "§3.4 cita C047/C048/C049/C040 — claims \"de tese\" (arquitetura/nomenclatura) numa seção de epistemologia: cabimento?",
+  "status": "respondido",
+  "resposta": "Sim: §3.4 é exatamente onde os compromissos epistêmicos (tiers, cronologia, sem-ano, duas-partes) são fundamentados; essas claims SÃO os compromissos formalizados. Citação correta por função, não por seção do paper.",
+  "respondido_por": "persona+critical-thinking"
  }
 ]
