@@ -111,3 +111,60 @@ plano:     PLAN_MODULAR_ENGINE.md  ·  este arquivo = posição viva
 3. `author_approved` SOMENTE humana; **CI verde ≠ tese pronta** (kernel)
 4. Predições v1.0 jamais retreinadas; tiers em toda saída de dose; nunca fabricar
 5. main intocada (histórico); toda fatia = commit verificável + CI
+
+---
+
+## 9 · RESSCRITA DO ZERO (branch `tese-escrita-zero`) — instrução para nova sessão
+
+**Primeiro comando da sessão nova:**
+```bash
+cd ~/q3ci3 && git checkout tese-escrita-zero
+cat STATE_HANDOFF.md §9 · HOSTILE_REVIEW_PROTOCOL.md · escrita-zero/AST_VALIDACAO.md
+.venv/bin/python -c "from thesis_engine.escritor import bootstrap_v2; print(bootstrap_v2())"
+```
+
+**O que a sessão nova precisa saber (tudo já persistido em arquivos):**
+
+| Assunto | Onde vive | Resumo |
+|---|---|---|
+| AST do ciclo | `HOSTILE_REVIEW_PROTOCOL.md` | cycle-new: brief→write→LOOP UNTIL [guard→gates→hostile→fila] hostil-aprova→render→RELATORIO→commit |
+| Revisor hostil (persona) | idem | PhD neurocientista/células-tronco, metodólogo de teses, SEM acesso a nada além do documento |
+| 6 perguntas-padrão | idem | factual? lógica? confundidores? lineage? termo definido? cronologia provada? |
+| Funções do escritor | `thesis_engine/escritor.py` | `bootstrap_v2` · `brief_capitulo` · `reingest_capitulo` · `hostil_aprova` · `registrar_acao` · `check_acoes` · `render_v2` |
+| Ações devedoras | `AcaoDevedora` (modelo) | promessa→id único→cobrada no local via `hostil_aprova` |
+| Linha experimental | `plano_data.py` c04 | exp1 (murino/humanização, segurança) → exp2 multi-espécie = A BASE DA TESE |
+| Briefs (banco→escritor) | `escritor.zero/briefs/` | o que o banco sabe de cada capítulo |
+| Rodada anterior (arquivo) | `escrita-zero/arquivo/` | c00-c04 da fase de aprendizagem (referência, não base) |
+
+**O ciclo por capítulo (sem exceções):**
+```
+1. brief_capitulo(db, key)          → o que o banco sabe
+2. escrever prosa NOVA do zero      → rascunhos/cNN_*.md
+3. reingest_capitulo(db, key, md)   → guard (write-guard + claims⊆registro)
+4. LOOP:
+   a. gates (objetivo·coesão·gaps)  → check_producao(db, upto_key=key)
+   b. hostil questiona              → registrar RevisaoHostil + emenda/resposta
+   c. registrar_acao se prometer    → AcaoDevedora com id único e local
+   d. re-emenda → volta ao passo 3  → até hostil_aprova(db, key)['aprova']==True
+5. render_v2(db) → escrita-zero/render/
+6. atualizar RELATORIO.md
+7. commit (pre-commit roda 71 testes + cli check)
+```
+
+**Invariantes da resscrita:**
+- NUNCA converter/reaproveitar o texto canônico (`tese_unificada.md` é Modo A, não fonte v2)
+- Números SEMPRE via claims (lineage por tag) — nunca digitados soltos
+- Termos: definidos na 1ª usagem OU na LISTA DE SIGLAS (c00)
+- Cronologia/precedência: sempre IN-DOCUMENT (folhas de pré-registro reproduzidas no anexo)
+- Ações devedoras: `hostil_aprova` bloqueia o local até a promessa ser executada
+- `hostil_falou`: capítulo sem round hostil da prosa NUNCA aprova
+- A ficha acadêmica (A0007@c00) é EXCLUSIVA da autora — a sessão não preenche
+
+**Árvore de trabalho da sessão nova:**
+```
+c01 nota-à-banca → c02 introdução → c03 fundamentação → c04 linha-experimental
+→ c05 alicerce (exp2) → c06 aplicação/dose (exp2) → c07 métodos → c08 resultados
+→ c09 achados → c10 discussão → c11 clínica → c12 limitações → c13 conclusões
+→ c14 referências → c15 anexos (A0001: folhas de pré-registro) → c16 mapa-lógica
+→ c00 front-matter (LISTA consolidada + ficha da autora)
+```
