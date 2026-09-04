@@ -1,11 +1,12 @@
 # RELATÓRIO — escrita do zero · RODADA 2 (reinício pós-retificação arquitetural)
 
-Progresso: **c01 ✓** · próximo: c02 · branch `tese-escrita-zero` · DB: `tese_v2.db` (bootstrap novo,
+Progresso: **c01 ✓ c02 ✓** · próximo: c03 · branch `tese-escrita-zero` · DB: `tese_v2.db` (bootstrap novo,
 zero blocos canônicos) · rodada 1 arquivada em `escrita-zero/arquivo/` (referência, não base).
 
 | Cap | Título | Gates (obj·coes·gaps) | Claims | Hostil |
 |---|---|---|---|---|
 | c01 | Nota à banca | ✓✓✓ | 6 (C004–C007, C027, C054) | 5 Qs: 3 emendas (preprint, deriva, kuru) · 2 respostas (aritmética décadas, promessa-anexo) |
+| c02 | Introdução (contrato formal) | ✓✓✓ | 16 (contrato OE1–4/H1–3/M1–M5+R1) | 5 Qs: 4 emendas (bayes, θ* em H2, θ_obs, registro) · 1 resposta (validação-autora→anexo) + 7 stale resolvidos |
 
 **Ordem topológica:** c01 ✓ → c02 → c03 → c04 → c05 → … → c13 → c14 → c15 → c16 → c00 (por último,
 com siglas acumuladas e ficha da autora).
