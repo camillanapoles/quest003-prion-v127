@@ -177,9 +177,10 @@ def ingest_rascunho(db_path: str, key: str, markdown: str) -> dict:
 
 
 def hostil_aprova(db_path: str, key: str) -> dict:
-    """Condição de saída do LOOP (cycle-new): zero itens hostis ABERTOS do capítulo
-    + 3 gates verdes + ZERO ações devedoras PENDENTES cujo destino é este capítulo
-    (promessa de ação no local deve estar executada — ou dispensada pela autora)."""
+    """Condição de saída do LOOP (cycle-new): zero itens ABERTOS + 3 gates verdes +
+    zero ações pendentes NO local + **HOSTIL FALOU** (≥1 item tipo 'hostil' no capítulo
+    — sem isso um capítulo escrito 'por demonstração' seria aprovado sem revisão da
+    prosa: brecha flagrada pela autora no RESUMO de c00)."""
     from thesis_engine.producao import GATES
 
     engine = create_db(db_path)
@@ -191,13 +192,15 @@ def hostil_aprova(db_path: str, key: str) -> dict:
             if a.cap_destino == key and a.status == "pendente"
         ]
     abertos = [i.item_id for i in itens if i.status == "aberto"]
+    hostil_falou = any(i.tipo == "hostil" for i in itens)
     gates = {g: gfn(db_path, key) for g, gfn in GATES.items()}
-    ok = not abertos and all(g["ok"] for g in gates.values()) and not acoes_pendentes
+    ok = not abertos and all(g["ok"] for g in gates.values()) and not acoes_pendentes and hostil_falou
     return {
         "aprova": ok,
         "abertos": abertos,
         "gates": {g: v["ok"] for g, v in gates.items()},
         "acoes_pendentes_no_local": acoes_pendentes,
+        "hostil_falou": hostil_falou,
     }
 
 
@@ -258,6 +261,57 @@ def reingest_capitulo(db_path: str, key: str, markdown: str) -> dict:
             s.delete(x)
         s.commit()
     return ingest_rascunho(db_path, key, markdown)
+
+
+def bootstrap_v2(db_path: str = V2_DB, archive: bool = True) -> dict:
+    """BOOTSTRAP DO RECOMEÇO (resscrita em sessão nova, backend mantido):
+    1. ARQUIVA a rodada anterior (rascunhos+render+fila+ações → escrita-zero/arquivo/)
+    2. CRIA DB NOVO do zero (setup_v2 — zero texto canônico)
+    3. SEMEIA ações-mestra (promessas estruturais que atravessam rodadas)
+    4. Verifica estrutura+gates do estado nascente
+    """
+    import json
+    import shutil
+    from datetime import datetime
+
+    base = Path(REPO) / "escrita-zero"
+    if archive and (base / "render").exists():
+        dest = base / "arquivo" / f"rodada-{datetime.now():%Y%m%d-%H%M}"
+        dest.mkdir(parents=True, exist_ok=True)
+        for sub in ("render", "briefs"):
+            if (base / sub).exists():
+                shutil.copytree(base / sub, dest / sub, dirs_exist_ok=True)
+        for f in ("fila_hostil.json", "acoes_devedoras.json", "RELATORIO.md"):
+            if (base / f).exists():
+                shutil.copy2(base / f, dest / f)
+        if (Path(REPO) / "rascunhos").exists():
+            shutil.copytree(Path(REPO) / "rascunhos", dest / "rascunhos", dirs_exist_ok=True)
+    setup = setup_v2(db_path)  # DB NOVO — zero texto
+    # ações-mestra (promessas estruturais, independem da rodada)
+    semeadas = [
+        registrar_acao(db_path, "SEED", "c15",
+            "Anexo: folhas de pré-registro + versão do motor/solver com datas impressas (evidência in-document da precedência exp1→exp2 e da inalterança)"),
+        registrar_acao(db_path, "SEED", "c00",
+            "LISTA DE SIGLAS consolidada da escrita + FICHA ACADÊMICA (ficha: EXCLUSIVA da autora)"),
+        registrar_acao(db_path, "SEED", "c03",
+            "Citar C027 (kindreds E200K brasileiros) na fundamentação; elemento visual do mapa de camadas se a autora optar"),
+        registrar_acao(db_path, "SEED", "plano",
+            "Refinar mapeamento section-do-registro→caps-v2 no brief"),
+    ]
+    from sqlmodel import Session, select, func
+
+    from thesis_engine.models import AcaoDevedora, Block, Chapter, Claim
+
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        estado = {
+            "setup": setup,
+            "blocos_texto": s.exec(select(func.count()).select_from(Block)).one(),
+            "chapters": s.exec(select(func.count()).select_from(Chapter)).one(),
+            "claims": s.exec(select(func.count()).select_from(Claim)).one(),
+            "acoes_semeadas": len(s.exec(select(AcaoDevedora)).all()),
+        }
+    return estado
 
 
 def plano_blueprint(key: str) -> str:

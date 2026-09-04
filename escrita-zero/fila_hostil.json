@@ -160,5 +160,14 @@
   "status": "emendado",
   "resposta": "EMENDA R3: humanizar = re-escalar TEMPO (C043: taxas relativas murinas); exp2 = variar SUBSTRATO CINÉTICO por espécie (bandas-Kt das sequências PrP). Exp1 não distingue constante-estrutural de artefato murino — exp2 sim; murino é 1 das 4 espécies (contido, não descartado).",
   "respondido_por": "revisor-à-parte (pergunta da autora)"
+ },
+ {
+  "item_id": "H0019",
+  "cap_key": "c00",
+  "tipo": "hostil",
+  "achado": "RESUMO afirma precedência (\"travado v1.0, antes da extensão de espécies\") SEM âncora in-document no ponto — o leitor não confere; mesma classe do vício do repo (flagrado pela autora)",
+  "status": "emendado",
+  "resposta": "EMENDA R1: a frase agora ancora a precedência DENTRO da tese (linha experimental Cap.4 + folhas de registro reproduzidas no Apêndice A = ação A0001@c15). Enquanto o anexo não existir, a aprovação deste ponto é condicional — e o gate hostil_falou (novo) impede capítulo sem round hostil.",
+  "respondido_por": "revisor-hostil R1-c00 (flagra da autora)"
  }
 ]
