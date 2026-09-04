@@ -74,7 +74,18 @@ def check_sec43(db_path: str) -> dict:
 
 # ============ F2.5 — gates de estilo (style_profile.md, calibrados no canônico) ============
 
-_PROIBIDAS = ("promissor", "futuros estudos")
+# Termos LLM que soam artificiais na prosa de tese PT-BR — a autora escreve como
+# pesquisadora, não como modelo de linguagem (wiki: obs-2026-09-03 verbatim-banido)
+_TERMONS_LLM = frozenset({
+    "verbatim", "delve", "furthermore", "moreover", "notably", "salient",
+    "comprehensive", "multifaceted", "nuanced", "paradigm shift", "holistic",
+    "it is worth noting", "in essence", "crucially", "pivotal", "landscape",
+    "tapestry", "testament to", "underscores", "leverage", "robust framework",
+    "seamlessly", "delineate", "elucidate", "underscore", "unprecedented",
+    "myriad", "plethora", "instrumental in", "in conjunction with",
+    "aforementioned", "henceforth", "whilst", "amongst", "notwithstanding",
+})
+_PROIBIDAS = ("promissor", "futuros estudos") + tuple(sorted(_TERMONS_LLM))
 _DOI = re.compile(r"10\.\d{4,}/\S+")
 _VERSAO = re.compile(r"\bv\d+\.\d+\b")
 _SREF = re.compile(r"§\s?\d+(?:\.\d+)?")

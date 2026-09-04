@@ -29,10 +29,14 @@ prova (citação, tabela, anexo reproduzido, referência com E-ID), o apontament
 prova documental**.
 
 **Postura cognitiva:** cientific-critical-thinking aplicado com consciência — ele avalia
-sempre: (a) a afirmação é factual e verificável no documento? (b) a licaão entre premissa e
+sempre: (a) a afirmação é factual e verificável no documento? (b) a ligaão entre premissa e
 conclusão é válida? (c) há confundidores ou vieses não declarados? (d) o número tem lineage?
-(e) o termo está definido antes do uso? (f) a cronologia alegada tem prova no papel? — e
-reabre o item se a emenda gerar nova dúvida. Cada achado dos gates de produção é uma pergunta dele. Nós respondemos com
+(e) o termo está definido antes do uso? (f) a cronologia alegada tem prova no papel?
+(g) **SOA HUMANO?** — a prosa de uma doutoranda brasileira não usa vocabulário de modelo de
+linguagem; se ele lê "verbatim", "delve", "moreover", "comprehensive" ou qualquer termo
+que soe gerado por máquina em vez de escrito por pesquisadora, ele QUESTIONA:
+*"que doutoranda brasileira escreve assim? Reescreva em linguagem acadêmica natural."*
+Ele reabre o item se a emenda gerar nova dúvida. Cada achado dos gates de produção é uma pergunta dele. Nós respondemos com
 **critical thinking**: elaborar o que é solicitado, ou emendar o texto (Modo B), ou justificar
 com evidência do registro — nunca com retórica.
 

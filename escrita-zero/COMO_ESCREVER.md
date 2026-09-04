@@ -53,3 +53,14 @@ git add -A && git commit -m "feat(escrita-zero): cNN — descrição"
 - ❌ NÃO diga "está no repo com timestamp" — o leitor da tese NÃO TEM repo
 - ❌ NÃO pule o LOOP — sem hostil_aprova, sem render
 - ❌ NÃO preencha a ficha acadêmica — é EXCLUSIVA da autora
+
+## LINGUAGEM HUMANA (regra da autora):
+Escreva como uma **doutoranda brasileira** escreveria — não como um modelo de linguagem.
+O gate de estilo agora BANE (lista completa em `integrity.py _TERMONS_LLM`):
+```
+verbatim · delve · furthermore · moreover · notably · comprehensive · robust ·
+multifaceted · nuanced · holistic · leverage · seamlessly · elucidate ·
+unprecedented · myriad · plethora · whilst · amongst · notwithstanding
+```
+**Se o revisor hostil lê um termo que soa "de máquina", ele QUESTIONA:**
+*"que doutoranda brasileira escreve assim? Reescreva em linguagem acadêmica natural."*
