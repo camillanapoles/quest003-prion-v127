@@ -18,7 +18,7 @@ from thesis_engine.ingest.graphify import ingest_graphify
 from thesis_engine.ingest.plano import ingest_plano
 from thesis_engine.ingest.registro import ingest_registro
 from thesis_engine.ingest.tese import extract_meta, parse_blocks
-from thesis_engine.models import Block, Chapter, Claim, NumberValue, PlanChapter, RevisaoHostil, Section, Source
+from thesis_engine.models import AcaoDevedora, Block, Chapter, Claim, NumberValue, PlanChapter, RevisaoHostil, Section, Source
 
 REPO = Path(__file__).resolve().parents[1]  # escritor.py está em thesis_engine/ (1 nível)
 V2_DB = str(REPO / "tese_v2.db")
@@ -178,16 +178,74 @@ def ingest_rascunho(db_path: str, key: str, markdown: str) -> dict:
 
 def hostil_aprova(db_path: str, key: str) -> dict:
     """Condição de saída do LOOP (cycle-new): zero itens hostis ABERTOS do capítulo
-    + 3 gates verdes. Só então render→RELATORIO→commit."""
+    + 3 gates verdes + ZERO ações devedoras PENDENTES cujo destino é este capítulo
+    (promessa de ação no local deve estar executada — ou dispensada pela autora)."""
     from thesis_engine.producao import GATES
 
     engine = create_db(db_path)
     with Session(engine) as s:
         itens = [i for i in s.exec(select(RevisaoHostil)).all() if i.cap_key == key]
+        acoes_pendentes = [
+            a.acao_id
+            for a in s.exec(select(AcaoDevedora)).all()
+            if a.cap_destino == key and a.status == "pendente"
+        ]
     abertos = [i.item_id for i in itens if i.status == "aberto"]
     gates = {g: gfn(db_path, key) for g, gfn in GATES.items()}
-    ok = not abertos and all(g["ok"] for g in gates.values())
-    return {"aprova": ok, "abertos": abertos, "gates": {g: v["ok"] for g, v in gates.items()}}
+    ok = not abertos and all(g["ok"] for g in gates.values()) and not acoes_pendentes
+    return {
+        "aprova": ok,
+        "abertos": abertos,
+        "gates": {g: v["ok"] for g, v in gates.items()},
+        "acoes_pendentes_no_local": acoes_pendentes,
+    }
+
+
+def registrar_acao(db_path: str, origem_item_id: str, cap_destino: str, acao: str) -> str:
+    """Resposta hostil prometeu ação em local → registro executável com id único."""
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        used = {a.acao_id for a in s.exec(select(AcaoDevedora)).all()}
+        n = len(used) + 1
+        while f"A{n:04d}" in used:
+            n += 1
+        aid = f"A{n:04d}"
+        s.add(AcaoDevedora(acao_id=aid, origem_item_id=origem_item_id, cap_destino=cap_destino, acao=acao))
+        s.commit()
+        return aid
+
+
+def fechar_acao(db_path: str, acao_id: str, evidencia: str, dispensa: bool = False) -> dict:
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        a = s.get(AcaoDevedora, acao_id)
+        if not a:
+            raise KeyError(acao_id)
+        a.status = "dispensada" if dispensa else "executada"
+        a.evidencia = evidencia
+        s.add(a)
+        s.commit()
+        return {"acao_id": acao_id, "status": a.status, "evidencia": evidencia}
+
+
+def check_acoes(db_path: str, cap: str | None = None) -> list[dict]:
+    """Painel de ações devedoras (todas ou de um local/destino)."""
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        rows = s.exec(select(AcaoDevedora)).all()
+    out = [
+        {
+            "acao_id": a.acao_id,
+            "origem": a.origem_item_id,
+            "local": a.cap_destino,
+            "acao": a.acao,
+            "status": a.status,
+            "evidencia": a.evidencia,
+        }
+        for a in rows
+        if cap is None or a.cap_destino == cap
+    ]
+    return out
 
 
 def reingest_capitulo(db_path: str, key: str, markdown: str) -> dict:

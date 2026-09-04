@@ -1,0 +1,26 @@
+[
+ {
+  "acao_id": "A0001",
+  "origem": "H0018",
+  "local": "c15",
+  "acao": "Reproduzir nos apêndices (com datas impressas): folhas de pré-registro das definições operacionais + folha de versão do motor/solver — evidência IN-DOCUMENT da precedência e da inalterança exp1→exp2",
+  "status": "pendente",
+  "evidencia": null
+ },
+ {
+  "acao_id": "A0002",
+  "origem": "H0018",
+  "local": "c00",
+  "acao": "LISTA DE SIGLAS consolidada (termos definidos na escrita: AAV·LNP·GPI·DCJ·sCJD·[SIM]…) + ficha acadêmica da autora",
+  "status": "pendente",
+  "evidencia": null
+ },
+ {
+  "acao_id": "A0003",
+  "origem": "H0018",
+  "local": "c03",
+  "acao": "Elemento visual do mapa em camadas (4 camadas) — se a autora optar por figura além da prosa estruturada",
+  "status": "pendente",
+  "evidencia": null
+ }
+]

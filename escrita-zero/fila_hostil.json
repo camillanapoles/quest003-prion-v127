@@ -151,5 +151,14 @@
   "status": "respondido",
   "resposta": "HOSTIL APROVA (condicional ao anexo c15/c16 já debitado): a narrativa experimental é lógica, a precedência é conferível no documento prometido, e a tabela viaja por claims. APROVADO para render.",
   "respondido_por": "revisor-hostil R2"
+ },
+ {
+  "item_id": "H0018",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "Revisor à parte: qual a diferença OPERACIONAL exp1×exp2? humanização não faria do exp1 multi-espécie?",
+  "status": "emendado",
+  "resposta": "EMENDA R3: humanizar = re-escalar TEMPO (C043: taxas relativas murinas); exp2 = variar SUBSTRATO CINÉTICO por espécie (bandas-Kt das sequências PrP). Exp1 não distingue constante-estrutural de artefato murino — exp2 sim; murino é 1 das 4 espécies (contido, não descartado).",
+  "respondido_por": "revisor-à-parte (pergunta da autora)"
  }
 ]

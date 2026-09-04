@@ -175,6 +175,22 @@ class RevisaoHostil(SQLModel, table=True):
     respondido_por: Optional[str] = None
 
 
+class AcaoDevedora(SQLModel, table=True):
+    """Promessa de ação EM LOCAL — registrada quando resposta hostil indica ação futura.
+
+    Garante execução: origem_item_id liga ao id ÚNICO da auditoria; cap_destino é o
+    LOCAL onde executar; o ciclo do capítulo-destino não recebe aprovação hostil com
+    ação pendente própria (fechar com evidência ou dispensa da autora).
+    """
+
+    acao_id: str = Field(primary_key=True)  # A0001…
+    origem_item_id: str  # H#### da auditoria que prometeu
+    cap_destino: str  # ONDE executar (c15, c03, c00…)
+    acao: str  # O QUÊ
+    status: str = "pendente"  # pendente → executada | dispensada(autora)
+    evidencia: Optional[str] = None  # block_id/arquivo quando executada
+
+
 class MethodFact(SQLModel, table=True):
     """Método M001–M004 (consistency_manifest.json)."""
 
