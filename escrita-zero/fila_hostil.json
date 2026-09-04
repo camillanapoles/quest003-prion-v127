@@ -463,72 +463,72 @@
   "cap_key": "c09",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 9.1",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0053",
   "cap_key": "c09",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 5.1-bis",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0054",
   "cap_key": "c09",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 9.2",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0055",
   "cap_key": "c09",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 5.2-bis",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0056",
   "cap_key": "c09",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 9.3",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0057",
   "cap_key": "c10",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 10.1",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 10.1–10.2 com estrutura binária.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0058",
   "cap_key": "c10",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 10.2",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 10.1–10.2 com estrutura binária.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0059",
   "cap_key": "c11",
   "tipo": "hostil-hard",
   "achado": "elemento prometido ausente: Fig.4",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita: nota de leitura, caixa de aviso, tabela acompanhamento [SIM] e Figura 4 referida.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0060",
@@ -544,27 +544,27 @@
   "cap_key": "c11",
   "tipo": "hostil-yellow",
   "achado": "cobertura de tópicos-chave 0/4 < 80% — objetivo parcialmente cumprido",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita: nota de leitura, caixa de aviso, tabela acompanhamento [SIM] e Figura 4 referida.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0062",
   "cap_key": "c12",
   "tipo": "hostil-yellow",
   "achado": "cobertura de tópicos-chave 0/2 < 80% — objetivo parcialmente cumprido",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita: tabela limite↔fecho com as classes do plano.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0063",
   "cap_key": "c13",
   "tipo": "hostil-yellow",
   "achado": "cobertura de tópicos-chave 0/4 < 80% — objetivo parcialmente cumprido",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita: vereditos por OE1–OE4 + hipóteses + síntese.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0064",
@@ -987,6 +987,78 @@
   "achado": "(g) §8.7 'esta tese pratica em casa' — coloquial, humano, manter. Registrado.",
   "status": "respondido",
   "resposta": "RESPONDIDO: \"pratica em casa\" mantido — registro humano deliberado, registrado nesta resposta como escolha.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0111",
+  "cap_key": "c09",
+  "tipo": "hostil",
+  "achado": "(b) §5.1-bis: 'um arco terapêutico único na literatura priônica' — afirmação de unicidade forte; a claim C016 mostra restauração em organoide e C023 suporte de enxerto, mas 'único na literatura' é juízo de novidade. Suavizar para 'não documentado na literatura consultada' ou equivalente honesto. Emenda.",
+  "status": "emendado",
+  "resposta": "EMENDADO: unicidade suavizada — \"não consta da literatura priônica consultada\" (juízo de novidade → juízo de busca declarada).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0112",
+  "cap_key": "c09",
+  "tipo": "hostil",
+  "achado": "(e) 'surrogato' (§9.2) — termo estranho ao PT-BR clínico; usar 'desfecho substituto (surrogato)' ou apenas 'desfecho substituto'. Emenda menor.",
+  "status": "emendado",
+  "resposta": "EMENDADO: \"surrogato\" → \"desfecho substituto\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0113",
+  "cap_key": "c10",
+  "tipo": "hostil",
+  "achado": "(d) §10.1: as probabilidades bayesianas (36,6% / 14,6–60,5 / 5,0% / 0,4–13,6 / 30–45%) estão na C036 — lineage ok; MAS a coluna direita do §10.2 cita 'titulação por cinética manda' sem tag na célula — a claim C057 está citada na célula ESQUERDA da mesma linha; aceitável (tag na linha), mantido. Registro apenas.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: verificado — as duas células da linha citam C055 e C057 entre si; a tag na linha cobre o par significa/não-significa.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0114",
+  "cap_key": "c10",
+  "tipo": "hostil",
+  "achado": "(g) 'anti-propaganda da tese' — voz humana forte e clara; manter. Registrado.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: \"anti-propaganda da tese\" mantido — escolha de voz registrada.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0115",
+  "cap_key": "c11",
+  "tipo": "hostil",
+  "achado": "(a) Resposta 3 cita 'banda de 0,0–2,6 µg' via C059, mas o número 2,6 está na C058 (a C059 traz a escada 1,9/2,6/3,9/10,3 — contém 2,6, ok). Verificado: lineage íntegra. Registro.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: verificado — o 2,6 µg está presente tanto em C058 (banda do degrau humano) quanto na escada de C059; a tag usada cobre o número citado.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0116",
+  "cap_key": "c11",
+  "tipo": "hostil",
+  "achado": "(c) A caixa de aviso é boa; mas o capítulo promete 'Figura 4 no leito clínico' (elemento) — a frase atual remete ao Cap. 5 ('a Figura 4 (Cap. 5) resume') — suficiente para o elemento? O elemento pede a figura ACESSÍVEL ao clínico: a remissão cumpre se o leitor de 10 min não precisar reler o Cap. 5. Meia frase a mais: o que a figura mostra. Emenda.",
+  "status": "emendado",
+  "resposta": "EMENDADO: remissão à Figura 4 agora descreve o que a figura mostra (quatro degraus, banda central sombreada, pior caso hachurado) — o clínico não precisa reler o Cap. 5.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0117",
+  "cap_key": "c12",
+  "tipo": "hostil",
+  "achado": "(c) Linha 'imunogenicidade': cita C021 (hipoimunogenicidade) como âncora do LIMITE — a claim fala de evasão possível, e o limite é a FALTA de caracterização do construto específico; a citação sustenta o contexto, não o vazio. Aceitável se lida como âncora adjacente; registrar leitura.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: leitura registrada — C021 entra como âncora ADJACENTE (evasão é possível em pluripotentes nocaute HLA), enquanto o vazio declarado é a caracterização do construto V127ΔGPI específico; o fecho (G0-A6 + marcadores em A7) é do construto, não da claim.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0118",
+  "cap_key": "c13",
+  "tipo": "hostil",
+  "achado": "(b) H2 'corroborada com ressalva declarada' — a ressalva (horizonte) não refutou a predição travada, mas o veredito admite leitura dura: em que sentido 'corroborada' se um braço escapou sob S3? Responder com precisão: o que foi travado, o que foi confrontado, o que mudou.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO com precisão: o que foi travado — θ*=0,333 sob S3 com predições congeladas antes do confronto [C040]; o que foi confrontado — a sondagem multi-espécie; o que mudou — nada na predição travada (ela permanece sob S3, como declarado em toda citação [C056]); o que a sondagem acrescentou — a regra de declarar horizonte e a descoberta de que o braço Kt=2/κ=2 escapa sob gerações-casadas-à-base-tratada, que É a S3: logo, sob S3 estrita o braço específico do hamster foi refutado e reportado (Cap. 5, §5.4), enquanto a predição v1.0 murina permanece. \"Corroborada com ressalva\" = predições murinas intactas, predição derivada do hamster refutada e publicada como está — exatamente o que falsificabilidade exige.",
   "respondido_por": "agente (critical thinking)"
  }
 ]
