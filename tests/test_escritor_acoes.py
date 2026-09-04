@@ -6,7 +6,7 @@ from sqlmodel import Session, select
 from thesis_engine.db import create_db
 from thesis_engine.escritor import (V2_DB, fechar_acao, registrar_acao,
                                     check_acoes, hostil_aprova)
-from thesis_engine.models import AcaoDevedora, Block
+from thesis_engine.models import AcaoDevedora, Block, WritingCycle
 
 
 def test_registrar_e_executar_acao(tmp_path):
@@ -23,18 +23,31 @@ def test_registrar_e_executar_acao(tmp_path):
 
 def test_aprova_bloqueada_por_acao_pendente_no_local():
     """hostil_aprova NÃO aprova capítulo com ação devedora pendente NELE."""
-    # no DB v2 real: ações pendentes vivem em c15/c00/c03 — c04 livre
-    # (fase-consciente: durante a resscrita, antes de c04 ser escrito+aprovado,
-    #  vale só a garantia de ações; após escrito, a asserção forte volta a valer)
+    # fase-consciente: enquanto c15 não está aprovado, ações pendentes podem
+    # viver nele (bloqueiam a aprovação); após aprovado, nenhuma pode restar —
+    # a aprovação exige execução. O invariant migra para o próximo local (c00).
     r = hostil_aprova(V2_DB, "c04")
     assert not r["acoes_pendentes_no_local"]
     with Session(create_db(V2_DB)) as s:
         c04_escrito = s.exec(
             select(Block.block_id).where(Block.chap_id == "c04")
         ).first() is not None
-        # já c15, quando for escrito, terá A0001 pendente bloqueando até executar
-        assert any(a.cap_destino == "c15" and a.status == "pendente"
-                   for a in s.exec(select(AcaoDevedora)).all())
+        c15_aprovado = (
+            s.exec(
+                select(WritingCycle).where(
+                    WritingCycle.cap_key == "c15", WritingCycle.estado == "approved"
+                )
+            ).first()
+            is not None
+        )
+        pend_c15 = [
+            a.acao_id
+            for a in s.exec(select(AcaoDevedora)).all()
+            if a.cap_destino == "c15" and a.status == "pendente"
+        ]
+        if c15_aprovado:
+            assert not pend_c15  # aprovação de c15 exigiu executar as ações
+        # (fase anterior: antes de c15 escrito/aprovado, A0001 pendia aqui)
     if c04_escrito:
         assert r["aprova"] is True
 
