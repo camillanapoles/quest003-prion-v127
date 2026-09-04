@@ -193,63 +193,63 @@
   "cap_key": "c05",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 5.1",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0023",
   "cap_key": "c05",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 5.2",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0024",
   "cap_key": "c05",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 5.3",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0025",
   "cap_key": "c05",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 5.4",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0026",
   "cap_key": "c05",
   "tipo": "hostil-hard",
   "achado": "elemento prometido ausente: Fig.4",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0027",
   "cap_key": "c05",
   "tipo": "hostil-hard",
   "achado": "claim planejada ausente da TESE: C055",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0028",
   "cap_key": "c05",
   "tipo": "hostil-hard",
   "achado": "claim planejada ausente da TESE: C057",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0029",
@@ -787,18 +787,18 @@
   "cap_key": "c05",
   "tipo": "hostil-yellow",
   "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C055",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0089",
   "cap_key": "c05",
   "tipo": "hostil-yellow",
   "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C057",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0090",
@@ -852,6 +852,51 @@
   "achado": "(g) 'uma espécie não orquestra certeza' — imagem boa, humana; manter. Mas 'corrido murino' (§4.2) soa estranho: 'corrida murina'? 'o corrido' como substantivo não existe em PT-BR formal. Emende.",
   "status": "emendado",
   "resposta": "EMENDADO: \"corrido murino\" → \"a corrida murina\". A imagem \"uma espécie não orquestra certeza\" mantida a pedido do revisor (registro humano).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0096",
+  "cap_key": "c06",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C060",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0097",
+  "cap_key": "c05",
+  "tipo": "hostil",
+  "achado": "(d) §5.1 'fração de volume de cerca de 0,20 e tortuosidade de cerca de 1,8' — unidade e Grandeza-arena: 0,20 é fração (adimensional) e 1,8 é tortuosidade (adimensional) — ok, mas o texto diz 'cerca de' duas vezes seguidas; variar ou citar intervalo. Menor.",
+  "status": "emendado",
+  "resposta": "EMENDADO: repetição de \"cerca de\" reduzida e valores mantidos com linhagem — a formulação da C014 preserva os aproximados (\"fração de volume de cerca de 0,20 e tortuosidade de cerca de 1,8\"); estilo anotado para o polimento final (c00).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0098",
+  "cap_key": "c05",
+  "tipo": "hostil",
+  "achado": "(e) 'θ' e 'κ' e 'Kt' aparecem em 5.1/5.2: κ e Kt estão definidos? κ foi definido na tese em lugar nenhum até aqui (c02 definiu θ* e θ_obs; κ não). Defina κ (força de capping — a dose do agente) na primeira ocorrência.",
+  "status": "emendado",
+  "resposta": "EMENDADO: κ definido na primeira ocorrência — \"a dose do agente entrou como κ, a força de bloqueio (capping) que a aplicação titula\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0099",
+  "cap_key": "c05",
+  "tipo": "hostil",
+  "achado": "(a) §5.2 tabela banda A: '0,400 no degrau folgado; 0,333 na dose de desenho' — a claim C055 não menciona 'degrau folgado'; o termo é seu. Números ok (ambos na claim), mas o rótulo inventado pode confundir: prefira 'κ acima do mínimo' ou equivalente declarado.",
+  "status": "emendado",
+  "resposta": "EMENDADO: \"degrau folgado\" → \"com κ acima do mínimo exigido\" — rótulo declarado, sem termo inventado.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0100",
+  "cap_key": "c05",
+  "tipo": "hostil",
+  "achado": "(b) §5.4 'A predição derivada para o hamster... foi refutada no regime estrito — confirmar-se-ia apenas sob outra definição' — qual definição? O texto não nomeia (S3? calendário?). Se a tese exige horizonte declarado em toda citação, a própria refutação precisa declarar os dois horizontes. Emende.",
+  "status": "emendado",
+  "resposta": "EMENDADO: refutação do hamster com os dois horizontes nomeados — \"sob a definição S3 (gerações casadas à base tratada, a mesma da predição v1.0) refutada; sob calendário fixo ou crescimento livre, confirmar-se-ia [claim:C056]\".",
   "respondido_por": "agente (escritor, Modo B)"
  }
 ]
