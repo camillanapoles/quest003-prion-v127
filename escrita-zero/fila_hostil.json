@@ -67,45 +67,45 @@
   "cap_key": "c03",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 3.1",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0009",
   "cap_key": "c03",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 3.2",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0010",
   "cap_key": "c03",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 3.3",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0011",
   "cap_key": "c03",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 3.4",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0012",
   "cap_key": "c03",
   "tipo": "hostil-hard",
   "achado": "seção planejada ausente: 3.5",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
   "item_id": "H0013",
@@ -726,6 +726,51 @@
   "achado": "(g) §2.1 'O paradoxo é que a biologia necessária já está publicada' — bom. Mas 'nome e sobrenome' soa jornalístico demais para contrato formal? Reescrever ou manter? Justifique a escolha de registro.",
   "status": "emendado",
   "resposta": "EMENDADO: \"tem nome e sobrenome\" → \"está documentado, caso a caso\" — registro formal mantido sem perda de força; a enumeração dos seis casos logo em seguida cumpre a promessa da frase.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0082",
+  "cap_key": "c04",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C032",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0083",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "(a) §3.1 afirma 'A doença genética existe também no Brasil' via C027 — mas C027 fala de kindreds E200K (mutação distinta de G127V). A frase pode ler-se como se E200K fosse a mesma doença genética da variante protetora. Precise a relação: E200K é forma hereditária distinta; o elo é a população brasileira afetada por príon, não a variante.",
+  "status": "emendado",
+  "resposta": "EMENDADO: frase precisa — \"famílias com a mutação E200K, forma genética distinta da variante protetora, estão documentadas desde 2007\". O elo é a população brasileira afetada por príon; a distinção G127V×E200K está explícita.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0084",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "(c) §3.1 'as plataformas de entrega e imunoevasão existem publicadas' seguido de quatro claims em sequência — enumeração sem síntese: qual delas sustenta QUAL braço do programa? Uma linha de costura entre pino e função faltou.",
+  "status": "emendado",
+  "resposta": "EMENDADO: costura adicionada — \"a nanopartícula lipídica e o hidrogel sustentam o braço de entrega; as progenitoras neurais e a hipoimunogenicidade sustentam o braço de restauração celular\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0085",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "(e) 'NPC' na camada 7 do mapa aparece sem expansão (o texto §3.1 diz 'progenitoras neurais' por extenso — o mapa usa 'progenitoras neurais' também, ok; mas 'LNP' e 'iPSC' na camada 7: iPSC não foi definido no corpo — só 'micróglia-like de iPSC'. Defina na primeira ocorrência.",
+  "status": "emendado",
+  "resposta": "EMENDADO: iPSC expandido na primeira ocorrência (\"células-tronco pluripotentes induzidas (iPSC)\"); LNP substituído por extenso no mapa (\"entrega intratecal por nanopartícula lipídica\").",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0086",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "(b) §3.5 'entre as camadas 7 e 8 não há pino de desenho' — o mapa tem 8 camadas numeradas; a frase diz que o VAZIO está entre entrega e rigor. A banca lê: por que o vazio está ENTRE 7 e 8, e não acima de 7? A lógica da posição do vazio precisa meia frase a mais.",
+  "status": "emendado",
+  "resposta": "EMENDADO: parágrafo final reescrito — o vazio não está \"entre\" camadas: \"as camadas 1 a 7 reúnem tudo o que existe, a camada 8 os instrumentos de rigor, e nenhum pino diz onde posicionar, em que dose, com que intervalo — é esse pino de desenho que falta\".",
   "respondido_por": "agente (escritor, Modo B)"
  }
 ]
