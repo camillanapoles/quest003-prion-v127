@@ -18,7 +18,7 @@ from thesis_engine.ingest.graphify import ingest_graphify
 from thesis_engine.ingest.plano import ingest_plano
 from thesis_engine.ingest.registro import ingest_registro
 from thesis_engine.ingest.tese import extract_meta, parse_blocks
-from thesis_engine.models import Block, Chapter, Claim, NumberValue, PlanChapter, Section, Source
+from thesis_engine.models import Block, Chapter, Claim, NumberValue, PlanChapter, RevisaoHostil, Section, Source
 
 REPO = Path(__file__).resolve().parents[1]  # escritor.py está em thesis_engine/ (1 nível)
 V2_DB = str(REPO / "tese_v2.db")
@@ -174,6 +174,32 @@ def ingest_rascunho(db_path: str, key: str, markdown: str) -> dict:
             criados.append(nb.block_id)
         s.commit()
     return {"rascunho": len(criados), "blocos": criados[:5] + (["…"] if len(criados) > 5 else [])}
+
+
+def hostil_aprova(db_path: str, key: str) -> dict:
+    """Condição de saída do LOOP (cycle-new): zero itens hostis ABERTOS do capítulo
+    + 3 gates verdes. Só então render→RELATORIO→commit."""
+    from thesis_engine.producao import GATES
+
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        itens = [i for i in s.exec(select(RevisaoHostil)).all() if i.cap_key == key]
+    abertos = [i.item_id for i in itens if i.status == "aberto"]
+    gates = {g: gfn(db_path, key) for g, gfn in GATES.items()}
+    ok = not abertos and all(g["ok"] for g in gates.values())
+    return {"aprova": ok, "abertos": abertos, "gates": {g: v["ok"] for g, v in gates.items()}}
+
+
+def reingest_capitulo(db_path: str, key: str, markdown: str) -> dict:
+    """Rodada do LOOP: substitui o rascunho do capítulo (wipe+ingest guardado)."""
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        for b in s.exec(select(Block).where(Block.chap_id == key)).all():
+            s.delete(b)
+        for x in s.exec(select(Section).where(Section.chap_id == key)).all():
+            s.delete(x)
+        s.commit()
+    return ingest_rascunho(db_path, key, markdown)
 
 
 def plano_blueprint(key: str) -> str:

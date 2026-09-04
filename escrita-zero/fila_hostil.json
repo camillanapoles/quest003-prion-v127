@@ -124,5 +124,32 @@
   "status": "respondido",
   "resposta": "Sim: §3.4 é exatamente onde os compromissos epistêmicos (tiers, cronologia, sem-ano, duas-partes) são fundamentados; essas claims SÃO os compromissos formalizados. Citação correta por função, não por seção do paper.",
   "respondido_por": "persona+critical-thinking"
+ },
+ {
+  "item_id": "H0015",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "§4.2 promete \"folhas de registro reproduzidas nos apêndices\" — o anexo NÃO existe ainda no entregável. Promessa de evidência inacessível (o mesmo vício do repo)?",
+  "status": "respondido",
+  "resposta": "Débito versionado: task registrada — c15/c16 reproduz as folhas (pré-registros + versões do motor/solver) com datas impressas. Fechamento condicional aceito: a promessa tem ENDEREÇO na própria arquitetura (caps de anexo já planejados) e a fila cobra. Sem o anexo na entrega final, este item REABRE.",
+  "respondido_por": "revisor-hostil R1 (leitor-position)"
+ },
+ {
+  "item_id": "H0016",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "\"Inalterança do exp1 atestável pelas mesmas claims\" — claims citam FONTES, não versões. Como o leitor confere identidade de versão entre exp1 e exp2?",
+  "status": "emendado",
+  "resposta": "EMENDA aplicada na RODADA 2: a frase agora aponta a FOLHA DE VERSÃO reproduzida no anexo (identidade de versão verificável no documento), não apenas a claim. Re-avaliada abaixo.",
+  "respondido_por": "revisor-hostil R1 (leitor-position)"
+ },
+ {
+  "item_id": "H0017",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "R2 varredura final do produto emendado (linha experimental §4.2: exp1→otimização→exp2=base; anti-hindsight in-document; inalterança por folha-de-versão anexada)",
+  "status": "respondido",
+  "resposta": "HOSTIL APROVA (condicional ao anexo c15/c16 já debitado): a narrativa experimental é lógica, a precedência é conferível no documento prometido, e a tabela viaja por claims. APROVADO para render.",
+  "respondido_por": "revisor-hostil R2"
  }
 ]

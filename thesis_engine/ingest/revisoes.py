@@ -77,7 +77,8 @@ def load_revisoes(db_path: str, src: str) -> int:
     engine = create_db(db_path)
     restaurados = 0
     with Session(engine) as s:
-        by_achado = {x.achado: x for x in s.exec(select(RevisaoHostil)).all()}
+        # chave (cap_key, achado): o mesmo achado pode pertencer a caps diferentes
+        by_key = {(x.cap_key, x.achado): x for x in s.exec(select(RevisaoHostil)).all()}
         used_ids = {x.item_id for x in s.exec(select(RevisaoHostil)).all()}
 
         def _next_id() -> str:
@@ -89,7 +90,7 @@ def load_revisoes(db_path: str, src: str) -> int:
             return nid
 
         for r in rows:
-            alvo = by_achado.get(r["achado"])
+            alvo = by_key.get((r["cap_key"], r["achado"]))
             if alvo is None:
                 alvo = RevisaoHostil(
                     item_id=_next_id(),
@@ -98,6 +99,7 @@ def load_revisoes(db_path: str, src: str) -> int:
                     achado=r["achado"],
                 )
                 s.add(alvo)
+                by_key[(alvo.cap_key, alvo.achado)] = alvo
             elif r.get("status") and r["status"] != "aberto" and alvo.status == "aberto":
                 alvo.status = r["status"]
                 alvo.resposta = r.get("resposta")

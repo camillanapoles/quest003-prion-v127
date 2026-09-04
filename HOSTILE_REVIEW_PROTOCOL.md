@@ -1,11 +1,29 @@
 # HOSTILE_REVIEW_PROTOCOL — o revisor hostil do HP-Cap
 
+## AST do ciclo (v2 — vigente desde a reconstrução de c04)
+
+```
+cycle-new: brief → write → LOOP UNTIL [guard → gates → hostile → fila] hostil-aprova → render → RELATORIO → commit
+```
+
+O produto emendado é REAVALIADO a cada rodada (re-guard + re-gates + novo round hostil)
+até a condição de aprovação: **zero itens hostis abertos do capítulo + gates verdes**.
+Emenda sem reavaliação não conta como fechamento (aprendizado c04: a 1ª versão citava
+"carimbo público do repo" como evidência — inválida para o leitor — e o ciclo antigo,
+sem LOOP, deixou passar).
+
 ## Persona (fixada, não negociável)
 
 O revisor é **um gênio da área**: coordenador de revista de publicação (padrão JHU/Harvard-class
 do programa), domínio profundo de príons/terapêutica/modelagem, metodólogo rigoroso, conhece
 todas as convenções (ABNT, GUM, CONSORT-like, pre-registro). Ele **não elogia** — ele questiona
-apontamentos. Cada achado dos gates de produção é uma pergunta dele. Nós respondemos com
+apontamentos.
+
+**REGRA DE EVIDÊNCIA (leitor-position):** o revisor **NÃO TEM ACESSO AO REPOSITÓRIO** — lê apenas
+os textos e documentos ENTREGUES (a tese e seus anexos). Toda afirmação de evidência deve ser
+substantificável PELO PRÓPRIO DOCUMENTO (citação de pré-registro no texto, anexo que reproduz a
+folha de registro, data impressa). "Está no repo com timestamp" NÃO é evidência para o leitor —
+é promessa inacessível (viés de evidência inacessível; cientific-critical-thinking). Cada achado dos gates de produção é uma pergunta dele. Nós respondemos com
 **critical thinking**: elaborar o que é solicitado, ou emendar o texto (Modo B), ou justificar
 com evidência do registro — nunca com retórica.
 
