@@ -1,0 +1,44 @@
+## 2.1 O problema: uma exceção protetora sem um método para explorá-la
+
+As doenças priônicas são universais e incuravelmente fatais no humano — com uma exceção que a evolução já testou em escala epidemiológica: camundongos transgênicos homozigotos para V127 são completamente resistentes a todas as cepas priônicas testadas, com proteção equivalente à deleção do gene [claim:C001]; heterozigotos G/V127 sobreviveram à epidemia de kuru e resistem à doença de Creutzfeldt-Jakob (DCJ) clássica, mas permanecem susceptíveis à vCJD — uma assimetria que delimite precisamente onde a proteção atua e onde não atinge [claim:C002]. Em paralelo, a plataforma de teste existe e é quantitativa: organoides cerebrais humanos são susceptíveis à DCJ esporádica (sCJD, forma esporádica) com dependência de subtipo [claim:C009], com âncoras de infecção medidas (clarificação do inóculo, semeadura de-novo) [claim:C010] e títulos de endpoint por subtipo em dias definidos [claim:C011]. O que falta não é dado, nem tampouco alvo: faltam seis falhas clínicas antipriônicas historicamente documentadas e vinculadas a evidência [claim:C050] que ilustram o custo de escolher o próximo experimento por intuição. O problema desta tese é, portanto, metodológico: **como transformar a exceção protetora em plataforma terapêutica sem gastar décadas em tentativa-e-erro de bancada** — isto é, com que método se decide o que medir, onde e em que dose, antes de gastar recurso úmido.
+
+## 2.2 Justificativa: os parâmetros publicados já bastam para um motor de decisão
+
+A justificativa não é oportunística; é de suficiência. O kernel de espalhamento priônico está publicado como modelo estocástico de reação-difusão [claim:C013]; o espaço extracelular cerebral in vivo tem fração de volume e tortuosidade medidas [claim:C014]; o consumo de primeira ordem foi varrido em faixa ancorada à nucleação [claim:C015]; e o solver que integra esses elementos passa em auto-testes de conservação de massa e paridade analítica [claim:C032]. A translação de escala temporal para o humano é declarada como re-escalonamento global com taxas relativas murinas até medida própria [claim:C037] — uma limitação honesta, não oculta. Do lado da entrega terapêutica, vetores existem em fase pré-clínica com incerteza declarada: liponanopartícula (LNP) intratecal dirigida ao encéfalo expressa mRNA em fração relevante da dose [claim:C022]; andaimes de hidrogel de ácido hialurônico aumentam a sobrevida de células enxertadas [claim:C023]. Se os parâmetros publicados bastam para parametrizar um motor, então o gargalo é a **decisão** — e é a decisão que esta tese treina.
+
+## 2.3 Questões de pesquisa
+
+- **Q1.** É possível *derivar* — não ajustar retrospectivamente — um desenho terapêutico quantitativo (alvo, local, dose em banda) a partir exclusivamente de dados publicados e de execução própria auditável?
+- **Q2.** Com que garantias um prognóstico assim se protege contra *hindsight*, de modo que a banca possa distingui-lo de curva ajustada ao resultado?
+- **Q3.** O procedimento resultante é nomeável, auditável e transferível a outros domínios de mecânica priônica (AD/PD), ou é um caso único sem método?
+
+## 2.4 Objetivos
+
+O objetivo geral é fundar e exercer um método de continuação de pesquisa por simulação parametrizada — a etrização computacional — aplicado à plataforma terapêutica PrP-V127, entregando prognósticos quantitativos travados antes da medição — tudo em tier [SIM]: simulação parametrizada auditada, nunca dado medido.  Objetivos específicos:
+
+- **OE1** — Nomear e formalizar o método (passos P0–P6; Cap. 1 e 7).
+- **OE2** — Construir a Base de Validade: cada parâmetro com proveniência, cada número com lineage (Cap. 4 e 7).
+- **OE3** — Produzir resultados *como achados*: o fundamento (invariância do limiar) e o produto (a primeira dose calculada em banda) derivados, não prometidos (Cap. 5, 6 e 8).
+- **OE4** — Documentar a continuidade como método replicável: estimador, freeze, loop de re-parametrização, seleção de parceiro e infraestrutura de guarda (Cap. 8 e Apêndices).
+
+## 2.5 Hipóteses
+
+- **H1 (auditabilidade por substituição).** O formalismo da etrização permanece auditável quando apenas os termos de domínio são trocados — transferibilidade estrutural.
+- **H2 (dose legitimada por banda).** A dose de contenção pode ser legitimada por banda derivada do limiar e da cadeia dimensional com incerteza propagada — antes de qualquer ensaio clínico, como prognóstico [SIM] e não como prescrição.
+- **H3 (lacuna estrutural).** A etrização ocupa uma posição que nem o in-silico trial nem a revisão sistemática ocupam: simula a *continuação* da pesquisa, não o ensaio isolado nem o passado agregado.
+
+## 2.6 Estrutura do documento
+
+A ordem é a ordem lógica da argumentação: nome e diferenciação antes de qualquer conteúdo técnico (Cap. 1); este contrato (Cap. 2); plausibilidade pela literatura (Cap. 3); a ponte de dados comuns com cronologia honesta (Cap. 4); o alicerce — a invariância do limiar multi-espécie (Cap. 5); o produto — o desenho e a primeira dose calculada (Cap. 6); a formalização auditável (Cap. 7); os resultados como validação dos componentes M1–M5 (Cap. 8); achados, impacto e áreas correlatas (Cap. 9); o que os resultados significam e o que não significam (Cap. 10); a camada clínica de leitura em dez minutos (Cap. 11); as limitações como fruto, cada uma com o gate que a fecha (Cap. 12); e o fechamento por objetivo (Cap. 13).
+
+## 2.7 Componentes M1–M5 (tabela validada pela autora)
+
+| Componente | Conteúdo | Status nesta tese | Âncora no registro |
+|---|---|---|---|
+| M1 — Estimador θ_obs | medidor do análogo do limiar em gradiente, calibrado em simulação com critérios pré-declarados | especificado e calibrado [SIM] | [claim:C052] |
+| M2 — Freeze de execução | o que trava antes do primeiro organoide (braços, SAP, cegamento, kill-switch) | especificado | Cap. 6.4 |
+| M3 — Loop de re-parametrização | realimentação anti-hindsight: predição travada, confronto bancado | método documentado | Cap. 7/8 |
+| M4 — Seleção de parceiro | protocolo SLR-análogo com critérios binários e pesos congelados | protocolo + log | Cap. 8.5 |
+| M5 — Infraestrutura de continuidade | guardião, runbook, predições com carimbo de tempo público | em operação | [claim:C040] |
+
+A re-matrícula destes componentes (M1→resultado, M2→dormant até G0-wet, M4→método) foi validada expressamente pela autora e registrada no guardião do programa em 28/08; a tabela acima é a forma desta tese para aquele registro.
