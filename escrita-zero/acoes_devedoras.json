@@ -30,5 +30,13 @@
   "acao": "Refinar mapeamento section-do-registro→caps-v2 no brief",
   "status": "pendente",
   "evidencia": null
+ },
+ {
+  "acao_id": "A0005",
+  "origem": "H0094",
+  "local": "c15",
+  "acao": "Anexo: folha de versão do experimento 1 (exp1 citado só onde inalterado — §4.2)",
+  "status": "pendente",
+  "evidencia": null
  }
 ]
