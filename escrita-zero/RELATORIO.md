@@ -1,35 +1,25 @@
-# RELATÓRIO — escrita do zero (branch tese-escrita-zero)
+# RELATÓRIO — escrita do zero · RODADA 2 (reinício pós-retificação arquitetural)
 
-Progresso: **c00◐ c01 ✓ c02 ✓ c03 ✓ c04 ✓** (c00 aprovacao-CONDICIONAL: A0007 ficha aguarda a AUTORA; restante ✓) · folder único: `escrita-zero/`
+Progresso: **c01 ✓** · próximo: c02 · branch `tese-escrita-zero` · DB: `tese_v2.db` (bootstrap novo,
+zero blocos canônicos) · rodada 1 arquivada em `escrita-zero/arquivo/` (referência, não base).
 
 | Cap | Título | Gates (obj·coes·gaps) | Claims | Hostil |
 |---|---|---|---|---|
-| c01 | Nota à banca | ✓✓✓ | 6 | 4 Qs (3 emendas, 1 resposta) |
-| c02 | Introdução | ✓✓✓ | 14 | 3 Qs (1 emenda, 2 respostas) |
-| c03 | Fundamentação | ✓✓✓ | 22 | 3 Qs (1 emenda-débito-visual, 2 respostas) |
-| c04 | Ponte/linha experimental (RECONSTRUÍDO) | ✓✓✓ LOOP R1→R2 | 10 | R1: 2 Qs (1 emenda + 1 débito-anexo) → R2: aprovação condicional |
-| c00 | Front-matter/LISTA | roadmap (escreve-se ao final, com siglas acumuladas) | — | H0001 aberto |
+| c01 | Nota à banca | ✓✓✓ | 6 (C004–C007, C027, C054) | 5 Qs: 3 emendas (preprint, deriva, kuru) · 2 respostas (aritmética décadas, promessa-anexo) |
 
-**AÇÕES DEVEDORAS (promessa→registro executável, id único, cobradas no local):**
-A0001@c15 folhas de pré-registro+versão (pend.) · A0003@c03 mapa-visual (pend., opcional-autora) ·
-A0004@c03 citar C027 (pend.) · A0005@plano refinar mapeamento brief (pend.) ·
-A0006@c00 LISTA ✅ executada (D0091) · A0007@c00 FICHA (pend. — EXCLUSIVA da autora)
-PROVA do gate: c00 escrito → hostil_aprova=False [A0006,A0007] → A0006 executada c/ evidência →
-re-avalia → resta A0007 (autora) → c00 ◐ condicional. Nada se perde; tudo cobrado no local.
+**Ordem topológica:** c01 ✓ → c02 → c03 → c04 → c05 → … → c13 → c14 → c15 → c16 → c00 (por último,
+com siglas acumuladas e ficha da autora).
 
-Saídas neste folder: `briefs/` (o que o banco sabe p/ cada cap) · `render/` (os capítulos draft) ·
-`fila_hostil.json` (revisor hostil: 17 itens, 17 fechados (R2 aprova c04)) · rascunhos-fonte em `../rascunhos/`.
+**AÇÕES DEVEDORAS (semeadas no bootstrap — cobradas no local):**
+A0001@c15 folhas de pré-registro+versão (pend.) · A0002@c00 LISTA DE SIGLAS+FICHA (pend., ficha
+EXCLUSIVA da autora) · A0003@c03 citar C027 + mapa visual opcional-autora (pend.) ·
+A0004@plano refinar mapeamento section→caps (pend.)
 
-Ciclo por capítulo (cycle-new, vigente desde a reconstrução de c04):
-brief → write → **LOOP UNTIL [guard → gates → hostile → fila] hostil-aprova** → render → RELATORIO → commit.
-O produto emendado é REAVALIADO a cada rodada até aprovação (zero abertos + gates verdes).
+**Fila hostil:** 71 itens (5 de c01 — todos fechados; 66 YELLOW de caps ainda não escritos,
+auto-populados pelos gates cumulativos — abrem e fecham no ciclo de cada capítulo).
 
-**Linha experimental (decisão metodológica da autora, aplicada em c04):** a tese emerge do
-EXPERIMENTO 2 (multi-espécie: a base); exp1 (murino/humanização) = fase de segurança, narrada
-e justificada (por que otimizamos); dados exp1 só onde inalterados (folha de versão anexada).
-Anti-hindsight: sempre IN-DOCUMENT (pré-registros citados + anexos com datas — nunca aponte ao
-repo: o leitor da tese publicada não tem repositório). Persona hostil: SEM acesso a repo.
+Saídas neste folder: `briefs/` (banco→escritor) · `render/` (capítulos aprovados) ·
+`fila_hostil.json` · `acoes_devedoras.json` · rascunhos-fonte em `../rascunhos/`.
 
-AVALIAÇÃO DA SEQUÊNCIA: a ordem topológica MANTÉM (é lógica de argumento); muda o PAPEL de c04:
-de 'cronologia honesta' para 'linha experimental'. c05 (alicerce) e c06 (produto) já são
-experimento-2-emergentes por construção — confirmado pelo plano atualizado (G7 verde).
+Ciclo por capítulo (cycle-new): brief → write → **LOOP UNTIL [guard → gates → hostile → fila]
+hostil-aprova** → render → RELATORIO → commit. API: `python -m thesis_engine.cli serve --db tese_v2.db`.

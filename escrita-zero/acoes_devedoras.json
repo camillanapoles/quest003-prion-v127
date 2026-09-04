@@ -1,57 +1,33 @@
 [
  {
   "acao_id": "A0001",
-  "origem": "H0018",
+  "origem": "SEED",
   "local": "c15",
-  "acao": "Reproduzir nos apêndices (com datas impressas): folhas de pré-registro das definições operacionais + folha de versão do motor/solver — evidência IN-DOCUMENT da precedência e da inalterança exp1→exp2",
+  "acao": "Anexo: folhas de pré-registro + versão do motor/solver com datas impressas",
   "status": "pendente",
   "evidencia": null
  },
  {
   "acao_id": "A0002",
-  "origem": "H0018",
+  "origem": "SEED",
   "local": "c00",
-  "acao": "LISTA DE SIGLAS consolidada (termos definidos na escrita: AAV·LNP·GPI·DCJ·sCJD·[SIM]…) + ficha acadêmica da autora",
-  "status": "dispensada",
-  "evidencia": "subdividida em A0006 (LISTA, escritor) + A0007 (ficha, autora)"
+  "acao": "LISTA DE SIGLAS consolidada + FICHA ACADÊMICA (ficha: EXCLUSIVA da autora)",
+  "status": "pendente",
+  "evidencia": null
  },
  {
   "acao_id": "A0003",
-  "origem": "H0018",
+  "origem": "SEED",
   "local": "c03",
-  "acao": "Elemento visual do mapa em camadas (4 camadas) — se a autora optar por figura além da prosa estruturada",
+  "acao": "Citar C027 (kindreds E200K); mapa visual de camadas se a autora optar",
   "status": "pendente",
   "evidencia": null
  },
  {
   "acao_id": "A0004",
-  "origem": "H0005",
-  "local": "c03",
-  "acao": "Citar C027 (kindreds E200K brasileiros) na fundamentação — realocada de c01 por peso argumentativo",
-  "status": "pendente",
-  "evidencia": null
- },
- {
-  "acao_id": "A0005",
-  "origem": "H0012",
+  "origem": "SEED",
   "local": "plano",
-  "acao": "Refinar mapeamento section-do-registro→caps-v2 no brief (claims de desenho super-incluídas em c03) — engine/plano_data",
-  "status": "pendente",
-  "evidencia": null
- },
- {
-  "acao_id": "A0006",
-  "origem": "H0015",
-  "local": "c00",
-  "acao": "LISTA DE SIGLAS consolidada da escrita v2 (θ*·κ·Kt·GUM·[SIM]·AAV·LNP·GPI·DCJ·sCJD·SLR·ASO·NSC·iPSC·HLA·ADR·ECS·DN·PPS·CrI·RT-QuIC·MW·IST·EVPI…)",
-  "status": "executada",
-  "evidencia": "D0091 (c00: LISTA consolidada com 35+ termos)"
- },
- {
-  "acao_id": "A0007",
-  "origem": "H0001",
-  "local": "c00",
-  "acao": "FICHA ACADÊMICA (programa/área/orientadora/coorientadora) — EXCLUSIVA da autora ({{TODO:TESE-FICHA}})",
+  "acao": "Refinar mapeamento section-do-registro→caps-v2 no brief",
   "status": "pendente",
   "evidencia": null
  }

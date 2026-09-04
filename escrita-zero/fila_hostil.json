@@ -1,6 +1,537 @@
 [
  {
   "item_id": "H0001",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.1",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0002",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.2",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0003",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.3",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0004",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.4",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0005",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.5",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0006",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.6",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0007",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.7",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0008",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.1",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0009",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.2",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0010",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.3",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0011",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.4",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0012",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.5",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0013",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 4.1",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0014",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 4.2",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0015",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 4.3",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0016",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C013",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0017",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C032",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0018",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C040",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0019",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C055",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0020",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C056",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0021",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C057",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0022",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.1",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0023",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.2",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0024",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.3",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0025",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.4",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0026",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "elemento prometido ausente: Fig.4",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0027",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C055",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0028",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C057",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0029",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.1",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0030",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.2",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0031",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.3",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0032",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.4",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0033",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.5",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0034",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "elemento prometido ausente: Fig.5",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0035",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C033",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0036",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C038",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0037",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C040",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0038",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C051",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0039",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C058",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0040",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C060",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0041",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.0",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0042",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.1",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0043",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.2",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0044",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.3",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0045",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.4",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0046",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.1",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0047",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.2",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0048",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.3",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0049",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.4",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0050",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.5",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0051",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.6",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0052",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 9.1",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0053",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.1-bis",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0054",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 9.2",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0055",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.2-bis",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0056",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 9.3",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0057",
+  "cap_key": "c10",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 10.1",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0058",
+  "cap_key": "c10",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 10.2",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0059",
+  "cap_key": "c11",
+  "tipo": "hostil-hard",
+  "achado": "elemento prometido ausente: Fig.4",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0060",
   "cap_key": "c00",
   "tipo": "hostil-yellow",
   "achado": "cobertura de tópicos-chave 0/3 < 80% — objetivo parcialmente cumprido",
@@ -9,165 +540,102 @@
   "respondido_por": null
  },
  {
-  "item_id": "H0002",
-  "cap_key": "c01",
-  "tipo": "hostil",
-  "achado": "Paráfrase de claim travada: \"antecipação de bancada, nunca pendência\" ≠ verbatim de C054 (sha256) — risco de drift da definição operacional",
-  "status": "emendado",
-  "resposta": "EMENDA: citação verbatim entre aspas — \"antecipação bancada, nunca pendente de validação\" — marcada como palavras do registro. Paráfrase substituída.",
-  "respondido_por": "revisor-hostil (persona) + emenda aplicada"
- },
- {
-  "item_id": "H0003",
-  "cap_key": "c01",
-  "tipo": "hostil",
-  "achado": "Número \"vinte e quatro séculos\" sem lineage (nenhum N-fato/E-ID) — régua da autora: número nunca digitado",
-  "status": "emendado",
-  "resposta": "EMENDA: qualitativo (\"muitos séculos antes de qualquer evidência experimental\"). Se a autora quiser o número, registra N-fato no registro primeiro.",
-  "respondido_por": "revisor-hostil (persona) + emenda aplicada"
- },
- {
-  "item_id": "H0004",
-  "cap_key": "c01",
-  "tipo": "hostil",
-  "achado": "Tabela de contraste: de onde vêm os 5 critérios? (elemento do plano pede \"3-colunas\")",
-  "status": "respondido",
-  "resposta": "3-colunas do plano = os 3 MÉTODOS comparados (IST/meta/etrização) ✓. Os critérios derivam dos passos de C054 (P4 prognóstico travado · P5 deriva-para-frente · P6 confronto) + tópicos do plano c01. Fundamentado, não inventado.",
-  "respondido_por": "revisor-hostil (persona), critical thinking"
- },
- {
-  "item_id": "H0005",
-  "cap_key": "c01",
-  "tipo": "hostil",
-  "achado": "C006 e C027 no brief mas não citadas — seleção arbitrária de evidência?",
-  "status": "emendado",
-  "resposta": "EMENDA C006: vinculada ao parágrafo da plataforma (resistência autossustentada fortalece a base). C027 (kindreds E200K brasileiros) realoca-se à fundamentação (c03), onde tem peso argumentativo — decisão de colocação, não omissão.",
-  "respondido_por": "revisor-hostil (persona) + emenda aplicada"
- },
- {
-  "item_id": "H0006",
-  "cap_key": "c02",
+  "item_id": "H0061",
+  "cap_key": "c11",
   "tipo": "hostil-yellow",
-  "achado": "termo novo sem definição prévia: DCJ",
+  "achado": "cobertura de tópicos-chave 0/4 < 80% — objetivo parcialmente cumprido",
   "status": "aberto",
   "resposta": null,
   "respondido_por": null
  },
  {
-  "item_id": "H0007",
-  "cap_key": "c02",
+  "item_id": "H0062",
+  "cap_key": "c12",
   "tipo": "hostil-yellow",
-  "achado": "termo novo sem definição prévia: SIM",
+  "achado": "cobertura de tópicos-chave 0/2 < 80% — objetivo parcialmente cumprido",
   "status": "aberto",
   "resposta": null,
   "respondido_por": null
  },
  {
-  "item_id": "H0008",
-  "cap_key": "c02",
-  "tipo": "hostil",
-  "achado": "OE1-OE4 e H1-H3: constam do registro probatório ou são invenção desta introdução?",
-  "status": "respondido",
-  "resposta": "Derivados do plano global (planchapter c13/c05/c06) e ancorados em claims: OE3↔C052/C055, OE4↔C040, H2↔cadeia m31 (§6.3 gates), H3↔C054 diferenciação. A formulação verbal é nova (branch zero); o CONTRATO é o do registro.",
-  "respondido_por": "persona+critical-thinking"
+  "item_id": "H0063",
+  "cap_key": "c13",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/4 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
  },
  {
-  "item_id": "H0009",
-  "cap_key": "c02",
-  "tipo": "hostil",
-  "achado": "Tabela M1-M5: \"validada pela autora em 28/08\" — onde isto vive verificável?",
-  "status": "respondido",
-  "resposta": "Registro do guardião do programa (linha do merge PR#2, 28/08): re-matrícula M1→resultado/M2→dormant/M4→método — nó presente no grafo (comunidade Guardian Integrity & Audit Chain). A tese cita; a fonte é auditável no repo.",
-  "respondido_por": "persona+critical-thinking"
+  "item_id": "H0064",
+  "cap_key": "c14",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/2 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
  },
  {
-  "item_id": "H0010",
-  "cap_key": "c02",
-  "tipo": "hostil",
-  "achado": "C022 (LNP 29,6%) tem incerteza HIGH no registro — por que usá-la na justificativa sem ecoar a incerteza?",
-  "status": "emendado",
-  "resposta": "EMENDA: o texto já diz \"com incerteza declarada\" e evita o número (fica \"fração relevante\"); incerteza high ecoada. Números com lineage ficam nos caps 5-6 sob gates.",
-  "respondido_por": "persona+emenda"
+  "item_id": "H0065",
+  "cap_key": "c15",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/2 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
  },
  {
-  "item_id": "H0011",
+  "item_id": "H0066",
+  "cap_key": "c16",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/5 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0067",
   "cap_key": "c01",
-  "tipo": "hostil-yellow",
-  "achado": "termo novo sem definição prévia: GPI",
-  "status": "aberto",
-  "resposta": null,
-  "respondido_por": null
- },
- {
-  "item_id": "H0012",
-  "cap_key": "c03",
   "tipo": "hostil",
-  "achado": "Brief trouxe claims de DESENHO/RESULTADO (C033-C051) mapeadas pelo registro à seção 3.2 do braço-paper — desalinhamento registro↔arquitetura v2: como decidiu o que usar?",
-  "status": "respondido",
-  "resposta": "O campo section do registro espelha o MANUSCRITO-paper, não a tese v2. Decisão de escritor: c03 usa só claims de LITERATURA (C001-C023); desenho/resultado ficam nos lares temáticos (c05/c06/c08). Registrado como refinamento pendente do mapeamento (task futura: mapa section→cap-v2).",
-  "respondido_por": "persona+critical-thinking"
- },
- {
-  "item_id": "H0013",
-  "cap_key": "c03",
-  "tipo": "hostil",
-  "achado": "\"Mapa em camadas\" prometido como elemento (plano) — entregou camadas como parágrafos bold; onde está o elemento visual?",
+  "achado": "(a) A nota apresenta como fato consumado que a entrega sistêmica por AAV 'prolongou a sobrevida em aproximadamente 50 dias' citando 2026. A fonte é preprint — sem revisão por pares. Que doutoranda põe resultado pré-print numa nota de abertura à banca sem qualificar o estado da evidência? Emende qualificando.",
   "status": "emendado",
-  "resposta": "EMENDA aceita como débito visual: as 4 camadas estão estruturadas e rotuladas (Camada 1-4); a figura/mapa próprio (equivalente Fig.1 do braço-paper, legado) depende de gerador de figura determinística — entra como tarefa do folder único (escrita-zero/figuras/) quando a autora pedir. Prosa estruturada garante a função narrativa agora.",
-  "respondido_por": "persona+emenda-débito"
+  "resposta": "EMENDADO: a frase agora abre com \"um estudo ainda em formato de preprint — portanto sem revisão por pares — relatou que…\", qualificando a classe da evidência antes do resultado.",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
-  "item_id": "H0014",
-  "cap_key": "c03",
+  "item_id": "H0068",
+  "cap_key": "c01",
   "tipo": "hostil",
-  "achado": "§3.4 cita C047/C048/C049/C040 — claims \"de tese\" (arquitetura/nomenclatura) numa seção de epistemologia: cabimento?",
-  "status": "respondido",
-  "resposta": "Sim: §3.4 é exatamente onde os compromissos epistêmicos (tiers, cronologia, sem-ano, duas-partes) são fundamentados; essas claims SÃO os compromissos formalizados. Citação correta por função, não por seção do paper.",
-  "respondido_por": "persona+critical-thinking"
- },
- {
-  "item_id": "H0015",
-  "cap_key": "c04",
-  "tipo": "hostil",
-  "achado": "§4.2 promete \"folhas de registro reproduzidas nos apêndices\" — o anexo NÃO existe ainda no entregável. Promessa de evidência inacessível (o mesmo vício do repo)?",
-  "status": "respondido",
-  "resposta": "Débito versionado: task registrada — c15/c16 reproduz as folhas (pré-registros + versões do motor/solver) com datas impressas. Fechamento condicional aceito: a promessa tem ENDEREÇO na própria arquitetura (caps de anexo já planejados) e a fila cobra. Sem o anexo na entrega final, este item REABRE.",
-  "respondido_por": "revisor-hostil R1 (leitor-position)"
- },
- {
-  "item_id": "H0016",
-  "cap_key": "c04",
-  "tipo": "hostil",
-  "achado": "\"Inalterança do exp1 atestável pelas mesmas claims\" — claims citam FONTES, não versões. Como o leitor confere identidade de versão entre exp1 e exp2?",
+  "achado": "(b) 'e a pesquisa, ainda assim, esperou' — houve pesquisa ativa na linha V127 durante toda a janela citada (os próprios resultados de cultura de células são dessa janela). 'Esperou' é retórica imprecisa que uma banca de metodologia pega: diga o que exatamente não aconteceu (deriva imediata do passo seguinte a partir do publicado). Emende.",
   "status": "emendado",
-  "resposta": "EMENDA aplicada na RODADA 2: a frase agora aponta a FOLHA DE VERSÃO reproduzida no anexo (identidade de versão verificável no documento), não apenas a claim. Re-avaliada abaixo.",
-  "respondido_por": "revisor-hostil R1 (leitor-position)"
+  "resposta": "EMENDADO: parágrafo reescrito — reconhece pesquisa ativa na janela e substitui \"esperou\" pelo diagnóstico preciso: o que faltou foi DERIVA (conversão imediata do publicado no passo terapêutico seguinte).",
+  "respondido_por": "agente (escritor, Modo B)"
  },
  {
-  "item_id": "H0017",
-  "cap_key": "c04",
+  "item_id": "H0069",
+  "cap_key": "c01",
   "tipo": "hostil",
-  "achado": "R2 varredura final do produto emendado (linha experimental §4.2: exp1→otimização→exp2=base; anti-hindsight in-document; inalterança por folha-de-versão anexada)",
+  "achado": "(e) 'kuru' aparece sem definição numa nota que a banca lê ANTES de qualquer fundamentação. Defina na primeira ocorrência, no próprio parágrafo.",
+  "status": "emendado",
+  "resposta": "EMENDADO: kuru definido na primeira ocorrência, dentro do próprio período (\"doença priônica humana transmitida na região por exposição ritual a tecido infectado\"), na sentença que já carrega [claim:C004][evidence:E002].",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0070",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "(d) 'passaram-se quase duas décadas' tem lineage? Os anos 2009 e 2026 estão citados com suas evidências; a aritmética fica por conta do leitor. Torne o intervalo visível ou justifique a forma verbal.",
   "status": "respondido",
-  "resposta": "HOSTIL APROVA (condicional ao anexo c15/c16 já debitado): a narrativa experimental é lógica, a precedência é conferível no documento prometido, e a tabela viaja por claims. APROVADO para render.",
-  "respondido_por": "revisor-hostil R2"
+  "resposta": "RESPONDIDO: os dois anos têm lineage visível no documento — 2009 citado junto a [evidence:E002] e 2026 junto a [evidence:E004]; \"quase duas décadas\" é aritmética elementar sobre datas já marcadas no próprio parágrafo. A emenda tornou os anos explícitos entre parênteses no período seguinte. Forma verbal mantida por economia de leitura.",
+  "respondido_por": "agente (critical thinking)"
  },
  {
-  "item_id": "H0018",
-  "cap_key": "c04",
+  "item_id": "H0071",
+  "cap_key": "c01",
   "tipo": "hostil",
-  "achado": "Revisor à parte: qual a diferença OPERACIONAL exp1×exp2? humanização não faria do exp1 multi-espécie?",
-  "status": "emendado",
-  "resposta": "EMENDA R3: humanizar = re-escalar TEMPO (C043: taxas relativas murinas); exp2 = variar SUBSTRATO CINÉTICO por espécie (bandas-Kt das sequências PrP). Exp1 não distingue constante-estrutural de artefato murino — exp2 sim; murino é 1 das 4 espécies (contido, não descartado).",
-  "respondido_por": "revisor-à-parte (pergunta da autora)"
- },
- {
-  "item_id": "H0019",
-  "cap_key": "c00",
-  "tipo": "hostil",
-  "achado": "RESUMO afirma precedência (\"travado v1.0, antes da extensão de espécies\") SEM âncora in-document no ponto — o leitor não confere; mesma classe do vício do repo (flagrado pela autora)",
-  "status": "emendado",
-  "resposta": "EMENDA R1: a frase agora ancora a precedência DENTRO da tese (linha experimental Cap.4 + folhas de registro reproduzidas no Apêndice A = ação A0001@c15). Enquanto o anexo não existir, a aprovação deste ponto é condicional — e o gate hostil_falou (novo) impede capítulo sem round hostil.",
-  "respondido_por": "revisor-hostil R1-c00 (flagra da autora)"
+  "achado": "(a) 'cujas folhas de origem estão reproduzidas em anexo' — promessa de anexo que o documento ainda não mostra. Promessa estrutural é legítima em tese, mas fica registrada: se o anexo não existir na entrega final, esta frase cai. Responda.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: promessa estrutural legítima — a tese fecha em c15 com o anexo de folhas de pré-registro (ação devedora A0001, cobrada pelo ciclo de c15: hostil_aprova bloqueia o capítulo enquanto a ação estiver pendente). Se o anexo não existir na entrega final, esta frase cai junto com a aprovação do c15.",
+  "respondido_por": "agente (critical thinking)"
  }
 ]
