@@ -38,5 +38,13 @@
   "acao": "Anexo: folha de versão do experimento 1 (exp1 citado só onde inalterado — §4.2)",
   "status": "pendente",
   "evidencia": null
+ },
+ {
+  "acao_id": "A0006",
+  "origem": "H0108",
+  "local": "c15",
+  "acao": "Anexo: especificação F1–F10 do congelamento (GATE-F) reproduzida; conferir cobertura: pré-registros, validação tabela-mãe, folha de versão exp1, F1–F10",
+  "status": "pendente",
+  "evidencia": null
  }
 ]
