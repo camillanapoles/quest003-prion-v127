@@ -15,6 +15,7 @@ from pydantic import BaseModel
 from sqlmodel import Session, func, select
 
 from thesis_engine.categorize import validate_block_write
+from thesis_engine.guard import check_environment
 from thesis_engine.db import create_db
 from thesis_engine.ingest.tese import extract_meta
 from thesis_engine.integrity import check_plano, check_sec43, check_style
@@ -55,6 +56,19 @@ class StatusIn(BaseModel):
     approver: Optional[str] = None  # obrigatório p/ author_approved (humana)
 
 
+
+def _get_fix_from_db(db_path: str) -> str:
+    """Consulta guard_message DO BANCO (nunca hardcoded)."""
+    from sqlmodel import Session as _S, select as _sel
+    from thesis_engine.db import create_db as _cdb
+    from thesis_engine.models import EnvironmentRule
+    try:
+        with _S(_cdb(db_path)) as _s:
+            r = _s.exec(_sel(EnvironmentRule).where(EnvironmentRule.rule_key == "guard_message")).first()
+            return r.valor if r else "consulte o guard do banco"
+    except Exception:
+        return "consulte o guard do banco"
+
 def create_app(db_path: str) -> FastAPI:
     app = FastAPI(title="thesis_engine", version="0.1.0")
     app.state.db_path = db_path
@@ -63,6 +77,26 @@ def create_app(db_path: str) -> FastAPI:
         return Session(create_db(app.state.db_path))
 
     # ---------------- health ----------------
+    from fastapi import Request as _Req
+
+    @app.middleware("http")
+    async def _guard_middleware(request: _Req, call_next):
+        """EVENT-DRIVEN GUARD: toda request /cycle/* verifica ambiente ANTES de executar."""
+        if request.url.path.startswith("/cycle"):
+            env = check_environment(app.state.db_path, raise_on_fail=False)
+            if not env["ok"]:
+                from fastapi.responses import JSONResponse
+                return JSONResponse(
+                    status_code=412,
+                    content={
+                        "error": "WORKTREE ERRADO",
+                        "problems": env["problems"],
+                        "fix": _get_fix_from_db(app.state.db_path),
+                        "detail": env,
+                    },
+                )
+        return await call_next(request)
+
     @app.get("/health")
     def health():
         with sess() as s:

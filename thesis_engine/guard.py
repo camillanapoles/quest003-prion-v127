@@ -21,6 +21,8 @@ def seed_environment_rules(db_path: str) -> int:
     rules = [
         ("expected_repo", str(REPO), "repo onde o engine opera"),
         ("expected_branch", "tese-escrita-zero", "branch de trabalho"),
+        # DEFAULT de fábrica: derivado de __file__ em runtime (não path digitado).
+        # Após o seed, a regra vive NO BANCO e é consultada dali (editável sem código).
         ("forbidden_cwd", str(REPO.parent / "etrizacao"), "dir de symlinks — NÃO é o repo"),
         ("guard_message", f"cd {REPO} && git checkout tese-escrita-zero", "como corrigir"),
     ]
