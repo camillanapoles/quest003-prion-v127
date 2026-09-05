@@ -219,7 +219,7 @@ class WritingCycle(SQLModel, table=True):
     """
 
     cycle_id: str = Field(primary_key=True)  # CY-c01-001
-    cap_key: str
+    cap_key: str = Field(foreign_key="chapter.chap_id")
     estado: str = "brief"  # brief|drafting|guard|gates|hostile|emenda|approved|rendered|committed
     rodada: int = 1
     created_at: Optional[str] = None
@@ -261,7 +261,7 @@ class ResultFact(SQLModel, table=True):
     """Resultado R001–R005 (consistency_manifest.json)."""
 
     result_id: str = Field(primary_key=True)
-    method_id: str
+    method_id: str = Field(foreign_key="methodfact.method_id")
     outcome_id: str
     analysis_intent: str
     sample_size: Optional[str] = None
