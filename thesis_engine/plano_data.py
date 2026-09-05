@@ -208,4 +208,11 @@ PLANO_CAPITULOS = [
          elementos=["fluxograma B.1", "tabela de rejeições B.3"],
          complicado="proveniência total é o maior grafo",
          simplificar="um mapa único: cada afirmação da tese rastreável a arquivo/claim/JSON (o engine já faz isto — expor como figura)"),
+    dict(key="c17", ordem=17, funcao="apêndices instrumentais",
+         objetivo="Entregar os instrumentos replicáveis: SAP completo do G0-wet (C) · tabela-decisão derivada (D) · custo-cotação S1 (E) · linhagem da Base de Validade com hashes (F).",
+         fontes=[dict(tipo="doc", ref="experiments/G0_EXECUTION_FREEZE_CHECKLIST.md · part2_derived_summary.json · cost_decomposition.md")],
+         topicos=["C — SAP completo", "D — tabela-decisão derivada", "E — custo-cotação S1", "F — linhagem Base de Validade"],
+         elementos=["tabela-decisão · tabela custo · tabela linhagem com hashes"],
+         complicado="instrumentos densos e técnicos",
+         simplificar="cada apêndice abre com 1 parágrafo explicando o que é e como usar"),
 ]

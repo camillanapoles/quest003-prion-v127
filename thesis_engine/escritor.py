@@ -42,6 +42,7 @@ V2_TITLES: dict[str, str] = {
     "c14": "REFERÊNCIAS",
     "c15": "APÊNDICE A — INVENTÁRIO E CONCORDÂNCIA",
     "c16": "APÊNDICE B — MAPA DA LÓGICA",
+    "c17": "APÊNDICES C–F — SAP · DECISÃO · CUSTO · LINHAGEM",
 }
 
 
