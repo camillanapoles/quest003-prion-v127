@@ -45,6 +45,20 @@ V2_TITLES: dict[str, str] = {
 }
 
 
+def _seed_table_registry(db_path: str) -> int:
+    """Registra TODAS as tabelas com categoria (setup vs execution) — DB auto-descritivo."""
+    from thesis_engine._tables import _TABLES
+    from thesis_engine.models import TableRegistry
+
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        for tbl, cat, desc in _TABLES:
+            if not s.get(TableRegistry, tbl):
+                s.add(TableRegistry(table_name=tbl, categoria=cat, descricao=desc))
+        s.commit()
+        return len(s.exec(select(TableRegistry)).all())
+
+
 def setup_v2(db_path: str = V2_DB) -> dict:
     """DB v2: registro + dados + grafo + plano + ESTRUTURA VAZIA (nenhum texto)."""
     from sqlalchemy import text as sa_text
@@ -65,7 +79,10 @@ def setup_v2(db_path: str = V2_DB) -> dict:
             s.add(Chapter(chap_id=k, order_idx=i, title=title, level=1))
         s.commit()
         n = len(s.exec(select(Chapter)).all())
-    return {"estrutura": n, "texto": "ZERO — nenhum bloco canônico ingerido"}
+    _nreg = _seed_table_registry(db_path)
+    from thesis_engine.guard import seed_environment_rules
+    seed_environment_rules(db_path)
+    return {"estrutura": n, "texto": "ZERO — nenhum bloco canônico ingerido", "table_registry": _nreg}
 
 
 def brief_capitulo(db_path: str, key: str) -> dict:

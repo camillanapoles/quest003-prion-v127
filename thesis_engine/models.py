@@ -227,6 +227,26 @@ class WritingCycle(SQLModel, table=True):
     bloqueio_motivo: Optional[str] = None  # se estado=blocked, por quê
 
 
+class TableRegistry(SQLModel, table=True):
+    """META-TABELA: auto-descreve o banco — classifica cada tabela.
+
+    SETUP     = bootstrap semeia; READ-ONLY durante execução (config/regras)
+    EXECUTION = bootstrap ZERA; escrita durante o ciclo (AST/trabalho)
+    """
+
+    table_name: str = Field(primary_key=True)
+    categoria: str  # "setup" | "execution"
+    descricao: str = ""
+
+
+class EnvironmentRule(SQLModel, table=True):
+    """Regra de ambiente GUARDADA NO BANCO (nunca hardcoded em Python)."""
+
+    rule_key: str = Field(primary_key=True)  # expected_repo|expected_branch|forbidden_cwd
+    valor: str
+    descricao: str = ""
+
+
 class MethodFact(SQLModel, table=True):
     """Método M001–M004 (consistency_manifest.json)."""
 
