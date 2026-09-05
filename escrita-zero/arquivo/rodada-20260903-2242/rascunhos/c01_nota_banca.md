@@ -1,0 +1,23 @@
+## 1.1 O que a palavra é — e o que ela permite exigir de um doutorado
+
+A banca abrirá esta tese pela palavra que a nomeia. Convém, portanto, começar por ela — antes de qualquer dado, figura ou equação — porque o nome não é ornamento: é contrato. **Etrização computacional** designa o método formalizado aqui, cuja definição operacional está travada no registro probatório do programa como a claim C054 [claim:C054]: um método de continuar pesquisa por simulação nos dias de hoje, articulado em sete passos verificáveis — P0 identificação de dados publicados validados; P1 parametrização com proveniência declarada de cada parâmetro; P2 execução determinística e auditável; P3 colheita sob critérios declarados *antes* da execução; P4 prognóstico travado antes de qualquer medição nova; P5 pesquisa derivada que prossegue imediatamente a partir dos valores simulados; e P6 confronto opcional com o real, no qual resultados análogos significam passos já avançados — — nas palavras travadas do registro: "antecipação bancada, nunca pendente de validação" [claim:C054].
+
+O radical *etrização* carrega três camadas semânticas que a banca pode testar em qualquer momento. Primeira: o potencial-de-ser — etrar é submeter um objeto a um regime de continuidade programada, não descrevê-lo uma vez. Segunda: o *atrium* romano — o espaço público onde decisões são tomadas com o que já se sabe —, que empresta ao método sua vocação decisória: a etrização existe para escolher o próximo experimento, não para acumular curvas. Terceira: o radical-distintivo — um nome próprio para um procedimento que, sem nome, seria confundido com "modelagem computacional" em geral e perderia as obrigações que o distinguem (proveniência, pré-registro, tiers de dado, prognóstico travado).
+
+Uma palavra pode fundar pesquisa antes de sua prova completa — a história da ciência oferece o precedente: o *átomo* nomeou o indivisível muitos séculos antes de qualquer evidência experimental, e a coerência lógica do nome organizou gerações de investigação que eventualmente o validaram e o corrigiram. A etrização não reclama esse estatuto por analogia grandiosa; reclama apenas o mesmo princípio epistêmico: um termo definido operacionalmente, com critérios de refutação embutidos nos passos P3 e P6, torna pesquisável o que sem nome permaneceria disperso.
+
+## 1.2 Diferenciação estrutural — o que a banca deve testar
+
+Se a definição é o contrato, a diferenciação é a defesa. Três confusões são esperadas, e cada uma se desfaz por contraste estrutural — não por ênfase retórica.
+
+| Critério | In-silico trial | Revisão sistemática / meta-análise | **Etrização computacional** |
+|---|---|---|---|
+| Objeto do método | simular O ENSAIO que se faria | resumir O QUE FOI medido | **simular a CONTINUAÇÃO da pesquisa** |
+| Direção temporal | projeta um protocolo | olha para trás (síntese) | **deriva para frente: P5 prossegue** |
+| Prognóstico | hipótese a testar | ausente | **travado antes da medição (P4)** |
+| Dado novo | simulação descartável | nenhum | **prognóstico quantitativo com tier declarado** |
+| Confronto com real | é o ensaio real | não se aplica | **opcional e bancado (P6)** |
+
+O in-silico trial antecipa um protocolo experimental específico; a etrização antecipa o **programa de pesquisa** — decide o que medir, onde e em que dose, antes de gastar recurso úmido, e mantém essa decisão auditável. A revisão sistemática e a meta-análise sintetizam para trás; a etrização **deriva para frente**: parametriza um motor com o dado publicado e produz prognósticos falsificáveis com valor de decisão [claim:C005]. O teste que a banca pode fazer — e que este texto aceita de antemão — é pontual: qualquer capítulo seguinte que apresente número sem proveniência, previsão sem tier, ou consequência sem prognóstico travado, estará violando o próprio método que esta nota nomeia.
+
+A plataforma que a tese etriziza não é arbitrária: a variante G127V do prion protein humano foi colocada sob seleção positiva pela epidemia de kuru, protegendo portadores heterozigotos [claim:C004] [evidence:E002]; a forma recombinante sem âncora de glicofosfatidilinositol (GPI) conserva atividade dominante-negativa potente em trans [claim:C005] [evidence:E003] — e a resistência ao prion persiste em cultura mesmo após cessar a expressão do transgene, indicando efeito autossustentado [claim:C006] [evidence:E003]; e a entrega sistêmica por vírus adeno-associado (AAV) da forma sem âncora estendeu sobrevida em aproximadamente 50 dias em modelo murino [claim:C007] [evidence:E004]. Sobre essa base — variante protetora, mecanismo dominante-negativo, entrega viável — a etrização opera: parametriza, executa, trava prognósticos e especifica o confronto. O que segue na tese é isso, executado.

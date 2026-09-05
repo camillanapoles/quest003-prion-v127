@@ -1,0 +1,36 @@
+#!/data/data/com.termux/files/usr/bin/sh
+# GATE GUARDIAN local — nenhuma escrita entra sem os gates VERDE
+echo "[gate-guardian] rodando pytest (registro+tese+experimentos)…"
+if [ -x .venv/bin/python ]; then PY=.venv/bin/python; else PY=python3; fi
+$PY -m pytest tests/ -q || {
+  echo "[gate-guardian] BLOQUEADO: gates falharam. Corrija antes do commit."
+  exit 1
+}
+# gates de produção no DB real (além dos testes)
+$PY -m thesis_engine.cli check >/dev/null 2>&1 || {
+  echo "[gate-guardian] BLOQUEADO: cli check (6 gates) falhou no DB de produção."
+  exit 1
+}
+
+# GATE: nenhum commit com capítulo não-aprovado no WritingCycle
+$PY -c "
+from sqlmodel import Session, select
+from thesis_engine.db import create_db
+from thesis_engine.models import WritingCycle, Block
+try:
+    with Session(create_db('tese_v2.db')) as s:
+        unapproved = [
+            c.cap_key for c in s.exec(select(WritingCycle)).all()
+            if c.estado not in ('approved', 'rendered', 'committed')
+        ]
+        if unapproved:
+            has_blocks = any(
+                b.chap_id in unapproved
+                for b in s.exec(select(Block)).all()
+            )
+            if has_blocks:
+                print(f'[gate-guardian] BLOQUEADO: blocos de {unapproved} não aprovados no WritingCycle')
+                exit(1)
+except Exception:
+    pass  # DB pode não existir (CI, teste, etc)
+" 2>/dev/null

@@ -1,0 +1,173 @@
+[
+ {
+  "item_id": "H0001",
+  "cap_key": "c00",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/3 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0002",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "Paráfrase de claim travada: \"antecipação de bancada, nunca pendência\" ≠ verbatim de C054 (sha256) — risco de drift da definição operacional",
+  "status": "emendado",
+  "resposta": "EMENDA: citação verbatim entre aspas — \"antecipação bancada, nunca pendente de validação\" — marcada como palavras do registro. Paráfrase substituída.",
+  "respondido_por": "revisor-hostil (persona) + emenda aplicada"
+ },
+ {
+  "item_id": "H0003",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "Número \"vinte e quatro séculos\" sem lineage (nenhum N-fato/E-ID) — régua da autora: número nunca digitado",
+  "status": "emendado",
+  "resposta": "EMENDA: qualitativo (\"muitos séculos antes de qualquer evidência experimental\"). Se a autora quiser o número, registra N-fato no registro primeiro.",
+  "respondido_por": "revisor-hostil (persona) + emenda aplicada"
+ },
+ {
+  "item_id": "H0004",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "Tabela de contraste: de onde vêm os 5 critérios? (elemento do plano pede \"3-colunas\")",
+  "status": "respondido",
+  "resposta": "3-colunas do plano = os 3 MÉTODOS comparados (IST/meta/etrização) ✓. Os critérios derivam dos passos de C054 (P4 prognóstico travado · P5 deriva-para-frente · P6 confronto) + tópicos do plano c01. Fundamentado, não inventado.",
+  "respondido_por": "revisor-hostil (persona), critical thinking"
+ },
+ {
+  "item_id": "H0005",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "C006 e C027 no brief mas não citadas — seleção arbitrária de evidência?",
+  "status": "emendado",
+  "resposta": "EMENDA C006: vinculada ao parágrafo da plataforma (resistência autossustentada fortalece a base). C027 (kindreds E200K brasileiros) realoca-se à fundamentação (c03), onde tem peso argumentativo — decisão de colocação, não omissão.",
+  "respondido_por": "revisor-hostil (persona) + emenda aplicada"
+ },
+ {
+  "item_id": "H0006",
+  "cap_key": "c02",
+  "tipo": "hostil-yellow",
+  "achado": "termo novo sem definição prévia: DCJ",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0007",
+  "cap_key": "c02",
+  "tipo": "hostil-yellow",
+  "achado": "termo novo sem definição prévia: SIM",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0008",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "OE1-OE4 e H1-H3: constam do registro probatório ou são invenção desta introdução?",
+  "status": "respondido",
+  "resposta": "Derivados do plano global (planchapter c13/c05/c06) e ancorados em claims: OE3↔C052/C055, OE4↔C040, H2↔cadeia m31 (§6.3 gates), H3↔C054 diferenciação. A formulação verbal é nova (branch zero); o CONTRATO é o do registro.",
+  "respondido_por": "persona+critical-thinking"
+ },
+ {
+  "item_id": "H0009",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "Tabela M1-M5: \"validada pela autora em 28/08\" — onde isto vive verificável?",
+  "status": "respondido",
+  "resposta": "Registro do guardião do programa (linha do merge PR#2, 28/08): re-matrícula M1→resultado/M2→dormant/M4→método — nó presente no grafo (comunidade Guardian Integrity & Audit Chain). A tese cita; a fonte é auditável no repo.",
+  "respondido_por": "persona+critical-thinking"
+ },
+ {
+  "item_id": "H0010",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "C022 (LNP 29,6%) tem incerteza HIGH no registro — por que usá-la na justificativa sem ecoar a incerteza?",
+  "status": "emendado",
+  "resposta": "EMENDA: o texto já diz \"com incerteza declarada\" e evita o número (fica \"fração relevante\"); incerteza high ecoada. Números com lineage ficam nos caps 5-6 sob gates.",
+  "respondido_por": "persona+emenda"
+ },
+ {
+  "item_id": "H0011",
+  "cap_key": "c01",
+  "tipo": "hostil-yellow",
+  "achado": "termo novo sem definição prévia: GPI",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0012",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "Brief trouxe claims de DESENHO/RESULTADO (C033-C051) mapeadas pelo registro à seção 3.2 do braço-paper — desalinhamento registro↔arquitetura v2: como decidiu o que usar?",
+  "status": "respondido",
+  "resposta": "O campo section do registro espelha o MANUSCRITO-paper, não a tese v2. Decisão de escritor: c03 usa só claims de LITERATURA (C001-C023); desenho/resultado ficam nos lares temáticos (c05/c06/c08). Registrado como refinamento pendente do mapeamento (task futura: mapa section→cap-v2).",
+  "respondido_por": "persona+critical-thinking"
+ },
+ {
+  "item_id": "H0013",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "\"Mapa em camadas\" prometido como elemento (plano) — entregou camadas como parágrafos bold; onde está o elemento visual?",
+  "status": "emendado",
+  "resposta": "EMENDA aceita como débito visual: as 4 camadas estão estruturadas e rotuladas (Camada 1-4); a figura/mapa próprio (equivalente Fig.1 do braço-paper, legado) depende de gerador de figura determinística — entra como tarefa do folder único (escrita-zero/figuras/) quando a autora pedir. Prosa estruturada garante a função narrativa agora.",
+  "respondido_por": "persona+emenda-débito"
+ },
+ {
+  "item_id": "H0014",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "§3.4 cita C047/C048/C049/C040 — claims \"de tese\" (arquitetura/nomenclatura) numa seção de epistemologia: cabimento?",
+  "status": "respondido",
+  "resposta": "Sim: §3.4 é exatamente onde os compromissos epistêmicos (tiers, cronologia, sem-ano, duas-partes) são fundamentados; essas claims SÃO os compromissos formalizados. Citação correta por função, não por seção do paper.",
+  "respondido_por": "persona+critical-thinking"
+ },
+ {
+  "item_id": "H0015",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "§4.2 promete \"folhas de registro reproduzidas nos apêndices\" — o anexo NÃO existe ainda no entregável. Promessa de evidência inacessível (o mesmo vício do repo)?",
+  "status": "respondido",
+  "resposta": "Débito versionado: task registrada — c15/c16 reproduz as folhas (pré-registros + versões do motor/solver) com datas impressas. Fechamento condicional aceito: a promessa tem ENDEREÇO na própria arquitetura (caps de anexo já planejados) e a fila cobra. Sem o anexo na entrega final, este item REABRE.",
+  "respondido_por": "revisor-hostil R1 (leitor-position)"
+ },
+ {
+  "item_id": "H0016",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "\"Inalterança do exp1 atestável pelas mesmas claims\" — claims citam FONTES, não versões. Como o leitor confere identidade de versão entre exp1 e exp2?",
+  "status": "emendado",
+  "resposta": "EMENDA aplicada na RODADA 2: a frase agora aponta a FOLHA DE VERSÃO reproduzida no anexo (identidade de versão verificável no documento), não apenas a claim. Re-avaliada abaixo.",
+  "respondido_por": "revisor-hostil R1 (leitor-position)"
+ },
+ {
+  "item_id": "H0017",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "R2 varredura final do produto emendado (linha experimental §4.2: exp1→otimização→exp2=base; anti-hindsight in-document; inalterança por folha-de-versão anexada)",
+  "status": "respondido",
+  "resposta": "HOSTIL APROVA (condicional ao anexo c15/c16 já debitado): a narrativa experimental é lógica, a precedência é conferível no documento prometido, e a tabela viaja por claims. APROVADO para render.",
+  "respondido_por": "revisor-hostil R2"
+ },
+ {
+  "item_id": "H0018",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "Revisor à parte: qual a diferença OPERACIONAL exp1×exp2? humanização não faria do exp1 multi-espécie?",
+  "status": "emendado",
+  "resposta": "EMENDA R3: humanizar = re-escalar TEMPO (C043: taxas relativas murinas); exp2 = variar SUBSTRATO CINÉTICO por espécie (bandas-Kt das sequências PrP). Exp1 não distingue constante-estrutural de artefato murino — exp2 sim; murino é 1 das 4 espécies (contido, não descartado).",
+  "respondido_por": "revisor-à-parte (pergunta da autora)"
+ },
+ {
+  "item_id": "H0019",
+  "cap_key": "c00",
+  "tipo": "hostil",
+  "achado": "RESUMO afirma precedência (\"travado v1.0, antes da extensão de espécies\") SEM âncora in-document no ponto — o leitor não confere; mesma classe do vício do repo (flagrado pela autora)",
+  "status": "emendado",
+  "resposta": "EMENDA R1: a frase agora ancora a precedência DENTRO da tese (linha experimental Cap.4 + folhas de registro reproduzidas no Apêndice A = ação A0001@c15). Enquanto o anexo não existir, a aprovação deste ponto é condicional — e o gate hostil_falou (novo) impede capítulo sem round hostil.",
+  "respondido_por": "revisor-hostil R1-c00 (flagra da autora)"
+ }
+]

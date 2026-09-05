@@ -1,0 +1,15 @@
+# CAPÍTULO 12 — LIMITAÇÕES: CADA LIMITE, UM FECHO
+Limitação sem agenda é desculpa; limitação com fecho é rota de pesquisa. Este capítulo nomeia as classes de limite e, para cada uma, o que a fecha.
+| Limite | O que é | O que o fecha |
+|---|---|---|
+| Transferência dimensional | a conservação de θ* entre espécies é argumentada e computacionalmente sondada, não provada em tecido humano até o gate de organoide [claim:C055] [evidence:E032] [claim:C043] [evidence:E032,E009] | G0-wet: leitura de gradiente com o estimador aprovado [claim:C052] [evidence:E032,E033] |
+| Horizonte de avaliação | θ* depende da definição de horizonte — contido sob duas, escape sob gerações casadas [claim:C056] [evidence:E032] | regra já em vigor: toda citação declara o horizonte; a predição v1.0 usa a definição S3 |
+| Preprints como âncoras centrais | as duas âncoras mecanísticas da camada de terapia gênica são preprints de 2026, sem revisão por pares [claim:C005] [evidence:E003] [claim:C007] [evidence:E004] | monitoramento declarado: na publicação revisada, as claims afetadas são reverificadas |
+| Tradução κ↔concentração | fechada só em ordem de grandeza, por âncoras ilustrativas declaradas [claim:C058] [evidence:E057,E058,E032,E010,E030,E019] | braço A6 do G0-wet: proteína recombinante em dose conhecida |
+| Localização da frente | o cálculo do anel assume posição conhecida; não existe imagem validada de PrP-res in vivo | procedimento de localização (imagem ou biópsia-guia) especificado antes de qualquer protocolo humano; portadores genéticos presintomáticos reduzem o problema à anatomia estereotipada de conversão |
+| Imunogenicidade e clearence do construto | imunogenicidade, clearence renal e exposição de dose repetida do V127ΔGPI sem caracterização publicada [claim:C021] [evidence:E017,E018] | G0-A6: primeira exposição controlada; A7 com marcadores inflamatórios locais como leitura secundária de segurança |
+| Port de campo-médio | o port omite extinção estocástica e diversidade de cepa; a fidelidade é comportamental (hierarquia emergente [claim:C039] [evidence:E032]), não distribucional | kernel estocástico original como referência; leitura de co-agregação como adição opcional ao G0 |
+| Subtipos sem série publicada | âncoras são organoides MV1/MV2; o subtipo mais comum (MM1) carece de séries temporais publicadas [claim:C011] [evidence:E007] | novas âncoras publicadas alimentam P1 (re-parametrização sem retro-alterar) |
+| Probabilidades estruturadas | os pesos bayesianos são juízos estruturados, não dados [claim:C036] [evidence:E031] | atualização bayesiana a cada portão — o próprio método converte juízo em dado |
+| Ausência de dado úmido | nenhum dado de bancada existe para as claims centrais; tudo é [SIM] | a escada de portões inteira, com o kill-switch que publica negativos [claim:C047] [evidence:E033] |
+A tabela fecha o ciclo aberto no Cap. 2: cada limite tem dono de fecho, e nenhum fecho é "aguardar". A etrização não elimina limites — ela os converte em agenda com nome, critério e portão.

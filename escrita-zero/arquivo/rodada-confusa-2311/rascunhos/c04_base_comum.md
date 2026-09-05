@@ -1,0 +1,29 @@
+## 4.1 A mesma base sob os dois módulos
+
+A ponte deste capítulo é uma afirmação verificável dentro do documento: o fundamento (Cap. 5) e a aplicação (Cap. 6) assentam sobre os MESMOS dados. A base comum tem três componentes, cada qual citada na própria tese: o kernel de espalhamento priônico publicado como modelo estocástico de reação-difusão [claim:C013]; o solver que o integra com auto-testes de conservação de massa e paridade analítica [claim:C032]; e a parametrização por espécie em bandas com proveniência declarada. A execução é determinística e auditável (P2 da definição operacional do método, Cap. 1): mesmo insumo, mesmo resultado, para qualquer revisor que refizer a conta.
+
+## 4.2 Linha experimental: experimento 1 → otimização → experimento 2 (a base da tese)
+
+Esta tese não nasce de um único experimento, e sim de uma linha com duas execuções — e é a segunda que a fundamenta. Narramo-la aqui porque o leitor tem direito de saber exatamente sobre o que está lendo.
+
+**Experimento 1 (fase de segurança).** Parametrizou-se o kernel murino publicado e humanizou-se o relógio — convém precisar o que "humanizar" significa aqui: um **re-escalonamento global de tempo** (unidade de simulação ↔ dias humanos pelas âncoras de relógio), mantendo as taxas relativas murinas [claim:C043]; nada varia na física do hospedeiro; sob definições operacionais explícitas, o limiar de contenção foi travado na versão 1.0 (θ\*=0,333, κ=2). O objetivo desta fase não foi produzir a tese: foi **obter segurança da informação** — verificar que o motor, alimentado somente com dado publicado, reproduz contenção com comportamento monotônico e fronteira estável.
+
+**Por que otimizamos.** Uma única espécie não orquestra certeza: um limiar medido só em parametrização murina pode ser constante estrutural do mecanismo dominante-negativo — ou artefato daquela parametrização. Para separar as duas hipóteses, era necessário **variar o substrato cinético do hospedeiro** — não apenas sua escala de tempo. É essa a fronteira entre os dois experimentos: o exp1 re-escala o relógio murino; o exp2 troca a cinética por espécie (bandas-Kt derivadas das sequências de PrP), testando se o limiar sobrevive à variação de domínio. A otimização, portanto, não mudou o motor nem retreinou o prognóstico: **estendeu o domínio de validação**.
+
+**Experimento 2 (a base da tese).** Sondagem computacional multi-espécie sob as definições operacionais pré-registradas — camundongo, hamster, humano, vole — retornou a banda central em que o limiar travado é o piso exato [claim:C055], expôs que o limiar depende do horizonte de avaliação [claim:C056] e produziu a regra de titulação por cinética do hospedeiro [claim:C057]. **Todo o fundamento (Cap. 5) e todo o desenho (Cap. 6) desta tese emergem do experimento 2.** Os dados do experimento 1 seguem em uso somente onde inalterados — kernel, solver e âncoras de relógio — e essa inalterança é atestável dentro do documento pela citação das mesmas claims, com a folha de versão do motor e do solver reproduzida no mesmo anexo — o leitor confere identidade de versão sem sair da tese [claim:C013] [claim:C032].
+
+**Anti-hindsight dentro do documento.** A precedência do travado v1.0 sobre a extensão multi-espécie não é aqui um aponte a repositório: é substantificável pelo que a tese entrega — as definições operacionais pré-registradas são citadas no texto [claim:C055], e as folhas de registro versionadas do programa [claim:C040] são **reproduzidas nos apêndices** deste documento, com datas impressas, para que o leitor confira a precedência sem sair da tese.
+
+## 4.3 Tabela de validação — os números e seus vereditos
+
+Toda cifra abaixo viaja dentro de claim ancorada no registro probatório; nenhuma foi digitada sem lineage.
+
+| Verificação | Valor (registro) | Confronto | Veredito |
+|---|---|---|---|
+| O limiar travado θ\*=0,333 é o piso exato da banda central multi-espécie (exp. 2)? | banda central sob definições pré-registradas [claim:C055] | o travado v1.0 é o piso — contido sem ajuste | ✅ consistente |
+| A predição do hamster sobreviveu ao confronto do exp. 2? | mesma configuração (Kt=2, κ=2): contida sob um horizonte, escapando sob outro [claim:C056] | refutada sob a definição P-024 — reportada como está, horizonte declarado em toda citação | ✅ honestidade exibida |
+| A titulação estende o desenho além do κ=2 original? | κ requerido escala com Kt: 1→1,5 · 2→2 · 3→3 · 4→8 [claim:C057] | generalização genuína por cinética do hospedeiro | ✅ generalização |
+| O gate computacional foi executado e passado? | G0-sim executado e passado nos tiers T1–T3 [claim:C046] | execução realizada, não prometida | ✅ realizado |
+| A fronteira é robusta à logistic-C₅₀? | limiar robusto à varredura no intervalo informativo [claim:C051] | sensibilidade não move o achado central | ✅ robusto |
+
+A tabela lê-se como contrato cumprido — e o §4.2 garante que o contrato tem endereço: o experimento 2, do qual esta tese emerge.

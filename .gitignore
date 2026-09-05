@@ -5,3 +5,7 @@
 tmp/
 __pycache__/
 .pytest_cache/
+thesis.db
+build/
+thesis.db
+tese_v2.db

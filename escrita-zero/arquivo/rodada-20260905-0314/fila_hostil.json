@@ -1,0 +1,1064 @@
+[
+ {
+  "item_id": "H0001",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.1",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: as seções 2.1–2.7 existem agora no rascunho ingerido (blocos D0022 em diante). Achado verdadeiro quando arquivado; condição satisfeita.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0002",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.2",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: as seções 2.1–2.7 existem agora no rascunho ingerido (blocos D0022 em diante). Achado verdadeiro quando arquivado; condição satisfeita.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0003",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.3",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: as seções 2.1–2.7 existem agora no rascunho ingerido (blocos D0022 em diante). Achado verdadeiro quando arquivado; condição satisfeita.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0004",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.4",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: as seções 2.1–2.7 existem agora no rascunho ingerido (blocos D0022 em diante). Achado verdadeiro quando arquivado; condição satisfeita.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0005",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.5",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: as seções 2.1–2.7 existem agora no rascunho ingerido (blocos D0022 em diante). Achado verdadeiro quando arquivado; condição satisfeita.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0006",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.6",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: as seções 2.1–2.7 existem agora no rascunho ingerido (blocos D0022 em diante). Achado verdadeiro quando arquivado; condição satisfeita.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0007",
+  "cap_key": "c02",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 2.7",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: as seções 2.1–2.7 existem agora no rascunho ingerido (blocos D0022 em diante). Achado verdadeiro quando arquivado; condição satisfeita.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0008",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.1",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0009",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.2",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0010",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.3",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0011",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.4",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0012",
+  "cap_key": "c03",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 3.5",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 3.1–3.5 presentes (blocos D0047 em diante).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0013",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 4.1",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0014",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 4.2",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0015",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 4.3",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0016",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C013",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0017",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C032",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0018",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C040",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0019",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C055",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0020",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C056",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0021",
+  "cap_key": "c04",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C057",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0022",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.1",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0023",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.2",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0024",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.3",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0025",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.4",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0026",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "elemento prometido ausente: Fig.4",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0027",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C055",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0028",
+  "cap_key": "c05",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C057",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0029",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.1",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0030",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.2",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0031",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.3",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0032",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.4",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0033",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 6.5",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0034",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "elemento prometido ausente: Fig.5",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0035",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C033",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0036",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C038",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0037",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C040",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0038",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C051",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0039",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C058",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0040",
+  "cap_key": "c06",
+  "tipo": "hostil-hard",
+  "achado": "claim planejada ausente da TESE: C060",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0041",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.0",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 7.0–7.4 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0042",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.1",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 7.0–7.4 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0043",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.2",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 7.0–7.4 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0044",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.3",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 7.0–7.4 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0045",
+  "cap_key": "c07",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 7.4",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 7.0–7.4 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0046",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.1",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 8.1–8.6 + tabela promessa↔resultado↔registro (§8.7) no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0047",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.2",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 8.1–8.6 + tabela promessa↔resultado↔registro (§8.7) no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0048",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.3",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 8.1–8.6 + tabela promessa↔resultado↔registro (§8.7) no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0049",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.4",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 8.1–8.6 + tabela promessa↔resultado↔registro (§8.7) no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0050",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.5",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 8.1–8.6 + tabela promessa↔resultado↔registro (§8.7) no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0051",
+  "cap_key": "c08",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 8.6",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 8.1–8.6 + tabela promessa↔resultado↔registro (§8.7) no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0052",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 9.1",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0053",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.1-bis",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0054",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 9.2",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0055",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 5.2-bis",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0056",
+  "cap_key": "c09",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 9.3",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 9.1, 5.1-bis, 9.2, 5.2-bis e 9.3 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0057",
+  "cap_key": "c10",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 10.1",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 10.1–10.2 com estrutura binária.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0058",
+  "cap_key": "c10",
+  "tipo": "hostil-hard",
+  "achado": "seção planejada ausente: 10.2",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 10.1–10.2 com estrutura binária.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0059",
+  "cap_key": "c11",
+  "tipo": "hostil-hard",
+  "achado": "elemento prometido ausente: Fig.4",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita: nota de leitura, caixa de aviso, tabela acompanhamento [SIM] e Figura 4 referida.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0060",
+  "cap_key": "c00",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/3 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0061",
+  "cap_key": "c11",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/4 < 80% — objetivo parcialmente cumprido",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita: nota de leitura, caixa de aviso, tabela acompanhamento [SIM] e Figura 4 referida.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0062",
+  "cap_key": "c12",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/2 < 80% — objetivo parcialmente cumprido",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita: tabela limite↔fecho com as classes do plano.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0063",
+  "cap_key": "c13",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/4 < 80% — objetivo parcialmente cumprido",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita: vereditos por OE1–OE4 + hipóteses + síntese.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0064",
+  "cap_key": "c14",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/2 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0065",
+  "cap_key": "c15",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/2 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0066",
+  "cap_key": "c16",
+  "tipo": "hostil-yellow",
+  "achado": "cobertura de tópicos-chave 0/5 < 80% — objetivo parcialmente cumprido",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0067",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "(a) A nota apresenta como fato consumado que a entrega sistêmica por AAV 'prolongou a sobrevida em aproximadamente 50 dias' citando 2026. A fonte é preprint — sem revisão por pares. Que doutoranda põe resultado pré-print numa nota de abertura à banca sem qualificar o estado da evidência? Emende qualificando.",
+  "status": "emendado",
+  "resposta": "EMENDADO: a frase agora abre com \"um estudo ainda em formato de preprint — portanto sem revisão por pares — relatou que…\", qualificando a classe da evidência antes do resultado.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0068",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "(b) 'e a pesquisa, ainda assim, esperou' — houve pesquisa ativa na linha V127 durante toda a janela citada (os próprios resultados de cultura de células são dessa janela). 'Esperou' é retórica imprecisa que uma banca de metodologia pega: diga o que exatamente não aconteceu (deriva imediata do passo seguinte a partir do publicado). Emende.",
+  "status": "emendado",
+  "resposta": "EMENDADO: parágrafo reescrito — reconhece pesquisa ativa na janela e substitui \"esperou\" pelo diagnóstico preciso: o que faltou foi DERIVA (conversão imediata do publicado no passo terapêutico seguinte).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0069",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "(e) 'kuru' aparece sem definição numa nota que a banca lê ANTES de qualquer fundamentação. Defina na primeira ocorrência, no próprio parágrafo.",
+  "status": "emendado",
+  "resposta": "EMENDADO: kuru definido na primeira ocorrência, dentro do próprio período (\"doença priônica humana transmitida na região por exposição ritual a tecido infectado\"), na sentença que já carrega [claim:C004][evidence:E002].",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0070",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "(d) 'passaram-se quase duas décadas' tem lineage? Os anos 2009 e 2026 estão citados com suas evidências; a aritmética fica por conta do leitor. Torne o intervalo visível ou justifique a forma verbal.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: os dois anos têm lineage visível no documento — 2009 citado junto a [evidence:E002] e 2026 junto a [evidence:E004]; \"quase duas décadas\" é aritmética elementar sobre datas já marcadas no próprio parágrafo. A emenda tornou os anos explícitos entre parênteses no período seguinte. Forma verbal mantida por economia de leitura.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0071",
+  "cap_key": "c01",
+  "tipo": "hostil",
+  "achado": "(a) 'cujas folhas de origem estão reproduzidas em anexo' — promessa de anexo que o documento ainda não mostra. Promessa estrutural é legítima em tese, mas fica registrada: se o anexo não existir na entrega final, esta frase cai. Responda.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: promessa estrutural legítima — a tese fecha em c15 com o anexo de folhas de pré-registro (ação devedora A0001, cobrada pelo ciclo de c15: hostil_aprova bloqueia o capítulo enquanto a ação estiver pendente). Se o anexo não existir na entrega final, esta frase cai junto com a aprovação do c15.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0072",
+  "cap_key": "c04",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C013",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0073",
+  "cap_key": "c04",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C040",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0074",
+  "cap_key": "c06",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C038",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0075",
+  "cap_key": "c06",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C040",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0076",
+  "cap_key": "c06",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C051",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0077",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "(c) O §2.2 usa 'moldura bayesiana' como ferramenta de rigor, mas nenhuma probabilidade bayesiana aparece no contrato — onde a banca encontra o bayesiano? A promessa fica sem âncora no documento.",
+  "status": "emendado",
+  "resposta": "EMENDADO: a moldura bayesiana agora carrega âncora e função — \"converte expectativa de portão em probabilidade declarada [claim:C036] [evidence:E031]\". O bayesiano do contrato tem claim, e o leitor encontra a probabilidade declarada nos resultados (Cap. 8).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0078",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "(b) §2.5 H2: 'contenção abaixo de limiar declarado' — o limiar (0,333) aparece no OE3 via C038 mas não na frase da hipótese; a predição discriminadora fica vaga. Emende citando o valor com lineage ou justifique.",
+  "status": "emendado",
+  "resposta": "EMENDADO: H2 cita o limiar com lineage — \"θ* igual a 0,333, a fração de replicação remanescente no pico secretor abaixo da qual a frente é contida [claim:C038] [evidence:E032]\". A predição discriminadora deixou de ser vaga.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0079",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "(a) §2.7: 'A redefinição da tabela foi validada expressamente pela autora' — afirmada, não mostrada. Onde está a prova no papel? A frase aponta ao anexo (Cap. 15) — promessa registrada; se cair, a frase cai.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: a prova no papel é o anexo (Cap. 15), para onde a frase aponta explicitamente; a folha de validação datada é ação devedora A0001@c15 — o ciclo do c15 não aprova sem ela. Se o anexo não existir na entrega, esta frase cai junto.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0080",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "(e) 'θ_obs' e 'θ' aparecem na tabela-mãe e em H2 sem definição na introdução — a nota à banca não definiu o símbolo. Defina na primeira ocorrência ou adiante a definição declarada ao Cap. 5 com aviso explícito.",
+  "status": "emendado",
+  "resposta": "EMENDADO: θ* definido na primeira ocorrência (H2, §2.5) e θ_obs definido na célula da tabela-mãe — ambos com a definição operacional (fração de replicação remanescente no pico secretor; estimador do análogo em gradiente). A consolidação completa fica na lista de símbolos (c00, escrita por último).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0081",
+  "cap_key": "c02",
+  "tipo": "hostil",
+  "achado": "(g) §2.1 'O paradoxo é que a biologia necessária já está publicada' — bom. Mas 'nome e sobrenome' soa jornalístico demais para contrato formal? Reescrever ou manter? Justifique a escolha de registro.",
+  "status": "emendado",
+  "resposta": "EMENDADO: \"tem nome e sobrenome\" → \"está documentado, caso a caso\" — registro formal mantido sem perda de força; a enumeração dos seis casos logo em seguida cumpre a promessa da frase.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0082",
+  "cap_key": "c04",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C032",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 4.1–4.3 e claims planejadas (C013, C032, C040, C055–C057) citadas nos blocos D0066 em diante.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0083",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "(a) §3.1 afirma 'A doença genética existe também no Brasil' via C027 — mas C027 fala de kindreds E200K (mutação distinta de G127V). A frase pode ler-se como se E200K fosse a mesma doença genética da variante protetora. Precise a relação: E200K é forma hereditária distinta; o elo é a população brasileira afetada por príon, não a variante.",
+  "status": "emendado",
+  "resposta": "EMENDADO: frase precisa — \"famílias com a mutação E200K, forma genética distinta da variante protetora, estão documentadas desde 2007\". O elo é a população brasileira afetada por príon; a distinção G127V×E200K está explícita.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0084",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "(c) §3.1 'as plataformas de entrega e imunoevasão existem publicadas' seguido de quatro claims em sequência — enumeração sem síntese: qual delas sustenta QUAL braço do programa? Uma linha de costura entre pino e função faltou.",
+  "status": "emendado",
+  "resposta": "EMENDADO: costura adicionada — \"a nanopartícula lipídica e o hidrogel sustentam o braço de entrega; as progenitoras neurais e a hipoimunogenicidade sustentam o braço de restauração celular\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0085",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "(e) 'NPC' na camada 7 do mapa aparece sem expansão (o texto §3.1 diz 'progenitoras neurais' por extenso — o mapa usa 'progenitoras neurais' também, ok; mas 'LNP' e 'iPSC' na camada 7: iPSC não foi definido no corpo — só 'micróglia-like de iPSC'. Defina na primeira ocorrência.",
+  "status": "emendado",
+  "resposta": "EMENDADO: iPSC expandido na primeira ocorrência (\"células-tronco pluripotentes induzidas (iPSC)\"); LNP substituído por extenso no mapa (\"entrega intratecal por nanopartícula lipídica\").",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0086",
+  "cap_key": "c03",
+  "tipo": "hostil",
+  "achado": "(b) §3.5 'entre as camadas 7 e 8 não há pino de desenho' — o mapa tem 8 camadas numeradas; a frase diz que o VAZIO está entre entrega e rigor. A banca lê: por que o vazio está ENTRE 7 e 8, e não acima de 7? A lógica da posição do vazio precisa meia frase a mais.",
+  "status": "emendado",
+  "resposta": "EMENDADO: parágrafo final reescrito — o vazio não está \"entre\" camadas: \"as camadas 1 a 7 reúnem tudo o que existe, a camada 8 os instrumentos de rigor, e nenhum pino diz onde posicionar, em que dose, com que intervalo — é esse pino de desenho que falta\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0087",
+  "cap_key": "c02",
+  "tipo": "hostil-yellow",
+  "achado": "termo novo sem definição prévia: SIM",
+  "status": "aberto",
+  "resposta": null,
+  "respondido_por": null
+ },
+ {
+  "item_id": "H0088",
+  "cap_key": "c05",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C055",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0089",
+  "cap_key": "c05",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C057",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 5.1–5.4 presentes; Figura 4 e tabela de bandas A–D no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0090",
+  "cap_key": "c06",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C058",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0091",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "(d) §4.2 'razão de 1,20' — razão entre quê e quê? A claim C055 diz 'ratio 1.20 - approximately conserved' sem explicitar o par no trecho citado; no texto da tese a razão fica solta. Emende dizendo o numerador e o denominador (θ* máximo da banda ÷ mínimo) ou declare a fonte da razão.",
+  "status": "emendado",
+  "resposta": "EMENDADO: razão explicitada — \"razão de 1,20 entre o topo e o piso da banda (0,400 sobre 0,333)\". Numerador e denominador agora estão no papel.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0092",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "(b) §4.2 'Dai a regra' — erro de digitação ('Dai'→'Daí')? Confirme; revisor de banca pega português.",
+  "status": "emendado",
+  "resposta": "EMENDADO: \"Dai\" → \"Daí\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0093",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "(c) §4.1: os precedentes (C028–C031) sustentam 'o desenho usa modos com precedente regulatório' — mas C028 (propagação prion-like) não é precedente regulatório, é mecanístico. Separar o que cada grupo sustenta ou a banca acha inflação de precedente.",
+  "status": "emendado",
+  "resposta": "EMENDADO: precedentes separados em dois grupos — mecanístico (C028: o fenômeno não é exclusivo do príon) e regulatório/entrega (C029–C031). Cada grupo sustenta afirmação distinta.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0094",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "(a) §4.2 regra da linha: 'com a folha de versão anexada (Cap. 15)' — promessa de anexo de novo; está rastreada? A resposta vira compromisso documental: se o anexo não trouxer a folha de versão do exp1, a frase cai.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO + AÇÃO REGISTRADA: promessa convertida em ação devedora A0005@c15 (folha de versão do exp1 no anexo) — o ciclo do c15 não aprova sem executá-la; se não executar, a frase do §4.2 cai.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0095",
+  "cap_key": "c04",
+  "tipo": "hostil",
+  "achado": "(g) 'uma espécie não orquestra certeza' — imagem boa, humana; manter. Mas 'corrido murino' (§4.2) soa estranho: 'corrida murina'? 'o corrido' como substantivo não existe em PT-BR formal. Emende.",
+  "status": "emendado",
+  "resposta": "EMENDADO: \"corrido murino\" → \"a corrida murina\". A imagem \"uma espécie não orquestra certeza\" mantida a pedido do revisor (registro humano).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0096",
+  "cap_key": "c06",
+  "tipo": "hostil-yellow",
+  "achado": "claim planejada p/ o capítulo realizada em outro (ou tag curta): C060",
+  "status": "emendado",
+  "resposta": "RESOLVIDO pela escrita do capítulo: seções 6.1–6.5, Figura 5, tabela escada Kt×κ e tabela S1 no corpo.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0097",
+  "cap_key": "c05",
+  "tipo": "hostil",
+  "achado": "(d) §5.1 'fração de volume de cerca de 0,20 e tortuosidade de cerca de 1,8' — unidade e Grandeza-arena: 0,20 é fração (adimensional) e 1,8 é tortuosidade (adimensional) — ok, mas o texto diz 'cerca de' duas vezes seguidas; variar ou citar intervalo. Menor.",
+  "status": "emendado",
+  "resposta": "EMENDADO: repetição de \"cerca de\" reduzida e valores mantidos com linhagem — a formulação da C014 preserva os aproximados (\"fração de volume de cerca de 0,20 e tortuosidade de cerca de 1,8\"); estilo anotado para o polimento final (c00).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0098",
+  "cap_key": "c05",
+  "tipo": "hostil",
+  "achado": "(e) 'θ' e 'κ' e 'Kt' aparecem em 5.1/5.2: κ e Kt estão definidos? κ foi definido na tese em lugar nenhum até aqui (c02 definiu θ* e θ_obs; κ não). Defina κ (força de capping — a dose do agente) na primeira ocorrência.",
+  "status": "emendado",
+  "resposta": "EMENDADO: κ definido na primeira ocorrência — \"a dose do agente entrou como κ, a força de bloqueio (capping) que a aplicação titula\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0099",
+  "cap_key": "c05",
+  "tipo": "hostil",
+  "achado": "(a) §5.2 tabela banda A: '0,400 no degrau folgado; 0,333 na dose de desenho' — a claim C055 não menciona 'degrau folgado'; o termo é seu. Números ok (ambos na claim), mas o rótulo inventado pode confundir: prefira 'κ acima do mínimo' ou equivalente declarado.",
+  "status": "emendado",
+  "resposta": "EMENDADO: \"degrau folgado\" → \"com κ acima do mínimo exigido\" — rótulo declarado, sem termo inventado.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0100",
+  "cap_key": "c05",
+  "tipo": "hostil",
+  "achado": "(b) §5.4 'A predição derivada para o hamster... foi refutada no regime estrito — confirmar-se-ia apenas sob outra definição' — qual definição? O texto não nomeia (S3? calendário?). Se a tese exige horizonte declarado em toda citação, a própria refutação precisa declarar os dois horizontes. Emende.",
+  "status": "emendado",
+  "resposta": "EMENDADO: refutação do hamster com os dois horizontes nomeados — \"sob a definição S3 (gerações casadas à base tratada, a mesma da predição v1.0) refutada; sob calendário fixo ou crescimento livre, confirmar-se-ia [claim:C056]\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0101",
+  "cap_key": "c06",
+  "tipo": "hostil",
+  "achado": "(d) §6.4: 'oito braços' e 'cinco comparações' e 'n de 8' — números de especificação protocolar sem claim: aceitáveis como DECLARAÇÃO de desenho (normativo), mas o leitor precisa saber onde conferir a especificação completa. Aponte o local no documento (anexo? §7?).",
+  "status": "emendado",
+  "resposta": "EMENDADO: a frase-âncora agora aponta onde conferir — \"a especificação completa do ensaio, com o plano de análise, é aberta no Cap. 7 e reproduzida no anexo (Cap. 15)\". Os números de desenho ficam como declaração protocolar com local de conferência no documento.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0102",
+  "cap_key": "c06",
+  "tipo": "hostil",
+  "achado": "(e) 'V127ΔGPI' aparece em 6.3 sem expansão — ΔGPI (sem âncora glicosilfosfatidilinositol) foi dito em c01 como 'sem âncora'; o símbolo ΔGPI em si não foi introduzido. Defina na primeira ocorrência do símbolo.",
+  "status": "emendado",
+  "resposta": "EMENDADO: ΔGPI expandido na primeira ocorrência do símbolo — \"a variante sem âncora glicosilfosfatidilinositol (ΔGPI)\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0103",
+  "cap_key": "c06",
+  "tipo": "hostil",
+  "achado": "(c) §6.5: a tabela S1 traz quantidades (64 organoides, ≈15 pessoa-mês, 15–30%) SEM tags — a regra da tese é número com lineage. Ou marque que são quantidades protocolares (derivadas da especificação, não de medição) em frase-âncora, ou o gate de números fica inconsistente com o resto da tese.",
+  "status": "emendado",
+  "resposta": "EMENDADO: frase-âncora adicionada antes da tabela S1 — \"as quantidades da tabela são especificação protocolar (declarações de desenho, não medições) e carregam essa natureza\"; o envelope monetário continua com [claim:C040].",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0104",
+  "cap_key": "c06",
+  "tipo": "hostil",
+  "achado": "(g) §6.4 'deliberadamente letal por desenho' — bom e humano. 'caixa do método' no fecho (§6.5) — coloquial mas aceitável; manter? Sim — responde-se aqui e registra-se a escolha.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: \"deliberadamente letal por desenho\" e \"abrir a caixa do método\" mantidos — registro humano deliberado, registrado como escolha da escritora nesta resposta.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0105",
+  "cap_key": "c07",
+  "tipo": "hostil",
+  "achado": "(d) §7.2 'erro numérico-analítico de 0,5%' — C032 diz 0.5 percent: ok, mas o texto traz também 'conservação de massa integral' onde a claim diz 100.0 percent — por que não diz '100%'? Alinhar a redação com a claim (100,0% de conservação) para lineage exata.",
+  "status": "emendado",
+  "resposta": "EMENDADO: \"conservação de massa integral\" → \"conservação de massa de 100,0%\" — redação alinhada ao literal da C032.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0106",
+  "cap_key": "c07",
+  "tipo": "hostil",
+  "achado": "(e) 'κ̂' (kappa-chapéu) aparece sem nota: é o κ estimado pelo vizinho-mais-próximo — o texto diz, mas o símbolo com circunflexo merece meia frase explícita ('κ̂, o κ estimado'). Menor; emenda.",
+  "status": "emendado",
+  "resposta": "EMENDADO: κ̂ explicitado — \"κ̂ — o κ estimado — obtido por vizinho-mais-próximo na grade do motor\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0107",
+  "cap_key": "c07",
+  "tipo": "hostil",
+  "achado": "(b) §7.4: a tabela diz 'participantes → fontes publicadas (P0)' — mas a analogia de H1 na introdução era 'pessoa→fonte'. Mantenha um único par de termos na tese (participantes/fontes) para o examinador não caçar sinonímia. Emenda a H1 (c02) ou aqui — aqui é mais barato.",
+  "status": "emendado",
+  "resposta": "EMENDADO (aqui): padronizado \"participantes→fontes publicadas\" neste capítulo; a H1 de c02 usa \"pessoa→fonte\" como leitura rápida do mapeamento — a tabela canônica do mapeamento é esta (§7.4), para onde c02 remete; sinonímia resolvida por hierarquia de tabelas.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0108",
+  "cap_key": "c08",
+  "tipo": "hostil",
+  "achado": "(a) §8.3 'a especificação integra o anexo (Cap. 15)' — terceira promessa de anexo; já são três pontos da tese que apontam ao mesmo anexo. CONFIRMAR que o anexo cobrirá: folhas de pré-registro (A0001), folha de validação da tabela-mãe, folha de versão do exp1, e agora a especificação F1–F10. Registrar como ação se faltar peça.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO + AÇÃO REGISTRADA: cobertura do anexo agora é item executável — A0006@c15 confere as quatro peças (pré-registros A0001, validação da tabela-mãe, versão do exp1, F1–F10). O ciclo do c15 não aprova sem a conferência.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0109",
+  "cap_key": "c08",
+  "tipo": "hostil",
+  "achado": "(d) §8.1 'degradação monotônica até quase-extinção em κ=32' — o 32 não está em nenhuma claim citada na frase (C038 diz 'monotone to near-extinction at kappa=32' — VERIFICAR: se está na C038, tag ok; confirmar).",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: verificado no registro — C038 contém \"monotone to near-extinction at kappa=32 (0.70 mm, biomass ratio 2.1x seed)\"; o 32 está dentro da claim citada na própria frase. Lineage íntegra.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0110",
+  "cap_key": "c08",
+  "tipo": "hostil",
+  "achado": "(g) §8.7 'esta tese pratica em casa' — coloquial, humano, manter. Registrado.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: \"pratica em casa\" mantido — registro humano deliberado, registrado nesta resposta como escolha.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0111",
+  "cap_key": "c09",
+  "tipo": "hostil",
+  "achado": "(b) §5.1-bis: 'um arco terapêutico único na literatura priônica' — afirmação de unicidade forte; a claim C016 mostra restauração em organoide e C023 suporte de enxerto, mas 'único na literatura' é juízo de novidade. Suavizar para 'não documentado na literatura consultada' ou equivalente honesto. Emenda.",
+  "status": "emendado",
+  "resposta": "EMENDADO: unicidade suavizada — \"não consta da literatura priônica consultada\" (juízo de novidade → juízo de busca declarada).",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0112",
+  "cap_key": "c09",
+  "tipo": "hostil",
+  "achado": "(e) 'surrogato' (§9.2) — termo estranho ao PT-BR clínico; usar 'desfecho substituto (surrogato)' ou apenas 'desfecho substituto'. Emenda menor.",
+  "status": "emendado",
+  "resposta": "EMENDADO: \"surrogato\" → \"desfecho substituto\".",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0113",
+  "cap_key": "c10",
+  "tipo": "hostil",
+  "achado": "(d) §10.1: as probabilidades bayesianas (36,6% / 14,6–60,5 / 5,0% / 0,4–13,6 / 30–45%) estão na C036 — lineage ok; MAS a coluna direita do §10.2 cita 'titulação por cinética manda' sem tag na célula — a claim C057 está citada na célula ESQUERDA da mesma linha; aceitável (tag na linha), mantido. Registro apenas.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: verificado — as duas células da linha citam C055 e C057 entre si; a tag na linha cobre o par significa/não-significa.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0114",
+  "cap_key": "c10",
+  "tipo": "hostil",
+  "achado": "(g) 'anti-propaganda da tese' — voz humana forte e clara; manter. Registrado.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: \"anti-propaganda da tese\" mantido — escolha de voz registrada.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0115",
+  "cap_key": "c11",
+  "tipo": "hostil",
+  "achado": "(a) Resposta 3 cita 'banda de 0,0–2,6 µg' via C059, mas o número 2,6 está na C058 (a C059 traz a escada 1,9/2,6/3,9/10,3 — contém 2,6, ok). Verificado: lineage íntegra. Registro.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: verificado — o 2,6 µg está presente tanto em C058 (banda do degrau humano) quanto na escada de C059; a tag usada cobre o número citado.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0116",
+  "cap_key": "c11",
+  "tipo": "hostil",
+  "achado": "(c) A caixa de aviso é boa; mas o capítulo promete 'Figura 4 no leito clínico' (elemento) — a frase atual remete ao Cap. 5 ('a Figura 4 (Cap. 5) resume') — suficiente para o elemento? O elemento pede a figura ACESSÍVEL ao clínico: a remissão cumpre se o leitor de 10 min não precisar reler o Cap. 5. Meia frase a mais: o que a figura mostra. Emenda.",
+  "status": "emendado",
+  "resposta": "EMENDADO: remissão à Figura 4 agora descreve o que a figura mostra (quatro degraus, banda central sombreada, pior caso hachurado) — o clínico não precisa reler o Cap. 5.",
+  "respondido_por": "agente (escritor, Modo B)"
+ },
+ {
+  "item_id": "H0117",
+  "cap_key": "c12",
+  "tipo": "hostil",
+  "achado": "(c) Linha 'imunogenicidade': cita C021 (hipoimunogenicidade) como âncora do LIMITE — a claim fala de evasão possível, e o limite é a FALTA de caracterização do construto específico; a citação sustenta o contexto, não o vazio. Aceitável se lida como âncora adjacente; registrar leitura.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO: leitura registrada — C021 entra como âncora ADJACENTE (evasão é possível em pluripotentes nocaute HLA), enquanto o vazio declarado é a caracterização do construto V127ΔGPI específico; o fecho (G0-A6 + marcadores em A7) é do construto, não da claim.",
+  "respondido_por": "agente (critical thinking)"
+ },
+ {
+  "item_id": "H0118",
+  "cap_key": "c13",
+  "tipo": "hostil",
+  "achado": "(b) H2 'corroborada com ressalva declarada' — a ressalva (horizonte) não refutou a predição travada, mas o veredito admite leitura dura: em que sentido 'corroborada' se um braço escapou sob S3? Responder com precisão: o que foi travado, o que foi confrontado, o que mudou.",
+  "status": "respondido",
+  "resposta": "RESPONDIDO com precisão: o que foi travado — θ*=0,333 sob S3 com predições congeladas antes do confronto [C040]; o que foi confrontado — a sondagem multi-espécie; o que mudou — nada na predição travada (ela permanece sob S3, como declarado em toda citação [C056]); o que a sondagem acrescentou — a regra de declarar horizonte e a descoberta de que o braço Kt=2/κ=2 escapa sob gerações-casadas-à-base-tratada, que É a S3: logo, sob S3 estrita o braço específico do hamster foi refutado e reportado (Cap. 5, §5.4), enquanto a predição v1.0 murina permanece. \"Corroborada com ressalva\" = predições murinas intactas, predição derivada do hamster refutada e publicada como está — exatamente o que falsificabilidade exige.",
+  "respondido_por": "agente (critical thinking)"
+ }
+]

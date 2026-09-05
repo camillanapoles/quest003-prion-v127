@@ -1,0 +1,34 @@
+# CAPÍTULO 5 — O ALICERCE: A INARIÂNCIA DE θ*
+
+O alicerce da tese é um resultado: o limiar de contenção sobrevive à troca de espécie. Este capítulo constrói esse resultado — da parametrização por espécie à sondagem multi-espécie, da regra de titulação à única assimetria real, a dependência de horizonte. A âncora verbal que guia a leitura: na dose de desenho, sobrevive um terço da replicação — e isso basta para conter a frente.
+
+## 5.1 Da varredura à parametrização por espécie
+
+A sondagem multi-espécie parte da mesma base do Cap. 4: o kernel estocástico publicado [claim:C013] [evidence:E009], o transporte intersticial medido *in vivo* — fração de volume de cerca de 0,20 e tortuosidade de cerca de 1,8 para macromoléculas [claim:C014] [evidence:E010,E030] — e o consumo de primeira ordem varrido entre 10⁻⁶ e 10⁻⁵ por segundo, ancorado na cinética de polimerização nucleada [claim:C015] [evidence:E011,E030]. A humanização é reescalamento global do tempo: as taxas relativas permanecem murinas até ajuste por séries publicadas [claim:C043] [evidence:E032,E009].
+
+Cada espécie entrou com sua classe de cinética de autocatálise — o parâmetro Kt — sob definições operacionais pré-registradas antes da execução; e a dose do agente entrou como κ, a força de bloqueio (capping) que a aplicação titula. O que variou entre espécies foi o relógio, não a física: o mesmo motor, os mesmos autoprocessos de transporte, o mesmo critério de contenção. A pergunta da sondagem, declarada antes do resultado: o limiar travado numa espécie informa as outras, ou cada espécie é um mundo?
+
+## 5.2 O cenário B: o limiar aproximadamente conservado [SIM]
+
+A resposta é o cenário B. Sob as definições pré-registradas, a banda central de θ* vai de 0,333 a 0,400 em camundongo, humano, hamster e rato-de-campo — razão de 1,20 entre topo e piso (0,400 sobre 0,333), com degradação monotônica nos extremos cinéticos: em Kt igual a 4, o κ exigido sobe a 8 e θ* cai a 0,111 [claim:C055] [evidence:E032]. O limiar travado no experimento 1 — θ* igual a 0,333, frente contida em κ=2 [claim:C038] [evidence:E032] — é o piso exato da banda central. Em palavras: um terço sobrevive na dose de desenho, e um terço contém; espécies mais rápidas pedem menos sobrevivência, não outra física.
+
+A escada por espécie, com a banda central sombreada, compõe a Figura 4; a tabela abaixo traz os degraus com seus números.
+
+| Banda | Regime cinético | θ* | κ exigido |
+|---|---|---|---|
+| A · referência murina | Kt 1 | 0,400 com κ acima do mínimo exigido; 0,333 na dose de desenho κ=2 [claim:C055] [evidence:E032] [claim:C038] [evidence:E032] | 1,5–2 |
+| B · banda herdada (humano) | Kt 0,5–2 | 0,400 nos degraus lentos; 0,333 em Kt 2 [claim:C055] [evidence:E032] | 1,5–2 |
+| C · banda extrativa (hamster, rato-de-campo) | Kt 1,5–3 | degraus intermediários da degradação monotônica; no rato, Kt 3 exige κ 3 [claim:C057] [evidence:E032] | 1,5–3 |
+| D · extremo cinético | Kt 4 | 0,111 — θ* no limite, com contenção apenas em κ 8 [claim:C055] [evidence:E032] | 8 |
+
+## 5.3 A regra de titulação emergente
+
+A escada de κ exigido pela cinética do hospedeiro compõe a regra central do alicerce: Kt 1 exige κ 1,5; Kt 2 exige κ 2; Kt 3 exige κ 3; Kt 4 exige κ 8 — superlinear além do dobro [claim:C057] [evidence:E032]. A consequência é direta: a dose de contenção titula-se pela cinética do hospedeiro em vez de fixar-se universal. Expressa em massa, a escada sobe monotonicamente — de 0,0–1,9 µg por depósito no degrau κ 1,5, a 0,0–2,6 µg em κ 2, a 0,1–3,9 µg em κ 3, até 0,2–10,3 µg no pior caso declarado κ 8 [SIM] [claim:C059] [evidence:E058,E032] — e a largura da banda, de cerca de 53 vezes em todos os degraus, decorre do cancelamento do κ exigido na razão entre topo e piso: 14 vezes do intervalo do proxy de afinidade, o resto das âncoras declaradas [SIM] [claim:C060] [evidence:E057,E058,E010,E030].
+
+O desenho do Cap. 6 herda essa regra: a dose κ=2 é legítima na banda herdada do humano e, fora dela, a titulação manda — não a intuição.
+
+## 5.4 A dependência de horizonte: a única assimetria real
+
+O alicerce tem uma rachadura declarada. θ* depende do horizonte de avaliação: o mesmo braço Kt=2, κ=2 está contido sob pareamento por crescimento livre (frente a 0,659 mm) e sob calendário fixo em t=5 (0,859 mm), mas escapa sob gerações casadas à base tratada (frente censurada em 2,83 mm) [claim:C056] [evidence:E032]. A predição v1.0 travada usa a definição S3 — gerações casadas — e é sob ela que o número 0,333 deve ser lido; toda citação do limiar neste documento declara o horizonte junto.
+
+A honestidade tem custo nominal e ganho real. A predição derivada para o hamster foi confrontada sob as definições da sondagem: sob a definição S3 — gerações casadas à base tratada, a mesma da predição v1.0 — ela foi refutada; sob calendário fixo ou crescimento livre, confirmar-se-ia [claim:C056] [evidence:E032]. O episódio está reportado como está, sem maquiagem: um método que nunca erra na previsão não é método, é profecia. O que o alicerce entrega, com a rachadura exposta, é o que o produto precisa: um limiar conservado entre espécies, uma regra de titulação com expressão de massa, e a disciplina de declarar o horizonte em cada número.

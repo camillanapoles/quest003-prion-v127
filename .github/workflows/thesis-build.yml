@@ -1,0 +1,82 @@
+name: Thesis Build (engine MD — LaTeX é derivado opcional)
+
+on:
+  push:
+    branches: [tese-modular-md]
+    paths:
+      - "thesis_engine/**"
+      - "tests/**"
+      - "requirements.txt"
+      - "paper/evidence_workspace/**"
+      - "paper_rewriting_output/final_paper/tese_unificada.md"
+      - "experiments/xspecies/**"
+      - "experiments/m31/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Deps engine
+        run: pip install -q -r requirements.txt
+
+      - name: Gates do registro probatório (ingest + sha256 + integridade)
+        run: python -m pytest tests/ -q
+
+      - name: Figuras auditáveis (Fig.4 + Fig.5 — leem SÓ JSONs do registro)
+        run: |
+          pip install -q numpy matplotlib
+          python3 experiments/xspecies/make_fig4_thetaspecies.py
+          python3 experiments/m31/make_fig5_doseladder.py
+          test -f paper/latex/figs/fig4_theta_species.png
+          test -f paper/latex/figs/fig5_dose_ladder.png
+
+  # LaTeX/DOCX/PDF são SAÍDAS DERIVADAS: 3 variantes determinísticas do grafo (F6).
+  # Compilação é informativa (PDF nunca é gate da verdade — o MD canônico é).
+  latex-derivado:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Deps (engine + TeX + figs)
+        run: |
+          pip install -q -r requirements.txt numpy matplotlib
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq texlive-latex-base texlive-latex-recommended \
+            texlive-fonts-recommended texlive-xetex texlive-latex-extra \
+            poppler-utils
+          python3 experiments/xspecies/make_fig4_thetaspecies.py
+          python3 experiments/m31/make_fig5_doseladder.py
+      - name: Ingest + gates + 3 variantes .tex
+        run: |
+          python -m pytest tests/ -q
+          python -m thesis_engine.cli ingest
+          python -m thesis_engine.cli latex
+      - name: Compilar (xelatex ×2 por variante — informativo)
+        run: |
+          cp data/latex/*.cls data/latex/*.sty build/latex/abnt/  # abntex2 vendorado (não existe no apt do 24.04)
+          cd build/latex
+          for f in abnt prova kappa; do
+            (cd $f && xelatex -interaction=nonstopmode main.tex || true \
+              && xelatex -interaction=nonstopmode main.tex || true)
+            echo "$f: $(pdfinfo $f/main.pdf 2>/dev/null | grep Pages || echo 'sem PDF')"
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tese-3variantes-tex-pdf
+          path: build/latex/
+          retention-days: 30

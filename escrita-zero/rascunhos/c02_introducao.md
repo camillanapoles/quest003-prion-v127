@@ -1,0 +1,46 @@
+## 2.1 O problema: decidir o próximo experimento
+
+A decisão de qual experimento fazer a seguir é, nas doenças priônicas humanas, um gargalo documentado. Seis tentativas clínicas antipriônicas fracassaram — quinacrina, doxiciclina, pentossan polissulfato intraventricular, flupirtina, anticorpo PRN100 e combinações com minociclina —, cada uma vinculada à sua classe de evidência e cada uma encerrada sem benefício de sobrevida ou sem eficácia clara [claim:C050]. Seis apostas, seis perdas: o custo de escolher o próximo ensaio por intuição já foi pago seis vezes. Em paralelo, a biologia oferece uma exceção que a evolução testou em escala epidemiológica: camundongos transgênicos homozigotos para V127 são completamente resistentes a todas as cepas priônicas testadas, com proteção equivalente à deleção do gene [claim:C001]; heterozigotos G/V127 sobreviveram à epidemia de kuru e resistem à forma clássica da doença de Creutzfeldt-Jakob (DCJ), mas permanecem susceptíveis à forma variante — uma assimetria que delimita com precisão onde a proteção atua [claim:C002]. Há, ainda, onde testar: organoides cerebrais humanos são susceptíveis à DCJ esporádica com cinética dependente de subtipo [claim:C009], com âncoras de infecção medidas [claim:C010], títulos de endpoint quantificados por subtipo [claim:C011] e o pentossan polissulfato como controle positivo publicado, que retarda a propagação priônica nos dois paradigmas testados [claim:C012]. O problema desta tese não é falta de dado, nem de alvo, nem de plataforma: é metodológico. **Como transformar a exceção protetora V127 em desenho terapêutico quantitativo sem repetir o padrão de seis apostas intuitivas?** — com que método se decide o que medir, onde e em que dose, antes de gastar recurso úmido.
+
+## 2.2 Justificativa: a suficiência do publicado
+
+A justificativa não é de oportunidade; é de suficiência — os parâmetros publicados já bastam para montar um motor de decisão. O kernel de espalhamento priônico existe como modelo estocástico de reação-difusão publicado, com código aberto [claim:C013]. O espaço extracelular cerebral in vivo tem fração de volume e tortuosidade medidas para macromoléculas [claim:C014]. O consumo de primeira ordem foi varrido em faixa ancorada à cinética de nucleação-polimerização [claim:C015]. O solver que integra transporte e cinética passa em auto-testes de conservação de massa e paridade analítica [claim:C032]. A transposição de escala temporal para o humano é declarada como re-escalonamento global — taxas relativas permanecem murinas até ajuste a séries publicadas [claim:C037] [claim:C043] — limitação assumida, não ocultada. Do lado da entrega, vetores pré-clínicos existem com incerteza declarada no registro: nanopartículas lipídicas (LNP) intratecais dirigidas ao encéfalo expressam mRNA em fração relevante de neurônios e astrócitos em roedores [claim:C022] — claim de incerteza alta, usada aqui sem o número por essa razão —; andaimes de hidrogel de ácido hialurônico aumentam a sobrevida de células-tronco neurais enxertadas [claim:C023]. Se o publicado basta para parametrizar, o gargalo restante é a **decisão** — e decisão é o que método formaliza.
+
+## 2.3 Questões de pesquisa
+
+- **Q1.** É possível *derivar* — e não ajustar retrospectivamente — um desenho terapêutico quantitativo (alvo, local, dose em banda) a partir exclusivamente de dados publicados e de execução própria auditável?
+- **Q2.** Com que garantias um prognóstico assim se protege contra *hindsight*, de modo que a banca possa distingui-lo de curva ajustada ao resultado conhecido?
+- **Q3.** O procedimento resultante é nomeável, auditável e transferível a outras doenças por agregação proteica — doença de Alzheimer (AD) e doença de Parkinson (PD) —, ou é um caso único sem método?
+
+## 2.4 Objetivos
+
+O objetivo geral é fundar e exercer a etrização computacional — o método definido no Capítulo 1 — sobre a plataforma terapêutica PrP-V127, entregando prognósticos quantitativos travados antes de qualquer medição nova, tudo em tier [SIM]: simulação parametrizada auditada, nunca dado medido. Os objetivos específicos, cada um com âncora verificável:
+
+- **OE1** — Nomear e formalizar o método com seus sete passos (P0–P6), de modo auditável (Capítulos 1 e 7).
+- **OE2** — Construir a Base de Valididade: cada parâmetro com proveniência declarada, cada número com cadeia de derivação (Capítulos 4 e 7).
+- **OE3** — Produzir resultados *como achados*: o fundamento — a invariância do limiar multi-espécie [claim:C052] — e o produto — o desenho de dose em banda — derivados, não prometidos (Capítulos 5, 6 e 8).
+- **OE4** — Documentar a continuidade como método replicável, com prognósticos de carimbo público anteriores a qualquer experimento úmido [claim:C040] (Capítulo 8 e Apêndices).
+
+## 2.5 Hipóteses
+
+- **H1 (auditabilidade por substituição).** O formalismo permanece auditável quando apenas os termos de domínio são trocados — transferibilidade estrutural do método.
+- **H2 (dose legitimada por banda).** A dose de contenção pode ser legitimada por banda derivada do limiar e da cadeia dimensional com incerteza propagada — antes de qualquer ensaio, como prognóstico [SIM], não como prescrição.
+- **H3 (lacuna estrutural).** A etrização ocupa posição que nem o in-silico trial nem a revisão sistemática ocupam: simula a *continuação* da pesquisa, não o ensaio isolado, nem o passado agregado.
+
+## 2.6 Estrutura do documento
+
+A ordem dos capítulos é a ordem da argumentação, não a ordem cronológica do trabalho. O nome e a diferenciação do método vêm antes de qualquer conteúdo técnico (Capítulo 1), porque sem nome não há contrato. Este capítulo fixa o contrato formal. A plausibilidade biológica é estabelecida pela literatura (Capítulo 3). A ponte entre fundamento e aplicação — mesmos dados, cronologia honesta — vem antes dos resultados (Capítulo 4). O alicerce experimental, a invariância do limiar multi-espécie, precede e legitima o produto (Capítulo 5). O produto — desenho terapêutico e dose em banda — emerge do alicerce (Capítulo 6). O método é formalizado para auditoria (Capítulo 7). Os resultados validam os componentes prometidos, um a um (Capítulo 8). Seguem-se os achados e o que é novo (Capítulo 9), o que os resultados significam e o que não significam (Capítulo 10), a camada clínica (Capítulo 11), as limitações com seus gates de fechamento (Capítulo 12) e o veredito por objetivo (Capítulo 13).
+
+## 2.7 Componentes M1–M5
+
+A tese promete — e cobra de si mesma — cinco componentes de continuidade. A tabela-mãe abaixo fixa cada um com seu conteúdo, status e âncora no registro; a re-matrícula de papéis (M1 como resultado, M2 como especificação dormente até o experimento úmido, M4 como método) foi validada pela autora, e esta tabela é o registro dessa decisão nesta tese.
+
+| Componente | Conteúdo | Status nesta tese | Âncora |
+|---|---|---|---|
+| M1 — Estimador do análogo do limiar | medidor calibrado em simulação, com critérios pré-declarados | especificado e calibrado [SIM] | [claim:C052] |
+| M2 — Trava de execução | o que se congela antes do primeiro organoide: braços, cegamento, análise pré-declarada, critério de parada | especificado | Capítulo 6 |
+| M3 — Realimentação anti-hindsight | predição travada, confronto bancado quando o real chega | método documentado | Capítulos 7 e 8 |
+| M4 — Seleção de parceiro | protocolo com critérios binários e pesos congelados | protocolo e registro | Capítulo 8 |
+| M5 — Infraestrutura de continuidade | predições com carimbo público anterior a qualquer medição | em operação | [claim:C040] |
+
+Cada componente retorna no capítulo indicado; o Capítulo 8 fecha o ciclo verificando que cada promessa desta tabela foi cumprida — ou declara, com o mesmo rigor, o que não foi.
