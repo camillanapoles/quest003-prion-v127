@@ -92,3 +92,45 @@ def check_environment(db_path: str = None, raise_on_fail: bool = True) -> dict:
             + f"\n\n✅ Corrija:\n  {fix}\n"
         )
     return {"ok": not problems, "cwd": str(cwd), "problems": problems}
+
+def _seed_all_environment_rules(db_path: str) -> int:
+    """Bootstrap semeia TODAS as EnvironmentRule (28) — WRITER skills + AUDITOR persona + invariantes + FSM."""
+    from thesis_engine.models import EnvironmentRule
+    ALL = [
+        ("expected_repo", str(REPO), "[SISTEMA] repo onde o engine opera"),
+        ("expected_branch", "tese-escrita-zero", "[SISTEMA] branch de trabalho"),
+        ("forbidden_cwd", str(REPO.parent / "etrizacao"), "[SISTEMA] dir de symlinks"),
+        ("guard_message", f"cd {REPO} && git checkout tese-escrita-zero", "[SISTEMA] como corrigir"),
+        ("cycle_fsm", "brief->drafting->guard->gates->hostile->emenda->LOOP->approved->rendered->committed", "[SISTEMA] FSM"),
+        ("cycle_loop_rule", "LOOP UNTIL hostil-aprova (zero abertos + gates verdes + ações + hostil_falou)", "[SISTEMA]"),
+        ("cycle_separation_flow", "WRITER escreve -> AUDITOR questiona -> WRITER reescreve -> AUDITOR valida", "[SISTEMA]"),
+        ("separation_of_powers", "writer escreve / auditor revisa / autora aprova", "[SISTEMA]"),
+        ("persona_expertise", "PhD neurocientista com expertise em células-tronco e neurobiologia do SNC", "[AUDITOR]"),
+        ("persona_metodologia", "metodologia de escrita de teses: ABNT·GUM·CONSORT·pré-registro·JHU/Harvard", "[AUDITOR]"),
+        ("persona_postura", "hostil por busca de certeza: valida informação, lógica e ciência; não elogia — exige", "[AUDITOR]"),
+        ("persona_acesso", "SEM acesso a nada além do que revisa — só texto+anexos", "[AUDITOR]"),
+        ("persona_pergunta_g", "SOA HUMANO? Doutoranda brasileira não usa vocabulário de máquina", "[AUDITOR]"),
+        ("auditor_rule_never_write", "AUDITOR NUNCA escreve: quem revisa não produz texto", "[AUDITOR]"),
+        ("auditor_output_rule", "AUDITOR produz APENAS questionamentos — NUNCA emenda", "[AUDITOR]"),
+        ("auditor_never_amend", "PROIBIDO: auditor escrever EMENDA na resposta", "[AUDITOR]"),
+        ("cycle_invariant_1", "CI verde != tese pronta", "[AUDITOR] kernel"),
+        ("cycle_invariant_2", "author_approved SÓ humana", "[AUDITOR]"),
+        ("cycle_invariant_3", "números sempre via claims (lineage)", "[AUDITOR]"),
+        ("cycle_invariant_4", "cronologia sempre IN-DOCUMENT", "[AUDITOR]"),
+        ("cycle_invariant_5", "ficha acadêmica EXCLUSIVA da autora", "[AUDITOR]"),
+        ("writer_skill_article", "article-writing: prosa com voz própria, sem AI-slop", "[WRITER] skill"),
+        ("writer_skill_paper_spine", "paper-spine V4: contribution-first, STOP humano", "[WRITER] skill"),
+        ("writer_skill_sci_writing", "scientific-writing: evidence->draft->gates->aprovação", "[WRITER] skill"),
+        ("writer_skill_critical_thinking", "critical-thinking: valida metodologia ANTES de escrever", "[WRITER] skill"),
+        ("writer_skill_council", "consciousness-council: deliber multi-perspectiva", "[WRITER] skill"),
+        ("writer_rule_never_self_approve", "ESCRITOR NUNCA auto-aprova", "[WRITER]"),
+    ]
+    engine = create_db(db_path)
+    with Session(engine) as s:
+        n = 0
+        for key, valor, desc in ALL:
+            if not s.exec(select(EnvironmentRule).where(EnvironmentRule.rule_key == key)).first():
+                s.add(EnvironmentRule(rule_key=key, valor=valor, descricao=desc))
+                n += 1
+        s.commit()
+        return n

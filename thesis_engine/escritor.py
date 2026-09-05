@@ -81,8 +81,8 @@ def setup_v2(db_path: str = V2_DB) -> dict:
         s.commit()
         n = len(s.exec(select(Chapter)).all())
     _nreg = _seed_table_registry(db_path)
-    from thesis_engine.guard import seed_environment_rules
-    seed_environment_rules(db_path)
+    from thesis_engine.guard import _seed_all_environment_rules
+    _seed_all_environment_rules(db_path)
     return {"estrutura": n, "texto": "ZERO — nenhum bloco canônico ingerido", "table_registry": _nreg}
 
 
