@@ -20,6 +20,7 @@ from thesis_engine.db import create_db
 from thesis_engine.ingest.tese import extract_meta
 from thesis_engine.integrity import check_plano, check_sec43, check_style
 from thesis_engine.models import (
+    EnvironmentRule,
     Block,
     Chapter,
     Claim,
@@ -338,6 +339,13 @@ def create_app(db_path: str) -> FastAPI:
         from thesis_engine.escritor import brief_capitulo
 
         brief = brief_capitulo(app.state.db_path, cap_key)
+        # INJETA skills do escritor DO BANCO — impossível ignorar
+        with sess() as s:
+            skills = [
+                {"key": r.rule_key, "skill": r.valor}
+                for r in s.exec(select(EnvironmentRule)).all()
+                if "WRITER" in (r.descricao or "") and "skill" in r.rule_key
+            ]
         with sess() as s:
             existing = s.exec(
                 select(WritingCycle).where(WritingCycle.cap_key == cap_key)
@@ -346,6 +354,7 @@ def create_app(db_path: str) -> FastAPI:
                 return {
                     "cycle": existing,
                     "brief": brief,
+                    "writer_skills": skills,
                     "message": "ciclo já existe — use /submit ou /status",
                 }
             cycle = WritingCycle(
@@ -357,7 +366,7 @@ def create_app(db_path: str) -> FastAPI:
             s.add(cycle)
             s.commit()
             s.refresh(cycle)
-        return {"cycle": cycle, "brief": brief}
+        return {"cycle": cycle, "brief": brief, "writer_skills": skills}
 
     @app.post("/cycle/{cap_key}/submit")
     def cycle_submit(cap_key: str, body: dict):
