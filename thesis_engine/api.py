@@ -9,6 +9,7 @@ Regras:
 """
 from typing import Optional
 
+from pathlib import Path
 from fastapi import FastAPI, HTTPException, Response
 from datetime import datetime
 from pydantic import BaseModel
@@ -507,6 +508,12 @@ def create_app(db_path: str) -> FastAPI:
                 out[name] = {"ok": False, "erro": str(e)}
                 out["ok"] = False
         return out
+
+    @app.get("/dashboard", response_class=Response)
+    def dashboard():
+        """Dashboard em tempo real — FSM + gates + progresso."""
+        html = Path(__file__).parent / "dashboard.html"
+        return Response(content=html.read_text(encoding="utf-8"), media_type="text/html")
 
     @app.get("/render/md")
     def render_md_endpoint():
