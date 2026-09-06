@@ -219,12 +219,32 @@ class WritingCycle(SQLModel, table=True):
     """
 
     cycle_id: str = Field(primary_key=True)  # CY-c01-001
-    cap_key: str
+    cap_key: str = Field(foreign_key="chapter.chap_id")
     estado: str = "brief"  # brief|drafting|guard|gates|hostile|emenda|approved|rendered|committed
     rodada: int = 1
     created_at: Optional[str] = None
     updated_at: Optional[str] = None
     bloqueio_motivo: Optional[str] = None  # se estado=blocked, por quê
+
+
+class TableRegistry(SQLModel, table=True):
+    """META-TABELA: auto-descreve o banco — classifica cada tabela.
+
+    SETUP     = bootstrap semeia; READ-ONLY durante execução (config/regras)
+    EXECUTION = bootstrap ZERA; escrita durante o ciclo (AST/trabalho)
+    """
+
+    table_name: str = Field(primary_key=True)
+    categoria: str  # "setup" | "execution"
+    descricao: str = ""
+
+
+class EnvironmentRule(SQLModel, table=True):
+    """Regra de ambiente GUARDADA NO BANCO (nunca hardcoded em Python)."""
+
+    rule_key: str = Field(primary_key=True)  # expected_repo|expected_branch|forbidden_cwd
+    valor: str
+    descricao: str = ""
 
 
 class MethodFact(SQLModel, table=True):
@@ -241,7 +261,7 @@ class ResultFact(SQLModel, table=True):
     """Resultado R001–R005 (consistency_manifest.json)."""
 
     result_id: str = Field(primary_key=True)
-    method_id: str
+    method_id: str = Field(foreign_key="methodfact.method_id")
     outcome_id: str
     analysis_intent: str
     sample_size: Optional[str] = None

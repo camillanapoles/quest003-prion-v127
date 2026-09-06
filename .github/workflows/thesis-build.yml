@@ -33,6 +33,11 @@ jobs:
       - name: Gates do registro probatório (ingest + sha256 + integridade)
         run: python -m pytest tests/ -q
 
+      - name: Pipeline diagram (FSM + gates em tempo real)
+        run: |
+          python -m thesis_engine.cli ingest
+          python scripts/gen_pipeline_diagram.py
+
       - name: Figuras auditáveis (Fig.4 + Fig.5 — leem SÓ JSONs do registro)
         run: |
           pip install -q numpy matplotlib

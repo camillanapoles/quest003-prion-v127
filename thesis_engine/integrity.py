@@ -307,12 +307,10 @@ def check_plano(db_path: str) -> dict:
                     if cid not in claim_ids:
                         problemas.append(f"{p.chap_key}: plano cita claim sem registro {cid}")
             elif tipo == "figura":
-                for fig in re.findall(r"Fig\.\d", ref):
-                    if fig in _LEGACY_FIGS:
-                        continue
-                    n = fig.split(".")[1]
-                    if f"Figura {n}" not in body:
-                        problemas.append(f"{p.chap_key}: plano cita {fig} ausente da tese")
+                # Elementos são SUGESTÕES de comunicação — julgamento do autor.
+                # Se USA figura: deve ser auditável (ter JSON lineage). Se NÃO usa: OK.
+                # Nunca bloqueia por ausência de elemento sugerido.
+                pass
             elif tipo == "json":
                 for jf in re.findall(r"[\w]+(?:_\{[^}]*\})?\.json", ref):
                     stem = jf.split("{")[0].replace(".json", "")

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thesis Engine — Dashboard em Tempo Real</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:#0d1117;color:#c9d1d9;display:flex;min-height:100vh}
+main{flex:1;padding:20px;overflow-y:auto}
+aside{width:400px;background:#161b22;border-left:1px solid #30363d;padding:20px;overflow-y:auto;display:none}
+aside.open{display:block}
+h1{font-size:1.4rem;color:#58a6ff;margin-bottom:4px}
+h2{font-size:1rem;color:#8b949e;margin-bottom:16px}
+.pipeline{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px 16px;cursor:pointer;transition:all .2s;min-width:140px}
+.card:hover{border-color:#58a6ff;transform:translateY(-2px)}
+.card .cap{font-size:.75rem;color:#8b949e}
+.card .title{font-size:.85rem;font-weight:600;margin:4px 0}
+.card .estado{font-size:.7rem;padding:2px 8px;border-radius:10px;display:inline-block;margin-top:4px}
+.card .gates{display:flex;gap:4px;margin-top:6px}
+.gate-dot{width:8px;height:8px;border-radius:50%}
+.green{background:#3fb950}.red{background:#f85149}.yellow{background:#d29922}.gray{background:#484f58}
+.estado-brief{background:#1f6feb30;color:#58a6ff}
+.estado-drafting{background:#d2992230;color:#d29922}
+.estado-guard,.estado-gates,.estado-hostile{background:#d2992230;color:#d29922}
+.estado-emenda{background:#d2992230;color:#d29922}
+.estado-approved{background:#3fb95030;color:#3fb950}
+.estado-rendered{background:#3fb95030;color:#3fb950}
+.estado-committed{background:#a371f730;color:#a371f7}
+.meter{background:#161b22;border-radius:12px;padding:16px;margin-bottom:24px;border:1px solid #30363d}
+.meter-bar{height:12px;background:#21262d;border-radius:6px;overflow:hidden;margin-top:8px}
+.meter-fill{height:100%;background:linear-gradient(90deg,#1f6feb,#3fb950);transition:width .5s;border-radius:6px}
+.meter-label{display:flex;justify-content:space-between;font-size:.85rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:24px}
+.stat{background:#161b22;border-radius:8px;padding:12px;border:1px solid #30363d;text-align:center}
+.stat .num{font-size:1.8rem;font-weight:700;color:#58a6ff}
+.stat .lbl{font-size:.7rem;color:#8b949e}
+#sidebar-content{font-size:.85rem;line-height:1.5;white-space:pre-wrap;font-family:monospace}
+.close-btn{float:right;background:none;border:none;color:#8b949e;font-size:1.2rem;cursor:pointer}
+.refresh-info{font-size:.7rem;color:#484f58;margin-top:16px}
+.section-title{font-size:.95rem;color:#58a6ff;margin:20px 0 10px;border-bottom:1px solid #30363d;padding-bottom:4px}
+.log-entry{font-size:.75rem;padding:4px 0;border-bottom:1px solid #21262d}
+.log-time{color:#484f58}
+.ok{color:#3fb950}.err{color:#f85149}.warn{color:#d29922}
+</style>
+</head>
+<body>
+<main>
+  <h1>🔬 Thesis Engine — Pipeline</h1>
+  <h2>Sistema garantidor por princípio · FSM em tempo real</h2>
+
+  <div class="meter">
+    <div class="meter-label">
+      <span>Progresso da Tese</span>
+      <span id="meter-pct">0%</span>
+    </div>
+    <div class="meter-bar"><div class="meter-fill" id="meter-fill" style="width:0%"></div></div>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="section-title">📚 Capítulos (pipeline FSM)</div>
+  <div class="pipeline" id="pipeline"></div>
+
+  <div class="section-title">🛡️ Gates</div>
+  <div class="stats" id="gates"></div>
+
+  <div class="section-title">📝 Ações Devedoras</div>
+  <div id="acoes"></div>
+
+  <div class="refresh-info">Auto-refresh: 3s · <span id="last-update"></span></div>
+</main>
+
+<aside id="sidebar">
+  <button class="close-btn" onclick="document.getElementById('sidebar').classList.remove('open')">×</button>
+  <h2 id="sidebar-title"></h2>
+  <div class="section-title">📄 Documento Renderizado</div>
+  <div id="sidebar-content">Clique num capítulo para ver o output…</div>
+</aside>
+
+<script>
+const API = window.location.origin;
+const ESTADOS = ['brief','drafting','guard','gates','hostile','emenda','approved','rendered','committed'];
+
+async function fetchJSON(path) {
+  try {
+    const r = await fetch(API + path);
+    return await r.json();
+  } catch(e) { return null; }
+}
+
+async function refresh() {
+  const health = await fetchJSON('/health');
+  if (!health) return;
+
+  // Stats globais
+  const c = health.counts;
+  document.getElementById('stats').innerHTML = `
+    <div class="stat"><div class="num">${c.claims||0}</div><div class="lbl">Claims</div></div>
+    <div class="stat"><div class="num">${c.sources||0}</div><div class="lbl">Fontes</div></div>
+    <div class="stat"><div class="num">${c.blocks||0}</div><div class="lbl">Blocos</div></div>
+    <div class="stat"><div class="num">${c.numbervalues||0}</div><div class="lbl">Números</div></div>
+    <div class="stat"><div class="num">${c.graph_nodes||0}</div><div class="lbl">Grafo</div></div>
+  `;
+
+  // Pipeline de capítulos
+  const caps = await fetchJSON('/plano');
+  const pipeline = document.getElementById('pipeline');
+  pipeline.innerHTML = '';
+
+  if (!caps) { pipeline.innerHTML = '<p style="color:#8b949e">Sem dados do plano</p>'; return; }
+
+  let aprovados = 0;
+  for (const cap of caps) {
+    const status = await fetchJSON(`/cycle/${cap.chap_key}/status`);
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    let estado = 'não iniciado';
+    let estadoClass = '';
+    let gates = {objetivo:null, coesao:null, gaps:null};
+    let hostil = false;
+
+    if (status && status.aprovacao) {
+      const ap = status.aprovacao;
+      if (status.cycle) {
+        estado = status.cycle.estado;
+        estadoClass = 'estado-' + estado;
+      }
+      gates = ap.gates || gates;
+      hostil = ap.hostil_falou || false;
+      if (ap.aprova) aprovados++;
+    }
+
+    const dots = Object.entries(gates).map(([g, ok]) =>
+      `<span class="gate-dot ${ok===true?'green':ok===false?'red':'gray'}" title="${g}: ${ok}"></span>`
+    ).join('');
+
+    const hostilDot = `<span class="gate-dot ${hostil?'green':'gray'}" title="hostil_falou: ${hostil}"></span>`;
+
+    card.innerHTML = `
+      <div class="cap">${cap.chap_key}</div>
+      <div class="title">${cap.funcao.substring(0,25)}</div>
+      <div class="estado ${estadoClass}">${estado}</div>
+      <div class="gates">${dots}${hostilDot}</div>
+    `;
+    card.onclick = () => showChapter(cap.chap_key);
+    pipeline.appendChild(card);
+  }
+
+  // Meter
+  const pct = Math.round((aprovados / caps.length) * 100);
+  document.getElementById('meter-fill').style.width = pct + '%';
+  document.getElementById('meter-pct').textContent = `${aprovados}/${caps.length} (${pct}%)`;
+
+  // Gates globais
+  const integrity = await fetchJSON('/integrity');
+  if (integrity) {
+    const gateNames = ['sec43','sec63','estilo','bindings','plano','producao'];
+    const gatesDiv = document.getElementById('gates');
+    gatesDiv.innerHTML = gateNames.map(g => {
+      const data = integrity[g];
+      const ok = data && data.ok;
+      return `<div class="stat">
+        <div class="num ${ok?'ok':'err'}">${ok?'✓':'✗'}</div>
+        <div class="lbl">${g}</div>
+      </div>`;
+    }).join('');
+  }
+
+  // Ações
+  const acoes = await fetchJSON('/revisoes?status=aberto');
+  const acoesDiv = document.getElementById('acoes');
+  if (acoes && acoes.length > 0) {
+    acoesDiv.innerHTML = acoes.map(a =>
+      `<div class="log-entry"><span class="warn">⚠ ${a.item_id}</span> [${a.cap_key}] ${a.achado.substring(0,80)}</div>`
+    ).join('');
+  } else {
+    acoesDiv.innerHTML = '<div class="log-entry ok">✓ Zero itens abertos</div>';
+  }
+
+  document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
+}
+
+async function showChapter(capKey) {
+  const sidebar = document.getElementById('sidebar');
+  const title = document.getElementById('sidebar-title');
+  const content = document.getElementById('sidebar-content');
+  sidebar.classList.add('open');
+  title.textContent = `📖 ${capKey}`;
+
+  // Busca o render
+  try {
+    const r = await fetch(`${API}/render/md`);
+    const md = await r.text();
+    // Extrai a seção do capítulo (procura pelo heading)
+    const lines = md.split('\n');
+    let chapterStart = -1;
+    let chapterEnd = lines.length;
+    for (let i = 0; i < lines.length; i++) {
+      if (lines[i].startsWith('# ') && i > 0 && chapterStart === -1) {
+        // Encontra o próximo capítulo
+      }
+    }
+    // Por agora mostra o texto completo truncado
+    content.textContent = md.substring(0, 2000) + (md.length > 2000 ? '\n\n… (clique para ver mais)' : '');
+  } catch(e) {
+    content.textContent = 'Erro ao carregar documento';
+  }
+
+  // Busca o status detalhado
+  const status = await fetchJSON(`/cycle/${capKey}/status`);
+  if (status && status.aprovacao) {
+    const ap = status.aprovacao;
+    content.textContent += `\n\n═══ STATUS ═══\n`;
+    content.textContent += `Estado: ${status.cycle?.estado || '?'}\n`;
+    content.textContent += `Gates: ${JSON.stringify(ap.gates, null, 2)}\n`;
+    content.textContent += `Hostil falou: ${ap.hostil_falou}\n`;
+    content.textContent += `Aprova: ${ap.aprova}\n`;
+    content.textContent += `Abertos: ${ap.abertos?.length || 0}\n`;
+    content.textContent += `Ações no local: ${ap.acoes_pendentes_no_local?.length || 0}\n`;
+  }
+}
+
+// Auto-refresh
+refresh();
+setInterval(refresh, 3000);
+</script>
+</body>
+</html>

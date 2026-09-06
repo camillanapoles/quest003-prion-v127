@@ -21,3 +21,7 @@ Próximo acordado: BOOTSTRAP (DB novo · rascunhos arquivados · ações-mestra 
 ② DB NOVO do zero (setup_v2: registro+dados+grafo+plano+estrutura, ZERO texto) ③ semeia ações-mestra
 (anexo-folhas@c15 · LISTA+ficha@c00 · C027+mapa@c03 · mapeamento@plano) ④ verifica estado nascente.
 Dry-run verde · 71/71 testes.
+
+---
+## 2026-09-05 — DECLARAÇÃO AST pós-escrita-zero
+Ver `DECLARACAO_AST.md`: a bateria 10/10 VERDE certifica o CANÔNICO VELHO + registro (zero drift pós-escrita-zero); a prosa nova c00–c16 é regida pela cadeia v2 (gates 17/17, LOOP hostil 17/17, fila zero, ações 7/7, pytest 73/73, cli check 6/6). A10 abre PDF de 02/09 (pré-escrita-zero) — compilação v2 é pendência. A1 exige python3 do sistema (numpy).
