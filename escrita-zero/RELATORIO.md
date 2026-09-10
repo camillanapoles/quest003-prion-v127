@@ -47,3 +47,12 @@ DB: tese_v2.db · render: 17 arquivos em escrita-zero/render/ · produção cumu
 - **Round hostil: 6 itens (H0015–H0020), 3 emendados + 3 respondidos** — C050 movida ao ponto da negativa universal (§2.1); validação-da-autora respondida (voz da tese + cronologia em anexo); artefatos da tabela respondidos (conteúdo/ligeagem no Apêndice A); ligação OE4↔H3 justificada pela cláusula de continuidade; gloss GATE-F/F1–F10; «commitado»→«registrado».
 - **Aprovação: gates 3/3 · hostil_falou ✓ · 0 abertos → approved → render (41 blocos acumulados).**
 - **Próximo: c03 fundamentação (plausibilidade, C001–C023, H3/berth).**
+
+## RODADA 4 (cont.) — c03 fundamentação aprovado
+
+- **c03 FUNDAMENTAÇÃO** (`rascunhos/c03_fundamentacao.md`, 14 blocos): gargalo em 6 camadas (genética→estrutura→cultura→entrega→organoide→clínica-BR) · família antecipatória + regras de desenho C033-C035/C042 · posicionamento H3 com enquadramento bayesiano C036 · fundamento epistemológico C038/C039/C045/C051 · síntese C046-C049 · **Figura 1** (mapa em camadas, especificada em legenda; render via pipeline CI).
+- **Round hostil: 5 itens (H0021–H0025), 2 emendados + 3 respondidos** — glosses HLA/CD47/NK; taxonomia da família respondida (conceitual, nunca fabricar citação); figura respondida (especificação + pipeline); C038 2,1×-semente respondido (reporta, não interpreta — c05 formaliza); estilo numérico uniformizado (%).
+- **Ação devedora A0003 executada**: C027 citada na camada clínica brasileira §3.1 + mapa em camadas (Figura 1).
+- **Aprovação: gates 3/3 · 0 abertos · 0 ações no local → approved → render 55 blocos acumulados.**
+- **Correção de rodada**: c02 «promissor» (banido) → «mais forte», re-aprovado (9799db5) — o gate de estilo fica pulado no modo campanha; auditoria manual de termos agora faz parte do ciclo por capítulo.
+- **Próximo: c04 linha-experimental (a ponte: base comum + M3→M2 + cronologia honesta).**
