@@ -40,3 +40,10 @@ DB: tese_v2.db · render: 17 arquivos em escrita-zero/render/ · produção cumu
 - **Aprovação: gates 3/3 (objetivo·coesão·gaps) · hostil_falou=True · 0 abertos · 0 ações pendentes → approved → render 21 blocos.**
 - **Débitos de engine observados nesta sessão (pré-existentes, não causados pela rodada):** (1) `cli status|check` sem `--db` aponta para `thesis.db` (V1) e crasha após `bootstrap_v2` (quick-start do AGENTS.md quebra em clone fresco); usar `--db tese_v2.db` ou corrigir default. (2) pytest 4 falhas de fixture isolation (test_plano_grafo c17 só-no-plano) — documentadas no AGENTS.md.
 - **Próximo capítulo: c02 introdução.**
+
+## RODADA 4 (cont.) — c02 introdução aprovado
+
+- **c02 INTRODUÇÃO** (`rascunhos/c02_introducao.md`, 20 blocos D0022–D0041): contrato formal completo — Q1–Q3 · OE1–OE4 · H1–H3 · tabela-mãe M1–M5/R1 (validada pela autora) · 23 claims com lineage (C001–C015, C022–C023, C032, C037, C040, C043–C044, C046, C049–C052).
+- **Round hostil: 6 itens (H0015–H0020), 3 emendados + 3 respondidos** — C050 movida ao ponto da negativa universal (§2.1); validação-da-autora respondida (voz da tese + cronologia em anexo); artefatos da tabela respondidos (conteúdo/ligeagem no Apêndice A); ligação OE4↔H3 justificada pela cláusula de continuidade; gloss GATE-F/F1–F10; «commitado»→«registrado».
+- **Aprovação: gates 3/3 · hostil_falou ✓ · 0 abertos → approved → render (41 blocos acumulados).**
+- **Próximo: c03 fundamentação (plausibilidade, C001–C023, H3/berth).**
