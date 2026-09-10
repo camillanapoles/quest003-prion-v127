@@ -124,3 +124,40 @@ Tabela re-lida: ⚠ coerente com a legenda e com o texto de §4.2 (que reporta C
 3. Reler o emendado; só encerrar quando a rodada vier vazia.
 4. Tudo registrado aqui (conversa) + no DB (`revisaohostil`); nada da conversa entra na tese.
 5. Gates do engine são parte da rodada: no retrofit de c01, o próprio gate de coesão pegou na rodada 2 a convenção de sigla («vírus adenoassociado (AAV)», não «AAV (vírus…)») — correção aplicada e registrada.
+
+---
+
+## REVISÃO DO DOCUMENTO RECONSTRUÍDO INTEIRO (c01–c04) — duas capetas
+
+> Lê-se a tese como um único documento contínuo, do primeiro parágrafo ao último —
+> não capítulo a capítulo. Três perguntas regem: semântica intacta? coesão com o todo?
+> contexto não quebrado em nenhum ponto de emenda?
+
+### Capeta A — Revisor técnico (neurocientista): verificação de semântica e conexão
+
+Verificação item a item sobre o texto emendado, cada uma lendo o parágrafo INTEIRO onde a emenda caiu (a cópia com destaques `TESE_HIGHLIGHT_HOSTIL.md` é o espelho visual desta verificação):
+
+1. **H0031 (T0–T4)** — a frase nova antecede "Não temos nome para o meio do caminho": a escada nomeia percurso, o meio é estado → **semântica íntegra; a conclusão do parágrafo (etrização nomeia o estado) sai FORTALECIDA, não substituída**. Conexão com c03 §3.2 (família) e c02 Q3: nenhuma contradição — três passadas sobre os mesmos vizinhos com a mesma taxonomia.
+2. **H0032 (evocação sonora)** — o "sem reivindicar rota filológica" fecha a objeção ANTES de a banca formulá-la; a camada 2 (atrium) segue com o mesmo estatuto de evocação → coerência interna da seção das camadas mantida.
+3. **H0036/H0037 (c02)** — H2 e OE2 re- lidos com H3 e a tabela M1–M5: "falsificáveis no confronto opcional" conecta com P6 (c01 definição operacional) sem costura visível; "julgado contra os escalões pré-declarados" conecta com C044 (OE3) → **o contrato fecha em malha**: cada promessa tem critério.
+4. **H0041 (c03)** — a reformulação "diferença está no produto" re-lida contra a tabela de contraste de c01: consistente (a tabela também contrasta produto); **a tese agora diz a mesma coisa em dois lugares sem repetir as palavras** — sinal de documento único.
+5. **H0042 (direção do limiar)** — "θ* fixa-se em 0,333 e a contenção ocorre com θ abaixo dele" verificado contra c02 H2 ("abaixo de 0,333 implica contenção") e c04 tabela linha 1: **mesma direção nas três ocorrências**.
+6. **H0045 (⚠ na tabela c04)** — re-lida com §4.2 (que reporta C056 integral) e com a legenda ✅/⚠: o veredito agora diz o que o texto diz → **fim da tensão interna**; a linha 3 (titulação ✅) não é afetada (fenômeno distinto).
+7. **Consistência numérica global**: 0,333 em todas as ocorrências (c02 H2, c03, c04); nenhum 0,33 solto (varredura regex: 0 em 4 capítulos); datas da cronologia aparecem UMA vez (c04) e por extenso → nada quebrado.
+8. **Cadeia de glosses**: PrP→GPI→AAV (c01) · θ (c02)→θ* (c03) · kappa consistente ("parâmetro kappa do desenho" nos três usos) · HLA/CD47/NK (c03) · ELA/SOD1 (c04) → **nenhuma sigla usada antes de definida; nenhum gloss redundante que quebre o fluxo** (re-gloss do E200K em c03 é vírgula-appositiva, não parêntese didático).
+
+**Veredito capeta A: semântica intacta, conexão sem quebra em todos os pontos de emenda.**
+
+### Capeta B — Revisor textual de humanização (garantia de escrita para leitor humano)
+
+Leitura do documento inteiro caçando: termos de máquina, tiques de geração, desconexao, prosa de orquestração.
+
+1. **Termos LLM (lista de 37 + PT)**: varredura mecânica no DB — **zero proibições ativas** (o «promissor» de D0024 foi o único e caiu na rodada anterior).
+2. **Tique «E»-inicial de frase**: 6 ocorrências no documento — padrão de geração, não de autora → **9 reescritas aplicadas** (E→Já/O…por fim/de resto/a terceira lição é); métrica final: 6→1.
+3. **Densidade de travessão**: c03 estava em 3,1/parágrafo (tique de máquina) → 4 travessões convertidos (vírgula/dois-pontos/appositiva); c01 2,0 · c02 1,8 · c03 2,3 · c04 1,7 — dentro da prosa acadêmica brasileira natural.
+4. **Documento único, não orquestração**: nenhuma seção referencia "como visto no processo"; nenhuma frase de costura de agente; as cross-refs são de CONTEÚDO (§2.3, capítulo seguinte, anexo) — o leitor humano percorre um arco, não um log.
+5. **Voz**: primeira pessoa da doutoranda onde a nota à banca pede (c01 "cunhei/declaro") e impessoal técnico no contrato (c02–c04) → contraste intencional, mantido.
+
+**Veredito capeta B: prosa lê como escrita por pesquisadora humana; tiques capturados e corrigidos com reescrita real (não cosmética).**
+
+**Decisão conjunta: c01–c04 íntegros, coesos, contexto sem quebra — liberados. c05 em diante herda este rito (2 capetas + rodadas até zero).**
