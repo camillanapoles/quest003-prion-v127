@@ -1,0 +1,23 @@
+# CAPÍTULO 9 — ACHADOS
+
+Este capítulo nomeia o que a tese encontrou: um achado único que combina contenção e restauração, a replicabilidade do método para doenças vizinhas e a declaração obrigatória das próximas abordagens.
+
+## 9.1 Achados e impactos
+
+Quatro achados sustentam a tese. Primeiro, o limiar: a contenção obedece a θ* igual a 0,333, com a frente contida em κ=2 e degradação monotônica até quase-extinção em κ=32 [claim:C038] [evidence:E032]. Segundo, a conservação: a banda central de 0,333 a 0,400 atravessa quatro espécies — o limiar é propriedade da física, não de um relógio biológico [claim:C055] [evidence:E032]. Terceiro, a titulação: a dose exigida escala com a cinética do hospedeiro, de κ 1,5 em Kt 1 a κ 8 em Kt 4, com expressão de massa por depósito [claim:C057] [evidence:E032] [claim:C059] [evidence:E058,E032]. Quarto, as regras de desenho: anel de contenção com nós a cada 8–12 mm, suporte de malha adequada e redose de sete dias ou menos [claim:C033] [evidence:E030] [claim:C034] [evidence:E030] [claim:C035] [evidence:E030]. O impacto é o que o Cap. 1 prometeu: o passo que faltava — onde, quanto, com que ritmo — agora tem número com origem.
+
+## 5.1-bis O achado único: contenção e restauração na mesma arquitetura
+
+O achado que dá identidade à tese não é um número isolado: é a arquitetura completa em que a contenção e a restauração se completam. A contenção vem do desenho derivado — limiar, titulação, anel [claim:C038] [evidence:E032] [claim:C033] [evidence:E030]. A restauração vem da plataforma publicada: a semeadura com progenitoras neurais restaura parâmetros eletrofisiológicos de organoides infectados na direção dos não infectados [claim:C016] [evidence:E012], com suporte de hidrogel que aumenta a sobrevivência do enxerto [claim:C023] [evidence:E020]. Conter a frente para dar tempo à restauração — e restaurar o tecido que a contenção protegeu — é um arco terapêutico que não consta da literatura priônica consultada, derivado sem um único dado novo de bancada. Os seis candidatos que fracassaram atacaram a doença de um lado só e sem modelo de entrega [claim:C050] [evidence:E021,E022,E034,E035,E036,E037,E038]; o achado desta tese é o par contenção-restauração com dosagem calculada.
+
+## 9.2 Áreas correlatas
+
+O método não vive só no príon. As áreas vizinhas oferecem os precedentes que o tornam crível: a aprovação acelerada do tofersen com desfecho de biomarcador [claim:C029] [evidence:E027] prova que agências aceitam desfecho substituto em doença neurodegenerativa rara; o nusinersen estabeleceu a segurança da redose intratecal crônica desde 2016 [claim:C030] [evidence:E028]; o transplante de progenitoras dopaminérgicas provou viabilidade em ensaio de 2026 [claim:C031] [evidence:E029]. Cada precedente é um pino já cravado no mapa do Cap. 3 — o que esta tese acrescenta é o método de derivar o passo seguinte deles.
+
+## 5.2-bis Replicabilidade: Alzheimer e Parkinson
+
+A replicabilidade do método para outras proteínopatias decorre do mecanismo compartilhado: proteínas de Alzheimer e Parkinson se espalham por desdobramento templado ao longo de rotas estereotipadas — propagação do tipo priônico [claim:C028] [evidence:E025,E026]. Onde há frente de propagação, há pergunta de contenção; onde há pergunta de contenção, o aparato desta tese — parametrização com proveniência, limiar, titulação, portões rotulados — transfere-se por troca de substrato. A etrização, aqui, mostra o que tem de método e não de caso: o caso V127 é a instância; a frente templada é a classe.
+
+## 9.3 Próximas abordagens (declaração mandatória)
+
+A declaração é obrigatória e vai sem retoque. Primeira: executar o G0-wet — o ensaio de oito braços especificado no Cap. 6, letal por desenho, com kill-switch que publica o negativo se nada mover [claim:C047] [evidence:E033]. Segunda: fechar a tradução κ↔concentração no braço A6, a única rota para transformar banda de planejamento em dose de protocolo [claim:C058] [evidence:E057,E058,E032,E010,E030,E019]. Terceira: resolver a localização da frente para aplicação além de portadores presintomáticos — o cálculo do anel assume posição conhecida, e o procedimento de imagem precisa ser especificado antes de qualquer protocolo humano. Quarta: estender a sondagem a substratos AD/PD sob as mesmas definições operacionais pré-registradas. Nada disso é promessa vaga: cada abordagem tem dono de método, critério de morte e portão declarado — a pesquisa derivada já está em movimento, como manda o passo P5 [claim:C054] [evidence:E009,E010,E031,E032,E033,E007].
