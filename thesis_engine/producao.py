@@ -71,6 +71,12 @@ def gate_objetivo(db_path: str, key: str) -> dict:
         plan = s.get(PlanChapter, key)
         secs = s.exec(select(Section).where(Section.chap_id == key)).all()
         chap_blocks = s.exec(select(Block).where(Block.chap_id == key)).all()
+    if plan is None:
+        return {
+            "ok": False,
+            "hard": [f"{key}: sem PlanChapter (plano não ingerido neste DB?)"],
+            "yellow": [],
+        }
     body = "\n".join(b.content for b in chap_blocks)
     labels = {x.label for x in secs if x.label}
     faltando_secoes: list[str] = []
@@ -181,6 +187,12 @@ def gate_gaps(db_path: str, key: str) -> dict:
         chap_blocks = s.exec(select(Block).where(Block.chap_id == key)).all()
         blocks_all = s.exec(select(Block)).all()
         claim_ids = set(s.exec(select(Claim.claim_id)).all())
+    if plan is None:
+        return {
+            "ok": False,
+            "hard": [f"{key}: sem PlanChapter (plano não ingerido neste DB?)"],
+            "yellow": [],
+        }
     body = "\n".join(b.content for b in chap_blocks)
     tpl_todos = _TPL_TODO.findall(body)  # fichas/mecanismos documentados → fila hostil
     placeholders = _PLACEHOLDER.findall(body)

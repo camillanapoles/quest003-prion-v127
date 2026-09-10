@@ -7,7 +7,7 @@ $PY -m pytest tests/ -q || {
   exit 1
 }
 # gates de produção no DB real (além dos testes)
-$PY -m thesis_engine.cli check >/dev/null 2>&1 || {
+$PY -m thesis_engine.cli check --db tese_v2.db --campanha >/dev/null 2>&1 || {
   echo "[gate-guardian] BLOQUEADO: cli check (6 gates) falhou no DB de produção."
   exit 1
 }

@@ -27,6 +27,15 @@ def client(tmp_path_factory):
     ingest_experiments(db_path=db_path)
     ingest_graphify(db_path=db_path)
     ingest_plano(db_path=db_path)
+    # fluxo V2: 18º capítulo estrutural (c17) — espelha setup_v2/V2_TITLES
+    from sqlmodel import Session
+    from thesis_engine.db import create_db
+    from thesis_engine.escritor import V2_TITLES
+    from thesis_engine.models import Chapter
+
+    with Session(create_db(db_path)) as s:
+        s.add(Chapter(chap_id="c17", order_idx=17, title=V2_TITLES["c17"], level=1))
+        s.commit()
     return TestClient(create_app(db_path))
 
 
@@ -39,7 +48,7 @@ def test_health(client):
 
 
 def test_listagens_e_queries(client):
-    assert len(client.get("/chapters").json()) == 17
+    assert len(client.get("/chapters").json()) == 18
     assert len(client.get("/sections", params={"chap_id": "c07"}).json()) == 5
     assert len(client.get("/blocks", params={"block_type": "figure"}).json()) == 2
     # query por claim citada em bloco
@@ -152,7 +161,7 @@ def test_integrity_endpoint(client):
     r = client.get("/graph", params={"q": "THETA_STAR"})
     assert r.status_code == 200 and r.json()
     r = client.get("/plano")
-    assert len(r.json()) == 17
+    assert len(r.json()) == 18
 
 
 def test_render_md_canonico_exclui_drafts(client):

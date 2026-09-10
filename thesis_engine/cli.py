@@ -121,8 +121,13 @@ def producao(db: str = _DEFAULT_DB):
 
 
 @app.command()
-def check(db: str = _DEFAULT_DB):
-    """Roda TODOS os gates (§4.3 + estilo + bindings + plano + produção). Exit 1 se falhar."""
+def check(
+    db: str = _DEFAULT_DB,
+    campanha: bool = typer.Option(False, "--campanha", help="commit intermediário: pula gates de conteúdo cumulativos (sec43·sec63·estilo·producao) — só fecham com a tese completa"),
+):
+    """Roda TODOS os gates (§4.3 + estilo + bindings + plano + produção). Exit 1 se falhar.
+
+    """
     from thesis_engine.integrity import (
         check_bindings,
         check_plano,
@@ -141,6 +146,9 @@ def check(db: str = _DEFAULT_DB):
         ("plano", check_plano),
         ("producao", assert_producao_ok),
     ):
+        if campanha and name in ("sec43", "sec63", "estilo", "producao"):
+            typer.echo(f"[gate:{name}] PULADO — modo campanha (conteúdo cumulativo)")
+            continue
         try:
             r = fn(db)
             typer.echo(f"[gate:{name}] VERDE — {r}")

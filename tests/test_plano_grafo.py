@@ -13,7 +13,7 @@ from thesis_engine.ingest.plano import ingest_plano, render_plano_md
 from thesis_engine.ingest.registro import ingest_registro
 from thesis_engine.ingest.tese import ingest_tese
 from thesis_engine.integrity import check_plano
-from thesis_engine.models import GraphEdge, GraphNode, PlanChapter
+from thesis_engine.models import Chapter, GraphEdge, GraphNode, PlanChapter
 
 
 @pytest.fixture(scope="module")
@@ -24,6 +24,13 @@ def loaded(tmp_path_factory):
     ingest_experiments(db_path=db_path)
     g = ingest_graphify(db_path=db_path)
     p = ingest_plano(db_path=db_path)
+    # fluxo V2: setup_v2 semeia os 18 capítulos (V2_TITLES); a tese canônica traz 17
+    # (c00–c16) — o 18º (c17, apêndices C–F) é estrutural do plano, espelhado aqui
+    from thesis_engine.escritor import V2_TITLES
+
+    with Session(create_db(db_path)) as s:
+        s.add(Chapter(chap_id="c17", order_idx=17, title=V2_TITLES["c17"], level=1))
+        s.commit()
     return db_path, g, p
 
 
@@ -41,10 +48,10 @@ def test_grafo_no_sql(loaded):
 
 def test_plano_no_sql(loaded):
     db_path, _, p = loaded
-    assert p == {"plano_capitulos": 17}
+    assert p == {"plano_capitulos": 18}
     with Session(create_db(db_path)) as s:
         plan = s.exec(select(PlanChapter).order_by(PlanChapter.ordem)).all()
-    assert [x.ordem for x in plan] == list(range(17))
+    assert [x.ordem for x in plan] == list(range(18))
     c05 = next(x for x in plan if x.chap_key == "c05")
     assert "invariância" in c05.objetivo and c05.simplificar
 
@@ -53,7 +60,7 @@ def test_gate_plano_verde(loaded):
     db_path, _, _ = loaded
     report = check_plano(db_path)
     assert report["ok"] is True
-    assert report["capitulos"] == 17 and report["fontes_validadas"] >= 30
+    assert report["capitulos"] == 18 and report["fontes_validadas"] >= 30
 
 
 def test_gate_plano_detecta_ghost(loaded):
