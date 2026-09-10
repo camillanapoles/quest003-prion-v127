@@ -56,3 +56,10 @@ DB: tese_v2.db · render: 17 arquivos em escrita-zero/render/ · produção cumu
 - **Aprovação: gates 3/3 · 0 abertos · 0 ações no local → approved → render 55 blocos acumulados.**
 - **Correção de rodada**: c02 «promissor» (banido) → «mais forte», re-aprovado (9799db5) — o gate de estilo fica pulado no modo campanha; auditoria manual de termos agora faz parte do ciclo por capítulo.
 - **Próximo: c04 linha-experimental (a ponte: base comum + M3→M2 + cronologia honesta).**
+
+## RODADA 4 (cont.) — c04 linha-experimental aprovado (+ c02 re-emendado)
+
+- **c04 A LINHA EXPERIMENTAL** (`rascunhos/c04_base_comum.md`, 14 blocos): mesma base sob os dois módulos (kernel E009 + relógios E007 + humanização E032) · exp1=fase de SEGURANÇA → exp2 multi-espécie=A BASE · cenário B C055 (banda 0,333–0,400, razão 1,20) · horizonte C056 (0,659/0,859/2,83 mm — toda citação declara horizonte; v1.0=S3) · titulação C057 (1→1,5·2→2·3→3·4→8) · tabela de validação 5 linhas com vereditos ✅ · transferência clínica C028-C031.
+- **Round hostil: 5 itens (H0026–H0030), 4 emendados + 1 respondido** — datas da cronologia declaradas no texto (24-27/08 · v1.0 26/08 · 30/08-01/09); SOD1-ELA gloss + «re-doseio»→administração repetida; **precisão θ unificada em 0,333 (c02 H2 re-submetido e re-aprovado)**; fechamento simplificado; ✅ = convenção do plano (render é derivado).
+- **Aprovação: gates 3/3 · 0 abertos → approved → render 69 blocos acumulados (c01-c04).**
+- **Próximo: c05 alicerce (θ* invariante — formalização).**
